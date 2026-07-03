@@ -11800,5 +11800,33 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 17:00:00.943196",
         "status": "validated"
+    },
+    {
+        "id": "c5cc9b1fa479422790d00ff33f3519c8",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:10666",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:00:00.947034",
+        "status": "validated"
+    },
+    {
+        "id": "d432de137b744eccb5db6affd3d0dd86",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:10666",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.4797567347527699,
+        "reviewer_agreement": 0.5060821616959521,
+        "recency_factor": 0.7269315644161839,
+        "confidence": 0.17649631266615393,
+        "timestamp": "2026-07-03 17:00:01.057777",
+        "status": "rejected"
     }
 ]
