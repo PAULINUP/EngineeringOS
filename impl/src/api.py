@@ -261,6 +261,7 @@ async def submit_evidence(data: EvidenceSubmit, db: AsyncSession = Depends(get_s
     db.add(record)
     await db.flush()
     
+    curr_state = None
     # Se a evidência for válida, atualiza a maestria do Learner usando a função de aprendizado
     if status == "validated" or conf >= 0.60:
         # Busca todas as evidências deste learner para esta KU para fazer a agregação (Definition 10.3)
@@ -365,6 +366,9 @@ async def submit_evidence(data: EvidenceSubmit, db: AsyncSession = Depends(get_s
                 curr_state.mastery = new_mastery
                 
     await db.commit()
+    await db.refresh(record)
+    if curr_state:
+        await db.refresh(curr_state)
     
     # ---------------------------------------------------------
     # TRIGGER MEMORY FRAMEWORK AND WEBHOOKS (TELEMETRY/GIT SYNC)

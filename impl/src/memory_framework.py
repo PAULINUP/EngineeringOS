@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import text
 
 class GitMemoryManager:
-    async def dump_state(self, session, output_dir="impl/memory_dumps"):
+    async def dump_state(self, session, output_dir="memory_dumps"):
         """
         Uses SQLAlchemy to query all Learners and EvidenceRecords 
         and dump them to JSON files.
@@ -17,13 +17,13 @@ class GitMemoryManager:
         evidence_records = []
         
         try:
-            res = await session.execute(text("SELECT * FROM learner"))
+            res = await session.execute(text("SELECT * FROM learners"))
             learners = [dict(row) for row in res.mappings()]
         except Exception as e:
             print(f"Failed to query learners: {e}")
 
         try:
-            res = await session.execute(text("SELECT * FROM evidence_record"))
+            res = await session.execute(text("SELECT * FROM evidence_records"))
             evidence_records = [dict(row) for row in res.mappings()]
         except Exception as e:
             print(f"Failed to query evidence records: {e}")
@@ -41,7 +41,7 @@ class GitMemoryManager:
         """
         def _run_git_commands():
             try:
-                subprocess.run(["git", "add", "impl/memory_dumps"], cwd=repo_path, check=True, capture_output=True)
+                subprocess.run(["git", "add", "memory_dumps"], cwd=repo_path, check=True, capture_output=True)
                 subprocess.run(["git", "commit", "-m", commit_msg], cwd=repo_path, check=True, capture_output=True)
                 subprocess.run(["git", "push"], cwd=repo_path, check=True, capture_output=True)
             except subprocess.CalledProcessError as e:
