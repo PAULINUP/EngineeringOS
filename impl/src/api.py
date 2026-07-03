@@ -10,6 +10,10 @@ from src.database import get_session
 from src import models
 from src.parser import parse_dsl_content
 from src import cognitive_engine
+from src.memory_framework import GitMemoryManager
+from src.integration import mock_webhooks_db
+import httpx
+import asyncio
 
 router = APIRouter()
 
@@ -360,8 +364,32 @@ async def submit_evidence(data: EvidenceSubmit, db: AsyncSession = Depends(get_s
                 curr_state.mastery = new_mastery
                 
     await db.commit()
+    
+    # ---------------------------------------------------------
+    # TRIGGER MEMORY FRAMEWORK AND WEBHOOKS (TELEMETRY/GIT SYNC)
+    # ---------------------------------------------------------
+    if status == "validated" or conf >= 0.60:
+        # 1. Trigger Git Memory Dump & Push
+        memory_manager = GitMemoryManager()
+        try:
+            await memory_manager.dump_state(db, output_dir="memory_dumps")
+            # Push async without blocking the response
+            memory_manager.sync_to_git(repo_path=".", commit_msg=f"sync: Evidence {record.id} processed")
+        except Exception as e:
+            print(f"Memory Sync Error: {e}")
+            
+        # 2. Trigger Registered Webhooks (Integration)
+        async def trigger_webhooks():
+            async with httpx.AsyncClient() as client:
+                for webhook_id, url in mock_webhooks_db.items():
+                    try:
+                        await client.post(url, json={"event": "competence_validated", "ku_id": data.ku_id, "learner_id": str(data.learner_id)})
+                    except Exception as e:
+                        print(f"Webhook {url} failed: {e}")
+                        
+        asyncio.create_task(trigger_webhooks())
+        
     return record
-
 @router.post("/seed")
 async def seed_database(db: AsyncSession = Depends(get_session)):
     """Limpa e popula o banco de dados com a estrutura de exemplo do EngineeringOS (Linear Algebra & ML)."""
