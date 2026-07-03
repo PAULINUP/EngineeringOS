@@ -11562,5 +11562,19 @@
         "confidence": 0.072,
         "timestamp": "2026-07-03 16:59:43.068748",
         "status": "rejected"
+    },
+    {
+        "id": "a3bffa045f1549f0a0fd4fc3b5e50e2c",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 16:59:45.951468",
+        "status": "validated"
     }
 ]
