@@ -12346,5 +12346,33 @@
         "confidence": 0.072,
         "timestamp": "2026-07-03 17:00:41.980257",
         "status": "rejected"
+    },
+    {
+        "id": "1cb97fa15ed7494ba9a1d410f80e7b02",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "explanation",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.3,
+        "reviewer_agreement": 0.6,
+        "recency_factor": 0.4,
+        "confidence": 0.072,
+        "timestamp": "2026-07-03 17:00:44.862806",
+        "status": "rejected"
+    },
+    {
+        "id": "ac146f96bea7430693b6f40536787f75",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:11106",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:00:44.858242",
+        "status": "validated"
     }
 ]
