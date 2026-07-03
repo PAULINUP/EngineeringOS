@@ -6550,5 +6550,33 @@
         "confidence": 0.05468127823578202,
         "timestamp": "2026-07-03 16:54:39.172621",
         "status": "rejected"
+    },
+    {
+        "id": "7ee32d4a80e04dd8aca6cdd1e36e2a1e",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1985",
+        "type": "explanation",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.3,
+        "reviewer_agreement": 0.6,
+        "recency_factor": 0.4,
+        "confidence": 0.072,
+        "timestamp": "2026-07-03 16:54:36.271841",
+        "status": "rejected"
+    },
+    {
+        "id": "e1008fad24c245889f75e9a15fb74fbd",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1985",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 16:54:40.573439",
+        "status": "validated"
     }
 ]
