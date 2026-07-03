@@ -17722,5 +17722,61 @@
         "confidence": 0.072,
         "timestamp": "2026-07-03 17:07:59.423663",
         "status": "rejected"
+    },
+    {
+        "id": "d28cd91767a3472ca219e001f1313694",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:11106",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:07:58.933376",
+        "status": "validated"
+    },
+    {
+        "id": "8a765397af404b68824a24bba5310fe7",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:1446",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.7219876049783989,
+        "reviewer_agreement": 0.31121516929170023,
+        "recency_factor": 0.9218080803216898,
+        "confidence": 0.2071242790192693,
+        "timestamp": "2026-07-03 17:07:59.412017",
+        "status": "rejected"
+    },
+    {
+        "id": "c8c3da6f36364c6aac21ed363c73a532",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:11106",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.3010989578947683,
+        "reviewer_agreement": 0.6299262329997309,
+        "recency_factor": 0.6384991111103595,
+        "confidence": 0.12110421088207353,
+        "timestamp": "2026-07-03 17:08:00.089925",
+        "status": "rejected"
+    },
+    {
+        "id": "8c33a7b69be342a29c51a05da65af0f7",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:1446",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.9895034001278746,
+        "reviewer_agreement": 0.7221003709543549,
+        "recency_factor": 0.46580001053068,
+        "confidence": 0.3328237832584381,
+        "timestamp": "2026-07-03 17:07:58.323372",
+        "status": "rejected"
     }
 ]
