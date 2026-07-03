@@ -10036,5 +10036,19 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 16:57:55.639615",
         "status": "validated"
+    },
+    {
+        "id": "e5dba24988d14333afb99ff51033e78c",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 16:57:53.571127",
+        "status": "validated"
     }
 ]
