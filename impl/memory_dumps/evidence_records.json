@@ -8958,5 +8958,61 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 16:56:43.724740",
         "status": "validated"
+    },
+    {
+        "id": "968cdd3b54614833bf558a7964fed60a",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.44686931148815534,
+        "reviewer_agreement": 0.2637348917427951,
+        "recency_factor": 0.629605650741863,
+        "confidence": 0.07420219253431229,
+        "timestamp": "2026-07-03 16:56:43.370174",
+        "status": "rejected"
+    },
+    {
+        "id": "730041d0f1744eefbafb29ad223ad02d",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "explanation",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.3,
+        "reviewer_agreement": 0.6,
+        "recency_factor": 0.4,
+        "confidence": 0.072,
+        "timestamp": "2026-07-03 16:56:43.393867",
+        "status": "rejected"
+    },
+    {
+        "id": "a38daa9e53154e25991bfd923bb50b06",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:11106",
+        "type": "explanation",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.3,
+        "reviewer_agreement": 0.6,
+        "recency_factor": 0.4,
+        "confidence": 0.072,
+        "timestamp": "2026-07-03 16:56:43.391679",
+        "status": "rejected"
+    },
+    {
+        "id": "8515568323a543198b8492b372ae0829",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 16:56:50.994298",
+        "status": "validated"
     }
 ]
