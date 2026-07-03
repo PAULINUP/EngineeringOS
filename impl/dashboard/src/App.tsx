@@ -5,6 +5,7 @@ import { GraphView } from "./components/GraphView";
 import { ULAOptimizer } from "./components/ULAOptimizer";
 import { CCEChallenge } from "./components/CCEChallenge";
 import { CompetenceMatrix } from "./components/CompetenceMatrix";
+import { MaterialViewer } from "./components/MaterialViewer";
 
 const API_BASE = "http://localhost:8000/api";
 
@@ -198,9 +199,11 @@ function App() {
     }
   };
 
-  const handleTriggerSeed = async () => {
+
+
+  const handleTriggerCurriculumSeed = async () => {
     try {
-      const res = await fetch(`${API_BASE}/seed`, { method: "POST" });
+      const res = await fetch(`${API_BASE}/seed-curriculum`, { method: "POST" });
       const data = await res.json();
       showToast("success", data.message);
       
@@ -208,7 +211,7 @@ function App() {
       await fetchInitialData();
       if (selectedLearnerId) await fetchGraphAndPath();
     } catch (err) {
-      showToast("error", "Erro ao executar seed do banco");
+      showToast("error", "Erro ao executar seed do currículo customizado");
     }
   };
 
@@ -304,13 +307,15 @@ function App() {
             onSelectMission={setSelectedMissionId}
             path={activePath}
             satisfied={satisfied}
-            onTriggerSeed={handleTriggerSeed}
+            onTriggerSeed={handleTriggerCurriculumSeed}
           />
 
           <CCEChallenge
             selectedNode={selectedNode}
             onSubmitEvidence={handleSubmitEvidence}
           />
+
+          <MaterialViewer selectedNodeId={selectedNode ? selectedNode.id : null} />
         </div>
 
         {/* Lado Direito: Grafo SVG e Matrix de Competências */}

@@ -12,6 +12,7 @@ from src.parser import parse_dsl_content
 from src import cognitive_engine
 from src.memory_framework import GitMemoryManager
 from src.integration import mock_webhooks_db
+from src.curriculum_seed import seed_user_curriculum
 import httpx
 import asyncio
 
@@ -626,4 +627,22 @@ async def seed_database(db: AsyncSession = Depends(get_session)):
             ku.skills.append(skill_res2)
             
     await db.commit()
-    return {"message": "Banco de dados populado com sucesso via EOS-DSL!"}
+    return {"message": "Database seeded via DSL."}
+
+@router.post("/seed-curriculum")
+async def seed_curriculum_endpoint(db: AsyncSession = Depends(get_session)):
+    """Limpa e popula o banco de dados com a grade curricular de Engenharia de Computação do aluno e os Materiais Base."""
+    await db.execute(delete(models.StudyMaterial))
+    await db.execute(delete(models.KURelation))
+    await db.execute(delete(models.KnowledgeUnit))
+    await db.execute(delete(models.Mission))
+    await db.commit()
+    
+    await seed_user_curriculum(db)
+    return {"message": "Computer Engineering Curriculum seeded successfully with infinite materials."}
+
+@router.get("/kus/{ku_id}/materials")
+async def get_ku_materials(ku_id: str, db: AsyncSession = Depends(get_session)):
+    res = await db.execute(select(models.StudyMaterial).where(models.StudyMaterial.ku_id == ku_id))
+    materials = res.scalars().all()
+    return materials

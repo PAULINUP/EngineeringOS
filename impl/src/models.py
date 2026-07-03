@@ -77,6 +77,11 @@ class KnowledgeUnit(Base):
     incoming_relations: Mapped[List["KURelation"]] = relationship(
         "KURelation", foreign_keys="[KURelation.target_id]", back_populates="target", cascade="all, delete-orphan"
     )
+    
+    # Study Materials (Base Infinita)
+    materials: Mapped[List["StudyMaterial"]] = relationship(
+        "StudyMaterial", back_populates="ku", cascade="all, delete-orphan"
+    )
 
 class KURelation(Base):
     __tablename__ = "ku_relations"
@@ -167,3 +172,22 @@ class Mission(Base):
     critical_kus: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)  # subset of required KU IDs
     critical_threshold: Mapped[float] = mapped_column(Float, nullable=False, default=0.90)
     cost_weights: Mapped[Any] = mapped_column(JSON, nullable=False, default=dict)  # {alpha, beta, gamma}
+
+class StudyMaterial(Base):
+    __tablename__ = "study_materials"
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    ku_id: Mapped[str] = mapped_column(
+        ForeignKey("knowledge_units.id", ondelete="CASCADE"), nullable=False
+    )
+    title: Mapped[str] = mapped_column(String(255), nullable=False)
+    type: Mapped[str] = mapped_column(String(50), nullable=False)  # video, pdf, article, link
+    url: Mapped[Optional[str]] = mapped_column(String(1000), nullable=True)
+    content: Mapped[str] = mapped_column(String, nullable=True)
+    quality_score: Mapped[float] = mapped_column(Float, nullable=False, default=1.0)
+    created_at: Mapped[datetime.datetime] = mapped_column(
+        DateTime, default=datetime.datetime.utcnow, nullable=False
+    )
+
+    # Relationships
+    ku: Mapped["KnowledgeUnit"] = relationship("KnowledgeUnit", back_populates="materials")
