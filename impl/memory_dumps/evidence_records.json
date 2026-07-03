@@ -16462,5 +16462,33 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 17:06:32.677942",
         "status": "validated"
+    },
+    {
+        "id": "815cd13331704d779003044a8739d0a2",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:10666",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:06:32.681920",
+        "status": "validated"
+    },
+    {
+        "id": "d38f96c7adcd4e2d8c50265ddfce71c2",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:10666",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.3868927080468658,
+        "reviewer_agreement": 0.5875100408018838,
+        "recency_factor": 0.22037960610408625,
+        "confidence": 0.0500930228913258,
+        "timestamp": "2026-07-03 17:06:28.756289",
+        "status": "rejected"
     }
 ]
