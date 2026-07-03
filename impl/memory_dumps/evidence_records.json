@@ -5808,5 +5808,33 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 16:53:56.040048",
         "status": "validated"
+    },
+    {
+        "id": "dd109b38eb3c4e51bc588a2363b759e7",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.4863849769624843,
+        "reviewer_agreement": 0.5077397185244912,
+        "recency_factor": 0.12259804798995533,
+        "confidence": 0.030276442618581603,
+        "timestamp": "2026-07-03 16:53:52.067792",
+        "status": "rejected"
+    },
+    {
+        "id": "687ac74f49ab47c1aff14dc91f8510ac",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1985",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 16:53:52.091685",
+        "status": "validated"
     }
 ]
