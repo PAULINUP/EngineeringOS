@@ -16224,5 +16224,47 @@
         "confidence": 0.072,
         "timestamp": "2026-07-03 17:06:16.855052",
         "status": "rejected"
+    },
+    {
+        "id": "fcfaabbf2ac7450cb6ec45cd1ab2cccf",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:11106",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.6764726437557116,
+        "reviewer_agreement": 0.27781217368973354,
+        "recency_factor": 0.8398233823533298,
+        "confidence": 0.1578299697400211,
+        "timestamp": "2026-07-03 17:06:28.294688",
+        "status": "rejected"
+    },
+    {
+        "id": "e467d1389d0a4c0db01de85f093a8ced",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:10666",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.46463957706879355,
+        "reviewer_agreement": 0.43407399384126366,
+        "recency_factor": 0.297773666251726,
+        "confidence": 0.060057362369389834,
+        "timestamp": "2026-07-03 17:06:28.296168",
+        "status": "rejected"
+    },
+    {
+        "id": "37530540d908471988fc43f5edc82b89",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:11106",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:06:28.736607",
+        "status": "validated"
     }
 ]
