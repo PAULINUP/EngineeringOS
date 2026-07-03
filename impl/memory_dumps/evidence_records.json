@@ -9112,5 +9112,19 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 16:57:03.895575",
         "status": "validated"
+    },
+    {
+        "id": "7519386fa6c64ad0b00b00755d2477a3",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:11106",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 16:57:05.902477",
+        "status": "validated"
     }
 ]
