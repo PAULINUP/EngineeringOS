@@ -1,0 +1,136 @@
+# ===========================================================================
+# EngineeringOS DSL Seed Data File
+# ===========================================================================
+
+# Skills definitions
+SKILL skill.compute {
+    label: "Calcular e avaliar expressões matemáticas"
+    domain: "mathematics"
+}
+
+SKILL skill.explain {
+    label: "Explicar a teoria e definições por trás do formalismo"
+    domain: "mathematics"
+}
+
+SKILL skill.verify {
+    label: "Verificar a exatidão e comprovar provas lógicas"
+    domain: "mathematics"
+}
+
+# Topics definitions
+TOPIC topic.linear_algebra {
+    label: "Álgebra Linear"
+    domain: "mathematics"
+}
+
+TOPIC topic.calculus {
+    label: "Cálculo"
+    domain: "mathematics"
+}
+
+TOPIC topic.ml {
+    label: "Machine Learning"
+    domain: "computer_science"
+}
+
+# Knowledge Units (KUs)
+KU linear_algebra.matrix_definition.v1 {
+    title: "Definição de Matrizes"
+    domain: "linear_algebra"
+    level: "foundational"
+    definition: "Estruturas retangulares bidimensionais de números ordenados em linhas e colunas."
+    element_interactivity: 2
+    sources: [
+        { type: "academic", reference: "Strang, G. (2016). Intro to Linear Algebra", weight: 1.0 }
+    ]
+}
+
+KU linear_algebra.dot_product.v1 {
+    title: "Produto Escalar"
+    domain: "linear_algebra"
+    level: "foundational"
+    definition: "Operação algébrica que toma duas sequências de números de mesmo comprimento e retorna um único número."
+    element_interactivity: 3
+    sources: [
+        { type: "academic", reference: "Strang, G. (2016). Intro to Linear Algebra", weight: 1.0 }
+    ]
+}
+
+KU linear_algebra.matrix_multiplication.v1 {
+    title: "Multiplicação de Matrizes"
+    domain: "linear_algebra"
+    level: "intermediate"
+    definition: "Operação linear (A.B)ij = sum_k Aik.Bkj para matrizes compatíveis."
+    prerequisites: [
+        linear_algebra.matrix_definition.v1,
+        linear_algebra.dot_product.v1
+    ]
+    element_interactivity: 4
+    sources: [
+        { type: "academic", reference: "Strang, G. (2016). Intro to Linear Algebra", weight: 1.0 }
+    ]
+}
+
+KU linear_algebra.eigenvalues.v1 {
+    title: "Autovalores e Autovetores"
+    domain: "linear_algebra"
+    level: "advanced"
+    definition: "Escalares e vetores não-nulos tais que A.v = lambda.v."
+    prerequisites: [
+        linear_algebra.matrix_multiplication.v1
+    ]
+    element_interactivity: 5
+    sources: [
+        { type: "academic", reference: "Strang, G. (2016). Intro to Linear Algebra", weight: 1.0 }
+    ]
+}
+
+KU calculus.partial_derivatives.v1 {
+    title: "Derivadas Parciais"
+    domain: "calculus"
+    level: "intermediate"
+    definition: "Derivadas de funções de múltiplas variáveis em relação a uma única variável, mantendo as demais constantes."
+    element_interactivity: 4
+    sources: [
+        { type: "academic", reference: "Stewart, J. (2015). Calculus", weight: 1.0 }
+    ]
+}
+
+KU ml.gradient_descent.v1 {
+    title: "Gradiente Descendente"
+    domain: "ml"
+    level: "advanced"
+    definition: "Algoritmo de otimização de primeira ordem para encontrar mínimos de funções de custo."
+    prerequisites: [
+        linear_algebra.matrix_multiplication.v1,
+        calculus.partial_derivatives.v1
+    ]
+    element_interactivity: 6
+    sources: [
+        { type: "academic", reference: "Goodfellow et al. (2016). Deep Learning", weight: 1.0 }
+    ]
+}
+
+# Mission definitions
+MISSION ml_foundations.v1 {
+    label: "Machine Learning Foundations"
+    required_kus: [
+        linear_algebra.matrix_definition.v1,
+        linear_algebra.dot_product.v1,
+        linear_algebra.matrix_multiplication.v1,
+        linear_algebra.eigenvalues.v1,
+        calculus.partial_derivatives.v1,
+        ml.gradient_descent.v1
+    ]
+    terminal_threshold: 0.85
+    critical_kus: [
+        ml.gradient_descent.v1
+    ]
+    critical_threshold: 0.90
+    cost_weights: {
+        alpha: 0.4,
+        beta: 0.3,
+        gamma: 0.3
+    }
+}
