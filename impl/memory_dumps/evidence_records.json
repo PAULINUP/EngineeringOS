@@ -18814,5 +18814,19 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 17:09:12.683595",
         "status": "validated"
+    },
+    {
+        "id": "2a565323a6b94be087b6403dcb56972f",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:10666",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:09:14.573607",
+        "status": "validated"
     }
 ]
