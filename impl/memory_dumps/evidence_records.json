@@ -17218,5 +17218,61 @@
         "confidence": 0.17784088723942656,
         "timestamp": "2026-07-03 17:07:25.520917",
         "status": "rejected"
+    },
+    {
+        "id": "c1ed64c2a8e44f5a8c3020993829a8c6",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:1985",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:07:12.985977",
+        "status": "validated"
+    },
+    {
+        "id": "9b91a252112140acb7321fbeadbb7988",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:10666",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.8199094805147862,
+        "reviewer_agreement": 0.43944464953740603,
+        "recency_factor": 0.42745833330902505,
+        "confidence": 0.15401530396042193,
+        "timestamp": "2026-07-03 17:07:27.711292",
+        "status": "rejected"
+    },
+    {
+        "id": "722d400e999b414c850ec0183cb056cf",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:10666",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:07:24.028446",
+        "status": "validated"
+    },
+    {
+        "id": "589b40f429e347ed8c5984d158b83f06",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:11106",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.7749364997398583,
+        "reviewer_agreement": 0.9502841177268547,
+        "recency_factor": 0.7554005001629347,
+        "confidence": 0.5562843674660599,
+        "timestamp": "2026-07-03 17:07:22.365268",
+        "status": "contested"
     }
 ]
