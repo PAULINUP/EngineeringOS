@@ -10400,5 +10400,61 @@
         "confidence": 0.072,
         "timestamp": "2026-07-03 16:58:14.380338",
         "status": "rejected"
+    },
+    {
+        "id": "52340c0d316144fba61dad94d08e384c",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1985",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.9397925846387363,
+        "reviewer_agreement": 0.8997902932126123,
+        "recency_factor": 0.22318543318842404,
+        "confidence": 0.18872922801646888,
+        "timestamp": "2026-07-03 16:58:28.619645",
+        "status": "rejected"
+    },
+    {
+        "id": "b3ca828d7ec947c5b21addd22784d79f",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:10666",
+        "type": "explanation",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.3,
+        "reviewer_agreement": 0.6,
+        "recency_factor": 0.4,
+        "confidence": 0.072,
+        "timestamp": "2026-07-03 16:58:20.466658",
+        "status": "rejected"
+    },
+    {
+        "id": "d767886dbc374eaa8acd9dafe192cf87",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.7442199138739826,
+        "reviewer_agreement": 0.2111440090287584,
+        "recency_factor": 0.6455014451015555,
+        "confidence": 0.10143253252614455,
+        "timestamp": "2026-07-03 16:58:32.042168",
+        "status": "rejected"
+    },
+    {
+        "id": "738fe2f8e9bf42f19a972f465bde9f08",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 16:58:14.381768",
+        "status": "validated"
     }
 ]
