@@ -7432,5 +7432,47 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 16:55:23.409066",
         "status": "validated"
+    },
+    {
+        "id": "9ce0a6e54f254e9480b0117f936e9290",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:10666",
+        "type": "explanation",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.3,
+        "reviewer_agreement": 0.6,
+        "recency_factor": 0.4,
+        "confidence": 0.072,
+        "timestamp": "2026-07-03 16:55:14.798282",
+        "status": "rejected"
+    },
+    {
+        "id": "071921ca30664582bcea3177b0c659ef",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1446",
+        "type": "decision",
+        "artifact_hash": null,
+        "reviewers": "[]",
+        "source_weight": 0.28651960416873884,
+        "reviewer_agreement": 0.6602370937337441,
+        "recency_factor": 0.8410087241839352,
+        "confidence": 0.1590943526656789,
+        "timestamp": "2026-07-03 16:55:14.794091",
+        "status": "rejected"
+    },
+    {
+        "id": "e35c92b57b4e49e091bca49dad91293f",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1985",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 16:55:23.406673",
+        "status": "validated"
     }
 ]
