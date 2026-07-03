@@ -12290,5 +12290,19 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 17:00:16.627898",
         "status": "validated"
+    },
+    {
+        "id": "fc7b80c2513a4e0da1fb5a97a2c114ed",
+        "learner_id": "ba3e7de04f124b85a4ac8d7cc9e8197a",
+        "ku_id": "ku:ce:1985",
+        "type": "solution",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.9,
+        "reviewer_agreement": 1.0,
+        "recency_factor": 1.0,
+        "confidence": 0.9,
+        "timestamp": "2026-07-03 17:00:39.558529",
+        "status": "validated"
     }
 ]
