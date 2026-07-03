@@ -16756,5 +16756,19 @@
         "confidence": 0.9,
         "timestamp": "2026-07-03 17:06:51.158959",
         "status": "validated"
+    },
+    {
+        "id": "8a9116c346fb4435af889f8ffb3ebc02",
+        "learner_id": "0c31a4199d064c5099e00831c0b7fe80",
+        "ku_id": "ku:ce:1446",
+        "type": "explanation",
+        "artifact_hash": null,
+        "reviewers": "[{\"reviewer_id\": \"auto\", \"reviewer_type\": \"ai\", \"verdict\": \"accept\"}]",
+        "source_weight": 0.3,
+        "reviewer_agreement": 0.6,
+        "recency_factor": 0.4,
+        "confidence": 0.072,
+        "timestamp": "2026-07-03 17:06:50.771471",
+        "status": "rejected"
     }
 ]
