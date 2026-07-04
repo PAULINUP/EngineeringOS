@@ -36,9 +36,12 @@ class LearnerResponse(BaseModel):
     class Config:
         from_attributes = True
 
-class LearnerStateResponse(BaseModel):
+class CompetenceResponse(BaseModel):
     ku_id: str
-    mastery: float
+    mastery_score: float
+    confidence: float
+    decay_factor: float
+    effective_mastery: float
     last_updated: datetime.datetime
 
 class EvidenceSubmit(BaseModel):
@@ -89,15 +92,15 @@ async def list_learners(db: AsyncSession = Depends(get_session)):
     result = await db.execute(select(models.Learner))
     return result.scalars().all()
 
-@router.get("/learners/{learner_id}/states", response_model=List[LearnerStateResponse])
-async def get_learner_states(learner_id: uuid.UUID, db: AsyncSession = Depends(get_session)):
+@router.get("/learners/{learner_id}/competences", response_model=List[CompetenceResponse])
+async def get_learner_competences(learner_id: uuid.UUID, db: AsyncSession = Depends(get_session)):
     # Verifica se o learner existe
     learner = await db.get(models.Learner, learner_id)
     if not learner:
         raise HTTPException(status_code=404, detail="Learner não encontrado")
     
     result = await db.execute(
-        select(models.LearnerState).where(models.LearnerState.learner_id == learner_id)
+        select(models.Competence).where(models.Competence.learner_id == learner_id)
     )
     return result.scalars().all()
 
@@ -125,10 +128,10 @@ async def get_graph_data(learner_id: Optional[uuid.UUID] = None, db: AsyncSessio
     mastery_dict = {}
     if learner_id:
         states_result = await db.execute(
-            select(models.LearnerState).where(models.LearnerState.learner_id == learner_id)
+            select(models.Competence).where(models.Competence.learner_id == learner_id)
         )
         for state in states_result.scalars().all():
-            mastery_dict[state.ku_id] = state.mastery
+            mastery_dict[state.ku_id] = state.mastery_score
             
     nodes = []
     for ku in kus:
@@ -167,9 +170,9 @@ async def get_learner_frontier(learner_id: uuid.UUID, db: AsyncSession = Depends
     
     # Carrega maestria atual
     states_res = await db.execute(
-        select(models.LearnerState).where(models.LearnerState.learner_id == learner_id)
+        select(models.Competence).where(models.Competence.learner_id == learner_id)
     )
-    mastery_dict = {state.ku_id: state.mastery for state in states_res.scalars().all()}
+    mastery_dict = {state.ku_id: state.mastery_score for state in states_res.scalars().all()}
     
     frontier_ids = cognitive_engine.get_knowledge_frontier(dag, mastery_dict, all_kus)
     
@@ -211,9 +214,9 @@ async def get_mission_path(
     
     # Carrega maestria actual
     states_res = await db.execute(
-        select(models.LearnerState).where(models.LearnerState.learner_id == learner_id)
+        select(models.Competence).where(models.Competence.learner_id == learner_id)
     )
-    mastery_dict = {state.ku_id: state.mastery for state in states_res.scalars().all()}
+    mastery_dict = {state.ku_id: state.mastery_score for state in states_res.scalars().all()}
     
     # Despacha para o Celery — a API devolve imediatamente o task_id
     from src.celery_worker import compute_learning_trajectory
@@ -321,12 +324,12 @@ async def submit_evidence(
         prereq_masteries = []
         if prereq_ids:
             st_result = await db.execute(
-                select(models.LearnerState).where(
-                    models.LearnerState.learner_id == data.learner_id,
-                    models.LearnerState.ku_id.in_(prereq_ids)
+                select(models.Competence).where(
+                    models.Competence.learner_id == data.learner_id,
+                    models.Competence.ku_id.in_(prereq_ids)
                 )
             )
-            states = {st.ku_id: st.mastery for st in st_result.scalars().all()}
+            states = {st.ku_id: st.mastery_score for st in st_result.scalars().all()}
             for pid in prereq_ids:
                 prereq_masteries.append(states.get(pid, 0.0))
         else:
@@ -338,23 +341,23 @@ async def submit_evidence(
             
         # Carrega estado atual
         curr_state_res = await db.execute(
-            select(models.LearnerState).where(
-                models.LearnerState.learner_id == data.learner_id,
-                models.LearnerState.ku_id == data.ku_id
+            select(models.Competence).where(
+                models.Competence.learner_id == data.learner_id,
+                models.Competence.ku_id == data.ku_id
             )
         )
         curr_state = curr_state_res.scalar_one_or_none()
-        current_mastery = curr_state.mastery if curr_state else 0.0
+        current_mastery = curr_state.mastery_score if curr_state else 0.0
         
         # Calcula taxa de aprendizado efetiva considerando transferência semântica (Definition 13.2)
         # Carrega KUs validadas do learner para computar transferência
         validated_states_res = await db.execute(
-            select(models.LearnerState).where(
-                models.LearnerState.learner_id == data.learner_id,
-                models.LearnerState.mastery >= 0.85
+            select(models.Competence).where(
+                models.Competence.learner_id == data.learner_id,
+                models.Competence.mastery_score >= 0.85
             )
         )
-        validated_kus = {st.ku_id: st.mastery for st in validated_states_res.scalars().all()}
+        validated_kus = {st.ku_id: st.mastery_score for st in validated_states_res.scalars().all()}
         
         # Carrega todas as relações para calcular os coeficientes de transferência
         all_rels_res = await db.execute(select(models.KURelation))
@@ -387,7 +390,7 @@ async def submit_evidence(
         
         # Atualiza ou cria o registro LearnerState
         if not curr_state:
-            curr_state = models.LearnerState(
+            curr_state = models.Competence(
                 learner_id=data.learner_id,
                 ku_id=data.ku_id,
                 mastery=new_mastery
@@ -395,8 +398,8 @@ async def submit_evidence(
             db.add(curr_state)
         else:
             # Garante que maestria nunca decresce no modelo 2.0 (monotonicidade)
-            if new_mastery > curr_state.mastery:
-                curr_state.mastery = new_mastery
+            if new_mastery > curr_state.mastery_score:
+                curr_state.mastery_score = new_mastery
                 
     await db.commit()
     await db.refresh(record)
@@ -438,7 +441,7 @@ async def seed_database(
     await db.execute(delete(models.KUSkillLink))
     await db.execute(delete(models.KUTopicLink))
     await db.execute(delete(models.EvidenceRecord))
-    await db.execute(delete(models.LearnerState))
+    await db.execute(delete(models.Competence))
     await db.execute(delete(models.KnowledgeUnit))
     await db.execute(delete(models.Skill))
     await db.execute(delete(models.Topic))
@@ -476,7 +479,7 @@ async def seed_database(
     }
 
     # KUs
-    KU linear_algebra.matrix_definition.v1 {
+    KNOWLEDGE linear_algebra.matrix_definition.v1 {
         title: "Definição de Matrizes"
         domain: "linear_algebra"
         level: "foundational"
@@ -487,7 +490,7 @@ async def seed_database(
         ]
     }
 
-    KU linear_algebra.dot_product.v1 {
+    KNOWLEDGE linear_algebra.dot_product.v1 {
         title: "Produto Escalar"
         domain: "linear_algebra"
         level: "foundational"
@@ -498,7 +501,7 @@ async def seed_database(
         ]
     }
 
-    KU linear_algebra.matrix_multiplication.v1 {
+    KNOWLEDGE linear_algebra.matrix_multiplication.v1 {
         title: "Multiplicação de Matrizes"
         domain: "linear_algebra"
         level: "intermediate"
@@ -513,7 +516,7 @@ async def seed_database(
         ]
     }
 
-    KU linear_algebra.eigenvalues.v1 {
+    KNOWLEDGE linear_algebra.eigenvalues.v1 {
         title: "Autovalores e Autovetores"
         domain: "linear_algebra"
         level: "advanced"
@@ -538,7 +541,7 @@ async def seed_database(
         ]
     }
 
-    KU ml.gradient_descent.v1 {
+    KNOWLEDGE ml.gradient_descent.v1 {
         title: "Gradiente Descendente"
         domain: "ml"
         level: "advanced"
@@ -597,7 +600,7 @@ async def seed_database(
             topic = models.Topic(id=did, label=data["label"], domain=data["domain"])
             db.add(topic)
             
-        elif dtype == "KU":
+        elif dtype == "KNOWLEDGE":
             ku = models.KnowledgeUnit(
                 id=did,
                 title=data["title"],

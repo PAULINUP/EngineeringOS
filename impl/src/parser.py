@@ -6,17 +6,18 @@ def tokenize(text: str) -> List[Tuple[str, Any]]:
     text = re.sub(r'(--|#).*', '', text)
     
     token_specification = [
-        ('STRING',   r'"[^"\\]*(?:\\.[^"\\]*)*"'),
-        ('NUMBER',   r'\d+(?:\.\d+)?'),
-        ('LBRACE',   r'\{'),
-        ('RBRACE',   r'\}'),
-        ('LBRACKET', r'\['),
-        ('RBRACKET', r'\]'),
-        ('COLON',    r':'),
-        ('COMMA',    r','),
-        ('ID',       r'[a-zA-Z_][a-zA-Z0-9_.-]*'),
-        ('SKIP',     r'[ \t\n\r]+'),
-        ('MISMATCH', r'.'),
+        ('DIRECTIVE', r'@[a-zA-Z_]+'),
+        ('STRING',    r'"[^"\\]*(?:\\.[^"\\]*)*"'),
+        ('NUMBER',    r'-?\d+(?:\.\d+)?'),
+        ('LBRACE',    r'\{'),
+        ('RBRACE',    r'\}'),
+        ('LBRACKET',  r'\['),
+        ('RBRACKET',  r'\]'),
+        ('COLON',     r':'),
+        ('COMMA',     r','),
+        ('ID',        r'[a-zA-Z_][a-zA-Z0-9_.-]*'),
+        ('SKIP',      r'[ \t\n\r]+'),
+        ('MISMATCH',  r'.'),
     ]
     
     tok_regex = '|'.join('(?P<%s>%s)' % pair for pair in token_specification)
@@ -56,27 +57,43 @@ class EOSParser:
         t = self.peek()
         if not t:
             raise RuntimeError(f"Expected token of type {kind}, got EOF")
-        if t[0] != kind or (val is not None and t[1] != val):
+        if t[0] != kind or (val is not None and str(t[1]).lower() != str(val).lower()):
             raise RuntimeError(f"Expected token {kind}({val if val else ''}), got {t[0]}({t[1]})")
         return self.advance()
 
     def parse(self) -> List[Dict[str, Any]]:
         declarations = []
         while self.peek():
-            declarations.append(self.parse_declaration())
+            t = self.peek()
+            if t[0] == 'DIRECTIVE':
+                declarations.append(self.parse_directive())
+            elif t[0] == 'ID':
+                declarations.append(self.parse_declaration())
+            else:
+                raise RuntimeError(f"Unexpected top-level token: {t}")
         return declarations
+
+    def parse_directive(self) -> Dict[str, Any]:
+        t = self.expect('DIRECTIVE')
+        key = t[1][1:] # remove @
+        # can be string or ID or number
+        if self.peek() and self.peek()[0] in ('STRING', 'ID', 'NUMBER'):
+            val = self.advance()[1]
+        else:
+            raise RuntimeError(f"Expected value for directive @{key}")
+        return {"type": "DIRECTIVE", "key": key, "value": val}
 
     def parse_declaration(self) -> Dict[str, Any]:
         t = self.peek()
         if not t or t[0] != 'ID':
-            raise RuntimeError(f"Expected declaration type (KU, MISSION, SKILL, etc.), got {t}")
+            raise RuntimeError(f"Expected declaration type, got {t}")
         
         dec_type = self.advance()[1].upper()
-        if dec_type not in ('KU', 'MISSION', 'SKILL', 'EVIDENCE'):
+        valid_types = ('KNOWLEDGE', 'COMPETENCE', 'MISSION', 'ASSESSMENT', 'EVIDENCE', 'SKILL', 'PROJECT', 'AGENT')
+        if dec_type not in valid_types:
             raise RuntimeError(f"Unknown declaration type: {dec_type}")
         
         if dec_type == 'EVIDENCE':
-            # EVIDENCE id "for" id : block
             ev_id = self.expect('ID')[1]
             self.expect('ID', 'for')
             target_id = self.expect('ID')[1]
@@ -89,8 +106,19 @@ class EOSParser:
                 "target": target_id,
                 "data": block
             }
+        elif dec_type == 'KNOWLEDGE':
+            node_id = self.expect('ID')[1]
+            level = None
+            if self.peek() and self.peek()[0] == 'ID' and self.peek()[1].upper() in ('FOUNDATIONAL', 'INTERMEDIATE', 'ADVANCED', 'EXPERT'):
+                level = self.advance()[1].upper()
+            if self.peek() and self.peek()[0] == 'COLON':
+                self.advance()
+            block = self.parse_block()
+            res = {"type": "KNOWLEDGE", "id": node_id, "data": block}
+            if level:
+                res["level"] = level
+            return res
         else:
-            # KU id : block OR KU id block
             node_id = self.expect('ID')[1]
             if self.peek() and self.peek()[0] == 'COLON':
                 self.advance()
@@ -105,6 +133,7 @@ class EOSParser:
         self.expect('LBRACE')
         block: Dict[str, Any] = {}
         while self.peek() and self.peek()[0] != 'RBRACE':
+            # k can be ID
             k = self.expect('ID')[1]
             self.expect('COLON')
             v = self.parse_value()
@@ -122,7 +151,12 @@ class EOSParser:
         if t[0] in ('STRING', 'NUMBER'):
             return self.advance()[1]
         elif t[0] == 'ID':
-            return self.advance()[1]
+            # handle CompetenceSpec like competence.id { threshold: 0.85 }
+            val_id = self.advance()[1]
+            if self.peek() and self.peek()[0] == 'LBRACE':
+                block = self.parse_block()
+                return {"id": val_id, "spec": block}
+            return val_id
         elif t[0] == 'LBRACKET':
             return self.parse_list()
         elif t[0] == 'LBRACE':

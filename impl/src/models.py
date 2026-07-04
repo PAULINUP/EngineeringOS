@@ -42,7 +42,7 @@ class Learner(Base):
     )
 
     # Relationships
-    states: Mapped[List["LearnerState"]] = relationship("LearnerState", back_populates="learner", cascade="all, delete-orphan")
+    competences: Mapped[List["Competence"]] = relationship("Competence", back_populates="learner", cascade="all, delete-orphan")
     evidence: Mapped[List["EvidenceRecord"]] = relationship("EvidenceRecord", back_populates="learner", cascade="all, delete-orphan")
 
 class KnowledgeUnit(Base):
@@ -56,6 +56,9 @@ class KnowledgeUnit(Base):
     definition: Mapped[str] = mapped_column(String(1000), nullable=False)
     element_interactivity: Mapped[int] = mapped_column(Integer, nullable=False, default=4)
     domain_decay_rate: Mapped[float] = mapped_column(Float, nullable=False, default=0.05)
+    version: Mapped[str] = mapped_column(String(50), nullable=False, default="1.0.0")
+    status: Mapped[str] = mapped_column(String(50), nullable=False, default="draft") # draft, review, validated, deprecated
+    provenance: Mapped[Any] = mapped_column(JSON, nullable=False, default=dict)
     sources: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime, default=datetime.datetime.utcnow, nullable=False
@@ -144,8 +147,8 @@ class EvidenceRecord(Base):
     learner: Mapped["Learner"] = relationship("Learner", back_populates="evidence")
     ku: Mapped["KnowledgeUnit"] = relationship("KnowledgeUnit")
 
-class LearnerState(Base):
-    __tablename__ = "learner_states"
+class Competence(Base):
+    __tablename__ = "competences"
 
     learner_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("learners.id", ondelete="CASCADE"), primary_key=True
@@ -153,13 +156,17 @@ class LearnerState(Base):
     ku_id: Mapped[str] = mapped_column(
         ForeignKey("knowledge_units.id", ondelete="CASCADE"), primary_key=True
     )
-    mastery: Mapped[float] = mapped_column(Float, nullable=False, default=0.0)
+    mastery_score: Mapped[float] = mapped_column(Float, nullable=False, default=0.0)
+    confidence: Mapped[float] = mapped_column(Float, nullable=False, default=0.0)
+    decay_factor: Mapped[float] = mapped_column(Float, nullable=False, default=1.0)
+    effective_mastery: Mapped[float] = mapped_column(Float, nullable=False, default=0.0)
+    
     last_updated: Mapped[datetime.datetime] = mapped_column(
         DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow, nullable=False
     )
 
     # Relationships
-    learner: Mapped["Learner"] = relationship("Learner", back_populates="states")
+    learner: Mapped["Learner"] = relationship("Learner", back_populates="competences")
     ku: Mapped["KnowledgeUnit"] = relationship("KnowledgeUnit")
 
 class Mission(Base):
@@ -167,11 +174,38 @@ class Mission(Base):
 
     id: Mapped[str] = mapped_column(String(255), primary_key=True)
     label: Mapped[str] = mapped_column(String(255), nullable=False)
+    version: Mapped[str] = mapped_column(String(50), nullable=False, default="1.0.0")
+    status: Mapped[str] = mapped_column(String(50), nullable=False, default="active") # draft, active, archived
     required_kus: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)  # list of KU IDs
+    optional_kus: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)  # list of KU IDs
     terminal_threshold: Mapped[float] = mapped_column(Float, nullable=False, default=0.85)
     critical_kus: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)  # subset of required KU IDs
     critical_threshold: Mapped[float] = mapped_column(Float, nullable=False, default=0.90)
     cost_weights: Mapped[Any] = mapped_column(JSON, nullable=False, default=dict)  # {alpha, beta, gamma}
+
+class Assessment(Base):
+    __tablename__ = "assessments"
+    
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    challenge_id: Mapped[str] = mapped_column(String(255), nullable=False)
+    agent_id: Mapped[str] = mapped_column(String(255), nullable=False)
+    response: Mapped[str] = mapped_column(String, nullable=False)
+    rubric_id: Mapped[str] = mapped_column(String(255), nullable=False)
+    score: Mapped[float] = mapped_column(Float, nullable=False, default=0.0)
+    reasoning_mode: Mapped[str] = mapped_column(String(50), nullable=False)
+    timestamp: Mapped[datetime.datetime] = mapped_column(
+        DateTime, default=datetime.datetime.utcnow, nullable=False
+    )
+
+class Project(Base):
+    __tablename__ = "projects"
+    
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    label: Mapped[str] = mapped_column(String(255), nullable=False)
+    required_competences: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)
+    required_skills: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)
+    deliverables: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)
+    evaluation_rubric: Mapped[str] = mapped_column(String(255), nullable=False)
 
 class StudyMaterial(Base):
     __tablename__ = "study_materials"
