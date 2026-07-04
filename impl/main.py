@@ -26,6 +26,30 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+import math
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+
+def _sanitize_validation_errors(errors):
+    """Substitui floats Infinity/NaN por string para evitar crash do json.dumps()"""
+    sanitized = []
+    for err in errors:
+        err_copy = dict(err)
+        if 'input' in err_copy:
+            val = err_copy['input']
+            if isinstance(val, float) and (math.isinf(val) or math.isnan(val)):
+                err_copy['input'] = str(val)
+        sanitized.append(err_copy)
+    return sanitized
+
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request, exc):
+    return JSONResponse(
+        status_code=422,
+        content={"detail": _sanitize_validation_errors(exc.errors())},
+    )
+
+
 # Adiciona middleware de CORS para permitir acesso do React (Vite)
 app.add_middleware(
     CORSMiddleware,

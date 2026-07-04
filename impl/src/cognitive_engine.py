@@ -251,5 +251,7 @@ def optimize_learning_trajectory(
                 
         if best_candidate:
             path.append(best_candidate)
+            if len(path) >= 4:
+                break
             
     return path

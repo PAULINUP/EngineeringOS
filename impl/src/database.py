@@ -22,12 +22,10 @@ AsyncSessionLocal = async_sessionmaker(
 
 async def init_db() -> None:
     """
-    Em produção (PostgreSQL), o Alembic gere as migrações.
-    Em desenvolvimento local (SQLite), cria as tabelas automaticamente.
+    Cria as tabelas automaticamente em todas as execuções.
     """
-    if "sqlite" in DATABASE_URL:
-        async with engine.begin() as conn:
-            await conn.run_sync(Base.metadata.create_all)
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 async def get_session() -> AsyncSession:
     """Fornece uma sessão assíncrona do banco de dados (Dependency Injection)."""

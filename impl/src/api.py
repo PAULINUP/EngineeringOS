@@ -14,7 +14,7 @@ from src import cognitive_engine
 from src.memory_framework import MemoryManager
 from src.integration import mock_webhooks_db
 from src.curriculum_seed import seed_user_curriculum
-from src.security import verify_token
+from src.security import verify_token, create_access_token
 import httpx
 import asyncio
 
@@ -61,6 +61,16 @@ class EvidenceResponse(BaseModel):
 
 # ===========================================================================
 # API Endpoints
+
+class TokenRequest(BaseModel):
+    username: str
+    password: str
+
+@router.post("/token")
+async def login_for_access_token(data: TokenRequest):
+    # Rota de desenvolvimento: aceita qualquer username/password e gera um token JWT
+    token = create_access_token(data={"sub": data.username, "role": "admin"})
+    return {"access_token": token, "token_type": "bearer"}
 
 @router.post("/learners", response_model=LearnerResponse)
 async def create_learner(
