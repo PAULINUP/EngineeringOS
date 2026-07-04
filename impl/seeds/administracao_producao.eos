@@ -1,0 +1,25 @@
+module AdministracaoProducao
+description "Administração da Produção — Planejamento, controle e melhoria de sistemas produtivos, abrangendo gestão de estoques, layout, qualidade, Lean Manufacturing e Kanban."
+
+ku PlanejamentoControle
+@content "Conceitos fundamentais de administração da produção e operações. Função produção e seus objetivos de desempenho: qualidade, rapidez, confiabilidade, flexibilidade e custo. Planejamento e Controle da Produção (PCP): horizontes de planejamento (longo, médio e curto prazo). Plano Agregado de Produção. Programa Mestre de Produção (MPS). MRP (Material Requirements Planning) e MRP II. Capacidade produtiva: cálculo, gargalos e balanceamento de linha. Programação e sequenciamento de ordens de produção."
+
+ku GestaoEstoques
+@prerequisite PlanejamentoControle
+@content "Função dos estoques em sistemas produtivos. Tipos de estoque: matéria-prima, produtos em processo (WIP) e produtos acabados. Custos de estoque: custo de pedido, custo de manutenção e custo de falta. Modelo do Lote Econômico de Compra (EOQ) e suas premissas. Ponto de reposição e estoque de segurança. Sistemas de revisão contínua (Q) e periódica (P). Curva ABC e classificação de Pareto. Indicadores: giro de estoque e cobertura de estoque. Acurácia de estoque e inventário cíclico."
+
+ku LayoutProcessos
+@prerequisite GestaoEstoques
+@content "Tipos de arranjo físico (layout): por processo (funcional), por produto (em linha), celular e posicional (fixo). Vantagens e desvantagens de cada tipo. Projeto de layout por processo: matriz de fluxo e diagrama de relacionamento de atividades (diagrama de afinidades). Balanceamento de linhas de produção: tempo de ciclo, número mínimo de estações e eficiência. Layout celular e Tecnologia de Grupo. Ergonomia e segurança no projeto do posto de trabalho."
+
+ku QualidadeTotal
+@prerequisite LayoutProcessos
+@content "Evolução histórica da qualidade: inspeção, controle estatístico, garantia da qualidade e gestão da qualidade total (TQM). Contribuições de Deming (ciclo PDCA, 14 pontos), Juran (trilogia da qualidade), Ishikawa (diagrama de causa e efeito) e Crosby (zero defeitos). Ferramentas da qualidade: diagrama de Pareto, histograma, diagrama de dispersão, folha de verificação, fluxograma, gráficos de controle (CEP) e diagrama de Ishikawa. Normas ISO 9001. Custos da qualidade: prevenção, avaliação, falhas internas e externas. Seis Sigma: DMAIC e métricas de capabilidade."
+
+ku LeanManufacturing
+@prerequisite QualidadeTotal
+@content "Origem e princípios do Sistema Toyota de Produção (TPS). Filosofia Lean: eliminação de desperdícios (muda). Os sete desperdícios clássicos: superprodução, espera, transporte, processamento excessivo, estoque, movimentação e defeitos. Mapeamento do Fluxo de Valor (VSM): estado atual e estado futuro. Produção puxada (pull) versus produção empurrada (push). Takt time e nivelamento da produção (heijunka). Troca rápida de ferramentas (SMED). Manutenção Produtiva Total (TPM). Jidoka: autonomação e detecção automática de defeitos. 5S: organização do ambiente de trabalho."
+
+ku Kanban
+@prerequisite LeanManufacturing
+@content "Sistema Kanban como mecanismo de controle da produção puxada. Tipos de Kanban: de produção (P-Kanban) e de movimentação (T-Kanban). Regras fundamentais do Kanban: não enviar produtos defeituosos, processo posterior retira apenas o necessário, produzir somente a quantidade retirada. Cálculo do número de cartões Kanban. Quadro Kanban e gestão visual. Kanban de fornecedor. Evolução do Kanban físico para sistemas eletrônicos (e-Kanban). Integração do Kanban com supermercados de peças e fluxo contínuo. Kanban em ambientes não-manufatureiros (software, serviços)."

@@ -1,0 +1,32 @@
+module ArquiteturaComputadores
+description "Arquitetura de Computadores — Organização e projeto de sistemas digitais, desde portas lógicas até pipeline e hierarquia de memória."
+
+ku PortasLogicas
+@content "Portas lógicas fundamentais: AND, OR, NOT, NAND, NOR, XOR e XNOR. Tabelas-verdade e símbolos IEEE/ANSI. Níveis lógicos e tensões em famílias TTL e CMOS. Fan-in, fan-out e tempos de propagação. Implementação física de portas com transistores MOSFET. Universalidade das portas NAND e NOR."
+
+ku AlgebraBooleana
+@prerequisite PortasLogicas
+@content "Axiomas e postulados da Álgebra de Boole. Teoremas fundamentais: identidade, complemento, idempotência, absorção, De Morgan. Formas canônicas: soma de mintérios (SOP) e produto de maxtérios (POS). Simplificação de expressões booleanas por álgebra e por Mapas de Karnaugh (até 6 variáveis). Condições irrelevantes (don't care). Minimização usando Quine-McCluskey."
+
+ku CircuitosCombinacionais
+@prerequisite AlgebraBooleana
+@content "Análise e síntese de circuitos combinacionais. Multiplexadores (MUX) e demultiplexadores (DEMUX). Codificadores e decodificadores. Somadores: meio-somador, somador completo e somador ripple-carry. Subtratores e representação em complemento de dois. Comparadores de magnitude. Unidade Lógica básica. Gerador e verificador de paridade. Hazards estáticos e dinâmicos."
+
+ku FlipFlops
+@prerequisite CircuitosCombinacionais
+@content "Circuitos sequenciais: conceito de estado e memória. Latches SR, D e JK. Flip-flops disparados por borda: D, JK e T. Tabelas de excitação e tabelas de transição. Temporização: setup time, hold time e clock-to-output delay. Metaestabilidade. Flip-flops com preset e clear assíncronos. Contadores assíncronos e síncronos: ascendente, descendente e módulo-N."
+
+ku Registradores
+@prerequisite FlipFlops
+@content "Registradores de armazenamento paralelo e registradores de deslocamento (shift registers): SISO, SIPO, PISO e PIPO. Banco de registradores (register file): organização, portas de leitura e escrita simultâneas. Registradores de propósito geral e especial: PC (Program Counter), IR (Instruction Register), SP (Stack Pointer), MAR e MBR. Barramento interno e transferência entre registradores (RTL — Register Transfer Language)."
+
+ku ULA
+@prerequisite Registradores
+@content "Unidade Lógica e Aritmética: projeto e organização interna. Operações aritméticas: adição, subtração, multiplicação (algoritmo de Booth) e divisão inteira. Operações lógicas: AND, OR, XOR, NOT bit a bit. Deslocamentos lógicos e aritméticos. Flags de status: zero (Z), carry (C), overflow (V) e sinal (N). Integração da ULA com banco de registradores e barramento de dados. ALUs de ponto flutuante segundo IEEE 754."
+
+ku Pipeline
+@prerequisite ULA
+@content "Conceito de pipeline e analogia com linha de montagem. Estágios clássicos do pipeline MIPS de 5 estágios: IF (Instruction Fetch), ID (Instruction Decode), EX (Execute), MEM (Memory Access), WB (Write Back). Hazards de dados: RAW, WAR, WAW. Técnicas de resolução: forwarding (bypass) e stalling. Hazards de controle: branch prediction estática e dinâmica, delay slot. Hazards estruturais. Throughput e latência. Pipelines superescalares e superpipelined."
+
+ku MemoriaCache
+@content "Hierarquia de memória: registradores, cache, RAM, disco. Princípios de localidade temporal e espacial. Organização da cache: mapeamento direto, associativo e associativo por conjuntos. Políticas de substituição: LRU, FIFO, aleatória. Políticas de escrita: write-through e write-back com write-allocate. Taxa de acerto (hit rate) e penalidade de falha (miss penalty). Caches multinível (L1, L2, L3). Coerência de cache em sistemas multiprocessados: protocolo MESI."

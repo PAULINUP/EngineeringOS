@@ -1,0 +1,29 @@
+module AlgebraLinear
+description "Geometria Analítica e Álgebra Linear — Fundamentos de vetores, matrizes, espaços vetoriais, transformações lineares e autovalores com aplicações em engenharia."
+
+ku Vetores
+@content "Vetores no plano e no espaço tridimensional. Representação geométrica e algébrica. Operações: adição, subtração e multiplicação por escalar. Produto escalar (dot product): definição, propriedades e interpretação geométrica (projeção). Produto vetorial (cross product): definição, propriedades, cálculo por determinante e interpretação geométrica (área do paralelogramo). Produto misto e volume do paralelepípedo. Equações de retas e planos no espaço. Distâncias entre pontos, retas e planos."
+
+ku Matrizes
+@prerequisite Vetores
+@content "Definição de matriz e notação. Tipos especiais: quadrada, diagonal, identidade, triangular, simétrica, antissimétrica e ortogonal. Operações: adição, multiplicação por escalar, produto de matrizes e transposição. Propriedades do produto matricial (não comutatividade, associatividade, distributividade). Matriz inversa: definição, condições de existência e cálculo pelo método de Gauss-Jordan. Matrizes elementares e fatoração LU."
+
+ku Determinantes
+@prerequisite Matrizes
+@content "Determinante de matrizes 2×2 e 3×3: regra de Sarrus. Definição geral por expansão de Laplace (cofatores). Propriedades: efeito de operações elementares sobre o determinante, determinante do produto, determinante da transposta e da inversa. Regra de Cramer para sistemas lineares. Interpretação geométrica: volume e orientação. Cálculo eficiente por escalonamento."
+
+ku SistemasLineares
+@prerequisite Determinantes
+@content "Sistemas de equações lineares: forma matricial Ax = b. Classificação: sistema possível determinado (SPD), possível indeterminado (SPI) e impossível (SI). Método de eliminação de Gauss e Gauss-Jordan. Posto (rank) de uma matriz e Teorema de Rouché-Capelli. Sistemas homogêneos e espaço de soluções. Interpretação geométrica de sistemas 2×2 e 3×3. Aplicações em circuitos elétricos e balanceamento de equações químicas."
+
+ku EspacosVetoriais
+@prerequisite SistemasLineares
+@content "Definição axiomática de espaço vetorial sobre o corpo dos reais. Subespaços vetoriais: definição e critério de subespaço. Combinação linear, dependência e independência linear. Espaço gerado (span). Base e dimensão de um espaço vetorial. Teorema da dimensão. Mudança de base e matriz de mudança de base. Espaços vetoriais R^n, espaço das matrizes M(m×n) e espaço dos polinômios P_n. Soma direta de subespaços."
+
+ku TransformacoesLineares
+@prerequisite EspacosVetoriais
+@content "Definição de transformação linear e exemplos: rotação, reflexão, projeção, dilatação. Núcleo (kernel) e imagem de uma transformação linear. Teorema do Núcleo e da Imagem (Teorema da Dimensão). Matriz de uma transformação linear em relação a bases dadas. Composição de transformações e produto de matrizes. Isomorfismos entre espaços vetoriais. Aplicações em computação gráfica e processamento de sinais."
+
+ku Autovalores
+@prerequisite TransformacoesLineares
+@content "Autovalores (eigenvalues) e autovetores (eigenvectors): definição e interpretação geométrica. Polinômio característico e equação característica det(A − λI) = 0. Cálculo de autovalores e autovetores. Multiplicidade algébrica e geométrica. Diagonalização de matrizes: condições necessárias e suficientes. Matrizes semelhantes. Diagonalização de matrizes simétricas reais e Teorema Espectral. Aplicações: sistemas de equações diferenciais, análise de componentes principais (PCA) e vibrações mecânicas."

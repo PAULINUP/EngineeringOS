@@ -1,0 +1,27 @@
+module FisicaEngenharia
+description "Física para Engenharia I — Mecânica clássica newtoniana aplicada à engenharia, cobrindo cinemática, dinâmica, leis de Newton, energia, momento linear, rotação e gravitação."
+
+ku Cinematica
+@content "Estudo do movimento sem considerar suas causas. Posição, deslocamento, velocidade média e instantânea, aceleração. Movimento retilíneo uniforme (MRU) e uniformemente variado (MRUV). Movimento em duas dimensões: lançamento de projéteis e movimento circular uniforme. Equações horárias e gráficos posição-tempo, velocidade-tempo e aceleração-tempo. Vetores posição e velocidade em coordenadas cartesianas e polares."
+
+ku Dinamica
+@prerequisite Cinematica
+@content "Conceito de força como interação entre corpos. Força resultante e equilíbrio. Diagrama de corpo livre. Primeira e segunda condições de equilíbrio. Forças de contato: normal, tração e atrito (estático e cinético). Coeficientes de atrito. Força elástica e Lei de Hooke. Aplicações de dinâmica em planos inclinados, polias e sistemas de blocos acoplados."
+
+ku LeisDeNewton
+@prerequisite Dinamica
+@content "Primeira Lei de Newton (Inércia): referenciais inerciais e não-inerciais. Segunda Lei de Newton: relação F = ma, unidades no SI (newton). Massa inercial versus massa gravitacional. Terceira Lei de Newton: pares ação-reação e suas implicações. Aplicações combinadas das três leis em problemas de engenharia: elevadores, sistemas com múltiplos corpos, forças de arrasto e resistência do ar."
+
+ku TrabalhoEnergia
+@prerequisite LeisDeNewton
+@content "Trabalho de uma força constante e variável. Produto escalar e trabalho como integral de linha. Teorema trabalho-energia cinética. Energia cinética translacional. Forças conservativas e não-conservativas. Energia potencial gravitacional e elástica. Conservação da energia mecânica. Potência média e instantânea. Diagramas de energia potencial e pontos de equilíbrio estável e instável."
+
+ku MomentoLinear
+@prerequisite TrabalhoEnergia
+@content "Quantidade de movimento (momento linear) de uma partícula e de um sistema de partículas. Impulso e Teorema do Impulso. Conservação do momento linear em sistemas isolados. Colisões elásticas e inelásticas em uma e duas dimensões. Coeficiente de restituição. Centro de massa: definição, cálculo e movimento do centro de massa. Propulsão de foguetes e jato d'água."
+
+ku Rotacao
+@content "Cinemática rotacional: posição angular, velocidade angular e aceleração angular. Relações entre grandezas angulares e lineares. Momento de inércia: definição, cálculo para corpos rígidos regulares e Teorema dos Eixos Paralelos (Steiner). Torque e Segunda Lei de Newton para rotação (τ = Iα). Energia cinética de rotação. Rolamento sem deslizamento. Momento angular e sua conservação. Aplicações em engenharia: volantes de inércia, engrenagens e eixos."
+
+ku Gravitacao
+@content "Lei da Gravitação Universal de Newton. Constante gravitacional G e experimento de Cavendish. Campo gravitacional e aceleração da gravidade. Energia potencial gravitacional para distribuições de massa. Velocidade de escape. Leis de Kepler: órbitas elípticas, lei das áreas e lei dos períodos. Órbitas circulares e elípticas de satélites. Aplicações em engenharia aeroespacial e telecomunicações."

@@ -1,0 +1,29 @@
+module LogicaProgramacao
+description "Lógica de Programação — Fundamentos de algoritmos, estruturas de controle, funções, recursão e estruturas de dados básicas para engenharia de computação."
+
+ku Algoritmos
+@content "Conceito de algoritmo: sequência finita e não ambígua de instruções para resolver um problema. Propriedades: finitude, definibilidade, entrada, saída e efetividade. Formas de representação: descrição narrativa, fluxograma e pseudocódigo (portugol). Teste de mesa (rastreamento manual). Noção intuitiva de complexidade: contagem de operações. Resolução de problemas por refinamentos sucessivos (top-down). Exemplos clássicos: cálculo de média, verificação de paridade, maior entre N números."
+
+ku VariaveisTipos
+@prerequisite Algoritmos
+@content "Conceito de variável como posição nomeada na memória. Tipos de dados primitivos: inteiro, real (ponto flutuante), caractere (char), cadeia de caracteres (string) e lógico (booleano). Declaração e inicialização de variáveis. Constantes. Operadores aritméticos: adição, subtração, multiplicação, divisão inteira e real, módulo (resto). Operadores relacionais: igual, diferente, maior, menor, maior ou igual, menor ou igual. Operadores lógicos: E (AND), OU (OR), NÃO (NOT). Precedência de operadores. Expressões aritméticas e lógicas. Entrada e saída de dados."
+
+ku EstruturasCondicionais
+@prerequisite VariaveisTipos
+@content "Estrutura condicional simples (se-então) e composta (se-então-senão). Estruturas condicionais aninhadas. Estrutura de seleção múltipla (escolha-caso / switch-case). Operadores lógicos em condições compostas. Tabelas de decisão. Boas práticas: evitar aninhamento excessivo, uso de variáveis de flag. Exemplos: classificação de triângulos, cálculo de IMC com faixas, calculadora simples, verificação de ano bissexto."
+
+ku LacosRepeticao
+@prerequisite EstruturasCondicionais
+@content "Estruturas de repetição com teste no início (enquanto / while), com teste no final (repita-até / do-while) e com variável de controle (para / for). Contadores e acumuladores. Condição de parada e prevenção de laços infinitos. Laços aninhados. Comandos de controle de fluxo: interrompa (break) e continue. Algoritmos iterativos: somatórios, produtórios, fatorial, séries numéricas, busca sequencial. Leitura de dados com sentinela."
+
+ku Funcoes
+@prerequisite LacosRepeticao
+@content "Modularização e decomposição de problemas. Definição de função (sub-rotina): nome, parâmetros formais, corpo e retorno. Chamada de função e parâmetros reais (argumentos). Passagem de parâmetros por valor e por referência. Escopo de variáveis: local e global. Tempo de vida de variáveis. Funções com e sem retorno (procedimentos). Bibliotecas e reutilização de código. Boas práticas: responsabilidade única, nomes descritivos, evitar efeitos colaterais."
+
+ku Recursao
+@prerequisite Funcoes
+@content "Conceito de recursão: função que chama a si mesma. Caso base e caso recursivo. Pilha de chamadas (call stack) e mecanismo de execução. Comparação entre soluções iterativas e recursivas. Recursão direta e indireta. Exemplos clássicos: fatorial, sequência de Fibonacci, potência, soma de dígitos, Torres de Hanói. Análise de complexidade de algoritmos recursivos por árvore de recursão. Riscos: estouro de pilha (stack overflow). Introdução à memorização (memoization) como otimização."
+
+ku EstruturasDadosBasicas
+@prerequisite Recursao
+@content "Vetores (arrays unidimensionais): declaração, acesso por índice, percorrimento e operações (busca, inserção, remoção). Matrizes (arrays bidimensionais): declaração, acesso por linha e coluna, percorrimento com laços aninhados. Registros (structs/records): agrupamento de dados heterogêneos. Algoritmos de ordenação elementares: Bubble Sort, Selection Sort e Insertion Sort — funcionamento, implementação e complexidade O(n²). Algoritmos de busca: busca sequencial O(n) e busca binária O(log n) em vetores ordenados. Noção de lista encadeada como estrutura dinâmica."

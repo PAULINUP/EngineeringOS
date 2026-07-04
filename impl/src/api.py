@@ -185,49 +185,56 @@ async def get_mission_path(
     rel_res = await db.execute(select(models.KURelation))
     relations_models = rel_res.scalars().all()
     relations = [{"source_id": r.source_id, "target_id": r.target_id, "type": r.type, "weight": r.weight} for r in relations_models]
-    dag = cognitive_engine.build_prerequisite_dag(relations)
     
     ku_res = await db.execute(select(models.KnowledgeUnit))
     kus = ku_res.scalars().all()
     all_kus_dict = {
-        ku.id: {"id": ku.id, "element_interactivity": ku.element_interactivity} for ku in kus
+        ku.id: {
+            "id": ku.id,
+            "title": ku.title,
+            "level": ku.level,
+            "element_interactivity": ku.element_interactivity,
+            "definition": ku.definition,
+        }
+        for ku in kus
     }
     
-    # Carrega maestria atual
+    # Carrega maestria actual
     states_res = await db.execute(
         select(models.LearnerState).where(models.LearnerState.learner_id == learner_id)
     )
     mastery_dict = {state.ku_id: state.mastery for state in states_res.scalars().all()}
     
-    # Executa a otimização de caminho ULA
-    path = cognitive_engine.optimize_learning_trajectory(
-        graph=dag,
-        current_mastery=mastery_dict,
-        all_kus_dict=all_kus_dict,
+    # Despacha para o Celery — a API devolve imediatamente o task_id
+    from src.celery_worker import compute_learning_trajectory
+    task = compute_learning_trajectory.delay(
         relations=relations,
+        all_kus_dict=all_kus_dict,
+        mastery_dict=mastery_dict,
         mission_required_kus=mission.required_kus,
-        cost_weights=mission.cost_weights
+        cost_weights=mission.cost_weights,
+        mission_id=mission.id,
+        mission_label=mission.label,
+        terminal_threshold=mission.terminal_threshold,
     )
     
-    # Detalha os nós do caminho
-    detailed_path = []
-    for node_id in path:
-        ku_model = next((k for k in kus if k.id == node_id), None)
-        if ku_model:
-            detailed_path.append({
-                "id": ku_model.id,
-                "title": ku_model.title,
-                "level": ku_model.level,
-                "element_interactivity": ku_model.element_interactivity,
-                "definition": ku_model.definition
-            })
-            
     return {
-        "mission_id": mission.id,
-        "label": mission.label,
-        "path": detailed_path,
-        "satisfied": all(mastery_dict.get(k, 0.0) >= mission.terminal_threshold for k in mission.required_kus)
+        "status": "processing",
+        "task_id": task.id,
+        "poll_url": f"/api/tasks/{task.id}",
     }
+
+@router.get("/tasks/{task_id}")
+async def get_task_result(task_id: str):
+    """Consulta o resultado de uma tarefa assíncrona despachada pelo Celery."""
+    from src.celery_worker import celery_app
+    result = celery_app.AsyncResult(task_id)
+    if result.ready():
+        return {"status": "completed", "result": result.get(timeout=1)}
+    elif result.failed():
+        return {"status": "failed", "error": str(result.result)}
+    else:
+        return {"status": "processing", "task_id": task_id}
 
 @router.post("/evidence", response_model=EvidenceResponse)
 async def submit_evidence(
