@@ -125,16 +125,17 @@ async def get_graph_data(learner_id: Optional[uuid.UUID] = None, db: AsyncSessio
     relations = rel_result.scalars().all()
     
     # Busca estados do learner se fornecido
-    mastery_dict = {}
+    states_dict = {}
     if learner_id:
         states_result = await db.execute(
             select(models.Competence).where(models.Competence.learner_id == learner_id)
         )
         for state in states_result.scalars().all():
-            mastery_dict[state.ku_id] = state.mastery_score
+            states_dict[state.ku_id] = state
             
     nodes = []
     for ku in kus:
+        state = states_dict.get(ku.id)
         nodes.append({
             "id": ku.id,
             "title": ku.title,
@@ -143,7 +144,11 @@ async def get_graph_data(learner_id: Optional[uuid.UUID] = None, db: AsyncSessio
             "level": ku.level,
             "definition": ku.definition,
             "element_interactivity": ku.element_interactivity,
-            "mastery": mastery_dict.get(ku.id, 0.0)
+            "mastery_score": state.mastery_score if state else 0.0,
+            "effective_mastery": state.effective_mastery if state else 0.0,
+            "confidence": state.confidence if state else 0.0,
+            "decay_factor": state.decay_factor if state else 0.0,
+            "mastery": state.mastery_score if state else 0.0 # kept for backward compatibility with graph visualizer
         })
         
     edges = []
@@ -388,18 +393,26 @@ async def submit_evidence(
         delta = cognitive_engine.calculate_learning_delta(current_mastery, conf_agg, prereq_factor, eta_eff)
         new_mastery = min(1.0, max(0.0, current_mastery + delta))
         
-        # Atualiza ou cria o registro LearnerState
+        # Novo cálculo de competência v3.0.0
+        decay = 0.05
+        eff_mastery = new_mastery * (1.0 - decay)
+        
+        # Atualiza ou cria o registro Competence
         if not curr_state:
             curr_state = models.Competence(
                 learner_id=data.learner_id,
                 ku_id=data.ku_id,
-                mastery=new_mastery
+                mastery_score=new_mastery,
+                confidence=conf_agg,
+                decay_factor=decay,
+                effective_mastery=eff_mastery
             )
             db.add(curr_state)
         else:
-            # Garante que maestria nunca decresce no modelo 2.0 (monotonicidade)
             if new_mastery > curr_state.mastery_score:
                 curr_state.mastery_score = new_mastery
+            curr_state.confidence = conf_agg
+            curr_state.effective_mastery = curr_state.mastery_score * (1.0 - curr_state.decay_factor)
                 
     await db.commit()
     await db.refresh(record)
@@ -438,8 +451,8 @@ async def seed_database(
     """Limpa e popula o banco de dados com a estrutura de exemplo do EngineeringOS (Linear Algebra & ML)."""
     # 1. Limpa tabelas
     await db.execute(delete(models.KURelation))
-    await db.execute(delete(models.KUSkillLink))
-    await db.execute(delete(models.KUTopicLink))
+    await db.execute(delete(models.ku_skill_association))
+    await db.execute(delete(models.ku_topic_association))
     await db.execute(delete(models.EvidenceRecord))
     await db.execute(delete(models.Competence))
     await db.execute(delete(models.KnowledgeUnit))
@@ -530,7 +543,7 @@ async def seed_database(
         ]
     }
 
-    KU calculus.partial_derivatives.v1 {
+    KNOWLEDGE calculus.partial_derivatives.v1 {
         title: "Derivadas Parciais"
         domain: "calculus"
         level: "intermediate"
@@ -647,26 +660,20 @@ async def seed_database(
     # 5. Adiciona conexões implícitas com tópicos com base no domínio
     for ku_id, ku in ku_objs.items():
         # Associa com tópicos correspondentes ao domínio
+        target_topic = ""
         if ku.domain == "linear_algebra":
-            topic_res = await db.get(models.Topic, "topic.linear_algebra")
-            if topic_res:
-                ku.topics.append(topic_res)
+            target_topic = "topic.linear_algebra"
         elif ku.domain == "calculus":
-            topic_res = await db.get(models.Topic, "topic.calculus")
-            if topic_res:
-                ku.topics.append(topic_res)
+            target_topic = "topic.calculus"
         elif ku.domain == "ml":
-            topic_res = await db.get(models.Topic, "topic.ml")
-            if topic_res:
-                ku.topics.append(topic_res)
+            target_topic = "topic.ml"
+            
+        if target_topic:
+            await db.execute(models.ku_topic_association.insert().values(ku_id=ku.id, topic_id=target_topic))
                 
         # Associa skills genéricas
-        skill_res = await db.get(models.Skill, "skill.compute")
-        if skill_res:
-            ku.skills.append(skill_res)
-        skill_res2 = await db.get(models.Skill, "skill.explain")
-        if skill_res2:
-            ku.skills.append(skill_res2)
+        await db.execute(models.ku_skill_association.insert().values(ku_id=ku.id, skill_id="skill.compute"))
+        await db.execute(models.ku_skill_association.insert().values(ku_id=ku.id, skill_id="skill.explain"))
             
     await db.commit()
     return {"message": "Database seeded via DSL."}

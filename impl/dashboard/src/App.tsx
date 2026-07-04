@@ -18,6 +18,10 @@ interface Node {
   definition: string;
   element_interactivity: number;
   mastery: number;
+  mastery_score: number;
+  effective_mastery: number;
+  confidence: number;
+  decay_factor: number;
 }
 
 interface Edge {
@@ -61,6 +65,7 @@ function App() {
   const [showAddLearner, setShowAddLearner] = useState(false);
   const [newLearnerName, setNewLearnerName] = useState("");
   const [notification, setNotification] = useState<{ type: string; msg: string } | null>(null);
+  const [isOptimizing, setIsOptimizing] = useState(false);
 
   // Busca inicializadores e dados
   useEffect(() => {
@@ -131,20 +136,54 @@ function App() {
 
       // Busca caminho otimizado se a missão estiver selecionada
       if (selectedMissionId) {
+        setIsOptimizing(true);
         const pRes = await fetch(
           `${API_BASE}/learners/${selectedLearnerId}/missions/${selectedMissionId}/path`
         );
         const pData = await pRes.json();
-        setActivePath(pData.path);
-        setSatisfied(pData.satisfied);
+        
+        if (pData.status === "processing" && pData.task_id) {
+          // Iniciar polling
+          pollTaskStatus(pData.task_id);
+        } else if (pData.path) {
+          // Fallback síncrono
+          setActivePath(pData.path);
+          setSatisfied(pData.satisfied);
+          setIsOptimizing(false);
+        }
       } else {
         setActivePath([]);
         setSatisfied(false);
+        setIsOptimizing(false);
       }
     } catch (err) {
       console.error("Erro ao carregar dados do grafo:", err);
+      setIsOptimizing(false);
     }
   };
+
+  const pollTaskStatus = async (taskId: string) => {
+    try {
+      const res = await fetch(`${API_BASE}/tasks/${taskId}`);
+      const data = await res.json();
+      
+      if (data.status === "SUCCESS") {
+        setActivePath(data.result.path);
+        setSatisfied(data.result.satisfied);
+        setIsOptimizing(false);
+      } else if (data.status === "FAILURE") {
+        showToast("error", "Erro ao otimizar a trajetória.");
+        setIsOptimizing(false);
+      } else {
+        // CONTINUA POLLING
+        setTimeout(() => pollTaskStatus(taskId), 1500);
+      }
+    } catch (e) {
+      console.error("Erro no polling:", e);
+      setIsOptimizing(false);
+    }
+  };
+
 
   const handleCreateLearner = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -307,6 +346,7 @@ function App() {
             onSelectMission={setSelectedMissionId}
             path={activePath}
             satisfied={satisfied}
+            isOptimizing={isOptimizing}
             onTriggerSeed={handleTriggerCurriculumSeed}
           />
 

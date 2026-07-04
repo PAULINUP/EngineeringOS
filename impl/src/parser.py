@@ -89,7 +89,7 @@ class EOSParser:
             raise RuntimeError(f"Expected declaration type, got {t}")
         
         dec_type = self.advance()[1].upper()
-        valid_types = ('KNOWLEDGE', 'COMPETENCE', 'MISSION', 'ASSESSMENT', 'EVIDENCE', 'SKILL', 'PROJECT', 'AGENT')
+        valid_types = ('KNOWLEDGE', 'COMPETENCE', 'MISSION', 'ASSESSMENT', 'EVIDENCE', 'SKILL', 'PROJECT', 'AGENT', 'TOPIC')
         if dec_type not in valid_types:
             raise RuntimeError(f"Unknown declaration type: {dec_type}")
         

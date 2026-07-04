@@ -8,6 +8,10 @@ interface Node {
   level: string;
   definition: string;
   element_interactivity: number;
+  mastery_score: number;
+  effective_mastery: number;
+  confidence: number;
+  decay_factor: number;
   mastery: number;
 }
 

@@ -28,6 +28,7 @@ interface ULAOptimizerProps {
   onSelectMission: (id: string) => void;
   path: PathNode[];
   satisfied: boolean;
+  isOptimizing: boolean;
   onTriggerSeed: () => void;
 }
 
@@ -40,6 +41,7 @@ export const ULAOptimizer: React.FC<ULAOptimizerProps> = ({
   onSelectMission,
   path,
   satisfied,
+  isOptimizing,
   onTriggerSeed,
 }) => {
   return (
@@ -106,7 +108,17 @@ export const ULAOptimizer: React.FC<ULAOptimizerProps> = ({
               <Layers className="w-3.5 h-3.5 text-violet-400" /> Trajetória de Aprendizado pi*
             </h4>
 
-            {path.length === 0 ? (
+            {isOptimizing ? (
+              <div className="bg-violet-950/20 border border-violet-800/20 rounded-xl p-5 text-center flex flex-col items-center justify-center gap-3">
+                <div className="w-8 h-8 border-4 border-violet-500 border-t-transparent rounded-full animate-spin"></div>
+                <div>
+                  <p className="text-sm text-violet-400 font-semibold mb-1">Calculando Trajetória</p>
+                  <p className="text-xs text-gray-400">
+                    O Motor Cognitivo (Celery) está a otimizar a rota no sub-grafo restrito por Cowan...
+                  </p>
+                </div>
+              </div>
+            ) : path.length === 0 ? (
               <div className="bg-emerald-950/20 border border-emerald-800/20 rounded-xl p-5 text-center">
                 <p className="text-sm text-emerald-400 font-semibold mb-1">🎉 Missão Concluída!</p>
                 <p className="text-xs text-gray-400">
