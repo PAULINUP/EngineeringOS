@@ -1,8 +1,9 @@
 import datetime
+import logging
 import uuid
 from typing import Any, Dict, List, Optional
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select, delete
+from sqlalchemy import select, delete, and_, or_, func
 from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import BaseModel, Field
 
@@ -10,11 +11,14 @@ from src.database import get_session
 from src import models
 from src.parser import parse_dsl_content
 from src import cognitive_engine
-from src.memory_framework import GitMemoryManager
+from src.memory_framework import MemoryManager
 from src.integration import mock_webhooks_db
 from src.curriculum_seed import seed_user_curriculum
+from src.security import verify_token
 import httpx
 import asyncio
+
+logger = logging.getLogger("api")
 
 router = APIRouter()
 
@@ -59,7 +63,11 @@ class EvidenceResponse(BaseModel):
 # API Endpoints
 
 @router.post("/learners", response_model=LearnerResponse)
-async def create_learner(data: LearnerCreate, db: AsyncSession = Depends(get_session)):
+async def create_learner(
+    data: LearnerCreate,
+    db: AsyncSession = Depends(get_session),
+    token: dict = Depends(verify_token)
+):
     learner = models.Learner(name=data.name)
     db.add(learner)
     await db.commit()
@@ -222,7 +230,15 @@ async def get_mission_path(
     }
 
 @router.post("/evidence", response_model=EvidenceResponse)
-async def submit_evidence(data: EvidenceSubmit, db: AsyncSession = Depends(get_session)):
+async def submit_evidence(
+    data: EvidenceSubmit, 
+    db: AsyncSession = Depends(get_session),
+    token: dict = Depends(verify_token)
+):
+    """
+    Registra uma nova evidência no banco após checar validações do Motor Cognitivo.
+    ROTA PROTEGIDA: Apenas agentes/usuários autenticados podem submeter evidência.
+    """
     learner = await db.get(models.Learner, data.learner_id)
     if not learner:
         raise HTTPException(status_code=404, detail="Learner não encontrado")
@@ -374,14 +390,13 @@ async def submit_evidence(data: EvidenceSubmit, db: AsyncSession = Depends(get_s
     # TRIGGER MEMORY FRAMEWORK AND WEBHOOKS (TELEMETRY/GIT SYNC)
     # ---------------------------------------------------------
     if status == "validated" or conf >= 0.60:
-        # 1. Trigger Git Memory Dump & Push
-        memory_manager = GitMemoryManager()
+        # 1. Audit log via banco de dados (sem ficheiros JSON)
         try:
-            await memory_manager.dump_state(db, output_dir="memory_dumps")
-            # Push async without blocking the response
-            memory_manager.sync_to_git(repo_path=".", commit_msg=f"sync: Evidence {record.id} processed")
+            mm = MemoryManager()
+            audit = await mm.get_full_state(db)
+            logger.info("Audit snapshot after evidence %s: %s", record.id, audit)
         except Exception as e:
-            print(f"Memory Sync Error: {e}")
+            logger.warning("Audit snapshot failed: %s", e)
             
         # 2. Trigger Registered Webhooks (Integration)
         async def trigger_webhooks():
@@ -396,7 +411,10 @@ async def submit_evidence(data: EvidenceSubmit, db: AsyncSession = Depends(get_s
         
     return record
 @router.post("/seed")
-async def seed_database(db: AsyncSession = Depends(get_session)):
+async def seed_database(
+    db: AsyncSession = Depends(get_session),
+    token: dict = Depends(verify_token)
+):
     """Limpa e popula o banco de dados com a estrutura de exemplo do EngineeringOS (Linear Algebra & ML)."""
     # 1. Limpa tabelas
     await db.execute(delete(models.KURelation))
@@ -634,7 +652,10 @@ async def seed_database(db: AsyncSession = Depends(get_session)):
     return {"message": "Database seeded via DSL."}
 
 @router.post("/seed-curriculum")
-async def seed_curriculum_endpoint(db: AsyncSession = Depends(get_session)):
+async def seed_curriculum_endpoint(
+    db: AsyncSession = Depends(get_session),
+    token: dict = Depends(verify_token)
+):
     """Limpa e popula o banco de dados com a grade curricular de Engenharia de Computação do aluno e os Materiais Base."""
     await db.execute(delete(models.StudyMaterial))
     await db.execute(delete(models.KURelation))

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.db
+*.sqlite3
+.env
+memory_dumps/
+simulation_errors.json
+*.bat
+node_modules/
+dist/
+.next/

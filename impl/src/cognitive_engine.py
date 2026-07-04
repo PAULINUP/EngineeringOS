@@ -32,6 +32,10 @@ def aggregate_evidence_confidence(evidences: List[Dict[str, Any]]) -> float:
         
     return 1.0 - prod
 
+class CyclicDependencyError(Exception):
+    """Lançado quando uma dependência cíclica é detectada no currículo."""
+    pass
+
 def build_prerequisite_dag(relations: List[Dict[str, Any]]) -> nx.DiGraph:
     """Gera um grafo direcionado NetworkX a partir das relações de pré-requisito."""
     g = nx.DiGraph()
@@ -39,6 +43,15 @@ def build_prerequisite_dag(relations: List[Dict[str, Any]]) -> nx.DiGraph:
         if rel.get("type") == "prerequisite":
             # source é pré-requisito de target. Logo, a dependência direcionada é: source -> target
             g.add_edge(rel["source_id"], rel["target_id"], weight=rel.get("weight", 1.0))
+            
+    # Proteção de Arquitetura: Verificar se existe dependência cíclica
+    try:
+        cycles = list(nx.find_cycle(g, orientation="original"))
+        if cycles:
+            raise CyclicDependencyError(f"Dependência cíclica detectada no currículo: {cycles}")
+    except nx.NetworkXNoCycle:
+        pass
+        
     return g
 
 def calculate_jaccard_similarity(graph: nx.DiGraph, node_a: str, node_b: str) -> float:
@@ -110,6 +123,15 @@ def get_knowledge_frontier(
             frontier.append(node)
             
     return frontier
+
+async def run_heavy_math_simulation(learner_id: str, ku_id: str, new_mastery: float):
+    """
+    Simula uma operação pesada no Grafo (Neo4j) e recálculo da matriz de Jaccard
+    para centenas de dependências Jaccard-Transfer.
+    Essa rotina agora roda completamente desacoplada do Loop do FastAPI.
+    """
+    await asyncio.sleep(2) # Simula 2 segundos de CPU blocking math processing
+    return {"calculated_mastery": new_mastery, "transfers_applied": 14}
 
 def calculate_learning_delta(
     current_mastery: float,

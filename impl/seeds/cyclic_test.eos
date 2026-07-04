@@ -1,0 +1,10 @@
+module Teste de Ciclo
+description "Quebra graciosamente"
+
+ku Conceito A
+@prerequisite Conceito B
+@content "Depende do B"
+
+ku Conceito B
+@prerequisite Conceito A
+@content "Depende do A"

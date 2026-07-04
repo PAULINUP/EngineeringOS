@@ -1,0 +1,30 @@
+module Cálculo para Engenharia I
+description "A base matemática fundamental para a modelagem de sistemas dinâmicos na Engenharia."
+
+ku Álgebra Elementar
+@content "Operações fundamentais, frações, potenciação e radiciação."
+
+ku Funções
+@prerequisite Álgebra Elementar
+@content "Definição de funções matemáticas, domínio, imagem e gráficos."
+
+ku Limites
+@prerequisite Funções
+@content "Conceito de limite, propriedades, limites laterais e no infinito."
+
+ku Continuidade
+@prerequisite Limites
+@content "Definição de continuidade e Teorema do Valor Intermediário."
+
+ku Derivadas
+@prerequisite Limites
+@prerequisite Continuidade
+@content "Taxa de variação, regras de derivação (produto, quociente, cadeia)."
+
+ku Aplicações de Derivadas
+@prerequisite Derivadas
+@content "Otimização, máximos e mínimos, concavidade e Teorema de L'Hôpital."
+
+ku Integrais Indefinidas
+@prerequisite Derivadas
+@content "Antiderivadas e propriedades básicas de integração."

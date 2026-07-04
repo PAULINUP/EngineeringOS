@@ -2,11 +2,16 @@ import os
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 from src.models import Base
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./engineeringos.db")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+asyncpg://eos_user:eos_password@localhost:5432/engineeringos")
+
+connect_args = {}
+if "sqlite" in DATABASE_URL:
+    connect_args = {"check_same_thread": False, "timeout": 20.0}
 
 engine = create_async_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread": False, "timeout": 20.0} if "sqlite" in DATABASE_URL else {},
+    connect_args=connect_args,
+    echo=False
 )
 
 AsyncSessionLocal = async_sessionmaker(
@@ -16,10 +21,10 @@ AsyncSessionLocal = async_sessionmaker(
 )
 
 async def init_db() -> None:
-    """Cria todas as tabelas do banco de dados no startup."""
-    async with engine.begin() as conn:
-        # Cria todas as tabelas registradas no meta-modelo
-        await conn.run_sync(Base.metadata.create_all)
+    """Alembic fará as migrações em produção."""
+    # async with engine.begin() as conn:
+    #     await conn.run_sync(Base.metadata.create_all)
+    pass
 
 async def get_session() -> AsyncSession:
     """Fornece uma sessão assíncrona do banco de dados (Dependency Injection)."""

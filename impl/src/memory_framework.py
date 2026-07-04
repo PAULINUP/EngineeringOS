@@ -1,52 +1,56 @@
-import os
-import json
-import threading
-import subprocess
-from sqlalchemy.orm import Session
+"""
+Memory Framework — EngineeringOS
+
+Responsável pela persistência e auditoria do estado cognitivo.
+Todo o estado é gerido exclusivamente pelo banco de dados relacional (PostgreSQL).
+Nenhuma operação de I/O em ficheiros JSON é realizada.
+"""
+import logging
 from sqlalchemy import text
+from sqlalchemy.ext.asyncio import AsyncSession
 
-class GitMemoryManager:
-    async def dump_state(self, session, output_dir="memory_dumps"):
-        """
-        Uses SQLAlchemy to query all Learners and EvidenceRecords 
-        and dump them to JSON files.
-        """
-        os.makedirs(output_dir, exist_ok=True)
-        
-        learners = []
-        evidence_records = []
-        
-        try:
-            res = await session.execute(text("SELECT * FROM learners"))
-            learners = [dict(row) for row in res.mappings()]
-        except Exception as e:
-            print(f"Failed to query learners: {e}")
+logger = logging.getLogger("memory_framework")
 
-        try:
-            res = await session.execute(text("SELECT * FROM evidence_records"))
-            evidence_records = [dict(row) for row in res.mappings()]
-        except Exception as e:
-            print(f"Failed to query evidence records: {e}")
 
-        with open(os.path.join(output_dir, "learners.json"), "w", encoding="utf-8") as f:
-            json.dump(learners, f, indent=4, default=str)
-            
-        with open(os.path.join(output_dir, "evidence_records.json"), "w", encoding="utf-8") as f:
-            json.dump(evidence_records, f, indent=4, default=str)
+class MemoryManager:
+    """
+    Gere snapshots do estado do sistema para fins de auditoria.
+    Os dados são lidos directamente do PostgreSQL — sem cache JSON intermediário.
+    """
 
-    def sync_to_git(self, repo_path=".", commit_msg="sync: memory state"):
+    async def get_learner_snapshot(self, session: AsyncSession, learner_id: str) -> dict:
+        """Retorna um snapshot completo do estado de um aluno a partir do banco relacional."""
+        result = await session.execute(
+            text("SELECT id, name, created_at FROM learners WHERE id = :lid"),
+            {"lid": learner_id},
+        )
+        row = result.mappings().first()
+        if not row:
+            return {"error": f"Learner {learner_id} não encontrado"}
+        return dict(row)
+
+    async def get_evidence_snapshot(self, session: AsyncSession, learner_id: str) -> list:
+        """Retorna todas as evidências de um aluno a partir do banco relacional."""
+        result = await session.execute(
+            text(
+                "SELECT id, ku_id, type, confidence, status, timestamp "
+                "FROM evidence_records WHERE learner_id = :lid ORDER BY timestamp DESC"
+            ),
+            {"lid": learner_id},
+        )
+        return [dict(row) for row in result.mappings().all()]
+
+    async def get_full_state(self, session: AsyncSession) -> dict:
         """
-        Uses python's subprocess to run git add impl/memory_dumps, 
-        git commit -m ..., and git push asynchronously.
+        Retorna um dicionário com o número de learners, evidências e KUs no banco.
+        Utilizado para telemetria e health-check — sem ficheiros locais.
         """
-        def _run_git_commands():
+        counts = {}
+        for table in ("learners", "evidence_records", "knowledge_units"):
             try:
-                subprocess.run(["git", "add", "memory_dumps"], cwd=repo_path, check=True, capture_output=True)
-                subprocess.run(["git", "commit", "-m", commit_msg], cwd=repo_path, check=True, capture_output=True)
-                subprocess.run(["git", "push"], cwd=repo_path, check=True, capture_output=True)
-            except subprocess.CalledProcessError as e:
-                print(f"Git sync failed: {e.stderr.decode('utf-8', errors='ignore')}")
-
-        thread = threading.Thread(target=_run_git_commands, daemon=True)
-        thread.start()
-        return thread
+                res = await session.execute(text(f"SELECT COUNT(*) AS cnt FROM {table}"))
+                counts[table] = res.scalar_one()
+            except Exception as e:
+                logger.warning("Tabela %s inacessível: %s", table, e)
+                counts[table] = -1
+        return counts
