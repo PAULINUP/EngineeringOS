@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 
 from src.database import get_session
 from src import models
-from src.parser import parse_dsl_content
+from src.eos_parser import parse_dsl_content
 from src import cognitive_engine
 from src.memory_framework import MemoryManager
 from src.integration import mock_webhooks_db
