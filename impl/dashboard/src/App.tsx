@@ -86,8 +86,18 @@ function App() {
 
   const fetchInitialData = async () => {
     try {
+      // 0. Auto-Login
+      const tokenRes = await fetch(`${API_BASE}/token`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: "dev", password: "dev" }),
+      });
+      const tokenData = await tokenRes.json();
+      localStorage.setItem("eos_token", tokenData.access_token);
+      const authHeaders = { "Authorization": `Bearer ${tokenData.access_token}` };
+
       // 1. Busca Estudantes
-      const lRes = await fetch(`${API_BASE}/learners`);
+      const lRes = await fetch(`${API_BASE}/learners`, { headers: authHeaders });
       const lData = await lRes.json();
       setLearners(lData);
       
@@ -98,7 +108,7 @@ function App() {
         // Se vazio, cria um estudante default para onboarding
         const createRes = await fetch(`${API_BASE}/learners`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json", ...authHeaders },
           body: JSON.stringify({ name: "Constitutional Learner" }),
         });
         const newL = await createRes.json();
@@ -167,11 +177,11 @@ function App() {
       const res = await fetch(`${API_BASE}/tasks/${taskId}`);
       const data = await res.json();
       
-      if (data.status === "SUCCESS") {
+      if (data.status === "completed") {
         setActivePath(data.result.path);
         setSatisfied(data.result.satisfied);
         setIsOptimizing(false);
-      } else if (data.status === "FAILURE") {
+      } else if (data.status === "failed") {
         showToast("error", "Erro ao otimizar a trajetória.");
         setIsOptimizing(false);
       } else {
@@ -192,7 +202,7 @@ function App() {
     try {
       const res = await fetch(`${API_BASE}/learners`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem("eos_token")}` },
         body: JSON.stringify({ name: newLearnerName }),
       });
       const data = await res.json();
@@ -216,7 +226,7 @@ function App() {
     try {
       const res = await fetch(`${API_BASE}/evidence`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem("eos_token")}` },
         body: JSON.stringify({
           learner_id: selectedLearnerId,
           ...evidence,
@@ -296,7 +306,7 @@ function App() {
 
       {/* MODAL ADICIONAR ESTUDANTE */}
       {showAddLearner && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex justify-center items-center p-4">
+        <div className="fixed w-screen h-screen top-0 left-0 z-[100] bg-black/60 backdrop-blur-sm flex justify-center items-center p-4">
           <div className="glass-panel p-6 max-w-sm w-full">
             <h3 className="text-lg font-bold title-font text-white mb-4 flex items-center gap-2">
               <Users className="w-5 h-5 text-violet-400" /> Cadastrar Estudante

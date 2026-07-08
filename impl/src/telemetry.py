@@ -56,9 +56,15 @@ def setup_telemetry():
     for handler in list(root_logger.handlers):
         root_logger.removeHandler(handler)
 
-    handler = logging.StreamHandler()
-    handler.setFormatter(JSONFormatter())
-    root_logger.addHandler(handler)
+    # Console Handler
+    console_handler = logging.StreamHandler()
+    console_handler.setFormatter(JSONFormatter())
+    root_logger.addHandler(console_handler)
+
+    # File Handler
+    file_handler = logging.FileHandler("system.log", encoding="utf-8")
+    file_handler.setFormatter(JSONFormatter())
+    root_logger.addHandler(file_handler)
 
 
 def get_logger(name: str) -> logging.Logger:

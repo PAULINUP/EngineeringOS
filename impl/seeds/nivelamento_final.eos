@@ -1,0 +1,44 @@
+@version 1.0.0
+@domain "matematica_base"
+@author "Paulo Geovane"
+
+# Módulo de Nivelamento de Engenharia: OpenStax Contemporary Math
+# Este módulo blinda a sua base para Cálculo e Física.
+
+KNOWLEDGE mat.logica_e_conjuntos.v1 {
+  domain: "matematica_base"
+  definition: "Fundamentos de lógica proposicional e teoria de conjuntos. Base para algoritmos."
+  requires: []
+  enables: [mat.algebra_elementar.v1, mat.probabilidade.v1]
+  interactivity: 3
+}
+
+KNOWLEDGE mat.algebra_elementar.v1 {
+  domain: "matematica_base"
+  definition: "Equações lineares, quadráticas e manipulação de variáveis. O motor de resolução."
+  requires: [mat.logica_e_conjuntos.v1]
+  enables: [mat.funcoes_e_graficos.v1]
+  interactivity: 6
+}
+
+KNOWLEDGE mat.funcoes_e_graficos.v1 {
+  domain: "matematica_base"
+  definition: "Análise de funções de primeiro e segundo grau. Leitura de gráficos."
+  requires: [mat.algebra_elementar.v1]
+  enables: [fisica.cinematica_vetorial.v1]
+  interactivity: 7
+}
+
+KNOWLEDGE mat.probabilidade.v1 {
+  domain: "matematica_base"
+  definition: "Contagem, permutação, combinação e noções de probabilidade."
+  requires: [mat.logica_e_conjuntos.v1]
+  interactivity: 5
+}
+
+MISSION missao.nivelamento.total {
+  label: "Nivelamento Completo: Base de Engenharia"
+  requires: [mat.logica_e_conjuntos.v1, mat.algebra_elementar.v1, mat.funcoes_e_graficos.v1, mat.probabilidade.v1]
+  critical: [mat.algebra_elementar.v1, mat.funcoes_e_graficos.v1]
+  threshold: 0.90
+}

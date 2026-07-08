@@ -274,7 +274,7 @@ export const GraphView: React.FC<GraphViewProps> = ({
                   fontWeight="600"
                   className="title-font pointer-events-none"
                 >
-                  {node.title.split(" ").slice(0, 2).join(" ")}
+                  <tspan>{node.title.split(" ").slice(0, 2).join(" ")}</tspan>
                 </text>
                 <text
                   textAnchor="middle"
@@ -283,7 +283,7 @@ export const GraphView: React.FC<GraphViewProps> = ({
                   fontSize="9"
                   className="pointer-events-none"
                 >
-                  {Math.round(node.mastery * 100)}%
+                  <tspan>{Math.round(node.mastery * 100)}%</tspan>
                 </text>
               </g>
             );

@@ -1,4 +1,7 @@
 import re
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from typing import Any, Dict, List, Tuple, Optional
 
 class EOSSyntaxError(Exception):
@@ -11,6 +14,7 @@ def tokenize(text: str) -> List[Tuple[str, Any]]:
     token_specification = [
         ('DIRECTIVE', r'@[a-zA-Z_]+'),
         ('STRING',    r'"[^"\\]*(?:\\.[^"\\]*)*"'),
+        ('VERSION',   r'\d+\.\d+\.\d+'),
         ('NUMBER',    r'-?\d+(?:\.\d+)?'),
         ('LBRACE',    r'\{'),
         ('RBRACE',    r'\}'),
@@ -113,7 +117,7 @@ class EOSParser:
     def parse_directive(self) -> Dict[str, Any]:
         t = self.expect('DIRECTIVE')
         key = t[1][1:] # remove @
-        if self.peek() and self.peek()[0] in ('STRING', 'ID', 'NUMBER'):
+        if self.peek() and self.peek()[0] in ('STRING', 'ID', 'NUMBER', 'VERSION'):
             val = self.advance()[1]
         else:
             raise EOSSyntaxError(f"Expected value for directive @{key}")
@@ -182,7 +186,7 @@ class EOSParser:
         t = self.peek()
         if not t:
             raise EOSSyntaxError("Unexpected EOF")
-        if t[0] in ('STRING', 'NUMBER'):
+        if t[0] in ('STRING', 'NUMBER', 'VERSION'):
             return self.advance()[1]
         elif t[0] == 'ID':
             val_id = self.advance()[1]

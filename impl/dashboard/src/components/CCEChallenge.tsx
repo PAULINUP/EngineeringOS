@@ -164,7 +164,7 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
           <div className="grid grid-cols-2 gap-3 text-xs">
             <div>
               <label className="block text-gray-400 font-semibold mb-1">
-                Acordo dos Revisores: {Math.round(agreement * 100)}%
+                <span>Acordo dos Revisores: {Math.round(agreement * 100)}%</span>
               </label>
               <input
                 type="range"
@@ -180,7 +180,7 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
 
             <div>
               <label className="block text-gray-400 font-semibold mb-1">
-                Recência: {Math.round(recency * 100)}%
+                <span>Recência: {Math.round(recency * 100)}%</span>
               </label>
               <input
                 type="range"
@@ -204,11 +204,11 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
           className="flex-1 flex justify-center items-center gap-1.5 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold py-2.5 px-4 rounded-lg transition-all text-sm disabled:opacity-40 disabled:cursor-not-allowed glow-violet"
         >
           {isSubmitting ? (
-            "Processando no Motor..."
+            <span>Processando no Motor...</span>
           ) : (
-            <>
-              <CheckCircle2 className="w-4 h-4" /> Submeter Evidência
-            </>
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4" /> <span>Submeter Evidência</span>
+            </span>
           )}
         </button>
       </div>

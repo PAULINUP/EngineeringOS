@@ -3,7 +3,7 @@ import asyncio
 import networkx as nx
 from typing import Dict, Any
 
-from src.parser import tokenize, EOSParser, parse_dsl_content
+from src.eos_parser import tokenize, EOSParser, parse_dsl_content
 from src import cognitive_engine
 
 class TestEOSParser(unittest.TestCase):
@@ -20,10 +20,9 @@ class TestEOSParser(unittest.TestCase):
 
     def test_parsing(self):
         dsl = """
-        KU linear_algebra.matrix_definition.v1 {
+        KNOWLEDGE linear_algebra.matrix_definition.v1 FOUNDATIONAL {
             title: "Matrix Definition"
             domain: "linear_algebra"
-            level: foundational
             element_interactivity: 2
             sources: [
                 { type: "academic", reference: "Strang, G.", weight: 1.0 }
@@ -32,8 +31,9 @@ class TestEOSParser(unittest.TestCase):
         """
         decs = parse_dsl_content(dsl)
         self.assertEqual(len(decs), 1)
-        self.assertEqual(decs[0]["type"], "KU")
+        self.assertEqual(decs[0]["type"], "KNOWLEDGE")
         self.assertEqual(decs[0]["id"], "linear_algebra.matrix_definition.v1")
+        self.assertEqual(decs[0]["level"], "FOUNDATIONAL")
         self.assertEqual(decs[0]["data"]["title"], "Matrix Definition")
         self.assertEqual(decs[0]["data"]["element_interactivity"], 2)
         self.assertEqual(len(decs[0]["data"]["sources"]), 1)

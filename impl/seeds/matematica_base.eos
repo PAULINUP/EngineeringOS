@@ -1,0 +1,114 @@
+@version 1.0.0
+@domain "matematica_base"
+@author "Paulo Geovane"
+
+# ---------------------------------------------------------
+# BLOCO 1: O ALICERCE (Operações e Números Reais)
+# Extraído do Chapter 3: Real Number Systems
+# ---------------------------------------------------------
+
+KNOWLEDGE mat.operacoes_reais.v1 FOUNDATIONAL {
+  domain: "matematica_base"
+  definition: "Ordem de operações (PEMDAS), manipulação de frações (Rational Numbers) e propriedades dos expoentes (Exponents). A correção definitiva para o erro de 'cortar sinal errado'."
+  requires: []
+  enables: [skill.mat.sobrevivencia_algebrica]
+  interactivity: 3
+  decay_rate: 0.05
+  evidence: [solution]
+  source: { type: "standard", ref: "OpenStax: Contemporary Math - Chapter 3", weight: 0.90 }
+  tags: ["fracoes", "expoentes", "aritmetica"]
+}
+
+# ---------------------------------------------------------
+# BLOCO 2: A MECÂNICA (Álgebra Elementar)
+# Extraído do Chapter 5: Algebra
+# ---------------------------------------------------------
+
+KNOWLEDGE mat.expressoes_algebricas.v1 INTERMEDIATE {
+  domain: "matematica_base"
+  definition: "Manipulação de expressões com incógnitas. Linear Equations e Quadratic Equations (Fórmula de Bhaskara). Isolar o 'x' em qualquer cenário."
+  requires: [mat.operacoes_reais.v1]
+  enables: [skill.mat.sobrevivencia_algebrica]
+  interactivity: 6
+  decay_rate: 0.02
+  evidence: [solution, explanation]
+  source: { type: "academic", ref: "OpenStax: Contemporary Math - Chapter 5.1 to 5.6", weight: 0.95 }
+  tags: ["algebra", "equacoes", "bhaskara"]
+}
+
+KNOWLEDGE mat.teoria_funcoes.v1 ADVANCED {
+  domain: "matematica_base"
+  definition: "Compreensão de Funções (Functions), leitura de gráficos (Graphing) e Sistemas de Equações. A base estrutural para conseguir compreender Derivadas e Integrais no Cálculo."
+  requires: [mat.expressoes_algebricas.v1]
+  enables: [skill.mat.leitura_grafica]
+  interactivity: 7
+  decay_rate: 0.02
+  evidence: [solution, artifact]
+  source: { type: "academic", ref: "OpenStax: Contemporary Math - Chapter 5.7 to 5.9", weight: 0.95 }
+  tags: ["funcoes", "graficos", "sistemas"]
+}
+
+# ---------------------------------------------------------
+# BLOCO 3: O ESPAÇO VETORIAL (Geometria e Trigonometria)
+# Extraído do Chapter 10: Geometry
+# ---------------------------------------------------------
+
+KNOWLEDGE mat.trigonometria_triangulo.v1 ADVANCED {
+  domain: "matematica_base"
+  definition: "Right Triangle Trigonometry: Seno, Cosseno, Tangente e Teorema de Pitágoras. Ferramenta obrigatória para decompor vetores de força e velocidade em Física 1."
+  requires: [mat.expressoes_algebricas.v1]
+  enables: [skill.mat.decomposicao_vetorial]
+  interactivity: 6
+  decay_rate: 0.01
+  evidence: [solution]
+  source: { type: "academic", ref: "OpenStax: Contemporary Math - Chapter 10.8", weight: 1.0 }
+  tags: ["trigonometria", "seno", "cosseno", "triangulos"]
+}
+
+# ---------------------------------------------------------
+# BLOCO DE HABILIDADES (SKILLS)
+# ---------------------------------------------------------
+
+SKILL skill.mat.sobrevivencia_algebrica {
+  domain: "matematica_base"
+  operations: ["isolar variaveis em equacoes longas", "operar com expoentes negativos", "resolver bhaskara sem erro de sinal"]
+  applies_to: [mat.operacoes_reais.v1, mat.expressoes_algebricas.v1]
+  evidence: [solution, explanation]
+  level: INTERMEDIATE
+}
+
+SKILL skill.mat.leitura_grafica {
+  domain: "matematica_base"
+  operations: ["identificar raizes olhando para o grafico", "encontrar interceptacoes de reta", "resolver sistemas de equacoes"]
+  applies_to: [mat.teoria_funcoes.v1]
+  evidence: [artifact, solution]
+  level: ADVANCED
+}
+
+SKILL skill.mat.decomposicao_vetorial {
+  domain: "matematica_base"
+  operations: ["calcular cateto oposto usando seno", "encontrar hipotenusa de trajetorias"]
+  applies_to: [mat.trigonometria_triangulo.v1]
+  evidence: [solution]
+  level: ADVANCED
+}
+
+# ---------------------------------------------------------
+# A MISSÃO FINAL (O ALVO DE NIVELAMENTO)
+# ---------------------------------------------------------
+
+MISSION missao.openstax.fundacao_engenharia {
+  label: "Nivelamento OpenStax: Fundação para Cálculo e Física"
+  requires: [
+    mat.operacoes_reais.v1,
+    mat.expressoes_algebricas.v1,
+    mat.teoria_funcoes.v1,
+    mat.trigonometria_triangulo.v1
+  ]
+  produces: [
+    competence.matematica_base.nivelamento_calculo { threshold: 0.90 }
+  ]
+  critical: [mat.expressoes_algebricas.v1, mat.trigonometria_triangulo.v1]
+  threshold: 0.85
+  cost: { alpha: 0.5, beta: 0.3, gamma: 0.2 }
+}

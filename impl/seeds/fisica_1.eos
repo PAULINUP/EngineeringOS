@@ -1,0 +1,137 @@
+@version 1.0.0
+@domain "fisica_mecanica"
+@author "Paulo Geovane"
+
+# ---------------------------------------------------------
+# BLOCO DE CONHECIMENTO (KNOWLEDGE UNITS - DAG)
+# ---------------------------------------------------------
+
+KNOWLEDGE fisica.teoria_erros.v1 FOUNDATIONAL {
+  domain: "fisica_mecanica"
+  definition: "Fundamentos de metrologia: algarismos significativos, desvios, teoria de propagação de erros, e calibração de instrumentos (paquímetro e micrômetro)."
+  requires: []
+  enables: [skill.fisica.medicao_experimental]
+  interactivity: 4
+  decay_rate: 0.02
+  evidence: [artifact, solution]
+  source: { type: "academic", ref: "Sears & Zemansky: Física, Vol 1", weight: 0.95 }
+  tags: ["laboratorio", "erros", "metrologia"]
+}
+
+KNOWLEDGE fisica.cinematica_vetorial.v1 INTERMEDIATE {
+  domain: "fisica_mecanica"
+  definition: "Análise do movimento em 1D, 2D e 3D. Cálculo diferencial aplicado a espaço, velocidade e aceleração vetorial. Lançamento de projéteis."
+  requires: []
+  enables: [skill.fisica.calculo_movimento]
+  interactivity: 6
+  decay_rate: 0.01
+  evidence: [solution, explanation]
+  source: { type: "academic", ref: "Halliday & Resnick: Fundamentos de Física, Vol 1", weight: 0.95 }
+  tags: ["cinematica", "vetores", "derivadas"]
+}
+
+KNOWLEDGE fisica.leis_newton.v1 INTERMEDIATE {
+  domain: "fisica_mecanica"
+  definition: "Dinâmica da partícula: 1ª, 2ª e 3ª Leis de Newton. Forças de atrito (estático e cinético), força elástica (Lei de Hooke) e equilíbrio de forças."
+  requires: [fisica.cinematica_vetorial.v1]
+  enables: [skill.fisica.diagrama_corpo_livre]
+  interactivity: 7
+  decay_rate: 0.00
+  evidence: [solution, artifact]
+  source: { type: "academic", ref: "Goldemberg, J. - Física Geral e Experimental Vol 1", weight: 1.0 }
+  tags: ["dinamica", "newton", "forca"]
+}
+
+KNOWLEDGE fisica.trabalho_energia.v1 ADVANCED {
+  domain: "fisica_mecanica"
+  definition: "Teorema do Trabalho-Energia Cinética, forças conservativas e não conservativas, e Lei de Conservação da Energia Mecânica."
+  requires: [fisica.leis_newton.v1]
+  enables: [skill.fisica.modelagem_conservativa]
+  interactivity: 8
+  decay_rate: 0.00
+  evidence: [solution, benchmark]
+  source: { type: "academic", ref: "Goldemberg, J. - Física Geral e Experimental Vol 1", weight: 1.0 }
+  tags: ["energia", "conservacao", "trabalho"]
+}
+
+KNOWLEDGE fisica.momento_linear.v1 ADVANCED {
+  domain: "fisica_mecanica"
+  definition: "Centro de massa, conservação do momento linear, impulso e análise de colisões elásticas e inelásticas."
+  requires: [fisica.leis_newton.v1]
+  enables: [skill.fisica.modelagem_conservativa]
+  interactivity: 7
+  decay_rate: 0.00
+  evidence: [solution, explanation]
+  source: { type: "academic", ref: "Halliday & Resnick: Fundamentos de Física, Vol 1", weight: 0.95 }
+  tags: ["colisoes", "momento", "impulso"]
+}
+
+KNOWLEDGE fisica.cinematica_rotacao.v1 EXPERT {
+  domain: "fisica_mecanica"
+  definition: "Movimento de rotação, cinemática angular, momento de inércia, torque e conservação do momento angular."
+  requires: [fisica.trabalho_energia.v1, fisica.momento_linear.v1]
+  enables: [skill.fisica.analise_corpo_rigido]
+  interactivity: 9
+  decay_rate: 0.01
+  evidence: [solution, artifact]
+  source: { type: "academic", ref: "Goldemberg, J. - Física Geral e Experimental Vol 1", weight: 1.0 }
+  tags: ["rotacao", "torque", "inercia"]
+}
+
+# ---------------------------------------------------------
+# BLOCO DE HABILIDADES (SKILLS)
+# ---------------------------------------------------------
+
+SKILL skill.fisica.medicao_experimental {
+  domain: "fisica_mecanica"
+  operations: ["medir compimentos em micrometros", "calcular desvio padrao", "plotar graficos de erro"]
+  applies_to: [fisica.teoria_erros.v1]
+  evidence: [artifact, benchmark]
+  level: FOUNDATIONAL
+}
+
+SKILL skill.fisica.diagrama_corpo_livre {
+  domain: "fisica_mecanica"
+  operations: ["isolar vetores de forca", "decompor forcas em eixos XY", "montar sistema de equacoes de Newton"]
+  applies_to: [fisica.leis_newton.v1]
+  evidence: [solution, explanation]
+  level: INTERMEDIATE
+}
+
+SKILL skill.fisica.modelagem_conservativa {
+  domain: "fisica_mecanica"
+  operations: ["igualar energia inicial e final", "calcular perda por atrito", "prever velocidades pos-colisao"]
+  applies_to: [fisica.trabalho_energia.v1, fisica.momento_linear.v1]
+  evidence: [solution]
+  level: ADVANCED
+}
+
+SKILL skill.fisica.analise_corpo_rigido {
+  domain: "fisica_mecanica"
+  operations: ["calcular tensor de inercia", "equilibrar torques estaticos", "resolver pendulo fisico"]
+  applies_to: [fisica.cinematica_rotacao.v1]
+  evidence: [solution, artifact]
+  level: EXPERT
+}
+
+# ---------------------------------------------------------
+# A MISSÃO FINAL (O ALVO)
+# ---------------------------------------------------------
+
+MISSION missao.fisica_1.cet095 {
+  label: "Física Geral e Experimental I (CET095)"
+  requires: [
+    fisica.teoria_erros.v1,
+    fisica.cinematica_vetorial.v1,
+    fisica.leis_newton.v1,
+    fisica.trabalho_energia.v1,
+    fisica.momento_linear.v1,
+    fisica.cinematica_rotacao.v1
+  ]
+  produces: [
+    competence.fisica_mecanica.cet095 { threshold: 0.85 }
+  ]
+  critical: [fisica.leis_newton.v1, fisica.trabalho_energia.v1]
+  threshold: 0.80
+  cost: { alpha: 0.5, beta: 0.3, gamma: 0.2 }
+}

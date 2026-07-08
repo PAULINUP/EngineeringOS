@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Optional
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select, delete, and_, or_, func
 from sqlalchemy.ext.asyncio import AsyncSession
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from src.database import get_session
 from src import models
@@ -46,12 +46,20 @@ class CompetenceResponse(BaseModel):
 
 class EvidenceSubmit(BaseModel):
     learner_id: uuid.UUID
-    ku_id: str
-    type: str  # artifact, explanation, solution, decision, benchmark
+    ku_id: str = Field(..., max_length=255)
+    type: str = Field(..., max_length=50)
     source_weight: float = Field(0.4, ge=0.0, le=1.0)
     reviewer_agreement: float = Field(1.0, ge=0.0, le=1.0)
     recency_factor: float = Field(1.0, ge=0.0, le=1.0)
-    reviewers: List[Dict[str, Any]] = []
+    reviewers: List[Dict[str, Any]] = Field(default=[], max_length=10)
+
+    @field_validator('source_weight', 'reviewer_agreement', 'recency_factor')
+    @classmethod
+    def reject_non_finite(cls, v: float) -> float:
+        import math
+        if not math.isfinite(v):
+            raise ValueError('Value must be finite')
+        return v
 
 class EvidenceResponse(BaseModel):
     id: uuid.UUID
@@ -223,7 +231,7 @@ async def get_mission_path(
     )
     mastery_dict = {state.ku_id: state.mastery_score for state in states_res.scalars().all()}
     
-    # Despacha para o Celery — a API devolve imediatamente o task_id
+    # Despacha para o Celery (agora em modo Eager - sincrono)
     from src.celery_worker import compute_learning_trajectory
     task = compute_learning_trajectory.delay(
         relations=relations,
@@ -236,12 +244,7 @@ async def get_mission_path(
         terminal_threshold=mission.terminal_threshold,
     )
     
-    return {
-        "status": "processing",
-        "task_id": task.id,
-        "poll_url": f"/api/tasks/{task.id}",
-    }
-
+    return task.result
 @router.get("/tasks/{task_id}")
 async def get_task_result(task_id: str):
     """Consulta o resultado de uma tarefa assíncrona despachada pelo Celery."""
