@@ -16,6 +16,13 @@ async def lifespan(app: FastAPI):
     # Inicializa o banco de dados e cria tabelas no startup
     print("Inicializando banco de dados EngineeringOS...")
     await init_db()
+    # Garante que o banco de desafios do CCE existe para as KUs presentes
+    from src.database import AsyncSessionLocal
+    from src.curriculum_seed import seed_challenge_bank
+    async with AsyncSessionLocal() as session:
+        inserted = await seed_challenge_bank(session)
+        if inserted:
+            print(f"CCE: {inserted} desafios padrão inseridos.")
     print("Banco de dados pronto.")
     yield
 

@@ -13,7 +13,8 @@ from src.eos_parser import parse_dsl_content
 from src import cognitive_engine
 from src.memory_framework import MemoryManager
 from src.integration import mock_webhooks_db
-from src.curriculum_seed import seed_user_curriculum
+from src.curriculum_seed import seed_user_curriculum, seed_challenge_bank
+from src.cce import grade_answer, AUTO_GRADED_SOURCE_WEIGHT
 from src.security import verify_token, create_access_token
 import httpx
 import asyncio
@@ -679,7 +680,12 @@ async def seed_database(
         await db.execute(models.ku_skill_association.insert().values(ku_id=ku.id, skill_id="skill.explain"))
             
     await db.commit()
-    return {"message": "Database seeded via DSL."}
+
+    # Repovoa o banco de desafios do CCE para as KUs recém-criadas
+    await db.execute(delete(models.Challenge))
+    await db.commit()
+    n_challenges = await seed_challenge_bank(db)
+    return {"message": f"Database seeded via DSL ({n_challenges} desafios CCE)."}
 
 @router.post("/seed-curriculum")
 async def seed_curriculum_endpoint(
@@ -701,3 +707,114 @@ async def get_ku_materials(ku_id: str, db: AsyncSession = Depends(get_session)):
     res = await db.execute(select(models.StudyMaterial).where(models.StudyMaterial.ku_id == ku_id))
     materials = res.scalars().all()
     return materials
+
+# ===========================================================================
+# CCE — Desafios corrigidos pelo servidor
+# ===========================================================================
+
+class ChallengeResponse(BaseModel):
+    """Desafio exposto ao cliente. A resposta esperada NUNCA sai do servidor."""
+    id: uuid.UUID
+    ku_id: str
+    prompt: str
+    answer_type: str
+    difficulty: float
+
+    class Config:
+        from_attributes = True
+
+class AttemptRequest(BaseModel):
+    learner_id: uuid.UUID
+    answer: str = Field(..., max_length=5000)
+
+@router.get("/kus/{ku_id}/challenges", response_model=List[ChallengeResponse])
+async def get_ku_challenges(ku_id: str, db: AsyncSession = Depends(get_session)):
+    """Lista os desafios de uma KU (sem os gabaritos)."""
+    res = await db.execute(
+        select(models.Challenge).where(models.Challenge.ku_id == ku_id).order_by(models.Challenge.difficulty)
+    )
+    return res.scalars().all()
+
+@router.post("/challenges/{challenge_id}/attempt")
+async def attempt_challenge(
+    challenge_id: uuid.UUID,
+    data: AttemptRequest,
+    db: AsyncSession = Depends(get_session),
+    token: dict = Depends(verify_token),
+):
+    """
+    Corrige a resposta no servidor (CCE). Se correta, gera um EvidenceRecord
+    com peso de benchmark reprodutível (0.60) — o aluno não declara o próprio
+    peso. Pela agregação noisy-OR, ~3 desafios distintos corretos cruzam θ=0.85.
+    """
+    challenge = await db.get(models.Challenge, challenge_id)
+    if not challenge:
+        raise HTTPException(status_code=404, detail="Desafio não encontrado")
+
+    learner = await db.get(models.Learner, data.learner_id)
+    if not learner:
+        raise HTTPException(status_code=404, detail="Learner não encontrado")
+
+    correct, detail = grade_answer(
+        challenge.answer_type, challenge.expected_answer, challenge.tolerance, data.answer
+    )
+
+    # Registra a tentativa como Assessment (auditoria de todas as tentativas)
+    db.add(models.Assessment(
+        challenge_id=str(challenge.id),
+        agent_id=str(data.learner_id),
+        response=data.answer[:5000],
+        rubric_id=f"auto:{challenge.answer_type}",
+        score=1.0 if correct else 0.0,
+        reasoning_mode="auto_graded",
+    ))
+    await db.commit()
+
+    evidence_status = None
+    new_mastery = None
+    if correct:
+        # Reusa o pipeline constitucional de evidência (noisy-OR + delta de aprendizado)
+        record = await submit_evidence(
+            EvidenceSubmit(
+                learner_id=data.learner_id,
+                ku_id=challenge.ku_id,
+                type="solution",
+                source_weight=AUTO_GRADED_SOURCE_WEIGHT,
+                reviewer_agreement=1.0,
+                recency_factor=1.0,
+                reviewers=[{
+                    "reviewer_id": "cce_auto_grader",
+                    "reviewer_type": "machine",
+                    "verdict": "accept",
+                }],
+            ),
+            db=db,
+            token=token,
+        )
+        evidence_status = record.status
+
+        state = await db.execute(
+            select(models.Competence).where(
+                models.Competence.learner_id == data.learner_id,
+                models.Competence.ku_id == challenge.ku_id,
+            )
+        )
+        comp = state.scalar_one_or_none()
+        new_mastery = comp.mastery_score if comp else None
+
+    return {
+        "correct": correct,
+        "detail": detail,
+        "feedback": challenge.feedback if correct else None,
+        "evidence_status": evidence_status,
+        "new_mastery": new_mastery,
+    }
+
+@router.post("/seed-challenges")
+async def seed_challenges_endpoint(
+    db: AsyncSession = Depends(get_session),
+    token: dict = Depends(verify_token),
+):
+    """Insere o banco de desafios padrão para as KUs existentes (idempotente)."""
+    inserted = await seed_challenge_bank(db)
+    return {"message": f"{inserted} desafios inseridos."}

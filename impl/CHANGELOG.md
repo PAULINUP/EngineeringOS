@@ -1,5 +1,14 @@
 # Changelog - EngineeringOS
 
+## [v3.2.0] - 2026-07-19
+### Added
+- **Correção automática de desafios (CCE server-side grading)** — fecha o buraco da evidência autodeclarada para casos objetivos:
+  - Novo modelo `Challenge` (prompt, tipo de resposta, gabarito, tolerância, feedback); o gabarito nunca sai do servidor.
+  - Motor de correção em `cce.py`: respostas numéricas com tolerância (aceita vírgula decimal BR e conjuntos de valores) e correção por palavras-chave insensível a acentos.
+  - Endpoints `GET /kus/{id}/challenges` (sem gabarito) e `POST /challenges/{id}/attempt` — corrige, audita a tentativa como `Assessment`, e em caso de acerto gera `EvidenceRecord` com peso fixo de benchmark reprodutível (0.60) reutilizando o pipeline constitucional (noisy-OR + delta de aprendizado). ≈3 desafios distintos corretos validam a KU (θ = 85%).
+  - Banco de 18 desafios padrão (fontes: Strang 2016, Stewart 2015, Goodfellow et al. 2016), semeado de forma idempotente no startup e em `/seed`.
+  - UI: painel de estudo agora mostra desafios com correção instantânea, feedback com resolução e progresso "Desafio N de M"; KUs sem desafios caem no formulário de evidência aberta (com pesos, agora explicitamente marcado como sujeito a revisão).
+
 ## [v3.1.0] - 2026-07-19
 ### Added
 - **Especificação Constitucional completa** em `META/ENGINEERINGOS_SPECIFICATION.md` (a v3.0.0 continha apenas o sumário): Partes 0–X, Definições 1–12, gramática EBNF da DSL, axiomas ontológicos, hipóteses de validação H1–H5 e provas formais.

@@ -207,6 +207,30 @@ class Project(Base):
     deliverables: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)
     evaluation_rubric: Mapped[str] = mapped_column(String(255), nullable=False)
 
+class Challenge(Base):
+    """
+    Desafio de competência gerado pelo CCE e corrigido pelo servidor.
+    A resposta esperada NUNCA é exposta pela API (correção server-side),
+    fechando o buraco de evidência autodeclarada para casos objetivos.
+    """
+    __tablename__ = "challenges"
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    ku_id: Mapped[str] = mapped_column(
+        ForeignKey("knowledge_units.id", ondelete="CASCADE"), nullable=False
+    )
+    prompt: Mapped[str] = mapped_column(String(2000), nullable=False)
+    answer_type: Mapped[str] = mapped_column(String(20), nullable=False, default="numeric")  # numeric, keywords
+    expected_answer: Mapped[str] = mapped_column(String(500), nullable=False)  # numeric: valor; keywords: termos separados por ';'
+    tolerance: Mapped[float] = mapped_column(Float, nullable=False, default=0.001)  # apenas numeric
+    feedback: Mapped[str] = mapped_column(String(2000), nullable=False, default="")  # explicação exibida após a correção
+    difficulty: Mapped[float] = mapped_column(Float, nullable=False, default=0.5)  # 0..1
+    created_at: Mapped[datetime.datetime] = mapped_column(
+        DateTime, default=datetime.datetime.utcnow, nullable=False
+    )
+
+    ku: Mapped["KnowledgeUnit"] = relationship("KnowledgeUnit")
+
 class StudyMaterial(Base):
     __tablename__ = "study_materials"
 

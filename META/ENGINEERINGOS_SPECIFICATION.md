@@ -533,6 +533,7 @@ IA não pode: validar evidência sozinha (peso máx. 0.40), aprovar RFC, alterar
 
 # Apêndice B — Changelog
 
+- **3.2.0 (2026-07-19)** — CCE ganha correção automática server-side: entidade `Challenge`, gabarito nunca exposto pela API, tentativas auditadas como `Assessment`, e acertos convertidos em `EvidenceRecord` com peso fixo de benchmark reprodutível (0.60) via pipeline das Definições 2–3. Evidência autodeclarada permanece disponível apenas como fallback marcado para revisão (P2 reforçado).
 - **3.1.0 (2026-07-19)** — Documento completo restaurado ao repositório (a v3.0.0 continha apenas o sumário). `WORKING_MEMORY_CAPACITY` promovida a constante constitucional nomeada e parametrizada na ULA/CCE. Correção do módulo assíncrono do motor cognitivo.
 - **3.0.0 (2026-07-03)** — Upgrade constitucional; Celery assíncrono; parser LL(1) EBNF.
 - **2.x** — MASTER_SHARED_MEMORY (superado).

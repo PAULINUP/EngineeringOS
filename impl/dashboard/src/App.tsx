@@ -617,7 +617,12 @@ function App() {
             </div>
 
             <div className="px-6 py-5 flex flex-col gap-5">
-              <CCEChallenge selectedNode={selectedNode} onSubmitEvidence={handleSubmitEvidence} />
+              <CCEChallenge
+                selectedNode={selectedNode}
+                learnerId={selectedLearnerId}
+                onSubmitEvidence={handleSubmitEvidence}
+                onAfterAttempt={fetchGraphAndPath}
+              />
               <MaterialViewer selectedNodeId={selectedNode.id} />
             </div>
           </div>

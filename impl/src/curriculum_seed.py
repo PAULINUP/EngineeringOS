@@ -1,8 +1,32 @@
 import re
 import uuid
 from typing import List, Dict, Any
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from src import models
+from src.cce import DEFAULT_CHALLENGE_BANK
+
+async def seed_challenge_bank(db: AsyncSession) -> int:
+    """
+    Insere o banco de desafios padrão (CCE) para as KUs existentes no banco.
+    Idempotente: só insere desafios de KUs presentes e que ainda não os possuem.
+    Retorna o número de desafios inseridos.
+    """
+    inserted = 0
+    for ku_id, challenges in DEFAULT_CHALLENGE_BANK.items():
+        ku = await db.get(models.KnowledgeUnit, ku_id)
+        if not ku:
+            continue
+        existing = await db.execute(
+            select(models.Challenge.id).where(models.Challenge.ku_id == ku_id)
+        )
+        if existing.first():
+            continue
+        for ch in challenges:
+            db.add(models.Challenge(ku_id=ku_id, **ch))
+            inserted += 1
+    await db.commit()
+    return inserted
 
 RAW_CURRICULUM = """
 10655 - ADMINISTRAÇÃO DA PRODUÇÃO 2025/2 40 AE* Aprovado DOUGLAS ALMENDRO - Doutorado
