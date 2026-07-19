@@ -708,6 +708,37 @@ async def get_ku_materials(ku_id: str, db: AsyncSession = Depends(get_session)):
     materials = res.scalars().all()
     return materials
 
+class MaterialCreate(BaseModel):
+    title: str = Field(..., max_length=255)
+    type: str = Field(..., max_length=50)  # video, pdf, article, link
+    url: Optional[str] = Field(None, max_length=1000)
+    content: Optional[str] = None
+    quality_score: float = Field(1.0, ge=0.0, le=1.0)
+
+@router.post("/kus/{ku_id}/materials")
+async def add_ku_material(
+    ku_id: str,
+    data: MaterialCreate,
+    db: AsyncSession = Depends(get_session),
+    token: dict = Depends(verify_token),
+):
+    """Cadastra um material de estudo (Base Infinita) para uma KU existente."""
+    ku = await db.get(models.KnowledgeUnit, ku_id)
+    if not ku:
+        raise HTTPException(status_code=404, detail="KnowledgeUnit não encontrada")
+    material = models.StudyMaterial(
+        ku_id=ku_id,
+        title=data.title,
+        type=data.type,
+        url=data.url,
+        content=data.content or "",
+        quality_score=data.quality_score,
+    )
+    db.add(material)
+    await db.commit()
+    await db.refresh(material)
+    return material
+
 # ===========================================================================
 # CCE — Desafios corrigidos pelo servidor
 # ===========================================================================
