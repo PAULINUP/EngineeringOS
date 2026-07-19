@@ -1,5 +1,16 @@
 # Changelog - EngineeringOS
 
+## [v3.1.0] - 2026-07-19
+### Added
+- **Especificação Constitucional completa** em `META/ENGINEERINGOS_SPECIFICATION.md` (a v3.0.0 continha apenas o sumário): Partes 0–X, Definições 1–12, gramática EBNF da DSL, axiomas ontológicos, hipóteses de validação H1–H5 e provas formais.
+- **Dashboard "Aurora"** — redesign completo da interface (React + Tailwind v4): sidebar de produto, hero com anel de progresso e ranks, cards de estatísticas (progresso, validadas, trilha π*, carga cognitiva), mapa de conhecimento SVG com anéis de maestria/estados bloqueados/badges de passo, trilha vertical como jornada, matriz de competências com filtros, e painel lateral de sessão de estudo (desafio CCE + materiais).
+- Constante constitucional `WORKING_MEMORY_CAPACITY = 4` em `cognitive_engine.py`, consumida pela ULA e pelo CCE (antes duplicada e hardcoded).
+
+### Fixed
+- `NameError` em `run_heavy_math_simulation`: `cognitive_engine.py` usava `asyncio.sleep` sem importar `asyncio`.
+- Limite de 4 KUs hardcoded dentro de `optimize_learning_trajectory` promovido a parâmetro `wm_capacity`.
+- CSS do dashboard migrado para a sintaxe do Tailwind v4 (`@import "tailwindcss"`), eliminando as diretivas `@tailwind` legadas.
+
 ## [v2.1.0] - 2026-07-03
 ### Added
 - Limitador dinâmico de 4 KUs (Knowledge Units) na `cce.py` (Cognitive Challenge Engine) para evitar fadiga cognitiva extrema em alunos TDAH.

@@ -1,6 +1,11 @@
+import asyncio
 import math
 import networkx as nx
 from typing import Any, Dict, List, Set, Tuple
+
+# Capacidade da memória de trabalho (Cowan, 2001): máximo de KUs novas por sessão.
+# Constante constitucional — ver ENGINEERINGOS_SPECIFICATION Parte V (Cognitive Model).
+WORKING_MEMORY_CAPACITY = 4
 
 def calculate_evidence_confidence(
     source_weight: float,
@@ -152,7 +157,8 @@ def optimize_learning_trajectory(
     relations: List[Dict[str, Any]],
     mission_required_kus: List[str],
     cost_weights: Dict[str, float],
-    threshold: float = 0.85
+    threshold: float = 0.85,
+    wm_capacity: int = WORKING_MEMORY_CAPACITY
 ) -> List[str]:
     """
     Gera o caminho ideal ULA (trajetória pi*) usando um agendador guloso que minimiza 
@@ -251,7 +257,7 @@ def optimize_learning_trajectory(
                 
         if best_candidate:
             path.append(best_candidate)
-            if len(path) >= 4:
+            if len(path) >= wm_capacity:
                 break
             
     return path

@@ -1,5 +1,5 @@
-import React from "react";
-import { Check, BookOpen, AlertCircle } from "lucide-react";
+import React, { useMemo, useState } from "react";
+import { CheckCircle2, CircleDashed, GraduationCap, Sparkles } from "lucide-react";
 
 interface Node {
   id: string;
@@ -22,91 +22,164 @@ interface CompetenceMatrixProps {
   selectedNodeId: string | null;
 }
 
+type Filter = "all" | "validated" | "progress" | "todo";
+
+const MASTERY_THRESHOLD = 0.85;
+
 export const CompetenceMatrix: React.FC<CompetenceMatrixProps> = ({
   nodes,
   onSelectNode,
   selectedNodeId,
 }) => {
+  const [filter, setFilter] = useState<Filter>("all");
+
+  const masteryOf = (n: Node) => n.effective_mastery || n.mastery;
+
+  const counts = useMemo(() => {
+    const validated = nodes.filter((n) => masteryOf(n) >= MASTERY_THRESHOLD).length;
+    const progress = nodes.filter((n) => {
+      const m = masteryOf(n);
+      return m > 0 && m < MASTERY_THRESHOLD;
+    }).length;
+    return { all: nodes.length, validated, progress, todo: nodes.length - validated - progress };
+  }, [nodes]);
+
+  const filtered = useMemo(() => {
+    switch (filter) {
+      case "validated":
+        return nodes.filter((n) => masteryOf(n) >= MASTERY_THRESHOLD);
+      case "progress":
+        return nodes.filter((n) => {
+          const m = masteryOf(n);
+          return m > 0 && m < MASTERY_THRESHOLD;
+        });
+      case "todo":
+        return nodes.filter((n) => masteryOf(n) === 0);
+      default:
+        return nodes;
+    }
+  }, [nodes, filter]);
+
+  const FILTERS: { key: Filter; label: string; count: number }[] = [
+    { key: "all", label: "Todas", count: counts.all },
+    { key: "validated", label: "Validadas", count: counts.validated },
+    { key: "progress", label: "Em progresso", count: counts.progress },
+    { key: "todo", label: "A iniciar", count: counts.todo },
+  ];
+
   return (
-    <div className="glass-panel p-6 h-full flex flex-col min-h-[300px]">
-      <div className="flex items-center gap-2 mb-4">
-        <BookOpen className="w-5 h-5 text-emerald-500" />
-        <h3 className="text-lg font-bold title-font text-white">Matriz de Competências</h3>
+    <div className="panel flex flex-col">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-6 pt-5 pb-4 border-b border-slate-400/10">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center">
+            <GraduationCap className="w-4 h-4 text-emerald-300" />
+          </div>
+          <div>
+            <h2 className="font-display text-sm font-bold text-white">Matriz de Competências</h2>
+            <p className="text-[10px] text-slate-500">Estado de maestria por unidade de conhecimento</p>
+          </div>
+        </div>
+
+        {/* Filtros */}
+        <div className="flex gap-1.5 flex-wrap">
+          {FILTERS.map((f) => (
+            <button
+              key={f.key}
+              onClick={() => setFilter(f.key)}
+              className={`text-[11px] font-bold px-3 py-1.5 rounded-lg border transition ${
+                filter === f.key
+                  ? "bg-violet-500/20 border-violet-500/40 text-white"
+                  : "bg-transparent border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/40"
+              }`}
+            >
+              {f.label} <span className="opacity-60">· {f.count}</span>
+            </button>
+          ))}
+        </div>
       </div>
 
-      {nodes.length === 0 ? (
-        <div className="text-gray-400 text-sm text-center my-auto">
-          Nenhuma unidade de conhecimento cadastrada no sistema.
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 overflow-y-auto max-h-[320px] pr-1">
-          {nodes.map((node) => {
-            const masteryVal = node.effective_mastery || node.mastery;
-            const isValidated = masteryVal >= 0.85;
-            const isPending = masteryVal > 0 && masteryVal < 0.85;
-            const isSelected = selectedNodeId === node.id;
+      {/* Grid de cards */}
+      <div className="p-5">
+        {filtered.length === 0 ? (
+          <div className="text-slate-500 text-xs text-center py-10">
+            Nenhuma unidade neste filtro.
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+            {filtered.map((node) => {
+              const m = masteryOf(node);
+              const isValidated = m >= MASTERY_THRESHOLD;
+              const isProgress = m > 0 && !isValidated;
+              const isSelected = selectedNodeId === node.id;
 
-            // Cores do card
-            let cardBorder = "border-white/5";
-            let statusBadge = null;
+              return (
+                <button
+                  key={node.id}
+                  onClick={() => onSelectNode(node)}
+                  className={`card text-left p-4 relative overflow-hidden ${
+                    isSelected
+                      ? "border-amber-400/60"
+                      : isValidated
+                      ? "border-emerald-500/20"
+                      : isProgress
+                      ? "border-violet-500/20"
+                      : ""
+                  }`}
+                >
+                  {/* brilho de fundo para validadas */}
+                  {isValidated && (
+                    <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-emerald-500/10 blur-2xl pointer-events-none" />
+                  )}
 
-            if (isValidated) {
-              cardBorder = "border-emerald-500/20 bg-emerald-950/5";
-              statusBadge = (
-                <span className="flex items-center gap-0.5 text-[9px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/20 px-1.5 py-0.5 rounded">
-                  <Check className="w-2.5 h-2.5" /> Validado
-                </span>
-              );
-            } else if (isPending) {
-              cardBorder = "border-violet-500/20 bg-violet-950/5";
-              statusBadge = (
-                <span className="flex items-center gap-0.5 text-[9px] font-bold text-violet-400 bg-violet-950/60 border border-violet-500/20 px-1.5 py-0.5 rounded">
-                  <AlertCircle className="w-2.5 h-2.5" /> Pendente
-                </span>
-              );
-            }
-
-            if (isSelected) {
-              cardBorder = "border-amber-500";
-            }
-
-            return (
-              <div
-                key={node.id}
-                onClick={() => onSelectNode(node)}
-                className={`glass-card p-3 flex flex-col justify-between border cursor-pointer ${cardBorder}`}
-              >
-                <div>
-                  <div className="flex justify-between items-start gap-2 mb-1.5">
-                    <h4 className="text-xs font-bold text-white truncate max-w-[140px]">
-                      {node.title}
-                    </h4>
-                    {statusBadge}
+                  <div className="flex items-start justify-between gap-2 mb-1.5">
+                    <h4 className="text-[13px] font-bold text-white leading-snug">{node.title}</h4>
+                    {isValidated ? (
+                      <span className="shrink-0 flex items-center gap-1 text-[9px] font-bold uppercase text-emerald-300 bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 rounded-full">
+                        <CheckCircle2 className="w-2.5 h-2.5" /> Validada
+                      </span>
+                    ) : isProgress ? (
+                      <span className="shrink-0 flex items-center gap-1 text-[9px] font-bold uppercase text-violet-300 bg-violet-500/15 border border-violet-500/30 px-2 py-0.5 rounded-full">
+                        <Sparkles className="w-2.5 h-2.5" /> Em curso
+                      </span>
+                    ) : (
+                      <span className="shrink-0 flex items-center gap-1 text-[9px] font-bold uppercase text-slate-500 bg-slate-500/10 border border-slate-500/25 px-2 py-0.5 rounded-full">
+                        <CircleDashed className="w-2.5 h-2.5" /> A iniciar
+                      </span>
+                    )}
                   </div>
-                  <p className="text-[10px] text-gray-400 line-clamp-2 mb-3">
+
+                  <p className="text-[11px] text-slate-400 line-clamp-2 mb-3.5 leading-relaxed">
                     {node.definition}
                   </p>
-                </div>
 
-                <div>
-                  <div className="flex justify-between items-center text-[9px] text-gray-400 mb-1">
-                    <span>Nível: {node.level}</span>
-                    <span>Maestria: {Math.round(masteryVal * 100)}% | Confiança: {Math.round((node.confidence || 0) * 100)}%</span>
+                  <div className="flex justify-between items-center text-[9.5px] font-semibold text-slate-500 mb-1.5">
+                    <span className="capitalize">{node.level}</span>
+                    <span>
+                      <span className={isValidated ? "text-emerald-300" : "text-slate-300"}>
+                        {Math.round(m * 100)}%
+                      </span>{" "}
+                      · conf. {Math.round((node.confidence || 0) * 100)}%
+                    </span>
                   </div>
-                  <div className="w-full bg-gray-950/80 border border-white/5 rounded-full h-1.5 overflow-hidden">
+                  <div className="w-full h-1.5 rounded-full bg-slate-400/10 overflow-hidden">
                     <div
-                      className={`h-full rounded-full transition-all duration-500 ${
-                        isValidated ? "bg-emerald-500" : isPending ? "bg-violet-500" : "bg-gray-800"
+                      className={`h-full rounded-full transition-all duration-700 ${
+                        isValidated
+                          ? "bg-gradient-to-r from-emerald-500 to-teal-400"
+                          : isProgress
+                          ? "bg-gradient-to-r from-violet-500 to-fuchsia-500"
+                          : "bg-slate-700"
                       }`}
-                      style={{ width: `${masteryVal * 100}%` }}
+                      style={{ width: `${Math.max(m * 100, isProgress || isValidated ? 4 : 0)}%` }}
                     />
                   </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

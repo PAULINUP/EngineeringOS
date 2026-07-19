@@ -1,6 +1,6 @@
 from typing import List, Dict, Any
 import networkx as nx
-from src.cognitive_engine import get_knowledge_frontier
+from src.cognitive_engine import get_knowledge_frontier, WORKING_MEMORY_CAPACITY
 
 class CognitiveChallengeEngine:
     """
@@ -14,8 +14,9 @@ class CognitiveChallengeEngine:
         self.mastery = mastery_dict
         
         # Hard constraint imposto pela ADR-002: Mitigação de Fadiga Cognitiva.
-        # Nunca sobrecarregue o aluno com mais de 4 frentes simultâneas de aprendizado inédito.
-        self.MAX_CONCURRENT_KUS = 4
+        # Nunca sobrecarregue o aluno com mais frentes simultâneas de aprendizado
+        # inédito do que a capacidade da memória de trabalho (Cowan, 2001).
+        self.MAX_CONCURRENT_KUS = WORKING_MEMORY_CAPACITY
         
     def generate_mission(self, threshold: float = 0.85) -> Dict[str, Any]:
         """

@@ -1,15 +1,32 @@
-import { useState, useEffect } from "react";
-import { Award, Layers, Plus, Sparkles, Users } from "lucide-react";
+import { useState, useEffect, useMemo } from "react";
+import {
+  Award,
+  BrainCircuit,
+  ChevronDown,
+  Compass,
+  Database,
+  Flame,
+  GraduationCap,
+  Hexagon,
+  Layers,
+  Plus,
+  Route,
+  Sparkles,
+  Target,
+  Users,
+  X,
+} from "lucide-react";
 
 import { GraphView } from "./components/GraphView";
-import { ULAOptimizer } from "./components/ULAOptimizer";
+import { TrilhaPanel } from "./components/ULAOptimizer";
 import { CCEChallenge } from "./components/CCEChallenge";
 import { CompetenceMatrix } from "./components/CompetenceMatrix";
 import { MaterialViewer } from "./components/MaterialViewer";
 
 const API_BASE = "http://localhost:8000/api";
+const MASTERY_THRESHOLD = 0.85;
 
-interface Node {
+export interface KNode {
   id: string;
   title: string;
   domain: string;
@@ -24,7 +41,7 @@ interface Node {
   decay_factor: number;
 }
 
-interface Edge {
+export interface KEdge {
   id: number;
   source: string;
   target: string;
@@ -32,7 +49,7 @@ interface Edge {
   weight: number;
 }
 
-interface PathNode {
+export interface PathNode {
   id: string;
   title: string;
   level: string;
@@ -50,29 +67,45 @@ interface Learner {
   name: string;
 }
 
+const RANKS: [number, string][] = [
+  [0.0, "Iniciante"],
+  [0.15, "Aprendiz"],
+  [0.35, "Praticante"],
+  [0.55, "Analista"],
+  [0.75, "Engenheiro"],
+  [0.9, "Arquiteto"],
+  [1.0, "Mestre"],
+];
+
+function rankFor(progress: number): string {
+  let rank = RANKS[0][1];
+  for (const [min, label] of RANKS) {
+    if (progress >= min) rank = label;
+  }
+  return rank;
+}
+
 function App() {
   const [learners, setLearners] = useState<Learner[]>([]);
   const [selectedLearnerId, setSelectedLearnerId] = useState<string>("");
   const [missions, setMissions] = useState<Mission[]>([]);
   const [selectedMissionId, setSelectedMissionId] = useState<string>("");
-  
-  const [nodes, setNodes] = useState<Node[]>([]);
-  const [edges, setEdges] = useState<Edge[]>([]);
+
+  const [nodes, setNodes] = useState<KNode[]>([]);
+  const [edges, setEdges] = useState<KEdge[]>([]);
   const [activePath, setActivePath] = useState<PathNode[]>([]);
   const [satisfied, setSatisfied] = useState<boolean>(false);
-  const [selectedNode, setSelectedNode] = useState<Node | null>(null);
-  
+  const [selectedNode, setSelectedNode] = useState<KNode | null>(null);
+
   const [showAddLearner, setShowAddLearner] = useState(false);
   const [newLearnerName, setNewLearnerName] = useState("");
   const [notification, setNotification] = useState<{ type: string; msg: string } | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
 
-  // Busca inicializadores e dados
   useEffect(() => {
     fetchInitialData();
   }, []);
 
-  // Recarrega estados do estudante e caminhos quando o estudante ou a missão mudar
   useEffect(() => {
     if (selectedLearnerId) {
       fetchGraphAndPath();
@@ -86,7 +119,6 @@ function App() {
 
   const fetchInitialData = async () => {
     try {
-      // 0. Auto-Login
       const tokenRes = await fetch(`${API_BASE}/token`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -94,18 +126,15 @@ function App() {
       });
       const tokenData = await tokenRes.json();
       localStorage.setItem("eos_token", tokenData.access_token);
-      const authHeaders = { "Authorization": `Bearer ${tokenData.access_token}` };
+      const authHeaders = { Authorization: `Bearer ${tokenData.access_token}` };
 
-      // 1. Busca Estudantes
       const lRes = await fetch(`${API_BASE}/learners`, { headers: authHeaders });
       const lData = await lRes.json();
       setLearners(lData);
-      
-      // Auto-seleciona primeiro se houver
+
       if (lData.length > 0) {
         setSelectedLearnerId(lData[0].id);
       } else {
-        // Se vazio, cria um estudante default para onboarding
         const createRes = await fetch(`${API_BASE}/learners`, {
           method: "POST",
           headers: { "Content-Type": "application/json", ...authHeaders },
@@ -116,14 +145,10 @@ function App() {
         setSelectedLearnerId(newL.id);
       }
 
-      // 2. Busca Missões
       const mRes = await fetch(`${API_BASE}/missions`);
       const mData = await mRes.json();
       setMissions(mData);
-      
-      if (mData.length > 0) {
-        setSelectedMissionId(mData[0].id);
-      }
+      if (mData.length > 0) setSelectedMissionId(mData[0].id);
     } catch (err) {
       showToast("error", "Erro ao conectar na API. O servidor FastAPI está de pé?");
     }
@@ -132,31 +157,26 @@ function App() {
   const fetchGraphAndPath = async () => {
     if (!selectedLearnerId) return;
     try {
-      // Busca grafo formatado
       const gRes = await fetch(`${API_BASE}/graph?learner_id=${selectedLearnerId}`);
       const gData = await gRes.json();
       setNodes(gData.nodes);
       setEdges(gData.edges);
 
-      // Atualiza o nó selecionado para refletir nova maestria
       if (selectedNode) {
-        const updated = gData.nodes.find((n: Node) => n.id === selectedNode.id);
+        const updated = gData.nodes.find((n: KNode) => n.id === selectedNode.id);
         if (updated) setSelectedNode(updated);
       }
 
-      // Busca caminho otimizado se a missão estiver selecionada
       if (selectedMissionId) {
         setIsOptimizing(true);
         const pRes = await fetch(
           `${API_BASE}/learners/${selectedLearnerId}/missions/${selectedMissionId}/path`
         );
         const pData = await pRes.json();
-        
+
         if (pData.status === "processing" && pData.task_id) {
-          // Iniciar polling
           pollTaskStatus(pData.task_id);
         } else if (pData.path) {
-          // Fallback síncrono
           setActivePath(pData.path);
           setSatisfied(pData.satisfied);
           setIsOptimizing(false);
@@ -176,7 +196,7 @@ function App() {
     try {
       const res = await fetch(`${API_BASE}/tasks/${taskId}`);
       const data = await res.json();
-      
+
       if (data.status === "completed") {
         setActivePath(data.result.path);
         setSatisfied(data.result.satisfied);
@@ -185,7 +205,6 @@ function App() {
         showToast("error", "Erro ao otimizar a trajetória.");
         setIsOptimizing(false);
       } else {
-        // CONTINUA POLLING
         setTimeout(() => pollTaskStatus(taskId), 1500);
       }
     } catch (e) {
@@ -194,7 +213,6 @@ function App() {
     }
   };
 
-
   const handleCreateLearner = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newLearnerName.trim()) return;
@@ -202,7 +220,10 @@ function App() {
     try {
       const res = await fetch(`${API_BASE}/learners`, {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem("eos_token")}` },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("eos_token")}`,
+        },
         body: JSON.stringify({ name: newLearnerName }),
       });
       const data = await res.json();
@@ -226,11 +247,16 @@ function App() {
     try {
       const res = await fetch(`${API_BASE}/evidence`, {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${localStorage.getItem("eos_token")}` },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("eos_token")}`,
+        },
         body: JSON.stringify({
           learner_id: selectedLearnerId,
           ...evidence,
-          reviewers: [{ reviewer_id: "human_reviewer_01", reviewer_type: "human", verdict: "accept" }],
+          reviewers: [
+            { reviewer_id: "human_reviewer_01", reviewer_type: "human", verdict: "accept" },
+          ],
         }),
       });
       const data = await res.json();
@@ -240,23 +266,18 @@ function App() {
       } else {
         showToast("warning", `Evidência registrada como "${data.status}". Requer revisão.`);
       }
-      
-      // Recarrega dados
+
       await fetchGraphAndPath();
     } catch (err) {
       showToast("error", "Erro ao registrar evidência");
     }
   };
 
-
-
   const handleTriggerCurriculumSeed = async () => {
     try {
       const res = await fetch(`${API_BASE}/seed-curriculum`, { method: "POST" });
       const data = await res.json();
       showToast("success", data.message);
-      
-      // Recarrega tudo
       await fetchInitialData();
       if (selectedLearnerId) await fetchGraphAndPath();
     } catch (err) {
@@ -269,118 +290,273 @@ function App() {
     setTimeout(() => setNotification(null), 4000);
   };
 
+  const handleSelectNodeById = (id: string) => {
+    const node = nodes.find((n) => n.id === id);
+    if (node) setSelectedNode(node);
+  };
+
   const activePathIds = activePath.map((p) => p.id);
+  const currentLearner = learners.find((l) => l.id === selectedLearnerId);
+
+  // ------- Estatísticas derivadas -------
+  const stats = useMemo(() => {
+    const total = nodes.length;
+    const validated = nodes.filter(
+      (n) => (n.effective_mastery || n.mastery) >= MASTERY_THRESHOLD
+    ).length;
+    const inProgress = nodes.filter((n) => {
+      const m = n.effective_mastery || n.mastery;
+      return m > 0 && m < MASTERY_THRESHOLD;
+    }).length;
+    const avgMastery =
+      total > 0
+        ? nodes.reduce((acc, n) => acc + (n.effective_mastery || n.mastery), 0) / total
+        : 0;
+    const cognitiveLoad = activePath.reduce((acc, p) => acc + p.element_interactivity, 0);
+    return { total, validated, inProgress, avgMastery, cognitiveLoad };
+  }, [nodes, activePath]);
+
+  const progressPct = Math.round(stats.avgMastery * 100);
+  const ring = 2 * Math.PI * 30;
 
   return (
-    <div className="min-h-screen flex flex-col justify-between">
-      {/* HEADER */}
-      <header className="border-b border-white/5 bg-black/40 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
+    <div className="min-h-screen flex text-slate-200">
+      <div className="aurora" />
+      <div className="grid-overlay" />
+
+      {/* ============ SIDEBAR ============ */}
+      <aside className="hidden lg:flex flex-col w-[264px] shrink-0 h-screen sticky top-0 border-r border-slate-400/10 bg-[#090d1a]/70 backdrop-blur-2xl px-5 py-6 gap-6">
+        {/* Brand */}
         <div className="flex items-center gap-3">
-          <Layers className="w-8 h-8 text-violet-500" />
+          <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 flex items-center justify-center shadow-lg shadow-violet-900/50">
+            <Hexagon className="w-5 h-5 text-white" strokeWidth={2.4} />
+          </div>
           <div>
-            <h1 className="text-xl font-bold title-font text-white flex items-center gap-2">
-              EngineeringOS <span className="text-[10px] px-2 py-0.5 bg-violet-950/80 border border-violet-800/40 rounded-full text-violet-300">Constitutional Reference</span>
+            <h1 className="font-display font-800 font-bold text-[15px] text-white leading-tight">
+              Engineering<span className="text-gradient">OS</span>
             </h1>
-            <p className="text-[10px] text-gray-400">Specification version 2.0.0 — Constitution Layer</p>
+            <p className="text-[10px] text-slate-500 font-medium">Knowledge Engineering v3.1</p>
           </div>
         </div>
 
-        {/* Estudante Atual */}
-        <div className="flex items-center gap-3">
+        {/* Missão */}
+        <div>
+          <label className="block text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-2">
+            Missão ativa
+          </label>
+          <div className="relative">
+            <select
+              className="input-eos w-full text-[13px] font-semibold appearance-none px-3 py-2.5 pr-8 cursor-pointer"
+              value={selectedMissionId}
+              onChange={(e) => setSelectedMissionId(e.target.value)}
+              disabled={!selectedLearnerId}
+            >
+              <option value="">Selecionar missão…</option>
+              {missions.map((m) => (
+                <option key={m.id} value={m.id}>
+                  {m.label}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="w-4 h-4 text-slate-500 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          </div>
+          {satisfied && (
+            <div className="mt-2 flex items-center gap-1.5 text-[11px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/25 rounded-lg px-2.5 py-1.5">
+              <Award className="w-3.5 h-3.5" /> Missão satisfeita
+            </div>
+          )}
+        </div>
+
+        {/* Navegação (âncoras) */}
+        <nav className="flex flex-col gap-1">
+          <span className="text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-1 px-1">
+            Painel
+          </span>
+          <a href="#overview" className="nav-item active">
+            <Layers className="w-4 h-4" /> Visão geral
+          </a>
+          <a href="#mapa" className="nav-item">
+            <BrainCircuit className="w-4 h-4" /> Mapa de conhecimento
+          </a>
+          <a href="#trilha" className="nav-item">
+            <Route className="w-4 h-4" /> Minha trilha
+          </a>
+          <a href="#competencias" className="nav-item">
+            <GraduationCap className="w-4 h-4" /> Competências
+          </a>
+        </nav>
+
+        <div className="mt-auto flex flex-col gap-3">
+          {/* Estudante */}
+          <div>
+            <label className="block text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-2">
+              Estudante
+            </label>
+            <div className="relative">
+              <select
+                className="input-eos w-full text-[13px] font-semibold appearance-none px-3 py-2.5 pr-8 cursor-pointer"
+                value={selectedLearnerId}
+                onChange={(e) => setSelectedLearnerId(e.target.value)}
+              >
+                <option value="">Selecionar…</option>
+                {learners.map((l) => (
+                  <option key={l.id} value={l.id}>
+                    {l.name}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="w-4 h-4 text-slate-500 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+            </div>
+          </div>
+
           <button
             onClick={() => setShowAddLearner(true)}
-            className="flex items-center gap-1 text-xs bg-white/5 border border-white/10 hover:bg-white/10 px-3 py-1.5 rounded-lg text-white font-medium transition"
+            className="btn-ghost flex items-center justify-center gap-1.5 text-xs font-bold px-3 py-2.5"
           >
-            <Plus className="w-3.5 h-3.5" /> Novo Estudante
+            <Plus className="w-3.5 h-3.5" /> Novo estudante
+          </button>
+
+          <button
+            onClick={handleTriggerCurriculumSeed}
+            className="flex items-center justify-center gap-1.5 text-[11px] font-semibold text-slate-500 hover:text-slate-300 transition py-1.5"
+            title="Recompila os seeds .eos e repovoa o banco"
+          >
+            <Database className="w-3.5 h-3.5" /> Reset / Seed do currículo
           </button>
         </div>
-      </header>
+      </aside>
 
-      {/* NOTIFICAÇÃO TOAST */}
-      {notification && (
-        <div className="fixed bottom-6 right-6 z-50 glass-panel p-4 max-w-sm flex items-start gap-3 border-l-4 animate-slide-in shadow-2xl transition-all duration-300 border-l-violet-500">
-          <Sparkles className="w-5 h-5 text-violet-400 shrink-0 mt-0.5" />
-          <p className="text-xs text-gray-200">{notification.msg}</p>
-        </div>
-      )}
+      {/* ============ MAIN ============ */}
+      <main className="flex-1 min-w-0 px-5 md:px-9 py-7 max-w-[1400px] mx-auto w-full">
+        {/* -------- HERO -------- */}
+        <section id="overview" className="animate-fade-up">
+          <div className="panel relative overflow-hidden px-6 md:px-9 py-7">
+            {/* glow decorativo */}
+            <div className="absolute -top-24 -right-16 w-80 h-80 rounded-full bg-violet-600/15 blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-28 left-1/3 w-72 h-72 rounded-full bg-fuchsia-600/10 blur-3xl pointer-events-none" />
 
-      {/* MODAL ADICIONAR ESTUDANTE */}
-      {showAddLearner && (
-        <div className="fixed w-screen h-screen top-0 left-0 z-[100] bg-black/60 backdrop-blur-sm flex justify-center items-center p-4">
-          <div className="glass-panel p-6 max-w-sm w-full">
-            <h3 className="text-lg font-bold title-font text-white mb-4 flex items-center gap-2">
-              <Users className="w-5 h-5 text-violet-400" /> Cadastrar Estudante
-            </h3>
-            <form onSubmit={handleCreateLearner} className="space-y-4">
-              <div>
-                <label className="block text-xs text-gray-400 font-semibold mb-1">Nome Completo</label>
-                <input
-                  type="text"
-                  className="w-full bg-gray-900 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-violet-500"
-                  placeholder="Ex: Alan Turing"
-                  value={newLearnerName}
-                  onChange={(e) => setNewLearnerName(e.target.value)}
-                  autoFocus
-                />
+            <div className="relative flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+              {/* Progress ring */}
+              <div className="relative w-[92px] h-[92px] shrink-0">
+                <svg viewBox="0 0 72 72" className="w-full h-full -rotate-90">
+                  <circle cx="36" cy="36" r="30" fill="none" strokeWidth="6" className="ring-track" />
+                  <circle
+                    cx="36"
+                    cy="36"
+                    r="30"
+                    fill="none"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                    stroke="url(#heroGrad)"
+                    strokeDasharray={`${stats.avgMastery * ring} ${ring}`}
+                    style={{ transition: "stroke-dasharray 0.8s cubic-bezier(0.22,1,0.36,1)" }}
+                  />
+                  <defs>
+                    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#a78bfa" />
+                      <stop offset="100%" stopColor="#e879f9" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <span className="font-display font-bold text-lg text-white leading-none">
+                    {progressPct}%
+                  </span>
+                </div>
               </div>
-              <div className="flex justify-end gap-2 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setShowAddLearner(false)}
-                  className="text-xs bg-transparent hover:bg-white/5 text-gray-400 font-medium px-4 py-2 rounded-lg transition"
-                >
-                  Cancelar
-                </button>
-                <button
-                  type="submit"
-                  className="text-xs bg-violet-600 hover:bg-violet-500 text-white font-bold px-4 py-2 rounded-lg transition"
-                >
-                  Salvar
-                </button>
+
+              <div className="flex-1 min-w-0">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-violet-300/80 font-bold mb-1">
+                  {rankFor(stats.avgMastery)} · nível de domínio
+                </p>
+                <h2 className="font-display text-2xl md:text-[28px] font-bold text-white leading-tight">
+                  {currentLearner ? `Bem-vindo de volta, ${currentLearner.name.split(" ")[0]}` : "Bem-vindo ao EngineeringOS"}
+                </h2>
+                <p className="text-[13px] text-slate-400 mt-1.5 max-w-xl">
+                  {activePath.length > 0
+                    ? `Sua trilha ótima tem ${activePath.length} unidade${activePath.length > 1 ? "s" : ""} na fronteira do seu conhecimento. Próximo passo: `
+                    : satisfied
+                    ? "Todas as unidades desta missão foram validadas. Escolha uma nova missão para continuar evoluindo."
+                    : "Selecione uma missão para o motor cognitivo calcular sua trilha ideal de aprendizado."}
+                  {activePath.length > 0 && (
+                    <button
+                      onClick={() => handleSelectNodeById(activePath[0].id)}
+                      className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-fuchsia-300 hover:from-violet-200 hover:to-fuchsia-200 transition"
+                    >
+                      {activePath[0].title} →
+                    </button>
+                  )}
+                </p>
               </div>
-            </form>
-          </div>
-        </div>
-      )}
 
-      {/* MAIN CONTAINER */}
-      <main className="flex-1 p-6 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Lado Esquerdo: ULA Pathfinder & CCE Desafio */}
-        <div className="lg:col-span-1 flex flex-col gap-6">
-          <ULAOptimizer
-            learners={learners}
-            selectedLearnerId={selectedLearnerId}
-            onSelectLearner={setSelectedLearnerId}
-            missions={missions}
-            selectedMissionId={selectedMissionId}
-            onSelectMission={setSelectedMissionId}
-            path={activePath}
-            satisfied={satisfied}
-            isOptimizing={isOptimizing}
-            onTriggerSeed={handleTriggerCurriculumSeed}
-          />
-
-          <CCEChallenge
-            selectedNode={selectedNode}
-            onSubmitEvidence={handleSubmitEvidence}
-          />
-
-          <MaterialViewer selectedNodeId={selectedNode ? selectedNode.id : null} />
-        </div>
-
-        {/* Lado Direito: Grafo SVG e Matrix de Competências */}
-        <div className="lg:col-span-2 flex flex-col gap-6">
-          <div className="flex flex-col gap-2">
-            <div className="flex justify-between items-center px-2">
-              <h2 className="text-sm font-bold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
-                <Layers className="w-4 h-4 text-violet-400" /> KNOWLEDGE SPACE (Espaço do Conhecimento K)
-              </h2>
-              {satisfied && (
-                <span className="text-[10px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
-                  <Award className="w-3.5 h-3.5" /> Missão Satisfeita!
-                </span>
+              {activePath.length > 0 && (
+                <button
+                  onClick={() => handleSelectNodeById(activePath[0].id)}
+                  className="btn-primary font-display px-6 py-3 text-sm shrink-0 flex items-center gap-2"
+                >
+                  <Flame className="w-4 h-4" /> Continuar estudando
+                </button>
               )}
             </div>
+          </div>
+        </section>
+
+        {/* -------- STATS -------- */}
+        <section className="grid grid-cols-2 xl:grid-cols-4 gap-4 mt-5">
+          {[
+            {
+              icon: <Target className="w-4.5 h-4.5 text-violet-300" />,
+              iconBg: "bg-violet-500/15 border-violet-500/25",
+              label: "Progresso geral",
+              value: `${progressPct}%`,
+              sub: "média de maestria efetiva",
+              delay: "delay-1",
+            },
+            {
+              icon: <Award className="w-4.5 h-4.5 text-emerald-300" />,
+              iconBg: "bg-emerald-500/15 border-emerald-500/25",
+              label: "Validadas",
+              value: `${stats.validated}/${stats.total}`,
+              sub: "unidades de conhecimento",
+              delay: "delay-2",
+            },
+            {
+              icon: <Compass className="w-4.5 h-4.5 text-fuchsia-300" />,
+              iconBg: "bg-fuchsia-500/15 border-fuchsia-500/25",
+              label: "Na trilha π*",
+              value: `${activePath.length}`,
+              sub: "próximos passos otimizados",
+              delay: "delay-3",
+            },
+            {
+              icon: <BrainCircuit className="w-4.5 h-4.5 text-cyan-300" />,
+              iconBg: "bg-cyan-500/15 border-cyan-500/25",
+              label: "Carga cognitiva",
+              value: `${stats.cognitiveLoad}`,
+              sub: "interatividade da sessão (Cowan ≤ 4 KUs)",
+              delay: "delay-4",
+            },
+          ].map((s) => (
+            <div key={s.label} className={`panel px-5 py-4 animate-fade-up ${s.delay}`}>
+              <div className="flex items-center gap-3">
+                <div className={`w-9 h-9 rounded-xl border flex items-center justify-center shrink-0 ${s.iconBg}`}>
+                  {s.icon}
+                </div>
+                <div className="min-w-0">
+                  <p className="font-display text-xl font-bold text-white leading-none">{s.value}</p>
+                  <p className="text-[10px] uppercase tracking-wider text-slate-500 font-bold mt-1">
+                    {s.label}
+                  </p>
+                </div>
+              </div>
+              <p className="text-[10px] text-slate-500 mt-2.5 truncate">{s.sub}</p>
+            </div>
+          ))}
+        </section>
+
+        {/* -------- MAPA + TRILHA -------- */}
+        <section className="grid grid-cols-1 xl:grid-cols-3 gap-5 mt-5">
+          <div id="mapa" className="xl:col-span-2 animate-fade-up delay-2">
             <GraphView
               nodes={nodes}
               edges={edges}
@@ -390,13 +566,128 @@ function App() {
             />
           </div>
 
+          <div id="trilha" className="animate-fade-up delay-3">
+            <TrilhaPanel
+              path={activePath}
+              satisfied={satisfied}
+              isOptimizing={isOptimizing}
+              hasMission={!!selectedMissionId}
+              onStudy={handleSelectNodeById}
+            />
+          </div>
+        </section>
+
+        {/* -------- COMPETÊNCIAS -------- */}
+        <section id="competencias" className="mt-5 animate-fade-up delay-4">
           <CompetenceMatrix
             nodes={nodes}
             onSelectNode={setSelectedNode}
             selectedNodeId={selectedNode ? selectedNode.id : null}
           />
-        </div>
+        </section>
+
+        <footer className="mt-10 mb-4 flex items-center justify-between text-[10px] text-slate-600">
+          <span>EngineeringOS — Constitutional Specification v3.1.0</span>
+          <span className="font-mono-eos">ULA · UKG · CCE · DCST</span>
+        </footer>
       </main>
+
+      {/* ============ PAINEL DE ESTUDO (slide-over) ============ */}
+      {selectedNode && (
+        <div className="fixed inset-0 z-[90] flex justify-end">
+          <div
+            className="absolute inset-0 bg-black/55 backdrop-blur-[2px]"
+            onClick={() => setSelectedNode(null)}
+          />
+          <div className="relative w-full max-w-[480px] h-full bg-[#0a0f1e]/95 backdrop-blur-2xl border-l border-slate-400/10 shadow-2xl animate-slide-in-right overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-[#0a0f1e]/95 backdrop-blur-xl border-b border-slate-400/10 px-6 py-4 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-fuchsia-400" />
+                <span className="text-[11px] uppercase tracking-[0.16em] text-slate-400 font-bold">
+                  Sessão de estudo
+                </span>
+              </div>
+              <button
+                onClick={() => setSelectedNode(null)}
+                className="btn-ghost p-2 rounded-lg"
+                aria-label="Fechar painel"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="px-6 py-5 flex flex-col gap-5">
+              <CCEChallenge selectedNode={selectedNode} onSubmitEvidence={handleSubmitEvidence} />
+              <MaterialViewer selectedNodeId={selectedNode.id} />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ============ TOAST ============ */}
+      {notification && (
+        <div
+          className={`fixed bottom-6 right-6 z-[120] panel px-4 py-3.5 max-w-sm flex items-start gap-3 animate-toast-in border-l-4 ${
+            notification.type === "success"
+              ? "border-l-emerald-400"
+              : notification.type === "warning"
+              ? "border-l-amber-400"
+              : "border-l-rose-500"
+          }`}
+        >
+          <Sparkles
+            className={`w-4.5 h-4.5 shrink-0 mt-0.5 ${
+              notification.type === "success"
+                ? "text-emerald-400"
+                : notification.type === "warning"
+                ? "text-amber-400"
+                : "text-rose-400"
+            }`}
+          />
+          <p className="text-xs text-slate-200 leading-relaxed">{notification.msg}</p>
+        </div>
+      )}
+
+      {/* ============ MODAL NOVO ESTUDANTE ============ */}
+      {showAddLearner && (
+        <div className="fixed inset-0 z-[110] bg-black/60 backdrop-blur-sm flex justify-center items-center p-4">
+          <div className="panel p-7 max-w-sm w-full animate-toast-in">
+            <h3 className="font-display text-lg font-bold text-white mb-1 flex items-center gap-2">
+              <Users className="w-5 h-5 text-violet-400" /> Novo estudante
+            </h3>
+            <p className="text-xs text-slate-400 mb-5">
+              O motor cognitivo cria um estado de competência zerado para cada unidade do grafo.
+            </p>
+            <form onSubmit={handleCreateLearner} className="space-y-4">
+              <div>
+                <label className="block text-[10px] uppercase tracking-wider text-slate-500 font-bold mb-1.5">
+                  Nome completo
+                </label>
+                <input
+                  type="text"
+                  className="input-eos w-full px-3.5 py-2.5 text-sm"
+                  placeholder="Ex: Alan Turing"
+                  value={newLearnerName}
+                  onChange={(e) => setNewLearnerName(e.target.value)}
+                  autoFocus
+                />
+              </div>
+              <div className="flex justify-end gap-2 pt-1">
+                <button
+                  type="button"
+                  onClick={() => setShowAddLearner(false)}
+                  className="text-xs text-slate-400 hover:text-white font-semibold px-4 py-2.5 rounded-lg hover:bg-white/5 transition"
+                >
+                  Cancelar
+                </button>
+                <button type="submit" className="btn-primary text-xs px-5 py-2.5">
+                  Criar estudante
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
