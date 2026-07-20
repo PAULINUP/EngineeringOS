@@ -1,0 +1,707 @@
+@version 1.0.0
+@domain "matematica_basica"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Prealgebra 2e
+# Fonte: https://openstax.org/books/prealgebra-2e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Whole Numbers
+# ------------------------------------------------------------
+KNOWLEDGE mbas.1-1-introduction-to-whole-numbers.v1 FOUNDATIONAL {
+  title: "1.1 Introduction to Whole Numbers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify counting numbers and whole numbers; Model whole numbers; Identify the place value of a digit; Use place value to name whole numbers; Use place value to write whole numbers; Round whole numbers."
+  requires: []
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 1.1 Introduction to Whole Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.1-2-add-whole-numbers.v1 FOUNDATIONAL {
+  title: "1.2 Add Whole Numbers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use addition notation; Model addition of whole numbers; Add whole numbers without models; Translate word phrases to math notation; Add whole numbers in applications."
+  requires: [mbas.1-1-introduction-to-whole-numbers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 1.2 Add Whole Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.1-3-subtract-whole-numbers.v1 FOUNDATIONAL {
+  title: "1.3 Subtract Whole Numbers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use subtraction notation; Model subtraction of whole numbers; Subtract whole numbers; Translate word phrases to math notation; Subtract whole numbers in applications."
+  requires: [mbas.1-2-add-whole-numbers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 1.3 Subtract Whole Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.1-4-multiply-whole-numbers.v1 FOUNDATIONAL {
+  title: "1.4 Multiply Whole Numbers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use multiplication notation; Model multiplication of whole numbers; Multiply whole numbers; Translate word phrases to math notation; Multiply whole numbers in applications."
+  requires: [mbas.1-3-subtract-whole-numbers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 1.4 Multiply Whole Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.1-5-divide-whole-numbers.v1 FOUNDATIONAL {
+  title: "1.5 Divide Whole Numbers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use division notation; Model division of whole numbers; Divide whole numbers; Translate word phrases to math notation; Divide whole numbers in applications."
+  requires: [mbas.1-4-multiply-whole-numbers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 1.5 Divide Whole Numbers", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 The Language of Algebra
+# ------------------------------------------------------------
+KNOWLEDGE mbas.2-1-use-the-language-of-algebra.v1 FOUNDATIONAL {
+  title: "2.1 Use the Language of Algebra"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use variables and algebraic symbols; Identify expressions and equations; Simplify expressions with exponents; Simplify expressions using the order of operations."
+  requires: [mbas.1-5-divide-whole-numbers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 2.1 Use the Language of Algebra", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.2-2-evaluate-simplify-and-translate-expressions.v1 FOUNDATIONAL {
+  title: "2.2 Evaluate, Simplify, and Translate Expressions"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate algebraic expressions; Identify terms, coefficients, and like terms; Simplify expressions by combining like terms; Translate word phrases to algebraic expressions."
+  requires: [mbas.2-1-use-the-language-of-algebra.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 2.2 Evaluate, Simplify, and Translate Expressions", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.2-3-solving-equations-using-the-subtraction-and-addition-properties-of-equality.v1 FOUNDATIONAL {
+  title: "2.3 Solving Equations Using the Subtraction and Addition Properties of Equality"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Determine whether a number is a solution of an equation; Model the Subtraction Property of Equality; Solve equations using the Subtraction Property of Equality; Solve equations using the Addition Property of Equality; Translate word phrases to algebraic equations; Translate to an equation and solve."
+  requires: [mbas.2-2-evaluate-simplify-and-translate-expressions.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 2.3 Solving Equations Using the Subtraction and Addition Properties of Equality", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.2-4-find-multiples-and-factors.v1 FOUNDATIONAL {
+  title: "2.4 Find Multiples and Factors"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify multiples of numbers; Use common divisibility tests; Find all the factors of a number; Identify prime and composite numbers."
+  requires: [mbas.2-3-solving-equations-using-the-subtraction-and-addition-properties-of-equality.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 2.4 Find Multiples and Factors", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.2-5-prime-factorization-and-the-least-common-multiple.v1 FOUNDATIONAL {
+  title: "2.5 Prime Factorization and the Least Common Multiple"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Find the prime factorization of a composite number; Find the least common multiple (LCM) of two numbers."
+  requires: [mbas.2-4-find-multiples-and-factors.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 2.5 Prime Factorization and the Least Common Multiple", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Integers
+# ------------------------------------------------------------
+KNOWLEDGE mbas.3-1-introduction-to-integers.v1 FOUNDATIONAL {
+  title: "3.1 Introduction to Integers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Locate positive and negative numbers on the number line; Order positive and negative numbers; Find opposites; Simplify expressions with absolute value; Translate word phrases to expressions with integers."
+  requires: [mbas.2-5-prime-factorization-and-the-least-common-multiple.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 3.1 Introduction to Integers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.3-2-add-integers.v1 FOUNDATIONAL {
+  title: "3.2 Add Integers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Model addition of integers; Simplify expressions with integers; Evaluate variable expressions with integers; Translate word phrases to algebraic expressions; Add integers in applications."
+  requires: [mbas.3-1-introduction-to-integers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 3.2 Add Integers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.3-3-subtract-integers.v1 FOUNDATIONAL {
+  title: "3.3 Subtract Integers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Model subtraction of integers; Simplify expressions with integers; Evaluate variable expressions with integers; Translate words phrases to algebraic expressions; Subtract integers in applications."
+  requires: [mbas.3-2-add-integers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 3.3 Subtract Integers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.3-4-multiply-and-divide-integers.v1 FOUNDATIONAL {
+  title: "3.4 Multiply and Divide Integers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Multiply integers; Divide integers; Simplify expressions with integers; Evaluate variable expressions with integers; Translate word phrases to algebraic expressions."
+  requires: [mbas.3-3-subtract-integers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 3.4 Multiply and Divide Integers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.3-5-solve-equations-using-integers-the-division-property-of-equality.v1 FOUNDATIONAL {
+  title: "3.5 Solve Equations Using Integers; The Division Property of Equality"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Determine whether an integer is a solution of an equation; Solve equations with integers using the Addition and Subtraction Properties of Equality; Model the Division Property of Equality; Solve equations using the Division Property of Equality; Translate to an equation and solve."
+  requires: [mbas.3-4-multiply-and-divide-integers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 3.5 Solve Equations Using Integers; The Division Property of Equality", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Fractions
+# ------------------------------------------------------------
+KNOWLEDGE mbas.4-1-visualize-fractions.v1 FOUNDATIONAL {
+  title: "4.1 Visualize Fractions"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the meaning of fractions; Model improper fractions and mixed numbers; Convert between improper fractions and mixed numbers; Model equivalent fractions; Find equivalent fractions; Locate fractions and mixed numbers on the number line; Order fractions and mixed numbers."
+  requires: [mbas.3-5-solve-equations-using-integers-the-division-property-of-equality.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 4.1 Visualize Fractions", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.4-2-multiply-and-divide-fractions.v1 FOUNDATIONAL {
+  title: "4.2 Multiply and Divide Fractions"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify fractions; Multiply fractions; Find reciprocals; Divide fractions."
+  requires: [mbas.4-1-visualize-fractions.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 4.2 Multiply and Divide Fractions", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.4-3-multiply-and-divide-mixed-numbers-and-complex-fractions.v1 FOUNDATIONAL {
+  title: "4.3 Multiply and Divide Mixed Numbers and Complex Fractions"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Multiply and divide mixed numbers; Translate phrases to expressions with fractions; Simplify complex fractions; Simplify expressions written with a fraction bar."
+  requires: [mbas.4-2-multiply-and-divide-fractions.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 4.3 Multiply and Divide Mixed Numbers and Complex Fractions", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.4-4-add-and-subtract-fractions-with-common-denominators.v1 FOUNDATIONAL {
+  title: "4.4 Add and Subtract Fractions with Common Denominators"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Model fraction addition; Add fractions with a common denominator; Model fraction subtraction; Subtract fractions with a common denominator."
+  requires: [mbas.4-3-multiply-and-divide-mixed-numbers-and-complex-fractions.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 4.4 Add and Subtract Fractions with Common Denominators", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.4-5-add-and-subtract-fractions-with-different-denominators.v1 FOUNDATIONAL {
+  title: "4.5 Add and Subtract Fractions with Different Denominators"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Find the least common denominator (LCD); Convert fractions to equivalent fractions with the LCD; Add and subtract fractions with different denominators; Identify and use fraction operations; Use the order of operations to simplify complex fractions; Evaluate variable expressions with fractions."
+  requires: [mbas.4-4-add-and-subtract-fractions-with-common-denominators.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 4.5 Add and Subtract Fractions with Different Denominators", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.4-6-add-and-subtract-mixed-numbers.v1 FOUNDATIONAL {
+  title: "4.6 Add and Subtract Mixed Numbers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Model addition of mixed numbers with a common denominator; Add mixed numbers with a common denominator; Model subtraction of mixed numbers; Subtract mixed numbers with a common denominator; Add and subtract mixed numbers with different denominators."
+  requires: [mbas.4-5-add-and-subtract-fractions-with-different-denominators.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 4.6 Add and Subtract Mixed Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.4-7-solve-equations-with-fractions.v1 FOUNDATIONAL {
+  title: "4.7 Solve Equations with Fractions"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Determine whether a fraction is a solution of an equation; Solve equations with fractions using the Addition, Subtraction, and Division Properties of Equality; Solve equations using the Multiplication Property of Equality; Translate sentences to equations and solve."
+  requires: [mbas.4-6-add-and-subtract-mixed-numbers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 4.7 Solve Equations with Fractions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Decimals
+# ------------------------------------------------------------
+KNOWLEDGE mbas.5-1-decimals.v1 FOUNDATIONAL {
+  title: "5.1 Decimals"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Name decimals; Write decimals; Convert decimals to fractions or mixed numbers; Locate decimals on the number line; Order decimals; Round decimals."
+  requires: [mbas.4-7-solve-equations-with-fractions.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 5.1 Decimals", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.5-2-decimal-operations.v1 FOUNDATIONAL {
+  title: "5.2 Decimal Operations"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Add and subtract decimals; Multiply decimals; Divide decimals; Use decimals in money applications."
+  requires: [mbas.5-1-decimals.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 5.2 Decimal Operations", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.5-3-decimals-and-fractions.v1 FOUNDATIONAL {
+  title: "5.3 Decimals and Fractions"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Convert fractions to decimals; Order decimals and fractions; Simplify expressions using the order of operations; Find the circumference and area of circles."
+  requires: [mbas.5-2-decimal-operations.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 5.3 Decimals and Fractions", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.5-4-solve-equations-with-decimals.v1 FOUNDATIONAL {
+  title: "5.4 Solve Equations with Decimals"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Determine whether a decimal is a solution of an equation; Solve equations with decimals; Translate to an equation and solve."
+  requires: [mbas.5-3-decimals-and-fractions.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 5.4 Solve Equations with Decimals", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.5-5-averages-and-probability.v1 FOUNDATIONAL {
+  title: "5.5 Averages and Probability"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate the mean of a set of numbers; Find the median of a set of numbers; Find the mode of a set of numbers; Apply the basic definition of probability."
+  requires: [mbas.5-4-solve-equations-with-decimals.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 5.5 Averages and Probability", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.5-6-ratios-and-rate.v1 FOUNDATIONAL {
+  title: "5.6 Ratios and Rate"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Write a ratio as a fraction; Write a rate as a fraction; Find unit rates; Find unit price; Translate phrases to expressions with fractions."
+  requires: [mbas.5-5-averages-and-probability.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 5.6 Ratios and Rate", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.5-7-simplify-and-use-square-roots.v1 FOUNDATIONAL {
+  title: "5.7 Simplify and Use Square Roots"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions with square roots; Estimate square roots; Approximate square roots; Simplify variable expressions with square roots; Use square roots in applications."
+  requires: [mbas.5-6-ratios-and-rate.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 5.7 Simplify and Use Square Roots", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Percents
+# ------------------------------------------------------------
+KNOWLEDGE mbas.6-1-understand-percent.v1 FOUNDATIONAL {
+  title: "6.1 Understand Percent"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use the definition of percent; Convert percents to fractions and decimals; Convert decimals and fractions to percents."
+  requires: [mbas.5-7-simplify-and-use-square-roots.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 6.1 Understand Percent", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.6-2-solve-general-applications-of-percent.v1 FOUNDATIONAL {
+  title: "6.2 Solve General Applications of Percent"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Translate and solve basic percent equations; Solve applications of percent; Find percent increase and percent decrease."
+  requires: [mbas.6-1-understand-percent.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 6.2 Solve General Applications of Percent", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.6-3-solve-sales-tax-commission-and-discount-applications.v1 FOUNDATIONAL {
+  title: "6.3 Solve Sales Tax, Commission, and Discount Applications"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Solve sales tax applications; Solve commission applications; Solve discount applications; Solve mark-up applications."
+  requires: [mbas.6-2-solve-general-applications-of-percent.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 6.3 Solve Sales Tax, Commission, and Discount Applications", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.6-4-solve-simple-interest-applications.v1 FOUNDATIONAL {
+  title: "6.4 Solve Simple Interest Applications"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use the simple interest formula; Solve simple interest applications."
+  requires: [mbas.6-3-solve-sales-tax-commission-and-discount-applications.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 6.4 Solve Simple Interest Applications", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.6-5-solve-proportions-and-their-applications.v1 FOUNDATIONAL {
+  title: "6.5 Solve Proportions and their Applications"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use the definition of proportion; Solve proportions; Solve applications using proportions; Write percent equations as proportions; Translate and solve percent proportions."
+  requires: [mbas.6-4-solve-simple-interest-applications.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 6.5 Solve Proportions and their Applications", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 The Properties of Real Numbers
+# ------------------------------------------------------------
+KNOWLEDGE mbas.7-1-rational-and-irrational-numbers.v1 FOUNDATIONAL {
+  title: "7.1 Rational and Irrational Numbers"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify rational numbers and irrational numbers; Classify different types of real numbers."
+  requires: [mbas.6-5-solve-proportions-and-their-applications.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 7.1 Rational and Irrational Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.7-2-commutative-and-associative-properties.v1 FOUNDATIONAL {
+  title: "7.2 Commutative and Associative Properties"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use the commutative and associative properties; Evaluate expressions using the commutative and associative properties; Simplify expressions using the commutative and associative properties."
+  requires: [mbas.7-1-rational-and-irrational-numbers.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 7.2 Commutative and Associative Properties", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.7-3-distributive-property.v1 FOUNDATIONAL {
+  title: "7.3 Distributive Property"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions using the distributive property; Evaluate expressions using the distributive property."
+  requires: [mbas.7-2-commutative-and-associative-properties.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 7.3 Distributive Property", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.7-4-properties-of-identity-inverses-and-zero.v1 FOUNDATIONAL {
+  title: "7.4 Properties of Identity, Inverses, and Zero"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize the identity properties of addition and multiplication; Use the inverse properties of addition and multiplication; Use the properties of zero; Simplify expressions using the properties of identities, inverses, and zero."
+  requires: [mbas.7-3-distributive-property.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 7.4 Properties of Identity, Inverses, and Zero", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.7-5-systems-of-measurement.v1 FOUNDATIONAL {
+  title: "7.5 Systems of Measurement"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Make unit conversions in the U.S. system; Use mixed units of measurement in the U.S. system; Make unit conversions in the metric system; Use mixed units of measurement in the metric system; Convert between the U.S. and the metric systems of measurement; Convert between Fahrenheit and Celsius temperatures."
+  requires: [mbas.7-4-properties-of-identity-inverses-and-zero.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 7.5 Systems of Measurement", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Solving Linear Equations
+# ------------------------------------------------------------
+KNOWLEDGE mbas.8-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality.v1 FOUNDATIONAL {
+  title: "8.1 Solve Equations Using the Subtraction and Addition Properties of Equality"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Solve equations using the Subtraction and Addition Properties of Equality; Solve equations that need to be simplified; Translate an equation and solve; Translate and solve applications."
+  requires: [mbas.7-5-systems-of-measurement.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 8.1 Solve Equations Using the Subtraction and Addition Properties of Equality", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.8-2-solve-equations-using-the-division-and-multiplication-properties-of-equality.v1 FOUNDATIONAL {
+  title: "8.2 Solve Equations Using the Division and Multiplication Properties of Equality"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Solve equations using the Division and Multiplication Properties of Equality; Solve equations that need to be simplified."
+  requires: [mbas.8-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 8.2 Solve Equations Using the Division and Multiplication Properties of Equality", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.8-3-solve-equations-with-variables-and-constants-on-both-sides.v1 FOUNDATIONAL {
+  title: "8.3 Solve Equations with Variables and Constants on Both Sides"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Solve an equation with constants on both sides; Solve an equation with variables on both sides; Solve an equation with variables and constants on both sides; Solve equations using a general strategy."
+  requires: [mbas.8-2-solve-equations-using-the-division-and-multiplication-properties-of-equality.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 8.3 Solve Equations with Variables and Constants on Both Sides", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.8-4-solve-equations-with-fraction-or-decimal-coefficients.v1 FOUNDATIONAL {
+  title: "8.4 Solve Equations with Fraction or Decimal Coefficients"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Solve equations with fraction coefficients; Solve equations with decimal coefficients."
+  requires: [mbas.8-3-solve-equations-with-variables-and-constants-on-both-sides.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 8.4 Solve Equations with Fraction or Decimal Coefficients", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Math Models and Geometry
+# ------------------------------------------------------------
+KNOWLEDGE mbas.9-1-use-a-problem-solving-strategy.v1 FOUNDATIONAL {
+  title: "9.1 Use a Problem Solving Strategy"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Approach word problems with a positive attitude; Use a problem solving strategy for word problems; Solve number problems."
+  requires: [mbas.8-4-solve-equations-with-fraction-or-decimal-coefficients.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 9.1 Use a Problem Solving Strategy", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.9-2-solve-money-applications.v1 FOUNDATIONAL {
+  title: "9.2 Solve Money Applications"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Solve coin word problems; Solve ticket and stamp word problems."
+  requires: [mbas.9-1-use-a-problem-solving-strategy.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 9.2 Solve Money Applications", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.9-3-use-properties-of-angles-triangles-and-the-pythagorean-theorem.v1 FOUNDATIONAL {
+  title: "9.3 Use Properties of Angles, Triangles, and the Pythagorean Theorem"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use the properties of angles; Use the properties of triangles; Use the Pythagorean Theorem."
+  requires: [mbas.9-2-solve-money-applications.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 9.3 Use Properties of Angles, Triangles, and the Pythagorean Theorem", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.9-4-use-properties-of-rectangles-triangles-and-trapezoids.v1 FOUNDATIONAL {
+  title: "9.4 Use Properties of Rectangles, Triangles, and Trapezoids"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Understand linear, square, and cubic measure; Use properties of rectangles; Use properties of triangles; Use properties of trapezoids."
+  requires: [mbas.9-3-use-properties-of-angles-triangles-and-the-pythagorean-theorem.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 9.4 Use Properties of Rectangles, Triangles, and Trapezoids", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.9-5-solve-geometry-applications-circles-and-irregular-figures.v1 FOUNDATIONAL {
+  title: "9.5 Solve Geometry Applications: Circles and Irregular Figures"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use the properties of circles; Find the area of irregular figures."
+  requires: [mbas.9-4-use-properties-of-rectangles-triangles-and-trapezoids.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 9.5 Solve Geometry Applications: Circles and Irregular Figures", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.9-6-solve-geometry-applications-volume-and-surface-area.v1 FOUNDATIONAL {
+  title: "9.6 Solve Geometry Applications: Volume and Surface Area"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Find volume and surface area of rectangular solids; Find volume and surface area of spheres; Find volume and surface area of cylinders; Find volume of cones."
+  requires: [mbas.9-5-solve-geometry-applications-circles-and-irregular-figures.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 9.6 Solve Geometry Applications: Volume and Surface Area", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.9-7-solve-a-formula-for-a-specific-variable.v1 FOUNDATIONAL {
+  title: "9.7 Solve a Formula for a Specific Variable"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use the distance, rate, and time formula; Solve a formula for a specific variable."
+  requires: [mbas.9-6-solve-geometry-applications-volume-and-surface-area.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 9.7 Solve a Formula for a Specific Variable", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Polynomials
+# ------------------------------------------------------------
+KNOWLEDGE mbas.10-1-add-and-subtract-polynomials.v1 FOUNDATIONAL {
+  title: "10.1 Add and Subtract Polynomials"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify polynomials, monomials, binomials, and trinomials; Determine the degree of polynomials; Add and subtract monomials; Add and subtract polynomials; Evaluate a polynomial for a given value."
+  requires: [mbas.9-7-solve-a-formula-for-a-specific-variable.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 10.1 Add and Subtract Polynomials", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.10-2-use-multiplication-properties-of-exponents.v1 FOUNDATIONAL {
+  title: "10.2 Use Multiplication Properties of Exponents"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions with exponents; Simplify expressions using the Product Property of Exponents; Simplify expressions using the Power Property of Exponents; Simplify expressions using the Product to a Power Property; Simplify expressions by applying several properties; Multiply monomials."
+  requires: [mbas.10-1-add-and-subtract-polynomials.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 10.2 Use Multiplication Properties of Exponents", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.10-3-multiply-polynomials.v1 FOUNDATIONAL {
+  title: "10.3 Multiply Polynomials"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Multiply a polynomial by a monomial; Multiply a binomial by a binomial; Multiply a trinomial by a binomial."
+  requires: [mbas.10-2-use-multiplication-properties-of-exponents.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 10.3 Multiply Polynomials", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.10-4-divide-monomials.v1 FOUNDATIONAL {
+  title: "10.4 Divide Monomials"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions using the Quotient Property of Exponents; Simplify expressions with zero exponents; Simplify expressions using the Quotient to a Power Property; Simplify expressions by applying several properties; Divide monomials."
+  requires: [mbas.10-3-multiply-polynomials.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 10.4 Divide Monomials", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.10-5-integer-exponents-and-scientific-notation.v1 FOUNDATIONAL {
+  title: "10.5 Integer Exponents and Scientific Notation"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use the definition of a negative exponent; Simplify expressions with integer exponents; Convert from decimal notation to scientific notation; Convert scientific notation to decimal form; Multiply and divide using scientific notation."
+  requires: [mbas.10-4-divide-monomials.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 10.5 Integer Exponents and Scientific Notation", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.10-6-introduction-to-factoring-polynomials.v1 FOUNDATIONAL {
+  title: "10.6 Introduction to Factoring Polynomials"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Find the greatest common factor of two or more expressions; Factor the greatest common factor from a polynomial."
+  requires: [mbas.10-5-integer-exponents-and-scientific-notation.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 10.6 Introduction to Factoring Polynomials", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Graphs
+# ------------------------------------------------------------
+KNOWLEDGE mbas.11-1-use-the-rectangular-coordinate-system.v1 FOUNDATIONAL {
+  title: "11.1 Use the Rectangular Coordinate System"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Plot points on a rectangular coordinate system; Identify points on a graph; Verify solutions to an equation in two variables; Complete a table of solutions to a linear equation; Find solutions to linear equations in two variables."
+  requires: [mbas.10-6-introduction-to-factoring-polynomials.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 11.1 Use the Rectangular Coordinate System", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.11-2-graphing-linear-equations.v1 FOUNDATIONAL {
+  title: "11.2 Graphing Linear Equations"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize the relation between the solutions of an equation and its graph; Graph a linear equation by plotting points; Graph vertical and horizontal lines."
+  requires: [mbas.11-1-use-the-rectangular-coordinate-system.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 11.2 Graphing Linear Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.11-3-graphing-with-intercepts.v1 FOUNDATIONAL {
+  title: "11.3 Graphing with Intercepts"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the intercepts on a graph; Find the intercepts from an equation of a line; Graph a line using the intercepts; Choose the most convenient method to graph a line."
+  requires: [mbas.11-2-graphing-linear-equations.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 11.3 Graphing with Intercepts", weight: 0.90 }
+}
+
+KNOWLEDGE mbas.11-4-understand-slope-of-a-line.v1 FOUNDATIONAL {
+  title: "11.4 Understand Slope of a Line"
+  domain: "matematica_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Use geoboards to model slope; Find the slope of a line from its graph; Find the slope of horizontal and vertical lines; Use the slope formula to find the slope of a line between two points; Graph a line given a point and the slope Solve slope applications."
+  requires: [mbas.11-3-graphing-with-intercepts.v1]
+  interactivity: 3
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Prealgebra 2e - 11.4 Understand Slope of a Line", weight: 0.90 }
+}
+
+MISSION mission.mbas.v1 {
+  label: "Matemática Básica (Prealgebra)"
+  requires: [
+    mbas.1-1-introduction-to-whole-numbers.v1,
+    mbas.1-2-add-whole-numbers.v1,
+    mbas.1-3-subtract-whole-numbers.v1,
+    mbas.1-4-multiply-whole-numbers.v1,
+    mbas.1-5-divide-whole-numbers.v1,
+    mbas.2-1-use-the-language-of-algebra.v1,
+    mbas.2-2-evaluate-simplify-and-translate-expressions.v1,
+    mbas.2-3-solving-equations-using-the-subtraction-and-addition-properties-of-equality.v1,
+    mbas.2-4-find-multiples-and-factors.v1,
+    mbas.2-5-prime-factorization-and-the-least-common-multiple.v1,
+    mbas.3-1-introduction-to-integers.v1,
+    mbas.3-2-add-integers.v1,
+    mbas.3-3-subtract-integers.v1,
+    mbas.3-4-multiply-and-divide-integers.v1,
+    mbas.3-5-solve-equations-using-integers-the-division-property-of-equality.v1,
+    mbas.4-1-visualize-fractions.v1,
+    mbas.4-2-multiply-and-divide-fractions.v1,
+    mbas.4-3-multiply-and-divide-mixed-numbers-and-complex-fractions.v1,
+    mbas.4-4-add-and-subtract-fractions-with-common-denominators.v1,
+    mbas.4-5-add-and-subtract-fractions-with-different-denominators.v1,
+    mbas.4-6-add-and-subtract-mixed-numbers.v1,
+    mbas.4-7-solve-equations-with-fractions.v1,
+    mbas.5-1-decimals.v1,
+    mbas.5-2-decimal-operations.v1,
+    mbas.5-3-decimals-and-fractions.v1,
+    mbas.5-4-solve-equations-with-decimals.v1,
+    mbas.5-5-averages-and-probability.v1,
+    mbas.5-6-ratios-and-rate.v1,
+    mbas.5-7-simplify-and-use-square-roots.v1,
+    mbas.6-1-understand-percent.v1,
+    mbas.6-2-solve-general-applications-of-percent.v1,
+    mbas.6-3-solve-sales-tax-commission-and-discount-applications.v1,
+    mbas.6-4-solve-simple-interest-applications.v1,
+    mbas.6-5-solve-proportions-and-their-applications.v1,
+    mbas.7-1-rational-and-irrational-numbers.v1,
+    mbas.7-2-commutative-and-associative-properties.v1,
+    mbas.7-3-distributive-property.v1,
+    mbas.7-4-properties-of-identity-inverses-and-zero.v1,
+    mbas.7-5-systems-of-measurement.v1,
+    mbas.8-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality.v1,
+    mbas.8-2-solve-equations-using-the-division-and-multiplication-properties-of-equality.v1,
+    mbas.8-3-solve-equations-with-variables-and-constants-on-both-sides.v1,
+    mbas.8-4-solve-equations-with-fraction-or-decimal-coefficients.v1,
+    mbas.9-1-use-a-problem-solving-strategy.v1,
+    mbas.9-2-solve-money-applications.v1,
+    mbas.9-3-use-properties-of-angles-triangles-and-the-pythagorean-theorem.v1,
+    mbas.9-4-use-properties-of-rectangles-triangles-and-trapezoids.v1,
+    mbas.9-5-solve-geometry-applications-circles-and-irregular-figures.v1,
+    mbas.9-6-solve-geometry-applications-volume-and-surface-area.v1,
+    mbas.9-7-solve-a-formula-for-a-specific-variable.v1,
+    mbas.10-1-add-and-subtract-polynomials.v1,
+    mbas.10-2-use-multiplication-properties-of-exponents.v1,
+    mbas.10-3-multiply-polynomials.v1,
+    mbas.10-4-divide-monomials.v1,
+    mbas.10-5-integer-exponents-and-scientific-notation.v1,
+    mbas.10-6-introduction-to-factoring-polynomials.v1,
+    mbas.11-1-use-the-rectangular-coordinate-system.v1,
+    mbas.11-2-graphing-linear-equations.v1,
+    mbas.11-3-graphing-with-intercepts.v1,
+    mbas.11-4-understand-slope-of-a-line.v1,
+  ]
+  threshold: 0.85
+}

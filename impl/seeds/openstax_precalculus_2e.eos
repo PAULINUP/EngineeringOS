@@ -1,0 +1,853 @@
+@version 1.0.0
+@domain "matematica_avancada"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Precalculus 2e
+# Fonte: https://openstax.org/books/precalculus-2e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Functions
+# ------------------------------------------------------------
+KNOWLEDGE mava.1-1-functions-and-function-notation.v1 INTERMEDIATE {
+  title: "1.1 Functions and Function Notation"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Determine whether a relation represents a function.; Find the value of a function.; Determine whether a function is one-to-one.; Use the vertical line test to identify functions.; Graph the functions listed in the library of functions.."
+  requires: [mmed.10-5-graphing-quadratic-equations-in-two-variables.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 1.1 Functions and Function Notation", weight: 0.90 }
+}
+
+KNOWLEDGE mava.1-2-domain-and-range.v1 INTERMEDIATE {
+  title: "1.2 Domain and Range"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the domain of a function defined by an equation.; Graph piecewise-defined functions.."
+  requires: [mava.1-1-functions-and-function-notation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 1.2 Domain and Range", weight: 0.90 }
+}
+
+KNOWLEDGE mava.1-3-rates-of-change-and-behavior-of-graphs.v1 INTERMEDIATE {
+  title: "1.3 Rates of Change and Behavior of Graphs"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the average rate of change of a function.; Use a graph to determine where a function is increasing, decreasing, or constant.; Use a graph to locate local maxima and local minima.; Use a graph to locate the absolute maximum and absolute minimum.."
+  requires: [mava.1-2-domain-and-range.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 1.3 Rates of Change and Behavior of Graphs", weight: 0.90 }
+}
+
+KNOWLEDGE mava.1-4-composition-of-functions.v1 INTERMEDIATE {
+  title: "1.4 Composition of Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Combine functions using algebraic operations.; Create a new function by composition of functions.; Evaluate composite functions.; Find the domain of a composite function.; Decompose a composite function into its component functions.."
+  requires: [mava.1-3-rates-of-change-and-behavior-of-graphs.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 1.4 Composition of Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.1-5-transformation-of-functions.v1 INTERMEDIATE {
+  title: "1.5 Transformation of Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Graph functions using vertical and horizontal shifts.; Graph functions using reflections about the x x -axis and the y y -axis.; Determine whether a function is even, odd, or neither from its graph.; Graph functions using compressions and stretches.; Combine transformations.."
+  requires: [mava.1-4-composition-of-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 1.5 Transformation of Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.1-6-absolute-value-functions.v1 INTERMEDIATE {
+  title: "1.6 Absolute Value Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Graph an absolute value function.; Solve an absolute value equation.; Solve an absolute value inequality.."
+  requires: [mava.1-5-transformation-of-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 1.6 Absolute Value Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.1-7-inverse-functions.v1 INTERMEDIATE {
+  title: "1.7 Inverse Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Verify inverse functions.; Determine the domain and range of an inverse function, and restrict the domain of a function to make it one-to-one.; Find or evaluate the inverse of a function.; Use the graph of a one-to-one function to graph its inverse function on the same axes.."
+  requires: [mava.1-6-absolute-value-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 1.7 Inverse Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Linear Functions
+# ------------------------------------------------------------
+KNOWLEDGE mava.2-1-linear-functions.v1 INTERMEDIATE {
+  title: "2.1 Linear Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Represent a linear function.; Determine whether a linear function is increasing, decreasing, or constant.; Calculate and interpret slope.; Write the point-slope form of an equation.; Write and interpret a linear function.."
+  requires: [mava.1-7-inverse-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 2.1 Linear Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.2-2-graphs-of-linear-functions.v1 INTERMEDIATE {
+  title: "2.2 Graphs of Linear Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Graph linear functions.; Write the equation for a linear function from the graph of a line.; Given the equations of two lines, determine whether their graphs are parallel or perpendicular.; Write the equation of a line parallel or perpendicular to a given line.; Solve a system of linear equations.."
+  requires: [mava.2-1-linear-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 2.2 Graphs of Linear Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.2-3-modeling-with-linear-functions.v1 INTERMEDIATE {
+  title: "2.3 Modeling with Linear Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Identify steps for modeling and solving.; Build linear models from verbal descriptions.; Build systems of linear models.."
+  requires: [mava.2-2-graphs-of-linear-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 2.3 Modeling with Linear Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.2-4-fitting-linear-models-to-data.v1 INTERMEDIATE {
+  title: "2.4 Fitting Linear Models to Data"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Draw and interpret scatter plots.; Find the line of best fit.; Distinguish between linear and nonlinear relations.; Use a linear model to make predictions.."
+  requires: [mava.2-3-modeling-with-linear-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 2.4 Fitting Linear Models to Data", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Polynomial and Rational Functions
+# ------------------------------------------------------------
+KNOWLEDGE mava.3-1-complex-numbers.v1 INTERMEDIATE {
+  title: "3.1 Complex Numbers"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Express square roots of negative numbers as multiples of ii.; Plot complex numbers on the complex plane.; Add and subtract complex numbers.; Multiply and divide complex numbers.."
+  requires: [mava.2-4-fitting-linear-models-to-data.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.1 Complex Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mava.3-2-quadratic-functions.v1 INTERMEDIATE {
+  title: "3.2 Quadratic Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize characteristics of parabolas.; Understand how the graph of a parabola is related to its quadratic function.; Determine a quadratic function’s minimum or maximum value.; Solve problems involving a quadratic function’s minimum or maximum value.."
+  requires: [mava.3-1-complex-numbers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.2 Quadratic Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.3-3-power-functions-and-polynomial-functions.v1 INTERMEDIATE {
+  title: "3.3 Power Functions and Polynomial Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Identify power functions.; Identify end behavior of power functions.; Identify polynomial functions.; Identify the degree and leading coefficient of polynomial functions.."
+  requires: [mava.3-2-quadratic-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.3 Power Functions and Polynomial Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.3-4-graphs-of-polynomial-functions.v1 INTERMEDIATE {
+  title: "3.4 Graphs of Polynomial Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize characteristics of graphs of polynomial functions.; Use factoring to ﬁnd zeros of polynomial functions.; Identify zeros and their multiplicities.; Determine end behavior.; Understand the relationship between degree and turning points.; Graph polynomial functions.; Use the Intermediate Value Theorem.."
+  requires: [mava.3-3-power-functions-and-polynomial-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.4 Graphs of Polynomial Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.3-5-dividing-polynomials.v1 INTERMEDIATE {
+  title: "3.5 Dividing Polynomials"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use long division to divide polynomials.; Use synthetic division to divide polynomials.."
+  requires: [mava.3-4-graphs-of-polynomial-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.5 Dividing Polynomials", weight: 0.90 }
+}
+
+KNOWLEDGE mava.3-6-zeros-of-polynomial-functions.v1 INTERMEDIATE {
+  title: "3.6 Zeros of Polynomial Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate a polynomial using the Remainder Theorem.; Use the Factor Theorem to solve a polynomial equation.; Use the Rational Zero Theorem to find rational zeros.; Find zeros of a polynomial function.; Use the Linear Factorization Theorem to find polynomials with given zeros.; Use Descartes’ Rule of Signs.; Solve real-world applications of polynomial equations.."
+  requires: [mava.3-5-dividing-polynomials.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.6 Zeros of Polynomial Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.3-7-rational-functions.v1 INTERMEDIATE {
+  title: "3.7 Rational Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use arrow notation.; Solve applied problems involving rational functions.; Find the domains of rational functions.; Identify vertical asymptotes.; Identify horizontal asymptotes.; Graph rational functions.."
+  requires: [mava.3-6-zeros-of-polynomial-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.7 Rational Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.3-8-inverses-and-radical-functions.v1 INTERMEDIATE {
+  title: "3.8 Inverses and Radical Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the inverse of a polynomial function.; Restrict the domain to find the inverse of a polynomial function.."
+  requires: [mava.3-7-rational-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.8 Inverses and Radical Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.3-9-modeling-using-variation.v1 INTERMEDIATE {
+  title: "3.9 Modeling Using Variation"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Solve direct variation problems.; Solve inverse variation problems.; Solve problems involving joint variation.."
+  requires: [mava.3-8-inverses-and-radical-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 3.9 Modeling Using Variation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Exponential and Logarithmic Functions
+# ------------------------------------------------------------
+KNOWLEDGE mava.4-1-exponential-functions.v1 INTERMEDIATE {
+  title: "4.1 Exponential Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate exponential functions.; Find the equation of an exponential function.; Use compound interest formulas.; Evaluate exponential functions with base ee .."
+  requires: [mava.3-9-modeling-using-variation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 4.1 Exponential Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.4-2-graphs-of-exponential-functions.v1 INTERMEDIATE {
+  title: "4.2 Graphs of Exponential Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Graph exponential functions.; Graph exponential functions using transformations.."
+  requires: [mava.4-1-exponential-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 4.2 Graphs of Exponential Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.4-3-logarithmic-functions.v1 INTERMEDIATE {
+  title: "4.3 Logarithmic Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Convert from logarithmic to exponential form.; Convert from exponential to logarithmic form.; Evaluate logarithms.; Use common logarithms.; Use natural logarithms.."
+  requires: [mava.4-2-graphs-of-exponential-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 4.3 Logarithmic Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.4-4-graphs-of-logarithmic-functions.v1 INTERMEDIATE {
+  title: "4.4 Graphs of Logarithmic Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the domain of a logarithmic function.; Graph logarithmic functions.."
+  requires: [mava.4-3-logarithmic-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 4.4 Graphs of Logarithmic Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.4-5-logarithmic-properties.v1 INTERMEDIATE {
+  title: "4.5 Logarithmic Properties"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use the product rule for logarithms.; Use the quotient rule for logarithms.; Use the power rule for logarithms.; Expand logarithmic expressions.; Condense logarithmic expressions.; Use the change-of-base formula for logarithms.."
+  requires: [mava.4-4-graphs-of-logarithmic-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 4.5 Logarithmic Properties", weight: 0.90 }
+}
+
+KNOWLEDGE mava.4-6-exponential-and-logarithmic-equations.v1 INTERMEDIATE {
+  title: "4.6 Exponential and Logarithmic Equations"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use like bases to solve exponential equations.; Use logarithms to solve exponential equations.; Use the definition of a logarithm to solve logarithmic equations.; Use the one-to-one property of logarithms to solve logarithmic equations.; Solve applied problems involving exponential and logarithmic equations.."
+  requires: [mava.4-5-logarithmic-properties.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 4.6 Exponential and Logarithmic Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mava.4-7-exponential-and-logarithmic-models.v1 INTERMEDIATE {
+  title: "4.7 Exponential and Logarithmic Models"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Model exponential growth and decay.; Use Newton’s Law of Cooling.; Use logistic-growth models.; Choose an appropriate model for data.; Express an exponential model in base e e .."
+  requires: [mava.4-6-exponential-and-logarithmic-equations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 4.7 Exponential and Logarithmic Models", weight: 0.90 }
+}
+
+KNOWLEDGE mava.4-8-fitting-exponential-models-to-data.v1 INTERMEDIATE {
+  title: "4.8 Fitting Exponential Models to Data"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Build an exponential model from data.; Build a logarithmic model from data.; Build a logistic model from data.."
+  requires: [mava.4-7-exponential-and-logarithmic-models.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 4.8 Fitting Exponential Models to Data", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Trigonometric Functions
+# ------------------------------------------------------------
+KNOWLEDGE mava.5-1-angles.v1 INTERMEDIATE {
+  title: "5.1 Angles"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Draw angles in standard position.; Convert between degrees and radians.; Find coterminal angles.; Find the length of a circular arc.; Use linear and angular speed to describe motion on a circular path.."
+  requires: [mava.4-8-fitting-exponential-models-to-data.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 5.1 Angles", weight: 0.90 }
+}
+
+KNOWLEDGE mava.5-2-unit-circle-sine-and-cosine-functions.v1 INTERMEDIATE {
+  title: "5.2 Unit Circle: Sine and Cosine Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find function values for the sine and cosine of 30° or ( π 6 ),45° or ( π 4 ) 30° or ( π 6 ),45° or ( π 4 ) and 60°  or ( π 3 ). 60°  or ( π 3 ).; Identify the domain and range of sine and cosine functions.; Use reference angles to evaluate trigonometric functions.."
+  requires: [mava.5-1-angles.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 5.2 Unit Circle: Sine and Cosine Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.5-3-the-other-trigonometric-functions.v1 INTERMEDIATE {
+  title: "5.3 The Other Trigonometric Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find exact values of the trigonometric functions secant, cosecant, tangent, and cotangent of π 3 , π 3 , π 4 , π 4 , and π 6 . π 6 .; Use reference angles to evaluate the trigonometric functions secant, cosecant, tangent, and cotangent.; Use properties of even and odd trigonometric functions.; Recognize and use fundamental identities.; Evaluate trigonometric functions with a calculator.."
+  requires: [mava.5-2-unit-circle-sine-and-cosine-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 5.3 The Other Trigonometric Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.5-4-right-triangle-trigonometry.v1 INTERMEDIATE {
+  title: "5.4 Right Triangle Trigonometry"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use right triangles to evaluate trigonometric functions.; Find function values for 30°( π 6 ), 30°( π 6 ), 45°( π 4 ), 45°( π 4 ), and 60°( π 3 ). 60°( π 3 ).; Use cofunctions of complementary angles.; Use the deﬁnitions of trigonometric functions of any angle.; Use right triangle trigonometry to solve applied problems.."
+  requires: [mava.5-3-the-other-trigonometric-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 5.4 Right Triangle Trigonometry", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Periodic Functions
+# ------------------------------------------------------------
+KNOWLEDGE mava.6-1-graphs-of-the-sine-and-cosine-functions.v1 INTERMEDIATE {
+  title: "6.1 Graphs of the Sine and Cosine Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Graph variations of y=sin(x)y=sin(x) and y=cos(x)y=cos(x) .; Use phase shifts of sine and cosine curves.."
+  requires: [mava.5-4-right-triangle-trigonometry.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 6.1 Graphs of the Sine and Cosine Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.6-2-graphs-of-the-other-trigonometric-functions.v1 INTERMEDIATE {
+  title: "6.2 Graphs of the Other Trigonometric Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze the graph of y=tan x.; Graph variations of y=tan x.; Analyze the graphs of y=sec x and y=csc x.; Graph variations of y=sec x and y=csc x.; Analyze the graph of y=cot x.; Graph variations of y=cot x.."
+  requires: [mava.6-1-graphs-of-the-sine-and-cosine-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 6.2 Graphs of the Other Trigonometric Functions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.6-3-inverse-trigonometric-functions.v1 INTERMEDIATE {
+  title: "6.3 Inverse Trigonometric Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Understand and use the inverse sine, cosine, and tangent functions.; Find the exact value of expressions involving the inverse sine, cosine, and tangent functions.; Use a calculator to evaluate inverse trigonometric functions.; Find exact values of composite functions with inverse trigonometric functions.."
+  requires: [mava.6-2-graphs-of-the-other-trigonometric-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 6.3 Inverse Trigonometric Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Trigonometric Identities and Equations
+# ------------------------------------------------------------
+KNOWLEDGE mava.7-1-simplifying-and-verifying-trigonometric-identities.v1 INTERMEDIATE {
+  title: "7.1 Simplifying and Verifying Trigonometric Identities"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Verify the fundamental trigonometric identities.; Simplify trigonometric expressions using algebra and the identities.."
+  requires: [mava.6-3-inverse-trigonometric-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 7.1 Simplifying and Verifying Trigonometric Identities", weight: 0.90 }
+}
+
+KNOWLEDGE mava.7-2-sum-and-difference-identities.v1 INTERMEDIATE {
+  title: "7.2 Sum and Difference Identities"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use sum and difference formulas for cosine.; Use sum and difference formulas for sine.; Use sum and difference formulas for tangent.; Use sum and difference formulas for cofunctions.; Use sum and difference formulas to verify identities.."
+  requires: [mava.7-1-simplifying-and-verifying-trigonometric-identities.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 7.2 Sum and Difference Identities", weight: 0.90 }
+}
+
+KNOWLEDGE mava.7-3-double-angle-half-angle-and-reduction-formulas.v1 INTERMEDIATE {
+  title: "7.3 Double-Angle, Half-Angle, and Reduction Formulas"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use double-angle formulas to find exact values.; Use double-angle formulas to verify identities.; Use reduction formulas to simplify an expression.; Use half-angle formulas to find exact values.."
+  requires: [mava.7-2-sum-and-difference-identities.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 7.3 Double-Angle, Half-Angle, and Reduction Formulas", weight: 0.90 }
+}
+
+KNOWLEDGE mava.7-4-sum-to-product-and-product-to-sum-formulas.v1 INTERMEDIATE {
+  title: "7.4 Sum-to-Product and Product-to-Sum Formulas"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Express products as sums.; Express sums as products.."
+  requires: [mava.7-3-double-angle-half-angle-and-reduction-formulas.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 7.4 Sum-to-Product and Product-to-Sum Formulas", weight: 0.90 }
+}
+
+KNOWLEDGE mava.7-5-solving-trigonometric-equations.v1 INTERMEDIATE {
+  title: "7.5 Solving Trigonometric Equations"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Solve linear trigonometric equations in sine and cosine.; Solve equations involving a single trigonometric function.; Solve trigonometric equations using a calculator.; Solve trigonometric equations that are quadratic in form.; Solve trigonometric equations using fundamental identities.; Solve trigonometric equations with multiple angles.; Solve right triangle problems.."
+  requires: [mava.7-4-sum-to-product-and-product-to-sum-formulas.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 7.5 Solving Trigonometric Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mava.7-6-modeling-with-trigonometric-functions.v1 INTERMEDIATE {
+  title: "7.6 Modeling with Trigonometric Functions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Determine the amplitude and period of sinusoidal functions.; Model equations and graph sinusoidal functions.; Model periodic behavior.; Model harmonic motion functions.."
+  requires: [mava.7-5-solving-trigonometric-equations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 7.6 Modeling with Trigonometric Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Further Applications of Trigonometry
+# ------------------------------------------------------------
+KNOWLEDGE mava.8-1-non-right-triangles-law-of-sines.v1 INTERMEDIATE {
+  title: "8.1 Non-right Triangles: Law of Sines"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use the Law of Sines to solve oblique triangles.; Find the area of an oblique triangle using the sine function.; Solve applied problems using the Law of Sines.."
+  requires: [mava.7-6-modeling-with-trigonometric-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 8.1 Non-right Triangles: Law of Sines", weight: 0.90 }
+}
+
+KNOWLEDGE mava.8-2-non-right-triangles-law-of-cosines.v1 INTERMEDIATE {
+  title: "8.2 Non-right Triangles: Law of Cosines"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use the Law of Cosines to solve oblique triangles.; Solve applied problems using the Law of Cosines.; Use Heron’s formula to ﬁnd the area of a triangle.."
+  requires: [mava.8-1-non-right-triangles-law-of-sines.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 8.2 Non-right Triangles: Law of Cosines", weight: 0.90 }
+}
+
+KNOWLEDGE mava.8-3-polar-coordinates.v1 INTERMEDIATE {
+  title: "8.3 Polar Coordinates"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Plot points using polar coordinates.; Convert from polar coordinates to rectangular coordinates.; Convert from rectangular coordinates to polar coordinates.; Transform equations between polar and rectangular forms.; Identify and graph polar equations by converting to rectangular equations.."
+  requires: [mava.8-2-non-right-triangles-law-of-cosines.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 8.3 Polar Coordinates", weight: 0.90 }
+}
+
+KNOWLEDGE mava.8-4-polar-coordinates-graphs.v1 INTERMEDIATE {
+  title: "8.4 Polar Coordinates: Graphs"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Test polar equations for symmetry.; Graph polar equations by plotting points.."
+  requires: [mava.8-3-polar-coordinates.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 8.4 Polar Coordinates: Graphs", weight: 0.90 }
+}
+
+KNOWLEDGE mava.8-5-polar-form-of-complex-numbers.v1 INTERMEDIATE {
+  title: "8.5 Polar Form of Complex Numbers"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Plot complex numbers in the complex plane.; Find the absolute value of a complex number.; Write complex numbers in polar form.; Convert a complex number from polar to rectangular form.; Find products of complex numbers in polar form.; Find quotients of complex numbers in polar form.; Find powers of complex numbers in polar form.; Find roots of complex numbers in polar form.."
+  requires: [mava.8-4-polar-coordinates-graphs.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 8.5 Polar Form of Complex Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mava.8-6-parametric-equations.v1 INTERMEDIATE {
+  title: "8.6 Parametric Equations"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Parameterize a curve.; Eliminate the parameter.; Find a rectangular equation for a curve defined parametrically.; Find parametric equations for curves defined by rectangular equations.."
+  requires: [mava.8-5-polar-form-of-complex-numbers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 8.6 Parametric Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mava.8-7-parametric-equations-graphs.v1 INTERMEDIATE {
+  title: "8.7 Parametric Equations: Graphs"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Graph plane curves described by parametric equations by plotting points.; Graph parametric equations.."
+  requires: [mava.8-6-parametric-equations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 8.7 Parametric Equations: Graphs", weight: 0.90 }
+}
+
+KNOWLEDGE mava.8-8-vectors.v1 INTERMEDIATE {
+  title: "8.8 Vectors"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: View vectors geometrically.; Find magnitude and direction.; Perform vector addition and scalar multiplication.; Find the component form of a vector.; Find the unit vector in the direction of vv.; Perform operations with vectors in terms of ii and jj.; Find the dot product of two vectors.."
+  requires: [mava.8-7-parametric-equations-graphs.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 8.8 Vectors", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Systems of Equations and Inequalities
+# ------------------------------------------------------------
+KNOWLEDGE mava.9-1-systems-of-linear-equations-two-variables.v1 INTERMEDIATE {
+  title: "9.1 Systems of Linear Equations: Two Variables"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Solve systems of equations by graphing.; Solve systems of equations by substitution.; Solve systems of equations by addition.; Identify inconsistent systems of equations containing two variables.; Express the solution of a system of dependent equations containing two variables.."
+  requires: [mava.8-8-vectors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 9.1 Systems of Linear Equations: Two Variables", weight: 0.90 }
+}
+
+KNOWLEDGE mava.9-2-systems-of-linear-equations-three-variables.v1 INTERMEDIATE {
+  title: "9.2 Systems of Linear Equations: Three Variables"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Solve systems of three equations in three variables.; Identify inconsistent systems of equations containing three variables.; Express the solution of a system of dependent equations containing three variables.."
+  requires: [mava.9-1-systems-of-linear-equations-two-variables.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 9.2 Systems of Linear Equations: Three Variables", weight: 0.90 }
+}
+
+KNOWLEDGE mava.9-3-systems-of-nonlinear-equations-and-inequalities-two-variables.v1 INTERMEDIATE {
+  title: "9.3 Systems of Nonlinear Equations and Inequalities: Two Variables"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Solve a system of nonlinear equations using substitution.; Solve a system of nonlinear equations using elimination.; Graph a nonlinear inequality.; Graph a system of nonlinear inequalities.."
+  requires: [mava.9-2-systems-of-linear-equations-three-variables.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 9.3 Systems of Nonlinear Equations and Inequalities: Two Variables", weight: 0.90 }
+}
+
+KNOWLEDGE mava.9-4-partial-fractions.v1 INTERMEDIATE {
+  title: "9.4 Partial Fractions"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Decompose P(x) Q(x) P(x) Q(x) , where Q(x)Q(x) has only nonrepeated linear factors.; Decompose P(x) Q(x) P(x) Q(x) , where Q(x)Q(x) has repeated linear factors.; Decompose P(x) Q(x) P(x) Q(x) , where Q(x)Q(x) has a nonrepeated irreducible quadratic factor.; Decompose P(x) Q(x) P(x) Q(x) , where Q(x)Q(x) has a repeated irreducible quadratic factor.."
+  requires: [mava.9-3-systems-of-nonlinear-equations-and-inequalities-two-variables.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 9.4 Partial Fractions", weight: 0.90 }
+}
+
+KNOWLEDGE mava.9-5-matrices-and-matrix-operations.v1 INTERMEDIATE {
+  title: "9.5 Matrices and Matrix Operations"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the sum and difference of two matrices.; Find scalar multiples of a matrix.; Find the product of two matrices.."
+  requires: [mava.9-4-partial-fractions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 9.5 Matrices and Matrix Operations", weight: 0.90 }
+}
+
+KNOWLEDGE mava.9-6-solving-systems-with-gaussian-elimination.v1 INTERMEDIATE {
+  title: "9.6 Solving Systems with Gaussian Elimination"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Write the augmented matrix of a system of equations.; Write the system of equations from an augmented matrix.; Perform row operations on a matrix.; Solve a system of linear equations using matrices.."
+  requires: [mava.9-5-matrices-and-matrix-operations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 9.6 Solving Systems with Gaussian Elimination", weight: 0.90 }
+}
+
+KNOWLEDGE mava.9-7-solving-systems-with-inverses.v1 INTERMEDIATE {
+  title: "9.7 Solving Systems with Inverses"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the inverse of a matrix.; Solve a system of linear equations using an inverse matrix.."
+  requires: [mava.9-6-solving-systems-with-gaussian-elimination.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 9.7 Solving Systems with Inverses", weight: 0.90 }
+}
+
+KNOWLEDGE mava.9-8-solving-systems-with-cramers-rule.v1 INTERMEDIATE {
+  title: "9.8 Solving Systems with Cramer's Rule"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate 2 × 2 determinants.; Use Cramer’s Rule to solve a system of equations in two variables.; Evaluate 3 × 3 determinants.; Use Cramer’s Rule to solve a system of three equations in three variables.; Know the properties of determinants.."
+  requires: [mava.9-7-solving-systems-with-inverses.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 9.8 Solving Systems with Cramer's Rule", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Analytic Geometry
+# ------------------------------------------------------------
+KNOWLEDGE mava.10-1-the-ellipse.v1 INTERMEDIATE {
+  title: "10.1 The Ellipse"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Write equations of ellipses in standard form.; Graph ellipses centered at the origin.; Graph ellipses not centered at the origin.; Solve applied problems involving ellipses.."
+  requires: [mava.9-8-solving-systems-with-cramers-rule.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 10.1 The Ellipse", weight: 0.90 }
+}
+
+KNOWLEDGE mava.10-2-the-hyperbola.v1 INTERMEDIATE {
+  title: "10.2 The Hyperbola"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Locate a hyperbola’s vertices and foci.; Write equations of hyperbolas in standard form.; Graph hyperbolas centered at the origin.; Graph hyperbolas not centered at the origin.; Solve applied problems involving hyperbolas.."
+  requires: [mava.10-1-the-ellipse.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 10.2 The Hyperbola", weight: 0.90 }
+}
+
+KNOWLEDGE mava.10-3-the-parabola.v1 INTERMEDIATE {
+  title: "10.3 The Parabola"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Graph parabolas with vertices at the origin.; Write equations of parabolas in standard form.; Graph parabolas with vertices not at the origin.; Solve applied problems involving parabolas.."
+  requires: [mava.10-2-the-hyperbola.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 10.3 The Parabola", weight: 0.90 }
+}
+
+KNOWLEDGE mava.10-4-rotation-of-axes.v1 INTERMEDIATE {
+  title: "10.4 Rotation of Axes"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Identify nondegenerate conic sections given their general form equations.; Use rotation of axes formulas.; Write equations of rotated conics in standard form.; Identify conics without rotating axes.."
+  requires: [mava.10-3-the-parabola.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 10.4 Rotation of Axes", weight: 0.90 }
+}
+
+KNOWLEDGE mava.10-5-conic-sections-in-polar-coordinates.v1 INTERMEDIATE {
+  title: "10.5 Conic Sections in Polar Coordinates"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Identify a conic in polar form.; Graph the polar equations of conics.; Deﬁne conics in terms of a focus and a directrix.."
+  requires: [mava.10-4-rotation-of-axes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 10.5 Conic Sections in Polar Coordinates", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Sequences, Probability and Counting Theory
+# ------------------------------------------------------------
+KNOWLEDGE mava.11-1-sequences-and-their-notations.v1 INTERMEDIATE {
+  title: "11.1 Sequences and Their Notations"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Write the terms of a sequence defined by an explicit formula.; Write the terms of a sequence defined by a recursive formula.; Use factorial notation.."
+  requires: [mava.10-5-conic-sections-in-polar-coordinates.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 11.1 Sequences and Their Notations", weight: 0.90 }
+}
+
+KNOWLEDGE mava.11-2-arithmetic-sequences.v1 INTERMEDIATE {
+  title: "11.2 Arithmetic Sequences"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the common difference for an arithmetic sequence.; Write terms of an arithmetic sequence.; Use a recursive formula for an arithmetic sequence.; Use an explicit formula for an arithmetic sequence.."
+  requires: [mava.11-1-sequences-and-their-notations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 11.2 Arithmetic Sequences", weight: 0.90 }
+}
+
+KNOWLEDGE mava.11-3-geometric-sequences.v1 INTERMEDIATE {
+  title: "11.3 Geometric Sequences"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the common ratio for a geometric sequence.; List the terms of a geometric sequence.; Use a recursive formula for a geometric sequence.; Use an explicit formula for a geometric sequence.."
+  requires: [mava.11-2-arithmetic-sequences.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 11.3 Geometric Sequences", weight: 0.90 }
+}
+
+KNOWLEDGE mava.11-4-series-and-their-notations.v1 INTERMEDIATE {
+  title: "11.4 Series and Their Notations"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Use summation notation.; Use the formula for the sum of the ﬁrst n terms of an arithmetic series.; Use the formula for the sum of the ﬁrst n terms of a geometric series.; Use the formula for the sum of an inﬁnite geometric series.; Solve annuity problems.."
+  requires: [mava.11-3-geometric-sequences.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 11.4 Series and Their Notations", weight: 0.90 }
+}
+
+KNOWLEDGE mava.11-5-counting-principles.v1 INTERMEDIATE {
+  title: "11.5 Counting Principles"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Solve counting problems using the Addition Principle.; Solve counting problems using the Multiplication Principle.; Solve counting problems using permutations involving n distinct objects.; Solve counting problems using combinations.; Find the number of subsets of a given set.; Solve counting problems using permutations involving n non-distinct objects.."
+  requires: [mava.11-4-series-and-their-notations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 11.5 Counting Principles", weight: 0.90 }
+}
+
+KNOWLEDGE mava.11-6-binomial-theorem.v1 INTERMEDIATE {
+  title: "11.6 Binomial Theorem"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Apply the Binomial Theorem.."
+  requires: [mava.11-5-counting-principles.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 11.6 Binomial Theorem", weight: 0.90 }
+}
+
+KNOWLEDGE mava.11-7-probability.v1 INTERMEDIATE {
+  title: "11.7 Probability"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Construct probability models.; Compute probabilities of equally likely outcomes.; Compute probabilities of the union of two events.; Use the complement rule to find probabilities.; Compute probability using counting theory.."
+  requires: [mava.11-6-binomial-theorem.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 11.7 Probability", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Introduction to Calculus
+# ------------------------------------------------------------
+KNOWLEDGE mava.12-1-finding-limits-numerical-and-graphical-approaches.v1 INTERMEDIATE {
+  title: "12.1 Finding Limits: Numerical and Graphical Approaches"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Understand limit notation.; Find a limit using a graph.; Find a limit using a table.."
+  requires: [mava.11-7-probability.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 12.1 Finding Limits: Numerical and Graphical Approaches", weight: 0.90 }
+}
+
+KNOWLEDGE mava.12-2-finding-limits-properties-of-limits.v1 INTERMEDIATE {
+  title: "12.2 Finding Limits: Properties of Limits"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the limit of a sum, a difference, and a product.; Find the limit of a polynomial.; Find the limit of a power or a root.; Find the limit of a quotient.."
+  requires: [mava.12-1-finding-limits-numerical-and-graphical-approaches.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 12.2 Finding Limits: Properties of Limits", weight: 0.90 }
+}
+
+KNOWLEDGE mava.12-3-continuity.v1 INTERMEDIATE {
+  title: "12.3 Continuity"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Determine whether a function is continuous at a number.; Determine the numbers for which a function is discontinuous.; Determine whether a function is continuous.."
+  requires: [mava.12-2-finding-limits-properties-of-limits.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 12.3 Continuity", weight: 0.90 }
+}
+
+KNOWLEDGE mava.12-4-derivatives.v1 INTERMEDIATE {
+  title: "12.4 Derivatives"
+  domain: "matematica_avancada"
+  definition: "Ao final desta secao, voce sera capaz de: Find the derivative of a function.; Find instantaneous rates of change.; Find an equation of the tangent line to the graph of a function at a point.; Find the instantaneous velocity of a particle.."
+  requires: [mava.12-3-continuity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Precalculus 2e - 12.4 Derivatives", weight: 0.90 }
+}
+
+MISSION mission.mava.v1 {
+  label: "Matemática Avançada (Pré-Cálculo)"
+  requires: [
+    mava.1-1-functions-and-function-notation.v1,
+    mava.1-2-domain-and-range.v1,
+    mava.1-3-rates-of-change-and-behavior-of-graphs.v1,
+    mava.1-4-composition-of-functions.v1,
+    mava.1-5-transformation-of-functions.v1,
+    mava.1-6-absolute-value-functions.v1,
+    mava.1-7-inverse-functions.v1,
+    mava.2-1-linear-functions.v1,
+    mava.2-2-graphs-of-linear-functions.v1,
+    mava.2-3-modeling-with-linear-functions.v1,
+    mava.2-4-fitting-linear-models-to-data.v1,
+    mava.3-1-complex-numbers.v1,
+    mava.3-2-quadratic-functions.v1,
+    mava.3-3-power-functions-and-polynomial-functions.v1,
+    mava.3-4-graphs-of-polynomial-functions.v1,
+    mava.3-5-dividing-polynomials.v1,
+    mava.3-6-zeros-of-polynomial-functions.v1,
+    mava.3-7-rational-functions.v1,
+    mava.3-8-inverses-and-radical-functions.v1,
+    mava.3-9-modeling-using-variation.v1,
+    mava.4-1-exponential-functions.v1,
+    mava.4-2-graphs-of-exponential-functions.v1,
+    mava.4-3-logarithmic-functions.v1,
+    mava.4-4-graphs-of-logarithmic-functions.v1,
+    mava.4-5-logarithmic-properties.v1,
+    mava.4-6-exponential-and-logarithmic-equations.v1,
+    mava.4-7-exponential-and-logarithmic-models.v1,
+    mava.4-8-fitting-exponential-models-to-data.v1,
+    mava.5-1-angles.v1,
+    mava.5-2-unit-circle-sine-and-cosine-functions.v1,
+    mava.5-3-the-other-trigonometric-functions.v1,
+    mava.5-4-right-triangle-trigonometry.v1,
+    mava.6-1-graphs-of-the-sine-and-cosine-functions.v1,
+    mava.6-2-graphs-of-the-other-trigonometric-functions.v1,
+    mava.6-3-inverse-trigonometric-functions.v1,
+    mava.7-1-simplifying-and-verifying-trigonometric-identities.v1,
+    mava.7-2-sum-and-difference-identities.v1,
+    mava.7-3-double-angle-half-angle-and-reduction-formulas.v1,
+    mava.7-4-sum-to-product-and-product-to-sum-formulas.v1,
+    mava.7-5-solving-trigonometric-equations.v1,
+    mava.7-6-modeling-with-trigonometric-functions.v1,
+    mava.8-1-non-right-triangles-law-of-sines.v1,
+    mava.8-2-non-right-triangles-law-of-cosines.v1,
+    mava.8-3-polar-coordinates.v1,
+    mava.8-4-polar-coordinates-graphs.v1,
+    mava.8-5-polar-form-of-complex-numbers.v1,
+    mava.8-6-parametric-equations.v1,
+    mava.8-7-parametric-equations-graphs.v1,
+    mava.8-8-vectors.v1,
+    mava.9-1-systems-of-linear-equations-two-variables.v1,
+    mava.9-2-systems-of-linear-equations-three-variables.v1,
+    mava.9-3-systems-of-nonlinear-equations-and-inequalities-two-variables.v1,
+    mava.9-4-partial-fractions.v1,
+    mava.9-5-matrices-and-matrix-operations.v1,
+    mava.9-6-solving-systems-with-gaussian-elimination.v1,
+    mava.9-7-solving-systems-with-inverses.v1,
+    mava.9-8-solving-systems-with-cramers-rule.v1,
+    mava.10-1-the-ellipse.v1,
+    mava.10-2-the-hyperbola.v1,
+    mava.10-3-the-parabola.v1,
+    mava.10-4-rotation-of-axes.v1,
+    mava.10-5-conic-sections-in-polar-coordinates.v1,
+    mava.11-1-sequences-and-their-notations.v1,
+    mava.11-2-arithmetic-sequences.v1,
+    mava.11-3-geometric-sequences.v1,
+    mava.11-4-series-and-their-notations.v1,
+    mava.11-5-counting-principles.v1,
+    mava.11-6-binomial-theorem.v1,
+    mava.11-7-probability.v1,
+    mava.12-1-finding-limits-numerical-and-graphical-approaches.v1,
+    mava.12-2-finding-limits-properties-of-limits.v1,
+    mava.12-3-continuity.v1,
+    mava.12-4-derivatives.v1,
+  ]
+  threshold: 0.85
+}

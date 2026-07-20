@@ -1,0 +1,527 @@
+@version 1.0.0
+@domain "matematica_faculdade"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Calculus Volume 1
+# Fonte: https://openstax.org/books/calculus-volume-1  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Functions and Graphs
+# ------------------------------------------------------------
+KNOWLEDGE calc1.1-1-review-of-functions.v1 ADVANCED {
+  title: "1.1 Review of Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.1.1 Use functional notation to evaluate a function.; 1.1.2 Determine the domain and range of a function.; 1.1.3 Draw the graph of a function.; 1.1.4 Find the zeros of a function.; 1.1.5 Recognize a function from a table of values.; 1.1.6 Make new functions from two or more given functions.; 1.1.7 Describe the symmetry properties of a function.."
+  requires: [mava.12-4-derivatives.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 1.1 Review of Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.1-2-basic-classes-of-functions.v1 ADVANCED {
+  title: "1.2 Basic Classes of Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.2.1 Calculate the slope of a linear function and interpret its meaning.; 1.2.2 Recognize the degree of a polynomial.; 1.2.3 Find the roots of a quadratic polynomial.; 1.2.4 Describe the graphs of basic odd and even polynomial functions.; 1.2.5 Identify a rational function.; 1.2.6 Describe the graphs of power and root functions.; 1.2.7 Explain the difference between algebraic and transcendental functions.; 1.2.8 Graph a piecewise-defined function.; 1.2.9 Sketch the graph of a function that has been shifted, stretched, or reflected from its initial graph position.."
+  requires: [calc1.1-1-review-of-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 1.2 Basic Classes of Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.1-3-trigonometric-functions.v1 ADVANCED {
+  title: "1.3 Trigonometric Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.3.1 Convert angle measures between degrees and radians.; 1.3.2 Recognize the triangular and circular definitions of the basic trigonometric functions.; 1.3.3 Write the basic trigonometric identities.; 1.3.4 Identify the graphs and periods of the trigonometric functions.; 1.3.5 Describe the shift of a sine or cosine graph from the equation of the function.."
+  requires: [calc1.1-2-basic-classes-of-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 1.3 Trigonometric Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.1-4-inverse-functions.v1 ADVANCED {
+  title: "1.4 Inverse Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.4.1 Determine the conditions for when a function has an inverse.; 1.4.2 Use the horizontal line test to recognize when a function is one-to-one.; 1.4.3 Find the inverse of a given function.; 1.4.4 Draw the graph of an inverse function.; 1.4.5 Evaluate inverse trigonometric functions.."
+  requires: [calc1.1-3-trigonometric-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 1.4 Inverse Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.1-5-exponential-and-logarithmic-functions.v1 ADVANCED {
+  title: "1.5 Exponential and Logarithmic Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.5.1 Identify the form of an exponential function.; 1.5.2 Explain the difference between the graphs of x b x b and b x . b x .; 1.5.3 Recognize the significance of the number e . e .; 1.5.4 Identify the form of a logarithmic function.; 1.5.5 Explain the relationship between exponential and logarithmic functions.; 1.5.6 Describe how to calculate a logarithm to a different base.; 1.5.7 Identify the hyperbolic functions, their graphs, and basic identities.."
+  requires: [calc1.1-4-inverse-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 1.5 Exponential and Logarithmic Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Limits
+# ------------------------------------------------------------
+KNOWLEDGE calc1.2-1-a-preview-of-calculus.v1 ADVANCED {
+  title: "2.1 A Preview of Calculus"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.1.1 Describe the tangent problem and how it led to the idea of a derivative.; 2.1.2 Explain how the idea of a limit is involved in solving the tangent problem.; 2.1.3 Recognize a tangent to a curve at a point as the limit of secant lines.; 2.1.4 Identify instantaneous velocity as the limit of average velocity over a small time interval.; 2.1.5 Describe the area problem and how it was solved by the integral.; 2.1.6 Explain how the idea of a limit is involved in solving the area problem.; 2.1.7 Recognize how the ideas of limit, derivative, and integral led to the studies of infinite series and multivariable calculus.."
+  requires: [calc1.1-5-exponential-and-logarithmic-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 2.1 A Preview of Calculus", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.2-2-the-limit-of-a-function.v1 ADVANCED {
+  title: "2.2 The Limit of a Function"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.2.1 Using correct notation, describe the limit of a function.; 2.2.2 Use a table of values to estimate the limit of a function or to identify when the limit does not exist.; 2.2.3 Use a graph to estimate the limit of a function or to identify when the limit does not exist.; 2.2.4 Define one-sided limits and provide examples.; 2.2.5 Explain the relationship between one-sided and two-sided limits.; 2.2.6 Using correct notation, describe an infinite limit.; 2.2.7 Define a vertical asymptote.."
+  requires: [calc1.2-1-a-preview-of-calculus.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 2.2 The Limit of a Function", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.2-3-the-limit-laws.v1 ADVANCED {
+  title: "2.3 The Limit Laws"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.3.1 Recognize the basic limit laws.; 2.3.2 Use the limit laws to evaluate the limit of a function.; 2.3.3 Evaluate the limit of a function by factoring.; 2.3.4 Use the limit laws to evaluate the limit of a polynomial or rational function.; 2.3.5 Evaluate the limit of a function by factoring or by using conjugates.; 2.3.6 Evaluate the limit of a function by using the squeeze theorem.."
+  requires: [calc1.2-2-the-limit-of-a-function.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 2.3 The Limit Laws", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.2-4-continuity.v1 ADVANCED {
+  title: "2.4 Continuity"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.4.1 Explain the three conditions for continuity at a point.; 2.4.2 Describe three kinds of discontinuities.; 2.4.3 Define continuity on an interval.; 2.4.4 State the theorem for limits of composite functions.; 2.4.5 Provide an example of the intermediate value theorem.."
+  requires: [calc1.2-3-the-limit-laws.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 2.4 Continuity", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.2-5-the-precise-definition-of-a-limit.v1 ADVANCED {
+  title: "2.5 The Precise Definition of a Limit"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.5.1 Describe the epsilon-delta definition of a limit.; 2.5.2 Apply the epsilon-delta definition to find the limit of a function.; 2.5.3 Describe the epsilon-delta definitions of one-sided limits and infinite limits.; 2.5.4 Use the epsilon-delta definition to prove the limit laws.."
+  requires: [calc1.2-4-continuity.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 2.5 The Precise Definition of a Limit", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Derivatives
+# ------------------------------------------------------------
+KNOWLEDGE calc1.3-1-defining-the-derivative.v1 ADVANCED {
+  title: "3.1 Defining the Derivative"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.1.1 Recognize the meaning of the tangent to a curve at a point.; 3.1.2 Calculate the slope of a tangent line.; 3.1.3 Identify the derivative as the limit of a difference quotient.; 3.1.4 Calculate the derivative of a given function at a point.; 3.1.5 Describe the velocity as a rate of change.; 3.1.6 Explain the difference between average velocity and instantaneous velocity.; 3.1.7 Estimate the derivative from a table of values.."
+  requires: [calc1.2-5-the-precise-definition-of-a-limit.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.1 Defining the Derivative", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.3-2-the-derivative-as-a-function.v1 ADVANCED {
+  title: "3.2 The Derivative as a Function"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.2.1 Define the derivative function of a given function.; 3.2.2 Graph a derivative function from the graph of a given function.; 3.2.3 State the connection between derivatives and continuity.; 3.2.4 Describe three conditions for when a function does not have a derivative.; 3.2.5 Explain the meaning of a higher-order derivative.."
+  requires: [calc1.3-1-defining-the-derivative.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.2 The Derivative as a Function", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.3-3-differentiation-rules.v1 ADVANCED {
+  title: "3.3 Differentiation Rules"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.3.1 State the constant, constant multiple, and power rules.; 3.3.2 Apply the sum and difference rules to combine derivatives.; 3.3.3 Use the product rule for finding the derivative of a product of functions.; 3.3.4 Use the quotient rule for finding the derivative of a quotient of functions.; 3.3.5 Extend the power rule to functions with negative exponents.; 3.3.6 Combine the differentiation rules to find the derivative of a polynomial or rational function.."
+  requires: [calc1.3-2-the-derivative-as-a-function.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.3 Differentiation Rules", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.3-4-derivatives-as-rates-of-change.v1 ADVANCED {
+  title: "3.4 Derivatives as Rates of Change"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.4.1 Determine a new value of a quantity from the old value and the amount of change.; 3.4.2 Calculate the average rate of change and explain how it differs from the instantaneous rate of change.; 3.4.3 Apply rates of change to displacement, velocity, and acceleration of an object moving along a straight line.; 3.4.4 Predict the future population from the present value and the population growth rate.; 3.4.5 Use derivatives to calculate marginal cost and revenue in a business situation.."
+  requires: [calc1.3-3-differentiation-rules.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.4 Derivatives as Rates of Change", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.3-5-derivatives-of-trigonometric-functions.v1 ADVANCED {
+  title: "3.5 Derivatives of Trigonometric Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.5.1 Find the derivatives of the sine and cosine function.; 3.5.2 Find the derivatives of the standard trigonometric functions.; 3.5.3 Calculate the higher-order derivatives of the sine and cosine.."
+  requires: [calc1.3-4-derivatives-as-rates-of-change.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.5 Derivatives of Trigonometric Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.3-6-the-chain-rule.v1 ADVANCED {
+  title: "3.6 The Chain Rule"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.6.1 State the chain rule for the composition of two functions.; 3.6.2 Apply the chain rule together with the power rule.; 3.6.3 Apply the chain rule and the product/quotient rules correctly in combination when both are necessary.; 3.6.4 Recognize the chain rule for a composition of three or more functions.; 3.6.5 Describe the proof of the chain rule.."
+  requires: [calc1.3-5-derivatives-of-trigonometric-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.6 The Chain Rule", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.3-7-derivatives-of-inverse-functions.v1 ADVANCED {
+  title: "3.7 Derivatives of Inverse Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.7.1 Calculate the derivative of an inverse function.; 3.7.2 Recognize the derivatives of the standard inverse trigonometric functions.."
+  requires: [calc1.3-6-the-chain-rule.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.7 Derivatives of Inverse Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.3-8-implicit-differentiation.v1 ADVANCED {
+  title: "3.8 Implicit Differentiation"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.8.1 Find the derivative of a complicated function by using implicit differentiation.; 3.8.2 Use implicit differentiation to determine the equation of a tangent line.."
+  requires: [calc1.3-7-derivatives-of-inverse-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.8 Implicit Differentiation", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.3-9-derivatives-of-exponential-and-logarithmic-functions.v1 ADVANCED {
+  title: "3.9 Derivatives of Exponential and Logarithmic Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.9.1 Find the derivative of exponential functions.; 3.9.2 Find the derivative of logarithmic functions.; 3.9.3 Use logarithmic differentiation to determine the derivative of a function.."
+  requires: [calc1.3-8-implicit-differentiation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 3.9 Derivatives of Exponential and Logarithmic Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Applications of Derivatives
+# ------------------------------------------------------------
+KNOWLEDGE calc1.4-1-related-rates.v1 ADVANCED {
+  title: "4.1 Related Rates"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.1.1 Express changing quantities in terms of derivatives.; 4.1.2 Find relationships among the derivatives in a given problem.; 4.1.3 Use the chain rule to find the rate of change of one quantity that depends on the rate of change of other quantities.."
+  requires: [calc1.3-9-derivatives-of-exponential-and-logarithmic-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.1 Related Rates", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-2-linear-approximations-and-differentials.v1 ADVANCED {
+  title: "4.2 Linear Approximations and Differentials"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.2.1 Describe the linear approximation to a function at a point.; 4.2.2 Write the linearization of a given function.; 4.2.3 Draw a graph that illustrates the use of differentials to approximate the change in a quantity.; 4.2.4 Calculate the relative error and percentage error in using a differential approximation.."
+  requires: [calc1.4-1-related-rates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.2 Linear Approximations and Differentials", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-3-maxima-and-minima.v1 ADVANCED {
+  title: "4.3 Maxima and Minima"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.3.1 Define absolute extrema.; 4.3.2 Define local extrema.; 4.3.3 Explain how to find the critical points of a function over a closed interval.; 4.3.4 Describe how to use critical points to locate absolute extrema over a closed interval.."
+  requires: [calc1.4-2-linear-approximations-and-differentials.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.3 Maxima and Minima", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-4-the-mean-value-theorem.v1 ADVANCED {
+  title: "4.4 The Mean Value Theorem"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.4.1 Explain the meaning of Rolle’s theorem.; 4.4.2 Describe the significance of the Mean Value Theorem.; 4.4.3 State three important consequences of the Mean Value Theorem.."
+  requires: [calc1.4-3-maxima-and-minima.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.4 The Mean Value Theorem", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-5-derivatives-and-the-shape-of-a-graph.v1 ADVANCED {
+  title: "4.5 Derivatives and the Shape of a Graph"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.5.1 Explain how the sign of the first derivative affects the shape of a function’s graph.; 4.5.2 State the first derivative test for critical points.; 4.5.3 Use concavity and inflection points to explain how the sign of the second derivative affects the shape of a function’s graph.; 4.5.4 Explain the concavity test for a function over an open interval.; 4.5.5 Explain the relationship between a function and its first and second derivatives.; 4.5.6 State the second derivative test for local extrema.."
+  requires: [calc1.4-4-the-mean-value-theorem.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.5 Derivatives and the Shape of a Graph", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-6-limits-at-infinity-and-asymptotes.v1 ADVANCED {
+  title: "4.6 Limits at Infinity and Asymptotes"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.6.1 Calculate the limit of a function as x x increases or decreases without bound.; 4.6.2 Recognize a horizontal asymptote on the graph of a function.; 4.6.3 Estimate the end behavior of a function as x x increases or decreases without bound.; 4.6.4 Recognize an oblique asymptote on the graph of a function.; 4.6.5 Analyze a function and its derivatives to draw its graph.."
+  requires: [calc1.4-5-derivatives-and-the-shape-of-a-graph.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.6 Limits at Infinity and Asymptotes", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-7-applied-optimization-problems.v1 ADVANCED {
+  title: "4.7 Applied Optimization Problems"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.7.1 Set up and solve optimization problems in several applied fields.."
+  requires: [calc1.4-6-limits-at-infinity-and-asymptotes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.7 Applied Optimization Problems", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-8-lhopitals-rule.v1 ADVANCED {
+  title: "4.8 L’Hôpital’s Rule"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.8.1 Recognize when to apply L’Hôpital’s rule.; 4.8.2 Identify indeterminate forms produced by quotients, products, subtractions, and powers, and apply L’Hôpital’s rule in each case.; 4.8.3 Describe the relative growth rates of functions.."
+  requires: [calc1.4-7-applied-optimization-problems.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.8 L’Hôpital’s Rule", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-9-newtons-method.v1 ADVANCED {
+  title: "4.9 Newton’s Method"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.9.1 Describe the steps of Newton’s method.; 4.9.2 Explain what an iterative process means.; 4.9.3 Recognize when Newton’s method does not work.; 4.9.4 Apply iterative processes to various situations.."
+  requires: [calc1.4-8-lhopitals-rule.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.9 Newton’s Method", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.4-10-antiderivatives.v1 ADVANCED {
+  title: "4.10 Antiderivatives"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.10.1 Find the general antiderivative of a given function.; 4.10.2 Explain the terms and notation used for an indefinite integral.; 4.10.3 State the power rule for integrals.; 4.10.4 Use antidifferentiation to solve simple initial-value problems.."
+  requires: [calc1.4-9-newtons-method.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 4.10 Antiderivatives", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Integration
+# ------------------------------------------------------------
+KNOWLEDGE calc1.5-1-approximating-areas.v1 ADVANCED {
+  title: "5.1 Approximating Areas"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.1.1 Use sigma (summation) notation to calculate sums and powers of integers.; 5.1.2 Use the sum of rectangular areas to approximate the area under a curve.; 5.1.3 Use Riemann sums to approximate area.."
+  requires: [calc1.4-10-antiderivatives.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 5.1 Approximating Areas", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.5-2-the-definite-integral.v1 ADVANCED {
+  title: "5.2 The Definite Integral"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.2.1 State the definition of the definite integral.; 5.2.2 Explain the terms integrand, limits of integration, and variable of integration.; 5.2.3 Explain when a function is integrable.; 5.2.4 Describe the relationship between the definite integral and net area.; 5.2.5 Use geometry and the properties of definite integrals to evaluate them.; 5.2.6 Calculate the average value of a function.."
+  requires: [calc1.5-1-approximating-areas.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 5.2 The Definite Integral", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.5-3-the-fundamental-theorem-of-calculus.v1 ADVANCED {
+  title: "5.3 The Fundamental Theorem of Calculus"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.3.1 Describe the meaning of the Mean Value Theorem for Integrals.; 5.3.2 State the meaning of the Fundamental Theorem of Calculus, Part 1.; 5.3.3 Use the Fundamental Theorem of Calculus, Part 1, to evaluate derivatives of integrals.; 5.3.4 State the meaning of the Fundamental Theorem of Calculus, Part 2.; 5.3.5 Use the Fundamental Theorem of Calculus, Part 2, to evaluate definite integrals.; 5.3.6 Explain the relationship between differentiation and integration.."
+  requires: [calc1.5-2-the-definite-integral.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 5.3 The Fundamental Theorem of Calculus", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.5-4-integration-formulas-and-the-net-change-theorem.v1 ADVANCED {
+  title: "5.4 Integration Formulas and the Net Change Theorem"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.4.1 Apply the basic integration formulas.; 5.4.2 Explain the significance of the net change theorem.; 5.4.3 Use the net change theorem to solve applied problems.; 5.4.4 Apply the integrals of odd and even functions.."
+  requires: [calc1.5-3-the-fundamental-theorem-of-calculus.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 5.4 Integration Formulas and the Net Change Theorem", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.5-5-substitution.v1 ADVANCED {
+  title: "5.5 Substitution"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.5.1 Use substitution to evaluate indefinite integrals.; 5.5.2 Use substitution to evaluate definite integrals.."
+  requires: [calc1.5-4-integration-formulas-and-the-net-change-theorem.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 5.5 Substitution", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.5-6-integrals-involving-exponential-and-logarithmic-functions.v1 ADVANCED {
+  title: "5.6 Integrals Involving Exponential and Logarithmic Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.6.1 Integrate functions involving exponential functions.; 5.6.2 Integrate functions involving logarithmic functions.."
+  requires: [calc1.5-5-substitution.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 5.6 Integrals Involving Exponential and Logarithmic Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.5-7-integrals-resulting-in-inverse-trigonometric-functions.v1 ADVANCED {
+  title: "5.7 Integrals Resulting in Inverse Trigonometric Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.7.1 Integrate functions resulting in inverse trigonometric functions."
+  requires: [calc1.5-6-integrals-involving-exponential-and-logarithmic-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 5.7 Integrals Resulting in Inverse Trigonometric Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Applications of Integration
+# ------------------------------------------------------------
+KNOWLEDGE calc1.6-1-areas-between-curves.v1 ADVANCED {
+  title: "6.1 Areas between Curves"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.1.1 Determine the area of a region between two curves by integrating with respect to the independent variable.; 6.1.2 Find the area of a compound region.; 6.1.3 Determine the area of a region between two curves by integrating with respect to the dependent variable.."
+  requires: [calc1.5-7-integrals-resulting-in-inverse-trigonometric-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.1 Areas between Curves", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.6-2-determining-volumes-by-slicing.v1 ADVANCED {
+  title: "6.2 Determining Volumes by Slicing"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.2.1 Determine the volume of a solid by integrating a cross-section (the slicing method).; 6.2.2 Find the volume of a solid of revolution using the disk method.; 6.2.3 Find the volume of a solid of revolution with a cavity using the washer method.."
+  requires: [calc1.6-1-areas-between-curves.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.2 Determining Volumes by Slicing", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.6-3-volumes-of-revolution-cylindrical-shells.v1 ADVANCED {
+  title: "6.3 Volumes of Revolution: Cylindrical Shells"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.3.1 Calculate the volume of a solid of revolution by using the method of cylindrical shells.; 6.3.2 Compare the different methods for calculating a volume of revolution.."
+  requires: [calc1.6-2-determining-volumes-by-slicing.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.3 Volumes of Revolution: Cylindrical Shells", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.6-4-arc-length-of-a-curve-and-surface-area.v1 ADVANCED {
+  title: "6.4 Arc Length of a Curve and Surface Area"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.4.1 Determine the length of a curve, y = f ( x ) , y = f ( x ) , between two points.; 6.4.2 Determine the length of a curve, x = g ( y ) , x = g ( y ) , between two points.; 6.4.3 Find the surface area of a solid of revolution.."
+  requires: [calc1.6-3-volumes-of-revolution-cylindrical-shells.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.4 Arc Length of a Curve and Surface Area", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.6-5-physical-applications.v1 ADVANCED {
+  title: "6.5 Physical Applications"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.5.1 Determine the mass of a one-dimensional object from its linear density function.; 6.5.2 Determine the mass of a two-dimensional circular object from its radial density function.; 6.5.3 Calculate the work done by a variable force acting along a line.; 6.5.4 Calculate the work done in pumping a liquid from one height to another.; 6.5.5 Find the hydrostatic force against a submerged vertical plate.."
+  requires: [calc1.6-4-arc-length-of-a-curve-and-surface-area.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.5 Physical Applications", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.6-6-moments-and-centers-of-mass.v1 ADVANCED {
+  title: "6.6 Moments and Centers of Mass"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.6.1 Find the center of mass of objects distributed along a line.; 6.6.2 Locate the center of mass of a thin plate.; 6.6.3 Use symmetry to help locate the centroid of a thin plate.; 6.6.4 Apply the theorem of Pappus for volume.."
+  requires: [calc1.6-5-physical-applications.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.6 Moments and Centers of Mass", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.6-7-integrals-exponential-functions-and-logarithms.v1 ADVANCED {
+  title: "6.7 Integrals, Exponential Functions, and Logarithms"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.7.1 Write the definition of the natural logarithm as an integral.; 6.7.2 Recognize the derivative of the natural logarithm.; 6.7.3 Integrate functions involving the natural logarithmic function.; 6.7.4 Define the number e e through an integral.; 6.7.5 Recognize the derivative and integral of the exponential function.; 6.7.6 Prove properties of logarithms and exponential functions using integrals.; 6.7.7 Express general logarithmic and exponential functions in terms of natural logarithms and exponentials.."
+  requires: [calc1.6-6-moments-and-centers-of-mass.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.7 Integrals, Exponential Functions, and Logarithms", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.6-8-exponential-growth-and-decay.v1 ADVANCED {
+  title: "6.8 Exponential Growth and Decay"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.8.1 Use the exponential growth model in applications, including population growth and compound interest.; 6.8.2 Explain the concept of doubling time.; 6.8.3 Use the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.; 6.8.4 Explain the concept of half-life.."
+  requires: [calc1.6-7-integrals-exponential-functions-and-logarithms.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.8 Exponential Growth and Decay", weight: 0.90 }
+}
+
+KNOWLEDGE calc1.6-9-calculus-of-the-hyperbolic-functions.v1 ADVANCED {
+  title: "6.9 Calculus of the Hyperbolic Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.9.1 Apply the formulas for derivatives and integrals of the hyperbolic functions.; 6.9.2 Apply the formulas for the derivatives of the inverse hyperbolic functions and their associated integrals.; 6.9.3 Describe the common applied conditions of a catenary curve.."
+  requires: [calc1.6-8-exponential-growth-and-decay.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 1 - 6.9 Calculus of the Hyperbolic Functions", weight: 0.90 }
+}
+
+MISSION mission.calc1.v1 {
+  label: "Faculdade: Cálculo Volume 1"
+  requires: [
+    calc1.1-1-review-of-functions.v1,
+    calc1.1-2-basic-classes-of-functions.v1,
+    calc1.1-3-trigonometric-functions.v1,
+    calc1.1-4-inverse-functions.v1,
+    calc1.1-5-exponential-and-logarithmic-functions.v1,
+    calc1.2-1-a-preview-of-calculus.v1,
+    calc1.2-2-the-limit-of-a-function.v1,
+    calc1.2-3-the-limit-laws.v1,
+    calc1.2-4-continuity.v1,
+    calc1.2-5-the-precise-definition-of-a-limit.v1,
+    calc1.3-1-defining-the-derivative.v1,
+    calc1.3-2-the-derivative-as-a-function.v1,
+    calc1.3-3-differentiation-rules.v1,
+    calc1.3-4-derivatives-as-rates-of-change.v1,
+    calc1.3-5-derivatives-of-trigonometric-functions.v1,
+    calc1.3-6-the-chain-rule.v1,
+    calc1.3-7-derivatives-of-inverse-functions.v1,
+    calc1.3-8-implicit-differentiation.v1,
+    calc1.3-9-derivatives-of-exponential-and-logarithmic-functions.v1,
+    calc1.4-1-related-rates.v1,
+    calc1.4-2-linear-approximations-and-differentials.v1,
+    calc1.4-3-maxima-and-minima.v1,
+    calc1.4-4-the-mean-value-theorem.v1,
+    calc1.4-5-derivatives-and-the-shape-of-a-graph.v1,
+    calc1.4-6-limits-at-infinity-and-asymptotes.v1,
+    calc1.4-7-applied-optimization-problems.v1,
+    calc1.4-8-lhopitals-rule.v1,
+    calc1.4-9-newtons-method.v1,
+    calc1.4-10-antiderivatives.v1,
+    calc1.5-1-approximating-areas.v1,
+    calc1.5-2-the-definite-integral.v1,
+    calc1.5-3-the-fundamental-theorem-of-calculus.v1,
+    calc1.5-4-integration-formulas-and-the-net-change-theorem.v1,
+    calc1.5-5-substitution.v1,
+    calc1.5-6-integrals-involving-exponential-and-logarithmic-functions.v1,
+    calc1.5-7-integrals-resulting-in-inverse-trigonometric-functions.v1,
+    calc1.6-1-areas-between-curves.v1,
+    calc1.6-2-determining-volumes-by-slicing.v1,
+    calc1.6-3-volumes-of-revolution-cylindrical-shells.v1,
+    calc1.6-4-arc-length-of-a-curve-and-surface-area.v1,
+    calc1.6-5-physical-applications.v1,
+    calc1.6-6-moments-and-centers-of-mass.v1,
+    calc1.6-7-integrals-exponential-functions-and-logarithms.v1,
+    calc1.6-8-exponential-growth-and-decay.v1,
+    calc1.6-9-calculus-of-the-hyperbolic-functions.v1,
+  ]
+  threshold: 0.85
+}

@@ -32,6 +32,7 @@ export const CompetenceMatrix: React.FC<CompetenceMatrixProps> = ({
   selectedNodeId,
 }) => {
   const [filter, setFilter] = useState<Filter>("all");
+  const [visibleCount, setVisibleCount] = useState(30);
 
   const masteryOf = (n: Node) => n.effective_mastery || n.mastery;
 
@@ -86,7 +87,10 @@ export const CompetenceMatrix: React.FC<CompetenceMatrixProps> = ({
           {FILTERS.map((f) => (
             <button
               key={f.key}
-              onClick={() => setFilter(f.key)}
+              onClick={() => {
+                setFilter(f.key);
+                setVisibleCount(30);
+              }}
               className={`text-[11px] font-bold px-3 py-1.5 rounded-lg border transition ${
                 filter === f.key
                   ? "bg-violet-500/20 border-violet-500/40 text-white"
@@ -107,7 +111,7 @@ export const CompetenceMatrix: React.FC<CompetenceMatrixProps> = ({
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
-            {filtered.map((node) => {
+            {filtered.slice(0, visibleCount).map((node) => {
               const m = masteryOf(node);
               const isValidated = m >= MASTERY_THRESHOLD;
               const isProgress = m > 0 && !isValidated;
@@ -177,6 +181,16 @@ export const CompetenceMatrix: React.FC<CompetenceMatrixProps> = ({
                 </button>
               );
             })}
+          </div>
+        )}
+        {filtered.length > visibleCount && (
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={() => setVisibleCount((c) => c + 60)}
+              className="btn-ghost text-xs font-bold px-5 py-2.5"
+            >
+              Mostrar mais ({filtered.length - visibleCount} restantes)
+            </button>
           </div>
         )}
       </div>

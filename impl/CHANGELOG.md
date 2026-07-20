@@ -1,5 +1,12 @@
 # Changelog - EngineeringOS
 
+## [v3.3.0] - 2026-07-19
+### Added
+- **Importador OpenStax (`tools/openstax_importer.py`)** — pipeline UCEF de ingestão: busca o sumário do livro (1 requisição via CMS API + `__PRELOADED_STATE__`), extrai os *Learning Objectives* de cada seção como definição da KU, gera o `.eos` constitucional (1 seção = 1 KU, pré-requisitos em espinha de livro), valida no compilador (anti-ciclo), injeta no banco e registra os materiais (URL de cada seção, CC BY 4.0 com atribuição no `source.ref`).
+- **`tools/import_ladder.py`** — escada curricular completa encadeada por `--after`: Matemática básica (Prealgebra) → média (Álgebra Elementar) → avançada (Pré-Cálculo) → faculdade (Cálculo Vol. 1–3); Física média (College Physics) → faculdade (Física Universitária Vol. 1–3). Uma missão por livro.
+- **Dashboard em escala**: filtro por domínio no mapa e na matriz (auto-seleciona o domínio dominante da missão ativa), layout serpentina para currículos lineares de livro, paginação "Mostrar mais" na matriz.
+- `inject_seed.py` passa a respeitar o campo `title` das declarações KNOWLEDGE.
+
 ## [v3.2.0] - 2026-07-19
 ### Added
 - **Correção automática de desafios (CCE server-side grading)** — fecha o buraco da evidência autodeclarada para casos objetivos:

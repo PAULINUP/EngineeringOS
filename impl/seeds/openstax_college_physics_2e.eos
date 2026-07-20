@@ -1,0 +1,2800 @@
+@version 1.0.0
+@domain "fisica_media"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: College Physics 2e
+# Fonte: https://openstax.org/books/college-physics-2e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Introduction: The Nature of Science and Physics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.1-1-physics-an-introduction.v1 INTERMEDIATE {
+  title: "1.1 Physics: An Introduction"
+  domain: "fisica_media"
+  definition: "1.1 Physics: An Introduction — College Physics 2e."
+  requires: [mmed.10-5-graphing-quadratic-equations-in-two-variables.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 1.1 Physics: An Introduction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.1-2-physical-quantities-and-units.v1 INTERMEDIATE {
+  title: "1.2 Physical Quantities and Units"
+  domain: "fisica_media"
+  definition: "1.2 Physical Quantities and Units — College Physics 2e."
+  requires: [fmed.1-1-physics-an-introduction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 1.2 Physical Quantities and Units", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.1-3-accuracy-precision-and-significant-figures.v1 INTERMEDIATE {
+  title: "1.3 Accuracy, Precision, and Significant Figures"
+  domain: "fisica_media"
+  definition: "1.3 Accuracy, Precision, and Significant Figures — College Physics 2e."
+  requires: [fmed.1-2-physical-quantities-and-units.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 1.3 Accuracy, Precision, and Significant Figures", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.1-4-approximation.v1 INTERMEDIATE {
+  title: "1.4 Approximation"
+  domain: "fisica_media"
+  definition: "1.4 Approximation — College Physics 2e."
+  requires: [fmed.1-3-accuracy-precision-and-significant-figures.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 1.4 Approximation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Kinematics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.2-1-displacement.v1 INTERMEDIATE {
+  title: "2.1 Displacement"
+  domain: "fisica_media"
+  definition: "2.1 Displacement — College Physics 2e."
+  requires: [fmed.1-4-approximation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 2.1 Displacement", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.2-2-vectors-scalars-and-coordinate-systems.v1 INTERMEDIATE {
+  title: "2.2 Vectors, Scalars, and Coordinate Systems"
+  domain: "fisica_media"
+  definition: "2.2 Vectors, Scalars, and Coordinate Systems — College Physics 2e."
+  requires: [fmed.2-1-displacement.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 2.2 Vectors, Scalars, and Coordinate Systems", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.2-3-time-velocity-and-speed.v1 INTERMEDIATE {
+  title: "2.3 Time, Velocity, and Speed"
+  domain: "fisica_media"
+  definition: "2.3 Time, Velocity, and Speed — College Physics 2e."
+  requires: [fmed.2-2-vectors-scalars-and-coordinate-systems.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 2.3 Time, Velocity, and Speed", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.2-4-acceleration.v1 INTERMEDIATE {
+  title: "2.4 Acceleration"
+  domain: "fisica_media"
+  definition: "2.4 Acceleration — College Physics 2e."
+  requires: [fmed.2-3-time-velocity-and-speed.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 2.4 Acceleration", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.2-5-motion-equations-for-constant-acceleration-in-one-dimension.v1 INTERMEDIATE {
+  title: "2.5 Motion Equations for Constant Acceleration in One Dimension"
+  domain: "fisica_media"
+  definition: "2.5 Motion Equations for Constant Acceleration in One Dimension — College Physics 2e."
+  requires: [fmed.2-4-acceleration.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 2.5 Motion Equations for Constant Acceleration in One Dimension", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.2-6-problem-solving-basics-for-one-dimensional-kinematics.v1 INTERMEDIATE {
+  title: "2.6 Problem-Solving Basics for One-Dimensional Kinematics"
+  domain: "fisica_media"
+  definition: "2.6 Problem-Solving Basics for One-Dimensional Kinematics — College Physics 2e."
+  requires: [fmed.2-5-motion-equations-for-constant-acceleration-in-one-dimension.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 2.6 Problem-Solving Basics for One-Dimensional Kinematics", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.2-7-falling-objects.v1 INTERMEDIATE {
+  title: "2.7 Falling Objects"
+  domain: "fisica_media"
+  definition: "2.7 Falling Objects — College Physics 2e."
+  requires: [fmed.2-6-problem-solving-basics-for-one-dimensional-kinematics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 2.7 Falling Objects", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.2-8-graphical-analysis-of-one-dimensional-motion.v1 INTERMEDIATE {
+  title: "2.8 Graphical Analysis of One-Dimensional Motion"
+  domain: "fisica_media"
+  definition: "2.8 Graphical Analysis of One-Dimensional Motion — College Physics 2e."
+  requires: [fmed.2-7-falling-objects.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 2.8 Graphical Analysis of One-Dimensional Motion", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Two-Dimensional Kinematics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.3-1-kinematics-in-two-dimensions-an-introduction.v1 INTERMEDIATE {
+  title: "3.1 Kinematics in Two Dimensions: An Introduction"
+  domain: "fisica_media"
+  definition: "3.1 Kinematics in Two Dimensions: An Introduction — College Physics 2e."
+  requires: [fmed.2-8-graphical-analysis-of-one-dimensional-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 3.1 Kinematics in Two Dimensions: An Introduction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.3-2-vector-addition-and-subtraction-graphical-methods.v1 INTERMEDIATE {
+  title: "3.2 Vector Addition and Subtraction: Graphical Methods"
+  domain: "fisica_media"
+  definition: "3.2 Vector Addition and Subtraction: Graphical Methods — College Physics 2e."
+  requires: [fmed.3-1-kinematics-in-two-dimensions-an-introduction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 3.2 Vector Addition and Subtraction: Graphical Methods", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.3-3-vector-addition-and-subtraction-analytical-methods.v1 INTERMEDIATE {
+  title: "3.3 Vector Addition and Subtraction: Analytical Methods"
+  domain: "fisica_media"
+  definition: "3.3 Vector Addition and Subtraction: Analytical Methods — College Physics 2e."
+  requires: [fmed.3-2-vector-addition-and-subtraction-graphical-methods.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 3.3 Vector Addition and Subtraction: Analytical Methods", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.3-4-projectile-motion.v1 INTERMEDIATE {
+  title: "3.4 Projectile Motion"
+  domain: "fisica_media"
+  definition: "3.4 Projectile Motion — College Physics 2e."
+  requires: [fmed.3-3-vector-addition-and-subtraction-analytical-methods.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 3.4 Projectile Motion", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.3-5-addition-of-velocities.v1 INTERMEDIATE {
+  title: "3.5 Addition of Velocities"
+  domain: "fisica_media"
+  definition: "3.5 Addition of Velocities — College Physics 2e."
+  requires: [fmed.3-4-projectile-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 3.5 Addition of Velocities", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Dynamics: Force and Newton's Laws of Motion
+# ------------------------------------------------------------
+KNOWLEDGE fmed.4-1-development-of-force-concept.v1 INTERMEDIATE {
+  title: "4.1 Development of Force Concept"
+  domain: "fisica_media"
+  definition: "4.1 Development of Force Concept — College Physics 2e."
+  requires: [fmed.3-5-addition-of-velocities.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 4.1 Development of Force Concept", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.4-2-newtons-first-law-of-motion-inertia.v1 INTERMEDIATE {
+  title: "4.2 Newton’s First Law of Motion: Inertia"
+  domain: "fisica_media"
+  definition: "4.2 Newton’s First Law of Motion: Inertia — College Physics 2e."
+  requires: [fmed.4-1-development-of-force-concept.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 4.2 Newton’s First Law of Motion: Inertia", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.4-3-newtons-second-law-of-motion-concept-of-a-system.v1 INTERMEDIATE {
+  title: "4.3 Newton’s Second Law of Motion: Concept of a System"
+  domain: "fisica_media"
+  definition: "4.3 Newton’s Second Law of Motion: Concept of a System — College Physics 2e."
+  requires: [fmed.4-2-newtons-first-law-of-motion-inertia.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 4.3 Newton’s Second Law of Motion: Concept of a System", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.4-4-newtons-third-law-of-motion-symmetry-in-forces.v1 INTERMEDIATE {
+  title: "4.4 Newton’s Third Law of Motion: Symmetry in Forces"
+  domain: "fisica_media"
+  definition: "4.4 Newton’s Third Law of Motion: Symmetry in Forces — College Physics 2e."
+  requires: [fmed.4-3-newtons-second-law-of-motion-concept-of-a-system.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 4.4 Newton’s Third Law of Motion: Symmetry in Forces", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.4-5-normal-tension-and-other-examples-of-forces.v1 INTERMEDIATE {
+  title: "4.5 Normal, Tension, and Other Examples of Forces"
+  domain: "fisica_media"
+  definition: "4.5 Normal, Tension, and Other Examples of Forces — College Physics 2e."
+  requires: [fmed.4-4-newtons-third-law-of-motion-symmetry-in-forces.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 4.5 Normal, Tension, and Other Examples of Forces", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.4-6-problem-solving-strategies.v1 INTERMEDIATE {
+  title: "4.6 Problem-Solving Strategies"
+  domain: "fisica_media"
+  definition: "4.6 Problem-Solving Strategies — College Physics 2e."
+  requires: [fmed.4-5-normal-tension-and-other-examples-of-forces.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 4.6 Problem-Solving Strategies", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.4-7-further-applications-of-newtons-laws-of-motion.v1 INTERMEDIATE {
+  title: "4.7 Further Applications of Newton’s Laws of Motion"
+  domain: "fisica_media"
+  definition: "4.7 Further Applications of Newton’s Laws of Motion — College Physics 2e."
+  requires: [fmed.4-6-problem-solving-strategies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 4.7 Further Applications of Newton’s Laws of Motion", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.4-8-extended-topic-the-four-basic-forces-an-introduction.v1 INTERMEDIATE {
+  title: "4.8 Extended Topic: The Four Basic Forces—An Introduction"
+  domain: "fisica_media"
+  definition: "4.8 Extended Topic: The Four Basic Forces—An Introduction — College Physics 2e."
+  requires: [fmed.4-7-further-applications-of-newtons-laws-of-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 4.8 Extended Topic: The Four Basic Forces—An Introduction", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Further Applications of Newton's Laws: Friction, Drag, and Elasticity
+# ------------------------------------------------------------
+KNOWLEDGE fmed.5-1-friction.v1 INTERMEDIATE {
+  title: "5.1 Friction"
+  domain: "fisica_media"
+  definition: "5.1 Friction — College Physics 2e."
+  requires: [fmed.4-8-extended-topic-the-four-basic-forces-an-introduction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 5.1 Friction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.5-2-drag-forces.v1 INTERMEDIATE {
+  title: "5.2 Drag Forces"
+  domain: "fisica_media"
+  definition: "5.2 Drag Forces — College Physics 2e."
+  requires: [fmed.5-1-friction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 5.2 Drag Forces", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.5-3-elasticity-stress-and-strain.v1 INTERMEDIATE {
+  title: "5.3 Elasticity: Stress and Strain"
+  domain: "fisica_media"
+  definition: "5.3 Elasticity: Stress and Strain — College Physics 2e."
+  requires: [fmed.5-2-drag-forces.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 5.3 Elasticity: Stress and Strain", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Uniform Circular Motion and Gravitation
+# ------------------------------------------------------------
+KNOWLEDGE fmed.6-1-rotation-angle-and-angular-velocity.v1 INTERMEDIATE {
+  title: "6.1 Rotation Angle and Angular Velocity"
+  domain: "fisica_media"
+  definition: "6.1 Rotation Angle and Angular Velocity — College Physics 2e."
+  requires: [fmed.5-3-elasticity-stress-and-strain.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 6.1 Rotation Angle and Angular Velocity", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.6-2-centripetal-acceleration.v1 INTERMEDIATE {
+  title: "6.2 Centripetal Acceleration"
+  domain: "fisica_media"
+  definition: "6.2 Centripetal Acceleration — College Physics 2e."
+  requires: [fmed.6-1-rotation-angle-and-angular-velocity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 6.2 Centripetal Acceleration", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.6-3-centripetal-force.v1 INTERMEDIATE {
+  title: "6.3 Centripetal Force"
+  domain: "fisica_media"
+  definition: "6.3 Centripetal Force — College Physics 2e."
+  requires: [fmed.6-2-centripetal-acceleration.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 6.3 Centripetal Force", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.6-4-fictitious-forces-and-non-inertial-frames-the-coriolis-force.v1 INTERMEDIATE {
+  title: "6.4 Fictitious Forces and Non-inertial Frames: The Coriolis Force"
+  domain: "fisica_media"
+  definition: "6.4 Fictitious Forces and Non-inertial Frames: The Coriolis Force — College Physics 2e."
+  requires: [fmed.6-3-centripetal-force.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 6.4 Fictitious Forces and Non-inertial Frames: The Coriolis Force", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.6-5-newtons-universal-law-of-gravitation.v1 INTERMEDIATE {
+  title: "6.5 Newton’s Universal Law of Gravitation"
+  domain: "fisica_media"
+  definition: "6.5 Newton’s Universal Law of Gravitation — College Physics 2e."
+  requires: [fmed.6-4-fictitious-forces-and-non-inertial-frames-the-coriolis-force.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 6.5 Newton’s Universal Law of Gravitation", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.6-6-satellites-and-keplers-laws-an-argument-for-simplicity.v1 INTERMEDIATE {
+  title: "6.6 Satellites and Kepler’s Laws: An Argument for Simplicity"
+  domain: "fisica_media"
+  definition: "6.6 Satellites and Kepler’s Laws: An Argument for Simplicity — College Physics 2e."
+  requires: [fmed.6-5-newtons-universal-law-of-gravitation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 6.6 Satellites and Kepler’s Laws: An Argument for Simplicity", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Work, Energy, and Energy Resources
+# ------------------------------------------------------------
+KNOWLEDGE fmed.7-1-work-the-scientific-definition.v1 INTERMEDIATE {
+  title: "7.1 Work: The Scientific Definition"
+  domain: "fisica_media"
+  definition: "7.1 Work: The Scientific Definition — College Physics 2e."
+  requires: [fmed.6-6-satellites-and-keplers-laws-an-argument-for-simplicity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.1 Work: The Scientific Definition", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.7-2-kinetic-energy-and-the-work-energy-theorem.v1 INTERMEDIATE {
+  title: "7.2 Kinetic Energy and the Work-Energy Theorem"
+  domain: "fisica_media"
+  definition: "7.2 Kinetic Energy and the Work-Energy Theorem — College Physics 2e."
+  requires: [fmed.7-1-work-the-scientific-definition.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.2 Kinetic Energy and the Work-Energy Theorem", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.7-3-gravitational-potential-energy.v1 INTERMEDIATE {
+  title: "7.3 Gravitational Potential Energy"
+  domain: "fisica_media"
+  definition: "7.3 Gravitational Potential Energy — College Physics 2e."
+  requires: [fmed.7-2-kinetic-energy-and-the-work-energy-theorem.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.3 Gravitational Potential Energy", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.7-4-conservative-forces-and-potential-energy.v1 INTERMEDIATE {
+  title: "7.4 Conservative Forces and Potential Energy"
+  domain: "fisica_media"
+  definition: "7.4 Conservative Forces and Potential Energy — College Physics 2e."
+  requires: [fmed.7-3-gravitational-potential-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.4 Conservative Forces and Potential Energy", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.7-5-nonconservative-forces.v1 INTERMEDIATE {
+  title: "7.5 Nonconservative Forces"
+  domain: "fisica_media"
+  definition: "7.5 Nonconservative Forces — College Physics 2e."
+  requires: [fmed.7-4-conservative-forces-and-potential-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.5 Nonconservative Forces", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.7-6-conservation-of-energy.v1 INTERMEDIATE {
+  title: "7.6 Conservation of Energy"
+  domain: "fisica_media"
+  definition: "7.6 Conservation of Energy — College Physics 2e."
+  requires: [fmed.7-5-nonconservative-forces.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.6 Conservation of Energy", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.7-7-power.v1 INTERMEDIATE {
+  title: "7.7 Power"
+  domain: "fisica_media"
+  definition: "7.7 Power — College Physics 2e."
+  requires: [fmed.7-6-conservation-of-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.7 Power", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.7-8-work-energy-and-power-in-humans.v1 INTERMEDIATE {
+  title: "7.8 Work, Energy, and Power in Humans"
+  domain: "fisica_media"
+  definition: "7.8 Work, Energy, and Power in Humans — College Physics 2e."
+  requires: [fmed.7-7-power.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.8 Work, Energy, and Power in Humans", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.7-9-world-energy-use.v1 INTERMEDIATE {
+  title: "7.9 World Energy Use"
+  domain: "fisica_media"
+  definition: "7.9 World Energy Use — College Physics 2e."
+  requires: [fmed.7-8-work-energy-and-power-in-humans.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 7.9 World Energy Use", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Linear Momentum and Collisions
+# ------------------------------------------------------------
+KNOWLEDGE fmed.8-1-linear-momentum-and-force.v1 INTERMEDIATE {
+  title: "8.1 Linear Momentum and Force"
+  domain: "fisica_media"
+  definition: "8.1 Linear Momentum and Force — College Physics 2e."
+  requires: [fmed.7-9-world-energy-use.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 8.1 Linear Momentum and Force", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.8-2-impulse.v1 INTERMEDIATE {
+  title: "8.2 Impulse"
+  domain: "fisica_media"
+  definition: "8.2 Impulse — College Physics 2e."
+  requires: [fmed.8-1-linear-momentum-and-force.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 8.2 Impulse", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.8-3-conservation-of-momentum.v1 INTERMEDIATE {
+  title: "8.3 Conservation of Momentum"
+  domain: "fisica_media"
+  definition: "8.3 Conservation of Momentum — College Physics 2e."
+  requires: [fmed.8-2-impulse.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 8.3 Conservation of Momentum", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.8-4-elastic-collisions-in-one-dimension.v1 INTERMEDIATE {
+  title: "8.4 Elastic Collisions in One Dimension"
+  domain: "fisica_media"
+  definition: "8.4 Elastic Collisions in One Dimension — College Physics 2e."
+  requires: [fmed.8-3-conservation-of-momentum.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 8.4 Elastic Collisions in One Dimension", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.8-5-inelastic-collisions-in-one-dimension.v1 INTERMEDIATE {
+  title: "8.5 Inelastic Collisions in One Dimension"
+  domain: "fisica_media"
+  definition: "8.5 Inelastic Collisions in One Dimension — College Physics 2e."
+  requires: [fmed.8-4-elastic-collisions-in-one-dimension.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 8.5 Inelastic Collisions in One Dimension", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.8-6-collisions-of-point-masses-in-two-dimensions.v1 INTERMEDIATE {
+  title: "8.6 Collisions of Point Masses in Two Dimensions"
+  domain: "fisica_media"
+  definition: "8.6 Collisions of Point Masses in Two Dimensions — College Physics 2e."
+  requires: [fmed.8-5-inelastic-collisions-in-one-dimension.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 8.6 Collisions of Point Masses in Two Dimensions", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.8-7-introduction-to-rocket-propulsion.v1 INTERMEDIATE {
+  title: "8.7 Introduction to Rocket Propulsion"
+  domain: "fisica_media"
+  definition: "8.7 Introduction to Rocket Propulsion — College Physics 2e."
+  requires: [fmed.8-6-collisions-of-point-masses-in-two-dimensions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 8.7 Introduction to Rocket Propulsion", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Statics and Torque
+# ------------------------------------------------------------
+KNOWLEDGE fmed.9-1-the-first-condition-for-equilibrium.v1 INTERMEDIATE {
+  title: "9.1 The First Condition for Equilibrium"
+  domain: "fisica_media"
+  definition: "9.1 The First Condition for Equilibrium — College Physics 2e."
+  requires: [fmed.8-7-introduction-to-rocket-propulsion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 9.1 The First Condition for Equilibrium", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.9-2-the-second-condition-for-equilibrium.v1 INTERMEDIATE {
+  title: "9.2 The Second Condition for Equilibrium"
+  domain: "fisica_media"
+  definition: "9.2 The Second Condition for Equilibrium — College Physics 2e."
+  requires: [fmed.9-1-the-first-condition-for-equilibrium.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 9.2 The Second Condition for Equilibrium", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.9-3-stability.v1 INTERMEDIATE {
+  title: "9.3 Stability"
+  domain: "fisica_media"
+  definition: "9.3 Stability — College Physics 2e."
+  requires: [fmed.9-2-the-second-condition-for-equilibrium.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 9.3 Stability", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.9-4-applications-of-statics-including-problem-solving-strategies.v1 INTERMEDIATE {
+  title: "9.4 Applications of Statics, Including Problem-Solving Strategies"
+  domain: "fisica_media"
+  definition: "9.4 Applications of Statics, Including Problem-Solving Strategies — College Physics 2e."
+  requires: [fmed.9-3-stability.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 9.4 Applications of Statics, Including Problem-Solving Strategies", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.9-5-simple-machines.v1 INTERMEDIATE {
+  title: "9.5 Simple Machines"
+  domain: "fisica_media"
+  definition: "9.5 Simple Machines — College Physics 2e."
+  requires: [fmed.9-4-applications-of-statics-including-problem-solving-strategies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 9.5 Simple Machines", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.9-6-forces-and-torques-in-muscles-and-joints.v1 INTERMEDIATE {
+  title: "9.6 Forces and Torques in Muscles and Joints"
+  domain: "fisica_media"
+  definition: "9.6 Forces and Torques in Muscles and Joints — College Physics 2e."
+  requires: [fmed.9-5-simple-machines.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 9.6 Forces and Torques in Muscles and Joints", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Rotational Motion and Angular Momentum
+# ------------------------------------------------------------
+KNOWLEDGE fmed.10-1-angular-acceleration.v1 INTERMEDIATE {
+  title: "10.1 Angular Acceleration"
+  domain: "fisica_media"
+  definition: "10.1 Angular Acceleration — College Physics 2e."
+  requires: [fmed.9-6-forces-and-torques-in-muscles-and-joints.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 10.1 Angular Acceleration", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.10-2-kinematics-of-rotational-motion.v1 INTERMEDIATE {
+  title: "10.2 Kinematics of Rotational Motion"
+  domain: "fisica_media"
+  definition: "10.2 Kinematics of Rotational Motion — College Physics 2e."
+  requires: [fmed.10-1-angular-acceleration.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 10.2 Kinematics of Rotational Motion", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.10-3-dynamics-of-rotational-motion-rotational-inertia.v1 INTERMEDIATE {
+  title: "10.3 Dynamics of Rotational Motion: Rotational Inertia"
+  domain: "fisica_media"
+  definition: "10.3 Dynamics of Rotational Motion: Rotational Inertia — College Physics 2e."
+  requires: [fmed.10-2-kinematics-of-rotational-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 10.3 Dynamics of Rotational Motion: Rotational Inertia", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.10-4-rotational-kinetic-energy-work-and-energy-revisited.v1 INTERMEDIATE {
+  title: "10.4 Rotational Kinetic Energy: Work and Energy Revisited"
+  domain: "fisica_media"
+  definition: "10.4 Rotational Kinetic Energy: Work and Energy Revisited — College Physics 2e."
+  requires: [fmed.10-3-dynamics-of-rotational-motion-rotational-inertia.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 10.4 Rotational Kinetic Energy: Work and Energy Revisited", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.10-5-angular-momentum-and-its-conservation.v1 INTERMEDIATE {
+  title: "10.5 Angular Momentum and Its Conservation"
+  domain: "fisica_media"
+  definition: "10.5 Angular Momentum and Its Conservation — College Physics 2e."
+  requires: [fmed.10-4-rotational-kinetic-energy-work-and-energy-revisited.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 10.5 Angular Momentum and Its Conservation", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.10-6-collisions-of-extended-bodies-in-two-dimensions.v1 INTERMEDIATE {
+  title: "10.6 Collisions of Extended Bodies in Two Dimensions"
+  domain: "fisica_media"
+  definition: "10.6 Collisions of Extended Bodies in Two Dimensions — College Physics 2e."
+  requires: [fmed.10-5-angular-momentum-and-its-conservation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 10.6 Collisions of Extended Bodies in Two Dimensions", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.10-7-gyroscopic-effects-vector-aspects-of-angular-momentum.v1 INTERMEDIATE {
+  title: "10.7 Gyroscopic Effects: Vector Aspects of Angular Momentum"
+  domain: "fisica_media"
+  definition: "10.7 Gyroscopic Effects: Vector Aspects of Angular Momentum — College Physics 2e."
+  requires: [fmed.10-6-collisions-of-extended-bodies-in-two-dimensions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 10.7 Gyroscopic Effects: Vector Aspects of Angular Momentum", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Fluid Statics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.11-1-what-is-a-fluid.v1 INTERMEDIATE {
+  title: "11.1 What Is a Fluid?"
+  domain: "fisica_media"
+  definition: "11.1 What Is a Fluid? — College Physics 2e."
+  requires: [fmed.10-7-gyroscopic-effects-vector-aspects-of-angular-momentum.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.1 What Is a Fluid?", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.11-2-density.v1 INTERMEDIATE {
+  title: "11.2 Density"
+  domain: "fisica_media"
+  definition: "11.2 Density — College Physics 2e."
+  requires: [fmed.11-1-what-is-a-fluid.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.2 Density", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.11-3-pressure.v1 INTERMEDIATE {
+  title: "11.3 Pressure"
+  domain: "fisica_media"
+  definition: "11.3 Pressure — College Physics 2e."
+  requires: [fmed.11-2-density.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.3 Pressure", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.11-4-variation-of-pressure-with-depth-in-a-fluid.v1 INTERMEDIATE {
+  title: "11.4 Variation of Pressure with Depth in a Fluid"
+  domain: "fisica_media"
+  definition: "11.4 Variation of Pressure with Depth in a Fluid — College Physics 2e."
+  requires: [fmed.11-3-pressure.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.4 Variation of Pressure with Depth in a Fluid", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.11-5-pascals-principle.v1 INTERMEDIATE {
+  title: "11.5 Pascal’s Principle"
+  domain: "fisica_media"
+  definition: "11.5 Pascal’s Principle — College Physics 2e."
+  requires: [fmed.11-4-variation-of-pressure-with-depth-in-a-fluid.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.5 Pascal’s Principle", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.11-6-gauge-pressure-absolute-pressure-and-pressure-measurement.v1 INTERMEDIATE {
+  title: "11.6 Gauge Pressure, Absolute Pressure, and Pressure Measurement"
+  domain: "fisica_media"
+  definition: "11.6 Gauge Pressure, Absolute Pressure, and Pressure Measurement — College Physics 2e."
+  requires: [fmed.11-5-pascals-principle.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.6 Gauge Pressure, Absolute Pressure, and Pressure Measurement", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.11-7-archimedes-principle.v1 INTERMEDIATE {
+  title: "11.7 Archimedes’ Principle"
+  domain: "fisica_media"
+  definition: "11.7 Archimedes’ Principle — College Physics 2e."
+  requires: [fmed.11-6-gauge-pressure-absolute-pressure-and-pressure-measurement.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.7 Archimedes’ Principle", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action.v1 INTERMEDIATE {
+  title: "11.8 Cohesion and Adhesion in Liquids: Surface Tension and Capillary Action"
+  domain: "fisica_media"
+  definition: "11.8 Cohesion and Adhesion in Liquids: Surface Tension and Capillary Action — College Physics 2e."
+  requires: [fmed.11-7-archimedes-principle.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.8 Cohesion and Adhesion in Liquids: Surface Tension and Capillary Action", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.11-9-pressures-in-the-body.v1 INTERMEDIATE {
+  title: "11.9 Pressures in the Body"
+  domain: "fisica_media"
+  definition: "11.9 Pressures in the Body — College Physics 2e."
+  requires: [fmed.11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 11.9 Pressures in the Body", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Fluid Dynamics and Its Biological and Medical Applications
+# ------------------------------------------------------------
+KNOWLEDGE fmed.12-1-flow-rate-and-its-relation-to-velocity.v1 INTERMEDIATE {
+  title: "12.1 Flow Rate and Its Relation to Velocity"
+  domain: "fisica_media"
+  definition: "12.1 Flow Rate and Its Relation to Velocity — College Physics 2e."
+  requires: [fmed.11-9-pressures-in-the-body.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 12.1 Flow Rate and Its Relation to Velocity", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.12-2-bernoullis-equation.v1 INTERMEDIATE {
+  title: "12.2 Bernoulli’s Equation"
+  domain: "fisica_media"
+  definition: "12.2 Bernoulli’s Equation — College Physics 2e."
+  requires: [fmed.12-1-flow-rate-and-its-relation-to-velocity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 12.2 Bernoulli’s Equation", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.12-3-the-most-general-applications-of-bernoullis-equation.v1 INTERMEDIATE {
+  title: "12.3 The Most General Applications of Bernoulli’s Equation"
+  domain: "fisica_media"
+  definition: "12.3 The Most General Applications of Bernoulli’s Equation — College Physics 2e."
+  requires: [fmed.12-2-bernoullis-equation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 12.3 The Most General Applications of Bernoulli’s Equation", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.12-4-viscosity-and-laminar-flow-poiseuilles-law.v1 INTERMEDIATE {
+  title: "12.4 Viscosity and Laminar Flow; Poiseuille’s Law"
+  domain: "fisica_media"
+  definition: "12.4 Viscosity and Laminar Flow; Poiseuille’s Law — College Physics 2e."
+  requires: [fmed.12-3-the-most-general-applications-of-bernoullis-equation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 12.4 Viscosity and Laminar Flow; Poiseuille’s Law", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.12-5-the-onset-of-turbulence.v1 INTERMEDIATE {
+  title: "12.5 The Onset of Turbulence"
+  domain: "fisica_media"
+  definition: "12.5 The Onset of Turbulence — College Physics 2e."
+  requires: [fmed.12-4-viscosity-and-laminar-flow-poiseuilles-law.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 12.5 The Onset of Turbulence", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.12-6-motion-of-an-object-in-a-viscous-fluid.v1 INTERMEDIATE {
+  title: "12.6 Motion of an Object in a Viscous Fluid"
+  domain: "fisica_media"
+  definition: "12.6 Motion of an Object in a Viscous Fluid — College Physics 2e."
+  requires: [fmed.12-5-the-onset-of-turbulence.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 12.6 Motion of an Object in a Viscous Fluid", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.12-7-molecular-transport-phenomena-diffusion-osmosis-and-related-processes.v1 INTERMEDIATE {
+  title: "12.7 Molecular Transport Phenomena: Diffusion, Osmosis, and Related Processes"
+  domain: "fisica_media"
+  definition: "12.7 Molecular Transport Phenomena: Diffusion, Osmosis, and Related Processes — College Physics 2e."
+  requires: [fmed.12-6-motion-of-an-object-in-a-viscous-fluid.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 12.7 Molecular Transport Phenomena: Diffusion, Osmosis, and Related Processes", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 13: 13 Temperature, Kinetic Theory, and the Gas Laws
+# ------------------------------------------------------------
+KNOWLEDGE fmed.13-1-temperature.v1 INTERMEDIATE {
+  title: "13.1 Temperature"
+  domain: "fisica_media"
+  definition: "13.1 Temperature — College Physics 2e."
+  requires: [fmed.12-7-molecular-transport-phenomena-diffusion-osmosis-and-related-processes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 13.1 Temperature", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.13-2-thermal-expansion-of-solids-and-liquids.v1 INTERMEDIATE {
+  title: "13.2 Thermal Expansion of Solids and Liquids"
+  domain: "fisica_media"
+  definition: "13.2 Thermal Expansion of Solids and Liquids — College Physics 2e."
+  requires: [fmed.13-1-temperature.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 13.2 Thermal Expansion of Solids and Liquids", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.13-3-the-ideal-gas-law.v1 INTERMEDIATE {
+  title: "13.3 The Ideal Gas Law"
+  domain: "fisica_media"
+  definition: "13.3 The Ideal Gas Law — College Physics 2e."
+  requires: [fmed.13-2-thermal-expansion-of-solids-and-liquids.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 13.3 The Ideal Gas Law", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.13-4-kinetic-theory-atomic-and-molecular-explanation-of-pressure-and-temperature.v1 INTERMEDIATE {
+  title: "13.4 Kinetic Theory: Atomic and Molecular Explanation of Pressure and Temperature"
+  domain: "fisica_media"
+  definition: "13.4 Kinetic Theory: Atomic and Molecular Explanation of Pressure and Temperature — College Physics 2e."
+  requires: [fmed.13-3-the-ideal-gas-law.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 13.4 Kinetic Theory: Atomic and Molecular Explanation of Pressure and Temperature", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.13-5-phase-changes.v1 INTERMEDIATE {
+  title: "13.5 Phase Changes"
+  domain: "fisica_media"
+  definition: "13.5 Phase Changes — College Physics 2e."
+  requires: [fmed.13-4-kinetic-theory-atomic-and-molecular-explanation-of-pressure-and-temperature.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 13.5 Phase Changes", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.13-6-humidity-evaporation-and-boiling.v1 INTERMEDIATE {
+  title: "13.6 Humidity, Evaporation, and Boiling"
+  domain: "fisica_media"
+  definition: "13.6 Humidity, Evaporation, and Boiling — College Physics 2e."
+  requires: [fmed.13-5-phase-changes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 13.6 Humidity, Evaporation, and Boiling", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 14: 14 Heat and Heat Transfer Methods
+# ------------------------------------------------------------
+KNOWLEDGE fmed.14-1-heat.v1 INTERMEDIATE {
+  title: "14.1 Heat"
+  domain: "fisica_media"
+  definition: "14.1 Heat — College Physics 2e."
+  requires: [fmed.13-6-humidity-evaporation-and-boiling.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 14.1 Heat", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.14-2-temperature-change-and-heat-capacity.v1 INTERMEDIATE {
+  title: "14.2 Temperature Change and Heat Capacity"
+  domain: "fisica_media"
+  definition: "14.2 Temperature Change and Heat Capacity — College Physics 2e."
+  requires: [fmed.14-1-heat.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 14.2 Temperature Change and Heat Capacity", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.14-3-phase-change-and-latent-heat.v1 INTERMEDIATE {
+  title: "14.3 Phase Change and Latent Heat"
+  domain: "fisica_media"
+  definition: "14.3 Phase Change and Latent Heat — College Physics 2e."
+  requires: [fmed.14-2-temperature-change-and-heat-capacity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 14.3 Phase Change and Latent Heat", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.14-4-heat-transfer-methods.v1 INTERMEDIATE {
+  title: "14.4 Heat Transfer Methods"
+  domain: "fisica_media"
+  definition: "14.4 Heat Transfer Methods — College Physics 2e."
+  requires: [fmed.14-3-phase-change-and-latent-heat.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 14.4 Heat Transfer Methods", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.14-5-conduction.v1 INTERMEDIATE {
+  title: "14.5 Conduction"
+  domain: "fisica_media"
+  definition: "14.5 Conduction — College Physics 2e."
+  requires: [fmed.14-4-heat-transfer-methods.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 14.5 Conduction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.14-6-convection.v1 INTERMEDIATE {
+  title: "14.6 Convection"
+  domain: "fisica_media"
+  definition: "14.6 Convection — College Physics 2e."
+  requires: [fmed.14-5-conduction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 14.6 Convection", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.14-7-radiation.v1 INTERMEDIATE {
+  title: "14.7 Radiation"
+  domain: "fisica_media"
+  definition: "14.7 Radiation — College Physics 2e."
+  requires: [fmed.14-6-convection.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 14.7 Radiation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 15: 15 Thermodynamics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.15-1-the-first-law-of-thermodynamics.v1 INTERMEDIATE {
+  title: "15.1 The First Law of Thermodynamics"
+  domain: "fisica_media"
+  definition: "15.1 The First Law of Thermodynamics — College Physics 2e."
+  requires: [fmed.14-7-radiation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 15.1 The First Law of Thermodynamics", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.15-2-the-first-law-of-thermodynamics-and-some-simple-processes.v1 INTERMEDIATE {
+  title: "15.2 The First Law of Thermodynamics and Some Simple Processes"
+  domain: "fisica_media"
+  definition: "15.2 The First Law of Thermodynamics and Some Simple Processes — College Physics 2e."
+  requires: [fmed.15-1-the-first-law-of-thermodynamics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 15.2 The First Law of Thermodynamics and Some Simple Processes", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency.v1 INTERMEDIATE {
+  title: "15.3 Introduction to the Second Law of Thermodynamics: Heat Engines and Their Efficiency"
+  domain: "fisica_media"
+  definition: "15.3 Introduction to the Second Law of Thermodynamics: Heat Engines and Their Efficiency — College Physics 2e."
+  requires: [fmed.15-2-the-first-law-of-thermodynamics-and-some-simple-processes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 15.3 Introduction to the Second Law of Thermodynamics: Heat Engines and Their Efficiency", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.15-4-carnots-perfect-heat-engine-the-second-law-of-thermodynamics-restated.v1 INTERMEDIATE {
+  title: "15.4 Carnot’s Perfect Heat Engine: The Second Law of Thermodynamics Restated"
+  domain: "fisica_media"
+  definition: "15.4 Carnot’s Perfect Heat Engine: The Second Law of Thermodynamics Restated — College Physics 2e."
+  requires: [fmed.15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 15.4 Carnot’s Perfect Heat Engine: The Second Law of Thermodynamics Restated", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators.v1 INTERMEDIATE {
+  title: "15.5 Applications of Thermodynamics: Heat Pumps and Refrigerators"
+  domain: "fisica_media"
+  definition: "15.5 Applications of Thermodynamics: Heat Pumps and Refrigerators — College Physics 2e."
+  requires: [fmed.15-4-carnots-perfect-heat-engine-the-second-law-of-thermodynamics-restated.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 15.5 Applications of Thermodynamics: Heat Pumps and Refrigerators", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy.v1 INTERMEDIATE {
+  title: "15.6 Entropy and the Second Law of Thermodynamics: Disorder and the Unavailability of Energy"
+  domain: "fisica_media"
+  definition: "15.6 Entropy and the Second Law of Thermodynamics: Disorder and the Unavailability of Energy — College Physics 2e."
+  requires: [fmed.15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 15.6 Entropy and the Second Law of Thermodynamics: Disorder and the Unavailability of Energy", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.15-7-statistical-interpretation-of-entropy-and-the-second-law-of-thermodynamics-the-underlying-explanation.v1 INTERMEDIATE {
+  title: "15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation"
+  domain: "fisica_media"
+  definition: "15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation — College Physics 2e."
+  requires: [fmed.15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 16: 16 Oscillatory Motion and Waves
+# ------------------------------------------------------------
+KNOWLEDGE fmed.16-1-hookes-law-stress-and-strain-revisited.v1 INTERMEDIATE {
+  title: "16.1 Hooke’s Law: Stress and Strain Revisited"
+  domain: "fisica_media"
+  definition: "16.1 Hooke’s Law: Stress and Strain Revisited — College Physics 2e."
+  requires: [fmed.15-7-statistical-interpretation-of-entropy-and-the-second-law-of-thermodynamics-the-underlying-explanation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.1 Hooke’s Law: Stress and Strain Revisited", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-2-period-and-frequency-in-oscillations.v1 INTERMEDIATE {
+  title: "16.2 Period and Frequency in Oscillations"
+  domain: "fisica_media"
+  definition: "16.2 Period and Frequency in Oscillations — College Physics 2e."
+  requires: [fmed.16-1-hookes-law-stress-and-strain-revisited.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.2 Period and Frequency in Oscillations", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-3-simple-harmonic-motion-a-special-periodic-motion.v1 INTERMEDIATE {
+  title: "16.3 Simple Harmonic Motion: A Special Periodic Motion"
+  domain: "fisica_media"
+  definition: "16.3 Simple Harmonic Motion: A Special Periodic Motion — College Physics 2e."
+  requires: [fmed.16-2-period-and-frequency-in-oscillations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.3 Simple Harmonic Motion: A Special Periodic Motion", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-4-the-simple-pendulum.v1 INTERMEDIATE {
+  title: "16.4 The Simple Pendulum"
+  domain: "fisica_media"
+  definition: "16.4 The Simple Pendulum — College Physics 2e."
+  requires: [fmed.16-3-simple-harmonic-motion-a-special-periodic-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.4 The Simple Pendulum", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-5-energy-and-the-simple-harmonic-oscillator.v1 INTERMEDIATE {
+  title: "16.5 Energy and the Simple Harmonic Oscillator"
+  domain: "fisica_media"
+  definition: "16.5 Energy and the Simple Harmonic Oscillator — College Physics 2e."
+  requires: [fmed.16-4-the-simple-pendulum.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.5 Energy and the Simple Harmonic Oscillator", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-6-uniform-circular-motion-and-simple-harmonic-motion.v1 INTERMEDIATE {
+  title: "16.6 Uniform Circular Motion and Simple Harmonic Motion"
+  domain: "fisica_media"
+  definition: "16.6 Uniform Circular Motion and Simple Harmonic Motion — College Physics 2e."
+  requires: [fmed.16-5-energy-and-the-simple-harmonic-oscillator.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.6 Uniform Circular Motion and Simple Harmonic Motion", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-7-damped-harmonic-motion.v1 INTERMEDIATE {
+  title: "16.7 Damped Harmonic Motion"
+  domain: "fisica_media"
+  definition: "16.7 Damped Harmonic Motion — College Physics 2e."
+  requires: [fmed.16-6-uniform-circular-motion-and-simple-harmonic-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.7 Damped Harmonic Motion", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-8-forced-oscillations-and-resonance.v1 INTERMEDIATE {
+  title: "16.8 Forced Oscillations and Resonance"
+  domain: "fisica_media"
+  definition: "16.8 Forced Oscillations and Resonance — College Physics 2e."
+  requires: [fmed.16-7-damped-harmonic-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.8 Forced Oscillations and Resonance", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-9-waves.v1 INTERMEDIATE {
+  title: "16.9 Waves"
+  domain: "fisica_media"
+  definition: "16.9 Waves — College Physics 2e."
+  requires: [fmed.16-8-forced-oscillations-and-resonance.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.9 Waves", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-10-superposition-and-interference.v1 INTERMEDIATE {
+  title: "16.10 Superposition and Interference"
+  domain: "fisica_media"
+  definition: "16.10 Superposition and Interference — College Physics 2e."
+  requires: [fmed.16-9-waves.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.10 Superposition and Interference", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.16-11-energy-in-waves-intensity.v1 INTERMEDIATE {
+  title: "16.11 Energy in Waves: Intensity"
+  domain: "fisica_media"
+  definition: "16.11 Energy in Waves: Intensity — College Physics 2e."
+  requires: [fmed.16-10-superposition-and-interference.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 16.11 Energy in Waves: Intensity", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 17: 17 Physics of Hearing
+# ------------------------------------------------------------
+KNOWLEDGE fmed.17-1-sound.v1 INTERMEDIATE {
+  title: "17.1 Sound"
+  domain: "fisica_media"
+  definition: "17.1 Sound — College Physics 2e."
+  requires: [fmed.16-11-energy-in-waves-intensity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 17.1 Sound", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.17-2-speed-of-sound-frequency-and-wavelength.v1 INTERMEDIATE {
+  title: "17.2 Speed of Sound, Frequency, and Wavelength"
+  domain: "fisica_media"
+  definition: "17.2 Speed of Sound, Frequency, and Wavelength — College Physics 2e."
+  requires: [fmed.17-1-sound.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 17.2 Speed of Sound, Frequency, and Wavelength", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.17-3-sound-intensity-and-sound-level.v1 INTERMEDIATE {
+  title: "17.3 Sound Intensity and Sound Level"
+  domain: "fisica_media"
+  definition: "17.3 Sound Intensity and Sound Level — College Physics 2e."
+  requires: [fmed.17-2-speed-of-sound-frequency-and-wavelength.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 17.3 Sound Intensity and Sound Level", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.17-4-doppler-effect-and-sonic-booms.v1 INTERMEDIATE {
+  title: "17.4 Doppler Effect and Sonic Booms"
+  domain: "fisica_media"
+  definition: "17.4 Doppler Effect and Sonic Booms — College Physics 2e."
+  requires: [fmed.17-3-sound-intensity-and-sound-level.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 17.4 Doppler Effect and Sonic Booms", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.17-5-sound-interference-and-resonance-standing-waves-in-air-columns.v1 INTERMEDIATE {
+  title: "17.5 Sound Interference and Resonance: Standing Waves in Air Columns"
+  domain: "fisica_media"
+  definition: "17.5 Sound Interference and Resonance: Standing Waves in Air Columns — College Physics 2e."
+  requires: [fmed.17-4-doppler-effect-and-sonic-booms.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 17.5 Sound Interference and Resonance: Standing Waves in Air Columns", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.17-6-hearing.v1 INTERMEDIATE {
+  title: "17.6 Hearing"
+  domain: "fisica_media"
+  definition: "17.6 Hearing — College Physics 2e."
+  requires: [fmed.17-5-sound-interference-and-resonance-standing-waves-in-air-columns.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 17.6 Hearing", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.17-7-ultrasound.v1 INTERMEDIATE {
+  title: "17.7 Ultrasound"
+  domain: "fisica_media"
+  definition: "17.7 Ultrasound — College Physics 2e."
+  requires: [fmed.17-6-hearing.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 17.7 Ultrasound", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 18: 18 Electric Charge and Electric Field
+# ------------------------------------------------------------
+KNOWLEDGE fmed.18-1-static-electricity-and-charge-conservation-of-charge.v1 INTERMEDIATE {
+  title: "18.1 Static Electricity and Charge: Conservation of Charge"
+  domain: "fisica_media"
+  definition: "18.1 Static Electricity and Charge: Conservation of Charge — College Physics 2e."
+  requires: [fmed.17-7-ultrasound.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 18.1 Static Electricity and Charge: Conservation of Charge", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.18-2-conductors-and-insulators.v1 INTERMEDIATE {
+  title: "18.2 Conductors and Insulators"
+  domain: "fisica_media"
+  definition: "18.2 Conductors and Insulators — College Physics 2e."
+  requires: [fmed.18-1-static-electricity-and-charge-conservation-of-charge.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 18.2 Conductors and Insulators", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.18-3-coulombs-law.v1 INTERMEDIATE {
+  title: "18.3 Coulomb’s Law"
+  domain: "fisica_media"
+  definition: "18.3 Coulomb’s Law — College Physics 2e."
+  requires: [fmed.18-2-conductors-and-insulators.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 18.3 Coulomb’s Law", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.18-4-electric-field-concept-of-a-field-revisited.v1 INTERMEDIATE {
+  title: "18.4 Electric Field: Concept of a Field Revisited"
+  domain: "fisica_media"
+  definition: "18.4 Electric Field: Concept of a Field Revisited — College Physics 2e."
+  requires: [fmed.18-3-coulombs-law.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 18.4 Electric Field: Concept of a Field Revisited", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.18-5-electric-field-lines-multiple-charges.v1 INTERMEDIATE {
+  title: "18.5 Electric Field Lines: Multiple Charges"
+  domain: "fisica_media"
+  definition: "18.5 Electric Field Lines: Multiple Charges — College Physics 2e."
+  requires: [fmed.18-4-electric-field-concept-of-a-field-revisited.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 18.5 Electric Field Lines: Multiple Charges", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.18-6-electric-forces-in-biology.v1 INTERMEDIATE {
+  title: "18.6 Electric Forces in Biology"
+  domain: "fisica_media"
+  definition: "18.6 Electric Forces in Biology — College Physics 2e."
+  requires: [fmed.18-5-electric-field-lines-multiple-charges.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 18.6 Electric Forces in Biology", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.18-7-conductors-and-electric-fields-in-static-equilibrium.v1 INTERMEDIATE {
+  title: "18.7 Conductors and Electric Fields in Static Equilibrium"
+  domain: "fisica_media"
+  definition: "18.7 Conductors and Electric Fields in Static Equilibrium — College Physics 2e."
+  requires: [fmed.18-6-electric-forces-in-biology.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 18.7 Conductors and Electric Fields in Static Equilibrium", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.18-8-applications-of-electrostatics.v1 INTERMEDIATE {
+  title: "18.8 Applications of Electrostatics"
+  domain: "fisica_media"
+  definition: "18.8 Applications of Electrostatics — College Physics 2e."
+  requires: [fmed.18-7-conductors-and-electric-fields-in-static-equilibrium.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 18.8 Applications of Electrostatics", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 19: 19 Electric Potential and Electric Field
+# ------------------------------------------------------------
+KNOWLEDGE fmed.19-1-electric-potential-energy-potential-difference.v1 INTERMEDIATE {
+  title: "19.1 Electric Potential Energy: Potential Difference"
+  domain: "fisica_media"
+  definition: "19.1 Electric Potential Energy: Potential Difference — College Physics 2e."
+  requires: [fmed.18-8-applications-of-electrostatics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 19.1 Electric Potential Energy: Potential Difference", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.19-2-electric-potential-in-a-uniform-electric-field.v1 INTERMEDIATE {
+  title: "19.2 Electric Potential in a Uniform Electric Field"
+  domain: "fisica_media"
+  definition: "19.2 Electric Potential in a Uniform Electric Field — College Physics 2e."
+  requires: [fmed.19-1-electric-potential-energy-potential-difference.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 19.2 Electric Potential in a Uniform Electric Field", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.19-3-electrical-potential-due-to-a-point-charge.v1 INTERMEDIATE {
+  title: "19.3 Electrical Potential Due to a Point Charge"
+  domain: "fisica_media"
+  definition: "19.3 Electrical Potential Due to a Point Charge — College Physics 2e."
+  requires: [fmed.19-2-electric-potential-in-a-uniform-electric-field.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 19.3 Electrical Potential Due to a Point Charge", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.19-4-equipotential-lines.v1 INTERMEDIATE {
+  title: "19.4 Equipotential Lines"
+  domain: "fisica_media"
+  definition: "19.4 Equipotential Lines — College Physics 2e."
+  requires: [fmed.19-3-electrical-potential-due-to-a-point-charge.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 19.4 Equipotential Lines", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.19-5-capacitors-and-dielectrics.v1 INTERMEDIATE {
+  title: "19.5 Capacitors and Dielectrics"
+  domain: "fisica_media"
+  definition: "19.5 Capacitors and Dielectrics — College Physics 2e."
+  requires: [fmed.19-4-equipotential-lines.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 19.5 Capacitors and Dielectrics", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.19-6-capacitors-in-series-and-parallel.v1 INTERMEDIATE {
+  title: "19.6 Capacitors in Series and Parallel"
+  domain: "fisica_media"
+  definition: "19.6 Capacitors in Series and Parallel — College Physics 2e."
+  requires: [fmed.19-5-capacitors-and-dielectrics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 19.6 Capacitors in Series and Parallel", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.19-7-energy-stored-in-capacitors.v1 INTERMEDIATE {
+  title: "19.7 Energy Stored in Capacitors"
+  domain: "fisica_media"
+  definition: "19.7 Energy Stored in Capacitors — College Physics 2e."
+  requires: [fmed.19-6-capacitors-in-series-and-parallel.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 19.7 Energy Stored in Capacitors", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 20: 20 Electric Current, Resistance, and Ohm's Law
+# ------------------------------------------------------------
+KNOWLEDGE fmed.20-1-current.v1 INTERMEDIATE {
+  title: "20.1 Current"
+  domain: "fisica_media"
+  definition: "20.1 Current — College Physics 2e."
+  requires: [fmed.19-7-energy-stored-in-capacitors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 20.1 Current", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.20-2-ohms-law-resistance-and-simple-circuits.v1 INTERMEDIATE {
+  title: "20.2 Ohm’s Law: Resistance and Simple Circuits"
+  domain: "fisica_media"
+  definition: "20.2 Ohm’s Law: Resistance and Simple Circuits — College Physics 2e."
+  requires: [fmed.20-1-current.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 20.2 Ohm’s Law: Resistance and Simple Circuits", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.20-3-resistance-and-resistivity.v1 INTERMEDIATE {
+  title: "20.3 Resistance and Resistivity"
+  domain: "fisica_media"
+  definition: "20.3 Resistance and Resistivity — College Physics 2e."
+  requires: [fmed.20-2-ohms-law-resistance-and-simple-circuits.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 20.3 Resistance and Resistivity", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.20-4-electric-power-and-energy.v1 INTERMEDIATE {
+  title: "20.4 Electric Power and Energy"
+  domain: "fisica_media"
+  definition: "20.4 Electric Power and Energy — College Physics 2e."
+  requires: [fmed.20-3-resistance-and-resistivity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 20.4 Electric Power and Energy", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.20-5-alternating-current-versus-direct-current.v1 INTERMEDIATE {
+  title: "20.5 Alternating Current versus Direct Current"
+  domain: "fisica_media"
+  definition: "20.5 Alternating Current versus Direct Current — College Physics 2e."
+  requires: [fmed.20-4-electric-power-and-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 20.5 Alternating Current versus Direct Current", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.20-6-electric-hazards-and-the-human-body.v1 INTERMEDIATE {
+  title: "20.6 Electric Hazards and the Human Body"
+  domain: "fisica_media"
+  definition: "20.6 Electric Hazards and the Human Body — College Physics 2e."
+  requires: [fmed.20-5-alternating-current-versus-direct-current.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 20.6 Electric Hazards and the Human Body", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.20-7-nerve-conduction-electrocardiograms.v1 INTERMEDIATE {
+  title: "20.7 Nerve Conduction–Electrocardiograms"
+  domain: "fisica_media"
+  definition: "20.7 Nerve Conduction–Electrocardiograms — College Physics 2e."
+  requires: [fmed.20-6-electric-hazards-and-the-human-body.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 20.7 Nerve Conduction–Electrocardiograms", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 21: 21 Circuits and DC Instruments
+# ------------------------------------------------------------
+KNOWLEDGE fmed.21-1-resistors-in-series-and-parallel.v1 INTERMEDIATE {
+  title: "21.1 Resistors in Series and Parallel"
+  domain: "fisica_media"
+  definition: "21.1 Resistors in Series and Parallel — College Physics 2e."
+  requires: [fmed.20-7-nerve-conduction-electrocardiograms.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 21.1 Resistors in Series and Parallel", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.21-2-electromotive-force-terminal-voltage.v1 INTERMEDIATE {
+  title: "21.2 Electromotive Force: Terminal Voltage"
+  domain: "fisica_media"
+  definition: "21.2 Electromotive Force: Terminal Voltage — College Physics 2e."
+  requires: [fmed.21-1-resistors-in-series-and-parallel.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 21.2 Electromotive Force: Terminal Voltage", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.21-3-kirchhoffs-rules.v1 INTERMEDIATE {
+  title: "21.3 Kirchhoff’s Rules"
+  domain: "fisica_media"
+  definition: "21.3 Kirchhoff’s Rules — College Physics 2e."
+  requires: [fmed.21-2-electromotive-force-terminal-voltage.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 21.3 Kirchhoff’s Rules", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.21-4-dc-voltmeters-and-ammeters.v1 INTERMEDIATE {
+  title: "21.4 DC Voltmeters and Ammeters"
+  domain: "fisica_media"
+  definition: "21.4 DC Voltmeters and Ammeters — College Physics 2e."
+  requires: [fmed.21-3-kirchhoffs-rules.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 21.4 DC Voltmeters and Ammeters", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.21-5-null-measurements.v1 INTERMEDIATE {
+  title: "21.5 Null Measurements"
+  domain: "fisica_media"
+  definition: "21.5 Null Measurements — College Physics 2e."
+  requires: [fmed.21-4-dc-voltmeters-and-ammeters.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 21.5 Null Measurements", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.21-6-dc-circuits-containing-resistors-and-capacitors.v1 INTERMEDIATE {
+  title: "21.6 DC Circuits Containing Resistors and Capacitors"
+  domain: "fisica_media"
+  definition: "21.6 DC Circuits Containing Resistors and Capacitors — College Physics 2e."
+  requires: [fmed.21-5-null-measurements.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 21.6 DC Circuits Containing Resistors and Capacitors", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 22: 22 Magnetism
+# ------------------------------------------------------------
+KNOWLEDGE fmed.22-1-magnets.v1 INTERMEDIATE {
+  title: "22.1 Magnets"
+  domain: "fisica_media"
+  definition: "22.1 Magnets — College Physics 2e."
+  requires: [fmed.21-6-dc-circuits-containing-resistors-and-capacitors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.1 Magnets", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-2-ferromagnets-and-electromagnets.v1 INTERMEDIATE {
+  title: "22.2 Ferromagnets and Electromagnets"
+  domain: "fisica_media"
+  definition: "22.2 Ferromagnets and Electromagnets — College Physics 2e."
+  requires: [fmed.22-1-magnets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.2 Ferromagnets and Electromagnets", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-3-magnetic-fields-and-magnetic-field-lines.v1 INTERMEDIATE {
+  title: "22.3 Magnetic Fields and Magnetic Field Lines"
+  domain: "fisica_media"
+  definition: "22.3 Magnetic Fields and Magnetic Field Lines — College Physics 2e."
+  requires: [fmed.22-2-ferromagnets-and-electromagnets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.3 Magnetic Fields and Magnetic Field Lines", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-4-magnetic-field-strength-force-on-a-moving-charge-in-a-magnetic-field.v1 INTERMEDIATE {
+  title: "22.4 Magnetic Field Strength: Force on a Moving Charge in a Magnetic Field"
+  domain: "fisica_media"
+  definition: "22.4 Magnetic Field Strength: Force on a Moving Charge in a Magnetic Field — College Physics 2e."
+  requires: [fmed.22-3-magnetic-fields-and-magnetic-field-lines.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.4 Magnetic Field Strength: Force on a Moving Charge in a Magnetic Field", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-5-force-on-a-moving-charge-in-a-magnetic-field-examples-and-applications.v1 INTERMEDIATE {
+  title: "22.5 Force on a Moving Charge in a Magnetic Field: Examples and Applications"
+  domain: "fisica_media"
+  definition: "22.5 Force on a Moving Charge in a Magnetic Field: Examples and Applications — College Physics 2e."
+  requires: [fmed.22-4-magnetic-field-strength-force-on-a-moving-charge-in-a-magnetic-field.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.5 Force on a Moving Charge in a Magnetic Field: Examples and Applications", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-6-the-hall-effect.v1 INTERMEDIATE {
+  title: "22.6 The Hall Effect"
+  domain: "fisica_media"
+  definition: "22.6 The Hall Effect — College Physics 2e."
+  requires: [fmed.22-5-force-on-a-moving-charge-in-a-magnetic-field-examples-and-applications.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.6 The Hall Effect", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-7-magnetic-force-on-a-current-carrying-conductor.v1 INTERMEDIATE {
+  title: "22.7 Magnetic Force on a Current-Carrying Conductor"
+  domain: "fisica_media"
+  definition: "22.7 Magnetic Force on a Current-Carrying Conductor — College Physics 2e."
+  requires: [fmed.22-6-the-hall-effect.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.7 Magnetic Force on a Current-Carrying Conductor", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-8-torque-on-a-current-loop-motors-and-meters.v1 INTERMEDIATE {
+  title: "22.8 Torque on a Current Loop: Motors and Meters"
+  domain: "fisica_media"
+  definition: "22.8 Torque on a Current Loop: Motors and Meters — College Physics 2e."
+  requires: [fmed.22-7-magnetic-force-on-a-current-carrying-conductor.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.8 Torque on a Current Loop: Motors and Meters", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-9-magnetic-fields-produced-by-currents-amperes-law.v1 INTERMEDIATE {
+  title: "22.9 Magnetic Fields Produced by Currents: Ampere’s Law"
+  domain: "fisica_media"
+  definition: "22.9 Magnetic Fields Produced by Currents: Ampere’s Law — College Physics 2e."
+  requires: [fmed.22-8-torque-on-a-current-loop-motors-and-meters.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.9 Magnetic Fields Produced by Currents: Ampere’s Law", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-10-magnetic-force-between-two-parallel-conductors.v1 INTERMEDIATE {
+  title: "22.10 Magnetic Force between Two Parallel Conductors"
+  domain: "fisica_media"
+  definition: "22.10 Magnetic Force between Two Parallel Conductors — College Physics 2e."
+  requires: [fmed.22-9-magnetic-fields-produced-by-currents-amperes-law.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.10 Magnetic Force between Two Parallel Conductors", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.22-11-more-applications-of-magnetism.v1 INTERMEDIATE {
+  title: "22.11 More Applications of Magnetism"
+  domain: "fisica_media"
+  definition: "22.11 More Applications of Magnetism — College Physics 2e."
+  requires: [fmed.22-10-magnetic-force-between-two-parallel-conductors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 22.11 More Applications of Magnetism", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 23: 23 Electromagnetic Induction, AC Circuits, and Electrical Technologies
+# ------------------------------------------------------------
+KNOWLEDGE fmed.23-1-induced-emf-and-magnetic-flux.v1 INTERMEDIATE {
+  title: "23.1 Induced Emf and Magnetic Flux"
+  domain: "fisica_media"
+  definition: "23.1 Induced Emf and Magnetic Flux — College Physics 2e."
+  requires: [fmed.22-11-more-applications-of-magnetism.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.1 Induced Emf and Magnetic Flux", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-2-faradays-law-of-induction-lenzs-law.v1 INTERMEDIATE {
+  title: "23.2 Faraday’s Law of Induction: Lenz’s Law"
+  domain: "fisica_media"
+  definition: "23.2 Faraday’s Law of Induction: Lenz’s Law — College Physics 2e."
+  requires: [fmed.23-1-induced-emf-and-magnetic-flux.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.2 Faraday’s Law of Induction: Lenz’s Law", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-3-motional-emf.v1 INTERMEDIATE {
+  title: "23.3 Motional Emf"
+  domain: "fisica_media"
+  definition: "23.3 Motional Emf — College Physics 2e."
+  requires: [fmed.23-2-faradays-law-of-induction-lenzs-law.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.3 Motional Emf", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-4-eddy-currents-and-magnetic-damping.v1 INTERMEDIATE {
+  title: "23.4 Eddy Currents and Magnetic Damping"
+  domain: "fisica_media"
+  definition: "23.4 Eddy Currents and Magnetic Damping — College Physics 2e."
+  requires: [fmed.23-3-motional-emf.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.4 Eddy Currents and Magnetic Damping", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-5-electric-generators.v1 INTERMEDIATE {
+  title: "23.5 Electric Generators"
+  domain: "fisica_media"
+  definition: "23.5 Electric Generators — College Physics 2e."
+  requires: [fmed.23-4-eddy-currents-and-magnetic-damping.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.5 Electric Generators", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-6-back-emf.v1 INTERMEDIATE {
+  title: "23.6 Back Emf"
+  domain: "fisica_media"
+  definition: "23.6 Back Emf — College Physics 2e."
+  requires: [fmed.23-5-electric-generators.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.6 Back Emf", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-7-transformers.v1 INTERMEDIATE {
+  title: "23.7 Transformers"
+  domain: "fisica_media"
+  definition: "23.7 Transformers — College Physics 2e."
+  requires: [fmed.23-6-back-emf.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.7 Transformers", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-8-electrical-safety-systems-and-devices.v1 INTERMEDIATE {
+  title: "23.8 Electrical Safety: Systems and Devices"
+  domain: "fisica_media"
+  definition: "23.8 Electrical Safety: Systems and Devices — College Physics 2e."
+  requires: [fmed.23-7-transformers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.8 Electrical Safety: Systems and Devices", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-9-inductance.v1 INTERMEDIATE {
+  title: "23.9 Inductance"
+  domain: "fisica_media"
+  definition: "23.9 Inductance — College Physics 2e."
+  requires: [fmed.23-8-electrical-safety-systems-and-devices.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.9 Inductance", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-10-rl-circuits.v1 INTERMEDIATE {
+  title: "23.10 RL Circuits"
+  domain: "fisica_media"
+  definition: "23.10 RL Circuits — College Physics 2e."
+  requires: [fmed.23-9-inductance.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.10 RL Circuits", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-11-reactance-inductive-and-capacitive.v1 INTERMEDIATE {
+  title: "23.11 Reactance, Inductive and Capacitive"
+  domain: "fisica_media"
+  definition: "23.11 Reactance, Inductive and Capacitive — College Physics 2e."
+  requires: [fmed.23-10-rl-circuits.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.11 Reactance, Inductive and Capacitive", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.23-12-rlc-series-ac-circuits.v1 INTERMEDIATE {
+  title: "23.12 RLC Series AC Circuits"
+  domain: "fisica_media"
+  definition: "23.12 RLC Series AC Circuits — College Physics 2e."
+  requires: [fmed.23-11-reactance-inductive-and-capacitive.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 23.12 RLC Series AC Circuits", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 24: 24 Electromagnetic Waves
+# ------------------------------------------------------------
+KNOWLEDGE fmed.24-1-maxwells-equations-electromagnetic-waves-predicted-and-observed.v1 INTERMEDIATE {
+  title: "24.1 Maxwell’s Equations: Electromagnetic Waves Predicted and Observed"
+  domain: "fisica_media"
+  definition: "24.1 Maxwell’s Equations: Electromagnetic Waves Predicted and Observed — College Physics 2e."
+  requires: [fmed.23-12-rlc-series-ac-circuits.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 24.1 Maxwell’s Equations: Electromagnetic Waves Predicted and Observed", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.24-2-production-of-electromagnetic-waves.v1 INTERMEDIATE {
+  title: "24.2 Production of Electromagnetic Waves"
+  domain: "fisica_media"
+  definition: "24.2 Production of Electromagnetic Waves — College Physics 2e."
+  requires: [fmed.24-1-maxwells-equations-electromagnetic-waves-predicted-and-observed.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 24.2 Production of Electromagnetic Waves", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.24-3-the-electromagnetic-spectrum.v1 INTERMEDIATE {
+  title: "24.3 The Electromagnetic Spectrum"
+  domain: "fisica_media"
+  definition: "24.3 The Electromagnetic Spectrum — College Physics 2e."
+  requires: [fmed.24-2-production-of-electromagnetic-waves.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 24.3 The Electromagnetic Spectrum", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.24-4-energy-in-electromagnetic-waves.v1 INTERMEDIATE {
+  title: "24.4 Energy in Electromagnetic Waves"
+  domain: "fisica_media"
+  definition: "24.4 Energy in Electromagnetic Waves — College Physics 2e."
+  requires: [fmed.24-3-the-electromagnetic-spectrum.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 24.4 Energy in Electromagnetic Waves", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 25: 25 Geometric Optics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.25-1-the-ray-aspect-of-light.v1 INTERMEDIATE {
+  title: "25.1 The Ray Aspect of Light"
+  domain: "fisica_media"
+  definition: "25.1 The Ray Aspect of Light — College Physics 2e."
+  requires: [fmed.24-4-energy-in-electromagnetic-waves.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 25.1 The Ray Aspect of Light", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.25-2-the-law-of-reflection.v1 INTERMEDIATE {
+  title: "25.2 The Law of Reflection"
+  domain: "fisica_media"
+  definition: "25.2 The Law of Reflection — College Physics 2e."
+  requires: [fmed.25-1-the-ray-aspect-of-light.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 25.2 The Law of Reflection", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.25-3-the-law-of-refraction.v1 INTERMEDIATE {
+  title: "25.3 The Law of Refraction"
+  domain: "fisica_media"
+  definition: "25.3 The Law of Refraction — College Physics 2e."
+  requires: [fmed.25-2-the-law-of-reflection.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 25.3 The Law of Refraction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.25-4-total-internal-reflection.v1 INTERMEDIATE {
+  title: "25.4 Total Internal Reflection"
+  domain: "fisica_media"
+  definition: "25.4 Total Internal Reflection — College Physics 2e."
+  requires: [fmed.25-3-the-law-of-refraction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 25.4 Total Internal Reflection", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.25-5-dispersion-the-rainbow-and-prisms.v1 INTERMEDIATE {
+  title: "25.5 Dispersion: The Rainbow and Prisms"
+  domain: "fisica_media"
+  definition: "25.5 Dispersion: The Rainbow and Prisms — College Physics 2e."
+  requires: [fmed.25-4-total-internal-reflection.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 25.5 Dispersion: The Rainbow and Prisms", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.25-6-image-formation-by-lenses.v1 INTERMEDIATE {
+  title: "25.6 Image Formation by Lenses"
+  domain: "fisica_media"
+  definition: "25.6 Image Formation by Lenses — College Physics 2e."
+  requires: [fmed.25-5-dispersion-the-rainbow-and-prisms.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 25.6 Image Formation by Lenses", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.25-7-image-formation-by-mirrors.v1 INTERMEDIATE {
+  title: "25.7 Image Formation by Mirrors"
+  domain: "fisica_media"
+  definition: "25.7 Image Formation by Mirrors — College Physics 2e."
+  requires: [fmed.25-6-image-formation-by-lenses.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 25.7 Image Formation by Mirrors", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 26: 26 Vision and Optical Instruments
+# ------------------------------------------------------------
+KNOWLEDGE fmed.26-1-physics-of-the-eye.v1 INTERMEDIATE {
+  title: "26.1 Physics of the Eye"
+  domain: "fisica_media"
+  definition: "26.1 Physics of the Eye — College Physics 2e."
+  requires: [fmed.25-7-image-formation-by-mirrors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 26.1 Physics of the Eye", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.26-2-vision-correction.v1 INTERMEDIATE {
+  title: "26.2 Vision Correction"
+  domain: "fisica_media"
+  definition: "26.2 Vision Correction — College Physics 2e."
+  requires: [fmed.26-1-physics-of-the-eye.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 26.2 Vision Correction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.26-3-color-and-color-vision.v1 INTERMEDIATE {
+  title: "26.3 Color and Color Vision"
+  domain: "fisica_media"
+  definition: "26.3 Color and Color Vision — College Physics 2e."
+  requires: [fmed.26-2-vision-correction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 26.3 Color and Color Vision", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.26-4-microscopes.v1 INTERMEDIATE {
+  title: "26.4 Microscopes"
+  domain: "fisica_media"
+  definition: "26.4 Microscopes — College Physics 2e."
+  requires: [fmed.26-3-color-and-color-vision.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 26.4 Microscopes", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.26-5-telescopes.v1 INTERMEDIATE {
+  title: "26.5 Telescopes"
+  domain: "fisica_media"
+  definition: "26.5 Telescopes — College Physics 2e."
+  requires: [fmed.26-4-microscopes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 26.5 Telescopes", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.26-6-aberrations.v1 INTERMEDIATE {
+  title: "26.6 Aberrations"
+  domain: "fisica_media"
+  definition: "26.6 Aberrations — College Physics 2e."
+  requires: [fmed.26-5-telescopes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 26.6 Aberrations", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 27: 27 Wave Optics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.27-1-the-wave-aspect-of-light-interference.v1 INTERMEDIATE {
+  title: "27.1 The Wave Aspect of Light: Interference"
+  domain: "fisica_media"
+  definition: "27.1 The Wave Aspect of Light: Interference — College Physics 2e."
+  requires: [fmed.26-6-aberrations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.1 The Wave Aspect of Light: Interference", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.27-2-huygenss-principle-diffraction.v1 INTERMEDIATE {
+  title: "27.2 Huygens's Principle: Diffraction"
+  domain: "fisica_media"
+  definition: "27.2 Huygens's Principle: Diffraction — College Physics 2e."
+  requires: [fmed.27-1-the-wave-aspect-of-light-interference.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.2 Huygens's Principle: Diffraction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.27-3-youngs-double-slit-experiment.v1 INTERMEDIATE {
+  title: "27.3 Young’s Double Slit Experiment"
+  domain: "fisica_media"
+  definition: "27.3 Young’s Double Slit Experiment — College Physics 2e."
+  requires: [fmed.27-2-huygenss-principle-diffraction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.3 Young’s Double Slit Experiment", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.27-4-multiple-slit-diffraction.v1 INTERMEDIATE {
+  title: "27.4 Multiple Slit Diffraction"
+  domain: "fisica_media"
+  definition: "27.4 Multiple Slit Diffraction — College Physics 2e."
+  requires: [fmed.27-3-youngs-double-slit-experiment.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.4 Multiple Slit Diffraction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.27-5-single-slit-diffraction.v1 INTERMEDIATE {
+  title: "27.5 Single Slit Diffraction"
+  domain: "fisica_media"
+  definition: "27.5 Single Slit Diffraction — College Physics 2e."
+  requires: [fmed.27-4-multiple-slit-diffraction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.5 Single Slit Diffraction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.27-6-limits-of-resolution-the-rayleigh-criterion.v1 INTERMEDIATE {
+  title: "27.6 Limits of Resolution: The Rayleigh Criterion"
+  domain: "fisica_media"
+  definition: "27.6 Limits of Resolution: The Rayleigh Criterion — College Physics 2e."
+  requires: [fmed.27-5-single-slit-diffraction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.6 Limits of Resolution: The Rayleigh Criterion", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.27-7-thin-film-interference.v1 INTERMEDIATE {
+  title: "27.7 Thin Film Interference"
+  domain: "fisica_media"
+  definition: "27.7 Thin Film Interference — College Physics 2e."
+  requires: [fmed.27-6-limits-of-resolution-the-rayleigh-criterion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.7 Thin Film Interference", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.27-8-polarization.v1 INTERMEDIATE {
+  title: "27.8 Polarization"
+  domain: "fisica_media"
+  definition: "27.8 Polarization — College Physics 2e."
+  requires: [fmed.27-7-thin-film-interference.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.8 Polarization", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.27-9-extended-topic-microscopy-enhanced-by-the-wave-characteristics-of-light.v1 INTERMEDIATE {
+  title: "27.9 *Extended Topic* Microscopy Enhanced by the Wave Characteristics of Light"
+  domain: "fisica_media"
+  definition: "27.9 *Extended Topic* Microscopy Enhanced by the Wave Characteristics of Light — College Physics 2e."
+  requires: [fmed.27-8-polarization.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 27.9 *Extended Topic* Microscopy Enhanced by the Wave Characteristics of Light", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 28: 28 Special Relativity
+# ------------------------------------------------------------
+KNOWLEDGE fmed.28-1-einsteins-postulates.v1 INTERMEDIATE {
+  title: "28.1 Einstein’s Postulates"
+  domain: "fisica_media"
+  definition: "28.1 Einstein’s Postulates — College Physics 2e."
+  requires: [fmed.27-9-extended-topic-microscopy-enhanced-by-the-wave-characteristics-of-light.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 28.1 Einstein’s Postulates", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.28-2-simultaneity-and-time-dilation.v1 INTERMEDIATE {
+  title: "28.2 Simultaneity And Time Dilation"
+  domain: "fisica_media"
+  definition: "28.2 Simultaneity And Time Dilation — College Physics 2e."
+  requires: [fmed.28-1-einsteins-postulates.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 28.2 Simultaneity And Time Dilation", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.28-3-length-contraction.v1 INTERMEDIATE {
+  title: "28.3 Length Contraction"
+  domain: "fisica_media"
+  definition: "28.3 Length Contraction — College Physics 2e."
+  requires: [fmed.28-2-simultaneity-and-time-dilation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 28.3 Length Contraction", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.28-4-relativistic-addition-of-velocities.v1 INTERMEDIATE {
+  title: "28.4 Relativistic Addition of Velocities"
+  domain: "fisica_media"
+  definition: "28.4 Relativistic Addition of Velocities — College Physics 2e."
+  requires: [fmed.28-3-length-contraction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 28.4 Relativistic Addition of Velocities", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.28-5-relativistic-momentum.v1 INTERMEDIATE {
+  title: "28.5 Relativistic Momentum"
+  domain: "fisica_media"
+  definition: "28.5 Relativistic Momentum — College Physics 2e."
+  requires: [fmed.28-4-relativistic-addition-of-velocities.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 28.5 Relativistic Momentum", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.28-6-relativistic-energy.v1 INTERMEDIATE {
+  title: "28.6 Relativistic Energy"
+  domain: "fisica_media"
+  definition: "28.6 Relativistic Energy — College Physics 2e."
+  requires: [fmed.28-5-relativistic-momentum.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 28.6 Relativistic Energy", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 29: 29 Quantum Physics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.29-1-quantization-of-energy.v1 INTERMEDIATE {
+  title: "29.1 Quantization of Energy"
+  domain: "fisica_media"
+  definition: "29.1 Quantization of Energy — College Physics 2e."
+  requires: [fmed.28-6-relativistic-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 29.1 Quantization of Energy", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.29-2-the-photoelectric-effect.v1 INTERMEDIATE {
+  title: "29.2 The Photoelectric Effect"
+  domain: "fisica_media"
+  definition: "29.2 The Photoelectric Effect — College Physics 2e."
+  requires: [fmed.29-1-quantization-of-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 29.2 The Photoelectric Effect", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.29-3-photon-energies-and-the-electromagnetic-spectrum.v1 INTERMEDIATE {
+  title: "29.3 Photon Energies and the Electromagnetic Spectrum"
+  domain: "fisica_media"
+  definition: "29.3 Photon Energies and the Electromagnetic Spectrum — College Physics 2e."
+  requires: [fmed.29-2-the-photoelectric-effect.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 29.3 Photon Energies and the Electromagnetic Spectrum", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.29-4-photon-momentum.v1 INTERMEDIATE {
+  title: "29.4 Photon Momentum"
+  domain: "fisica_media"
+  definition: "29.4 Photon Momentum — College Physics 2e."
+  requires: [fmed.29-3-photon-energies-and-the-electromagnetic-spectrum.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 29.4 Photon Momentum", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.29-5-the-particle-wave-duality.v1 INTERMEDIATE {
+  title: "29.5 The Particle-Wave Duality"
+  domain: "fisica_media"
+  definition: "29.5 The Particle-Wave Duality — College Physics 2e."
+  requires: [fmed.29-4-photon-momentum.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 29.5 The Particle-Wave Duality", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.29-6-the-wave-nature-of-matter.v1 INTERMEDIATE {
+  title: "29.6 The Wave Nature of Matter"
+  domain: "fisica_media"
+  definition: "29.6 The Wave Nature of Matter — College Physics 2e."
+  requires: [fmed.29-5-the-particle-wave-duality.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 29.6 The Wave Nature of Matter", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.29-7-probability-the-heisenberg-uncertainty-principle.v1 INTERMEDIATE {
+  title: "29.7 Probability: The Heisenberg Uncertainty Principle"
+  domain: "fisica_media"
+  definition: "29.7 Probability: The Heisenberg Uncertainty Principle — College Physics 2e."
+  requires: [fmed.29-6-the-wave-nature-of-matter.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 29.7 Probability: The Heisenberg Uncertainty Principle", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.29-8-the-particle-wave-duality-reviewed.v1 INTERMEDIATE {
+  title: "29.8 The Particle-Wave Duality Reviewed"
+  domain: "fisica_media"
+  definition: "29.8 The Particle-Wave Duality Reviewed — College Physics 2e."
+  requires: [fmed.29-7-probability-the-heisenberg-uncertainty-principle.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 29.8 The Particle-Wave Duality Reviewed", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 30: 30 Atomic Physics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.30-1-discovery-of-the-atom.v1 INTERMEDIATE {
+  title: "30.1 Discovery of the Atom"
+  domain: "fisica_media"
+  definition: "30.1 Discovery of the Atom — College Physics 2e."
+  requires: [fmed.29-8-the-particle-wave-duality-reviewed.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.1 Discovery of the Atom", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.30-2-discovery-of-the-parts-of-the-atom-electrons-and-nuclei.v1 INTERMEDIATE {
+  title: "30.2 Discovery of the Parts of the Atom: Electrons and Nuclei"
+  domain: "fisica_media"
+  definition: "30.2 Discovery of the Parts of the Atom: Electrons and Nuclei — College Physics 2e."
+  requires: [fmed.30-1-discovery-of-the-atom.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.2 Discovery of the Parts of the Atom: Electrons and Nuclei", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.30-3-bohrs-theory-of-the-hydrogen-atom.v1 INTERMEDIATE {
+  title: "30.3 Bohr’s Theory of the Hydrogen Atom"
+  domain: "fisica_media"
+  definition: "30.3 Bohr’s Theory of the Hydrogen Atom — College Physics 2e."
+  requires: [fmed.30-2-discovery-of-the-parts-of-the-atom-electrons-and-nuclei.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.3 Bohr’s Theory of the Hydrogen Atom", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.30-4-x-rays-atomic-origins-and-applications.v1 INTERMEDIATE {
+  title: "30.4 X Rays: Atomic Origins and Applications"
+  domain: "fisica_media"
+  definition: "30.4 X Rays: Atomic Origins and Applications — College Physics 2e."
+  requires: [fmed.30-3-bohrs-theory-of-the-hydrogen-atom.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.4 X Rays: Atomic Origins and Applications", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.30-5-applications-of-atomic-excitations-and-de-excitations.v1 INTERMEDIATE {
+  title: "30.5 Applications of Atomic Excitations and De-Excitations"
+  domain: "fisica_media"
+  definition: "30.5 Applications of Atomic Excitations and De-Excitations — College Physics 2e."
+  requires: [fmed.30-4-x-rays-atomic-origins-and-applications.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.5 Applications of Atomic Excitations and De-Excitations", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.30-6-the-wave-nature-of-matter-causes-quantization.v1 INTERMEDIATE {
+  title: "30.6 The Wave Nature of Matter Causes Quantization"
+  domain: "fisica_media"
+  definition: "30.6 The Wave Nature of Matter Causes Quantization — College Physics 2e."
+  requires: [fmed.30-5-applications-of-atomic-excitations-and-de-excitations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.6 The Wave Nature of Matter Causes Quantization", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.30-7-patterns-in-spectra-reveal-more-quantization.v1 INTERMEDIATE {
+  title: "30.7 Patterns in Spectra Reveal More Quantization"
+  domain: "fisica_media"
+  definition: "30.7 Patterns in Spectra Reveal More Quantization — College Physics 2e."
+  requires: [fmed.30-6-the-wave-nature-of-matter-causes-quantization.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.7 Patterns in Spectra Reveal More Quantization", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.30-8-quantum-numbers-and-rules.v1 INTERMEDIATE {
+  title: "30.8 Quantum Numbers and Rules"
+  domain: "fisica_media"
+  definition: "30.8 Quantum Numbers and Rules — College Physics 2e."
+  requires: [fmed.30-7-patterns-in-spectra-reveal-more-quantization.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.8 Quantum Numbers and Rules", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.30-9-the-pauli-exclusion-principle.v1 INTERMEDIATE {
+  title: "30.9 The Pauli Exclusion Principle"
+  domain: "fisica_media"
+  definition: "30.9 The Pauli Exclusion Principle — College Physics 2e."
+  requires: [fmed.30-8-quantum-numbers-and-rules.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 30.9 The Pauli Exclusion Principle", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 31: 31 Radioactivity and Nuclear Physics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.31-1-nuclear-radioactivity.v1 INTERMEDIATE {
+  title: "31.1 Nuclear Radioactivity"
+  domain: "fisica_media"
+  definition: "31.1 Nuclear Radioactivity — College Physics 2e."
+  requires: [fmed.30-9-the-pauli-exclusion-principle.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 31.1 Nuclear Radioactivity", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.31-2-radiation-detection-and-detectors.v1 INTERMEDIATE {
+  title: "31.2 Radiation Detection and Detectors"
+  domain: "fisica_media"
+  definition: "31.2 Radiation Detection and Detectors — College Physics 2e."
+  requires: [fmed.31-1-nuclear-radioactivity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 31.2 Radiation Detection and Detectors", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.31-3-substructure-of-the-nucleus.v1 INTERMEDIATE {
+  title: "31.3 Substructure of the Nucleus"
+  domain: "fisica_media"
+  definition: "31.3 Substructure of the Nucleus — College Physics 2e."
+  requires: [fmed.31-2-radiation-detection-and-detectors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 31.3 Substructure of the Nucleus", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.31-4-nuclear-decay-and-conservation-laws.v1 INTERMEDIATE {
+  title: "31.4 Nuclear Decay and Conservation Laws"
+  domain: "fisica_media"
+  definition: "31.4 Nuclear Decay and Conservation Laws — College Physics 2e."
+  requires: [fmed.31-3-substructure-of-the-nucleus.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 31.4 Nuclear Decay and Conservation Laws", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.31-5-half-life-and-activity.v1 INTERMEDIATE {
+  title: "31.5 Half-Life and Activity"
+  domain: "fisica_media"
+  definition: "31.5 Half-Life and Activity — College Physics 2e."
+  requires: [fmed.31-4-nuclear-decay-and-conservation-laws.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 31.5 Half-Life and Activity", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.31-6-binding-energy.v1 INTERMEDIATE {
+  title: "31.6 Binding Energy"
+  domain: "fisica_media"
+  definition: "31.6 Binding Energy — College Physics 2e."
+  requires: [fmed.31-5-half-life-and-activity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 31.6 Binding Energy", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.31-7-tunneling.v1 INTERMEDIATE {
+  title: "31.7 Tunneling"
+  domain: "fisica_media"
+  definition: "31.7 Tunneling — College Physics 2e."
+  requires: [fmed.31-6-binding-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 31.7 Tunneling", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 32: 32 Medical Applications of Nuclear Physics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.32-1-diagnostics-and-medical-imaging.v1 INTERMEDIATE {
+  title: "32.1 Diagnostics and Medical Imaging"
+  domain: "fisica_media"
+  definition: "32.1 Diagnostics and Medical Imaging — College Physics 2e."
+  requires: [fmed.31-7-tunneling.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 32.1 Diagnostics and Medical Imaging", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.32-2-biological-effects-of-ionizing-radiation.v1 INTERMEDIATE {
+  title: "32.2 Biological Effects of Ionizing Radiation"
+  domain: "fisica_media"
+  definition: "32.2 Biological Effects of Ionizing Radiation — College Physics 2e."
+  requires: [fmed.32-1-diagnostics-and-medical-imaging.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 32.2 Biological Effects of Ionizing Radiation", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.32-3-therapeutic-uses-of-ionizing-radiation.v1 INTERMEDIATE {
+  title: "32.3 Therapeutic Uses of Ionizing Radiation"
+  domain: "fisica_media"
+  definition: "32.3 Therapeutic Uses of Ionizing Radiation — College Physics 2e."
+  requires: [fmed.32-2-biological-effects-of-ionizing-radiation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 32.3 Therapeutic Uses of Ionizing Radiation", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.32-4-food-irradiation.v1 INTERMEDIATE {
+  title: "32.4 Food Irradiation"
+  domain: "fisica_media"
+  definition: "32.4 Food Irradiation — College Physics 2e."
+  requires: [fmed.32-3-therapeutic-uses-of-ionizing-radiation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 32.4 Food Irradiation", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.32-5-fusion.v1 INTERMEDIATE {
+  title: "32.5 Fusion"
+  domain: "fisica_media"
+  definition: "32.5 Fusion — College Physics 2e."
+  requires: [fmed.32-4-food-irradiation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 32.5 Fusion", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.32-6-fission.v1 INTERMEDIATE {
+  title: "32.6 Fission"
+  domain: "fisica_media"
+  definition: "32.6 Fission — College Physics 2e."
+  requires: [fmed.32-5-fusion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 32.6 Fission", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.32-7-nuclear-weapons.v1 INTERMEDIATE {
+  title: "32.7 Nuclear Weapons"
+  domain: "fisica_media"
+  definition: "32.7 Nuclear Weapons — College Physics 2e."
+  requires: [fmed.32-6-fission.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 32.7 Nuclear Weapons", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 33: 33 Particle Physics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.33-1-the-yukawa-particle-and-the-heisenberg-uncertainty-principle-revisited.v1 INTERMEDIATE {
+  title: "33.1 The Yukawa Particle and the Heisenberg Uncertainty Principle Revisited"
+  domain: "fisica_media"
+  definition: "33.1 The Yukawa Particle and the Heisenberg Uncertainty Principle Revisited — College Physics 2e."
+  requires: [fmed.32-7-nuclear-weapons.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 33.1 The Yukawa Particle and the Heisenberg Uncertainty Principle Revisited", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.33-2-the-four-basic-forces.v1 INTERMEDIATE {
+  title: "33.2 The Four Basic Forces"
+  domain: "fisica_media"
+  definition: "33.2 The Four Basic Forces — College Physics 2e."
+  requires: [fmed.33-1-the-yukawa-particle-and-the-heisenberg-uncertainty-principle-revisited.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 33.2 The Four Basic Forces", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.33-3-accelerators-create-matter-from-energy.v1 INTERMEDIATE {
+  title: "33.3 Accelerators Create Matter from Energy"
+  domain: "fisica_media"
+  definition: "33.3 Accelerators Create Matter from Energy — College Physics 2e."
+  requires: [fmed.33-2-the-four-basic-forces.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 33.3 Accelerators Create Matter from Energy", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.33-4-particles-patterns-and-conservation-laws.v1 INTERMEDIATE {
+  title: "33.4 Particles, Patterns, and Conservation Laws"
+  domain: "fisica_media"
+  definition: "33.4 Particles, Patterns, and Conservation Laws — College Physics 2e."
+  requires: [fmed.33-3-accelerators-create-matter-from-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 33.4 Particles, Patterns, and Conservation Laws", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.33-5-quarks-is-that-all-there-is.v1 INTERMEDIATE {
+  title: "33.5 Quarks: Is That All There Is?"
+  domain: "fisica_media"
+  definition: "33.5 Quarks: Is That All There Is? — College Physics 2e."
+  requires: [fmed.33-4-particles-patterns-and-conservation-laws.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 33.5 Quarks: Is That All There Is?", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.33-6-guts-the-unification-of-forces.v1 INTERMEDIATE {
+  title: "33.6 GUTs: The Unification of Forces"
+  domain: "fisica_media"
+  definition: "33.6 GUTs: The Unification of Forces — College Physics 2e."
+  requires: [fmed.33-5-quarks-is-that-all-there-is.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 33.6 GUTs: The Unification of Forces", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 34: 34 Frontiers of Physics
+# ------------------------------------------------------------
+KNOWLEDGE fmed.34-1-cosmology-and-particle-physics.v1 INTERMEDIATE {
+  title: "34.1 Cosmology and Particle Physics"
+  domain: "fisica_media"
+  definition: "34.1 Cosmology and Particle Physics — College Physics 2e."
+  requires: [fmed.33-6-guts-the-unification-of-forces.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 34.1 Cosmology and Particle Physics", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.34-2-general-relativity-and-quantum-gravity.v1 INTERMEDIATE {
+  title: "34.2 General Relativity and Quantum Gravity"
+  domain: "fisica_media"
+  definition: "34.2 General Relativity and Quantum Gravity — College Physics 2e."
+  requires: [fmed.34-1-cosmology-and-particle-physics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 34.2 General Relativity and Quantum Gravity", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.34-3-superstrings.v1 INTERMEDIATE {
+  title: "34.3 Superstrings"
+  domain: "fisica_media"
+  definition: "34.3 Superstrings — College Physics 2e."
+  requires: [fmed.34-2-general-relativity-and-quantum-gravity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 34.3 Superstrings", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.34-4-dark-matter-and-closure.v1 INTERMEDIATE {
+  title: "34.4 Dark Matter and Closure"
+  domain: "fisica_media"
+  definition: "34.4 Dark Matter and Closure — College Physics 2e."
+  requires: [fmed.34-3-superstrings.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 34.4 Dark Matter and Closure", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.34-5-complexity-and-chaos.v1 INTERMEDIATE {
+  title: "34.5 Complexity and Chaos"
+  domain: "fisica_media"
+  definition: "34.5 Complexity and Chaos — College Physics 2e."
+  requires: [fmed.34-4-dark-matter-and-closure.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 34.5 Complexity and Chaos", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.34-6-high-temperature-superconductors.v1 INTERMEDIATE {
+  title: "34.6 High-temperature Superconductors"
+  domain: "fisica_media"
+  definition: "34.6 High-temperature Superconductors — College Physics 2e."
+  requires: [fmed.34-5-complexity-and-chaos.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 34.6 High-temperature Superconductors", weight: 0.90 }
+}
+
+KNOWLEDGE fmed.34-7-some-questions-we-know-to-ask.v1 INTERMEDIATE {
+  title: "34.7 Some Questions We Know to Ask"
+  domain: "fisica_media"
+  definition: "34.7 Some Questions We Know to Ask — College Physics 2e."
+  requires: [fmed.34-6-high-temperature-superconductors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: College Physics 2e - 34.7 Some Questions We Know to Ask", weight: 0.90 }
+}
+
+MISSION mission.fmed.v1 {
+  label: "Física Média (College Physics)"
+  requires: [
+    fmed.1-1-physics-an-introduction.v1,
+    fmed.1-2-physical-quantities-and-units.v1,
+    fmed.1-3-accuracy-precision-and-significant-figures.v1,
+    fmed.1-4-approximation.v1,
+    fmed.2-1-displacement.v1,
+    fmed.2-2-vectors-scalars-and-coordinate-systems.v1,
+    fmed.2-3-time-velocity-and-speed.v1,
+    fmed.2-4-acceleration.v1,
+    fmed.2-5-motion-equations-for-constant-acceleration-in-one-dimension.v1,
+    fmed.2-6-problem-solving-basics-for-one-dimensional-kinematics.v1,
+    fmed.2-7-falling-objects.v1,
+    fmed.2-8-graphical-analysis-of-one-dimensional-motion.v1,
+    fmed.3-1-kinematics-in-two-dimensions-an-introduction.v1,
+    fmed.3-2-vector-addition-and-subtraction-graphical-methods.v1,
+    fmed.3-3-vector-addition-and-subtraction-analytical-methods.v1,
+    fmed.3-4-projectile-motion.v1,
+    fmed.3-5-addition-of-velocities.v1,
+    fmed.4-1-development-of-force-concept.v1,
+    fmed.4-2-newtons-first-law-of-motion-inertia.v1,
+    fmed.4-3-newtons-second-law-of-motion-concept-of-a-system.v1,
+    fmed.4-4-newtons-third-law-of-motion-symmetry-in-forces.v1,
+    fmed.4-5-normal-tension-and-other-examples-of-forces.v1,
+    fmed.4-6-problem-solving-strategies.v1,
+    fmed.4-7-further-applications-of-newtons-laws-of-motion.v1,
+    fmed.4-8-extended-topic-the-four-basic-forces-an-introduction.v1,
+    fmed.5-1-friction.v1,
+    fmed.5-2-drag-forces.v1,
+    fmed.5-3-elasticity-stress-and-strain.v1,
+    fmed.6-1-rotation-angle-and-angular-velocity.v1,
+    fmed.6-2-centripetal-acceleration.v1,
+    fmed.6-3-centripetal-force.v1,
+    fmed.6-4-fictitious-forces-and-non-inertial-frames-the-coriolis-force.v1,
+    fmed.6-5-newtons-universal-law-of-gravitation.v1,
+    fmed.6-6-satellites-and-keplers-laws-an-argument-for-simplicity.v1,
+    fmed.7-1-work-the-scientific-definition.v1,
+    fmed.7-2-kinetic-energy-and-the-work-energy-theorem.v1,
+    fmed.7-3-gravitational-potential-energy.v1,
+    fmed.7-4-conservative-forces-and-potential-energy.v1,
+    fmed.7-5-nonconservative-forces.v1,
+    fmed.7-6-conservation-of-energy.v1,
+    fmed.7-7-power.v1,
+    fmed.7-8-work-energy-and-power-in-humans.v1,
+    fmed.7-9-world-energy-use.v1,
+    fmed.8-1-linear-momentum-and-force.v1,
+    fmed.8-2-impulse.v1,
+    fmed.8-3-conservation-of-momentum.v1,
+    fmed.8-4-elastic-collisions-in-one-dimension.v1,
+    fmed.8-5-inelastic-collisions-in-one-dimension.v1,
+    fmed.8-6-collisions-of-point-masses-in-two-dimensions.v1,
+    fmed.8-7-introduction-to-rocket-propulsion.v1,
+    fmed.9-1-the-first-condition-for-equilibrium.v1,
+    fmed.9-2-the-second-condition-for-equilibrium.v1,
+    fmed.9-3-stability.v1,
+    fmed.9-4-applications-of-statics-including-problem-solving-strategies.v1,
+    fmed.9-5-simple-machines.v1,
+    fmed.9-6-forces-and-torques-in-muscles-and-joints.v1,
+    fmed.10-1-angular-acceleration.v1,
+    fmed.10-2-kinematics-of-rotational-motion.v1,
+    fmed.10-3-dynamics-of-rotational-motion-rotational-inertia.v1,
+    fmed.10-4-rotational-kinetic-energy-work-and-energy-revisited.v1,
+    fmed.10-5-angular-momentum-and-its-conservation.v1,
+    fmed.10-6-collisions-of-extended-bodies-in-two-dimensions.v1,
+    fmed.10-7-gyroscopic-effects-vector-aspects-of-angular-momentum.v1,
+    fmed.11-1-what-is-a-fluid.v1,
+    fmed.11-2-density.v1,
+    fmed.11-3-pressure.v1,
+    fmed.11-4-variation-of-pressure-with-depth-in-a-fluid.v1,
+    fmed.11-5-pascals-principle.v1,
+    fmed.11-6-gauge-pressure-absolute-pressure-and-pressure-measurement.v1,
+    fmed.11-7-archimedes-principle.v1,
+    fmed.11-8-cohesion-and-adhesion-in-liquids-surface-tension-and-capillary-action.v1,
+    fmed.11-9-pressures-in-the-body.v1,
+    fmed.12-1-flow-rate-and-its-relation-to-velocity.v1,
+    fmed.12-2-bernoullis-equation.v1,
+    fmed.12-3-the-most-general-applications-of-bernoullis-equation.v1,
+    fmed.12-4-viscosity-and-laminar-flow-poiseuilles-law.v1,
+    fmed.12-5-the-onset-of-turbulence.v1,
+    fmed.12-6-motion-of-an-object-in-a-viscous-fluid.v1,
+    fmed.12-7-molecular-transport-phenomena-diffusion-osmosis-and-related-processes.v1,
+    fmed.13-1-temperature.v1,
+    fmed.13-2-thermal-expansion-of-solids-and-liquids.v1,
+    fmed.13-3-the-ideal-gas-law.v1,
+    fmed.13-4-kinetic-theory-atomic-and-molecular-explanation-of-pressure-and-temperature.v1,
+    fmed.13-5-phase-changes.v1,
+    fmed.13-6-humidity-evaporation-and-boiling.v1,
+    fmed.14-1-heat.v1,
+    fmed.14-2-temperature-change-and-heat-capacity.v1,
+    fmed.14-3-phase-change-and-latent-heat.v1,
+    fmed.14-4-heat-transfer-methods.v1,
+    fmed.14-5-conduction.v1,
+    fmed.14-6-convection.v1,
+    fmed.14-7-radiation.v1,
+    fmed.15-1-the-first-law-of-thermodynamics.v1,
+    fmed.15-2-the-first-law-of-thermodynamics-and-some-simple-processes.v1,
+    fmed.15-3-introduction-to-the-second-law-of-thermodynamics-heat-engines-and-their-efficiency.v1,
+    fmed.15-4-carnots-perfect-heat-engine-the-second-law-of-thermodynamics-restated.v1,
+    fmed.15-5-applications-of-thermodynamics-heat-pumps-and-refrigerators.v1,
+    fmed.15-6-entropy-and-the-second-law-of-thermodynamics-disorder-and-the-unavailability-of-energy.v1,
+    fmed.15-7-statistical-interpretation-of-entropy-and-the-second-law-of-thermodynamics-the-underlying-explanation.v1,
+    fmed.16-1-hookes-law-stress-and-strain-revisited.v1,
+    fmed.16-2-period-and-frequency-in-oscillations.v1,
+    fmed.16-3-simple-harmonic-motion-a-special-periodic-motion.v1,
+    fmed.16-4-the-simple-pendulum.v1,
+    fmed.16-5-energy-and-the-simple-harmonic-oscillator.v1,
+    fmed.16-6-uniform-circular-motion-and-simple-harmonic-motion.v1,
+    fmed.16-7-damped-harmonic-motion.v1,
+    fmed.16-8-forced-oscillations-and-resonance.v1,
+    fmed.16-9-waves.v1,
+    fmed.16-10-superposition-and-interference.v1,
+    fmed.16-11-energy-in-waves-intensity.v1,
+    fmed.17-1-sound.v1,
+    fmed.17-2-speed-of-sound-frequency-and-wavelength.v1,
+    fmed.17-3-sound-intensity-and-sound-level.v1,
+    fmed.17-4-doppler-effect-and-sonic-booms.v1,
+    fmed.17-5-sound-interference-and-resonance-standing-waves-in-air-columns.v1,
+    fmed.17-6-hearing.v1,
+    fmed.17-7-ultrasound.v1,
+    fmed.18-1-static-electricity-and-charge-conservation-of-charge.v1,
+    fmed.18-2-conductors-and-insulators.v1,
+    fmed.18-3-coulombs-law.v1,
+    fmed.18-4-electric-field-concept-of-a-field-revisited.v1,
+    fmed.18-5-electric-field-lines-multiple-charges.v1,
+    fmed.18-6-electric-forces-in-biology.v1,
+    fmed.18-7-conductors-and-electric-fields-in-static-equilibrium.v1,
+    fmed.18-8-applications-of-electrostatics.v1,
+    fmed.19-1-electric-potential-energy-potential-difference.v1,
+    fmed.19-2-electric-potential-in-a-uniform-electric-field.v1,
+    fmed.19-3-electrical-potential-due-to-a-point-charge.v1,
+    fmed.19-4-equipotential-lines.v1,
+    fmed.19-5-capacitors-and-dielectrics.v1,
+    fmed.19-6-capacitors-in-series-and-parallel.v1,
+    fmed.19-7-energy-stored-in-capacitors.v1,
+    fmed.20-1-current.v1,
+    fmed.20-2-ohms-law-resistance-and-simple-circuits.v1,
+    fmed.20-3-resistance-and-resistivity.v1,
+    fmed.20-4-electric-power-and-energy.v1,
+    fmed.20-5-alternating-current-versus-direct-current.v1,
+    fmed.20-6-electric-hazards-and-the-human-body.v1,
+    fmed.20-7-nerve-conduction-electrocardiograms.v1,
+    fmed.21-1-resistors-in-series-and-parallel.v1,
+    fmed.21-2-electromotive-force-terminal-voltage.v1,
+    fmed.21-3-kirchhoffs-rules.v1,
+    fmed.21-4-dc-voltmeters-and-ammeters.v1,
+    fmed.21-5-null-measurements.v1,
+    fmed.21-6-dc-circuits-containing-resistors-and-capacitors.v1,
+    fmed.22-1-magnets.v1,
+    fmed.22-2-ferromagnets-and-electromagnets.v1,
+    fmed.22-3-magnetic-fields-and-magnetic-field-lines.v1,
+    fmed.22-4-magnetic-field-strength-force-on-a-moving-charge-in-a-magnetic-field.v1,
+    fmed.22-5-force-on-a-moving-charge-in-a-magnetic-field-examples-and-applications.v1,
+    fmed.22-6-the-hall-effect.v1,
+    fmed.22-7-magnetic-force-on-a-current-carrying-conductor.v1,
+    fmed.22-8-torque-on-a-current-loop-motors-and-meters.v1,
+    fmed.22-9-magnetic-fields-produced-by-currents-amperes-law.v1,
+    fmed.22-10-magnetic-force-between-two-parallel-conductors.v1,
+    fmed.22-11-more-applications-of-magnetism.v1,
+    fmed.23-1-induced-emf-and-magnetic-flux.v1,
+    fmed.23-2-faradays-law-of-induction-lenzs-law.v1,
+    fmed.23-3-motional-emf.v1,
+    fmed.23-4-eddy-currents-and-magnetic-damping.v1,
+    fmed.23-5-electric-generators.v1,
+    fmed.23-6-back-emf.v1,
+    fmed.23-7-transformers.v1,
+    fmed.23-8-electrical-safety-systems-and-devices.v1,
+    fmed.23-9-inductance.v1,
+    fmed.23-10-rl-circuits.v1,
+    fmed.23-11-reactance-inductive-and-capacitive.v1,
+    fmed.23-12-rlc-series-ac-circuits.v1,
+    fmed.24-1-maxwells-equations-electromagnetic-waves-predicted-and-observed.v1,
+    fmed.24-2-production-of-electromagnetic-waves.v1,
+    fmed.24-3-the-electromagnetic-spectrum.v1,
+    fmed.24-4-energy-in-electromagnetic-waves.v1,
+    fmed.25-1-the-ray-aspect-of-light.v1,
+    fmed.25-2-the-law-of-reflection.v1,
+    fmed.25-3-the-law-of-refraction.v1,
+    fmed.25-4-total-internal-reflection.v1,
+    fmed.25-5-dispersion-the-rainbow-and-prisms.v1,
+    fmed.25-6-image-formation-by-lenses.v1,
+    fmed.25-7-image-formation-by-mirrors.v1,
+    fmed.26-1-physics-of-the-eye.v1,
+    fmed.26-2-vision-correction.v1,
+    fmed.26-3-color-and-color-vision.v1,
+    fmed.26-4-microscopes.v1,
+    fmed.26-5-telescopes.v1,
+    fmed.26-6-aberrations.v1,
+    fmed.27-1-the-wave-aspect-of-light-interference.v1,
+    fmed.27-2-huygenss-principle-diffraction.v1,
+    fmed.27-3-youngs-double-slit-experiment.v1,
+    fmed.27-4-multiple-slit-diffraction.v1,
+    fmed.27-5-single-slit-diffraction.v1,
+    fmed.27-6-limits-of-resolution-the-rayleigh-criterion.v1,
+    fmed.27-7-thin-film-interference.v1,
+    fmed.27-8-polarization.v1,
+    fmed.27-9-extended-topic-microscopy-enhanced-by-the-wave-characteristics-of-light.v1,
+    fmed.28-1-einsteins-postulates.v1,
+    fmed.28-2-simultaneity-and-time-dilation.v1,
+    fmed.28-3-length-contraction.v1,
+    fmed.28-4-relativistic-addition-of-velocities.v1,
+    fmed.28-5-relativistic-momentum.v1,
+    fmed.28-6-relativistic-energy.v1,
+    fmed.29-1-quantization-of-energy.v1,
+    fmed.29-2-the-photoelectric-effect.v1,
+    fmed.29-3-photon-energies-and-the-electromagnetic-spectrum.v1,
+    fmed.29-4-photon-momentum.v1,
+    fmed.29-5-the-particle-wave-duality.v1,
+    fmed.29-6-the-wave-nature-of-matter.v1,
+    fmed.29-7-probability-the-heisenberg-uncertainty-principle.v1,
+    fmed.29-8-the-particle-wave-duality-reviewed.v1,
+    fmed.30-1-discovery-of-the-atom.v1,
+    fmed.30-2-discovery-of-the-parts-of-the-atom-electrons-and-nuclei.v1,
+    fmed.30-3-bohrs-theory-of-the-hydrogen-atom.v1,
+    fmed.30-4-x-rays-atomic-origins-and-applications.v1,
+    fmed.30-5-applications-of-atomic-excitations-and-de-excitations.v1,
+    fmed.30-6-the-wave-nature-of-matter-causes-quantization.v1,
+    fmed.30-7-patterns-in-spectra-reveal-more-quantization.v1,
+    fmed.30-8-quantum-numbers-and-rules.v1,
+    fmed.30-9-the-pauli-exclusion-principle.v1,
+    fmed.31-1-nuclear-radioactivity.v1,
+    fmed.31-2-radiation-detection-and-detectors.v1,
+    fmed.31-3-substructure-of-the-nucleus.v1,
+    fmed.31-4-nuclear-decay-and-conservation-laws.v1,
+    fmed.31-5-half-life-and-activity.v1,
+    fmed.31-6-binding-energy.v1,
+    fmed.31-7-tunneling.v1,
+    fmed.32-1-diagnostics-and-medical-imaging.v1,
+    fmed.32-2-biological-effects-of-ionizing-radiation.v1,
+    fmed.32-3-therapeutic-uses-of-ionizing-radiation.v1,
+    fmed.32-4-food-irradiation.v1,
+    fmed.32-5-fusion.v1,
+    fmed.32-6-fission.v1,
+    fmed.32-7-nuclear-weapons.v1,
+    fmed.33-1-the-yukawa-particle-and-the-heisenberg-uncertainty-principle-revisited.v1,
+    fmed.33-2-the-four-basic-forces.v1,
+    fmed.33-3-accelerators-create-matter-from-energy.v1,
+    fmed.33-4-particles-patterns-and-conservation-laws.v1,
+    fmed.33-5-quarks-is-that-all-there-is.v1,
+    fmed.33-6-guts-the-unification-of-forces.v1,
+    fmed.34-1-cosmology-and-particle-physics.v1,
+    fmed.34-2-general-relativity-and-quantum-gravity.v1,
+    fmed.34-3-superstrings.v1,
+    fmed.34-4-dark-matter-and-closure.v1,
+    fmed.34-5-complexity-and-chaos.v1,
+    fmed.34-6-high-temperature-superconductors.v1,
+    fmed.34-7-some-questions-we-know-to-ask.v1,
+  ]
+  threshold: 0.85
+}

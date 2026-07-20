@@ -30,6 +30,16 @@ interface GraphViewProps {
   activePathIds: string[];
   selectedNodeId: string | null;
   onSelectNode: (node: Node) => void;
+  domains?: string[];
+  selectedDomain?: string;
+  onSelectDomain?: (d: string) => void;
+}
+
+function prettyDomain(d: string): string {
+  return d
+    .split("_")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
 const MASTERY_THRESHOLD = 0.85;
@@ -43,8 +53,12 @@ export const GraphView: React.FC<GraphViewProps> = ({
   activePathIds,
   selectedNodeId,
   onSelectNode,
+  domains = [],
+  selectedDomain = "all",
+  onSelectDomain,
 }) => {
-  // Layout em camadas (profundidade topológica → coluna)
+  // Layout: camadas topológicas para grafos ramificados, serpentina para
+  // trilhas ~lineares (currículos de livro, onde profundidade = nº de seções)
   const { layout, width, height } = useMemo(() => {
     const empty = { layout: new Map<string, { x: number; y: number }>(), width: 900, height: 520 };
     if (nodes.length === 0) return empty;
@@ -57,10 +71,12 @@ export const GraphView: React.FC<GraphViewProps> = ({
       inDegree.set(n.id, 0);
     });
 
+    let prereqEdges = 0;
     edges.forEach((e) => {
       if (e.type === "prerequisite" && adj.has(e.source) && adj.has(e.target)) {
         adj.get(e.source)!.push(e.target);
         inDegree.set(e.target, inDegree.get(e.target)! + 1);
+        prereqEdges += 1;
       }
     });
 
@@ -84,6 +100,41 @@ export const GraphView: React.FC<GraphViewProps> = ({
       if (!depths.has(n.id)) depths.set(n.id, 0);
     });
 
+    const maxDepth = Math.max(...Array.from(depths.values()));
+    const coords = new Map<string, { x: number; y: number }>();
+
+    // Grafo essencialmente linear (espinha de livro): serpentina compacta
+    const isLinear = maxDepth > 14 && prereqEdges <= nodes.length * 1.25;
+
+    if (isLinear) {
+      const COLS = 5;
+      const X_SPACING = 190;
+      const Y_SPACING = 155;
+      const PAD_X = 120;
+      const PAD_Y = 90;
+
+      // Ordena por profundidade (empate: id, estável)
+      const ordered = [...nodes].sort((a, b) => {
+        const da = depths.get(a.id)! - depths.get(b.id)!;
+        return da !== 0 ? da : a.id.localeCompare(b.id);
+      });
+
+      ordered.forEach((n, i) => {
+        const row = Math.floor(i / COLS);
+        let col = i % COLS;
+        if (row % 2 === 1) col = COLS - 1 - col; // serpenteia
+        coords.set(n.id, { x: col * X_SPACING + PAD_X, y: row * Y_SPACING + PAD_Y });
+      });
+
+      const rows = Math.ceil(ordered.length / COLS);
+      return {
+        layout: coords,
+        width: (COLS - 1) * X_SPACING + PAD_X * 2,
+        height: Math.max(520, (rows - 1) * Y_SPACING + PAD_Y * 2),
+      };
+    }
+
+    // Layout em camadas clássico
     const groups = new Map<number, string[]>();
     depths.forEach((depth, id) => {
       if (!groups.has(depth)) groups.set(depth, []);
@@ -93,13 +144,11 @@ export const GraphView: React.FC<GraphViewProps> = ({
     const X_SPACING = 220;
     const Y_SPACING = 150;
     const PAD_X = 120;
-    const maxDepth = Math.max(...Array.from(groups.keys()));
     const maxCol = Math.max(...Array.from(groups.values()).map((g) => g.length));
 
     const w = Math.max(900, maxDepth * X_SPACING + PAD_X * 2);
     const h = Math.max(520, maxCol * Y_SPACING + 120);
 
-    const coords = new Map<string, { x: number; y: number }>();
     groups.forEach((ids, depth) => {
       const x = depth * X_SPACING + PAD_X;
       ids.forEach((id, idx) => {
@@ -154,6 +203,35 @@ export const GraphView: React.FC<GraphViewProps> = ({
         </div>
       </div>
 
+      {/* Filtro por domínio */}
+      {domains.length > 1 && onSelectDomain && (
+        <div className="flex gap-1.5 flex-wrap px-6 py-3 border-b border-slate-400/10">
+          <button
+            onClick={() => onSelectDomain("all")}
+            className={`text-[11px] font-bold px-3 py-1.5 rounded-lg border transition ${
+              selectedDomain === "all"
+                ? "bg-violet-500/20 border-violet-500/40 text-white"
+                : "bg-transparent border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/40"
+            }`}
+          >
+            Todos
+          </button>
+          {domains.map((d) => (
+            <button
+              key={d}
+              onClick={() => onSelectDomain(d)}
+              className={`text-[11px] font-bold px-3 py-1.5 rounded-lg border transition ${
+                selectedDomain === d
+                  ? "bg-violet-500/20 border-violet-500/40 text-white"
+                  : "bg-transparent border-slate-500/20 text-slate-400 hover:text-white hover:border-slate-400/40"
+              }`}
+            >
+              {prettyDomain(d)}
+            </button>
+          ))}
+        </div>
+      )}
+
       <div className="flex-1 overflow-auto relative">
         {nodes.length === 0 ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
@@ -205,8 +283,19 @@ export const GraphView: React.FC<GraphViewProps> = ({
                 masteryOf(edge.source) >= MASTERY_THRESHOLD &&
                 masteryOf(edge.target) >= MASTERY_THRESHOLD;
 
-              const midX = (p1.x + p2.x) / 2;
-              const d = `M ${p1.x + NODE_R} ${p1.y} C ${midX} ${p1.y}, ${midX} ${p2.y}, ${p2.x - NODE_R} ${p2.y}`;
+              // Curva adaptativa: âncoras horizontais ou verticais conforme a direção
+              const dx = p2.x - p1.x;
+              const dy = p2.y - p1.y;
+              let d: string;
+              if (Math.abs(dx) >= Math.abs(dy)) {
+                const sx = dx >= 0 ? 1 : -1;
+                const midX = (p1.x + p2.x) / 2;
+                d = `M ${p1.x + sx * NODE_R} ${p1.y} C ${midX} ${p1.y}, ${midX} ${p2.y}, ${p2.x - sx * NODE_R} ${p2.y}`;
+              } else {
+                const sy = dy >= 0 ? 1 : -1;
+                const midY = (p1.y + p2.y) / 2;
+                d = `M ${p1.x} ${p1.y + sy * (NODE_R + 6)} C ${p1.x} ${midY}, ${p2.x} ${midY}, ${p2.x} ${p2.y - sy * NODE_R}`;
+              }
 
               return (
                 <g key={edge.id}>

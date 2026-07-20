@@ -45,7 +45,7 @@ async def inject(filename: str):
                 if not ku:
                     ku = KnowledgeUnit(
                         id=did,
-                        title=title_from_id(did),
+                        title=data.get("title", title_from_id(did)),
                         domain=data.get("domain", "matematica_base"),
                         concept=did.split(".")[1] if len(did.split(".")) > 1 else did,
                         level=level,

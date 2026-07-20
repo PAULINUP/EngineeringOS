@@ -60,6 +60,14 @@ export interface PathNode {
 interface Mission {
   id: string;
   label: string;
+  required_kus?: string[];
+}
+
+export function prettyDomain(d: string): string {
+  return d
+    .split("_")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 }
 
 interface Learner {
@@ -97,6 +105,7 @@ function App() {
   const [satisfied, setSatisfied] = useState<boolean>(false);
   const [selectedNode, setSelectedNode] = useState<KNode | null>(null);
 
+  const [selectedDomain, setSelectedDomain] = useState<string>("all");
   const [showAddLearner, setShowAddLearner] = useState(false);
   const [newLearnerName, setNewLearnerName] = useState("");
   const [notification, setNotification] = useState<{ type: string; msg: string } | null>(null);
@@ -297,6 +306,39 @@ function App() {
 
   const activePathIds = activePath.map((p) => p.id);
   const currentLearner = learners.find((l) => l.id === selectedLearnerId);
+
+  // ------- Domínios e filtragem -------
+  const domains = useMemo(() => {
+    const set = new Set(nodes.map((n) => n.domain));
+    return Array.from(set).sort();
+  }, [nodes]);
+
+  // Ao trocar de missão num grafo grande, foca no domínio dominante da missão
+  useEffect(() => {
+    if (nodes.length <= 60 || !selectedMissionId) return;
+    const mission = missions.find((m) => m.id === selectedMissionId);
+    if (!mission?.required_kus?.length) return;
+    const required = new Set(mission.required_kus);
+    const counts = new Map<string, number>();
+    nodes.forEach((n) => {
+      if (required.has(n.id)) counts.set(n.domain, (counts.get(n.domain) || 0) + 1);
+    });
+    let best: string | null = null;
+    counts.forEach((c, d) => {
+      if (best === null || c > (counts.get(best) || 0)) best = d;
+    });
+    if (best) setSelectedDomain(best);
+  }, [selectedMissionId, missions, nodes.length]);
+
+  const visibleNodes = useMemo(
+    () => (selectedDomain === "all" ? nodes : nodes.filter((n) => n.domain === selectedDomain)),
+    [nodes, selectedDomain]
+  );
+  const visibleIds = useMemo(() => new Set(visibleNodes.map((n) => n.id)), [visibleNodes]);
+  const visibleEdges = useMemo(
+    () => edges.filter((e) => visibleIds.has(e.source) && visibleIds.has(e.target)),
+    [edges, visibleIds]
+  );
 
   // ------- Estatísticas derivadas -------
   const stats = useMemo(() => {
@@ -558,11 +600,14 @@ function App() {
         <section className="grid grid-cols-1 xl:grid-cols-3 gap-5 mt-5">
           <div id="mapa" className="xl:col-span-2 animate-fade-up delay-2">
             <GraphView
-              nodes={nodes}
-              edges={edges}
+              nodes={visibleNodes}
+              edges={visibleEdges}
               activePathIds={activePathIds}
               selectedNodeId={selectedNode ? selectedNode.id : null}
               onSelectNode={setSelectedNode}
+              domains={domains}
+              selectedDomain={selectedDomain}
+              onSelectDomain={setSelectedDomain}
             />
           </div>
 
@@ -580,7 +625,7 @@ function App() {
         {/* -------- COMPETÊNCIAS -------- */}
         <section id="competencias" className="mt-5 animate-fade-up delay-4">
           <CompetenceMatrix
-            nodes={nodes}
+            nodes={visibleNodes}
             onSelectNode={setSelectedNode}
             selectedNodeId={selectedNode ? selectedNode.id : null}
           />

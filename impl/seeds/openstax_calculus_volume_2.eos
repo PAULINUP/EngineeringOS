@@ -1,0 +1,508 @@
+@version 1.0.0
+@domain "matematica_faculdade"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Calculus Volume 2
+# Fonte: https://openstax.org/books/calculus-volume-2  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Integration
+# ------------------------------------------------------------
+KNOWLEDGE calc2.1-1-approximating-areas.v1 ADVANCED {
+  title: "1.1 Approximating Areas"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.1.1 Use sigma (summation) notation to calculate sums and powers of integers.; 1.1.2 Use the sum of rectangular areas to approximate the area under a curve.; 1.1.3 Use Riemann sums to approximate area.."
+  requires: [calc1.6-9-calculus-of-the-hyperbolic-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 1.1 Approximating Areas", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.1-2-the-definite-integral.v1 ADVANCED {
+  title: "1.2 The Definite Integral"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.2.1 State the definition of the definite integral.; 1.2.2 Explain the terms integrand, limits of integration, and variable of integration.; 1.2.3 Explain when a function is integrable.; 1.2.4 Describe the relationship between the definite integral and net area.; 1.2.5 Use geometry and the properties of definite integrals to evaluate them.; 1.2.6 Calculate the average value of a function.."
+  requires: [calc2.1-1-approximating-areas.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 1.2 The Definite Integral", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.1-3-the-fundamental-theorem-of-calculus.v1 ADVANCED {
+  title: "1.3 The Fundamental Theorem of Calculus"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.3.1 Describe the meaning of the Mean Value Theorem for Integrals.; 1.3.2 State the meaning of the Fundamental Theorem of Calculus, Part 1.; 1.3.3 Use the Fundamental Theorem of Calculus, Part 1, to evaluate derivatives of integrals.; 1.3.4 State the meaning of the Fundamental Theorem of Calculus, Part 2.; 1.3.5 Use the Fundamental Theorem of Calculus, Part 2, to evaluate definite integrals.; 1.3.6 Explain the relationship between differentiation and integration.."
+  requires: [calc2.1-2-the-definite-integral.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 1.3 The Fundamental Theorem of Calculus", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.1-4-integration-formulas-and-the-net-change-theorem.v1 ADVANCED {
+  title: "1.4 Integration Formulas and the Net Change Theorem"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.4.1 Apply the basic integration formulas.; 1.4.2 Explain the significance of the net change theorem.; 1.4.3 Use the net change theorem to solve applied problems.; 1.4.4 Apply the integrals of odd and even functions.."
+  requires: [calc2.1-3-the-fundamental-theorem-of-calculus.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 1.4 Integration Formulas and the Net Change Theorem", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.1-5-substitution.v1 ADVANCED {
+  title: "1.5 Substitution"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.5.1 Use substitution to evaluate indefinite integrals.; 1.5.2 Use substitution to evaluate definite integrals.."
+  requires: [calc2.1-4-integration-formulas-and-the-net-change-theorem.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 1.5 Substitution", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.1-6-integrals-involving-exponential-and-logarithmic-functions.v1 ADVANCED {
+  title: "1.6 Integrals Involving Exponential and Logarithmic Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.6.1 Integrate functions involving exponential functions.; 1.6.2 Integrate functions involving logarithmic functions.."
+  requires: [calc2.1-5-substitution.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 1.6 Integrals Involving Exponential and Logarithmic Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.1-7-integrals-resulting-in-inverse-trigonometric-functions.v1 ADVANCED {
+  title: "1.7 Integrals Resulting in Inverse Trigonometric Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 1.7.1 Integrate functions resulting in inverse trigonometric functions."
+  requires: [calc2.1-6-integrals-involving-exponential-and-logarithmic-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 1.7 Integrals Resulting in Inverse Trigonometric Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Applications of Integration
+# ------------------------------------------------------------
+KNOWLEDGE calc2.2-1-areas-between-curves.v1 ADVANCED {
+  title: "2.1 Areas between Curves"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.1.1 Determine the area of a region between two curves by integrating with respect to the independent variable.; 2.1.2 Find the area of a compound region.; 2.1.3 Determine the area of a region between two curves by integrating with respect to the dependent variable.."
+  requires: [calc2.1-7-integrals-resulting-in-inverse-trigonometric-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.1 Areas between Curves", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.2-2-determining-volumes-by-slicing.v1 ADVANCED {
+  title: "2.2 Determining Volumes by Slicing"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.2.1 Determine the volume of a solid by integrating a cross-section (the slicing method).; 2.2.2 Find the volume of a solid of revolution using the disk method.; 2.2.3 Find the volume of a solid of revolution with a cavity using the washer method.."
+  requires: [calc2.2-1-areas-between-curves.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.2 Determining Volumes by Slicing", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.2-3-volumes-of-revolution-cylindrical-shells.v1 ADVANCED {
+  title: "2.3 Volumes of Revolution: Cylindrical Shells"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.3.1 Calculate the volume of a solid of revolution by using the method of cylindrical shells.; 2.3.2 Compare the different methods for calculating a volume of revolution.."
+  requires: [calc2.2-2-determining-volumes-by-slicing.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.3 Volumes of Revolution: Cylindrical Shells", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.2-4-arc-length-of-a-curve-and-surface-area.v1 ADVANCED {
+  title: "2.4 Arc Length of a Curve and Surface Area"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.4.1 Determine the length of a curve, y = f ( x ) , y = f ( x ) , between two points.; 2.4.2 Determine the length of a curve, x = g ( y ) , x = g ( y ) , between two points.; 2.4.3 Find the surface area of a solid of revolution.."
+  requires: [calc2.2-3-volumes-of-revolution-cylindrical-shells.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.4 Arc Length of a Curve and Surface Area", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.2-5-physical-applications.v1 ADVANCED {
+  title: "2.5 Physical Applications"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.5.1 Determine the mass of a one-dimensional object from its linear density function.; 2.5.2 Determine the mass of a two-dimensional circular object from its radial density function.; 2.5.3 Calculate the work done by a variable force acting along a line.; 2.5.4 Calculate the work done in pumping a liquid from one height to another.; 2.5.5 Find the hydrostatic force against a submerged vertical plate.."
+  requires: [calc2.2-4-arc-length-of-a-curve-and-surface-area.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.5 Physical Applications", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.2-6-moments-and-centers-of-mass.v1 ADVANCED {
+  title: "2.6 Moments and Centers of Mass"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.6.1 Find the center of mass of objects distributed along a line.; 2.6.2 Locate the center of mass of a thin plate.; 2.6.3 Use symmetry to help locate the centroid of a thin plate.; 2.6.4 Apply the theorem of Pappus for volume.."
+  requires: [calc2.2-5-physical-applications.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.6 Moments and Centers of Mass", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.2-7-integrals-exponential-functions-and-logarithms.v1 ADVANCED {
+  title: "2.7 Integrals, Exponential Functions, and Logarithms"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.7.1 Write the definition of the natural logarithm as an integral.; 2.7.2 Recognize the derivative of the natural logarithm.; 2.7.3 Integrate functions involving the natural logarithmic function.; 2.7.4 Define the number e e through an integral.; 2.7.5 Recognize the derivative and integral of the exponential function.; 2.7.6 Prove properties of logarithms and exponential functions using integrals.; 2.7.7 Express general logarithmic and exponential functions in terms of natural logarithms and exponentials.."
+  requires: [calc2.2-6-moments-and-centers-of-mass.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.7 Integrals, Exponential Functions, and Logarithms", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.2-8-exponential-growth-and-decay.v1 ADVANCED {
+  title: "2.8 Exponential Growth and Decay"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.8.1 Use the exponential growth model in applications, including population growth and compound interest.; 2.8.2 Explain the concept of doubling time.; 2.8.3 Use the exponential decay model in applications, including radioactive decay and Newton’s law of cooling.; 2.8.4 Explain the concept of half-life.."
+  requires: [calc2.2-7-integrals-exponential-functions-and-logarithms.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.8 Exponential Growth and Decay", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.2-9-calculus-of-the-hyperbolic-functions.v1 ADVANCED {
+  title: "2.9 Calculus of the Hyperbolic Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 2.9.1 Apply the formulas for derivatives and integrals of the hyperbolic functions.; 2.9.2 Apply the formulas for the derivatives of the inverse hyperbolic functions and their associated integrals.; 2.9.3 Describe the common applied conditions of a catenary curve.."
+  requires: [calc2.2-8-exponential-growth-and-decay.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 2.9 Calculus of the Hyperbolic Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Techniques of Integration
+# ------------------------------------------------------------
+KNOWLEDGE calc2.3-1-integration-by-parts.v1 ADVANCED {
+  title: "3.1 Integration by Parts"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.1.1 Recognize when to use integration by parts.; 3.1.2 Use the integration-by-parts formula to solve integration problems.; 3.1.3 Use the integration-by-parts formula for definite integrals.."
+  requires: [calc2.2-9-calculus-of-the-hyperbolic-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 3.1 Integration by Parts", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.3-2-trigonometric-integrals.v1 ADVANCED {
+  title: "3.2 Trigonometric Integrals"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.2.1 Solve integration problems involving products and powers of sin x sin x and cos x . cos x .; 3.2.2 Solve integration problems involving products and powers of tan x tan x and sec x . sec x .; 3.2.3 Use reduction formulas to solve trigonometric integrals.."
+  requires: [calc2.3-1-integration-by-parts.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 3.2 Trigonometric Integrals", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.3-3-trigonometric-substitution.v1 ADVANCED {
+  title: "3.3 Trigonometric Substitution"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.3.1 Solve integration problems involving the square root of a sum or difference of two squares.."
+  requires: [calc2.3-2-trigonometric-integrals.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 3.3 Trigonometric Substitution", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.3-4-partial-fractions.v1 ADVANCED {
+  title: "3.4 Partial Fractions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.4.1 Integrate a rational function using the method of partial fractions.; 3.4.2 Recognize simple linear factors in a rational function.; 3.4.3 Recognize repeated linear factors in a rational function.; 3.4.4 Recognize quadratic factors in a rational function.."
+  requires: [calc2.3-3-trigonometric-substitution.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 3.4 Partial Fractions", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.3-5-other-strategies-for-integration.v1 ADVANCED {
+  title: "3.5 Other Strategies for Integration"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.5.1 Use a table of integrals to solve integration problems.; 3.5.2 Use a computer algebra system (CAS) to solve integration problems.."
+  requires: [calc2.3-4-partial-fractions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 3.5 Other Strategies for Integration", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.3-6-numerical-integration.v1 ADVANCED {
+  title: "3.6 Numerical Integration"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.6.1 Approximate the value of a definite integral by using the midpoint and trapezoidal rules.; 3.6.2 Determine the absolute and relative error in using a numerical integration technique.; 3.6.3 Estimate the absolute and relative error using an error-bound formula.; 3.6.4 Recognize when the midpoint and trapezoidal rules over- or underestimate the true value of an integral.; 3.6.5 Use Simpson’s rule to approximate the value of a definite integral to a given accuracy.."
+  requires: [calc2.3-5-other-strategies-for-integration.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 3.6 Numerical Integration", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.3-7-improper-integrals.v1 ADVANCED {
+  title: "3.7 Improper Integrals"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 3.7.1 Evaluate an integral over an infinite interval.; 3.7.2 Evaluate an integral over a closed interval with an infinite discontinuity within the interval.; 3.7.3 Use the comparison theorem to determine whether a definite integral is convergent.."
+  requires: [calc2.3-6-numerical-integration.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 3.7 Improper Integrals", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Introduction to Differential Equations
+# ------------------------------------------------------------
+KNOWLEDGE calc2.4-1-basics-of-differential-equations.v1 ADVANCED {
+  title: "4.1 Basics of Differential Equations"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.1.1 Identify the order of a differential equation.; 4.1.2 Explain what is meant by a solution to a differential equation.; 4.1.3 Distinguish between the general solution and a particular solution of a differential equation.; 4.1.4 Identify an initial-value problem.; 4.1.5 Identify whether a given function is a solution to a differential equation or an initial-value problem.."
+  requires: [calc2.3-7-improper-integrals.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 4.1 Basics of Differential Equations", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.4-2-direction-fields-and-numerical-methods.v1 ADVANCED {
+  title: "4.2 Direction Fields and Numerical Methods"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.2.1 Draw the direction field for a given first-order differential equation.; 4.2.2 Use a direction field to draw a solution curve of a first-order differential equation.; 4.2.3 Use Euler’s Method to approximate the solution to a first-order differential equation.."
+  requires: [calc2.4-1-basics-of-differential-equations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 4.2 Direction Fields and Numerical Methods", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.4-3-separable-equations.v1 ADVANCED {
+  title: "4.3 Separable Equations"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.3.1 Use separation of variables to solve a differential equation.; 4.3.2 Solve applications using separation of variables.."
+  requires: [calc2.4-2-direction-fields-and-numerical-methods.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 4.3 Separable Equations", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.4-4-the-logistic-equation.v1 ADVANCED {
+  title: "4.4 The Logistic Equation"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.4.1 Describe the concept of environmental carrying capacity in the logistic model of population growth.; 4.4.2 Draw a direction field for a logistic equation and interpret the solution curves.; 4.4.3 Solve a logistic equation and interpret the results.."
+  requires: [calc2.4-3-separable-equations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 4.4 The Logistic Equation", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.4-5-first-order-linear-equations.v1 ADVANCED {
+  title: "4.5 First-order Linear Equations"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 4.5.1 Write a first-order linear differential equation in standard form.; 4.5.2 Find an integrating factor and use it to solve a first-order linear differential equation.; 4.5.3 Solve applied problems involving first-order linear differential equations.."
+  requires: [calc2.4-4-the-logistic-equation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 4.5 First-order Linear Equations", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Sequences and Series
+# ------------------------------------------------------------
+KNOWLEDGE calc2.5-1-sequences.v1 ADVANCED {
+  title: "5.1 Sequences"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.1.1 Find the formula for the general term of a sequence.; 5.1.2 Calculate the limit of a sequence if it exists.; 5.1.3 Determine the convergence or divergence of a given sequence.."
+  requires: [calc2.4-5-first-order-linear-equations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 5.1 Sequences", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.5-2-infinite-series.v1 ADVANCED {
+  title: "5.2 Infinite Series"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.2.1 Explain the meaning of the sum of an infinite series.; 5.2.2 Calculate the sum of a geometric series.; 5.2.3 Evaluate a telescoping series.."
+  requires: [calc2.5-1-sequences.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 5.2 Infinite Series", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.5-3-the-divergence-and-integral-tests.v1 ADVANCED {
+  title: "5.3 The Divergence and Integral Tests"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.3.1 Use the divergence test to demonstrate that a series diverges.; 5.3.2 Use the integral test to determine the convergence of a series.; 5.3.3 Estimate the value of a series by finding bounds on its remainder term.."
+  requires: [calc2.5-2-infinite-series.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 5.3 The Divergence and Integral Tests", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.5-4-comparison-tests.v1 ADVANCED {
+  title: "5.4 Comparison Tests"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.4.1 Use the comparison test to test a series for convergence.; 5.4.2 Use the limit comparison test to determine convergence of a series.."
+  requires: [calc2.5-3-the-divergence-and-integral-tests.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 5.4 Comparison Tests", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.5-5-alternating-series.v1 ADVANCED {
+  title: "5.5 Alternating Series"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.5.1 Use the alternating series test to test an alternating series for convergence.; 5.5.2 Estimate the sum of an alternating series.; 5.5.3 Explain the meaning of absolute convergence and conditional convergence.."
+  requires: [calc2.5-4-comparison-tests.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 5.5 Alternating Series", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.5-6-ratio-and-root-tests.v1 ADVANCED {
+  title: "5.6 Ratio and Root Tests"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 5.6.1 Use the ratio test to determine absolute convergence of a series.; 5.6.2 Use the root test to determine absolute convergence of a series.; 5.6.3 Describe a strategy for testing the convergence of a given series.."
+  requires: [calc2.5-5-alternating-series.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 5.6 Ratio and Root Tests", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Power Series
+# ------------------------------------------------------------
+KNOWLEDGE calc2.6-1-power-series-and-functions.v1 ADVANCED {
+  title: "6.1 Power Series and Functions"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.1.1 Identify a power series and provide examples of them.; 6.1.2 Determine the radius of convergence and interval of convergence of a power series.; 6.1.3 Use a power series to represent a function.."
+  requires: [calc2.5-6-ratio-and-root-tests.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 6.1 Power Series and Functions", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.6-2-properties-of-power-series.v1 ADVANCED {
+  title: "6.2 Properties of Power Series"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.2.1 Combine power series by addition or subtraction.; 6.2.2 Create a new power series by multiplication by a power of the variable or a constant, or by substitution.; 6.2.3 Multiply two power series together.; 6.2.4 Differentiate and integrate power series term-by-term.."
+  requires: [calc2.6-1-power-series-and-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 6.2 Properties of Power Series", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.6-3-taylor-and-maclaurin-series.v1 ADVANCED {
+  title: "6.3 Taylor and Maclaurin Series"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.3.1 Describe the procedure for finding a Taylor polynomial of a given order for a function.; 6.3.2 Explain the meaning and significance of Taylor’s theorem with remainder.; 6.3.3 Estimate the remainder for a Taylor series approximation of a given function.."
+  requires: [calc2.6-2-properties-of-power-series.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 6.3 Taylor and Maclaurin Series", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.6-4-working-with-taylor-series.v1 ADVANCED {
+  title: "6.4 Working with Taylor Series"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 6.4.1 Write the terms of the binomial series.; 6.4.2 Recognize the Taylor series expansions of common functions.; 6.4.3 Recognize and apply techniques to find the Taylor series for a function.; 6.4.4 Use Taylor series to solve differential equations.; 6.4.5 Use Taylor series to evaluate nonelementary integrals.."
+  requires: [calc2.6-3-taylor-and-maclaurin-series.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 6.4 Working with Taylor Series", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Parametric Equations and Polar Coordinates
+# ------------------------------------------------------------
+KNOWLEDGE calc2.7-1-parametric-equations.v1 ADVANCED {
+  title: "7.1 Parametric Equations"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 7.1.1 Plot a curve described by parametric equations.; 7.1.2 Convert the parametric equations of a curve into the form y = f ( x ) . y = f ( x ) .; 7.1.3 Recognize the parametric equations of basic curves, such as a line and a circle.; 7.1.4 Recognize the parametric equations of a cycloid.."
+  requires: [calc2.6-4-working-with-taylor-series.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 7.1 Parametric Equations", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.7-2-calculus-of-parametric-curves.v1 ADVANCED {
+  title: "7.2 Calculus of Parametric Curves"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 7.2.1 Determine derivatives and equations of tangents for parametric curves.; 7.2.2 Find the area under a parametric curve.; 7.2.3 Use the equation for arc length of a parametric curve.; 7.2.4 Apply the formula for surface area to a volume generated by a parametric curve.."
+  requires: [calc2.7-1-parametric-equations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 7.2 Calculus of Parametric Curves", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.7-3-polar-coordinates.v1 ADVANCED {
+  title: "7.3 Polar Coordinates"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 7.3.1 Locate points in a plane by using polar coordinates.; 7.3.2 Convert points between rectangular and polar coordinates.; 7.3.3 Sketch polar curves from given equations.; 7.3.4 Convert equations between rectangular and polar coordinates.; 7.3.5 Identify symmetry in polar curves and equations.."
+  requires: [calc2.7-2-calculus-of-parametric-curves.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 7.3 Polar Coordinates", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.7-4-area-and-arc-length-in-polar-coordinates.v1 ADVANCED {
+  title: "7.4 Area and Arc Length in Polar Coordinates"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 7.4.1 Apply the formula for area of a region in polar coordinates.; 7.4.2 Determine the arc length of a polar curve.."
+  requires: [calc2.7-3-polar-coordinates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 7.4 Area and Arc Length in Polar Coordinates", weight: 0.90 }
+}
+
+KNOWLEDGE calc2.7-5-conic-sections.v1 ADVANCED {
+  title: "7.5 Conic Sections"
+  domain: "matematica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: 7.5.1 Identify the equation of a parabola in standard form with given focus and directrix.; 7.5.2 Identify the equation of an ellipse in standard form with given foci.; 7.5.3 Identify the equation of a hyperbola in standard form with given foci.; 7.5.4 Recognize a parabola, ellipse, or hyperbola from its eccentricity value.; 7.5.5 Write the polar equation of a conic section with eccentricity e e .; 7.5.6 Identify when a general equation of degree two is a parabola, ellipse, or hyperbola.."
+  requires: [calc2.7-4-area-and-arc-length-in-polar-coordinates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Calculus Volume 2 - 7.5 Conic Sections", weight: 0.90 }
+}
+
+MISSION mission.calc2.v1 {
+  label: "Faculdade: Cálculo Volume 2"
+  requires: [
+    calc2.1-1-approximating-areas.v1,
+    calc2.1-2-the-definite-integral.v1,
+    calc2.1-3-the-fundamental-theorem-of-calculus.v1,
+    calc2.1-4-integration-formulas-and-the-net-change-theorem.v1,
+    calc2.1-5-substitution.v1,
+    calc2.1-6-integrals-involving-exponential-and-logarithmic-functions.v1,
+    calc2.1-7-integrals-resulting-in-inverse-trigonometric-functions.v1,
+    calc2.2-1-areas-between-curves.v1,
+    calc2.2-2-determining-volumes-by-slicing.v1,
+    calc2.2-3-volumes-of-revolution-cylindrical-shells.v1,
+    calc2.2-4-arc-length-of-a-curve-and-surface-area.v1,
+    calc2.2-5-physical-applications.v1,
+    calc2.2-6-moments-and-centers-of-mass.v1,
+    calc2.2-7-integrals-exponential-functions-and-logarithms.v1,
+    calc2.2-8-exponential-growth-and-decay.v1,
+    calc2.2-9-calculus-of-the-hyperbolic-functions.v1,
+    calc2.3-1-integration-by-parts.v1,
+    calc2.3-2-trigonometric-integrals.v1,
+    calc2.3-3-trigonometric-substitution.v1,
+    calc2.3-4-partial-fractions.v1,
+    calc2.3-5-other-strategies-for-integration.v1,
+    calc2.3-6-numerical-integration.v1,
+    calc2.3-7-improper-integrals.v1,
+    calc2.4-1-basics-of-differential-equations.v1,
+    calc2.4-2-direction-fields-and-numerical-methods.v1,
+    calc2.4-3-separable-equations.v1,
+    calc2.4-4-the-logistic-equation.v1,
+    calc2.4-5-first-order-linear-equations.v1,
+    calc2.5-1-sequences.v1,
+    calc2.5-2-infinite-series.v1,
+    calc2.5-3-the-divergence-and-integral-tests.v1,
+    calc2.5-4-comparison-tests.v1,
+    calc2.5-5-alternating-series.v1,
+    calc2.5-6-ratio-and-root-tests.v1,
+    calc2.6-1-power-series-and-functions.v1,
+    calc2.6-2-properties-of-power-series.v1,
+    calc2.6-3-taylor-and-maclaurin-series.v1,
+    calc2.6-4-working-with-taylor-series.v1,
+    calc2.7-1-parametric-equations.v1,
+    calc2.7-2-calculus-of-parametric-curves.v1,
+    calc2.7-3-polar-coordinates.v1,
+    calc2.7-4-area-and-arc-length-in-polar-coordinates.v1,
+    calc2.7-5-conic-sections.v1,
+  ]
+  threshold: 0.85
+}

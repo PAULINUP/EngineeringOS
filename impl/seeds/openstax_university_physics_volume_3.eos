@@ -1,0 +1,883 @@
+@version 1.0.0
+@domain "fisica_faculdade"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: University Physics Volume 3
+# Fonte: https://openstax.org/books/university-physics-volume-3  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 The Nature of Light
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.1-1-the-propagation-of-light.v1 ADVANCED {
+  title: "1.1 The Propagation of Light"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Determine the index of refraction, given the speed of light in a medium; List the ways in which light travels from a source to another location."
+  requires: [ufis2.16-5-the-electromagnetic-spectrum.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 1.1 The Propagation of Light", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.1-2-the-law-of-reflection.v1 ADVANCED {
+  title: "1.2 The Law of Reflection"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the reflection of light from polished and rough surfaces; Describe the principle and applications of corner reflectors."
+  requires: [ufis3.1-1-the-propagation-of-light.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 1.2 The Law of Reflection", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.1-3-refraction.v1 ADVANCED {
+  title: "1.3 Refraction"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how rays change direction upon entering a medium; Apply the law of refraction in problem solving."
+  requires: [ufis3.1-2-the-law-of-reflection.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 1.3 Refraction", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.1-4-total-internal-reflection.v1 ADVANCED {
+  title: "1.4 Total Internal Reflection"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the phenomenon of total internal reflection; Describe the workings and uses of optical fibers; Analyze the reason for the sparkle of diamonds."
+  requires: [ufis3.1-3-refraction.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 1.4 Total Internal Reflection", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.1-5-dispersion.v1 ADVANCED {
+  title: "1.5 Dispersion"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the cause of dispersion in a prism; Describe the effects of dispersion in producing rainbows; Summarize the advantages and disadvantages of dispersion."
+  requires: [ufis3.1-4-total-internal-reflection.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 1.5 Dispersion", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.1-6-huygenss-principle.v1 ADVANCED {
+  title: "1.6 Huygens’s Principle"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe Huygens’s principle; Use Huygens’s principle to explain the law of reflection; Use Huygens’s principle to explain the law of refraction; Use Huygens’s principle to explain diffraction."
+  requires: [ufis3.1-5-dispersion.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 1.6 Huygens’s Principle", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.1-7-polarization.v1 ADVANCED {
+  title: "1.7 Polarization"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the change in intensity as polarized light passes through a polarizing filter; Calculate the effect of polarization by reflection and Brewster’s angle; Describe the effect of polarization by scattering; Explain the use of polarizing materials in devices such as LCDs."
+  requires: [ufis3.1-6-huygenss-principle.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 1.7 Polarization", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Geometric Optics and Image Formation
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.2-1-images-formed-by-plane-mirrors.v1 ADVANCED {
+  title: "2.1 Images Formed by Plane Mirrors"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how an image is formed by a plane mirror.; Distinguish between real and virtual images.; Find the location and characterize the orientation of an image created by a plane mirror.."
+  requires: [ufis3.1-7-polarization.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 2.1 Images Formed by Plane Mirrors", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.2-2-spherical-mirrors.v1 ADVANCED {
+  title: "2.2 Spherical Mirrors"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe image formation by spherical mirrors.; Use ray diagrams and the mirror equation to calculate the properties of an image in a spherical mirror.."
+  requires: [ufis3.2-1-images-formed-by-plane-mirrors.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 2.2 Spherical Mirrors", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.2-3-images-formed-by-refraction.v1 ADVANCED {
+  title: "2.3 Images Formed by Refraction"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe image formation by a single refracting surface; Determine the location of an image and calculate its properties by using a ray diagram; Determine the location of an image and calculate its properties by using the equation for a single refracting surface."
+  requires: [ufis3.2-2-spherical-mirrors.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 2.3 Images Formed by Refraction", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.2-4-thin-lenses.v1 ADVANCED {
+  title: "2.4 Thin Lenses"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Use ray diagrams to locate and describe the image formed by a lens; Employ the thin-lens equation to describe and locate the image formed by a lens."
+  requires: [ufis3.2-3-images-formed-by-refraction.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 2.4 Thin Lenses", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.2-5-the-eye.v1 ADVANCED {
+  title: "2.5 The Eye"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the basic physics of how images are formed by the human eye; Recognize several conditions of impaired vision as well as the optics principles for treating these conditions."
+  requires: [ufis3.2-4-thin-lenses.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 2.5 The Eye", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.2-6-the-camera.v1 ADVANCED {
+  title: "2.6 The Camera"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the optics of a camera; Characterize the image created by a camera."
+  requires: [ufis3.2-5-the-eye.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 2.6 The Camera", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.2-7-the-simple-magnifier.v1 ADVANCED {
+  title: "2.7 The Simple Magnifier"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the optics of a simple magnifier; Characterize the image created by a simple magnifier."
+  requires: [ufis3.2-6-the-camera.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 2.7 The Simple Magnifier", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.2-8-microscopes-and-telescopes.v1 ADVANCED {
+  title: "2.8 Microscopes and Telescopes"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the physics behind the operation of microscopes and telescopes; Describe the image created by these instruments and calculate their magnifications."
+  requires: [ufis3.2-7-the-simple-magnifier.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 2.8 Microscopes and Telescopes", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Interference
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.3-1-youngs-double-slit-interference.v1 ADVANCED {
+  title: "3.1 Young's Double-Slit Interference"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the phenomenon of interference; Define constructive and destructive interference for a double slit."
+  requires: [ufis3.2-8-microscopes-and-telescopes.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 3.1 Young's Double-Slit Interference", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.3-2-mathematics-of-interference.v1 ADVANCED {
+  title: "3.2 Mathematics of Interference"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Determine the angles for bright and dark fringes for double slit interference; Calculate the positions of bright fringes on a screen."
+  requires: [ufis3.3-1-youngs-double-slit-interference.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 3.2 Mathematics of Interference", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.3-3-multiple-slit-interference.v1 ADVANCED {
+  title: "3.3 Multiple-Slit Interference"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the locations and intensities of secondary maxima for multiple-slit interference."
+  requires: [ufis3.3-2-mathematics-of-interference.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 3.3 Multiple-Slit Interference", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.3-4-interference-in-thin-films.v1 ADVANCED {
+  title: "3.4 Interference in Thin Films"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the phase changes that occur upon reflection; Describe fringes established by reflected rays of a common source; Explain the appearance of colors in thin films."
+  requires: [ufis3.3-3-multiple-slit-interference.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 3.4 Interference in Thin Films", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.3-5-the-michelson-interferometer.v1 ADVANCED {
+  title: "3.5 The Michelson Interferometer"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain changes in fringes observed with a Michelson interferometer caused by mirror movements; Explain changes in fringes observed with a Michelson interferometer caused by changes in medium."
+  requires: [ufis3.3-4-interference-in-thin-films.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 3.5 The Michelson Interferometer", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Diffraction
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.4-1-single-slit-diffraction.v1 ADVANCED {
+  title: "4.1 Single-Slit Diffraction"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the phenomenon of diffraction and the conditions under which it is observed; Describe diffraction through a single slit."
+  requires: [ufis3.3-5-the-michelson-interferometer.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 4.1 Single-Slit Diffraction", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.4-2-intensity-in-single-slit-diffraction.v1 ADVANCED {
+  title: "4.2 Intensity in Single-Slit Diffraction"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate the intensity relative to the central maximum of the single-slit diffraction peaks; Calculate the intensity relative to the central maximum of an arbitrary point on the screen."
+  requires: [ufis3.4-1-single-slit-diffraction.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 4.2 Intensity in Single-Slit Diffraction", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.4-3-double-slit-diffraction.v1 ADVANCED {
+  title: "4.3 Double-Slit Diffraction"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the combined effect of interference and diffraction with two slits, each with finite width; Determine the relative intensities of interference fringes within a diffraction pattern; Identify missing orders, if any."
+  requires: [ufis3.4-2-intensity-in-single-slit-diffraction.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 4.3 Double-Slit Diffraction", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.4-4-diffraction-gratings.v1 ADVANCED {
+  title: "4.4 Diffraction Gratings"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the pattern obtained from diffraction gratings; Explain diffraction grating effects."
+  requires: [ufis3.4-3-double-slit-diffraction.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 4.4 Diffraction Gratings", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.4-5-circular-apertures-and-resolution.v1 ADVANCED {
+  title: "4.5 Circular Apertures and Resolution"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the diffraction limit on resolution; Describe the diffraction limit on beam propagation."
+  requires: [ufis3.4-4-diffraction-gratings.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 4.5 Circular Apertures and Resolution", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.4-6-x-ray-diffraction.v1 ADVANCED {
+  title: "4.6 X-Ray Diffraction"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe interference and diffraction effects exhibited by X-rays in interaction with atomic-scale structures."
+  requires: [ufis3.4-5-circular-apertures-and-resolution.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 4.6 X-Ray Diffraction", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.4-7-holography.v1 ADVANCED {
+  title: "4.7 Holography"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how a three-dimensional image is recorded as a hologram; Describe how a three-dimensional image is formed from a hologram."
+  requires: [ufis3.4-6-x-ray-diffraction.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 4.7 Holography", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Relativity
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.5-1-invariance-of-physical-laws.v1 ADVANCED {
+  title: "5.1 Invariance of Physical Laws"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the theoretical and experimental issues that Einstein’s theory of special relativity addressed.; State the two postulates of the special theory of relativity.."
+  requires: [ufis3.4-7-holography.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.1 Invariance of Physical Laws", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.5-2-relativity-of-simultaneity.v1 ADVANCED {
+  title: "5.2 Relativity of Simultaneity"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Show from Einstein's postulates that two events measured as simultaneous in one inertial frame are not necessarily simultaneous in all inertial frames.; Describe how simultaneity is a relative concept for observers in different inertial frames in relative motion.."
+  requires: [ufis3.5-1-invariance-of-physical-laws.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.2 Relativity of Simultaneity", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.5-3-time-dilation.v1 ADVANCED {
+  title: "5.3 Time Dilation"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how time intervals can be measured differently in different reference frames.; Describe how to distinguish a proper time interval from a dilated time interval.; Describe the significance of the muon experiment.; Explain why the twin paradox is not a contradiction.; Calculate time dilation given the speed of an object in a given frame.."
+  requires: [ufis3.5-2-relativity-of-simultaneity.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.3 Time Dilation", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.5-4-length-contraction.v1 ADVANCED {
+  title: "5.4 Length Contraction"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how simultaneity and length contraction are related.; Describe the relation between length contraction and time dilation and use it to derive the length-contraction equation.."
+  requires: [ufis3.5-3-time-dilation.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.4 Length Contraction", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.5-5-the-lorentz-transformation.v1 ADVANCED {
+  title: "5.5 The Lorentz Transformation"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the Galilean transformation of classical mechanics, relating the position, time, velocities, and accelerations measured in different inertial frames; Derive the corresponding Lorentz transformation equations, which, in contrast to the Galilean transformation, are consistent with special relativity; Explain the Lorentz transformation and many of the features of relativity in terms of four-dimensional space-time."
+  requires: [ufis3.5-4-length-contraction.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.5 The Lorentz Transformation", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.5-6-relativistic-velocity-transformation.v1 ADVANCED {
+  title: "5.6 Relativistic Velocity Transformation"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Derive the equations consistent with special relativity for transforming velocities in one inertial frame of reference into another.; Apply the velocity transformation equations to objects moving at relativistic speeds.; Examine how the combined velocities predicted by the relativistic transformation equations compare with those expected classically.."
+  requires: [ufis3.5-5-the-lorentz-transformation.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.6 Relativistic Velocity Transformation", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.5-7-doppler-effect-for-light.v1 ADVANCED {
+  title: "5.7 Doppler Effect for Light"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the origin of the shift in frequency and wavelength of the observed wavelength when observer and source moved toward or away from each other; Derive an expression for the relativistic Doppler shift; Apply the Doppler shift equations to real-world examples."
+  requires: [ufis3.5-6-relativistic-velocity-transformation.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.7 Doppler Effect for Light", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.5-8-relativistic-momentum.v1 ADVANCED {
+  title: "5.8 Relativistic Momentum"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define relativistic momentum in terms of mass and velocity; Show how relativistic momentum relates to classical momentum; Show how conservation of relativistic momentum limits objects with mass to speeds less than cc."
+  requires: [ufis3.5-7-doppler-effect-for-light.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.8 Relativistic Momentum", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.5-9-relativistic-energy.v1 ADVANCED {
+  title: "5.9 Relativistic Energy"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how the work-energy theorem leads to an expression for the relativistic kinetic energy of an object; Show how the relativistic energy relates to the classical kinetic energy, and sets a limit on the speed of any object with mass; Describe how the total energy of a particle is related to its mass and velocity; Explain how relativity relates to energy-mass equivalence, and some of the practical implications of energy-mass equivalence."
+  requires: [ufis3.5-8-relativistic-momentum.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 5.9 Relativistic Energy", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Photons and Matter Waves
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.6-1-blackbody-radiation.v1 ADVANCED {
+  title: "6.1 Blackbody Radiation"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Apply Wien’s and Stefan’s laws to analyze radiation emitted by a blackbody; Explain Planck’s hypothesis of energy quanta."
+  requires: [ufis3.5-9-relativistic-energy.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 6.1 Blackbody Radiation", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.6-2-photoelectric-effect.v1 ADVANCED {
+  title: "6.2 Photoelectric Effect"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe physical characteristics of the photoelectric effect; Explain why the photoelectric effect cannot be explained by classical physics; Describe how Einstein’s idea of a particle of radiation explains the photoelectric effect."
+  requires: [ufis3.6-1-blackbody-radiation.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 6.2 Photoelectric Effect", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.6-3-the-compton-effect.v1 ADVANCED {
+  title: "6.3 The Compton Effect"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe Compton’s experiment; Explain the Compton wavelength shift; Describe how experiments with X-rays confirm the particle nature of radiation."
+  requires: [ufis3.6-2-photoelectric-effect.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 6.3 The Compton Effect", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.6-4-bohrs-model-of-the-hydrogen-atom.v1 ADVANCED {
+  title: "6.4 Bohr’s Model of the Hydrogen Atom"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the difference between the absorption spectrum and the emission spectrum of radiation emitted by atoms; Describe the Rutherford gold foil experiment and the discovery of the atomic nucleus; Explain the atomic structure of hydrogen; Describe the postulates of the early quantum theory for the hydrogen atom; Summarize how Bohr’s quantum model of the hydrogen atom explains the radiation spectrum of atomic hydrogen."
+  requires: [ufis3.6-3-the-compton-effect.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 6.4 Bohr’s Model of the Hydrogen Atom", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.6-5-de-broglies-matter-waves.v1 ADVANCED {
+  title: "6.5 De Broglie’s Matter Waves"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe de Broglie’s hypothesis of matter waves; Explain how the de Broglie’s hypothesis gives the rationale for the quantization of angular momentum in Bohr’s quantum theory of the hydrogen atom; Describe the Davisson–Germer experiment; Interpret de Broglie’s idea of matter waves and how they account for electron diffraction phenomena."
+  requires: [ufis3.6-4-bohrs-model-of-the-hydrogen-atom.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 6.5 De Broglie’s Matter Waves", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.6-6-wave-particle-duality.v1 ADVANCED {
+  title: "6.6 Wave-Particle Duality"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify phenomena in which electromagnetic waves behave like a beam of photons and particles behave like waves; Describe the physics principles behind electron microscopy; Summarize the evolution of scientific thought that led to the development of quantum mechanics."
+  requires: [ufis3.6-5-de-broglies-matter-waves.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 6.6 Wave-Particle Duality", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Quantum Mechanics
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.7-1-wave-functions.v1 ADVANCED {
+  title: "7.1 Wave Functions"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the statistical interpretation of the wave function; Use the wave function to determine probabilities; Calculate expectation values of position, momentum, and kinetic energy."
+  requires: [ufis3.6-6-wave-particle-duality.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 7.1 Wave Functions", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.7-2-the-heisenberg-uncertainty-principle.v1 ADVANCED {
+  title: "7.2 The Heisenberg Uncertainty Principle"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the physical meaning of the position-momentum uncertainty relation; Explain the origins of the uncertainty principle in quantum theory; Describe the physical meaning of the energy-time uncertainty relation."
+  requires: [ufis3.7-1-wave-functions.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 7.2 The Heisenberg Uncertainty Principle", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.7-3-the-schrodinger-equation.v1 ADVANCED {
+  title: "7.3 The Schrӧdinger Equation"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the role Schrӧdinger’s equation plays in quantum mechanics; Explain the difference between time-dependent and -independent Schrӧdinger’s equations; Interpret the solutions of Schrӧdinger’s equation."
+  requires: [ufis3.7-2-the-heisenberg-uncertainty-principle.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 7.3 The Schrӧdinger Equation", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.7-4-the-quantum-particle-in-a-box.v1 ADVANCED {
+  title: "7.4 The Quantum Particle in a Box"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how to set up a boundary-value problem for the stationary Schrӧdinger equation; Explain why the energy of a quantum particle in a box is quantized; Describe the physical meaning of stationary solutions to Schrӧdinger’s equation and the connection of these solutions with time-dependent quantum states; Explain the physical meaning of Bohr’s correspondence principle."
+  requires: [ufis3.7-3-the-schrodinger-equation.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 7.4 The Quantum Particle in a Box", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.7-5-the-quantum-harmonic-oscillator.v1 ADVANCED {
+  title: "7.5 The Quantum Harmonic Oscillator"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the model of the quantum harmonic oscillator; Identify differences between the classical and quantum models of the harmonic oscillator; Explain physical situations where the classical and the quantum models coincide."
+  requires: [ufis3.7-4-the-quantum-particle-in-a-box.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 7.5 The Quantum Harmonic Oscillator", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.7-6-the-quantum-tunneling-of-particles-through-potential-barriers.v1 ADVANCED {
+  title: "7.6 The Quantum Tunneling of Particles through Potential Barriers"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how a quantum particle may tunnel across a potential barrier; Identify important physical parameters that affect the tunneling probability; Identify the physical phenomena where quantum tunneling is observed; Explain how quantum tunneling is utilized in modern technologies."
+  requires: [ufis3.7-5-the-quantum-harmonic-oscillator.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 7.6 The Quantum Tunneling of Particles through Potential Barriers", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Atomic Structure
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.8-1-the-hydrogen-atom.v1 ADVANCED {
+  title: "8.1 The Hydrogen Atom"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the hydrogen atom in terms of wave function, probability density, total energy, and orbital angular momentum; Identify the physical significance of each of the quantum numbers (n,l,mn,l,m) of the hydrogen atom; Distinguish between the Bohr and Schrödinger models of the atom; Use quantum numbers to calculate important information about the hydrogen atom."
+  requires: [ufis3.7-6-the-quantum-tunneling-of-particles-through-potential-barriers.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 8.1 The Hydrogen Atom", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.8-2-orbital-magnetic-dipole-moment-of-the-electron.v1 ADVANCED {
+  title: "8.2 Orbital Magnetic Dipole Moment of the Electron"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain why the hydrogen atom has magnetic properties; Explain why the energy levels of a hydrogen atom associated with orbital angular momentum are split by an external magnetic field; Use quantum numbers to calculate the magnitude and direction of the orbital magnetic dipole moment of a hydrogen atom."
+  requires: [ufis3.8-1-the-hydrogen-atom.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 8.2 Orbital Magnetic Dipole Moment of the Electron", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.8-3-electron-spin.v1 ADVANCED {
+  title: "8.3 Electron Spin"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Express the state of an electron in a hydrogen atom in terms of five quantum numbers; Use quantum numbers to calculate the magnitude and direction of the spin and magnetic moment of an electron; Explain the fine and hyperfine structure of the hydrogen spectrum in terms of magnetic interactions inside the hydrogen atom."
+  requires: [ufis3.8-2-orbital-magnetic-dipole-moment-of-the-electron.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 8.3 Electron Spin", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.8-4-the-exclusion-principle-and-the-periodic-table.v1 ADVANCED {
+  title: "8.4 The Exclusion Principle and the Periodic Table"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the importance of Pauli’s exclusion principle to an understanding of atomic structure and molecular bonding; Explain the structure of the periodic table in terms of the total energy, orbital angular momentum, and spin of individual electrons in an atom; Describe the electron configuration of atoms in the periodic table."
+  requires: [ufis3.8-3-electron-spin.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 8.4 The Exclusion Principle and the Periodic Table", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.8-5-atomic-spectra-and-x-rays.v1 ADVANCED {
+  title: "8.5 Atomic Spectra and X-rays"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the absorption and emission of radiation in terms of atomic energy levels and energy differences; Use quantum numbers to estimate the energy, frequency, and wavelength of photons produced by atomic transitions in multi-electron atoms; Explain radiation concepts in the context of atomic fluorescence and X-rays."
+  requires: [ufis3.8-4-the-exclusion-principle-and-the-periodic-table.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 8.5 Atomic Spectra and X-rays", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.8-6-lasers.v1 ADVANCED {
+  title: "8.6 Lasers"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the physical processes necessary to produce laser light; Explain the difference between coherent and incoherent light; Describe the application of lasers to a CD and Blu-Ray player."
+  requires: [ufis3.8-5-atomic-spectra-and-x-rays.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 8.6 Lasers", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Condensed Matter Physics
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.9-1-types-of-molecular-bonds.v1 ADVANCED {
+  title: "9.1 Types of Molecular Bonds"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Distinguish between the different types of molecular bonds; Determine the dissociation energy of a molecule using the concepts ionization energy, electron affinity, and Coulomb force; Describe covalent bonding in terms of exchange symmetry; Explain the physical structure of a molecule in terms of the concept of hybridization."
+  requires: [ufis3.8-6-lasers.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 9.1 Types of Molecular Bonds", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.9-2-molecular-spectra.v1 ADVANCED {
+  title: "9.2 Molecular Spectra"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Use the concepts of vibrational and rotational energy to describe energy transitions in a diatomic molecule; Explain key features of a vibrational-rotational energy spectrum of a diatomic molecule; Estimate allowed energies of a rotating molecule; Determine the equilibrium separation distance between atoms in a diatomic molecule from the vibrational-rotational absorption spectrum."
+  requires: [ufis3.9-1-types-of-molecular-bonds.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 9.2 Molecular Spectra", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.9-3-bonding-in-crystalline-solids.v1 ADVANCED {
+  title: "9.3 Bonding in Crystalline Solids"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the packing structures of common solids; Explain the difference between bonding in a solid and in a molecule; Determine the equilibrium separation distance given crystal properties; Determine the dissociation energy of a salt given crystal properties."
+  requires: [ufis3.9-2-molecular-spectra.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 9.3 Bonding in Crystalline Solids", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.9-4-free-electron-model-of-metals.v1 ADVANCED {
+  title: "9.4 Free Electron Model of Metals"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the classical free electron model of metals in terms of the concept electron number density; Explain the quantum free-electron model of metals in terms of Pauli’s exclusion principle; Calculate the energy levels and energy-level spacing of a free electron in a metal."
+  requires: [ufis3.9-3-bonding-in-crystalline-solids.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 9.4 Free Electron Model of Metals", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.9-5-band-theory-of-solids.v1 ADVANCED {
+  title: "9.5 Band Theory of Solids"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe two main approaches to determining the energy levels of an electron in a crystal; Explain the presence of energy bands and gaps in the energy structure of a crystal; Explain why some materials are good conductors and others are good insulators; Differentiate between an insulator and a semiconductor."
+  requires: [ufis3.9-4-free-electron-model-of-metals.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 9.5 Band Theory of Solids", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.9-6-semiconductors-and-doping.v1 ADVANCED {
+  title: "9.6 Semiconductors and Doping"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe changes to the energy structure of a semiconductor due to doping; Distinguish between an n-type and p-type semiconductor; Describe the Hall effect and explain its significance; Calculate the charge, drift velocity, and charge carrier number density of a semiconductor using information from a Hall effect experiment."
+  requires: [ufis3.9-5-band-theory-of-solids.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 9.6 Semiconductors and Doping", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.9-7-semiconductor-devices.v1 ADVANCED {
+  title: "9.7 Semiconductor Devices"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe what occurs when n- and p-type materials are joined together using the concept of diffusion and drift current (zero applied voltage); Explain the response of a p-n junction to a forward and reverse bias voltage; Describe the function of a transistor in an electric circuit; Use the concept of a p-n junction to explain its applications in audio amplifiers and computers."
+  requires: [ufis3.9-6-semiconductors-and-doping.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 9.7 Semiconductor Devices", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.9-8-superconductivity.v1 ADVANCED {
+  title: "9.8 Superconductivity"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the main features of a superconductor; Describe the BCS theory of superconductivity; Determine the critical magnetic field for T = 0 K from magnetic field data; Calculate the maximum emf or current for a wire to remain superconducting."
+  requires: [ufis3.9-7-semiconductor-devices.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 9.8 Superconductivity", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Nuclear Physics
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.10-1-properties-of-nuclei.v1 ADVANCED {
+  title: "10.1 Properties of Nuclei"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the composition and size of an atomic nucleus; Use a nuclear symbol to express the composition of an atomic nucleus; Explain why the number of neutrons is greater than protons in heavy nuclei; Calculate the atomic mass of an element given its isotopes."
+  requires: [ufis3.9-8-superconductivity.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 10.1 Properties of Nuclei", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.10-2-nuclear-binding-energy.v1 ADVANCED {
+  title: "10.2 Nuclear Binding Energy"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate the mass defect and binding energy for a wide range of nuclei; Use a graph of binding energy per nucleon (BEN) versus mass number (A)(A) graph to assess the relative stability of a nucleus; Compare the binding energy of a nucleon in a nucleus to the ionization energy of an electron in an atom."
+  requires: [ufis3.10-1-properties-of-nuclei.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 10.2 Nuclear Binding Energy", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.10-3-radioactive-decay.v1 ADVANCED {
+  title: "10.3 Radioactive Decay"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the decay of a radioactive substance in terms of its decay constant and half-life; Use the radioactive decay law to estimate the age of a substance; Explain the natural processes that allow the dating of living tissue using 14C14C."
+  requires: [ufis3.10-2-nuclear-binding-energy.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 10.3 Radioactive Decay", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.10-4-nuclear-reactions.v1 ADVANCED {
+  title: "10.4 Nuclear Reactions"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe and compare three types of nuclear radiation; Use nuclear symbols to describe changes that occur during nuclear reactions; Describe processes involved in the decay series of heavy elements."
+  requires: [ufis3.10-3-radioactive-decay.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 10.4 Nuclear Reactions", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.10-5-fission.v1 ADVANCED {
+  title: "10.5 Fission"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the process of nuclear fission in terms of its product and reactants; Calculate the energies of particles produced by a fission reaction; Explain the fission concept in the context of fission bombs and nuclear reactions."
+  requires: [ufis3.10-4-nuclear-reactions.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 10.5 Fission", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.10-6-nuclear-fusion.v1 ADVANCED {
+  title: "10.6 Nuclear Fusion"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the process of nuclear fusion in terms of its product and reactants; Calculate the energies of particles produced by a fusion reaction; Explain the fission concept in the context of fusion bombs, the production of energy by the Sun, and nucleosynthesis."
+  requires: [ufis3.10-5-fission.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 10.6 Nuclear Fusion", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.10-7-medical-applications-and-biological-effects-of-nuclear-radiation.v1 ADVANCED {
+  title: "10.7 Medical Applications and Biological Effects of Nuclear Radiation"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe two medical uses of nuclear technology; Explain the origin of biological effects due to nuclear radiation; List common sources of radiation and their effects; Estimate exposure for nuclear radiation using common dosage units."
+  requires: [ufis3.10-6-nuclear-fusion.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 10.7 Medical Applications and Biological Effects of Nuclear Radiation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Particle Physics and Cosmology
+# ------------------------------------------------------------
+KNOWLEDGE ufis3.11-1-introduction-to-particle-physics.v1 ADVANCED {
+  title: "11.1 Introduction to Particle Physics"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the four fundamental forces and what particles participate in them; Identify and describe fermions and bosons; Identify and describe the quark and lepton families; Distinguish between particles and antiparticles, and describe their interactions."
+  requires: [ufis3.10-7-medical-applications-and-biological-effects-of-nuclear-radiation.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 11.1 Introduction to Particle Physics", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.11-2-particle-conservation-laws.v1 ADVANCED {
+  title: "11.2 Particle Conservation Laws"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Distinguish three conservation laws: baryon number, lepton number, and strangeness; Use rules to determine the total baryon number, lepton number, and strangeness of particles before and after a reaction; Use baryon number, lepton number, and strangeness conservation to determine if particle reactions or decays occur."
+  requires: [ufis3.11-1-introduction-to-particle-physics.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 11.2 Particle Conservation Laws", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.11-3-quarks.v1 ADVANCED {
+  title: "11.3 Quarks"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compare and contrast the six known quarks; Use quark composition of hadrons to determine the total charge of these particles; Explain the primary evidence for the existence of quarks."
+  requires: [ufis3.11-2-particle-conservation-laws.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 11.3 Quarks", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.11-4-particle-accelerators-and-detectors.v1 ADVANCED {
+  title: "11.4 Particle Accelerators and Detectors"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compare and contrast different types of particle accelerators; Describe the purpose, components, and function of a typical colliding beam machine; Explain the role of each type of subdetector of a typical multipurpose particle detector; Use the curvature of a charge track to determine the momentum of a particle."
+  requires: [ufis3.11-3-quarks.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 11.4 Particle Accelerators and Detectors", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.11-5-the-standard-model.v1 ADVANCED {
+  title: "11.5 The Standard Model"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the Standard Model in terms of the four fundamental forces and exchange particles; Draw a Feynman diagram for a simple particle interaction; Use Heisenberg’s uncertainty principle to determine the range of forces described by the Standard Model; Explain the rationale behind grand unification theories."
+  requires: [ufis3.11-4-particle-accelerators-and-detectors.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 11.5 The Standard Model", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.11-6-the-big-bang.v1 ADVANCED {
+  title: "11.6 The Big Bang"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the expansion of the universe in terms of a Hubble graph and cosmological redshift; Describe the analogy between cosmological expansion and an expanding balloon; Use Hubble’s law to make predictions about the measured speed of distant galaxies."
+  requires: [ufis3.11-5-the-standard-model.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 11.6 The Big Bang", weight: 0.90 }
+}
+
+KNOWLEDGE ufis3.11-7-evolution-of-the-early-universe.v1 ADVANCED {
+  title: "11.7 Evolution of the Early Universe"
+  domain: "fisica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the evolution of the early universe in terms of the four fundamental forces; Use the concept of gravitational lensing to explain astronomical phenomena; Provide evidence of the Big Bang in terms of cosmic background radiation; Distinguish between dark matter and dark energy."
+  requires: [ufis3.11-6-the-big-bang.v1]
+  interactivity: 7
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: University Physics Volume 3 - 11.7 Evolution of the Early Universe", weight: 0.90 }
+}
+
+MISSION mission.ufis3.v1 {
+  label: "Faculdade: Física Universitária Volume 3"
+  requires: [
+    ufis3.1-1-the-propagation-of-light.v1,
+    ufis3.1-2-the-law-of-reflection.v1,
+    ufis3.1-3-refraction.v1,
+    ufis3.1-4-total-internal-reflection.v1,
+    ufis3.1-5-dispersion.v1,
+    ufis3.1-6-huygenss-principle.v1,
+    ufis3.1-7-polarization.v1,
+    ufis3.2-1-images-formed-by-plane-mirrors.v1,
+    ufis3.2-2-spherical-mirrors.v1,
+    ufis3.2-3-images-formed-by-refraction.v1,
+    ufis3.2-4-thin-lenses.v1,
+    ufis3.2-5-the-eye.v1,
+    ufis3.2-6-the-camera.v1,
+    ufis3.2-7-the-simple-magnifier.v1,
+    ufis3.2-8-microscopes-and-telescopes.v1,
+    ufis3.3-1-youngs-double-slit-interference.v1,
+    ufis3.3-2-mathematics-of-interference.v1,
+    ufis3.3-3-multiple-slit-interference.v1,
+    ufis3.3-4-interference-in-thin-films.v1,
+    ufis3.3-5-the-michelson-interferometer.v1,
+    ufis3.4-1-single-slit-diffraction.v1,
+    ufis3.4-2-intensity-in-single-slit-diffraction.v1,
+    ufis3.4-3-double-slit-diffraction.v1,
+    ufis3.4-4-diffraction-gratings.v1,
+    ufis3.4-5-circular-apertures-and-resolution.v1,
+    ufis3.4-6-x-ray-diffraction.v1,
+    ufis3.4-7-holography.v1,
+    ufis3.5-1-invariance-of-physical-laws.v1,
+    ufis3.5-2-relativity-of-simultaneity.v1,
+    ufis3.5-3-time-dilation.v1,
+    ufis3.5-4-length-contraction.v1,
+    ufis3.5-5-the-lorentz-transformation.v1,
+    ufis3.5-6-relativistic-velocity-transformation.v1,
+    ufis3.5-7-doppler-effect-for-light.v1,
+    ufis3.5-8-relativistic-momentum.v1,
+    ufis3.5-9-relativistic-energy.v1,
+    ufis3.6-1-blackbody-radiation.v1,
+    ufis3.6-2-photoelectric-effect.v1,
+    ufis3.6-3-the-compton-effect.v1,
+    ufis3.6-4-bohrs-model-of-the-hydrogen-atom.v1,
+    ufis3.6-5-de-broglies-matter-waves.v1,
+    ufis3.6-6-wave-particle-duality.v1,
+    ufis3.7-1-wave-functions.v1,
+    ufis3.7-2-the-heisenberg-uncertainty-principle.v1,
+    ufis3.7-3-the-schrodinger-equation.v1,
+    ufis3.7-4-the-quantum-particle-in-a-box.v1,
+    ufis3.7-5-the-quantum-harmonic-oscillator.v1,
+    ufis3.7-6-the-quantum-tunneling-of-particles-through-potential-barriers.v1,
+    ufis3.8-1-the-hydrogen-atom.v1,
+    ufis3.8-2-orbital-magnetic-dipole-moment-of-the-electron.v1,
+    ufis3.8-3-electron-spin.v1,
+    ufis3.8-4-the-exclusion-principle-and-the-periodic-table.v1,
+    ufis3.8-5-atomic-spectra-and-x-rays.v1,
+    ufis3.8-6-lasers.v1,
+    ufis3.9-1-types-of-molecular-bonds.v1,
+    ufis3.9-2-molecular-spectra.v1,
+    ufis3.9-3-bonding-in-crystalline-solids.v1,
+    ufis3.9-4-free-electron-model-of-metals.v1,
+    ufis3.9-5-band-theory-of-solids.v1,
+    ufis3.9-6-semiconductors-and-doping.v1,
+    ufis3.9-7-semiconductor-devices.v1,
+    ufis3.9-8-superconductivity.v1,
+    ufis3.10-1-properties-of-nuclei.v1,
+    ufis3.10-2-nuclear-binding-energy.v1,
+    ufis3.10-3-radioactive-decay.v1,
+    ufis3.10-4-nuclear-reactions.v1,
+    ufis3.10-5-fission.v1,
+    ufis3.10-6-nuclear-fusion.v1,
+    ufis3.10-7-medical-applications-and-biological-effects-of-nuclear-radiation.v1,
+    ufis3.11-1-introduction-to-particle-physics.v1,
+    ufis3.11-2-particle-conservation-laws.v1,
+    ufis3.11-3-quarks.v1,
+    ufis3.11-4-particle-accelerators-and-detectors.v1,
+    ufis3.11-5-the-standard-model.v1,
+    ufis3.11-6-the-big-bang.v1,
+    ufis3.11-7-evolution-of-the-early-universe.v1,
+  ]
+  threshold: 0.85
+}

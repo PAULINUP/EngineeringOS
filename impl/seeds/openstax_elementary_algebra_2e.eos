@@ -1,0 +1,825 @@
+@version 1.0.0
+@domain "matematica_media"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Elementary Algebra 2e
+# Fonte: https://openstax.org/books/elementary-algebra-2e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Foundations
+# ------------------------------------------------------------
+KNOWLEDGE mmed.1-1-introduction-to-whole-numbers.v1 FOUNDATIONAL {
+  title: "1.1 Introduction to Whole Numbers"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Use place value with whole numbers; Identify multiples and apply divisibility tests; Find prime factorizations and least common multiples."
+  requires: [mbas.11-4-understand-slope-of-a-line.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.1 Introduction to Whole Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-2-use-the-language-of-algebra.v1 FOUNDATIONAL {
+  title: "1.2 Use the Language of Algebra"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Use variables and algebraic symbols; Simplify expressions using the order of operations; Evaluate an expression; Identify and combine like terms; Translate an English phrase to an algebraic expression."
+  requires: [mmed.1-1-introduction-to-whole-numbers.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.2 Use the Language of Algebra", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-3-add-and-subtract-integers.v1 FOUNDATIONAL {
+  title: "1.3 Add and Subtract Integers"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Use negatives and opposites; Simplify: expressions with absolute value; Add integers; Subtract integers."
+  requires: [mmed.1-2-use-the-language-of-algebra.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.3 Add and Subtract Integers", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-4-multiply-and-divide-integers.v1 FOUNDATIONAL {
+  title: "1.4 Multiply and Divide Integers"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Multiply integers; Divide integers; Simplify expressions with integers; Evaluate variable expressions with integers; Translate English phrases to algebraic expressions; Use integers in applications."
+  requires: [mmed.1-3-add-and-subtract-integers.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.4 Multiply and Divide Integers", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-5-visualize-fractions.v1 FOUNDATIONAL {
+  title: "1.5 Visualize Fractions"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Find equivalent fractions; Simplify fractions; Multiply fractions; Divide fractions; Simplify expressions written with a fraction bar; Translate phrases to expressions with fractions."
+  requires: [mmed.1-4-multiply-and-divide-integers.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.5 Visualize Fractions", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-6-add-and-subtract-fractions.v1 FOUNDATIONAL {
+  title: "1.6 Add and Subtract Fractions"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Add or subtract fractions with a common denominator; Add or subtract fractions with different denominators; Use the order of operations to simplify complex fractions; Evaluate variable expressions with fractions."
+  requires: [mmed.1-5-visualize-fractions.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.6 Add and Subtract Fractions", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-7-decimals.v1 FOUNDATIONAL {
+  title: "1.7 Decimals"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Name and write decimals; Round decimals; Add and subtract decimals; Multiply and divide decimals; Convert decimals, fractions, and percents."
+  requires: [mmed.1-6-add-and-subtract-fractions.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.7 Decimals", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-8-the-real-numbers.v1 FOUNDATIONAL {
+  title: "1.8 The Real Numbers"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions with square roots; Identify integers, rational numbers, irrational numbers, and real numbers; Locate fractions on the number line; Locate decimals on the number line."
+  requires: [mmed.1-7-decimals.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.8 The Real Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-9-properties-of-real-numbers.v1 FOUNDATIONAL {
+  title: "1.9 Properties of Real Numbers"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Use the commutative and associative properties; Use the identity and inverse properties of addition and multiplication; Use the properties of zero; Simplify expressions using the distributive property."
+  requires: [mmed.1-8-the-real-numbers.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.9 Properties of Real Numbers", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.1-10-systems-of-measurement.v1 FOUNDATIONAL {
+  title: "1.10 Systems of Measurement"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Make unit conversions in the US system; Use mixed units of measurement in the US system; Make unit conversions in the metric system; Use mixed units of measurement in the metric system; Convert between the US and the metric systems of measurement; Convert between Fahrenheit and Celsius temperatures."
+  requires: [mmed.1-9-properties-of-real-numbers.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 1.10 Systems of Measurement", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Solving Linear Equations and Inequalities
+# ------------------------------------------------------------
+KNOWLEDGE mmed.2-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality.v1 FOUNDATIONAL {
+  title: "2.1 Solve Equations Using the Subtraction and Addition Properties of Equality"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Verify a solution of an equation; Solve equations using the Subtraction and Addition Properties of Equality; Solve equations that require simplification; Translate to an equation and solve; Translate and solve applications."
+  requires: [mmed.1-10-systems-of-measurement.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 2.1 Solve Equations Using the Subtraction and Addition Properties of Equality", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.2-2-solve-equations-using-the-division-and-multiplication-properties-of-equality.v1 FOUNDATIONAL {
+  title: "2.2 Solve Equations using the Division and Multiplication Properties of Equality"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve equations using the Division and Multiplication Properties of Equality; Solve equations that require simplification; Translate to an equation and solve; Translate and solve applications."
+  requires: [mmed.2-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 2.2 Solve Equations using the Division and Multiplication Properties of Equality", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.2-3-solve-equations-with-variables-and-constants-on-both-sides.v1 FOUNDATIONAL {
+  title: "2.3 Solve Equations with Variables and Constants on Both Sides"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve an equation with constants on both sides; Solve an equation with variables on both sides; Solve an equation with variables and constants on both sides."
+  requires: [mmed.2-2-solve-equations-using-the-division-and-multiplication-properties-of-equality.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 2.3 Solve Equations with Variables and Constants on Both Sides", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.2-4-use-a-general-strategy-to-solve-linear-equations.v1 FOUNDATIONAL {
+  title: "2.4 Use a General Strategy to Solve Linear Equations"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve equations using a general strategy; Classify equations."
+  requires: [mmed.2-3-solve-equations-with-variables-and-constants-on-both-sides.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 2.4 Use a General Strategy to Solve Linear Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.2-5-solve-equations-with-fractions-or-decimals.v1 FOUNDATIONAL {
+  title: "2.5 Solve Equations with Fractions or Decimals"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve equations with fraction coefficients; Solve equations with decimal coefficients."
+  requires: [mmed.2-4-use-a-general-strategy-to-solve-linear-equations.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 2.5 Solve Equations with Fractions or Decimals", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.2-6-solve-a-formula-for-a-specific-variable.v1 FOUNDATIONAL {
+  title: "2.6 Solve a Formula for a Specific Variable"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Use the Distance, Rate, and Time formula; Solve a formula for a specific variable."
+  requires: [mmed.2-5-solve-equations-with-fractions-or-decimals.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 2.6 Solve a Formula for a Specific Variable", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.2-7-solve-linear-inequalities.v1 FOUNDATIONAL {
+  title: "2.7 Solve Linear Inequalities"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Graph inequalities on the number line; Solve inequalities using the Subtraction and Addition Properties of inequality; Solve inequalities using the Division and Multiplication Properties of inequality; Solve inequalities that require simplification; Translate to an inequality and solve."
+  requires: [mmed.2-6-solve-a-formula-for-a-specific-variable.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 2.7 Solve Linear Inequalities", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Math Models
+# ------------------------------------------------------------
+KNOWLEDGE mmed.3-1-use-a-problem-solving-strategy.v1 FOUNDATIONAL {
+  title: "3.1 Use a Problem-Solving Strategy"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Approach word problems with a positive attitude; Use a problem-solving strategy for word problems; Solve number problems."
+  requires: [mmed.2-7-solve-linear-inequalities.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 3.1 Use a Problem-Solving Strategy", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.3-2-solve-percent-applications.v1 FOUNDATIONAL {
+  title: "3.2 Solve Percent Applications"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Translate and solve basic percent equations; Solve percent applications; Find percent increase and percent decrease; Solve simple interest applications; Solve applications with discount or mark-up."
+  requires: [mmed.3-1-use-a-problem-solving-strategy.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 3.2 Solve Percent Applications", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.3-3-solve-mixture-applications.v1 FOUNDATIONAL {
+  title: "3.3 Solve Mixture Applications"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve coin word problems; Solve ticket and stamp word problems; Solve mixture word problems; Use the mixture model to solve investment problems using simple interest."
+  requires: [mmed.3-2-solve-percent-applications.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 3.3 Solve Mixture Applications", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.3-4-solve-geometry-applications-triangles-rectangles-and-the-pythagorean-theorem.v1 FOUNDATIONAL {
+  title: "3.4 Solve Geometry Applications: Triangles, Rectangles, and the Pythagorean Theorem"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve applications using properties of triangles; Use the Pythagorean Theorem; Solve applications using rectangle properties."
+  requires: [mmed.3-3-solve-mixture-applications.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 3.4 Solve Geometry Applications: Triangles, Rectangles, and the Pythagorean Theorem", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.3-5-solve-uniform-motion-applications.v1 FOUNDATIONAL {
+  title: "3.5 Solve Uniform Motion Applications"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve uniform motion applications."
+  requires: [mmed.3-4-solve-geometry-applications-triangles-rectangles-and-the-pythagorean-theorem.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 3.5 Solve Uniform Motion Applications", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.3-6-solve-applications-with-linear-inequalities.v1 FOUNDATIONAL {
+  title: "3.6 Solve Applications with Linear Inequalities"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve applications with linear inequalities."
+  requires: [mmed.3-5-solve-uniform-motion-applications.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 3.6 Solve Applications with Linear Inequalities", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Graphs
+# ------------------------------------------------------------
+KNOWLEDGE mmed.4-1-use-the-rectangular-coordinate-system.v1 FOUNDATIONAL {
+  title: "4.1 Use the Rectangular Coordinate System"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Plot points in a rectangular coordinate system; Verify solutions to an equation in two variables; Complete a table of solutions to a linear equation; Find solutions to a linear equation in two variables."
+  requires: [mmed.3-6-solve-applications-with-linear-inequalities.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 4.1 Use the Rectangular Coordinate System", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.4-2-graph-linear-equations-in-two-variables.v1 FOUNDATIONAL {
+  title: "4.2 Graph Linear Equations in Two Variables"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize the relationship between the solutions of an equation and its graph; Graph a linear equation by plotting points; Graph vertical and horizontal lines."
+  requires: [mmed.4-1-use-the-rectangular-coordinate-system.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 4.2 Graph Linear Equations in Two Variables", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.4-3-graph-with-intercepts.v1 FOUNDATIONAL {
+  title: "4.3 Graph with Intercepts"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the x - and y - intercepts on a graph; Find the x - and y - intercepts from an equation of a line; Graph a line using the intercepts."
+  requires: [mmed.4-2-graph-linear-equations-in-two-variables.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 4.3 Graph with Intercepts", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.4-4-understand-slope-of-a-line.v1 FOUNDATIONAL {
+  title: "4.4 Understand Slope of a Line"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Use geoboards to model slope; Use m=riserunm=riserun to find the slope of a line from its graph; Find the slope of horizontal and vertical lines; Use the slope formula to find the slope of a line between two points; Graph a line given a point and the slope; Solve slope applications."
+  requires: [mmed.4-3-graph-with-intercepts.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 4.4 Understand Slope of a Line", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.4-5-use-the-slope-intercept-form-of-an-equation-of-a-line.v1 FOUNDATIONAL {
+  title: "4.5 Use the Slope-Intercept Form of an Equation of a Line"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize the relation between the graph and the slope–intercept form of an equation of a line; Identify the slope and y-intercept form of an equation of a line; Graph a line using its slope and intercept; Choose the most convenient method to graph a line; Graph and interpret applications of slope–intercept; Use slopes to identify parallel lines; Use slopes to identify perpendicular lines."
+  requires: [mmed.4-4-understand-slope-of-a-line.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 4.5 Use the Slope-Intercept Form of an Equation of a Line", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.4-6-find-the-equation-of-a-line.v1 FOUNDATIONAL {
+  title: "4.6 Find the Equation of a Line"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Find an equation of the line given the slope and yy-intercept; Find an equation of the line given the slope and a point; Find an equation of the line given two points; Find an equation of a line parallel to a given line; Find an equation of a line perpendicular to a given line."
+  requires: [mmed.4-5-use-the-slope-intercept-form-of-an-equation-of-a-line.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 4.6 Find the Equation of a Line", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.4-7-graphs-of-linear-inequalities.v1 FOUNDATIONAL {
+  title: "4.7 Graphs of Linear Inequalities"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Verify solutions to an inequality in two variables; Recognize the relation between the solutions of an inequality and its graph; Graph linear inequalities."
+  requires: [mmed.4-6-find-the-equation-of-a-line.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 4.7 Graphs of Linear Inequalities", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Systems of Linear Equations
+# ------------------------------------------------------------
+KNOWLEDGE mmed.5-1-solve-systems-of-equations-by-graphing.v1 FOUNDATIONAL {
+  title: "5.1 Solve Systems of Equations by Graphing"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Determine whether an ordered pair is a solution of a system of equations; Solve a system of linear equations by graphing; Determine the number of solutions of linear system; Solve applications of systems of equations by graphing."
+  requires: [mmed.4-7-graphs-of-linear-inequalities.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 5.1 Solve Systems of Equations by Graphing", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.5-2-solving-systems-of-equations-by-substitution.v1 FOUNDATIONAL {
+  title: "5.2 Solving Systems of Equations by Substitution"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve a system of equations by substitution; Solve applications of systems of equations by substitution."
+  requires: [mmed.5-1-solve-systems-of-equations-by-graphing.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 5.2 Solving Systems of Equations by Substitution", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.5-3-solve-systems-of-equations-by-elimination.v1 FOUNDATIONAL {
+  title: "5.3 Solve Systems of Equations by Elimination"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve a system of equations by elimination; Solve applications of systems of equations by elimination; Choose the most convenient method to solve a system of linear equations."
+  requires: [mmed.5-2-solving-systems-of-equations-by-substitution.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 5.3 Solve Systems of Equations by Elimination", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.5-4-solve-applications-with-systems-of-equations.v1 FOUNDATIONAL {
+  title: "5.4 Solve Applications with Systems of Equations"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Translate to a system of equations; Solve direct translation applications; Solve geometry applications; Solve uniform motion applications."
+  requires: [mmed.5-3-solve-systems-of-equations-by-elimination.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 5.4 Solve Applications with Systems of Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.5-5-solve-mixture-applications-with-systems-of-equations.v1 FOUNDATIONAL {
+  title: "5.5 Solve Mixture Applications with Systems of Equations"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve mixture applications; Solve interest applications."
+  requires: [mmed.5-4-solve-applications-with-systems-of-equations.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 5.5 Solve Mixture Applications with Systems of Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.5-6-graphing-systems-of-linear-inequalities.v1 FOUNDATIONAL {
+  title: "5.6 Graphing Systems of Linear Inequalities"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Determine whether an ordered pair is a solution of a system of linear inequalities; Solve a system of linear inequalities by graphing; Solve applications of systems of inequalities."
+  requires: [mmed.5-5-solve-mixture-applications-with-systems-of-equations.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 5.6 Graphing Systems of Linear Inequalities", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Polynomials
+# ------------------------------------------------------------
+KNOWLEDGE mmed.6-1-add-and-subtract-polynomials.v1 FOUNDATIONAL {
+  title: "6.1 Add and Subtract Polynomials"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Identify polynomials, monomials, binomials, and trinomials; Determine the degree of polynomials; Add and subtract monomials; Add and subtract polynomials; Evaluate a polynomial for a given value."
+  requires: [mmed.5-6-graphing-systems-of-linear-inequalities.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 6.1 Add and Subtract Polynomials", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.6-2-use-multiplication-properties-of-exponents.v1 FOUNDATIONAL {
+  title: "6.2 Use Multiplication Properties of Exponents"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions with exponents; Simplify expressions using the Product Property for Exponents; Simplify expressions using the Power Property for Exponents; Simplify expressions using the Product to a Power Property; Simplify expressions by applying several properties; Multiply monomials."
+  requires: [mmed.6-1-add-and-subtract-polynomials.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 6.2 Use Multiplication Properties of Exponents", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.6-3-multiply-polynomials.v1 FOUNDATIONAL {
+  title: "6.3 Multiply Polynomials"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Multiply a polynomial by a monomial; Multiply a binomial by a binomial; Multiply a trinomial by a binomial."
+  requires: [mmed.6-2-use-multiplication-properties-of-exponents.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 6.3 Multiply Polynomials", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.6-4-special-products.v1 FOUNDATIONAL {
+  title: "6.4 Special Products"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Square a binomial using the Binomial Squares Pattern; Multiply conjugates using the Product of Conjugates Pattern; Recognize and use the appropriate special product pattern."
+  requires: [mmed.6-3-multiply-polynomials.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 6.4 Special Products", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.6-5-divide-monomials.v1 FOUNDATIONAL {
+  title: "6.5 Divide Monomials"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions using the Quotient Property for Exponents; Simplify expressions with zero exponents; Simplify expressions using the quotient to a Power Property; Simplify expressions by applying several properties; Divide monomials."
+  requires: [mmed.6-4-special-products.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 6.5 Divide Monomials", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.6-6-divide-polynomials.v1 FOUNDATIONAL {
+  title: "6.6 Divide Polynomials"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Divide a polynomial by a monomial; Divide a polynomial by a binomial."
+  requires: [mmed.6-5-divide-monomials.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 6.6 Divide Polynomials", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.6-7-integer-exponents-and-scientific-notation.v1 FOUNDATIONAL {
+  title: "6.7 Integer Exponents and Scientific Notation"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Use the definition of a negative exponent; Simplify expressions with integer exponents; Convert from decimal notation to scientific notation; Convert scientific notation to decimal form; Multiply and divide using scientific notation."
+  requires: [mmed.6-6-divide-polynomials.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 6.7 Integer Exponents and Scientific Notation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Factoring
+# ------------------------------------------------------------
+KNOWLEDGE mmed.7-1-greatest-common-factor-and-factor-by-grouping.v1 FOUNDATIONAL {
+  title: "7.1 Greatest Common Factor and Factor by Grouping"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Find the greatest common factor of two or more expressions; Factor the greatest common factor from a polynomial; Factor by grouping."
+  requires: [mmed.6-7-integer-exponents-and-scientific-notation.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 7.1 Greatest Common Factor and Factor by Grouping", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.7-2-factor-trinomials-of-the-form-x2-bx-c.v1 FOUNDATIONAL {
+  title: "7.2 Factor Trinomials of the Form x2+bx+c"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Factor trinomials of the form x2+bx+cx2+bx+c; Factor trinomials of the form x2+bxy+cy2x2+bxy+cy2."
+  requires: [mmed.7-1-greatest-common-factor-and-factor-by-grouping.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 7.2 Factor Trinomials of the Form x2+bx+c", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.7-3-factor-trinomials-of-the-form-ax2-bx-c.v1 FOUNDATIONAL {
+  title: "7.3 Factor Trinomials of the Form ax2+bx+c"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize a preliminary strategy to factor polynomials completely; Factor trinomials of the form ax2+bx+cax2+bx+c with a GCF; Factor trinomials using trial and error; Factor trinomials using the ‘ac’ method."
+  requires: [mmed.7-2-factor-trinomials-of-the-form-x2-bx-c.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 7.3 Factor Trinomials of the Form ax2+bx+c", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.7-4-factor-special-products.v1 FOUNDATIONAL {
+  title: "7.4 Factor Special Products"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Factor perfect square trinomials; Factor differences of squares; Factor sums and differences of cubes; Choose method to factor a polynomial completely."
+  requires: [mmed.7-3-factor-trinomials-of-the-form-ax2-bx-c.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 7.4 Factor Special Products", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.7-5-general-strategy-for-factoring-polynomials.v1 FOUNDATIONAL {
+  title: "7.5 General Strategy for Factoring Polynomials"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize and use the appropriate method to factor a polynomial completely."
+  requires: [mmed.7-4-factor-special-products.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 7.5 General Strategy for Factoring Polynomials", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.7-6-quadratic-equations.v1 FOUNDATIONAL {
+  title: "7.6 Quadratic Equations"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve quadratic equations by using the Zero Product Property; Solve quadratic equations factoring; Solve applications modeled by quadratic equations."
+  requires: [mmed.7-5-general-strategy-for-factoring-polynomials.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 7.6 Quadratic Equations", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Rational Expressions and Equations
+# ------------------------------------------------------------
+KNOWLEDGE mmed.8-1-simplify-rational-expressions.v1 FOUNDATIONAL {
+  title: "8.1 Simplify Rational Expressions"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Determine the values for which a rational expression is undefined; Evaluate rational expressions; Simplify rational expressions; Simplify rational expressions with opposite factors."
+  requires: [mmed.7-6-quadratic-equations.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.1 Simplify Rational Expressions", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.8-2-multiply-and-divide-rational-expressions.v1 FOUNDATIONAL {
+  title: "8.2 Multiply and Divide Rational Expressions"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Multiply rational expressions; Divide rational expressions."
+  requires: [mmed.8-1-simplify-rational-expressions.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.2 Multiply and Divide Rational Expressions", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.8-3-add-and-subtract-rational-expressions-with-a-common-denominator.v1 FOUNDATIONAL {
+  title: "8.3 Add and Subtract Rational Expressions with a Common Denominator"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Add rational expressions with a common denominator; Subtract rational expressions with a common denominator; Add and subtract rational expressions whose denominators are opposites."
+  requires: [mmed.8-2-multiply-and-divide-rational-expressions.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.3 Add and Subtract Rational Expressions with a Common Denominator", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.8-4-add-and-subtract-rational-expressions-with-unlike-denominators.v1 FOUNDATIONAL {
+  title: "8.4 Add and Subtract Rational Expressions with Unlike Denominators"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Find the least common denominator of rational expressions; Find equivalent rational expressions; Add rational expressions with different denominators; Subtract rational expressions with different denominators."
+  requires: [mmed.8-3-add-and-subtract-rational-expressions-with-a-common-denominator.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.4 Add and Subtract Rational Expressions with Unlike Denominators", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.8-5-simplify-complex-rational-expressions.v1 FOUNDATIONAL {
+  title: "8.5 Simplify Complex Rational Expressions"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify a complex rational expression by writing it as division; Simplify a complex rational expression by using the LCD."
+  requires: [mmed.8-4-add-and-subtract-rational-expressions-with-unlike-denominators.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.5 Simplify Complex Rational Expressions", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.8-6-solve-rational-equations.v1 FOUNDATIONAL {
+  title: "8.6 Solve Rational Equations"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve rational equations; Solve a rational equation for a specific variable."
+  requires: [mmed.8-5-simplify-complex-rational-expressions.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.6 Solve Rational Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.8-7-solve-proportion-and-similar-figure-applications.v1 FOUNDATIONAL {
+  title: "8.7 Solve Proportion and Similar Figure Applications"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve proportions; Solve similar figure applications."
+  requires: [mmed.8-6-solve-rational-equations.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.7 Solve Proportion and Similar Figure Applications", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.8-8-solve-uniform-motion-and-work-applications.v1 FOUNDATIONAL {
+  title: "8.8 Solve Uniform Motion and Work Applications"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve uniform motion applications; Solve work applications."
+  requires: [mmed.8-7-solve-proportion-and-similar-figure-applications.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.8 Solve Uniform Motion and Work Applications", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.8-9-use-direct-and-inverse-variation.v1 FOUNDATIONAL {
+  title: "8.9 Use Direct and Inverse Variation"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve direct variation problems; Solve inverse variation problems."
+  requires: [mmed.8-8-solve-uniform-motion-and-work-applications.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 8.9 Use Direct and Inverse Variation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Roots and Radicals
+# ------------------------------------------------------------
+KNOWLEDGE mmed.9-1-simplify-and-use-square-roots.v1 FOUNDATIONAL {
+  title: "9.1 Simplify and Use Square Roots"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions with square roots; Estimate square roots; Approximate square roots; Simplify variable expressions with square roots."
+  requires: [mmed.8-9-use-direct-and-inverse-variation.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 9.1 Simplify and Use Square Roots", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.9-2-simplify-square-roots.v1 FOUNDATIONAL {
+  title: "9.2 Simplify Square Roots"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Use the Product Property to simplify square roots; Use the Quotient Property to simplify square roots."
+  requires: [mmed.9-1-simplify-and-use-square-roots.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 9.2 Simplify Square Roots", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.9-3-add-and-subtract-square-roots.v1 FOUNDATIONAL {
+  title: "9.3 Add and Subtract Square Roots"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Add and subtract like square roots; Add and subtract square roots that need simplification."
+  requires: [mmed.9-2-simplify-square-roots.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 9.3 Add and Subtract Square Roots", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.9-4-multiply-square-roots.v1 FOUNDATIONAL {
+  title: "9.4 Multiply Square Roots"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Multiply square roots; Use polynomial multiplication to multiply square roots."
+  requires: [mmed.9-3-add-and-subtract-square-roots.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 9.4 Multiply Square Roots", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.9-5-divide-square-roots.v1 FOUNDATIONAL {
+  title: "9.5 Divide Square Roots"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Divide square roots; Rationalize a one-term denominator; Rationalize a two-term denominator."
+  requires: [mmed.9-4-multiply-square-roots.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 9.5 Divide Square Roots", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.9-6-solve-equations-with-square-roots.v1 FOUNDATIONAL {
+  title: "9.6 Solve Equations with Square Roots"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve radical equations; Use square roots in applications."
+  requires: [mmed.9-5-divide-square-roots.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 9.6 Solve Equations with Square Roots", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.9-7-higher-roots.v1 FOUNDATIONAL {
+  title: "9.7 Higher Roots"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions with higher roots; Use the Product Property to simplify expressions with higher roots; Use the Quotient Property to simplify expressions with higher roots; Add and subtract higher roots."
+  requires: [mmed.9-6-solve-equations-with-square-roots.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 9.7 Higher Roots", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.9-8-rational-exponents.v1 FOUNDATIONAL {
+  title: "9.8 Rational Exponents"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Simplify expressions with a1na1n; Simplify expressions with amnamn; Use the Laws of Exponents to simply expressions with rational exponents."
+  requires: [mmed.9-7-higher-roots.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 9.8 Rational Exponents", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Quadratic Equations
+# ------------------------------------------------------------
+KNOWLEDGE mmed.10-1-solve-quadratic-equations-using-the-square-root-property.v1 FOUNDATIONAL {
+  title: "10.1 Solve Quadratic Equations Using the Square Root Property"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve quadratic equations of the form ax2=kax2=k using the Square Root Property; Solve quadratic equations of the form a(x−h)2=ka(x−h)2=k using the Square Root Property."
+  requires: [mmed.9-8-rational-exponents.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 10.1 Solve Quadratic Equations Using the Square Root Property", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.10-2-solve-quadratic-equations-by-completing-the-square.v1 FOUNDATIONAL {
+  title: "10.2 Solve Quadratic Equations by Completing the Square"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Complete the square of a binomial expression; Solve quadratic equations of the form x2+bx+c=0x2+bx+c=0 by completing the square; Solve quadratic equations of the form ax2+bx+c=0ax2+bx+c=0 by completing the square."
+  requires: [mmed.10-1-solve-quadratic-equations-using-the-square-root-property.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 10.2 Solve Quadratic Equations by Completing the Square", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.10-3-solve-quadratic-equations-using-the-quadratic-formula.v1 FOUNDATIONAL {
+  title: "10.3 Solve Quadratic Equations Using the Quadratic Formula"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve quadratic equations using the quadratic formula; Use the discriminant to predict the number of solutions of a quadratic equation; Identify the most appropriate method to use to solve a quadratic equation."
+  requires: [mmed.10-2-solve-quadratic-equations-by-completing-the-square.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 10.3 Solve Quadratic Equations Using the Quadratic Formula", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.10-4-solve-applications-modeled-by-quadratic-equations.v1 FOUNDATIONAL {
+  title: "10.4 Solve Applications Modeled by Quadratic Equations"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Solve applications modeled by Quadratic Equations."
+  requires: [mmed.10-3-solve-quadratic-equations-using-the-quadratic-formula.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 10.4 Solve Applications Modeled by Quadratic Equations", weight: 0.90 }
+}
+
+KNOWLEDGE mmed.10-5-graphing-quadratic-equations-in-two-variables.v1 FOUNDATIONAL {
+  title: "10.5 Graphing Quadratic Equations in Two Variables"
+  domain: "matematica_media"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize the graph of a quadratic equation in two variables; Find the axis of symmetry and vertex of a parabola; Find the intercepts of a parabola; Graph quadratic equations in two variables; Solve maximum and minimum applications."
+  requires: [mmed.10-4-solve-applications-modeled-by-quadratic-equations.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Elementary Algebra 2e - 10.5 Graphing Quadratic Equations in Two Variables", weight: 0.90 }
+}
+
+MISSION mission.mmed.v1 {
+  label: "Matemática Média (Álgebra Elementar)"
+  requires: [
+    mmed.1-1-introduction-to-whole-numbers.v1,
+    mmed.1-2-use-the-language-of-algebra.v1,
+    mmed.1-3-add-and-subtract-integers.v1,
+    mmed.1-4-multiply-and-divide-integers.v1,
+    mmed.1-5-visualize-fractions.v1,
+    mmed.1-6-add-and-subtract-fractions.v1,
+    mmed.1-7-decimals.v1,
+    mmed.1-8-the-real-numbers.v1,
+    mmed.1-9-properties-of-real-numbers.v1,
+    mmed.1-10-systems-of-measurement.v1,
+    mmed.2-1-solve-equations-using-the-subtraction-and-addition-properties-of-equality.v1,
+    mmed.2-2-solve-equations-using-the-division-and-multiplication-properties-of-equality.v1,
+    mmed.2-3-solve-equations-with-variables-and-constants-on-both-sides.v1,
+    mmed.2-4-use-a-general-strategy-to-solve-linear-equations.v1,
+    mmed.2-5-solve-equations-with-fractions-or-decimals.v1,
+    mmed.2-6-solve-a-formula-for-a-specific-variable.v1,
+    mmed.2-7-solve-linear-inequalities.v1,
+    mmed.3-1-use-a-problem-solving-strategy.v1,
+    mmed.3-2-solve-percent-applications.v1,
+    mmed.3-3-solve-mixture-applications.v1,
+    mmed.3-4-solve-geometry-applications-triangles-rectangles-and-the-pythagorean-theorem.v1,
+    mmed.3-5-solve-uniform-motion-applications.v1,
+    mmed.3-6-solve-applications-with-linear-inequalities.v1,
+    mmed.4-1-use-the-rectangular-coordinate-system.v1,
+    mmed.4-2-graph-linear-equations-in-two-variables.v1,
+    mmed.4-3-graph-with-intercepts.v1,
+    mmed.4-4-understand-slope-of-a-line.v1,
+    mmed.4-5-use-the-slope-intercept-form-of-an-equation-of-a-line.v1,
+    mmed.4-6-find-the-equation-of-a-line.v1,
+    mmed.4-7-graphs-of-linear-inequalities.v1,
+    mmed.5-1-solve-systems-of-equations-by-graphing.v1,
+    mmed.5-2-solving-systems-of-equations-by-substitution.v1,
+    mmed.5-3-solve-systems-of-equations-by-elimination.v1,
+    mmed.5-4-solve-applications-with-systems-of-equations.v1,
+    mmed.5-5-solve-mixture-applications-with-systems-of-equations.v1,
+    mmed.5-6-graphing-systems-of-linear-inequalities.v1,
+    mmed.6-1-add-and-subtract-polynomials.v1,
+    mmed.6-2-use-multiplication-properties-of-exponents.v1,
+    mmed.6-3-multiply-polynomials.v1,
+    mmed.6-4-special-products.v1,
+    mmed.6-5-divide-monomials.v1,
+    mmed.6-6-divide-polynomials.v1,
+    mmed.6-7-integer-exponents-and-scientific-notation.v1,
+    mmed.7-1-greatest-common-factor-and-factor-by-grouping.v1,
+    mmed.7-2-factor-trinomials-of-the-form-x2-bx-c.v1,
+    mmed.7-3-factor-trinomials-of-the-form-ax2-bx-c.v1,
+    mmed.7-4-factor-special-products.v1,
+    mmed.7-5-general-strategy-for-factoring-polynomials.v1,
+    mmed.7-6-quadratic-equations.v1,
+    mmed.8-1-simplify-rational-expressions.v1,
+    mmed.8-2-multiply-and-divide-rational-expressions.v1,
+    mmed.8-3-add-and-subtract-rational-expressions-with-a-common-denominator.v1,
+    mmed.8-4-add-and-subtract-rational-expressions-with-unlike-denominators.v1,
+    mmed.8-5-simplify-complex-rational-expressions.v1,
+    mmed.8-6-solve-rational-equations.v1,
+    mmed.8-7-solve-proportion-and-similar-figure-applications.v1,
+    mmed.8-8-solve-uniform-motion-and-work-applications.v1,
+    mmed.8-9-use-direct-and-inverse-variation.v1,
+    mmed.9-1-simplify-and-use-square-roots.v1,
+    mmed.9-2-simplify-square-roots.v1,
+    mmed.9-3-add-and-subtract-square-roots.v1,
+    mmed.9-4-multiply-square-roots.v1,
+    mmed.9-5-divide-square-roots.v1,
+    mmed.9-6-solve-equations-with-square-roots.v1,
+    mmed.9-7-higher-roots.v1,
+    mmed.9-8-rational-exponents.v1,
+    mmed.10-1-solve-quadratic-equations-using-the-square-root-property.v1,
+    mmed.10-2-solve-quadratic-equations-by-completing-the-square.v1,
+    mmed.10-3-solve-quadratic-equations-using-the-quadratic-formula.v1,
+    mmed.10-4-solve-applications-modeled-by-quadratic-equations.v1,
+    mmed.10-5-graphing-quadratic-equations-in-two-variables.v1,
+  ]
+  threshold: 0.85
+}
