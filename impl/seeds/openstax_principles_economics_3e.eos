@@ -1,0 +1,1678 @@
+@version 1.0.0
+@domain "economia_faculdade"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Principles of Economics 3e
+# Fonte: https://openstax.org/books/principles-economics-3e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Welcome to Economics!
+# ------------------------------------------------------------
+KNOWLEDGE eco.1-1-what-is-economics-and-why-is-it-important.v1 INTERMEDIATE {
+  title: "1.1 What Is Economics, and Why Is It Important?"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the importance of studying economics; Explain the relationship between production and division of labor; Evaluate the significance of scarcity."
+  requires: [mbas.11-4-understand-slope-of-a-line.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 1.1 What Is Economics, and Why Is It Important?", weight: 0.90 }
+}
+
+KNOWLEDGE eco.1-2-microeconomics-and-macroeconomics.v1 INTERMEDIATE {
+  title: "1.2 Microeconomics and Macroeconomics"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe microeconomics; Describe macroeconomics; Contrast monetary policy and fiscal policy."
+  requires: [eco.1-1-what-is-economics-and-why-is-it-important.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 1.2 Microeconomics and Macroeconomics", weight: 0.90 }
+}
+
+KNOWLEDGE eco.1-3-how-economists-use-theories-and-models-to-understand-economic-issues.v1 INTERMEDIATE {
+  title: "1.3 How Economists Use Theories and Models to Understand Economic Issues"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Interpret a circular flow diagram; Explain the importance of economic theories and models; Describe goods and services markets and labor markets."
+  requires: [eco.1-2-microeconomics-and-macroeconomics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 1.3 How Economists Use Theories and Models to Understand Economic Issues", weight: 0.90 }
+}
+
+KNOWLEDGE eco.1-4-how-to-organize-economies-an-overview-of-economic-systems.v1 INTERMEDIATE {
+  title: "1.4 How To Organize Economies: An Overview of Economic Systems"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Contrast traditional economies, command economies, and market economies; Explain gross domestic product (GDP); Assess the importance and effects of globalization."
+  requires: [eco.1-3-how-economists-use-theories-and-models-to-understand-economic-issues.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 1.4 How To Organize Economies: An Overview of Economic Systems", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Choice in a World of Scarcity
+# ------------------------------------------------------------
+KNOWLEDGE eco.2-1-how-individuals-make-choices-based-on-their-budget-constraint.v1 INTERMEDIATE {
+  title: "2.1 How Individuals Make Choices Based on Their Budget Constraint"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate and graph budget constraints; Explain opportunity sets and opportunity costs; Evaluate the law of diminishing marginal utility; Explain how marginal analysis and utility influence choices."
+  requires: [eco.1-4-how-to-organize-economies-an-overview-of-economic-systems.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 2.1 How Individuals Make Choices Based on Their Budget Constraint", weight: 0.90 }
+}
+
+KNOWLEDGE eco.2-2-the-production-possibilities-frontier-and-social-choices.v1 INTERMEDIATE {
+  title: "2.2 The Production Possibilities Frontier and Social Choices"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Interpret production possibilities frontier graphs; Contrast a budget constraint and a production possibilities frontier; Explain the relationship between a production possibilities frontier and the law of diminishing returns; Contrast productive efficiency and allocative efficiency; Define comparative advantage."
+  requires: [eco.2-1-how-individuals-make-choices-based-on-their-budget-constraint.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 2.2 The Production Possibilities Frontier and Social Choices", weight: 0.90 }
+}
+
+KNOWLEDGE eco.2-3-confronting-objections-to-the-economic-approach.v1 INTERMEDIATE {
+  title: "2.3 Confronting Objections to the Economic Approach"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze arguments against economic approaches to decision-making; Interpret a tradeoff diagram; Contrast normative statements and positive statements."
+  requires: [eco.2-2-the-production-possibilities-frontier-and-social-choices.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 2.3 Confronting Objections to the Economic Approach", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Demand and Supply
+# ------------------------------------------------------------
+KNOWLEDGE eco.3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services.v1 INTERMEDIATE {
+  title: "3.1 Demand, Supply, and Equilibrium in Markets for Goods and Services"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain demand, quantity demanded, and the law of demand; Explain supply, quantity supplied, and the law of supply; Identify a demand curve and a supply curve; Explain equilibrium, equilibrium price, and equilibrium quantity."
+  requires: [eco.2-3-confronting-objections-to-the-economic-approach.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 3.1 Demand, Supply, and Equilibrium in Markets for Goods and Services", weight: 0.90 }
+}
+
+KNOWLEDGE eco.3-2-shifts-in-demand-and-supply-for-goods-and-services.v1 INTERMEDIATE {
+  title: "3.2 Shifts in Demand and Supply for Goods and Services"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify factors that affect demand; Graph demand curves and demand shifts; Identify factors that affect supply; Graph supply curves and supply shifts."
+  requires: [eco.3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 3.2 Shifts in Demand and Supply for Goods and Services", weight: 0.90 }
+}
+
+KNOWLEDGE eco.3-3-changes-in-equilibrium-price-and-quantity-the-four-step-process.v1 INTERMEDIATE {
+  title: "3.3 Changes in Equilibrium Price and Quantity: The Four-Step Process"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify equilibrium price and quantity through the four-step process; Graph equilibrium price and quantity; Contrast shifts of demand or supply and movements along a demand or supply curve; Graph demand and supply curves, including equilibrium price and quantity, based on real-world examples."
+  requires: [eco.3-2-shifts-in-demand-and-supply-for-goods-and-services.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 3.3 Changes in Equilibrium Price and Quantity: The Four-Step Process", weight: 0.90 }
+}
+
+KNOWLEDGE eco.3-4-price-ceilings-and-price-floors.v1 INTERMEDIATE {
+  title: "3.4 Price Ceilings and Price Floors"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain price controls, price ceilings, and price floors."
+  requires: [eco.3-3-changes-in-equilibrium-price-and-quantity-the-four-step-process.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 3.4 Price Ceilings and Price Floors", weight: 0.90 }
+}
+
+KNOWLEDGE eco.3-5-demand-supply-and-efficiency.v1 INTERMEDIATE {
+  title: "3.5 Demand, Supply, and Efficiency"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Contrast consumer surplus, producer surplus, and social surplus; Explain why price floors and price ceilings can be inefficient; Analyze demand and supply as a social adjustment mechanism."
+  requires: [eco.3-4-price-ceilings-and-price-floors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 3.5 Demand, Supply, and Efficiency", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Labor and Financial Markets
+# ------------------------------------------------------------
+KNOWLEDGE eco.4-1-demand-and-supply-at-work-in-labor-markets.v1 INTERMEDIATE {
+  title: "4.1 Demand and Supply at Work in Labor Markets"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Predict shifts in the demand and supply curves of the labor market; Explain the impact of new technology on the demand and supply curves of the labor market; Explain price floors in the labor market such as minimum wage or a living wage."
+  requires: [eco.3-5-demand-supply-and-efficiency.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 4.1 Demand and Supply at Work in Labor Markets", weight: 0.90 }
+}
+
+KNOWLEDGE eco.4-2-demand-and-supply-in-financial-markets.v1 INTERMEDIATE {
+  title: "4.2 Demand and Supply in Financial Markets"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the demanders and suppliers in a financial market; Explain how interest rates can affect supply and demand; Analyze the economic effects of U.S. debt in terms of domestic financial markets; Explain the role of price ceilings and usury laws in the U.S.."
+  requires: [eco.4-1-demand-and-supply-at-work-in-labor-markets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 4.2 Demand and Supply in Financial Markets", weight: 0.90 }
+}
+
+KNOWLEDGE eco.4-3-the-market-system-as-an-efficient-mechanism-for-information.v1 INTERMEDIATE {
+  title: "4.3 The Market System as an Efficient Mechanism for Information"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Apply demand and supply models to analyze prices and quantities; Explain the effects of price controls on the equilibrium of prices and quantities."
+  requires: [eco.4-2-demand-and-supply-in-financial-markets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 4.3 The Market System as an Efficient Mechanism for Information", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Elasticity
+# ------------------------------------------------------------
+KNOWLEDGE eco.5-1-price-elasticity-of-demand-and-price-elasticity-of-supply.v1 INTERMEDIATE {
+  title: "5.1 Price Elasticity of Demand and Price Elasticity of Supply"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate the price elasticity of demand; Calculate the price elasticity of supply."
+  requires: [eco.4-3-the-market-system-as-an-efficient-mechanism-for-information.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 5.1 Price Elasticity of Demand and Price Elasticity of Supply", weight: 0.90 }
+}
+
+KNOWLEDGE eco.5-2-polar-cases-of-elasticity-and-constant-elasticity.v1 INTERMEDIATE {
+  title: "5.2 Polar Cases of Elasticity and Constant Elasticity"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Differentiate between infinite and zero elasticity; Analyze graphs in order to classify elasticity as constant unitary, infinite, or zero."
+  requires: [eco.5-1-price-elasticity-of-demand-and-price-elasticity-of-supply.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 5.2 Polar Cases of Elasticity and Constant Elasticity", weight: 0.90 }
+}
+
+KNOWLEDGE eco.5-3-elasticity-and-pricing.v1 INTERMEDIATE {
+  title: "5.3 Elasticity and Pricing"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze how price elasticities impact revenue; Evaluate how elasticity can cause shifts in demand and supply; Predict how the long-run and short-run impacts of elasticity affect equilibrium; Explain how the elasticity of demand and supply determine the incidence of a tax on buyers and sellers."
+  requires: [eco.5-2-polar-cases-of-elasticity-and-constant-elasticity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 5.3 Elasticity and Pricing", weight: 0.90 }
+}
+
+KNOWLEDGE eco.5-4-elasticity-in-areas-other-than-price.v1 INTERMEDIATE {
+  title: "5.4 Elasticity in Areas Other Than Price"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate the income elasticity of demand and the cross-price elasticity of demand; Calculate the elasticity in labor and financial capital markets through an understanding of the elasticity of labor supply and the elasticity of savings; Apply concepts of price elasticity to real-world situations."
+  requires: [eco.5-3-elasticity-and-pricing.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 5.4 Elasticity in Areas Other Than Price", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Consumer Choices
+# ------------------------------------------------------------
+KNOWLEDGE eco.6-1-consumption-choices.v1 INTERMEDIATE {
+  title: "6.1 Consumption Choices"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate total utility; Propose decisions that maximize utility; Explain marginal utility and the significance of diminishing marginal utility."
+  requires: [eco.5-4-elasticity-in-areas-other-than-price.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 6.1 Consumption Choices", weight: 0.90 }
+}
+
+KNOWLEDGE eco.6-2-how-changes-in-income-and-prices-affect-consumption-choices.v1 INTERMEDIATE {
+  title: "6.2 How Changes in Income and Prices Affect Consumption Choices"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how income, prices, and preferences affect consumer choices; Contrast the substitution effect and the income effect; Utilize concepts of demand to analyze consumer choices; Apply utility-maximizing choices to governments and businesses."
+  requires: [eco.6-1-consumption-choices.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 6.2 How Changes in Income and Prices Affect Consumption Choices", weight: 0.90 }
+}
+
+KNOWLEDGE eco.6-3-behavioral-economics-an-alternative-framework-for-consumer-choice.v1 INTERMEDIATE {
+  title: "6.3 Behavioral Economics: An Alternative Framework for Consumer Choice"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate the reasons for making intertemporal choices; Interpret an intertemporal budget constraint; Analyze why people in America tend to save such a small percentage of their income."
+  requires: [eco.6-2-how-changes-in-income-and-prices-affect-consumption-choices.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 6.3 Behavioral Economics: An Alternative Framework for Consumer Choice", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Production, Costs, and Industry Structure
+# ------------------------------------------------------------
+KNOWLEDGE eco.7-1-explicit-and-implicit-costs-and-accounting-and-economic-profit.v1 INTERMEDIATE {
+  title: "7.1 Explicit and Implicit Costs, and Accounting and Economic Profit"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the difference between explicit costs and implicit costs; Understand the relationship between cost and revenue."
+  requires: [eco.6-3-behavioral-economics-an-alternative-framework-for-consumer-choice.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 7.1 Explicit and Implicit Costs, and Accounting and Economic Profit", weight: 0.90 }
+}
+
+KNOWLEDGE eco.7-2-production-in-the-short-run.v1 INTERMEDIATE {
+  title: "7.2 Production in the Short Run"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the concept of a production function; Differentiate between the different types of inputs or factors in a production function; Differentiate between fixed and variable inputs; Differentiate between production in the short run and in the long run; Differentiate between total and marginal product; Understand the concept of diminishing marginal productivity."
+  requires: [eco.7-1-explicit-and-implicit-costs-and-accounting-and-economic-profit.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 7.2 Production in the Short Run", weight: 0.90 }
+}
+
+KNOWLEDGE eco.7-3-costs-in-the-short-run.v1 INTERMEDIATE {
+  title: "7.3 Costs in the Short Run"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the relationship between production and costs; Understand that every factor of production has a corresponding factor price; Analyze short-run costs in terms of total cost, fixed cost, variable cost, marginal cost, and average cost; Calculate average profit; Evaluate patterns of costs to determine potential profit."
+  requires: [eco.7-2-production-in-the-short-run.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 7.3 Costs in the Short Run", weight: 0.90 }
+}
+
+KNOWLEDGE eco.7-4-production-in-the-long-run.v1 INTERMEDIATE {
+  title: "7.4 Production in the Long Run"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand how long run production differs from short run production.."
+  requires: [eco.7-3-costs-in-the-short-run.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 7.4 Production in the Long Run", weight: 0.90 }
+}
+
+KNOWLEDGE eco.7-5-costs-in-the-long-run.v1 INTERMEDIATE {
+  title: "7.5 Costs in the Long Run"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate long run total cost; Identify economies of scale, diseconomies of scale, and constant returns to scale; Interpret graphs of long-run average cost curves and short-run average cost curves; Analyze cost and production in the long run and short run."
+  requires: [eco.7-4-production-in-the-long-run.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 7.5 Costs in the Long Run", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Perfect Competition
+# ------------------------------------------------------------
+KNOWLEDGE eco.8-1-perfect-competition-and-why-it-matters.v1 INTERMEDIATE {
+  title: "8.1 Perfect Competition and Why It Matters"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the characteristics of a perfectly competitive market; Discuss how perfectly competitive firms react in the short run and in the long run."
+  requires: [eco.7-5-costs-in-the-long-run.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 8.1 Perfect Competition and Why It Matters", weight: 0.90 }
+}
+
+KNOWLEDGE eco.8-2-how-perfectly-competitive-firms-make-output-decisions.v1 INTERMEDIATE {
+  title: "8.2 How Perfectly Competitive Firms Make Output Decisions"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate profits by comparing total revenue and total cost; Identify profits and losses with the average cost curve; Explain the shutdown point; Determine the price at which a firm should continue producing in the short run."
+  requires: [eco.8-1-perfect-competition-and-why-it-matters.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 8.2 How Perfectly Competitive Firms Make Output Decisions", weight: 0.90 }
+}
+
+KNOWLEDGE eco.8-3-entry-and-exit-decisions-in-the-long-run.v1 INTERMEDIATE {
+  title: "8.3 Entry and Exit Decisions in the Long Run"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how entry and exit lead to zero profits in the long run; Discuss the long-run adjustment process."
+  requires: [eco.8-2-how-perfectly-competitive-firms-make-output-decisions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 8.3 Entry and Exit Decisions in the Long Run", weight: 0.90 }
+}
+
+KNOWLEDGE eco.8-4-efficiency-in-perfectly-competitive-markets.v1 INTERMEDIATE {
+  title: "8.4 Efficiency in Perfectly Competitive Markets"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Apply concepts of productive efficiency and allocative efficiency to perfectly competitive markets; Compare the model of perfect competition to real-world markets."
+  requires: [eco.8-3-entry-and-exit-decisions-in-the-long-run.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 8.4 Efficiency in Perfectly Competitive Markets", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Monopoly
+# ------------------------------------------------------------
+KNOWLEDGE eco.9-1-how-monopolies-form-barriers-to-entry.v1 INTERMEDIATE {
+  title: "9.1 How Monopolies Form: Barriers to Entry"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Distinguish between a natural monopoly and a legal monopoly.; Explain how economies of scale and the control of natural resources led to the necessary formation of legal monopolies; Analyze the importance of trademarks and patents in promoting innovation; Identify examples of predatory pricing."
+  requires: [eco.8-4-efficiency-in-perfectly-competitive-markets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 9.1 How Monopolies Form: Barriers to Entry", weight: 0.90 }
+}
+
+KNOWLEDGE eco.9-2-how-a-profit-maximizing-monopoly-chooses-output-and-price.v1 INTERMEDIATE {
+  title: "9.2 How a Profit-Maximizing Monopoly Chooses Output and Price"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the perceived demand curve for a perfect competitor and a monopoly; Analyze a demand curve for a monopoly and determine the output that maximizes profit and revenue; Calculate marginal revenue and marginal cost; Explain allocative efficiency as it pertains to the efficiency of a monopoly."
+  requires: [eco.9-1-how-monopolies-form-barriers-to-entry.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 9.2 How a Profit-Maximizing Monopoly Chooses Output and Price", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Monopolistic Competition and Oligopoly
+# ------------------------------------------------------------
+KNOWLEDGE eco.10-1-monopolistic-competition.v1 INTERMEDIATE {
+  title: "10.1 Monopolistic Competition"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the significance of differentiated products; Describe how a monopolistic competitor chooses price and quantity; Discuss entry, exit, and efficiency as they pertain to monopolistic competition; Analyze how advertising can impact monopolistic competition."
+  requires: [eco.9-2-how-a-profit-maximizing-monopoly-chooses-output-and-price.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 10.1 Monopolistic Competition", weight: 0.90 }
+}
+
+KNOWLEDGE eco.10-2-oligopoly.v1 INTERMEDIATE {
+  title: "10.2 Oligopoly"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain why and how oligopolies exist; Contrast collusion and competition; Interpret and analyze the prisoner’s dilemma diagram; Evaluate the tradeoffs of imperfect competition."
+  requires: [eco.10-1-monopolistic-competition.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 10.2 Oligopoly", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Monopoly and Antitrust Policy
+# ------------------------------------------------------------
+KNOWLEDGE eco.11-1-corporate-mergers.v1 INTERMEDIATE {
+  title: "11.1 Corporate Mergers"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain antitrust law and its significance; Calculate concentration ratios; Calculate the Herfindahl-Hirschman Index (HHI); Evaluate methods of antitrust regulation."
+  requires: [eco.10-2-oligopoly.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 11.1 Corporate Mergers", weight: 0.90 }
+}
+
+KNOWLEDGE eco.11-2-regulating-anticompetitive-behavior.v1 INTERMEDIATE {
+  title: "11.2 Regulating Anticompetitive Behavior"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze restrictive practices; Explain tying sales, bundling, and predatory pricing; Evaluate a real-world situation of possible anticompetitive and restrictive practices."
+  requires: [eco.11-1-corporate-mergers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 11.2 Regulating Anticompetitive Behavior", weight: 0.90 }
+}
+
+KNOWLEDGE eco.11-3-regulating-natural-monopolies.v1 INTERMEDIATE {
+  title: "11.3 Regulating Natural Monopolies"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate the appropriate competition policy for a natural monopoly; Interpret a graph of regulatory choices; Contrast cost-plus and price cap regulation."
+  requires: [eco.11-2-regulating-anticompetitive-behavior.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 11.3 Regulating Natural Monopolies", weight: 0.90 }
+}
+
+KNOWLEDGE eco.11-4-the-great-deregulation-experiment.v1 INTERMEDIATE {
+  title: "11.4 The Great Deregulation Experiment"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate the effectiveness of price regulation and antitrust policy; Explain regulatory capture and its significance."
+  requires: [eco.11-3-regulating-natural-monopolies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 11.4 The Great Deregulation Experiment", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Environmental Protection and Negative Externalities
+# ------------------------------------------------------------
+KNOWLEDGE eco.12-1-the-economics-of-pollution.v1 INTERMEDIATE {
+  title: "12.1 The Economics of Pollution"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain and give examples of positive and negative externalities; Identify equilibrium price and quantity; Evaluate how firms can contribute to market failure."
+  requires: [eco.11-4-the-great-deregulation-experiment.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 12.1 The Economics of Pollution", weight: 0.90 }
+}
+
+KNOWLEDGE eco.12-2-command-and-control-regulation.v1 INTERMEDIATE {
+  title: "12.2 Command-and-Control Regulation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain command-and-control regulation; Evaluate the effectiveness of command-and-control regulation."
+  requires: [eco.12-1-the-economics-of-pollution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 12.2 Command-and-Control Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.12-3-market-oriented-environmental-tools.v1 INTERMEDIATE {
+  title: "12.3 Market-Oriented Environmental Tools"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Show how pollution charges impact firm decisions; Suggest other laws and regulations that could fall under pollution charges; Explain the significance of marketable permits and property rights; Evaluate which policies are most appropriate for various situations."
+  requires: [eco.12-2-command-and-control-regulation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 12.3 Market-Oriented Environmental Tools", weight: 0.90 }
+}
+
+KNOWLEDGE eco.12-4-the-benefits-and-costs-of-u-s-environmental-laws.v1 INTERMEDIATE {
+  title: "12.4 The Benefits and Costs of U.S. Environmental Laws"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate the benefits and costs of environmental protection; Explain the effects of ecotourism; Apply marginal analysis to illustrate the marginal costs and marginal benefits of reducing pollution."
+  requires: [eco.12-3-market-oriented-environmental-tools.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 12.4 The Benefits and Costs of U.S. Environmental Laws", weight: 0.90 }
+}
+
+KNOWLEDGE eco.12-5-international-environmental-issues.v1 INTERMEDIATE {
+  title: "12.5 International Environmental Issues"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain biodiversity; Analyze the partnership of high-income and low-income countries in efforts to address international externalities."
+  requires: [eco.12-4-the-benefits-and-costs-of-u-s-environmental-laws.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 12.5 International Environmental Issues", weight: 0.90 }
+}
+
+KNOWLEDGE eco.12-6-the-tradeoff-between-economic-output-and-environmental-protection.v1 INTERMEDIATE {
+  title: "12.6 The Tradeoff between Economic Output and Environmental Protection"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Apply the production possibility frontier to evaluate the tradeoff between economic output and the environment; Interpret a graphic representation of the tradeoff between economic output and environmental protection."
+  requires: [eco.12-5-international-environmental-issues.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 12.6 The Tradeoff between Economic Output and Environmental Protection", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 13: 13 Positive Externalities and Public Goods
+# ------------------------------------------------------------
+KNOWLEDGE eco.13-1-investments-in-innovation.v1 INTERMEDIATE {
+  title: "13.1 Investments in Innovation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the positive externalities of new technology.; Explain the difference between private benefits and social benefits and give examples of each.; Calculate and analyze rates of return."
+  requires: [eco.12-6-the-tradeoff-between-economic-output-and-environmental-protection.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 13.1 Investments in Innovation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.13-2-how-governments-can-encourage-innovation.v1 INTERMEDIATE {
+  title: "13.2 How Governments Can Encourage Innovation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the effects of intellectual property rights on social and private rates of return.; Identify three U.S. Government policies and explain how they encourage innovation."
+  requires: [eco.13-1-investments-in-innovation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 13.2 How Governments Can Encourage Innovation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.13-3-public-goods.v1 INTERMEDIATE {
+  title: "13.3 Public Goods"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify a public good using nonexcludable and non-rival as criteria; Explain the free rider problem; Identify several sources of public goods."
+  requires: [eco.13-2-how-governments-can-encourage-innovation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 13.3 Public Goods", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 14: 14 Labor Markets and Income
+# ------------------------------------------------------------
+KNOWLEDGE eco.14-1-the-theory-of-labor-markets.v1 INTERMEDIATE {
+  title: "14.1 The Theory of Labor Markets"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the demand for labor in perfectly competitive output markets; Describe the demand for labor in imperfectly competitive output markets; Identify what determines the going market rate for labor."
+  requires: [eco.13-3-public-goods.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 14.1 The Theory of Labor Markets", weight: 0.90 }
+}
+
+KNOWLEDGE eco.14-2-wages-and-employment-in-an-imperfectly-competitive-labor-market.v1 INTERMEDIATE {
+  title: "14.2 Wages and Employment in an Imperfectly Competitive Labor Market"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define monopsony power; Explain how imperfectly competitive labor markets determine wages and employment, where employers have market power."
+  requires: [eco.14-1-the-theory-of-labor-markets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 14.2 Wages and Employment in an Imperfectly Competitive Labor Market", weight: 0.90 }
+}
+
+KNOWLEDGE eco.14-3-market-power-on-the-supply-side-of-labor-markets-unions.v1 INTERMEDIATE {
+  title: "14.3 Market Power on the Supply Side of Labor Markets: Unions"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the concept of labor unions, including membership levels and wages; Evaluate arguments for and against labor unions; Analyze reasons for the decline in U.S. union membership."
+  requires: [eco.14-2-wages-and-employment-in-an-imperfectly-competitive-labor-market.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 14.3 Market Power on the Supply Side of Labor Markets: Unions", weight: 0.90 }
+}
+
+KNOWLEDGE eco.14-4-bilateral-monopoly.v1 INTERMEDIATE {
+  title: "14.4 Bilateral Monopoly"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: How firms determine wages and employment when a specific labor market combines a union and a monopsony."
+  requires: [eco.14-3-market-power-on-the-supply-side-of-labor-markets-unions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 14.4 Bilateral Monopoly", weight: 0.90 }
+}
+
+KNOWLEDGE eco.14-5-employment-discrimination.v1 INTERMEDIATE {
+  title: "14.5 Employment Discrimination"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze earnings gaps based on race and gender; Explain the impact of discrimination in a competitive market; Identify U.S. public policies designed to reduce discrimination."
+  requires: [eco.14-4-bilateral-monopoly.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 14.5 Employment Discrimination", weight: 0.90 }
+}
+
+KNOWLEDGE eco.14-6-immigration.v1 INTERMEDIATE {
+  title: "14.6 Immigration"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe historical patterns of immigration to the U.S.; Explain the economic impacts of immigration; Analyze the impact of immigration reform proposals."
+  requires: [eco.14-5-employment-discrimination.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 14.6 Immigration", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 15: 15 Poverty and Economic Inequality
+# ------------------------------------------------------------
+KNOWLEDGE eco.15-1-drawing-the-poverty-line.v1 INTERMEDIATE {
+  title: "15.1 Drawing the Poverty Line"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain economic inequality and how the poverty line is determined; Analyze the U.S. poverty rate over time, noting its prevalence among different groups of citizens."
+  requires: [eco.14-6-immigration.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 15.1 Drawing the Poverty Line", weight: 0.90 }
+}
+
+KNOWLEDGE eco.15-2-the-poverty-trap.v1 INTERMEDIATE {
+  title: "15.2 The Poverty Trap"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the poverty trap, noting how government programs impact it; Identify potential issues in government programs that seek to reduce poverty; Calculate a budget constraint line that represents the poverty trap."
+  requires: [eco.15-1-drawing-the-poverty-line.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 15.2 The Poverty Trap", weight: 0.90 }
+}
+
+KNOWLEDGE eco.15-3-the-safety-net.v1 INTERMEDIATE {
+  title: "15.3 The Safety Net"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the antipoverty government programs that comprise the safety net; Explain the safety net programs' primary goals and how these programs have changed over time; Discuss the complexities of these safety net programs and why they can be controversial."
+  requires: [eco.15-2-the-poverty-trap.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 15.3 The Safety Net", weight: 0.90 }
+}
+
+KNOWLEDGE eco.15-4-income-inequality-measurement-and-causes.v1 INTERMEDIATE {
+  title: "15.4 Income Inequality: Measurement and Causes"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the distribution of income, and analyze the sources of income inequality in a market economy; Measure income distribution in quintiles; Calculate and graph a Lorenz curve; Show income inequality through demand and supply diagrams."
+  requires: [eco.15-3-the-safety-net.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 15.4 Income Inequality: Measurement and Causes", weight: 0.90 }
+}
+
+KNOWLEDGE eco.15-5-government-policies-to-reduce-income-inequality.v1 INTERMEDIATE {
+  title: "15.5 Government Policies to Reduce Income Inequality"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the arguments for and against government intervention in a market economy; Identify beneficial ways to reduce the economic inequality in a society; Show the tradeoff between incentives and income equality."
+  requires: [eco.15-4-income-inequality-measurement-and-causes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 15.5 Government Policies to Reduce Income Inequality", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 16: 16 Information, Risk, and Insurance
+# ------------------------------------------------------------
+KNOWLEDGE eco.16-1-the-problem-of-imperfect-information-and-asymmetric-information.v1 INTERMEDIATE {
+  title: "16.1 The Problem of Imperfect Information and Asymmetric Information"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze the impact of both imperfect information and asymmetric information; Evaluate the role of advertisements in creating imperfect information; Identify ways to reduce the risk of imperfect information; Explain how imperfect information can affect price, quantity, and quality."
+  requires: [eco.15-5-government-policies-to-reduce-income-inequality.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 16.1 The Problem of Imperfect Information and Asymmetric Information", weight: 0.90 }
+}
+
+KNOWLEDGE eco.16-2-insurance-and-imperfect-information.v1 INTERMEDIATE {
+  title: "16.2 Insurance and Imperfect Information"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how insurance works; Identify and evaluate various forms of government and social insurance; Discuss the problems caused by moral hazard and adverse selection; Analyze the impact of government regulation of insurance."
+  requires: [eco.16-1-the-problem-of-imperfect-information-and-asymmetric-information.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 16.2 Insurance and Imperfect Information", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 17: 17 Financial Markets
+# ------------------------------------------------------------
+KNOWLEDGE eco.17-1-how-businesses-raise-financial-capital.v1 INTERMEDIATE {
+  title: "17.1 How Businesses Raise Financial Capital"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe financial capital and how it relates to profits; Discuss the purpose and process of borrowing, bonds, and corporate stock; Explain how firms choose between sources of financial capital."
+  requires: [eco.16-2-insurance-and-imperfect-information.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 17.1 How Businesses Raise Financial Capital", weight: 0.90 }
+}
+
+KNOWLEDGE eco.17-2-how-households-supply-financial-capital.v1 INTERMEDIATE {
+  title: "17.2 How Households Supply Financial Capital"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Show the relationship between savers, banks, and borrowers; Calculate bond yield; Contrast bonds, stocks, mutual funds, and assets; Explain the tradeoffs between return and risk."
+  requires: [eco.17-1-how-businesses-raise-financial-capital.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 17.2 How Households Supply Financial Capital", weight: 0.90 }
+}
+
+KNOWLEDGE eco.17-3-how-to-accumulate-personal-wealth.v1 INTERMEDIATE {
+  title: "17.3 How to Accumulate Personal Wealth"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the random walk theory; Calculate simple and compound interest; Evaluate how capital markets transform financial capital."
+  requires: [eco.17-2-how-households-supply-financial-capital.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 17.3 How to Accumulate Personal Wealth", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 18: 18 Public Economy
+# ------------------------------------------------------------
+KNOWLEDGE eco.18-1-voter-participation-and-costs-of-elections.v1 INTERMEDIATE {
+  title: "18.1 Voter Participation and Costs of Elections"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the significance of rational ignorance; Evaluate the impact of election expenses."
+  requires: [eco.17-3-how-to-accumulate-personal-wealth.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 18.1 Voter Participation and Costs of Elections", weight: 0.90 }
+}
+
+KNOWLEDGE eco.18-2-special-interest-politics.v1 INTERMEDIATE {
+  title: "18.2 Special Interest Politics"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how special interest groups and lobbyists can influence campaigns and elections; Describe pork-barrel spending and logrolling."
+  requires: [eco.18-1-voter-participation-and-costs-of-elections.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 18.2 Special Interest Politics", weight: 0.90 }
+}
+
+KNOWLEDGE eco.18-3-flaws-in-the-democratic-system-of-government.v1 INTERMEDIATE {
+  title: "18.3 Flaws in the Democratic System of Government"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Assess the median voter theory; Explain the voting cycle; Analyze the interrelationship between markets and government."
+  requires: [eco.18-2-special-interest-politics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 18.3 Flaws in the Democratic System of Government", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 19: 19 The Macroeconomic Perspective
+# ------------------------------------------------------------
+KNOWLEDGE eco.19-1-measuring-the-size-of-the-economy-gross-domestic-product.v1 INTERMEDIATE {
+  title: "19.1 Measuring the Size of the Economy: Gross Domestic Product"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the components of GDP on the demand side and on the supply side; Evaluate how economists measure gross domestic product (GDP); Contrast and calculate GDP, net exports, and net national product."
+  requires: [eco.18-3-flaws-in-the-democratic-system-of-government.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 19.1 Measuring the Size of the Economy: Gross Domestic Product", weight: 0.90 }
+}
+
+KNOWLEDGE eco.19-2-adjusting-nominal-values-to-real-values.v1 INTERMEDIATE {
+  title: "19.2 Adjusting Nominal Values to Real Values"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Contrast nominal GDP and real GDP; Explain GDP deflator; Calculate real GDP based on nominal GDP values."
+  requires: [eco.19-1-measuring-the-size-of-the-economy-gross-domestic-product.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 19.2 Adjusting Nominal Values to Real Values", weight: 0.90 }
+}
+
+KNOWLEDGE eco.19-3-tracking-real-gdp-over-time.v1 INTERMEDIATE {
+  title: "19.3 Tracking Real GDP over Time"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain recessions, depressions, peaks, and troughs; Evaluate the importance of tracking real GDP over time."
+  requires: [eco.19-2-adjusting-nominal-values-to-real-values.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 19.3 Tracking Real GDP over Time", weight: 0.90 }
+}
+
+KNOWLEDGE eco.19-4-comparing-gdp-among-countries.v1 INTERMEDIATE {
+  title: "19.4 Comparing GDP among Countries"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how we can use GDP to compare the economic welfare of different nations; Calculate the conversion of GDP to a common currency by using exchange rates; Calculate GDP per capita using population data."
+  requires: [eco.19-3-tracking-real-gdp-over-time.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 19.4 Comparing GDP among Countries", weight: 0.90 }
+}
+
+KNOWLEDGE eco.19-5-how-well-gdp-measures-the-well-being-of-society.v1 INTERMEDIATE {
+  title: "19.5 How Well GDP Measures the Well-Being of Society"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss how productivity influences the standard of living; Explain the limitations of GDP as a measure of the standard of living; Analyze the relationship between GDP data and fluctuations in the standard of living."
+  requires: [eco.19-4-comparing-gdp-among-countries.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 19.5 How Well GDP Measures the Well-Being of Society", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 20: 20 Economic Growth
+# ------------------------------------------------------------
+KNOWLEDGE eco.20-1-the-relatively-recent-arrival-of-economic-growth.v1 INTERMEDIATE {
+  title: "20.1 The Relatively Recent Arrival of Economic Growth"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the conditions that have allowed for modern economic growth in the last two centuries; Analyze the influence of public policies on an economy's long-run economic growth."
+  requires: [eco.19-5-how-well-gdp-measures-the-well-being-of-society.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 20.1 The Relatively Recent Arrival of Economic Growth", weight: 0.90 }
+}
+
+KNOWLEDGE eco.20-2-labor-productivity-and-economic-growth.v1 INTERMEDIATE {
+  title: "20.2 Labor Productivity and Economic Growth"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the role of labor productivity in promoting economic growth; Analyze the sources of economic growth using the aggregate production function; Measure an economy’s rate of productivity growth; Evaluate the power of sustained growth."
+  requires: [eco.20-1-the-relatively-recent-arrival-of-economic-growth.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 20.2 Labor Productivity and Economic Growth", weight: 0.90 }
+}
+
+KNOWLEDGE eco.20-3-components-of-economic-growth.v1 INTERMEDIATE {
+  title: "20.3 Components of Economic Growth"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the components of economic growth, including physical capital, human capital, and technology; Explain capital deepening and its significance; Analyze the methods employed in economic growth accounting studies; Identify factors that contribute to a healthy climate for economic growth."
+  requires: [eco.20-2-labor-productivity-and-economic-growth.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 20.3 Components of Economic Growth", weight: 0.90 }
+}
+
+KNOWLEDGE eco.20-4-economic-convergence.v1 INTERMEDIATE {
+  title: "20.4 Economic Convergence"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain economic convergence; Analyze various arguments for and against economic convergence; Evaluate the speed of economic convergence between high-income countries and the rest of the world."
+  requires: [eco.20-3-components-of-economic-growth.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 20.4 Economic Convergence", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 21: 21 Unemployment
+# ------------------------------------------------------------
+KNOWLEDGE eco.21-1-how-economists-define-and-compute-unemployment-rate.v1 INTERMEDIATE {
+  title: "21.1 How Economists Define and Compute Unemployment Rate"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate the labor force participation rate and the unemployment rate; Explain hidden unemployment and what it means to be in or out of the labor force; Evaluate the collection and interpretation of unemployment data."
+  requires: [eco.20-4-economic-convergence.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 21.1 How Economists Define and Compute Unemployment Rate", weight: 0.90 }
+}
+
+KNOWLEDGE eco.21-2-patterns-of-unemployment.v1 INTERMEDIATE {
+  title: "21.2 Patterns of Unemployment"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain historical patterns of unemployment in the U.S.; Identify trends of unemployment based on demographics; Evaluate global unemployment rates."
+  requires: [eco.21-1-how-economists-define-and-compute-unemployment-rate.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 21.2 Patterns of Unemployment", weight: 0.90 }
+}
+
+KNOWLEDGE eco.21-3-what-causes-changes-in-unemployment-over-the-short-run.v1 INTERMEDIATE {
+  title: "21.3 What Causes Changes in Unemployment over the Short Run"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze cyclical unemployment; Explain the relationship between sticky wages and employment using various economic arguments; Apply supply and demand models to unemployment and wages."
+  requires: [eco.21-2-patterns-of-unemployment.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 21.3 What Causes Changes in Unemployment over the Short Run", weight: 0.90 }
+}
+
+KNOWLEDGE eco.21-4-what-causes-changes-in-unemployment-over-the-long-run.v1 INTERMEDIATE {
+  title: "21.4 What Causes Changes in Unemployment over the Long Run"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain frictional and structural unemployment; Assess relationships between the natural rate of employment and potential real GDP, productivity, and public policy; Identify recent patterns in the natural rate of employment; Propose ways to combat unemployment."
+  requires: [eco.21-3-what-causes-changes-in-unemployment-over-the-short-run.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 21.4 What Causes Changes in Unemployment over the Long Run", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 22: 22 Inflation
+# ------------------------------------------------------------
+KNOWLEDGE eco.22-1-tracking-inflation.v1 INTERMEDIATE {
+  title: "22.1 Tracking Inflation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate the annual rate of inflation; Explain and use index numbers and base years when simplifying the total quantity spent over a year for products; Calculate inflation rates using index numbers."
+  requires: [eco.21-4-what-causes-changes-in-unemployment-over-the-long-run.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 22.1 Tracking Inflation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.22-2-how-to-measure-changes-in-the-cost-of-living.v1 INTERMEDIATE {
+  title: "22.2 How to Measure Changes in the Cost of Living"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Use the Consumer Price Index (CPI) to calculate U.S. inflation rates; Identify several ways the Bureau of Labor Statistics avoids biases in the Consumer Price Index (CPI); Differentiate among the Consumer Price Index (CPI), the Producer Price Index (PPI), the International Price Index, the Employment Cost Index, and the GDP deflator.."
+  requires: [eco.22-1-tracking-inflation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 22.2 How to Measure Changes in the Cost of Living", weight: 0.90 }
+}
+
+KNOWLEDGE eco.22-3-how-the-u-s-and-other-countries-experience-inflation.v1 INTERMEDIATE {
+  title: "22.3 How the U.S. and Other Countries Experience Inflation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify patterns of inflation for the United States using data from the Consumer Price Index; Identify patterns of inflation on an international level."
+  requires: [eco.22-2-how-to-measure-changes-in-the-cost-of-living.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 22.3 How the U.S. and Other Countries Experience Inflation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.22-4-the-confusion-over-inflation.v1 INTERMEDIATE {
+  title: "22.4 The Confusion Over Inflation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how inflation can cause redistributions of purchasing power; Identify ways inflation can blur the perception of supply and demand; Explain the economic benefits and challenges of inflation."
+  requires: [eco.22-3-how-the-u-s-and-other-countries-experience-inflation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 22.4 The Confusion Over Inflation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.22-5-indexing-and-its-limitations.v1 INTERMEDIATE {
+  title: "22.5 Indexing and Its Limitations"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the relationship between indexing and inflation; Identify three ways the government can control inflation through macroeconomic policy."
+  requires: [eco.22-4-the-confusion-over-inflation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 22.5 Indexing and Its Limitations", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 23: 23 The International Trade and Capital Flows
+# ------------------------------------------------------------
+KNOWLEDGE eco.23-1-measuring-trade-balances.v1 INTERMEDIATE {
+  title: "23.1 Measuring Trade Balances"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain merchandise trade balance, current account balance, and unilateral transfers; Identify components of the U.S. current account balance; Calculate the merchandise trade balance and current account balance using import and export data for a country."
+  requires: [eco.22-5-indexing-and-its-limitations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 23.1 Measuring Trade Balances", weight: 0.90 }
+}
+
+KNOWLEDGE eco.23-2-trade-balances-in-historical-and-international-context.v1 INTERMEDIATE {
+  title: "23.2 Trade Balances in Historical and International Context"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze graphs of the current account balance and the merchandise trade balance; Identify patterns in U.S. trade surpluses and deficits; Compare the U.S. trade surpluses and deficits to other countries' trade surpluses and deficits."
+  requires: [eco.23-1-measuring-trade-balances.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 23.2 Trade Balances in Historical and International Context", weight: 0.90 }
+}
+
+KNOWLEDGE eco.23-3-trade-balances-and-flows-of-financial-capital.v1 INTERMEDIATE {
+  title: "23.3 Trade Balances and Flows of Financial Capital"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the connection between trade balances and financial capital flows; Calculate comparative advantage; Explain balanced trade in terms of investment and capital flows."
+  requires: [eco.23-2-trade-balances-in-historical-and-international-context.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 23.3 Trade Balances and Flows of Financial Capital", weight: 0.90 }
+}
+
+KNOWLEDGE eco.23-4-the-national-saving-and-investment-identity.v1 INTERMEDIATE {
+  title: "23.4 The National Saving and Investment Identity"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the determinants of trade and current account balance; Identify and calculate supply and demand for financial capital; Explain how a nation's own level of domestic saving and investment determines a nation's balance of trade; Predict the rising and falling of trade deficits based on a nation's saving and investment identity."
+  requires: [eco.23-3-trade-balances-and-flows-of-financial-capital.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 23.4 The National Saving and Investment Identity", weight: 0.90 }
+}
+
+KNOWLEDGE eco.23-5-the-pros-and-cons-of-trade-deficits-and-surpluses.v1 INTERMEDIATE {
+  title: "23.5 The Pros and Cons of Trade Deficits and Surpluses"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify three ways in which borrowing money or running a trade deficit can result in a healthy economy; Identify three ways in which borrowing money or running a trade deficit can result in a weaker economy."
+  requires: [eco.23-4-the-national-saving-and-investment-identity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 23.5 The Pros and Cons of Trade Deficits and Surpluses", weight: 0.90 }
+}
+
+KNOWLEDGE eco.23-6-the-difference-between-level-of-trade-and-the-trade-balance.v1 INTERMEDIATE {
+  title: "23.6 The Difference between Level of Trade and the Trade Balance"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify three factors that influence a country's level of trade; Differentiate between balance of trade and level of trade."
+  requires: [eco.23-5-the-pros-and-cons-of-trade-deficits-and-surpluses.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 23.6 The Difference between Level of Trade and the Trade Balance", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 24: 24 The Aggregate Demand/Aggregate Supply Model
+# ------------------------------------------------------------
+KNOWLEDGE eco.24-1-macroeconomic-perspectives-on-demand-and-supply.v1 INTERMEDIATE {
+  title: "24.1 Macroeconomic Perspectives on Demand and Supply"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain Say’s Law and understand why it primarily applies in the long run; Explain Keynes’ Law and understand why it primarily applies in the short run."
+  requires: [eco.23-6-the-difference-between-level-of-trade-and-the-trade-balance.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 24.1 Macroeconomic Perspectives on Demand and Supply", weight: 0.90 }
+}
+
+KNOWLEDGE eco.24-2-building-a-model-of-aggregate-demand-and-aggregate-supply.v1 INTERMEDIATE {
+  title: "24.2 Building a Model of Aggregate Demand and Aggregate Supply"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the aggregate supply curve and how it relates to real GDP and potential GDP; Explain the aggregate demand curve and how it is influenced by price levels; Interpret the aggregate demand/aggregate supply model; Identify the point of equilibrium in the aggregate demand/aggregate supply model; Define short run aggregate supply and long run aggregate supply."
+  requires: [eco.24-1-macroeconomic-perspectives-on-demand-and-supply.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 24.2 Building a Model of Aggregate Demand and Aggregate Supply", weight: 0.90 }
+}
+
+KNOWLEDGE eco.24-3-shifts-in-aggregate-supply.v1 INTERMEDIATE {
+  title: "24.3 Shifts in Aggregate Supply"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how productivity growth changes the aggregate supply curve; Explain how changes in input prices change the aggregate supply curve."
+  requires: [eco.24-2-building-a-model-of-aggregate-demand-and-aggregate-supply.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 24.3 Shifts in Aggregate Supply", weight: 0.90 }
+}
+
+KNOWLEDGE eco.24-4-shifts-in-aggregate-demand.v1 INTERMEDIATE {
+  title: "24.4 Shifts in Aggregate Demand"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how imports influence aggregate demand; Identify ways in which business confidence and consumer confidence can affect aggregate demand; Explain how government policy can change aggregate demand; Evaluate why economists disagree on the topic of tax cuts."
+  requires: [eco.24-3-shifts-in-aggregate-supply.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 24.4 Shifts in Aggregate Demand", weight: 0.90 }
+}
+
+KNOWLEDGE eco.24-5-how-the-ad-as-model-incorporates-growth-unemployment-and-inflation.v1 INTERMEDIATE {
+  title: "24.5 How the AD/AS Model Incorporates Growth, Unemployment, and Inflation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Use the aggregate demand/aggregate supply model to show periods of economic growth and recession; Explain how unemployment and inflation impact the aggregate demand/aggregate supply model; Evaluate the importance of the aggregate demand/aggregate supply model."
+  requires: [eco.24-4-shifts-in-aggregate-demand.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 24.5 How the AD/AS Model Incorporates Growth, Unemployment, and Inflation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.24-6-keynes-law-and-says-law-in-the-ad-as-model.v1 INTERMEDIATE {
+  title: "24.6 Keynes’ Law and Say’s Law in the AD/AS Model"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the neoclassical zone, the intermediate zone, and the Keynesian zone in the aggregate demand/aggregate supply model; Use an aggregate demand/aggregate supply model as a diagnostic test to understand the current state of the economy."
+  requires: [eco.24-5-how-the-ad-as-model-incorporates-growth-unemployment-and-inflation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 24.6 Keynes’ Law and Say’s Law in the AD/AS Model", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 25: 25 The Keynesian Perspective
+# ------------------------------------------------------------
+KNOWLEDGE eco.25-1-aggregate-demand-in-keynesian-analysis.v1 INTERMEDIATE {
+  title: "25.1 Aggregate Demand in Keynesian Analysis"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain real GDP, recessionary gaps, and inflationary gaps; Recognize the Keynesian AD/AS model; Identify the determining factors of both consumption expenditure and investment expenditure; Analyze the factors that determine government spending and net exports."
+  requires: [eco.24-6-keynes-law-and-says-law-in-the-ad-as-model.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 25.1 Aggregate Demand in Keynesian Analysis", weight: 0.90 }
+}
+
+KNOWLEDGE eco.25-2-the-building-blocks-of-keynesian-analysis.v1 INTERMEDIATE {
+  title: "25.2 The Building Blocks of Keynesian Analysis"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate the Keynesian view of recessions through an understanding of sticky wages and prices and the importance of aggregate demand; Explain the coordination argument, menu costs, and macroeconomic externality; Analyze the impact of the expenditure multiplier."
+  requires: [eco.25-1-aggregate-demand-in-keynesian-analysis.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 25.2 The Building Blocks of Keynesian Analysis", weight: 0.90 }
+}
+
+KNOWLEDGE eco.25-3-the-phillips-curve.v1 INTERMEDIATE {
+  title: "25.3 The Phillips Curve"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the Phillips curve, noting its impact on the theories of Keynesian economics; Graph a Phillips curve; Identify factors that cause the instability of the Phillips curve; Analyze the Keynesian policy for reducing unemployment and inflation."
+  requires: [eco.25-2-the-building-blocks-of-keynesian-analysis.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 25.3 The Phillips Curve", weight: 0.90 }
+}
+
+KNOWLEDGE eco.25-4-the-keynesian-perspective-on-market-forces.v1 INTERMEDIATE {
+  title: "25.4 The Keynesian Perspective on Market Forces"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the Keynesian perspective on market forces; Analyze the role of government policy in economic management."
+  requires: [eco.25-3-the-phillips-curve.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 25.4 The Keynesian Perspective on Market Forces", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 26: 26 The Neoclassical Perspective
+# ------------------------------------------------------------
+KNOWLEDGE eco.26-1-the-building-blocks-of-neoclassical-analysis.v1 INTERMEDIATE {
+  title: "26.1 The Building Blocks of Neoclassical Analysis"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the importance of potential GDP in the long run; Analyze the role of flexible prices; Interpret a neoclassical model of aggregate demand and aggregate supply; Evaluate different ways for measuring the speed of macroeconomic adjustment."
+  requires: [eco.25-4-the-keynesian-perspective-on-market-forces.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 26.1 The Building Blocks of Neoclassical Analysis", weight: 0.90 }
+}
+
+KNOWLEDGE eco.26-2-the-policy-implications-of-the-neoclassical-perspective.v1 INTERMEDIATE {
+  title: "26.2 The Policy Implications of the Neoclassical Perspective"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss why and how economists measure inflation expectations; Analyze the impacts of fiscal and monetary policy on aggregate supply and aggregate demand; Explain the neoclassical Phillips curve, noting its tradeoff between inflation and unemployment; Identify clear distinctions between neoclassical economics and Keynesian economics."
+  requires: [eco.26-1-the-building-blocks-of-neoclassical-analysis.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 26.2 The Policy Implications of the Neoclassical Perspective", weight: 0.90 }
+}
+
+KNOWLEDGE eco.26-3-balancing-keynesian-and-neoclassical-models.v1 INTERMEDIATE {
+  title: "26.3 Balancing Keynesian and Neoclassical Models"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Evaluate how neoclassical economists and Keynesian economists react to recessions; Analyze the interrelationship between the neoclassical and Keynesian economic models."
+  requires: [eco.26-2-the-policy-implications-of-the-neoclassical-perspective.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 26.3 Balancing Keynesian and Neoclassical Models", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 27: 27 Money and Banking
+# ------------------------------------------------------------
+KNOWLEDGE eco.27-1-defining-money-by-its-functions.v1 INTERMEDIATE {
+  title: "27.1 Defining Money by Its Functions"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the various functions of money; Contrast commodity money and fiat money."
+  requires: [eco.26-3-balancing-keynesian-and-neoclassical-models.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 27.1 Defining Money by Its Functions", weight: 0.90 }
+}
+
+KNOWLEDGE eco.27-2-measuring-money-currency-m1-and-m2.v1 INTERMEDIATE {
+  title: "27.2 Measuring Money: Currency, M1, and M2"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Contrast M1 money supply and M2 money supply; Classify monies as M1 money supply or M2 money supply."
+  requires: [eco.27-1-defining-money-by-its-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 27.2 Measuring Money: Currency, M1, and M2", weight: 0.90 }
+}
+
+KNOWLEDGE eco.27-3-the-role-of-banks.v1 INTERMEDIATE {
+  title: "27.3 The Role of Banks"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how banks act as intermediaries between savers and borrowers; Evaluate the relationship between banks, savings and loans, and credit unions; Analyze the causes of bankruptcy and recessions."
+  requires: [eco.27-2-measuring-money-currency-m1-and-m2.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 27.3 The Role of Banks", weight: 0.90 }
+}
+
+KNOWLEDGE eco.27-4-how-banks-create-money.v1 INTERMEDIATE {
+  title: "27.4 How Banks Create Money"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Utilize the money multiplier formula to determine how banks create money in an environment of limited reserves; Analyze and create T-account balance sheets; Evaluate the risks and benefits of money and banks."
+  requires: [eco.27-3-the-role-of-banks.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 27.4 How Banks Create Money", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 28: 28 Monetary Policy and Bank Regulation
+# ------------------------------------------------------------
+KNOWLEDGE eco.28-1-the-federal-reserve-banking-system-and-central-banks.v1 INTERMEDIATE {
+  title: "28.1 The Federal Reserve Banking System and Central Banks"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the structure and organization of the U.S. Federal Reserve; Discuss how central banks impact monetary policy, promote financial stability, and provide banking services."
+  requires: [eco.27-4-how-banks-create-money.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 28.1 The Federal Reserve Banking System and Central Banks", weight: 0.90 }
+}
+
+KNOWLEDGE eco.28-2-bank-regulation.v1 INTERMEDIATE {
+  title: "28.2 Bank Regulation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the relationship between bank regulation and monetary policy; Explain bank supervision; Explain how deposit insurance and lender of last resort are two strategies to protect against bank runs."
+  requires: [eco.28-1-the-federal-reserve-banking-system-and-central-banks.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 28.2 Bank Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.28-3-how-a-central-bank-executes-monetary-policy.v1 INTERMEDIATE {
+  title: "28.3 How a Central Bank Executes Monetary Policy"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the reason for open market operations; Evaluate reserve requirements and discount rates; Interpret and show bank activity through balance sheets; Distinguish between monetary policy in an environment of limited reserves and monetary policy in an environment of ample reserves."
+  requires: [eco.28-2-bank-regulation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 28.3 How a Central Bank Executes Monetary Policy", weight: 0.90 }
+}
+
+KNOWLEDGE eco.28-4-monetary-policy-and-economic-outcomes.v1 INTERMEDIATE {
+  title: "28.4 Monetary Policy and Economic Outcomes"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Contrast expansionary monetary policy and contractionary monetary policy; Explain how monetary policy impacts interest rates and aggregate demand; Evaluate Federal Reserve decisions over the last forty years; Explain the significance of quantitative easing (QE)."
+  requires: [eco.28-3-how-a-central-bank-executes-monetary-policy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 28.4 Monetary Policy and Economic Outcomes", weight: 0.90 }
+}
+
+KNOWLEDGE eco.28-5-pitfalls-for-monetary-policy.v1 INTERMEDIATE {
+  title: "28.5 Pitfalls for Monetary Policy"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze whether monetary policy decisions should be made more democratically; Calculate the velocity of money; Evaluate the central bank’s influence on inflation, unemployment, asset bubbles, and leverage cycles; Calculate the effects of monetary stimulus."
+  requires: [eco.28-4-monetary-policy-and-economic-outcomes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 28.5 Pitfalls for Monetary Policy", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 29: 29 Exchange Rates and International Capital Flows
+# ------------------------------------------------------------
+KNOWLEDGE eco.29-1-how-the-foreign-exchange-market-works.v1 INTERMEDIATE {
+  title: "29.1 How the Foreign Exchange Market Works"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define 'foreign exchange market'; Describe different types of investments like foreign direct investments (FDI), portfolio investments, and hedging; Explain how appreciating or depreciating currency affects exchange rates; Identify who benefits from a stronger currency and benefits from a weaker currency."
+  requires: [eco.28-5-pitfalls-for-monetary-policy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 29.1 How the Foreign Exchange Market Works", weight: 0.90 }
+}
+
+KNOWLEDGE eco.29-2-demand-and-supply-shifts-in-foreign-exchange-markets.v1 INTERMEDIATE {
+  title: "29.2 Demand and Supply Shifts in Foreign Exchange Markets"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain supply and demand for exchange rates; Define arbitrage; Explain purchasing power parity's importance when comparing countries.."
+  requires: [eco.29-1-how-the-foreign-exchange-market-works.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 29.2 Demand and Supply Shifts in Foreign Exchange Markets", weight: 0.90 }
+}
+
+KNOWLEDGE eco.29-3-macroeconomic-effects-of-exchange-rates.v1 INTERMEDIATE {
+  title: "29.3 Macroeconomic Effects of Exchange Rates"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how exchange rate shifting influences aggregate demand and supply; Explain how shifting exchange rates also can influence loans and banks."
+  requires: [eco.29-2-demand-and-supply-shifts-in-foreign-exchange-markets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 29.3 Macroeconomic Effects of Exchange Rates", weight: 0.90 }
+}
+
+KNOWLEDGE eco.29-4-exchange-rate-policies.v1 INTERMEDIATE {
+  title: "29.4 Exchange Rate Policies"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Differentiate among a floating exchange rate, a soft peg, a hard peg, and a merged currency; Identify the tradeoffs that come with a floating exchange rate, a soft peg, a hard peg, and a merged currency."
+  requires: [eco.29-3-macroeconomic-effects-of-exchange-rates.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 29.4 Exchange Rate Policies", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 30: 30 Government Budgets and Fiscal Policy
+# ------------------------------------------------------------
+KNOWLEDGE eco.30-1-government-spending.v1 INTERMEDIATE {
+  title: "30.1 Government Spending"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify U.S. budget deficit and surplus trends over the past five decades; Explain the differences between the U.S. federal budget, and state and local budgets."
+  requires: [eco.29-4-exchange-rate-policies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 30.1 Government Spending", weight: 0.90 }
+}
+
+KNOWLEDGE eco.30-2-taxation.v1 INTERMEDIATE {
+  title: "30.2 Taxation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Differentiate among a regressive tax, a proportional tax, and a progressive tax; Identify major revenue sources for the U.S. federal budget."
+  requires: [eco.30-1-government-spending.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 30.2 Taxation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.30-3-federal-deficits-and-the-national-debt.v1 INTERMEDIATE {
+  title: "30.3 Federal Deficits and the National Debt"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the U.S. federal budget in terms of annual debt and accumulated debt; Understand how economic growth or decline can influence a budget surplus or budget deficit."
+  requires: [eco.30-2-taxation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 30.3 Federal Deficits and the National Debt", weight: 0.90 }
+}
+
+KNOWLEDGE eco.30-4-using-fiscal-policy-to-fight-recession-unemployment-and-inflation.v1 INTERMEDIATE {
+  title: "30.4 Using Fiscal Policy to Fight Recession, Unemployment, and Inflation"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how expansionary fiscal policy can shift aggregate demand and influence the economy; Explain how contractionary fiscal policy can shift aggregate demand and influence the economy."
+  requires: [eco.30-3-federal-deficits-and-the-national-debt.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 30.4 Using Fiscal Policy to Fight Recession, Unemployment, and Inflation", weight: 0.90 }
+}
+
+KNOWLEDGE eco.30-5-automatic-stabilizers.v1 INTERMEDIATE {
+  title: "30.5 Automatic Stabilizers"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how the federal government can use discretionary fiscal policy to stabilize the economy; Identify examples of automatic stabilizers; Understand how a government can use standardized employment budget to identify automatic stabilizers."
+  requires: [eco.30-4-using-fiscal-policy-to-fight-recession-unemployment-and-inflation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 30.5 Automatic Stabilizers", weight: 0.90 }
+}
+
+KNOWLEDGE eco.30-6-practical-problems-with-discretionary-fiscal-policy.v1 INTERMEDIATE {
+  title: "30.6 Practical Problems with Discretionary Fiscal Policy"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand how fiscal policy and monetary policy are interconnected; Explain the three lag times that often occur when solving economic problems; Identify the legal and political challenges of responding to an economic problem."
+  requires: [eco.30-5-automatic-stabilizers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 30.6 Practical Problems with Discretionary Fiscal Policy", weight: 0.90 }
+}
+
+KNOWLEDGE eco.30-7-the-question-of-a-balanced-budget.v1 INTERMEDIATE {
+  title: "30.7 The Question of a Balanced Budget"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the arguments for and against requiring the U.S. federal budget to be balanced; Consider the long-run and short-run effects of a federal budget deficit."
+  requires: [eco.30-6-practical-problems-with-discretionary-fiscal-policy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 30.7 The Question of a Balanced Budget", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 31: 31 The Impacts of Government Borrowing
+# ------------------------------------------------------------
+KNOWLEDGE eco.31-1-how-government-borrowing-affects-investment-and-the-trade-balance.v1 INTERMEDIATE {
+  title: "31.1 How Government Borrowing Affects Investment and the Trade Balance"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the national saving and investment identity in terms of demand and supply; Evaluate the role of budget surpluses and trade surpluses in national saving and investment identity."
+  requires: [eco.30-7-the-question-of-a-balanced-budget.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 31.1 How Government Borrowing Affects Investment and the Trade Balance", weight: 0.90 }
+}
+
+KNOWLEDGE eco.31-2-fiscal-policy-and-the-trade-balance.v1 INTERMEDIATE {
+  title: "31.2 Fiscal Policy and the Trade Balance"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss twin deficits as they related to budget and trade deficit; Explain the relationship between budget deficits and exchange rates; Explain the relationship between budget deficits and inflation; Identify causes of recessions."
+  requires: [eco.31-1-how-government-borrowing-affects-investment-and-the-trade-balance.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 31.2 Fiscal Policy and the Trade Balance", weight: 0.90 }
+}
+
+KNOWLEDGE eco.31-3-how-government-borrowing-affects-private-saving.v1 INTERMEDIATE {
+  title: "31.3 How Government Borrowing Affects Private Saving"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Apply Ricardian equivalence to evaluate how government borrowing affects private saving; Interpret a graphic representation of Ricardian equivalence."
+  requires: [eco.31-2-fiscal-policy-and-the-trade-balance.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 31.3 How Government Borrowing Affects Private Saving", weight: 0.90 }
+}
+
+KNOWLEDGE eco.31-4-fiscal-policy-investment-and-economic-growth.v1 INTERMEDIATE {
+  title: "31.4 Fiscal Policy, Investment, and Economic Growth"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain crowding out and its effect on physical capital investment; Explain the relationship between budget deficits and interest rates; Identify why economic growth is tied to investments in physical capital, human capital, and technology."
+  requires: [eco.31-3-how-government-borrowing-affects-private-saving.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 31.4 Fiscal Policy, Investment, and Economic Growth", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 32: 32 Macroeconomic Policy Around the World
+# ------------------------------------------------------------
+KNOWLEDGE eco.32-1-the-diversity-of-countries-and-economies-across-the-world.v1 INTERMEDIATE {
+  title: "32.1 The Diversity of Countries and Economies across the World"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze GDP and GNI per capita as a measure of the diversity of international standards of living; Identify what classifies a country as low income, lower-middle income, upper-middle income, or high income; Explain how geography, demographics, industry structure, and economic institutions influence standards of living."
+  requires: [eco.31-4-fiscal-policy-investment-and-economic-growth.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 32.1 The Diversity of Countries and Economies across the World", weight: 0.90 }
+}
+
+KNOWLEDGE eco.32-2-improving-countries-standards-of-living.v1 INTERMEDIATE {
+  title: "32.2 Improving Countries’ Standards of Living"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Analyze the growth policies of low-income countries seeking to improve standards of living; Analyze the growth policies of middle-income countries, particularly the East Asian Tigers with their focus on technology and market-oriented incentives; Analyze the struggles facing economically-challenged countries wishing to enact growth policies; Evaluate the success of sending aid to low-income countries."
+  requires: [eco.32-1-the-diversity-of-countries-and-economies-across-the-world.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 32.2 Improving Countries’ Standards of Living", weight: 0.90 }
+}
+
+KNOWLEDGE eco.32-3-causes-of-unemployment-around-the-world.v1 INTERMEDIATE {
+  title: "32.3 Causes of Unemployment around the World"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the nature and causes of unemployment; Analyze the natural rate of unemployment and the factors that affect it; Identify how undeveloped labor markets can result in the same hardships as unemployment."
+  requires: [eco.32-2-improving-countries-standards-of-living.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 32.3 Causes of Unemployment around the World", weight: 0.90 }
+}
+
+KNOWLEDGE eco.32-4-causes-of-inflation-in-various-countries-and-regions.v1 INTERMEDIATE {
+  title: "32.4 Causes of Inflation in Various Countries and Regions"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the causes and effects of inflation in various economic markets; Explain the significance of a converging economy."
+  requires: [eco.32-3-causes-of-unemployment-around-the-world.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 32.4 Causes of Inflation in Various Countries and Regions", weight: 0.90 }
+}
+
+KNOWLEDGE eco.32-5-balance-of-trade-concerns.v1 INTERMEDIATE {
+  title: "32.5 Balance of Trade Concerns"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the meaning of trade balance and its implications for the foreign exchange market; Analyze concerns over international trade in goods and services and international flows of capital; Identify and evaluate market-oriented economic reforms."
+  requires: [eco.32-4-causes-of-inflation-in-various-countries-and-regions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 32.5 Balance of Trade Concerns", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 33: 33 International Trade
+# ------------------------------------------------------------
+KNOWLEDGE eco.33-1-absolute-and-comparative-advantage.v1 INTERMEDIATE {
+  title: "33.1 Absolute and Comparative Advantage"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define absolute advantage, comparative advantage, and opportunity costs; Explain the gains of trade created when a country specializes."
+  requires: [eco.32-5-balance-of-trade-concerns.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 33.1 Absolute and Comparative Advantage", weight: 0.90 }
+}
+
+KNOWLEDGE eco.33-2-what-happens-when-a-country-has-an-absolute-advantage-in-all-goods.v1 INTERMEDIATE {
+  title: "33.2 What Happens When a Country Has an Absolute Advantage in All Goods"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Show the relationship between production costs and comparative advantage; Identify situations of mutually beneficial trade; Identify trade benefits by considering opportunity costs."
+  requires: [eco.33-1-absolute-and-comparative-advantage.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 33.2 What Happens When a Country Has an Absolute Advantage in All Goods", weight: 0.90 }
+}
+
+KNOWLEDGE eco.33-3-intra-industry-trade-between-similar-economies.v1 INTERMEDIATE {
+  title: "33.3 Intra-Industry Trade between Similar Economies"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify at least two advantages of intra-industry trading; Explain the relationship between economies of scale and intra-industry trade."
+  requires: [eco.33-2-what-happens-when-a-country-has-an-absolute-advantage-in-all-goods.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 33.3 Intra-Industry Trade between Similar Economies", weight: 0.90 }
+}
+
+KNOWLEDGE eco.33-4-the-benefits-of-reducing-barriers-to-international-trade.v1 INTERMEDIATE {
+  title: "33.4 The Benefits of Reducing Barriers to International Trade"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain tariffs as barriers to trade; Identify at least two benefits of reducing barriers to international trade."
+  requires: [eco.33-3-intra-industry-trade-between-similar-economies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 33.4 The Benefits of Reducing Barriers to International Trade", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 34: 34 Globalization and Protectionism
+# ------------------------------------------------------------
+KNOWLEDGE eco.34-1-protectionism-an-indirect-subsidy-from-consumers-to-producers.v1 INTERMEDIATE {
+  title: "34.1 Protectionism: An Indirect Subsidy from Consumers to Producers"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain protectionism and its three main forms; Analyze protectionism through concepts of demand and supply, noting its effects on equilibrium; Calculate the effects of trade barriers."
+  requires: [eco.33-4-the-benefits-of-reducing-barriers-to-international-trade.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 34.1 Protectionism: An Indirect Subsidy from Consumers to Producers", weight: 0.90 }
+}
+
+KNOWLEDGE eco.34-2-international-trade-and-its-effects-on-jobs-wages-and-working-conditions.v1 INTERMEDIATE {
+  title: "34.2 International Trade and Its Effects on Jobs, Wages, and Working Conditions"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss how international trade influences the job market; Analyze the opportunity cost of protectionism; Explain how international trade impacts wages, labor standards, and working conditions."
+  requires: [eco.34-1-protectionism-an-indirect-subsidy-from-consumers-to-producers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 34.2 International Trade and Its Effects on Jobs, Wages, and Working Conditions", weight: 0.90 }
+}
+
+KNOWLEDGE eco.34-3-arguments-in-support-of-restricting-imports.v1 INTERMEDIATE {
+  title: "34.3 Arguments in Support of Restricting Imports"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain and analyze various arguments that are in support of restricting imports, including the infant industry argument, the anti-dumping argument, the environmental protection argument, the unsafe consumer products argument, and the national interest argument; Explain dumping and race to the bottom; Evaluate the significance of countries’ perceptions on the benefits of growing trade."
+  requires: [eco.34-2-international-trade-and-its-effects-on-jobs-wages-and-working-conditions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 34.3 Arguments in Support of Restricting Imports", weight: 0.90 }
+}
+
+KNOWLEDGE eco.34-4-how-governments-enact-trade-policy-globally-regionally-and-nationally.v1 INTERMEDIATE {
+  title: "34.4 How Governments Enact Trade Policy: Globally, Regionally, and Nationally"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the origin and role of the World Trade Organization (WTO) and General Agreement on Tariffs and Trade (GATT); Discuss the significance and provide examples of regional trading agreements; Analyze trade policy at the national level; Evaluate long-term trends in barriers to trade."
+  requires: [eco.34-3-arguments-in-support-of-restricting-imports.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 34.4 How Governments Enact Trade Policy: Globally, Regionally, and Nationally", weight: 0.90 }
+}
+
+KNOWLEDGE eco.34-5-the-tradeoffs-of-trade-policy.v1 INTERMEDIATE {
+  title: "34.5 The Tradeoffs of Trade Policy"
+  domain: "economia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Asses the complexity of international trade; Discuss why a market-oriented economy is so affected by international trade; Explain disruptive market change."
+  requires: [eco.34-4-how-governments-enact-trade-policy-globally-regionally-and-nationally.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Principles of Economics 3e - 34.5 The Tradeoffs of Trade Policy", weight: 0.90 }
+}
+
+MISSION mission.eco.v1 {
+  label: "Faculdade: Princípios de Economia"
+  requires: [
+    eco.1-1-what-is-economics-and-why-is-it-important.v1,
+    eco.1-2-microeconomics-and-macroeconomics.v1,
+    eco.1-3-how-economists-use-theories-and-models-to-understand-economic-issues.v1,
+    eco.1-4-how-to-organize-economies-an-overview-of-economic-systems.v1,
+    eco.2-1-how-individuals-make-choices-based-on-their-budget-constraint.v1,
+    eco.2-2-the-production-possibilities-frontier-and-social-choices.v1,
+    eco.2-3-confronting-objections-to-the-economic-approach.v1,
+    eco.3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services.v1,
+    eco.3-2-shifts-in-demand-and-supply-for-goods-and-services.v1,
+    eco.3-3-changes-in-equilibrium-price-and-quantity-the-four-step-process.v1,
+    eco.3-4-price-ceilings-and-price-floors.v1,
+    eco.3-5-demand-supply-and-efficiency.v1,
+    eco.4-1-demand-and-supply-at-work-in-labor-markets.v1,
+    eco.4-2-demand-and-supply-in-financial-markets.v1,
+    eco.4-3-the-market-system-as-an-efficient-mechanism-for-information.v1,
+    eco.5-1-price-elasticity-of-demand-and-price-elasticity-of-supply.v1,
+    eco.5-2-polar-cases-of-elasticity-and-constant-elasticity.v1,
+    eco.5-3-elasticity-and-pricing.v1,
+    eco.5-4-elasticity-in-areas-other-than-price.v1,
+    eco.6-1-consumption-choices.v1,
+    eco.6-2-how-changes-in-income-and-prices-affect-consumption-choices.v1,
+    eco.6-3-behavioral-economics-an-alternative-framework-for-consumer-choice.v1,
+    eco.7-1-explicit-and-implicit-costs-and-accounting-and-economic-profit.v1,
+    eco.7-2-production-in-the-short-run.v1,
+    eco.7-3-costs-in-the-short-run.v1,
+    eco.7-4-production-in-the-long-run.v1,
+    eco.7-5-costs-in-the-long-run.v1,
+    eco.8-1-perfect-competition-and-why-it-matters.v1,
+    eco.8-2-how-perfectly-competitive-firms-make-output-decisions.v1,
+    eco.8-3-entry-and-exit-decisions-in-the-long-run.v1,
+    eco.8-4-efficiency-in-perfectly-competitive-markets.v1,
+    eco.9-1-how-monopolies-form-barriers-to-entry.v1,
+    eco.9-2-how-a-profit-maximizing-monopoly-chooses-output-and-price.v1,
+    eco.10-1-monopolistic-competition.v1,
+    eco.10-2-oligopoly.v1,
+    eco.11-1-corporate-mergers.v1,
+    eco.11-2-regulating-anticompetitive-behavior.v1,
+    eco.11-3-regulating-natural-monopolies.v1,
+    eco.11-4-the-great-deregulation-experiment.v1,
+    eco.12-1-the-economics-of-pollution.v1,
+    eco.12-2-command-and-control-regulation.v1,
+    eco.12-3-market-oriented-environmental-tools.v1,
+    eco.12-4-the-benefits-and-costs-of-u-s-environmental-laws.v1,
+    eco.12-5-international-environmental-issues.v1,
+    eco.12-6-the-tradeoff-between-economic-output-and-environmental-protection.v1,
+    eco.13-1-investments-in-innovation.v1,
+    eco.13-2-how-governments-can-encourage-innovation.v1,
+    eco.13-3-public-goods.v1,
+    eco.14-1-the-theory-of-labor-markets.v1,
+    eco.14-2-wages-and-employment-in-an-imperfectly-competitive-labor-market.v1,
+    eco.14-3-market-power-on-the-supply-side-of-labor-markets-unions.v1,
+    eco.14-4-bilateral-monopoly.v1,
+    eco.14-5-employment-discrimination.v1,
+    eco.14-6-immigration.v1,
+    eco.15-1-drawing-the-poverty-line.v1,
+    eco.15-2-the-poverty-trap.v1,
+    eco.15-3-the-safety-net.v1,
+    eco.15-4-income-inequality-measurement-and-causes.v1,
+    eco.15-5-government-policies-to-reduce-income-inequality.v1,
+    eco.16-1-the-problem-of-imperfect-information-and-asymmetric-information.v1,
+    eco.16-2-insurance-and-imperfect-information.v1,
+    eco.17-1-how-businesses-raise-financial-capital.v1,
+    eco.17-2-how-households-supply-financial-capital.v1,
+    eco.17-3-how-to-accumulate-personal-wealth.v1,
+    eco.18-1-voter-participation-and-costs-of-elections.v1,
+    eco.18-2-special-interest-politics.v1,
+    eco.18-3-flaws-in-the-democratic-system-of-government.v1,
+    eco.19-1-measuring-the-size-of-the-economy-gross-domestic-product.v1,
+    eco.19-2-adjusting-nominal-values-to-real-values.v1,
+    eco.19-3-tracking-real-gdp-over-time.v1,
+    eco.19-4-comparing-gdp-among-countries.v1,
+    eco.19-5-how-well-gdp-measures-the-well-being-of-society.v1,
+    eco.20-1-the-relatively-recent-arrival-of-economic-growth.v1,
+    eco.20-2-labor-productivity-and-economic-growth.v1,
+    eco.20-3-components-of-economic-growth.v1,
+    eco.20-4-economic-convergence.v1,
+    eco.21-1-how-economists-define-and-compute-unemployment-rate.v1,
+    eco.21-2-patterns-of-unemployment.v1,
+    eco.21-3-what-causes-changes-in-unemployment-over-the-short-run.v1,
+    eco.21-4-what-causes-changes-in-unemployment-over-the-long-run.v1,
+    eco.22-1-tracking-inflation.v1,
+    eco.22-2-how-to-measure-changes-in-the-cost-of-living.v1,
+    eco.22-3-how-the-u-s-and-other-countries-experience-inflation.v1,
+    eco.22-4-the-confusion-over-inflation.v1,
+    eco.22-5-indexing-and-its-limitations.v1,
+    eco.23-1-measuring-trade-balances.v1,
+    eco.23-2-trade-balances-in-historical-and-international-context.v1,
+    eco.23-3-trade-balances-and-flows-of-financial-capital.v1,
+    eco.23-4-the-national-saving-and-investment-identity.v1,
+    eco.23-5-the-pros-and-cons-of-trade-deficits-and-surpluses.v1,
+    eco.23-6-the-difference-between-level-of-trade-and-the-trade-balance.v1,
+    eco.24-1-macroeconomic-perspectives-on-demand-and-supply.v1,
+    eco.24-2-building-a-model-of-aggregate-demand-and-aggregate-supply.v1,
+    eco.24-3-shifts-in-aggregate-supply.v1,
+    eco.24-4-shifts-in-aggregate-demand.v1,
+    eco.24-5-how-the-ad-as-model-incorporates-growth-unemployment-and-inflation.v1,
+    eco.24-6-keynes-law-and-says-law-in-the-ad-as-model.v1,
+    eco.25-1-aggregate-demand-in-keynesian-analysis.v1,
+    eco.25-2-the-building-blocks-of-keynesian-analysis.v1,
+    eco.25-3-the-phillips-curve.v1,
+    eco.25-4-the-keynesian-perspective-on-market-forces.v1,
+    eco.26-1-the-building-blocks-of-neoclassical-analysis.v1,
+    eco.26-2-the-policy-implications-of-the-neoclassical-perspective.v1,
+    eco.26-3-balancing-keynesian-and-neoclassical-models.v1,
+    eco.27-1-defining-money-by-its-functions.v1,
+    eco.27-2-measuring-money-currency-m1-and-m2.v1,
+    eco.27-3-the-role-of-banks.v1,
+    eco.27-4-how-banks-create-money.v1,
+    eco.28-1-the-federal-reserve-banking-system-and-central-banks.v1,
+    eco.28-2-bank-regulation.v1,
+    eco.28-3-how-a-central-bank-executes-monetary-policy.v1,
+    eco.28-4-monetary-policy-and-economic-outcomes.v1,
+    eco.28-5-pitfalls-for-monetary-policy.v1,
+    eco.29-1-how-the-foreign-exchange-market-works.v1,
+    eco.29-2-demand-and-supply-shifts-in-foreign-exchange-markets.v1,
+    eco.29-3-macroeconomic-effects-of-exchange-rates.v1,
+    eco.29-4-exchange-rate-policies.v1,
+    eco.30-1-government-spending.v1,
+    eco.30-2-taxation.v1,
+    eco.30-3-federal-deficits-and-the-national-debt.v1,
+    eco.30-4-using-fiscal-policy-to-fight-recession-unemployment-and-inflation.v1,
+    eco.30-5-automatic-stabilizers.v1,
+    eco.30-6-practical-problems-with-discretionary-fiscal-policy.v1,
+    eco.30-7-the-question-of-a-balanced-budget.v1,
+    eco.31-1-how-government-borrowing-affects-investment-and-the-trade-balance.v1,
+    eco.31-2-fiscal-policy-and-the-trade-balance.v1,
+    eco.31-3-how-government-borrowing-affects-private-saving.v1,
+    eco.31-4-fiscal-policy-investment-and-economic-growth.v1,
+    eco.32-1-the-diversity-of-countries-and-economies-across-the-world.v1,
+    eco.32-2-improving-countries-standards-of-living.v1,
+    eco.32-3-causes-of-unemployment-around-the-world.v1,
+    eco.32-4-causes-of-inflation-in-various-countries-and-regions.v1,
+    eco.32-5-balance-of-trade-concerns.v1,
+    eco.33-1-absolute-and-comparative-advantage.v1,
+    eco.33-2-what-happens-when-a-country-has-an-absolute-advantage-in-all-goods.v1,
+    eco.33-3-intra-industry-trade-between-similar-economies.v1,
+    eco.33-4-the-benefits-of-reducing-barriers-to-international-trade.v1,
+    eco.34-1-protectionism-an-indirect-subsidy-from-consumers-to-producers.v1,
+    eco.34-2-international-trade-and-its-effects-on-jobs-wages-and-working-conditions.v1,
+    eco.34-3-arguments-in-support-of-restricting-imports.v1,
+    eco.34-4-how-governments-enact-trade-policy-globally-regionally-and-nationally.v1,
+    eco.34-5-the-tradeoffs-of-trade-policy.v1,
+  ]
+  threshold: 0.85
+}

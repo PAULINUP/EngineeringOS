@@ -1,0 +1,2443 @@
+@version 1.0.0
+@domain "biologia_faculdade"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Biology 2e
+# Fonte: https://openstax.org/books/biology-2e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 The Study of Life
+# ------------------------------------------------------------
+KNOWLEDGE bio2.1-1-the-science-of-biology.v1 ADVANCED {
+  title: "1.1 The Science of Biology"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the shared characteristics of the natural sciences; Summarize the steps of the scientific method; Compare inductive reasoning with deductive reasoning; Describe the goals of basic science and applied science."
+  requires: [bio1.21-3-preserving-biodiversity.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 1.1 The Science of Biology", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.1-2-themes-and-concepts-of-biology.v1 ADVANCED {
+  title: "1.2 Themes and Concepts of Biology"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify and describe the properties of life; Describe the levels of organization among living things; Recognize and interpret a phylogenetic tree; List examples of different subdisciplines in biology."
+  requires: [bio2.1-1-the-science-of-biology.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 1.2 Themes and Concepts of Biology", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 The Chemical Foundation of Life
+# ------------------------------------------------------------
+KNOWLEDGE bio2.2-1-atoms-isotopes-ions-and-molecules-the-building-blocks.v1 ADVANCED {
+  title: "2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define matter and elements; Describe the interrelationship between protons, neutrons, and electrons; Compare the ways in which electrons can be donated or shared between atoms; Explain the ways in which naturally occurring elements combine to create molecules, cells, tissues, organ systems, and organisms."
+  requires: [bio2.1-2-themes-and-concepts-of-biology.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 2.1 Atoms, Isotopes, Ions, and Molecules: The Building Blocks", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.2-2-water.v1 ADVANCED {
+  title: "2.2 Water"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the properties of water that are critical to maintaining life; Explain why water is an excellent solvent; Provide examples of water’s cohesive and adhesive properties; Discuss the role of acids, bases, and buffers in homeostasis."
+  requires: [bio2.2-1-atoms-isotopes-ions-and-molecules-the-building-blocks.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 2.2 Water", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.2-3-carbon.v1 ADVANCED {
+  title: "2.3 Carbon"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain why carbon is important for life; Describe the role of functional groups in biological molecules."
+  requires: [bio2.2-2-water.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 2.3 Carbon", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Biological Macromolecules
+# ------------------------------------------------------------
+KNOWLEDGE bio2.3-1-synthesis-of-biological-macromolecules.v1 ADVANCED {
+  title: "3.1 Synthesis of Biological Macromolecules"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand macromolecule synthesis; Explain dehydration (or condensation) and hydrolysis reactions."
+  requires: [bio2.2-3-carbon.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 3.1 Synthesis of Biological Macromolecules", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.3-2-carbohydrates.v1 ADVANCED {
+  title: "3.2 Carbohydrates"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the role of carbohydrates in cells and in the extracellular materials of animals and plants; Explain carbohydrate classifications; List common monosaccharides, disaccharides, and polysaccharides."
+  requires: [bio2.3-1-synthesis-of-biological-macromolecules.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 3.2 Carbohydrates", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.3-3-lipids.v1 ADVANCED {
+  title: "3.3 Lipids"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the four major types of lipids; Explain the role of fats in storing energy; Differentiate between saturated and unsaturated fatty acids; Describe phospholipids and their role in cells; Define the basic structure of a steroid and some steroid functions; Explain how cholesterol helps maintain the plasma membrane's fluid nature."
+  requires: [bio2.3-2-carbohydrates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 3.3 Lipids", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.3-4-proteins.v1 ADVANCED {
+  title: "3.4 Proteins"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the functions proteins perform in the cell and in tissues; Discuss the relationship between amino acids and proteins; Explain the four levels of protein organization; Describe the ways in which protein shape and function are linked."
+  requires: [bio2.3-3-lipids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 3.4 Proteins", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.3-5-nucleic-acids.v1 ADVANCED {
+  title: "3.5 Nucleic Acids"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe nucleic acids' structure and define the two types of nucleic acids; Explain DNA's structure and role; Explain RNA's structure and roles."
+  requires: [bio2.3-4-proteins.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 3.5 Nucleic Acids", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Cell Structure
+# ------------------------------------------------------------
+KNOWLEDGE bio2.4-1-studying-cells.v1 ADVANCED {
+  title: "4.1 Studying Cells"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the role of cells in organisms; Compare and contrast light microscopy and electron microscopy; Summarize cell theory."
+  requires: [bio2.3-5-nucleic-acids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 4.1 Studying Cells", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.4-2-prokaryotic-cells.v1 ADVANCED {
+  title: "4.2 Prokaryotic Cells"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Name examples of prokaryotic and eukaryotic organisms; Compare and contrast prokaryotic and eukaryotic cells; Describe the relative sizes of different cells; Explain why cells must be small."
+  requires: [bio2.4-1-studying-cells.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 4.2 Prokaryotic Cells", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.4-3-eukaryotic-cells.v1 ADVANCED {
+  title: "4.3 Eukaryotic Cells"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure of eukaryotic cells; Compare animal cells with plant cells; State the role of the plasma membrane; Summarize the functions of the major cell organelles."
+  requires: [bio2.4-2-prokaryotic-cells.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 4.3 Eukaryotic Cells", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.4-4-the-endomembrane-system-and-proteins.v1 ADVANCED {
+  title: "4.4 The Endomembrane System and Proteins"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the components of the endomembrane system; Recognize the relationship between the endomembrane system and its functions."
+  requires: [bio2.4-3-eukaryotic-cells.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 4.4 The Endomembrane System and Proteins", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.4-5-the-cytoskeleton.v1 ADVANCED {
+  title: "4.5 The Cytoskeleton"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the cytoskeleton; Compare the roles of microfilaments, intermediate filaments, and microtubules; Compare and contrast cilia and flagella; Summarize the differences among the components of prokaryotic cells, animal cells, and plant cells."
+  requires: [bio2.4-4-the-endomembrane-system-and-proteins.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 4.5 The Cytoskeleton", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.4-6-connections-between-cells-and-cellular-activities.v1 ADVANCED {
+  title: "4.6 Connections between Cells and Cellular Activities"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the extracellular matrix; List examples of the ways that plant cells and animal cells communicate with adjacent cells; Summarize the roles of tight junctions, desmosomes, gap junctions, and plasmodesmata."
+  requires: [bio2.4-5-the-cytoskeleton.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 4.6 Connections between Cells and Cellular Activities", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Structure and Function of Plasma Membranes
+# ------------------------------------------------------------
+KNOWLEDGE bio2.5-1-components-and-structure.v1 ADVANCED {
+  title: "5.1 Components and Structure"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the cell membrane fluid mosaic model; Describe phospholipid, protein, and carbohydrate functions in membranes; Discuss membrane fluidity."
+  requires: [bio2.4-6-connections-between-cells-and-cellular-activities.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 5.1 Components and Structure", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.5-2-passive-transport.v1 ADVANCED {
+  title: "5.2 Passive Transport"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain why and how passive transport occurs; Understand the osmosis and diffusion processes; Define tonicity and its relevance to passive transport."
+  requires: [bio2.5-1-components-and-structure.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 5.2 Passive Transport", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.5-3-active-transport.v1 ADVANCED {
+  title: "5.3 Active Transport"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand how electrochemical gradients affect ions; Distinguish between primary active transport and secondary active transport."
+  requires: [bio2.5-2-passive-transport.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 5.3 Active Transport", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.5-4-bulk-transport.v1 ADVANCED {
+  title: "5.4 Bulk Transport"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe endocytosis, including phagocytosis, pinocytosis, and receptor-mediated endocytosis; Understand the process of exocytosis."
+  requires: [bio2.5-3-active-transport.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 5.4 Bulk Transport", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Metabolism
+# ------------------------------------------------------------
+KNOWLEDGE bio2.6-1-energy-and-metabolism.v1 ADVANCED {
+  title: "6.1 Energy and Metabolism"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain metabolic pathways and describe the two major types; Discuss how chemical reactions play a role in energy transfer."
+  requires: [bio2.5-4-bulk-transport.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 6.1 Energy and Metabolism", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.6-2-potential-kinetic-free-and-activation-energy.v1 ADVANCED {
+  title: "6.2 Potential, Kinetic, Free, and Activation Energy"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define “energy”; Explain the difference between kinetic and potential energy; Discuss the concepts of free energy and activation energy; Describe endergonic and exergonic reactions."
+  requires: [bio2.6-1-energy-and-metabolism.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 6.2 Potential, Kinetic, Free, and Activation Energy", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.6-3-the-laws-of-thermodynamics.v1 ADVANCED {
+  title: "6.3 The Laws of Thermodynamics"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the concept of entropy; Explain the first and second laws of thermodynamics."
+  requires: [bio2.6-2-potential-kinetic-free-and-activation-energy.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 6.3 The Laws of Thermodynamics", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.6-4-atp-adenosine-triphosphate.v1 ADVANCED {
+  title: "6.4 ATP: Adenosine Triphosphate"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain ATP's role as the cellular energy currency; Describe how energy releases through ATP hydrolysis."
+  requires: [bio2.6-3-the-laws-of-thermodynamics.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 6.4 ATP: Adenosine Triphosphate", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.6-5-enzymes.v1 ADVANCED {
+  title: "6.5 Enzymes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the role of enzymes in metabolic pathways; Explain how enzymes function as molecular catalysts; Discuss enzyme regulation by various factors."
+  requires: [bio2.6-4-atp-adenosine-triphosphate.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 6.5 Enzymes", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Cellular Respiration
+# ------------------------------------------------------------
+KNOWLEDGE bio2.7-1-energy-in-living-systems.v1 ADVANCED {
+  title: "7.1 Energy in Living Systems"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the importance of electrons in the transfer of energy in living systems; Explain how ATP is used by cells as an energy source."
+  requires: [bio2.6-5-enzymes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 7.1 Energy in Living Systems", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.7-2-glycolysis.v1 ADVANCED {
+  title: "7.2 Glycolysis"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the overall result in terms of molecules produced during the chemical breakdown of glucose by glycolysis; Compare the output of glycolysis in terms of ATP molecules and NADH molecules produced."
+  requires: [bio2.7-1-energy-in-living-systems.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 7.2 Glycolysis", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.7-3-oxidation-of-pyruvate-and-the-citric-acid-cycle.v1 ADVANCED {
+  title: "7.3 Oxidation of Pyruvate and the Citric Acid Cycle"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how a circular pathway, such as the citric acid cycle, fundamentally differs from a linear biochemical pathway, such as glycolysis; Describe how pyruvate, the product of glycolysis, is prepared for entry into the citric acid cycle."
+  requires: [bio2.7-2-glycolysis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 7.3 Oxidation of Pyruvate and the Citric Acid Cycle", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.7-4-oxidative-phosphorylation.v1 ADVANCED {
+  title: "7.4 Oxidative Phosphorylation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how electrons move through the electron transport chain and explain what happens to their energy levels during this process; Explain how a proton (H+) gradient is established and maintained by the electron transport chain."
+  requires: [bio2.7-3-oxidation-of-pyruvate-and-the-citric-acid-cycle.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 7.4 Oxidative Phosphorylation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.7-5-metabolism-without-oxygen.v1 ADVANCED {
+  title: "7.5 Metabolism without Oxygen"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the fundamental difference between anaerobic cellular respiration and fermentation; Describe the type of fermentation that readily occurs in animal cells and the conditions that initiate that fermentation."
+  requires: [bio2.7-4-oxidative-phosphorylation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 7.5 Metabolism without Oxygen", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.7-6-connections-of-carbohydrate-protein-and-lipid-metabolic-pathways.v1 ADVANCED {
+  title: "7.6 Connections of Carbohydrate, Protein, and Lipid Metabolic Pathways"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the ways in which carbohydrate metabolic pathways, glycolysis, and the citric acid cycle interrelate with protein and lipid metabolic pathways; Explain why metabolic pathways are not considered closed systems."
+  requires: [bio2.7-5-metabolism-without-oxygen.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 7.6 Connections of Carbohydrate, Protein, and Lipid Metabolic Pathways", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.7-7-regulation-of-cellular-respiration.v1 ADVANCED {
+  title: "7.7 Regulation of Cellular Respiration"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how feedback inhibition would affect the production of an intermediate or product in a pathway; Identify the mechanism that controls the rate of the transport of electrons through the electron transport chain."
+  requires: [bio2.7-6-connections-of-carbohydrate-protein-and-lipid-metabolic-pathways.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 7.7 Regulation of Cellular Respiration", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Photosynthesis
+# ------------------------------------------------------------
+KNOWLEDGE bio2.8-1-overview-of-photosynthesis.v1 ADVANCED {
+  title: "8.1 Overview of Photosynthesis"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the significance of photosynthesis to other living organisms; Describe the main structures involved in photosynthesis; Identify the substrates and products of photosynthesis."
+  requires: [bio2.7-7-regulation-of-cellular-respiration.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 8.1 Overview of Photosynthesis", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.8-2-the-light-dependent-reactions-of-photosynthesis.v1 ADVANCED {
+  title: "8.2 The Light-Dependent Reactions of Photosynthesis"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how plants absorb energy from sunlight; Describe short and long wavelengths of light; Describe how and where photosynthesis takes place within a plant."
+  requires: [bio2.8-1-overview-of-photosynthesis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 8.2 The Light-Dependent Reactions of Photosynthesis", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.8-3-using-light-energy-to-make-organic-molecules.v1 ADVANCED {
+  title: "8.3 Using Light Energy to Make Organic Molecules"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the Calvin cycle; Define carbon fixation; Explain how photosynthesis works in the energy cycle of all living organisms."
+  requires: [bio2.8-2-the-light-dependent-reactions-of-photosynthesis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 8.3 Using Light Energy to Make Organic Molecules", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Cell Communication
+# ------------------------------------------------------------
+KNOWLEDGE bio2.9-1-signaling-molecules-and-cellular-receptors.v1 ADVANCED {
+  title: "9.1 Signaling Molecules and Cellular Receptors"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe four types of signaling mechanisms found in multicellular organisms; Compare internal receptors with cell-surface receptors; Recognize the relationship between a ligand’s structure and its mechanism of action."
+  requires: [bio2.8-3-using-light-energy-to-make-organic-molecules.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 9.1 Signaling Molecules and Cellular Receptors", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.9-2-propagation-of-the-signal.v1 ADVANCED {
+  title: "9.2 Propagation of the Signal"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how the binding of a ligand initiates signal transduction throughout a cell; Recognize the role of phosphorylation in the transmission of intracellular signals; Evaluate the role of second messengers in signal transmission."
+  requires: [bio2.9-1-signaling-molecules-and-cellular-receptors.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 9.2 Propagation of the Signal", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.9-3-response-to-the-signal.v1 ADVANCED {
+  title: "9.3 Response to the Signal"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how signaling pathways direct protein expression, cellular metabolism, and cell growth; Identify the function of PKC in signal transduction pathways; Recognize the role of apoptosis in the development and maintenance of a healthy organism."
+  requires: [bio2.9-2-propagation-of-the-signal.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 9.3 Response to the Signal", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.9-4-signaling-in-single-celled-organisms.v1 ADVANCED {
+  title: "9.4 Signaling in Single-Celled Organisms"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how single-celled yeasts use cell signaling to communicate with one another; Relate the role of quorum sensing to the ability of some bacteria to form biofilms."
+  requires: [bio2.9-3-response-to-the-signal.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 9.4 Signaling in Single-Celled Organisms", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Cell Reproduction
+# ------------------------------------------------------------
+KNOWLEDGE bio2.10-1-cell-division.v1 ADVANCED {
+  title: "10.1 Cell Division"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure of prokaryotic and eukaryotic genomes; Distinguish between chromosomes, genes, and traits; Describe the mechanisms of chromosome compaction."
+  requires: [bio2.9-4-signaling-in-single-celled-organisms.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 10.1 Cell Division", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.10-2-the-cell-cycle.v1 ADVANCED {
+  title: "10.2 The Cell Cycle"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the three stages of interphase; Discuss the behavior of chromosomes during karyokinesis/mitosis; Explain how the cytoplasmic content is divided during cytokinesis; Define the quiescent G0 phase."
+  requires: [bio2.10-1-cell-division.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 10.2 The Cell Cycle", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.10-3-control-of-the-cell-cycle.v1 ADVANCED {
+  title: "10.3 Control of the Cell Cycle"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand how the cell cycle is controlled by mechanisms that are both internal and external to the cell; Explain how the three internal “control checkpoints” occur at the end of G1, at the G2/M transition, and during metaphase; Describe the molecules that control the cell cycle through positive and negative regulation."
+  requires: [bio2.10-2-the-cell-cycle.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 10.3 Control of the Cell Cycle", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.10-4-cancer-and-the-cell-cycle.v1 ADVANCED {
+  title: "10.4 Cancer and the Cell Cycle"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how cancer is caused by uncontrolled cell growth; Understand how proto-oncogenes are normal cell genes that, when mutated, become oncogenes; Describe how tumor suppressors function; Explain how mutant tumor suppressors cause cancer."
+  requires: [bio2.10-3-control-of-the-cell-cycle.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 10.4 Cancer and the Cell Cycle", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.10-5-prokaryotic-cell-division.v1 ADVANCED {
+  title: "10.5 Prokaryotic Cell Division"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the process of binary fission in prokaryotes; Explain how FtsZ and tubulin proteins are examples of homology."
+  requires: [bio2.10-4-cancer-and-the-cell-cycle.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 10.5 Prokaryotic Cell Division", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Meiosis and Sexual Reproduction
+# ------------------------------------------------------------
+KNOWLEDGE bio2.11-1-the-process-of-meiosis.v1 ADVANCED {
+  title: "11.1 The Process of Meiosis"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the behavior of chromosomes during meiosis, and the differences between the first and second meiotic divisions; Describe the cellular events that take place during meiosis; Explain the differences between meiosis and mitosis; Explain the mechanisms within the meiotic process that produce genetic variation among the haploid gametes."
+  requires: [bio2.10-5-prokaryotic-cell-division.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 11.1 The Process of Meiosis", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.11-2-sexual-reproduction.v1 ADVANCED {
+  title: "11.2 Sexual Reproduction"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain that meiosis and sexual reproduction are highly evolved traits; Identify variation among offspring as a potential evolutionary advantage of sexual reproduction; Describe the three different life-cycle types among sexually reproducing multicellular organisms.."
+  requires: [bio2.11-1-the-process-of-meiosis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 11.2 Sexual Reproduction", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Mendel's Experiments and Heredity
+# ------------------------------------------------------------
+KNOWLEDGE bio2.12-1-mendels-experiments-and-the-laws-of-probability.v1 ADVANCED {
+  title: "12.1 Mendel’s Experiments and the Laws of Probability"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the scientific reasons for the success of Mendel’s experimental work; Describe the expected outcomes of monohybrid crosses involving dominant and recessive alleles; Apply the sum and product rules to calculate probabilities."
+  requires: [bio2.11-2-sexual-reproduction.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 12.1 Mendel’s Experiments and the Laws of Probability", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.12-2-characteristics-and-traits.v1 ADVANCED {
+  title: "12.2 Characteristics and Traits"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the relationship between genotypes and phenotypes in dominant and recessive gene systems; Develop a Punnett square to calculate the expected proportions of genotypes and phenotypes in a monohybrid cross; Explain the purpose and methods of a test cross; Identify non-Mendelian inheritance patterns such as incomplete dominance, codominance, recessive lethals, multiple alleles, and sex linkage."
+  requires: [bio2.12-1-mendels-experiments-and-the-laws-of-probability.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 12.2 Characteristics and Traits", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.12-3-laws-of-inheritance.v1 ADVANCED {
+  title: "12.3 Laws of Inheritance"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain Mendel’s law of segregation and independent assortment in terms of genetics and the events of meiosis; Use the forked-line method and the probability rules to calculate the probability of genotypes and phenotypes from multiple gene crosses; Explain the effect of linkage and recombination on gamete genotypes; Explain the phenotypic outcomes of epistatic effects between genes."
+  requires: [bio2.12-2-characteristics-and-traits.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 12.3 Laws of Inheritance", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 13: 13 Modern Understandings of Inheritance
+# ------------------------------------------------------------
+KNOWLEDGE bio2.13-1-chromosomal-theory-and-genetic-linkage.v1 ADVANCED {
+  title: "13.1 Chromosomal Theory and Genetic Linkage"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss Sutton’s Chromosomal Theory of Inheritance; Describe genetic linkage; Explain the process of homologous recombination, or crossing over; Describe chromosome creation; Calculate the distances between three genes on a chromosome using a three-point test cross."
+  requires: [bio2.12-3-laws-of-inheritance.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 13.1 Chromosomal Theory and Genetic Linkage", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.13-2-chromosomal-basis-of-inherited-disorders.v1 ADVANCED {
+  title: "13.2 Chromosomal Basis of Inherited Disorders"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how a karyogram is created; Explain how nondisjunction leads to disorders in chromosome number; Compare disorders that aneuploidy causes; Describe how errors in chromosome structure occur through inversions and translocations."
+  requires: [bio2.13-1-chromosomal-theory-and-genetic-linkage.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 13.2 Chromosomal Basis of Inherited Disorders", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 14: 14 DNA Structure and Function
+# ------------------------------------------------------------
+KNOWLEDGE bio2.14-1-historical-basis-of-modern-understanding.v1 ADVANCED {
+  title: "14.1 Historical Basis of Modern Understanding"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain transformation of DNA; Describe the key experiments that helped identify that DNA is the genetic material; State and explain Chargaff’s rules."
+  requires: [bio2.13-2-chromosomal-basis-of-inherited-disorders.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 14.1 Historical Basis of Modern Understanding", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.14-2-dna-structure-and-sequencing.v1 ADVANCED {
+  title: "14.2 DNA Structure and Sequencing"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure of DNA; Explain the Sanger method of DNA sequencing; Discuss the similarities and differences between eukaryotic and prokaryotic DNA."
+  requires: [bio2.14-1-historical-basis-of-modern-understanding.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 14.2 DNA Structure and Sequencing", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.14-3-basics-of-dna-replication.v1 ADVANCED {
+  title: "14.3 Basics of DNA Replication"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how the structure of DNA reveals the replication process; Describe the Meselson and Stahl experiments."
+  requires: [bio2.14-2-dna-structure-and-sequencing.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 14.3 Basics of DNA Replication", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.14-4-dna-replication-in-prokaryotes.v1 ADVANCED {
+  title: "14.4 DNA Replication in Prokaryotes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the process of DNA replication in prokaryotes; Discuss the role of different enzymes and proteins in supporting this process."
+  requires: [bio2.14-3-basics-of-dna-replication.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 14.4 DNA Replication in Prokaryotes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.14-5-dna-replication-in-eukaryotes.v1 ADVANCED {
+  title: "14.5 DNA Replication in Eukaryotes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the similarities and differences between DNA replication in eukaryotes and prokaryotes; State the role of telomerase in DNA replication."
+  requires: [bio2.14-4-dna-replication-in-prokaryotes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 14.5 DNA Replication in Eukaryotes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.14-6-dna-repair.v1 ADVANCED {
+  title: "14.6 DNA Repair"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the different types of mutations in DNA; Explain DNA repair mechanisms."
+  requires: [bio2.14-5-dna-replication-in-eukaryotes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 14.6 DNA Repair", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 15: 15 Genes and Proteins
+# ------------------------------------------------------------
+KNOWLEDGE bio2.15-1-the-genetic-code.v1 ADVANCED {
+  title: "15.1 The Genetic Code"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the “central dogma” of DNA-protein synthesis; Describe the genetic code and how the nucleotide sequence prescribes the amino acid and the protein sequence."
+  requires: [bio2.14-6-dna-repair.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 15.1 The Genetic Code", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.15-2-prokaryotic-transcription.v1 ADVANCED {
+  title: "15.2 Prokaryotic Transcription"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the different steps in prokaryotic transcription; Discuss the role of promoters in prokaryotic transcription; Describe how and when transcription is terminated."
+  requires: [bio2.15-1-the-genetic-code.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 15.2 Prokaryotic Transcription", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.15-3-eukaryotic-transcription.v1 ADVANCED {
+  title: "15.3 Eukaryotic Transcription"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the steps in eukaryotic transcription; Discuss the role of RNA polymerases in transcription; Compare and contrast the three RNA polymerases; Explain the significance of transcription factors."
+  requires: [bio2.15-2-prokaryotic-transcription.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 15.3 Eukaryotic Transcription", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.15-4-rna-processing-in-eukaryotes.v1 ADVANCED {
+  title: "15.4 RNA Processing in Eukaryotes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the different steps in RNA processing; Understand the significance of exons, introns, and splicing for mRNAs; Explain how tRNAs and rRNAs are processed."
+  requires: [bio2.15-3-eukaryotic-transcription.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 15.4 RNA Processing in Eukaryotes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.15-5-ribosomes-and-protein-synthesis.v1 ADVANCED {
+  title: "15.5 Ribosomes and Protein Synthesis"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the different steps in protein synthesis; Discuss the role of ribosomes in protein synthesis."
+  requires: [bio2.15-4-rna-processing-in-eukaryotes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 15.5 Ribosomes and Protein Synthesis", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 16: 16 Gene Expression
+# ------------------------------------------------------------
+KNOWLEDGE bio2.16-1-regulation-of-gene-expression.v1 ADVANCED {
+  title: "16.1 Regulation of Gene Expression"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss why every cell does not express all of its genes all of the time; Describe how prokaryotic gene regulation occurs at the transcriptional level; Discuss how eukaryotic gene regulation occurs at the epigenetic, transcriptional, post-transcriptional, translational, and post-translational levels."
+  requires: [bio2.15-5-ribosomes-and-protein-synthesis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 16.1 Regulation of Gene Expression", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.16-2-prokaryotic-gene-regulation.v1 ADVANCED {
+  title: "16.2 Prokaryotic Gene Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the steps involved in prokaryotic gene regulation; Explain the roles of activators, inducers, and repressors in gene regulation."
+  requires: [bio2.16-1-regulation-of-gene-expression.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 16.2 Prokaryotic Gene Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.16-3-eukaryotic-epigenetic-gene-regulation.v1 ADVANCED {
+  title: "16.3 Eukaryotic Epigenetic Gene Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how chromatin remodeling controls transcriptional access; Describe how access to DNA is controlled by histone modification; Describe how DNA methylation is related to epigenetic gene changes."
+  requires: [bio2.16-2-prokaryotic-gene-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 16.3 Eukaryotic Epigenetic Gene Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.16-4-eukaryotic-transcription-gene-regulation.v1 ADVANCED {
+  title: "16.4 Eukaryotic Transcription Gene Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the role of transcription factors in gene regulation; Explain how enhancers and repressors regulate gene expression."
+  requires: [bio2.16-3-eukaryotic-epigenetic-gene-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 16.4 Eukaryotic Transcription Gene Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.16-5-eukaryotic-post-transcriptional-gene-regulation.v1 ADVANCED {
+  title: "16.5 Eukaryotic Post-transcriptional Gene Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand RNA splicing and explain its role in regulating gene expression; Describe the importance of RNA stability in gene regulation."
+  requires: [bio2.16-4-eukaryotic-transcription-gene-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 16.5 Eukaryotic Post-transcriptional Gene Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.16-6-eukaryotic-translational-and-post-translational-gene-regulation.v1 ADVANCED {
+  title: "16.6 Eukaryotic Translational and Post-translational Gene Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the process of translation and discuss its key factors; Describe how the initiation complex controls translation; Explain the different ways in which the post-translational control of gene expression takes place."
+  requires: [bio2.16-5-eukaryotic-post-transcriptional-gene-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 16.6 Eukaryotic Translational and Post-translational Gene Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.16-7-cancer-and-gene-regulation.v1 ADVANCED {
+  title: "16.7 Cancer and Gene Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how changes to gene expression can cause cancer; Explain how changes to gene expression at different levels can disrupt the cell cycle; Discuss how understanding regulation of gene expression can lead to better drug design."
+  requires: [bio2.16-6-eukaryotic-translational-and-post-translational-gene-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 16.7 Cancer and Gene Regulation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 17: 17 Biotechnology and Genomics
+# ------------------------------------------------------------
+KNOWLEDGE bio2.17-1-biotechnology.v1 ADVANCED {
+  title: "17.1 Biotechnology"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe gel electrophoresis; Explain molecular and reproductive cloning; Describe biotechnology uses in medicine and agriculture."
+  requires: [bio2.16-7-cancer-and-gene-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 17.1 Biotechnology", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.17-2-mapping-genomes.v1 ADVANCED {
+  title: "17.2 Mapping Genomes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define genomics; Describe genetic and physical maps; Describe genomic mapping methods."
+  requires: [bio2.17-1-biotechnology.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 17.2 Mapping Genomes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.17-3-whole-genome-sequencing.v1 ADVANCED {
+  title: "17.3 Whole-Genome Sequencing"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe three types of sequencing; Define whole-genome sequencing."
+  requires: [bio2.17-2-mapping-genomes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 17.3 Whole-Genome Sequencing", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.17-4-applying-genomics.v1 ADVANCED {
+  title: "17.4 Applying Genomics"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain pharmacogenomics; Define polygenic."
+  requires: [bio2.17-3-whole-genome-sequencing.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 17.4 Applying Genomics", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.17-5-genomics-and-proteomics.v1 ADVANCED {
+  title: "17.5 Genomics and Proteomics"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain systems biology; Describe a proteome; Define protein signature."
+  requires: [bio2.17-4-applying-genomics.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 17.5 Genomics and Proteomics", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 18: 18 Evolution and the Origin of Species
+# ------------------------------------------------------------
+KNOWLEDGE bio2.18-1-understanding-evolution.v1 ADVANCED {
+  title: "18.1 Understanding Evolution"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how scientists developed the present-day theory of evolution; Define adaptation; Explain convergent and divergent evolution; Describe homologous and vestigial structures; Discuss misconceptions about the theory of evolution."
+  requires: [bio2.17-5-genomics-and-proteomics.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 18.1 Understanding Evolution", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.18-2-formation-of-new-species.v1 ADVANCED {
+  title: "18.2 Formation of New Species"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define species and describe how scientists identify species as different; Describe genetic variables that lead to speciation; Identify prezygotic and postzygotic reproductive barriers; Explain allopatric and sympatric speciation; Describe adaptive radiation."
+  requires: [bio2.18-1-understanding-evolution.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 18.2 Formation of New Species", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.18-3-reconnection-and-speciation-rates.v1 ADVANCED {
+  title: "18.3 Reconnection and Speciation Rates"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe pathways of species evolution in hybrid zones; Explain the two major theories on rates of speciation."
+  requires: [bio2.18-2-formation-of-new-species.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 18.3 Reconnection and Speciation Rates", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 19: 19 The Evolution of Populations
+# ------------------------------------------------------------
+KNOWLEDGE bio2.19-1-population-evolution.v1 ADVANCED {
+  title: "19.1 Population Evolution"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define population genetics and describe how scientists use population genetics in studying population evolution; Define the Hardy-Weinberg principle and discuss its importance."
+  requires: [bio2.18-3-reconnection-and-speciation-rates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 19.1 Population Evolution", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.19-2-population-genetics.v1 ADVANCED {
+  title: "19.2 Population Genetics"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the different types of variation in a population; Explain why natural selection can only act upon heritable variation; Describe genetic drift and the bottleneck effect; Explain how each evolutionary force can influence a population's allele frequencies."
+  requires: [bio2.19-1-population-evolution.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 19.2 Population Genetics", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.19-3-adaptive-evolution.v1 ADVANCED {
+  title: "19.3 Adaptive Evolution"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the different ways natural selection can shape populations; Describe how these different forces can lead to different outcomes in terms of the population variation."
+  requires: [bio2.19-2-population-genetics.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 19.3 Adaptive Evolution", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 20: 20 Phylogenies and the History of Life
+# ------------------------------------------------------------
+KNOWLEDGE bio2.20-1-organizing-life-on-earth.v1 ADVANCED {
+  title: "20.1 Organizing Life on Earth"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the need for a comprehensive classification system; List the different levels of the taxonomic classification system; Describe how systematics and taxonomy relate to phylogeny; Discuss a phylogenetic tree's components and purpose."
+  requires: [bio2.19-3-adaptive-evolution.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 20.1 Organizing Life on Earth", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.20-2-determining-evolutionary-relationships.v1 ADVANCED {
+  title: "20.2 Determining Evolutionary Relationships"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compare homologous and analogous traits; Discuss the purpose of cladistics; Describe maximum parsimony."
+  requires: [bio2.20-1-organizing-life-on-earth.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 20.2 Determining Evolutionary Relationships", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.20-3-perspectives-on-the-phylogenetic-tree.v1 ADVANCED {
+  title: "20.3 Perspectives on the Phylogenetic Tree"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe horizontal gene transfer; Illustrate how prokaryotes and eukaryotes transfer genes horizontally; Identify the web and ring models of phylogenetic relationships and describe how they differ from the original phylogenetic tree concept."
+  requires: [bio2.20-2-determining-evolutionary-relationships.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 20.3 Perspectives on the Phylogenetic Tree", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 21: 21 Viruses
+# ------------------------------------------------------------
+KNOWLEDGE bio2.21-1-viral-evolution-morphology-and-classification.v1 ADVANCED {
+  title: "21.1 Viral Evolution, Morphology, and Classification"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how viruses were first discovered and how they are detected; Discuss three hypotheses about how viruses evolved; Describe the general structure of a virus; Recognize the basic shapes of viruses; Understand past and emerging classification systems for viruses; Describe the basis for the Baltimore classification system."
+  requires: [bio2.20-3-perspectives-on-the-phylogenetic-tree.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 21.1 Viral Evolution, Morphology, and Classification", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.21-2-virus-infections-and-hosts.v1 ADVANCED {
+  title: "21.2 Virus Infections and Hosts"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the steps of replication and explain what occurs at each step; Describe the lytic and lysogenic cycles of virus replication; Explain the transmission of plant and animal viruses; Discuss some of the diseases caused by plant and animal viruses; Discuss the economic impact of plant and animal viruses."
+  requires: [bio2.21-1-viral-evolution-morphology-and-classification.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 21.2 Virus Infections and Hosts", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.21-3-prevention-and-treatment-of-viral-infections.v1 ADVANCED {
+  title: "21.3 Prevention and Treatment of Viral Infections"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify major viral illnesses that affect humans; Compare vaccinations and anti-viral drugs as medical approaches to viruses."
+  requires: [bio2.21-2-virus-infections-and-hosts.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 21.3 Prevention and Treatment of Viral Infections", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.21-4-other-acellular-entities-prions-and-viroids.v1 ADVANCED {
+  title: "21.4 Other Acellular Entities: Prions and Viroids"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe prions and their basic properties; Define viroids and their targets of infection."
+  requires: [bio2.21-3-prevention-and-treatment-of-viral-infections.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 21.4 Other Acellular Entities: Prions and Viroids", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 22: 22 Prokaryotes: Bacteria and Archaea
+# ------------------------------------------------------------
+KNOWLEDGE bio2.22-1-prokaryotic-diversity.v1 ADVANCED {
+  title: "22.1 Prokaryotic Diversity"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the evolutionary history of prokaryotes; Discuss the distinguishing features of extremophiles; Explain why it is difficult to culture prokaryotes."
+  requires: [bio2.21-4-other-acellular-entities-prions-and-viroids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 22.1 Prokaryotic Diversity", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.22-2-structure-of-prokaryotes-bacteria-and-archaea.v1 ADVANCED {
+  title: "22.2 Structure of Prokaryotes: Bacteria and Archaea"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the basic structure of a typical prokaryote; Describe important differences in structure between Archaea and Bacteria."
+  requires: [bio2.22-1-prokaryotic-diversity.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 22.2 Structure of Prokaryotes: Bacteria and Archaea", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.22-3-prokaryotic-metabolism.v1 ADVANCED {
+  title: "22.3 Prokaryotic Metabolism"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the macronutrients needed by prokaryotes, and explain their importance; Describe the ways in which prokaryotes get energy and carbon for life processes; Describe the roles of prokaryotes in the carbon and nitrogen cycles."
+  requires: [bio2.22-2-structure-of-prokaryotes-bacteria-and-archaea.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 22.3 Prokaryotic Metabolism", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.22-4-bacterial-diseases-in-humans.v1 ADVANCED {
+  title: "22.4 Bacterial Diseases in Humans"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify bacterial diseases that caused historically important plagues and epidemics; Describe the link between biofilms and foodborne diseases; Explain how overuse of antibiotics may be creating “super bugs”; Explain the importance of MRSA with respect to the problems of antibiotic resistance."
+  requires: [bio2.22-3-prokaryotic-metabolism.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 22.4 Bacterial Diseases in Humans", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.22-5-beneficial-prokaryotes.v1 ADVANCED {
+  title: "22.5 Beneficial Prokaryotes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the need for nitrogen fixation and how it is accomplished; Describe the beneficial effects of bacteria that colonize our skin and digestive tracts; Identify prokaryotes used during the processing of food; Describe the use of prokaryotes in bioremediation."
+  requires: [bio2.22-4-bacterial-diseases-in-humans.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 22.5 Beneficial Prokaryotes", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 23: 23 Protists
+# ------------------------------------------------------------
+KNOWLEDGE bio2.23-1-eukaryotic-origins.v1 ADVANCED {
+  title: "23.1 Eukaryotic Origins"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the unifying characteristics of eukaryotes; Describe what scientists know about the origins of eukaryotes based on the last common ancestor; Explain the endosymbiotic theory."
+  requires: [bio2.22-5-beneficial-prokaryotes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 23.1 Eukaryotic Origins", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.23-2-characteristics-of-protists.v1 ADVANCED {
+  title: "23.2 Characteristics of Protists"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the cell structure characteristics of protists; Describe the metabolic diversity of protists; Describe the life cycle diversity of protists."
+  requires: [bio2.23-1-eukaryotic-origins.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 23.2 Characteristics of Protists", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.23-3-groups-of-protists.v1 ADVANCED {
+  title: "23.3 Groups of Protists"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe representative protist organisms from each of the six presently recognized supergroups of eukaryotes; Identify the evolutionary relationships of plants, animals, and fungi within the six presently recognized supergroups of eukaryotes; Identify defining features of protists in each of the six supergroups of eukaryotes.."
+  requires: [bio2.23-2-characteristics-of-protists.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 23.3 Groups of Protists", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.23-4-ecology-of-protists.v1 ADVANCED {
+  title: "23.4 Ecology of Protists"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the role that protists play in the ecosystem; Describe important pathogenic species of protists."
+  requires: [bio2.23-3-groups-of-protists.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 23.4 Ecology of Protists", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 24: 24 Fungi
+# ------------------------------------------------------------
+KNOWLEDGE bio2.24-1-characteristics-of-fungi.v1 ADVANCED {
+  title: "24.1 Characteristics of Fungi"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the characteristics of fungi; Describe the composition of the mycelium; Describe the mode of nutrition of fungi; Explain sexual and asexual reproduction in fungi."
+  requires: [bio2.23-4-ecology-of-protists.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 24.1 Characteristics of Fungi", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.24-2-classifications-of-fungi.v1 ADVANCED {
+  title: "24.2 Classifications of Fungi"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify fungi and place them into the five major phyla according to current classification; Describe each phylum in terms of major representative species and patterns of reproduction."
+  requires: [bio2.24-1-characteristics-of-fungi.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 24.2 Classifications of Fungi", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.24-3-ecology-of-fungi.v1 ADVANCED {
+  title: "24.3 Ecology of Fungi"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the role of fungi in various ecosystems; Describe mutualistic relationships of fungi with plant roots and photosynthetic organisms; Describe the beneficial relationship between some fungi and insects."
+  requires: [bio2.24-2-classifications-of-fungi.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 24.3 Ecology of Fungi", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.24-4-fungal-parasites-and-pathogens.v1 ADVANCED {
+  title: "24.4 Fungal Parasites and Pathogens"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe some fungal parasites and pathogens of plants; Describe the different types of fungal infections in humans; Explain why antifungal therapy is hampered by the similarity between fungal and animal cells."
+  requires: [bio2.24-3-ecology-of-fungi.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 24.4 Fungal Parasites and Pathogens", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.24-5-importance-of-fungi-in-human-life.v1 ADVANCED {
+  title: "24.5 Importance of Fungi in Human Life"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the importance of fungi to the balance of the environment; Summarize the role of fungi in agriculture and food and beverage preparation; Describe the importance of fungi in the chemical and pharmaceutical industries; Discuss the role of fungi as model organisms."
+  requires: [bio2.24-4-fungal-parasites-and-pathogens.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 24.5 Importance of Fungi in Human Life", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 25: 25 Seedless Plants
+# ------------------------------------------------------------
+KNOWLEDGE bio2.25-1-early-plant-life.v1 ADVANCED {
+  title: "25.1 Early Plant Life"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the challenges to plant life on land; Describe the adaptations that allowed plants to colonize the land; Describe the timeline of plant evolution and the impact of land plants on other living things."
+  requires: [bio2.24-5-importance-of-fungi-in-human-life.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 25.1 Early Plant Life", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.25-2-green-algae-precursors-of-land-plants.v1 ADVANCED {
+  title: "25.2 Green Algae: Precursors of Land Plants"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the traits shared by green algae and land plants; Explain why charophytes are considered the closest algal relative to land plants; Explain how current phylogenetic relationships are reshaped by comparative analysis of DNA sequences."
+  requires: [bio2.25-1-early-plant-life.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 25.2 Green Algae: Precursors of Land Plants", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.25-3-bryophytes.v1 ADVANCED {
+  title: "25.3 Bryophytes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the main characteristics of bryophytes; Describe the distinguishing traits of liverworts, hornworts, and mosses; Chart the development of land adaptations in the bryophytes; Describe the events in the bryophyte lifecycle."
+  requires: [bio2.25-2-green-algae-precursors-of-land-plants.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 25.3 Bryophytes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.25-4-seedless-vascular-plants.v1 ADVANCED {
+  title: "25.4 Seedless Vascular Plants"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the new traits that first appear in seedless tracheophytes; Discuss how each trait is important for adaptation to life on land; Identify the classes of seedless tracheophytes; Describe the life cycle of a fern; Explain the role of seedless plants in the ecosystem."
+  requires: [bio2.25-3-bryophytes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 25.4 Seedless Vascular Plants", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 26: 26 Seed Plants
+# ------------------------------------------------------------
+KNOWLEDGE bio2.26-1-evolution-of-seed-plants.v1 ADVANCED {
+  title: "26.1 Evolution of Seed Plants"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the two major innovations that allowed seed plants to reproduce in the absence of water; Explain when seed plants first appeared and when gymnosperms became the dominant plant group; Discuss the purpose of pollen grains and seeds; Describe the significance of angiosperms bearing both flowers and fruit."
+  requires: [bio2.25-4-seedless-vascular-plants.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 26.1 Evolution of Seed Plants", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.26-2-gymnosperms.v1 ADVANCED {
+  title: "26.2 Gymnosperms"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the type of seeds produced by gymnosperms, as well as other characteristics of gymnosperms; Identify the geological era dominated by the gymnosperms and describe the conditions to which they were adapted; List the four groups of modern-day gymnosperms and provide examples of each; Describe the life cycle of a typical gymnosperm."
+  requires: [bio2.26-1-evolution-of-seed-plants.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 26.2 Gymnosperms", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.26-3-angiosperms.v1 ADVANCED {
+  title: "26.3 Angiosperms"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain why angiosperms are the dominant form of plant life in most terrestrial ecosystems; Describe the main parts of a flower and their functions; Detail the life cycle of a typical gymnosperm and angiosperm; Discuss the similarities and differences between the two main groups of flowering plants."
+  requires: [bio2.26-2-gymnosperms.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 26.3 Angiosperms", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.26-4-the-role-of-seed-plants.v1 ADVANCED {
+  title: "26.4 The Role of Seed Plants"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how angiosperm diversity is due, in part, to multiple complex interactions with animals; Describe ways in which pollination occurs; Discuss the roles that plants play in ecosystems and how deforestation threatens plant biodiversity."
+  requires: [bio2.26-3-angiosperms.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 26.4 The Role of Seed Plants", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 27: 27 Introduction to Animal Diversity
+# ------------------------------------------------------------
+KNOWLEDGE bio2.27-1-features-of-the-animal-kingdom.v1 ADVANCED {
+  title: "27.1 Features of the Animal Kingdom"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the features that distinguish the kingdom Animalia from other kingdoms; Explain the processes of animal reproduction and embryonic development; Describe the roles that Hox genes play in development."
+  requires: [bio2.26-4-the-role-of-seed-plants.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 27.1 Features of the Animal Kingdom", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.27-2-features-used-to-classify-animals.v1 ADVANCED {
+  title: "27.2 Features Used to Classify Animals"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the differences in animal body plans that support basic animal classification; Compare and contrast the embryonic development of protostomes and deuterostomes."
+  requires: [bio2.27-1-features-of-the-animal-kingdom.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 27.2 Features Used to Classify Animals", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.27-3-animal-phylogeny.v1 ADVANCED {
+  title: "27.3 Animal Phylogeny"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Interpret the metazoan phylogenetic tree; Describe the types of data that scientists use to construct and revise animal phylogeny; List some of the relationships within the modern phylogenetic tree that have been discovered as a result of modern molecular data."
+  requires: [bio2.27-2-features-used-to-classify-animals.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 27.3 Animal Phylogeny", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.27-4-the-evolutionary-history-of-the-animal-kingdom.v1 ADVANCED {
+  title: "27.4 The Evolutionary History of the Animal Kingdom"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the features that characterized the earliest animals and approximately when they appeared on earth; Explain the significance of the Cambrian period for animal evolution and the changes in animal diversity that took place during that time; Describe some of the unresolved questions surrounding the Cambrian explosion; Discuss the implications of mass animal extinctions that have occurred in evolutionary history."
+  requires: [bio2.27-3-animal-phylogeny.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 27.4 The Evolutionary History of the Animal Kingdom", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 28: 28 Invertebrates
+# ------------------------------------------------------------
+KNOWLEDGE bio2.28-1-phylum-porifera.v1 ADVANCED {
+  title: "28.1 Phylum Porifera"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the organizational features of the simplest multicellular organisms; Explain the various body forms and bodily functions of sponges."
+  requires: [bio2.27-4-the-evolutionary-history-of-the-animal-kingdom.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 28.1 Phylum Porifera", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.28-2-phylum-cnidaria.v1 ADVANCED {
+  title: "28.2 Phylum Cnidaria"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compare structural and organization characteristics of Porifera and Cnidaria; Describe the progressive development of tissues and their relevance to animal complexity; Identify the two general body forms found in the Cnidaria; Describe the identifying features of the major cnidarian classes."
+  requires: [bio2.28-1-phylum-porifera.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 28.2 Phylum Cnidaria", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.28-3-superphylum-lophotrochozoa-flatworms-rotifers-and-nemerteans.v1 ADVANCED {
+  title: "28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the unique anatomical and morphological features of flatworms, rotifers, and Nemertea; Identify an important extracoelomic cavity found in Nemertea; Explain the key features of Platyhelminthes and their importance as parasites."
+  requires: [bio2.28-2-phylum-cnidaria.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 28.3 Superphylum Lophotrochozoa: Flatworms, Rotifers, and Nemerteans", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.28-4-superphylum-lophotrochozoa-mollusks-and-annelids.v1 ADVANCED {
+  title: "28.4 Superphylum Lophotrochozoa: Mollusks and Annelids"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the unique anatomical and morphological features of mollusks and annelids; Describe the formation of the coelom; Identify an important extracoelomic cavity in mollusks; Describe the major body regions of Mollusca and how they vary in different molluscan classes; Discuss the advantages of true body segmentation; Describe the features of animals classified in phylum Annelida."
+  requires: [bio2.28-3-superphylum-lophotrochozoa-flatworms-rotifers-and-nemerteans.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 28.4 Superphylum Lophotrochozoa: Mollusks and Annelids", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.28-5-superphylum-ecdysozoa-nematodes-and-tardigrades.v1 ADVANCED {
+  title: "28.5 Superphylum Ecdysozoa: Nematodes and Tardigrades"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structural organization of nematodes; Describe the importance of Caenorhabditis elegans in research; Describe the features of Tardigrades."
+  requires: [bio2.28-4-superphylum-lophotrochozoa-mollusks-and-annelids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 28.5 Superphylum Ecdysozoa: Nematodes and Tardigrades", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.28-6-superphylum-ecdysozoa-arthropods.v1 ADVANCED {
+  title: "28.6 Superphylum Ecdysozoa: Arthropods"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compare the internal systems and appendage specializations of phylum Arthropoda; Discuss the environmental importance of arthropods; Discuss the reasons for arthropod success and abundance."
+  requires: [bio2.28-5-superphylum-ecdysozoa-nematodes-and-tardigrades.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 28.6 Superphylum Ecdysozoa: Arthropods", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.28-7-superphylum-deuterostomia.v1 ADVANCED {
+  title: "28.7 Superphylum Deuterostomia"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the distinguishing characteristics of echinoderms; Describe the distinguishing characteristics of chordates."
+  requires: [bio2.28-6-superphylum-ecdysozoa-arthropods.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 28.7 Superphylum Deuterostomia", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 29: 29 Vertebrates
+# ------------------------------------------------------------
+KNOWLEDGE bio2.29-1-chordates.v1 ADVANCED {
+  title: "29.1 Chordates"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the distinguishing characteristics of chordates; Identify the derived characters of craniates that sets them apart from other chordates; Describe the developmental fate of the notochord in vertebrates."
+  requires: [bio2.28-7-superphylum-deuterostomia.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 29.1 Chordates", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.29-2-fishes.v1 ADVANCED {
+  title: "29.2 Fishes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the difference between jawless and jawed fishes; Discuss the distinguishing features of sharks and rays compared to other modern fishes."
+  requires: [bio2.29-1-chordates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 29.2 Fishes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.29-3-amphibians.v1 ADVANCED {
+  title: "29.3 Amphibians"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the important difference between the life cycle of amphibians and the life cycles of other vertebrates; Distinguish between the characteristics of Urodela, Anura, and Apoda; Describe the evolutionary history of amphibians."
+  requires: [bio2.29-2-fishes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 29.3 Amphibians", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.29-4-reptiles.v1 ADVANCED {
+  title: "29.4 Reptiles"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the main characteristics of amniotes; Explain the difference between anapsids, synapsids, and diapsids, and give an example of each; Identify the characteristics of reptiles; Discuss the evolution of reptiles."
+  requires: [bio2.29-3-amphibians.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 29.4 Reptiles", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.29-5-birds.v1 ADVANCED {
+  title: "29.5 Birds"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the evolutionary history of birds; Describe the derived characteristics in birds that facilitate flight."
+  requires: [bio2.29-4-reptiles.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 29.5 Birds", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.29-6-mammals.v1 ADVANCED {
+  title: "29.6 Mammals"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Name and describe the distinguishing features of the three main groups of mammals; Describe the likely line of evolutionary descent that produced mammals; List some derived features that may have arisen in response to mammals’ need for constant, high-level metabolism; Identify the major clades of eutherian mammals."
+  requires: [bio2.29-5-birds.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 29.6 Mammals", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.29-7-the-evolution-of-primates.v1 ADVANCED {
+  title: "29.7 The Evolution of Primates"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the derived features that distinguish primates from other animals; Describe the defining features of the major groups of primates; Identify the major hominin precursors to modern humans; Explain why scientists are having difficulty determining the true lines of descent in hominids."
+  requires: [bio2.29-6-mammals.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 29.7 The Evolution of Primates", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 30: 30 Plant Form and Physiology
+# ------------------------------------------------------------
+KNOWLEDGE bio2.30-1-the-plant-body.v1 ADVANCED {
+  title: "30.1 The Plant Body"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the shoot organ system and the root organ system; Distinguish between meristematic tissue and permanent tissue; Identify and describe the three regions where plant growth occurs; Summarize the roles of dermal tissue, vascular tissue, and ground tissue; Compare simple plant tissue with complex plant tissue."
+  requires: [bio2.29-7-the-evolution-of-primates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 30.1 The Plant Body", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.30-2-stems.v1 ADVANCED {
+  title: "30.2 Stems"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the main function and basic structure of stems; Compare and contrast the roles of dermal tissue, vascular tissue, and ground tissue; Distinguish between primary growth and secondary growth in stems; Summarize the origin of annual rings; List and describe examples of modified stems."
+  requires: [bio2.30-1-the-plant-body.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 30.2 Stems", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.30-3-roots.v1 ADVANCED {
+  title: "30.3 Roots"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the two types of root systems; Describe the three zones of the root tip and summarize the role of each zone in root growth; Describe the structure of the root; List and describe examples of modified roots."
+  requires: [bio2.30-2-stems.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 30.3 Roots", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.30-4-leaves.v1 ADVANCED {
+  title: "30.4 Leaves"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the parts of a typical leaf; Describe the internal structure and function of a leaf; Compare and contrast simple leaves and compound leaves; List and describe examples of modified leaves."
+  requires: [bio2.30-3-roots.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 30.4 Leaves", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.30-5-transport-of-water-and-solutes-in-plants.v1 ADVANCED {
+  title: "30.5 Transport of Water and Solutes in Plants"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define water potential and explain how it is influenced by solutes, pressure, gravity, and the matric potential; Describe how water potential, evapotranspiration, and stomatal regulation influence how water is transported in plants; Explain how photosynthates are transported in plants."
+  requires: [bio2.30-4-leaves.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 30.5 Transport of Water and Solutes in Plants", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.30-6-plant-sensory-systems-and-responses.v1 ADVANCED {
+  title: "30.6 Plant Sensory Systems and Responses"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how red and blue light affect plant growth and metabolic activities; Discuss gravitropism; Understand how hormones affect plant growth and development; Describe thigmotropism, thigmonastism, and thigmogenesis; Explain how plants defend themselves from predators and respond to wounds."
+  requires: [bio2.30-5-transport-of-water-and-solutes-in-plants.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 30.6 Plant Sensory Systems and Responses", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 31: 31 Soil and Plant Nutrition
+# ------------------------------------------------------------
+KNOWLEDGE bio2.31-1-nutritional-requirements-of-plants.v1 ADVANCED {
+  title: "31.1 Nutritional Requirements of Plants"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how plants obtain nutrients; List the elements and compounds required for proper plant nutrition; Describe an essential nutrient."
+  requires: [bio2.30-6-plant-sensory-systems-and-responses.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 31.1 Nutritional Requirements of Plants", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.31-2-the-soil.v1 ADVANCED {
+  title: "31.2 The Soil"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how soils are formed; Explain soil composition; Describe a soil profile."
+  requires: [bio2.31-1-nutritional-requirements-of-plants.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 31.2 The Soil", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.31-3-nutritional-adaptations-of-plants.v1 ADVANCED {
+  title: "31.3 Nutritional Adaptations of Plants"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the nutritional adaptations of plants; Describe mycorrhizae; Explain nitrogen fixation."
+  requires: [bio2.31-2-the-soil.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 31.3 Nutritional Adaptations of Plants", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 32: 32 Plant Reproduction
+# ------------------------------------------------------------
+KNOWLEDGE bio2.32-1-reproductive-development-and-structure.v1 ADVANCED {
+  title: "32.1 Reproductive Development and Structure"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the two stages of a plant’s lifecycle; Compare and contrast male and female gametophytes and explain how they form in angiosperms; Describe the reproductive structures of a plant; Describe the components of a complete flower; Describe the development of microsporangium and megasporangium in gymnosperms."
+  requires: [bio2.31-3-nutritional-adaptations-of-plants.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 32.1 Reproductive Development and Structure", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.32-2-pollination-and-fertilization.v1 ADVANCED {
+  title: "32.2 Pollination and Fertilization"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe what must occur for plant fertilization; Explain cross-pollination and the ways in which it takes place; Describe the process that leads to the development of a seed; Define double fertilization."
+  requires: [bio2.32-1-reproductive-development-and-structure.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 32.2 Pollination and Fertilization", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.32-3-asexual-reproduction.v1 ADVANCED {
+  title: "32.3 Asexual Reproduction"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compare the mechanisms and methods of natural and artificial asexual reproduction; Describe the advantages and disadvantages of natural and artificial asexual reproduction; Discuss plant life spans."
+  requires: [bio2.32-2-pollination-and-fertilization.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 32.3 Asexual Reproduction", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 33: 33 The Animal Body: Basic Form and Function
+# ------------------------------------------------------------
+KNOWLEDGE bio2.33-1-animal-form-and-function.v1 ADVANCED {
+  title: "33.1 Animal Form and Function"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the various types of body plans that occur in animals; Describe limits on animal size and shape; Relate bioenergetics to body size, levels of activity, and the environment."
+  requires: [bio2.32-3-asexual-reproduction.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 33.1 Animal Form and Function", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.33-2-animal-primary-tissues.v1 ADVANCED {
+  title: "33.2 Animal Primary Tissues"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe epithelial tissues; Discuss the different types of connective tissues in animals; Describe three types of muscle tissues; Describe nervous tissue."
+  requires: [bio2.33-1-animal-form-and-function.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 33.2 Animal Primary Tissues", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.33-3-homeostasis.v1 ADVANCED {
+  title: "33.3 Homeostasis"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define homeostasis; Describe the factors affecting homeostasis; Discuss positive and negative feedback mechanisms used in homeostasis; Describe thermoregulation of endothermic and ectothermic animals."
+  requires: [bio2.33-2-animal-primary-tissues.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 33.3 Homeostasis", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 34: 34 Animal Nutrition and the Digestive System
+# ------------------------------------------------------------
+KNOWLEDGE bio2.34-1-digestive-systems.v1 ADVANCED {
+  title: "34.1 Digestive Systems"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the processes of digestion and absorption; Compare and contrast different types of digestive systems; Explain the specialized functions of the organs involved in processing food in the body; Describe the ways in which organs work together to digest food and absorb nutrients."
+  requires: [bio2.33-3-homeostasis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 34.1 Digestive Systems", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.34-2-nutrition-and-energy-production.v1 ADVANCED {
+  title: "34.2 Nutrition and Energy Production"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain why an animal’s diet should be balanced and meet the needs of the body; Define the primary components of food; Describe the essential nutrients required for cellular function that cannot be synthesized by the animal body; Explain how energy is produced through diet and digestion; Describe how excess carbohydrates and energy are stored in the body."
+  requires: [bio2.34-1-digestive-systems.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 34.2 Nutrition and Energy Production", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.34-3-digestive-system-processes.v1 ADVANCED {
+  title: "34.3 Digestive System Processes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the process of digestion; Detail the steps involved in digestion and absorption; Define elimination; Explain the role of both the small and large intestines in absorption."
+  requires: [bio2.34-2-nutrition-and-energy-production.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 34.3 Digestive System Processes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.34-4-digestive-system-regulation.v1 ADVANCED {
+  title: "34.4 Digestive System Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the role of neural regulation in digestive processes; Explain how hormones regulate digestion."
+  requires: [bio2.34-3-digestive-system-processes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 34.4 Digestive System Regulation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 35: 35 The Nervous System
+# ------------------------------------------------------------
+KNOWLEDGE bio2.35-1-neurons-and-glial-cells.v1 ADVANCED {
+  title: "35.1 Neurons and Glial Cells"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List and describe the functions of the structural components of a neuron; List and describe the four main types of neurons; Compare the functions of different types of glial cells."
+  requires: [bio2.34-4-digestive-system-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 35.1 Neurons and Glial Cells", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.35-2-how-neurons-communicate.v1 ADVANCED {
+  title: "35.2 How Neurons Communicate"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the basis of the resting membrane potential; Explain the stages of an action potential and how action potentials are propagated; Explain the similarities and differences between chemical and electrical synapses; Describe long-term potentiation and long-term depression."
+  requires: [bio2.35-1-neurons-and-glial-cells.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 35.2 How Neurons Communicate", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.35-3-the-central-nervous-system.v1 ADVANCED {
+  title: "35.3 The Central Nervous System"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the spinal cord, cerebral lobes, and other brain areas on a diagram of the brain; Describe the basic functions of the spinal cord, cerebral lobes, and other brain areas."
+  requires: [bio2.35-2-how-neurons-communicate.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 35.3 The Central Nervous System", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.35-4-the-peripheral-nervous-system.v1 ADVANCED {
+  title: "35.4 The Peripheral Nervous System"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the organization and functions of the sympathetic and parasympathetic nervous systems; Describe the organization and function of the sensory-somatic nervous system."
+  requires: [bio2.35-3-the-central-nervous-system.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 35.4 The Peripheral Nervous System", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.35-5-nervous-system-disorders.v1 ADVANCED {
+  title: "35.5 Nervous System Disorders"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the symptoms, potential causes, and treatment of several examples of nervous system disorders."
+  requires: [bio2.35-4-the-peripheral-nervous-system.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 35.5 Nervous System Disorders", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 36: 36 Sensory Systems
+# ------------------------------------------------------------
+KNOWLEDGE bio2.36-1-sensory-processes.v1 ADVANCED {
+  title: "36.1 Sensory Processes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the general and special senses in humans; Describe three important steps in sensory perception; Explain the concept of just-noticeable difference in sensory perception."
+  requires: [bio2.35-5-nervous-system-disorders.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 36.1 Sensory Processes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.36-2-somatosensation.v1 ADVANCED {
+  title: "36.2 Somatosensation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe four important mechanoreceptors in human skin; Describe the topographical distribution of somatosensory receptors between glabrous and hairy skin; Explain why the perception of pain is subjective."
+  requires: [bio2.36-1-sensory-processes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 36.2 Somatosensation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.36-3-taste-and-smell.v1 ADVANCED {
+  title: "36.3 Taste and Smell"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain in what way smell and taste stimuli differ from other sensory stimuli; Identify the five primary tastes that can be distinguished by humans; Explain in anatomical terms why a dog’s sense of smell is more acute than a human’s."
+  requires: [bio2.36-2-somatosensation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 36.3 Taste and Smell", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.36-4-hearing-and-vestibular-sensation.v1 ADVANCED {
+  title: "36.4 Hearing and Vestibular Sensation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the relationship of amplitude and frequency of a sound wave to attributes of sound; Trace the path of sound through the auditory system to the site of transduction of sound; Identify the structures of the vestibular system that respond to gravity."
+  requires: [bio2.36-3-taste-and-smell.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 36.4 Hearing and Vestibular Sensation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.36-5-vision.v1 ADVANCED {
+  title: "36.5 Vision"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how electromagnetic waves differ from sound waves; Trace the path of light through the eye to the point of the optic nerve; Explain tonic activity as it is manifested in photoreceptors in the retina."
+  requires: [bio2.36-4-hearing-and-vestibular-sensation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 36.5 Vision", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 37: 37 The Endocrine System
+# ------------------------------------------------------------
+KNOWLEDGE bio2.37-1-types-of-hormones.v1 ADVANCED {
+  title: "37.1 Types of Hormones"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the different types of hormones; Explain their role in maintaining homeostasis."
+  requires: [bio2.36-5-vision.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 37.1 Types of Hormones", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.37-2-how-hormones-work.v1 ADVANCED {
+  title: "37.2 How Hormones Work"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how hormones work; Discuss the role of different types of hormone receptors."
+  requires: [bio2.37-1-types-of-hormones.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 37.2 How Hormones Work", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.37-3-regulation-of-body-processes.v1 ADVANCED {
+  title: "37.3 Regulation of Body Processes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how hormones regulate the excretory system; Discuss the role of hormones in the reproductive system; Describe how hormones regulate metabolism; Explain the role of hormones in different diseases."
+  requires: [bio2.37-2-how-hormones-work.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 37.3 Regulation of Body Processes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.37-4-regulation-of-hormone-production.v1 ADVANCED {
+  title: "37.4 Regulation of Hormone Production"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how hormone production is regulated; Discuss the different stimuli that control hormone levels in the body."
+  requires: [bio2.37-3-regulation-of-body-processes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 37.4 Regulation of Hormone Production", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.37-5-endocrine-glands.v1 ADVANCED {
+  title: "37.5 Endocrine Glands"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the role of different glands in the endocrine system; Explain how the different glands work together to maintain homeostasis."
+  requires: [bio2.37-4-regulation-of-hormone-production.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 37.5 Endocrine Glands", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 38: 38 The Musculoskeletal System
+# ------------------------------------------------------------
+KNOWLEDGE bio2.38-1-types-of-skeletal-systems.v1 ADVANCED {
+  title: "38.1 Types of Skeletal Systems"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the different types of skeletal systems; Explain the role of the human skeletal system; Compare and contrast different skeletal systems."
+  requires: [bio2.37-5-endocrine-glands.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 38.1 Types of Skeletal Systems", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.38-2-bone.v1 ADVANCED {
+  title: "38.2 Bone"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Classify the different types of bones in the skeleton; Explain the role of the different cell types in bone; Explain how bone forms during development."
+  requires: [bio2.38-1-types-of-skeletal-systems.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 38.2 Bone", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.38-3-joints-and-skeletal-movement.v1 ADVANCED {
+  title: "38.3 Joints and Skeletal Movement"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Classify the different types of joints on the basis of structure; Explain the role of joints in skeletal movement."
+  requires: [bio2.38-2-bone.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 38.3 Joints and Skeletal Movement", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.38-4-muscle-contraction-and-locomotion.v1 ADVANCED {
+  title: "38.4 Muscle Contraction and Locomotion"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Classify the different types of muscle tissue; Explain the role of muscles in locomotion."
+  requires: [bio2.38-3-joints-and-skeletal-movement.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 38.4 Muscle Contraction and Locomotion", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 39: 39 The Respiratory System
+# ------------------------------------------------------------
+KNOWLEDGE bio2.39-1-systems-of-gas-exchange.v1 ADVANCED {
+  title: "39.1 Systems of Gas Exchange"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the passage of air from the outside environment to the lungs; Explain how the lungs are protected from particulate matter."
+  requires: [bio2.38-4-muscle-contraction-and-locomotion.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 39.1 Systems of Gas Exchange", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.39-2-gas-exchange-across-respiratory-surfaces.v1 ADVANCED {
+  title: "39.2 Gas Exchange across Respiratory Surfaces"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Name and describe lung volumes and capacities; Understand how gas pressure influences how gases move into and out of the body."
+  requires: [bio2.39-1-systems-of-gas-exchange.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 39.2 Gas Exchange across Respiratory Surfaces", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.39-3-breathing.v1 ADVANCED {
+  title: "39.3 Breathing"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how the structures of the lungs and thoracic cavity control the mechanics of breathing; Explain the importance of compliance and resistance in the lungs; Discuss problems that may arise due to a V/Q mismatch."
+  requires: [bio2.39-2-gas-exchange-across-respiratory-surfaces.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 39.3 Breathing", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.39-4-transport-of-gases-in-human-bodily-fluids.v1 ADVANCED {
+  title: "39.4 Transport of Gases in Human Bodily Fluids"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how oxygen is bound to hemoglobin and transported to body tissues; Explain how carbon dioxide is transported from body tissues to the lungs."
+  requires: [bio2.39-3-breathing.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 39.4 Transport of Gases in Human Bodily Fluids", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 40: 40 The Circulatory System
+# ------------------------------------------------------------
+KNOWLEDGE bio2.40-1-overview-of-the-circulatory-system.v1 ADVANCED {
+  title: "40.1 Overview of the Circulatory System"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe an open and closed circulatory system; Describe interstitial fluid and hemolymph; Compare and contrast the organization and evolution of the vertebrate circulatory system."
+  requires: [bio2.39-4-transport-of-gases-in-human-bodily-fluids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 40.1 Overview of the Circulatory System", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.40-2-components-of-the-blood.v1 ADVANCED {
+  title: "40.2 Components of the Blood"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the basic components of the blood; Compare red and white blood cells; Describe blood plasma and serum."
+  requires: [bio2.40-1-overview-of-the-circulatory-system.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 40.2 Components of the Blood", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.40-3-mammalian-heart-and-blood-vessels.v1 ADVANCED {
+  title: "40.3 Mammalian Heart and Blood Vessels"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure of the heart and explain how cardiac muscle is different from other muscles; Describe the cardiac cycle; Explain the structure of arteries, veins, and capillaries, and how blood flows through the body."
+  requires: [bio2.40-2-components-of-the-blood.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 40.3 Mammalian Heart and Blood Vessels", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.40-4-blood-flow-and-blood-pressure-regulation.v1 ADVANCED {
+  title: "40.4 Blood Flow and Blood Pressure Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the system of blood flow through the body; Describe how blood pressure is regulated."
+  requires: [bio2.40-3-mammalian-heart-and-blood-vessels.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 40.4 Blood Flow and Blood Pressure Regulation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 41: 41 Osmotic Regulation and Excretion
+# ------------------------------------------------------------
+KNOWLEDGE bio2.41-1-osmoregulation-and-osmotic-balance.v1 ADVANCED {
+  title: "41.1 Osmoregulation and Osmotic Balance"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define osmosis and explain its role within the body; Explain why osmoregulation and osmotic balance are important body functions; Describe active transport mechanisms; Explain osmolarity and the way in which it is measured; Describe osmoregulators or osmoconformers and how these tools allow animals to adapt to different environments."
+  requires: [bio2.40-4-blood-flow-and-blood-pressure-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 41.1 Osmoregulation and Osmotic Balance", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.41-2-the-kidneys-and-osmoregulatory-organs.v1 ADVANCED {
+  title: "41.2 The Kidneys and Osmoregulatory Organs"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how the kidneys serve as the main osmoregulatory organs in mammalian systems; Describe the structure of the kidneys and the functions of the parts of the kidney; Describe how the nephron is the functional unit of the kidney and explain how it actively filters blood and generates urine; Detail the three steps in the formation of urine: glomerular filtration, tubular reabsorption, and tubular secretion."
+  requires: [bio2.41-1-osmoregulation-and-osmotic-balance.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 41.2 The Kidneys and Osmoregulatory Organs", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.41-3-excretion-systems.v1 ADVANCED {
+  title: "41.3 Excretion Systems"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how vacuoles, present in microorganisms, work to excrete waste; Describe the way in which flame cells and nephridia in worms perform excretory functions and maintain osmotic balance; Explain how insects use Malpighian tubules to excrete wastes and maintain osmotic balance."
+  requires: [bio2.41-2-the-kidneys-and-osmoregulatory-organs.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 41.3 Excretion Systems", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.41-4-nitrogenous-wastes.v1 ADVANCED {
+  title: "41.4 Nitrogenous Wastes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compare and contrast the way in which aquatic animals and terrestrial animals can eliminate toxic ammonia from their systems; Compare the major byproduct of ammonia metabolism in vertebrate animals to that of birds, insects, and reptiles."
+  requires: [bio2.41-3-excretion-systems.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 41.4 Nitrogenous Wastes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.41-5-hormonal-control-of-osmoregulatory-functions.v1 ADVANCED {
+  title: "41.5 Hormonal Control of Osmoregulatory Functions"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how hormonal cues help the kidneys synchronize the osmotic needs of the body; Describe how hormones like epinephrine, norepinephrine, renin-angiotensin, aldosterone, anti-diuretic hormone, and atrial natriuretic peptide help regulate waste elimination, maintain correct osmolarity, and perform other osmoregulatory functions."
+  requires: [bio2.41-4-nitrogenous-wastes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 41.5 Hormonal Control of Osmoregulatory Functions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 42: 42 The Immune System
+# ------------------------------------------------------------
+KNOWLEDGE bio2.42-1-innate-immune-response.v1 ADVANCED {
+  title: "42.1 Innate Immune Response"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe physical and chemical immune barriers; Explain immediate and induced innate immune responses; Discuss natural killer cells; Describe major histocompatibility complex I molecules; Summarize how the proteins in a complement system function to destroy extracellular pathogens."
+  requires: [bio2.41-5-hormonal-control-of-osmoregulatory-functions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 42.1 Innate Immune Response", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.42-2-adaptive-immune-response.v1 ADVANCED {
+  title: "42.2 Adaptive Immune Response"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain adaptive immunity; Compare and contrast adaptive and innate immunity; Describe cell-mediated immune response and humoral immune response; Describe immune tolerance."
+  requires: [bio2.42-1-innate-immune-response.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 42.2 Adaptive Immune Response", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.42-3-antibodies.v1 ADVANCED {
+  title: "42.3 Antibodies"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain cross-reactivity; Describe the structure and function of antibodies; Discuss antibody production."
+  requires: [bio2.42-2-adaptive-immune-response.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 42.3 Antibodies", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.42-4-disruptions-in-the-immune-system.v1 ADVANCED {
+  title: "42.4 Disruptions in the Immune System"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe hypersensitivity; Define autoimmunity."
+  requires: [bio2.42-3-antibodies.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 42.4 Disruptions in the Immune System", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 43: 43 Animal Reproduction and Development
+# ------------------------------------------------------------
+KNOWLEDGE bio2.43-1-reproduction-methods.v1 ADVANCED {
+  title: "43.1 Reproduction Methods"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe advantages and disadvantages of asexual and sexual reproduction; Discuss asexual reproduction methods; Discuss sexual reproduction methods."
+  requires: [bio2.42-4-disruptions-in-the-immune-system.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 43.1 Reproduction Methods", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.43-2-fertilization.v1 ADVANCED {
+  title: "43.2 Fertilization"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss internal and external methods of fertilization; Describe the methods used by animals for development of offspring during gestation; Describe the anatomical adaptations that occurred in animals to facilitate reproduction."
+  requires: [bio2.43-1-reproduction-methods.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 43.2 Fertilization", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.43-3-human-reproductive-anatomy-and-gametogenesis.v1 ADVANCED {
+  title: "43.3 Human Reproductive Anatomy and Gametogenesis"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe human male and female reproductive anatomies; Discuss the human sexual response; Describe spermatogenesis and oogenesis and discuss their differences and similarities."
+  requires: [bio2.43-2-fertilization.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 43.3 Human Reproductive Anatomy and Gametogenesis", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.43-4-hormonal-control-of-human-reproduction.v1 ADVANCED {
+  title: "43.4 Hormonal Control of Human Reproduction"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the roles of male and female reproductive hormones; Discuss the interplay of the ovarian and menstrual cycles; Describe the process of menopause."
+  requires: [bio2.43-3-human-reproductive-anatomy-and-gametogenesis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 43.4 Hormonal Control of Human Reproduction", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.43-5-human-pregnancy-and-birth.v1 ADVANCED {
+  title: "43.5 Human Pregnancy and Birth"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain fetal development during the three trimesters of gestation; Describe labor and delivery; Compare the efficacy and duration of various types of contraception; Discuss causes of infertility and the therapeutic options available."
+  requires: [bio2.43-4-hormonal-control-of-human-reproduction.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 43.5 Human Pregnancy and Birth", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.43-6-fertilization-and-early-embryonic-development.v1 ADVANCED {
+  title: "43.6 Fertilization and Early Embryonic Development"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss how fertilization occurs; Explain how the embryo forms from the zygote; Discuss the role of cleavage and gastrulation in animal development."
+  requires: [bio2.43-5-human-pregnancy-and-birth.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 43.6 Fertilization and Early Embryonic Development", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.43-7-organogenesis-and-vertebrate-axis-formation.v1 ADVANCED {
+  title: "43.7 Organogenesis and Vertebrate Axis Formation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the process of organogenesis; Identify the anatomical axes formed in vertebrates."
+  requires: [bio2.43-6-fertilization-and-early-embryonic-development.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 43.7 Organogenesis and Vertebrate Axis Formation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 44: 44 Ecology and the Biosphere
+# ------------------------------------------------------------
+KNOWLEDGE bio2.44-1-the-scope-of-ecology.v1 ADVANCED {
+  title: "44.1 The Scope of Ecology"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define ecology and the four basic levels of ecological research; Describe examples of the ways in which ecology requires the integration of different scientific disciplines; Distinguish between abiotic and biotic components of the environment; Recognize the relationship between abiotic and biotic components of the environment."
+  requires: [bio2.43-7-organogenesis-and-vertebrate-axis-formation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 44.1 The Scope of Ecology", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.44-2-biogeography.v1 ADVANCED {
+  title: "44.2 Biogeography"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define biogeography; List and describe abiotic factors that affect the global distribution of plant and animal species; Compare the impact of abiotic forces on aquatic and terrestrial environments; Summarize the effects of abiotic factors on net primary productivity."
+  requires: [bio2.44-1-the-scope-of-ecology.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 44.2 Biogeography", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.44-3-terrestrial-biomes.v1 ADVANCED {
+  title: "44.3 Terrestrial Biomes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the two major abiotic factors that determine terrestrial biomes; Recognize distinguishing characteristics of each of the eight major terrestrial biomes."
+  requires: [bio2.44-2-biogeography.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 44.3 Terrestrial Biomes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.44-4-aquatic-biomes.v1 ADVANCED {
+  title: "44.4 Aquatic Biomes"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the effects of abiotic factors on the composition of plant and animal communities in aquatic biomes; Compare and contrast the characteristics of the ocean zones; Summarize the characteristics of standing water and flowing water freshwater biomes."
+  requires: [bio2.44-3-terrestrial-biomes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 44.4 Aquatic Biomes", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.44-5-climate-and-the-effects-of-global-climate-change.v1 ADVANCED {
+  title: "44.5 Climate and the Effects of Global Climate Change"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define global climate change; Summarize the effects of the Industrial Revolution on global atmospheric carbon dioxide concentration; Describe three natural factors affecting long-term global climate; List two or more greenhouse gases and describe their role in the greenhouse effect."
+  requires: [bio2.44-4-aquatic-biomes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 44.5 Climate and the Effects of Global Climate Change", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 45: 45 Population and Community Ecology
+# ------------------------------------------------------------
+KNOWLEDGE bio2.45-1-population-demography.v1 ADVANCED {
+  title: "45.1 Population Demography"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how ecologists measure population size and density; Describe three different patterns of population distribution; Use life tables to calculate mortality rates; Describe the three types of survivorship curves and relate them to specific populations."
+  requires: [bio2.44-5-climate-and-the-effects-of-global-climate-change.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 45.1 Population Demography", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.45-2-life-histories-and-natural-selection.v1 ADVANCED {
+  title: "45.2 Life Histories and Natural Selection"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how life history patterns are influenced by natural selection; Explain different life history patterns and how different reproductive strategies affect species’ survival."
+  requires: [bio2.45-1-population-demography.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 45.2 Life Histories and Natural Selection", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.45-3-environmental-limits-to-population-growth.v1 ADVANCED {
+  title: "45.3 Environmental Limits to Population Growth"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the characteristics of and differences between exponential and logistic growth patterns; Give examples of exponential and logistic growth in natural populations; Describe how natural selection and environmental adaptation led to the evolution of particular life history patterns."
+  requires: [bio2.45-2-life-histories-and-natural-selection.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 45.3 Environmental Limits to Population Growth", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.45-4-population-dynamics-and-regulation.v1 ADVANCED {
+  title: "45.4 Population Dynamics and Regulation"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Give examples of how the carrying capacity of a habitat may change; Compare and contrast density-dependent growth regulation and density-independent growth regulation, giving examples; Give examples of exponential and logistic growth in wild animal populations; Describe how natural selection and environmental adaptation leads to the evolution of particular life-history patterns."
+  requires: [bio2.45-3-environmental-limits-to-population-growth.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 45.4 Population Dynamics and Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.45-5-human-population-growth.v1 ADVANCED {
+  title: "45.5 Human Population Growth"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss exponential human population growth; Explain how humans have expanded the carrying capacity of their habitat; Relate population growth and age structure to the level of economic development in different countries; Discuss the long-term implications of unchecked human population growth."
+  requires: [bio2.45-4-population-dynamics-and-regulation.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 45.5 Human Population Growth", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.45-6-community-ecology.v1 ADVANCED {
+  title: "45.6 Community Ecology"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the predator-prey cycle; Give examples of defenses against predation and herbivory; Describe the competitive exclusion principle; Give examples of symbiotic relationships between species; Describe community structure and succession."
+  requires: [bio2.45-5-human-population-growth.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 45.6 Community Ecology", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.45-7-behavioral-biology-proximate-and-ultimate-causes-of-behavior.v1 ADVANCED {
+  title: "45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compare innate and learned behavior; Discuss how movement and migration behaviors are a result of natural selection; Discuss the different ways members of a population communicate with each other; Give examples of how species use energy for mating displays and other courtship behaviors; Differentiate between various mating systems; Describe different ways that species learn."
+  requires: [bio2.45-6-community-ecology.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 46: 46 Ecosystems
+# ------------------------------------------------------------
+KNOWLEDGE bio2.46-1-ecology-of-ecosystems.v1 ADVANCED {
+  title: "46.1 Ecology of Ecosystems"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the basic ecosystem types; Explain the methods that ecologists use to study ecosystem structure and dynamics; Identify the different methods of ecosystem modeling; Differentiate between food chains and food webs and recognize the importance of each."
+  requires: [bio2.45-7-behavioral-biology-proximate-and-ultimate-causes-of-behavior.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 46.1 Ecology of Ecosystems", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.46-2-energy-flow-through-ecosystems.v1 ADVANCED {
+  title: "46.2 Energy Flow through Ecosystems"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how organisms acquire energy in a food web and in associated food chains; Explain how the efficiency of energy transfers between trophic levels affects ecosystem structure and dynamics; Discuss trophic levels and how ecological pyramids are used to model them."
+  requires: [bio2.46-1-ecology-of-ecosystems.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 46.2 Energy Flow through Ecosystems", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.46-3-biogeochemical-cycles.v1 ADVANCED {
+  title: "46.3 Biogeochemical Cycles"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the biogeochemical cycles of water, carbon, nitrogen, phosphorus, and sulfur; Explain how human activities have impacted these cycles and the potential consequences for Earth."
+  requires: [bio2.46-2-energy-flow-through-ecosystems.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 46.3 Biogeochemical Cycles", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 47: 47 Conservation Biology and Biodiversity
+# ------------------------------------------------------------
+KNOWLEDGE bio2.47-1-the-biodiversity-crisis.v1 ADVANCED {
+  title: "47.1 The Biodiversity Crisis"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define biodiversity in terms of species diversity and abundance; Describe biodiversity as the equilibrium of naturally fluctuating rates of extinction and speciation; Identify historical causes of high extinction rates in Earth’s history."
+  requires: [bio2.46-3-biogeochemical-cycles.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 47.1 The Biodiversity Crisis", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.47-2-the-importance-of-biodiversity-to-human-life.v1 ADVANCED {
+  title: "47.2 The Importance of Biodiversity to Human Life"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify chemical diversity benefits to humans; Identify biodiversity components that support human agriculture; Describe ecosystem services."
+  requires: [bio2.47-1-the-biodiversity-crisis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 47.2 The Importance of Biodiversity to Human Life", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.47-3-threats-to-biodiversity.v1 ADVANCED {
+  title: "47.3 Threats to Biodiversity"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify significant threats to biodiversity; Explain the effects of habitat loss, the introduction of exotic species, and hunting on biodiversity; Identify the early and predicted effects of climate change on biodiversity."
+  requires: [bio2.47-2-the-importance-of-biodiversity-to-human-life.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 47.3 Threats to Biodiversity", weight: 0.90 }
+}
+
+KNOWLEDGE bio2.47-4-preserving-biodiversity.v1 ADVANCED {
+  title: "47.4 Preserving Biodiversity"
+  domain: "biologia_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify new technologies and methods for describing biodiversity; Explain the legislative framework for conservation; Describe principles and challenges of conservation preserve design; Identify examples of the effects of habitat restoration; Discuss the role of zoos in biodiversity conservation."
+  requires: [bio2.47-3-threats-to-biodiversity.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Biology 2e - 47.4 Preserving Biodiversity", weight: 0.90 }
+}
+
+MISSION mission.bio2.v1 {
+  label: "Faculdade: Biologia"
+  requires: [
+    bio2.1-1-the-science-of-biology.v1,
+    bio2.1-2-themes-and-concepts-of-biology.v1,
+    bio2.2-1-atoms-isotopes-ions-and-molecules-the-building-blocks.v1,
+    bio2.2-2-water.v1,
+    bio2.2-3-carbon.v1,
+    bio2.3-1-synthesis-of-biological-macromolecules.v1,
+    bio2.3-2-carbohydrates.v1,
+    bio2.3-3-lipids.v1,
+    bio2.3-4-proteins.v1,
+    bio2.3-5-nucleic-acids.v1,
+    bio2.4-1-studying-cells.v1,
+    bio2.4-2-prokaryotic-cells.v1,
+    bio2.4-3-eukaryotic-cells.v1,
+    bio2.4-4-the-endomembrane-system-and-proteins.v1,
+    bio2.4-5-the-cytoskeleton.v1,
+    bio2.4-6-connections-between-cells-and-cellular-activities.v1,
+    bio2.5-1-components-and-structure.v1,
+    bio2.5-2-passive-transport.v1,
+    bio2.5-3-active-transport.v1,
+    bio2.5-4-bulk-transport.v1,
+    bio2.6-1-energy-and-metabolism.v1,
+    bio2.6-2-potential-kinetic-free-and-activation-energy.v1,
+    bio2.6-3-the-laws-of-thermodynamics.v1,
+    bio2.6-4-atp-adenosine-triphosphate.v1,
+    bio2.6-5-enzymes.v1,
+    bio2.7-1-energy-in-living-systems.v1,
+    bio2.7-2-glycolysis.v1,
+    bio2.7-3-oxidation-of-pyruvate-and-the-citric-acid-cycle.v1,
+    bio2.7-4-oxidative-phosphorylation.v1,
+    bio2.7-5-metabolism-without-oxygen.v1,
+    bio2.7-6-connections-of-carbohydrate-protein-and-lipid-metabolic-pathways.v1,
+    bio2.7-7-regulation-of-cellular-respiration.v1,
+    bio2.8-1-overview-of-photosynthesis.v1,
+    bio2.8-2-the-light-dependent-reactions-of-photosynthesis.v1,
+    bio2.8-3-using-light-energy-to-make-organic-molecules.v1,
+    bio2.9-1-signaling-molecules-and-cellular-receptors.v1,
+    bio2.9-2-propagation-of-the-signal.v1,
+    bio2.9-3-response-to-the-signal.v1,
+    bio2.9-4-signaling-in-single-celled-organisms.v1,
+    bio2.10-1-cell-division.v1,
+    bio2.10-2-the-cell-cycle.v1,
+    bio2.10-3-control-of-the-cell-cycle.v1,
+    bio2.10-4-cancer-and-the-cell-cycle.v1,
+    bio2.10-5-prokaryotic-cell-division.v1,
+    bio2.11-1-the-process-of-meiosis.v1,
+    bio2.11-2-sexual-reproduction.v1,
+    bio2.12-1-mendels-experiments-and-the-laws-of-probability.v1,
+    bio2.12-2-characteristics-and-traits.v1,
+    bio2.12-3-laws-of-inheritance.v1,
+    bio2.13-1-chromosomal-theory-and-genetic-linkage.v1,
+    bio2.13-2-chromosomal-basis-of-inherited-disorders.v1,
+    bio2.14-1-historical-basis-of-modern-understanding.v1,
+    bio2.14-2-dna-structure-and-sequencing.v1,
+    bio2.14-3-basics-of-dna-replication.v1,
+    bio2.14-4-dna-replication-in-prokaryotes.v1,
+    bio2.14-5-dna-replication-in-eukaryotes.v1,
+    bio2.14-6-dna-repair.v1,
+    bio2.15-1-the-genetic-code.v1,
+    bio2.15-2-prokaryotic-transcription.v1,
+    bio2.15-3-eukaryotic-transcription.v1,
+    bio2.15-4-rna-processing-in-eukaryotes.v1,
+    bio2.15-5-ribosomes-and-protein-synthesis.v1,
+    bio2.16-1-regulation-of-gene-expression.v1,
+    bio2.16-2-prokaryotic-gene-regulation.v1,
+    bio2.16-3-eukaryotic-epigenetic-gene-regulation.v1,
+    bio2.16-4-eukaryotic-transcription-gene-regulation.v1,
+    bio2.16-5-eukaryotic-post-transcriptional-gene-regulation.v1,
+    bio2.16-6-eukaryotic-translational-and-post-translational-gene-regulation.v1,
+    bio2.16-7-cancer-and-gene-regulation.v1,
+    bio2.17-1-biotechnology.v1,
+    bio2.17-2-mapping-genomes.v1,
+    bio2.17-3-whole-genome-sequencing.v1,
+    bio2.17-4-applying-genomics.v1,
+    bio2.17-5-genomics-and-proteomics.v1,
+    bio2.18-1-understanding-evolution.v1,
+    bio2.18-2-formation-of-new-species.v1,
+    bio2.18-3-reconnection-and-speciation-rates.v1,
+    bio2.19-1-population-evolution.v1,
+    bio2.19-2-population-genetics.v1,
+    bio2.19-3-adaptive-evolution.v1,
+    bio2.20-1-organizing-life-on-earth.v1,
+    bio2.20-2-determining-evolutionary-relationships.v1,
+    bio2.20-3-perspectives-on-the-phylogenetic-tree.v1,
+    bio2.21-1-viral-evolution-morphology-and-classification.v1,
+    bio2.21-2-virus-infections-and-hosts.v1,
+    bio2.21-3-prevention-and-treatment-of-viral-infections.v1,
+    bio2.21-4-other-acellular-entities-prions-and-viroids.v1,
+    bio2.22-1-prokaryotic-diversity.v1,
+    bio2.22-2-structure-of-prokaryotes-bacteria-and-archaea.v1,
+    bio2.22-3-prokaryotic-metabolism.v1,
+    bio2.22-4-bacterial-diseases-in-humans.v1,
+    bio2.22-5-beneficial-prokaryotes.v1,
+    bio2.23-1-eukaryotic-origins.v1,
+    bio2.23-2-characteristics-of-protists.v1,
+    bio2.23-3-groups-of-protists.v1,
+    bio2.23-4-ecology-of-protists.v1,
+    bio2.24-1-characteristics-of-fungi.v1,
+    bio2.24-2-classifications-of-fungi.v1,
+    bio2.24-3-ecology-of-fungi.v1,
+    bio2.24-4-fungal-parasites-and-pathogens.v1,
+    bio2.24-5-importance-of-fungi-in-human-life.v1,
+    bio2.25-1-early-plant-life.v1,
+    bio2.25-2-green-algae-precursors-of-land-plants.v1,
+    bio2.25-3-bryophytes.v1,
+    bio2.25-4-seedless-vascular-plants.v1,
+    bio2.26-1-evolution-of-seed-plants.v1,
+    bio2.26-2-gymnosperms.v1,
+    bio2.26-3-angiosperms.v1,
+    bio2.26-4-the-role-of-seed-plants.v1,
+    bio2.27-1-features-of-the-animal-kingdom.v1,
+    bio2.27-2-features-used-to-classify-animals.v1,
+    bio2.27-3-animal-phylogeny.v1,
+    bio2.27-4-the-evolutionary-history-of-the-animal-kingdom.v1,
+    bio2.28-1-phylum-porifera.v1,
+    bio2.28-2-phylum-cnidaria.v1,
+    bio2.28-3-superphylum-lophotrochozoa-flatworms-rotifers-and-nemerteans.v1,
+    bio2.28-4-superphylum-lophotrochozoa-mollusks-and-annelids.v1,
+    bio2.28-5-superphylum-ecdysozoa-nematodes-and-tardigrades.v1,
+    bio2.28-6-superphylum-ecdysozoa-arthropods.v1,
+    bio2.28-7-superphylum-deuterostomia.v1,
+    bio2.29-1-chordates.v1,
+    bio2.29-2-fishes.v1,
+    bio2.29-3-amphibians.v1,
+    bio2.29-4-reptiles.v1,
+    bio2.29-5-birds.v1,
+    bio2.29-6-mammals.v1,
+    bio2.29-7-the-evolution-of-primates.v1,
+    bio2.30-1-the-plant-body.v1,
+    bio2.30-2-stems.v1,
+    bio2.30-3-roots.v1,
+    bio2.30-4-leaves.v1,
+    bio2.30-5-transport-of-water-and-solutes-in-plants.v1,
+    bio2.30-6-plant-sensory-systems-and-responses.v1,
+    bio2.31-1-nutritional-requirements-of-plants.v1,
+    bio2.31-2-the-soil.v1,
+    bio2.31-3-nutritional-adaptations-of-plants.v1,
+    bio2.32-1-reproductive-development-and-structure.v1,
+    bio2.32-2-pollination-and-fertilization.v1,
+    bio2.32-3-asexual-reproduction.v1,
+    bio2.33-1-animal-form-and-function.v1,
+    bio2.33-2-animal-primary-tissues.v1,
+    bio2.33-3-homeostasis.v1,
+    bio2.34-1-digestive-systems.v1,
+    bio2.34-2-nutrition-and-energy-production.v1,
+    bio2.34-3-digestive-system-processes.v1,
+    bio2.34-4-digestive-system-regulation.v1,
+    bio2.35-1-neurons-and-glial-cells.v1,
+    bio2.35-2-how-neurons-communicate.v1,
+    bio2.35-3-the-central-nervous-system.v1,
+    bio2.35-4-the-peripheral-nervous-system.v1,
+    bio2.35-5-nervous-system-disorders.v1,
+    bio2.36-1-sensory-processes.v1,
+    bio2.36-2-somatosensation.v1,
+    bio2.36-3-taste-and-smell.v1,
+    bio2.36-4-hearing-and-vestibular-sensation.v1,
+    bio2.36-5-vision.v1,
+    bio2.37-1-types-of-hormones.v1,
+    bio2.37-2-how-hormones-work.v1,
+    bio2.37-3-regulation-of-body-processes.v1,
+    bio2.37-4-regulation-of-hormone-production.v1,
+    bio2.37-5-endocrine-glands.v1,
+    bio2.38-1-types-of-skeletal-systems.v1,
+    bio2.38-2-bone.v1,
+    bio2.38-3-joints-and-skeletal-movement.v1,
+    bio2.38-4-muscle-contraction-and-locomotion.v1,
+    bio2.39-1-systems-of-gas-exchange.v1,
+    bio2.39-2-gas-exchange-across-respiratory-surfaces.v1,
+    bio2.39-3-breathing.v1,
+    bio2.39-4-transport-of-gases-in-human-bodily-fluids.v1,
+    bio2.40-1-overview-of-the-circulatory-system.v1,
+    bio2.40-2-components-of-the-blood.v1,
+    bio2.40-3-mammalian-heart-and-blood-vessels.v1,
+    bio2.40-4-blood-flow-and-blood-pressure-regulation.v1,
+    bio2.41-1-osmoregulation-and-osmotic-balance.v1,
+    bio2.41-2-the-kidneys-and-osmoregulatory-organs.v1,
+    bio2.41-3-excretion-systems.v1,
+    bio2.41-4-nitrogenous-wastes.v1,
+    bio2.41-5-hormonal-control-of-osmoregulatory-functions.v1,
+    bio2.42-1-innate-immune-response.v1,
+    bio2.42-2-adaptive-immune-response.v1,
+    bio2.42-3-antibodies.v1,
+    bio2.42-4-disruptions-in-the-immune-system.v1,
+    bio2.43-1-reproduction-methods.v1,
+    bio2.43-2-fertilization.v1,
+    bio2.43-3-human-reproductive-anatomy-and-gametogenesis.v1,
+    bio2.43-4-hormonal-control-of-human-reproduction.v1,
+    bio2.43-5-human-pregnancy-and-birth.v1,
+    bio2.43-6-fertilization-and-early-embryonic-development.v1,
+    bio2.43-7-organogenesis-and-vertebrate-axis-formation.v1,
+    bio2.44-1-the-scope-of-ecology.v1,
+    bio2.44-2-biogeography.v1,
+    bio2.44-3-terrestrial-biomes.v1,
+    bio2.44-4-aquatic-biomes.v1,
+    bio2.44-5-climate-and-the-effects-of-global-climate-change.v1,
+    bio2.45-1-population-demography.v1,
+    bio2.45-2-life-histories-and-natural-selection.v1,
+    bio2.45-3-environmental-limits-to-population-growth.v1,
+    bio2.45-4-population-dynamics-and-regulation.v1,
+    bio2.45-5-human-population-growth.v1,
+    bio2.45-6-community-ecology.v1,
+    bio2.45-7-behavioral-biology-proximate-and-ultimate-causes-of-behavior.v1,
+    bio2.46-1-ecology-of-ecosystems.v1,
+    bio2.46-2-energy-flow-through-ecosystems.v1,
+    bio2.46-3-biogeochemical-cycles.v1,
+    bio2.47-1-the-biodiversity-crisis.v1,
+    bio2.47-2-the-importance-of-biodiversity-to-human-life.v1,
+    bio2.47-3-threats-to-biodiversity.v1,
+    bio2.47-4-preserving-biodiversity.v1,
+  ]
+  threshold: 0.85
+}

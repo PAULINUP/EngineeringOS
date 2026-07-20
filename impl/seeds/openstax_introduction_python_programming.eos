@@ -1,0 +1,1148 @@
+@version 1.0.0
+@domain "programacao"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Introduction to Python Programming
+# Fonte: https://openstax.org/books/introduction-python-programming  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Statements
+# ------------------------------------------------------------
+KNOWLEDGE py.1-1-background.v1 INTERMEDIATE {
+  title: "1.1 Background"
+  domain: "programacao"
+  definition: "1.1 Background — Introduction to Python Programming."
+  requires: []
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.1 Background", weight: 0.90 }
+}
+
+KNOWLEDGE py.1-2-input-output.v1 INTERMEDIATE {
+  title: "1.2 Input/output"
+  domain: "programacao"
+  definition: "1.2 Input/output — Introduction to Python Programming."
+  requires: [py.1-1-background.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.2 Input/output", weight: 0.90 }
+}
+
+KNOWLEDGE py.1-3-variables.v1 INTERMEDIATE {
+  title: "1.3 Variables"
+  domain: "programacao"
+  definition: "1.3 Variables — Introduction to Python Programming."
+  requires: [py.1-2-input-output.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.3 Variables", weight: 0.90 }
+}
+
+KNOWLEDGE py.1-4-string-basics.v1 INTERMEDIATE {
+  title: "1.4 String basics"
+  domain: "programacao"
+  definition: "1.4 String basics — Introduction to Python Programming."
+  requires: [py.1-3-variables.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.4 String basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.1-5-number-basics.v1 INTERMEDIATE {
+  title: "1.5 Number basics"
+  domain: "programacao"
+  definition: "1.5 Number basics — Introduction to Python Programming."
+  requires: [py.1-4-string-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.5 Number basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.1-6-error-messages.v1 INTERMEDIATE {
+  title: "1.6 Error messages"
+  domain: "programacao"
+  definition: "1.6 Error messages — Introduction to Python Programming."
+  requires: [py.1-5-number-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.6 Error messages", weight: 0.90 }
+}
+
+KNOWLEDGE py.1-7-comments.v1 INTERMEDIATE {
+  title: "1.7 Comments"
+  domain: "programacao"
+  definition: "1.7 Comments — Introduction to Python Programming."
+  requires: [py.1-6-error-messages.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.7 Comments", weight: 0.90 }
+}
+
+KNOWLEDGE py.1-8-why-python.v1 INTERMEDIATE {
+  title: "1.8 Why Python?"
+  domain: "programacao"
+  definition: "1.8 Why Python? — Introduction to Python Programming."
+  requires: [py.1-7-comments.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.8 Why Python?", weight: 0.90 }
+}
+
+KNOWLEDGE py.1-9-chapter-summary.v1 INTERMEDIATE {
+  title: "1.9 Chapter summary"
+  domain: "programacao"
+  definition: "1.9 Chapter summary — Introduction to Python Programming."
+  requires: [py.1-8-why-python.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 1.9 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Expressions
+# ------------------------------------------------------------
+KNOWLEDGE py.2-1-the-python-shell.v1 INTERMEDIATE {
+  title: "2.1 The Python shell"
+  domain: "programacao"
+  definition: "2.1 The Python shell — Introduction to Python Programming."
+  requires: [py.1-9-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.1 The Python shell", weight: 0.90 }
+}
+
+KNOWLEDGE py.2-2-type-conversion.v1 INTERMEDIATE {
+  title: "2.2 Type conversion"
+  domain: "programacao"
+  definition: "2.2 Type conversion — Introduction to Python Programming."
+  requires: [py.2-1-the-python-shell.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.2 Type conversion", weight: 0.90 }
+}
+
+KNOWLEDGE py.2-3-mixed-data-types.v1 INTERMEDIATE {
+  title: "2.3 Mixed data types"
+  domain: "programacao"
+  definition: "2.3 Mixed data types — Introduction to Python Programming."
+  requires: [py.2-2-type-conversion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.3 Mixed data types", weight: 0.90 }
+}
+
+KNOWLEDGE py.2-4-floating-point-errors.v1 INTERMEDIATE {
+  title: "2.4 Floating-point errors"
+  domain: "programacao"
+  definition: "2.4 Floating-point errors — Introduction to Python Programming."
+  requires: [py.2-3-mixed-data-types.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.4 Floating-point errors", weight: 0.90 }
+}
+
+KNOWLEDGE py.2-5-dividing-integers.v1 INTERMEDIATE {
+  title: "2.5 Dividing integers"
+  domain: "programacao"
+  definition: "2.5 Dividing integers — Introduction to Python Programming."
+  requires: [py.2-4-floating-point-errors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.5 Dividing integers", weight: 0.90 }
+}
+
+KNOWLEDGE py.2-6-the-math-module.v1 INTERMEDIATE {
+  title: "2.6 The math module"
+  domain: "programacao"
+  definition: "2.6 The math module — Introduction to Python Programming."
+  requires: [py.2-5-dividing-integers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.6 The math module", weight: 0.90 }
+}
+
+KNOWLEDGE py.2-7-formatting-code.v1 INTERMEDIATE {
+  title: "2.7 Formatting code"
+  domain: "programacao"
+  definition: "2.7 Formatting code — Introduction to Python Programming."
+  requires: [py.2-6-the-math-module.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.7 Formatting code", weight: 0.90 }
+}
+
+KNOWLEDGE py.2-8-python-careers.v1 INTERMEDIATE {
+  title: "2.8 Python careers"
+  domain: "programacao"
+  definition: "2.8 Python careers — Introduction to Python Programming."
+  requires: [py.2-7-formatting-code.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.8 Python careers", weight: 0.90 }
+}
+
+KNOWLEDGE py.2-9-chapter-summary.v1 INTERMEDIATE {
+  title: "2.9 Chapter summary"
+  domain: "programacao"
+  definition: "2.9 Chapter summary — Introduction to Python Programming."
+  requires: [py.2-8-python-careers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 2.9 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Objects
+# ------------------------------------------------------------
+KNOWLEDGE py.3-1-strings-revisited.v1 INTERMEDIATE {
+  title: "3.1 Strings revisited"
+  domain: "programacao"
+  definition: "3.1 Strings revisited — Introduction to Python Programming."
+  requires: [py.2-9-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 3.1 Strings revisited", weight: 0.90 }
+}
+
+KNOWLEDGE py.3-2-formatted-strings.v1 INTERMEDIATE {
+  title: "3.2 Formatted strings"
+  domain: "programacao"
+  definition: "3.2 Formatted strings — Introduction to Python Programming."
+  requires: [py.3-1-strings-revisited.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 3.2 Formatted strings", weight: 0.90 }
+}
+
+KNOWLEDGE py.3-3-variables-revisited.v1 INTERMEDIATE {
+  title: "3.3 Variables revisited"
+  domain: "programacao"
+  definition: "3.3 Variables revisited — Introduction to Python Programming."
+  requires: [py.3-2-formatted-strings.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 3.3 Variables revisited", weight: 0.90 }
+}
+
+KNOWLEDGE py.3-4-list-basics.v1 INTERMEDIATE {
+  title: "3.4 List basics"
+  domain: "programacao"
+  definition: "3.4 List basics — Introduction to Python Programming."
+  requires: [py.3-3-variables-revisited.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 3.4 List basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.3-5-tuple-basics.v1 INTERMEDIATE {
+  title: "3.5 Tuple basics"
+  domain: "programacao"
+  definition: "3.5 Tuple basics — Introduction to Python Programming."
+  requires: [py.3-4-list-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 3.5 Tuple basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.3-6-chapter-summary.v1 INTERMEDIATE {
+  title: "3.6 Chapter summary"
+  domain: "programacao"
+  definition: "3.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.3-5-tuple-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 3.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Decisions
+# ------------------------------------------------------------
+KNOWLEDGE py.4-1-boolean-values.v1 INTERMEDIATE {
+  title: "4.1 Boolean values"
+  domain: "programacao"
+  definition: "4.1 Boolean values — Introduction to Python Programming."
+  requires: [py.3-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 4.1 Boolean values", weight: 0.90 }
+}
+
+KNOWLEDGE py.4-2-if-else-statements.v1 INTERMEDIATE {
+  title: "4.2 If-else statements"
+  domain: "programacao"
+  definition: "4.2 If-else statements — Introduction to Python Programming."
+  requires: [py.4-1-boolean-values.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 4.2 If-else statements", weight: 0.90 }
+}
+
+KNOWLEDGE py.4-3-boolean-operations.v1 INTERMEDIATE {
+  title: "4.3 Boolean operations"
+  domain: "programacao"
+  definition: "4.3 Boolean operations — Introduction to Python Programming."
+  requires: [py.4-2-if-else-statements.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 4.3 Boolean operations", weight: 0.90 }
+}
+
+KNOWLEDGE py.4-4-operator-precedence.v1 INTERMEDIATE {
+  title: "4.4 Operator precedence"
+  domain: "programacao"
+  definition: "4.4 Operator precedence — Introduction to Python Programming."
+  requires: [py.4-3-boolean-operations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 4.4 Operator precedence", weight: 0.90 }
+}
+
+KNOWLEDGE py.4-5-chained-decisions.v1 INTERMEDIATE {
+  title: "4.5 Chained decisions"
+  domain: "programacao"
+  definition: "4.5 Chained decisions — Introduction to Python Programming."
+  requires: [py.4-4-operator-precedence.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 4.5 Chained decisions", weight: 0.90 }
+}
+
+KNOWLEDGE py.4-6-nested-decisions.v1 INTERMEDIATE {
+  title: "4.6 Nested decisions"
+  domain: "programacao"
+  definition: "4.6 Nested decisions — Introduction to Python Programming."
+  requires: [py.4-5-chained-decisions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 4.6 Nested decisions", weight: 0.90 }
+}
+
+KNOWLEDGE py.4-7-conditional-expressions.v1 INTERMEDIATE {
+  title: "4.7 Conditional expressions"
+  domain: "programacao"
+  definition: "4.7 Conditional expressions — Introduction to Python Programming."
+  requires: [py.4-6-nested-decisions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 4.7 Conditional expressions", weight: 0.90 }
+}
+
+KNOWLEDGE py.4-8-chapter-summary.v1 INTERMEDIATE {
+  title: "4.8 Chapter summary"
+  domain: "programacao"
+  definition: "4.8 Chapter summary — Introduction to Python Programming."
+  requires: [py.4-7-conditional-expressions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 4.8 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Loops
+# ------------------------------------------------------------
+KNOWLEDGE py.5-1-while-loop.v1 INTERMEDIATE {
+  title: "5.1 While loop"
+  domain: "programacao"
+  definition: "5.1 While loop — Introduction to Python Programming."
+  requires: [py.4-8-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 5.1 While loop", weight: 0.90 }
+}
+
+KNOWLEDGE py.5-2-for-loop.v1 INTERMEDIATE {
+  title: "5.2 For loop"
+  domain: "programacao"
+  definition: "5.2 For loop — Introduction to Python Programming."
+  requires: [py.5-1-while-loop.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 5.2 For loop", weight: 0.90 }
+}
+
+KNOWLEDGE py.5-3-nested-loops.v1 INTERMEDIATE {
+  title: "5.3 Nested loops"
+  domain: "programacao"
+  definition: "5.3 Nested loops — Introduction to Python Programming."
+  requires: [py.5-2-for-loop.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 5.3 Nested loops", weight: 0.90 }
+}
+
+KNOWLEDGE py.5-4-break-and-continue.v1 INTERMEDIATE {
+  title: "5.4 Break and continue"
+  domain: "programacao"
+  definition: "5.4 Break and continue — Introduction to Python Programming."
+  requires: [py.5-3-nested-loops.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 5.4 Break and continue", weight: 0.90 }
+}
+
+KNOWLEDGE py.5-5-loop-else.v1 INTERMEDIATE {
+  title: "5.5 Loop else"
+  domain: "programacao"
+  definition: "5.5 Loop else — Introduction to Python Programming."
+  requires: [py.5-4-break-and-continue.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 5.5 Loop else", weight: 0.90 }
+}
+
+KNOWLEDGE py.5-6-chapter-summary.v1 INTERMEDIATE {
+  title: "5.6 Chapter summary"
+  domain: "programacao"
+  definition: "5.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.5-5-loop-else.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 5.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Functions
+# ------------------------------------------------------------
+KNOWLEDGE py.6-1-defining-functions.v1 INTERMEDIATE {
+  title: "6.1 Defining functions"
+  domain: "programacao"
+  definition: "6.1 Defining functions — Introduction to Python Programming."
+  requires: [py.5-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 6.1 Defining functions", weight: 0.90 }
+}
+
+KNOWLEDGE py.6-2-control-flow.v1 INTERMEDIATE {
+  title: "6.2 Control flow"
+  domain: "programacao"
+  definition: "6.2 Control flow — Introduction to Python Programming."
+  requires: [py.6-1-defining-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 6.2 Control flow", weight: 0.90 }
+}
+
+KNOWLEDGE py.6-3-variable-scope.v1 INTERMEDIATE {
+  title: "6.3 Variable scope"
+  domain: "programacao"
+  definition: "6.3 Variable scope — Introduction to Python Programming."
+  requires: [py.6-2-control-flow.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 6.3 Variable scope", weight: 0.90 }
+}
+
+KNOWLEDGE py.6-4-parameters.v1 INTERMEDIATE {
+  title: "6.4 Parameters"
+  domain: "programacao"
+  definition: "6.4 Parameters — Introduction to Python Programming."
+  requires: [py.6-3-variable-scope.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 6.4 Parameters", weight: 0.90 }
+}
+
+KNOWLEDGE py.6-5-return-values.v1 INTERMEDIATE {
+  title: "6.5 Return values"
+  domain: "programacao"
+  definition: "6.5 Return values — Introduction to Python Programming."
+  requires: [py.6-4-parameters.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 6.5 Return values", weight: 0.90 }
+}
+
+KNOWLEDGE py.6-6-keyword-arguments.v1 INTERMEDIATE {
+  title: "6.6 Keyword arguments"
+  domain: "programacao"
+  definition: "6.6 Keyword arguments — Introduction to Python Programming."
+  requires: [py.6-5-return-values.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 6.6 Keyword arguments", weight: 0.90 }
+}
+
+KNOWLEDGE py.6-7-chapter-summary.v1 INTERMEDIATE {
+  title: "6.7 Chapter summary"
+  domain: "programacao"
+  definition: "6.7 Chapter summary — Introduction to Python Programming."
+  requires: [py.6-6-keyword-arguments.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 6.7 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Modules
+# ------------------------------------------------------------
+KNOWLEDGE py.7-1-module-basics.v1 INTERMEDIATE {
+  title: "7.1 Module basics"
+  domain: "programacao"
+  definition: "7.1 Module basics — Introduction to Python Programming."
+  requires: [py.6-7-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 7.1 Module basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.7-2-importing-names.v1 INTERMEDIATE {
+  title: "7.2 Importing names"
+  domain: "programacao"
+  definition: "7.2 Importing names — Introduction to Python Programming."
+  requires: [py.7-1-module-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 7.2 Importing names", weight: 0.90 }
+}
+
+KNOWLEDGE py.7-3-top-level-code.v1 INTERMEDIATE {
+  title: "7.3 Top-level code"
+  domain: "programacao"
+  definition: "7.3 Top-level code — Introduction to Python Programming."
+  requires: [py.7-2-importing-names.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 7.3 Top-level code", weight: 0.90 }
+}
+
+KNOWLEDGE py.7-4-the-help-function.v1 INTERMEDIATE {
+  title: "7.4 The help function"
+  domain: "programacao"
+  definition: "7.4 The help function — Introduction to Python Programming."
+  requires: [py.7-3-top-level-code.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 7.4 The help function", weight: 0.90 }
+}
+
+KNOWLEDGE py.7-5-finding-modules.v1 INTERMEDIATE {
+  title: "7.5 Finding modules"
+  domain: "programacao"
+  definition: "7.5 Finding modules — Introduction to Python Programming."
+  requires: [py.7-4-the-help-function.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 7.5 Finding modules", weight: 0.90 }
+}
+
+KNOWLEDGE py.7-6-chapter-summary.v1 INTERMEDIATE {
+  title: "7.6 Chapter summary"
+  domain: "programacao"
+  definition: "7.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.7-5-finding-modules.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 7.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Strings
+# ------------------------------------------------------------
+KNOWLEDGE py.8-1-string-operations.v1 INTERMEDIATE {
+  title: "8.1 String operations"
+  domain: "programacao"
+  definition: "8.1 String operations — Introduction to Python Programming."
+  requires: [py.7-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 8.1 String operations", weight: 0.90 }
+}
+
+KNOWLEDGE py.8-2-string-slicing.v1 INTERMEDIATE {
+  title: "8.2 String slicing"
+  domain: "programacao"
+  definition: "8.2 String slicing — Introduction to Python Programming."
+  requires: [py.8-1-string-operations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 8.2 String slicing", weight: 0.90 }
+}
+
+KNOWLEDGE py.8-3-searching-testing-strings.v1 INTERMEDIATE {
+  title: "8.3 Searching/testing strings"
+  domain: "programacao"
+  definition: "8.3 Searching/testing strings — Introduction to Python Programming."
+  requires: [py.8-2-string-slicing.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 8.3 Searching/testing strings", weight: 0.90 }
+}
+
+KNOWLEDGE py.8-4-string-formatting.v1 INTERMEDIATE {
+  title: "8.4 String formatting"
+  domain: "programacao"
+  definition: "8.4 String formatting — Introduction to Python Programming."
+  requires: [py.8-3-searching-testing-strings.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 8.4 String formatting", weight: 0.90 }
+}
+
+KNOWLEDGE py.8-5-splitting-joining-strings.v1 INTERMEDIATE {
+  title: "8.5 Splitting/joining strings"
+  domain: "programacao"
+  definition: "8.5 Splitting/joining strings — Introduction to Python Programming."
+  requires: [py.8-4-string-formatting.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 8.5 Splitting/joining strings", weight: 0.90 }
+}
+
+KNOWLEDGE py.8-6-chapter-summary.v1 INTERMEDIATE {
+  title: "8.6 Chapter summary"
+  domain: "programacao"
+  definition: "8.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.8-5-splitting-joining-strings.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 8.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Lists
+# ------------------------------------------------------------
+KNOWLEDGE py.9-1-modifying-and-iterating-lists.v1 INTERMEDIATE {
+  title: "9.1 Modifying and iterating lists"
+  domain: "programacao"
+  definition: "9.1 Modifying and iterating lists — Introduction to Python Programming."
+  requires: [py.8-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 9.1 Modifying and iterating lists", weight: 0.90 }
+}
+
+KNOWLEDGE py.9-2-sorting-and-reversing-lists.v1 INTERMEDIATE {
+  title: "9.2 Sorting and reversing lists"
+  domain: "programacao"
+  definition: "9.2 Sorting and reversing lists — Introduction to Python Programming."
+  requires: [py.9-1-modifying-and-iterating-lists.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 9.2 Sorting and reversing lists", weight: 0.90 }
+}
+
+KNOWLEDGE py.9-3-common-list-operations.v1 INTERMEDIATE {
+  title: "9.3 Common list operations"
+  domain: "programacao"
+  definition: "9.3 Common list operations — Introduction to Python Programming."
+  requires: [py.9-2-sorting-and-reversing-lists.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 9.3 Common list operations", weight: 0.90 }
+}
+
+KNOWLEDGE py.9-4-nested-lists.v1 INTERMEDIATE {
+  title: "9.4 Nested lists"
+  domain: "programacao"
+  definition: "9.4 Nested lists — Introduction to Python Programming."
+  requires: [py.9-3-common-list-operations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 9.4 Nested lists", weight: 0.90 }
+}
+
+KNOWLEDGE py.9-5-list-comprehensions.v1 INTERMEDIATE {
+  title: "9.5 List comprehensions"
+  domain: "programacao"
+  definition: "9.5 List comprehensions — Introduction to Python Programming."
+  requires: [py.9-4-nested-lists.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 9.5 List comprehensions", weight: 0.90 }
+}
+
+KNOWLEDGE py.9-6-chapter-summary.v1 INTERMEDIATE {
+  title: "9.6 Chapter summary"
+  domain: "programacao"
+  definition: "9.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.9-5-list-comprehensions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 9.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Dictionaries
+# ------------------------------------------------------------
+KNOWLEDGE py.10-1-dictionary-basics.v1 INTERMEDIATE {
+  title: "10.1 Dictionary basics"
+  domain: "programacao"
+  definition: "10.1 Dictionary basics — Introduction to Python Programming."
+  requires: [py.9-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 10.1 Dictionary basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.10-2-dictionary-creation.v1 INTERMEDIATE {
+  title: "10.2 Dictionary creation"
+  domain: "programacao"
+  definition: "10.2 Dictionary creation — Introduction to Python Programming."
+  requires: [py.10-1-dictionary-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 10.2 Dictionary creation", weight: 0.90 }
+}
+
+KNOWLEDGE py.10-3-dictionary-operations.v1 INTERMEDIATE {
+  title: "10.3 Dictionary operations"
+  domain: "programacao"
+  definition: "10.3 Dictionary operations — Introduction to Python Programming."
+  requires: [py.10-2-dictionary-creation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 10.3 Dictionary operations", weight: 0.90 }
+}
+
+KNOWLEDGE py.10-4-conditionals-and-looping-in-dictionaries.v1 INTERMEDIATE {
+  title: "10.4 Conditionals and looping in dictionaries"
+  domain: "programacao"
+  definition: "10.4 Conditionals and looping in dictionaries — Introduction to Python Programming."
+  requires: [py.10-3-dictionary-operations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 10.4 Conditionals and looping in dictionaries", weight: 0.90 }
+}
+
+KNOWLEDGE py.10-5-nested-dictionaries-and-dictionary-comprehension.v1 INTERMEDIATE {
+  title: "10.5 Nested dictionaries and dictionary comprehension"
+  domain: "programacao"
+  definition: "10.5 Nested dictionaries and dictionary comprehension — Introduction to Python Programming."
+  requires: [py.10-4-conditionals-and-looping-in-dictionaries.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 10.5 Nested dictionaries and dictionary comprehension", weight: 0.90 }
+}
+
+KNOWLEDGE py.10-6-chapter-summary.v1 INTERMEDIATE {
+  title: "10.6 Chapter summary"
+  domain: "programacao"
+  definition: "10.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.10-5-nested-dictionaries-and-dictionary-comprehension.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 10.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Classes
+# ------------------------------------------------------------
+KNOWLEDGE py.11-1-object-oriented-programming-basics.v1 INTERMEDIATE {
+  title: "11.1 Object-oriented programming basics"
+  domain: "programacao"
+  definition: "11.1 Object-oriented programming basics — Introduction to Python Programming."
+  requires: [py.10-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 11.1 Object-oriented programming basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.11-2-classes-and-instances.v1 INTERMEDIATE {
+  title: "11.2 Classes and instances"
+  domain: "programacao"
+  definition: "11.2 Classes and instances — Introduction to Python Programming."
+  requires: [py.11-1-object-oriented-programming-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 11.2 Classes and instances", weight: 0.90 }
+}
+
+KNOWLEDGE py.11-3-instance-methods.v1 INTERMEDIATE {
+  title: "11.3 Instance methods"
+  domain: "programacao"
+  definition: "11.3 Instance methods — Introduction to Python Programming."
+  requires: [py.11-2-classes-and-instances.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 11.3 Instance methods", weight: 0.90 }
+}
+
+KNOWLEDGE py.11-4-overloading-operators.v1 INTERMEDIATE {
+  title: "11.4 Overloading operators"
+  domain: "programacao"
+  definition: "11.4 Overloading operators — Introduction to Python Programming."
+  requires: [py.11-3-instance-methods.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 11.4 Overloading operators", weight: 0.90 }
+}
+
+KNOWLEDGE py.11-5-using-modules-with-classes.v1 INTERMEDIATE {
+  title: "11.5 Using modules with classes"
+  domain: "programacao"
+  definition: "11.5 Using modules with classes — Introduction to Python Programming."
+  requires: [py.11-4-overloading-operators.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 11.5 Using modules with classes", weight: 0.90 }
+}
+
+KNOWLEDGE py.11-6-chapter-summary.v1 INTERMEDIATE {
+  title: "11.6 Chapter summary"
+  domain: "programacao"
+  definition: "11.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.11-5-using-modules-with-classes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 11.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Recursion
+# ------------------------------------------------------------
+KNOWLEDGE py.12-1-recursion-basics.v1 INTERMEDIATE {
+  title: "12.1 Recursion basics"
+  domain: "programacao"
+  definition: "12.1 Recursion basics — Introduction to Python Programming."
+  requires: [py.11-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 12.1 Recursion basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.12-2-simple-math-recursion.v1 INTERMEDIATE {
+  title: "12.2 Simple math recursion"
+  domain: "programacao"
+  definition: "12.2 Simple math recursion — Introduction to Python Programming."
+  requires: [py.12-1-recursion-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 12.2 Simple math recursion", weight: 0.90 }
+}
+
+KNOWLEDGE py.12-3-recursion-with-strings-and-lists.v1 INTERMEDIATE {
+  title: "12.3 Recursion with strings and lists"
+  domain: "programacao"
+  definition: "12.3 Recursion with strings and lists — Introduction to Python Programming."
+  requires: [py.12-2-simple-math-recursion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 12.3 Recursion with strings and lists", weight: 0.90 }
+}
+
+KNOWLEDGE py.12-4-more-math-recursion.v1 INTERMEDIATE {
+  title: "12.4 More math recursion"
+  domain: "programacao"
+  definition: "12.4 More math recursion — Introduction to Python Programming."
+  requires: [py.12-3-recursion-with-strings-and-lists.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 12.4 More math recursion", weight: 0.90 }
+}
+
+KNOWLEDGE py.12-5-using-recursion-to-solve-problems.v1 INTERMEDIATE {
+  title: "12.5 Using recursion to solve problems"
+  domain: "programacao"
+  definition: "12.5 Using recursion to solve problems — Introduction to Python Programming."
+  requires: [py.12-4-more-math-recursion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 12.5 Using recursion to solve problems", weight: 0.90 }
+}
+
+KNOWLEDGE py.12-6-chapter-summary.v1 INTERMEDIATE {
+  title: "12.6 Chapter summary"
+  domain: "programacao"
+  definition: "12.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.12-5-using-recursion-to-solve-problems.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 12.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 13: 13 Inheritance
+# ------------------------------------------------------------
+KNOWLEDGE py.13-1-inheritance-basics.v1 INTERMEDIATE {
+  title: "13.1 Inheritance basics"
+  domain: "programacao"
+  definition: "13.1 Inheritance basics — Introduction to Python Programming."
+  requires: [py.12-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 13.1 Inheritance basics", weight: 0.90 }
+}
+
+KNOWLEDGE py.13-2-attribute-access.v1 INTERMEDIATE {
+  title: "13.2 Attribute access"
+  domain: "programacao"
+  definition: "13.2 Attribute access — Introduction to Python Programming."
+  requires: [py.13-1-inheritance-basics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 13.2 Attribute access", weight: 0.90 }
+}
+
+KNOWLEDGE py.13-3-methods.v1 INTERMEDIATE {
+  title: "13.3 Methods"
+  domain: "programacao"
+  definition: "13.3 Methods — Introduction to Python Programming."
+  requires: [py.13-2-attribute-access.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 13.3 Methods", weight: 0.90 }
+}
+
+KNOWLEDGE py.13-4-hierarchical-inheritance.v1 INTERMEDIATE {
+  title: "13.4 Hierarchical inheritance"
+  domain: "programacao"
+  definition: "13.4 Hierarchical inheritance — Introduction to Python Programming."
+  requires: [py.13-3-methods.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 13.4 Hierarchical inheritance", weight: 0.90 }
+}
+
+KNOWLEDGE py.13-5-multiple-inheritance-and-mixin-classes.v1 INTERMEDIATE {
+  title: "13.5 Multiple inheritance and mixin classes"
+  domain: "programacao"
+  definition: "13.5 Multiple inheritance and mixin classes — Introduction to Python Programming."
+  requires: [py.13-4-hierarchical-inheritance.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 13.5 Multiple inheritance and mixin classes", weight: 0.90 }
+}
+
+KNOWLEDGE py.13-6-chapter-summary.v1 INTERMEDIATE {
+  title: "13.6 Chapter summary"
+  domain: "programacao"
+  definition: "13.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.13-5-multiple-inheritance-and-mixin-classes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 13.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 14: 14 Files
+# ------------------------------------------------------------
+KNOWLEDGE py.14-1-reading-from-files.v1 INTERMEDIATE {
+  title: "14.1 Reading from files"
+  domain: "programacao"
+  definition: "14.1 Reading from files — Introduction to Python Programming."
+  requires: [py.13-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 14.1 Reading from files", weight: 0.90 }
+}
+
+KNOWLEDGE py.14-2-writing-to-files.v1 INTERMEDIATE {
+  title: "14.2 Writing to files"
+  domain: "programacao"
+  definition: "14.2 Writing to files — Introduction to Python Programming."
+  requires: [py.14-1-reading-from-files.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 14.2 Writing to files", weight: 0.90 }
+}
+
+KNOWLEDGE py.14-3-files-in-different-locations-and-working-with-csv-files.v1 INTERMEDIATE {
+  title: "14.3 Files in different locations and working with CSV files"
+  domain: "programacao"
+  definition: "14.3 Files in different locations and working with CSV files — Introduction to Python Programming."
+  requires: [py.14-2-writing-to-files.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 14.3 Files in different locations and working with CSV files", weight: 0.90 }
+}
+
+KNOWLEDGE py.14-4-handling-exceptions.v1 INTERMEDIATE {
+  title: "14.4 Handling exceptions"
+  domain: "programacao"
+  definition: "14.4 Handling exceptions — Introduction to Python Programming."
+  requires: [py.14-3-files-in-different-locations-and-working-with-csv-files.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 14.4 Handling exceptions", weight: 0.90 }
+}
+
+KNOWLEDGE py.14-5-raising-exceptions.v1 INTERMEDIATE {
+  title: "14.5 Raising exceptions"
+  domain: "programacao"
+  definition: "14.5 Raising exceptions — Introduction to Python Programming."
+  requires: [py.14-4-handling-exceptions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 14.5 Raising exceptions", weight: 0.90 }
+}
+
+KNOWLEDGE py.14-6-chapter-summary.v1 INTERMEDIATE {
+  title: "14.6 Chapter summary"
+  domain: "programacao"
+  definition: "14.6 Chapter summary — Introduction to Python Programming."
+  requires: [py.14-5-raising-exceptions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 14.6 Chapter summary", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 15: 15 Data Science
+# ------------------------------------------------------------
+KNOWLEDGE py.15-1-introduction-to-data-science.v1 INTERMEDIATE {
+  title: "15.1 Introduction to data science"
+  domain: "programacao"
+  definition: "15.1 Introduction to data science — Introduction to Python Programming."
+  requires: [py.14-6-chapter-summary.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 15.1 Introduction to data science", weight: 0.90 }
+}
+
+KNOWLEDGE py.15-2-numpy.v1 INTERMEDIATE {
+  title: "15.2 NumPy"
+  domain: "programacao"
+  definition: "15.2 NumPy — Introduction to Python Programming."
+  requires: [py.15-1-introduction-to-data-science.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 15.2 NumPy", weight: 0.90 }
+}
+
+KNOWLEDGE py.15-3-pandas.v1 INTERMEDIATE {
+  title: "15.3 Pandas"
+  domain: "programacao"
+  definition: "15.3 Pandas — Introduction to Python Programming."
+  requires: [py.15-2-numpy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 15.3 Pandas", weight: 0.90 }
+}
+
+KNOWLEDGE py.15-4-exploratory-data-analysis.v1 INTERMEDIATE {
+  title: "15.4 Exploratory data analysis"
+  domain: "programacao"
+  definition: "15.4 Exploratory data analysis — Introduction to Python Programming."
+  requires: [py.15-3-pandas.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 15.4 Exploratory data analysis", weight: 0.90 }
+}
+
+KNOWLEDGE py.15-5-data-visualization.v1 INTERMEDIATE {
+  title: "15.5 Data visualization"
+  domain: "programacao"
+  definition: "15.5 Data visualization — Introduction to Python Programming."
+  requires: [py.15-4-exploratory-data-analysis.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 15.5 Data visualization", weight: 0.90 }
+}
+
+KNOWLEDGE py.15-6-summary.v1 INTERMEDIATE {
+  title: "15.6 Summary"
+  domain: "programacao"
+  definition: "15.6 Summary — Introduction to Python Programming."
+  requires: [py.15-5-data-visualization.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introduction to Python Programming - 15.6 Summary", weight: 0.90 }
+}
+
+MISSION mission.py.v1 {
+  label: "Programação: Introdução a Python"
+  requires: [
+    py.1-1-background.v1,
+    py.1-2-input-output.v1,
+    py.1-3-variables.v1,
+    py.1-4-string-basics.v1,
+    py.1-5-number-basics.v1,
+    py.1-6-error-messages.v1,
+    py.1-7-comments.v1,
+    py.1-8-why-python.v1,
+    py.1-9-chapter-summary.v1,
+    py.2-1-the-python-shell.v1,
+    py.2-2-type-conversion.v1,
+    py.2-3-mixed-data-types.v1,
+    py.2-4-floating-point-errors.v1,
+    py.2-5-dividing-integers.v1,
+    py.2-6-the-math-module.v1,
+    py.2-7-formatting-code.v1,
+    py.2-8-python-careers.v1,
+    py.2-9-chapter-summary.v1,
+    py.3-1-strings-revisited.v1,
+    py.3-2-formatted-strings.v1,
+    py.3-3-variables-revisited.v1,
+    py.3-4-list-basics.v1,
+    py.3-5-tuple-basics.v1,
+    py.3-6-chapter-summary.v1,
+    py.4-1-boolean-values.v1,
+    py.4-2-if-else-statements.v1,
+    py.4-3-boolean-operations.v1,
+    py.4-4-operator-precedence.v1,
+    py.4-5-chained-decisions.v1,
+    py.4-6-nested-decisions.v1,
+    py.4-7-conditional-expressions.v1,
+    py.4-8-chapter-summary.v1,
+    py.5-1-while-loop.v1,
+    py.5-2-for-loop.v1,
+    py.5-3-nested-loops.v1,
+    py.5-4-break-and-continue.v1,
+    py.5-5-loop-else.v1,
+    py.5-6-chapter-summary.v1,
+    py.6-1-defining-functions.v1,
+    py.6-2-control-flow.v1,
+    py.6-3-variable-scope.v1,
+    py.6-4-parameters.v1,
+    py.6-5-return-values.v1,
+    py.6-6-keyword-arguments.v1,
+    py.6-7-chapter-summary.v1,
+    py.7-1-module-basics.v1,
+    py.7-2-importing-names.v1,
+    py.7-3-top-level-code.v1,
+    py.7-4-the-help-function.v1,
+    py.7-5-finding-modules.v1,
+    py.7-6-chapter-summary.v1,
+    py.8-1-string-operations.v1,
+    py.8-2-string-slicing.v1,
+    py.8-3-searching-testing-strings.v1,
+    py.8-4-string-formatting.v1,
+    py.8-5-splitting-joining-strings.v1,
+    py.8-6-chapter-summary.v1,
+    py.9-1-modifying-and-iterating-lists.v1,
+    py.9-2-sorting-and-reversing-lists.v1,
+    py.9-3-common-list-operations.v1,
+    py.9-4-nested-lists.v1,
+    py.9-5-list-comprehensions.v1,
+    py.9-6-chapter-summary.v1,
+    py.10-1-dictionary-basics.v1,
+    py.10-2-dictionary-creation.v1,
+    py.10-3-dictionary-operations.v1,
+    py.10-4-conditionals-and-looping-in-dictionaries.v1,
+    py.10-5-nested-dictionaries-and-dictionary-comprehension.v1,
+    py.10-6-chapter-summary.v1,
+    py.11-1-object-oriented-programming-basics.v1,
+    py.11-2-classes-and-instances.v1,
+    py.11-3-instance-methods.v1,
+    py.11-4-overloading-operators.v1,
+    py.11-5-using-modules-with-classes.v1,
+    py.11-6-chapter-summary.v1,
+    py.12-1-recursion-basics.v1,
+    py.12-2-simple-math-recursion.v1,
+    py.12-3-recursion-with-strings-and-lists.v1,
+    py.12-4-more-math-recursion.v1,
+    py.12-5-using-recursion-to-solve-problems.v1,
+    py.12-6-chapter-summary.v1,
+    py.13-1-inheritance-basics.v1,
+    py.13-2-attribute-access.v1,
+    py.13-3-methods.v1,
+    py.13-4-hierarchical-inheritance.v1,
+    py.13-5-multiple-inheritance-and-mixin-classes.v1,
+    py.13-6-chapter-summary.v1,
+    py.14-1-reading-from-files.v1,
+    py.14-2-writing-to-files.v1,
+    py.14-3-files-in-different-locations-and-working-with-csv-files.v1,
+    py.14-4-handling-exceptions.v1,
+    py.14-5-raising-exceptions.v1,
+    py.14-6-chapter-summary.v1,
+    py.15-1-introduction-to-data-science.v1,
+    py.15-2-numpy.v1,
+    py.15-3-pandas.v1,
+    py.15-4-exploratory-data-analysis.v1,
+    py.15-5-data-visualization.v1,
+    py.15-6-summary.v1,
+  ]
+  threshold: 0.85
+}

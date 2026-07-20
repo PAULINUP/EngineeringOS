@@ -107,11 +107,11 @@ export const GraphView: React.FC<GraphViewProps> = ({
     const isLinear = maxDepth > 14 && prereqEdges <= nodes.length * 1.25;
 
     if (isLinear) {
-      const COLS = 5;
-      const X_SPACING = 190;
-      const Y_SPACING = 155;
-      const PAD_X = 120;
-      const PAD_Y = 90;
+      const COLS = 4;
+      const X_SPACING = 160;
+      const Y_SPACING = 140;
+      const PAD_X = 100;
+      const PAD_Y = 80;
 
       // Ordena por profundidade (empate: id, estável)
       const ordered = [...nodes].sort((a, b) => {
@@ -141,9 +141,9 @@ export const GraphView: React.FC<GraphViewProps> = ({
       groups.get(depth)!.push(id);
     });
 
-    const X_SPACING = 220;
-    const Y_SPACING = 150;
-    const PAD_X = 120;
+    const X_SPACING = 180;
+    const Y_SPACING = 130;
+    const PAD_X = 100;
     const maxCol = Math.max(...Array.from(groups.values()).map((g) => g.length));
 
     const w = Math.max(900, maxDepth * X_SPACING + PAD_X * 2);

@@ -1,5 +1,11 @@
 # Changelog - EngineeringOS
 
+## [v3.4.0] - 2026-07-20
+### Added
+- **Extrator de exercícios OpenStax (`tools/openstax_exercises.py`)** — correlaciona os exercícios numerados de cada seção com o gabarito oficial do Answer Key do livro e os converte em desafios do CCE (correção automática server-side). Trata os dois estilos de numeração da OpenStax (contínua por capítulo e reiniciada por seção, via cabeçalhos "Section Exercises"), exclui "Review Exercises"/"Practice Test" (numeração colidente), prefixa a instrução do grupo ao enunciado, e só aceita gabaritos estritamente numéricos que acrescentam informação ao enunciado (nada de notação de intervalo, prosa ou respostas degeneradas). Resultado: **998 desafios auto-corrigíveis em 261 KUs**, concentrados na escada de matemática completa, com validação aritmética automática da correlação.
+- **`tools/import_subjects.py`** — importa as demais matérias em todos os níveis disponíveis: Química (faculdade), Biologia (básica → faculdade), Estatística (média → faculdade), Astronomia, Introdução a Python e Economia. **+959 KUs (total: 1.814 KUs, 17 domínios, 19 missões)**, todas encadeadas à escada de matemática/física por pré-requisito.
+- `openstax_importer.py`: achata "units" na árvore de livros (corrige University Physics, que agrupava capítulos em unidades e importava vazio).
+
 ## [v3.3.0] - 2026-07-19
 ### Added
 - **Importador OpenStax (`tools/openstax_importer.py`)** — pipeline UCEF de ingestão: busca o sumário do livro (1 requisição via CMS API + `__PRELOADED_STATE__`), extrai os *Learning Objectives* de cada seção como definição da KU, gera o `.eos` constitucional (1 seção = 1 KU, pré-requisitos em espinha de livro), valida no compilador (anti-ciclo), injeta no banco e registra os materiais (URL de cada seção, CC BY 4.0 com atribuição no `source.ref`).

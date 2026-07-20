@@ -1,0 +1,933 @@
+@version 1.0.0
+@domain "estatistica_faculdade"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Introductory Statistics 2e
+# Fonte: https://openstax.org/books/introductory-statistics-2e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Sampling and Data
+# ------------------------------------------------------------
+KNOWLEDGE est2.1-1-definitions-of-statistics-probability-and-key-terms.v1 ADVANCED {
+  title: "1.1 Definitions of Statistics, Probability, and Key Terms"
+  domain: "estatistica_faculdade"
+  definition: "1.1 Definitions of Statistics, Probability, and Key Terms — Introductory Statistics 2e."
+  requires: [est1.13-5-lab-one-way-anova.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 1.1 Definitions of Statistics, Probability, and Key Terms", weight: 0.90 }
+}
+
+KNOWLEDGE est2.1-2-data-sampling-and-variation-in-data-and-sampling.v1 ADVANCED {
+  title: "1.2 Data, Sampling, and Variation in Data and Sampling"
+  domain: "estatistica_faculdade"
+  definition: "1.2 Data, Sampling, and Variation in Data and Sampling — Introductory Statistics 2e."
+  requires: [est2.1-1-definitions-of-statistics-probability-and-key-terms.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 1.2 Data, Sampling, and Variation in Data and Sampling", weight: 0.90 }
+}
+
+KNOWLEDGE est2.1-3-frequency-frequency-tables-and-levels-of-measurement.v1 ADVANCED {
+  title: "1.3 Frequency, Frequency Tables, and Levels of Measurement"
+  domain: "estatistica_faculdade"
+  definition: "1.3 Frequency, Frequency Tables, and Levels of Measurement — Introductory Statistics 2e."
+  requires: [est2.1-2-data-sampling-and-variation-in-data-and-sampling.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 1.3 Frequency, Frequency Tables, and Levels of Measurement", weight: 0.90 }
+}
+
+KNOWLEDGE est2.1-4-experimental-design-and-ethics.v1 ADVANCED {
+  title: "1.4 Experimental Design and Ethics"
+  domain: "estatistica_faculdade"
+  definition: "1.4 Experimental Design and Ethics — Introductory Statistics 2e."
+  requires: [est2.1-3-frequency-frequency-tables-and-levels-of-measurement.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 1.4 Experimental Design and Ethics", weight: 0.90 }
+}
+
+KNOWLEDGE est2.1-5-data-collection-experiment.v1 ADVANCED {
+  title: "1.5 Data Collection Experiment"
+  domain: "estatistica_faculdade"
+  definition: "1.5 Data Collection Experiment — Introductory Statistics 2e."
+  requires: [est2.1-4-experimental-design-and-ethics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 1.5 Data Collection Experiment", weight: 0.90 }
+}
+
+KNOWLEDGE est2.1-6-sampling-experiment.v1 ADVANCED {
+  title: "1.6 Sampling Experiment"
+  domain: "estatistica_faculdade"
+  definition: "1.6 Sampling Experiment — Introductory Statistics 2e."
+  requires: [est2.1-5-data-collection-experiment.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 1.6 Sampling Experiment", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Descriptive Statistics
+# ------------------------------------------------------------
+KNOWLEDGE est2.2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs.v1 ADVANCED {
+  title: "2.1 Stem-and-Leaf Graphs (Stemplots), Line Graphs, and Bar Graphs"
+  domain: "estatistica_faculdade"
+  definition: "2.1 Stem-and-Leaf Graphs (Stemplots), Line Graphs, and Bar Graphs — Introductory Statistics 2e."
+  requires: [est2.1-6-sampling-experiment.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 2.1 Stem-and-Leaf Graphs (Stemplots), Line Graphs, and Bar Graphs", weight: 0.90 }
+}
+
+KNOWLEDGE est2.2-2-histograms-frequency-polygons-and-time-series-graphs.v1 ADVANCED {
+  title: "2.2 Histograms, Frequency Polygons, and Time Series Graphs"
+  domain: "estatistica_faculdade"
+  definition: "2.2 Histograms, Frequency Polygons, and Time Series Graphs — Introductory Statistics 2e."
+  requires: [est2.2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 2.2 Histograms, Frequency Polygons, and Time Series Graphs", weight: 0.90 }
+}
+
+KNOWLEDGE est2.2-3-measures-of-the-location-of-the-data.v1 ADVANCED {
+  title: "2.3 Measures of the Location of the Data"
+  domain: "estatistica_faculdade"
+  definition: "2.3 Measures of the Location of the Data — Introductory Statistics 2e."
+  requires: [est2.2-2-histograms-frequency-polygons-and-time-series-graphs.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 2.3 Measures of the Location of the Data", weight: 0.90 }
+}
+
+KNOWLEDGE est2.2-4-box-plots.v1 ADVANCED {
+  title: "2.4 Box Plots"
+  domain: "estatistica_faculdade"
+  definition: "2.4 Box Plots — Introductory Statistics 2e."
+  requires: [est2.2-3-measures-of-the-location-of-the-data.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 2.4 Box Plots", weight: 0.90 }
+}
+
+KNOWLEDGE est2.2-5-measures-of-the-center-of-the-data.v1 ADVANCED {
+  title: "2.5 Measures of the Center of the Data"
+  domain: "estatistica_faculdade"
+  definition: "2.5 Measures of the Center of the Data — Introductory Statistics 2e."
+  requires: [est2.2-4-box-plots.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 2.5 Measures of the Center of the Data", weight: 0.90 }
+}
+
+KNOWLEDGE est2.2-6-skewness-and-the-mean-median-and-mode.v1 ADVANCED {
+  title: "2.6 Skewness and the Mean, Median, and Mode"
+  domain: "estatistica_faculdade"
+  definition: "2.6 Skewness and the Mean, Median, and Mode — Introductory Statistics 2e."
+  requires: [est2.2-5-measures-of-the-center-of-the-data.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 2.6 Skewness and the Mean, Median, and Mode", weight: 0.90 }
+}
+
+KNOWLEDGE est2.2-7-measures-of-the-spread-of-the-data.v1 ADVANCED {
+  title: "2.7 Measures of the Spread of the Data"
+  domain: "estatistica_faculdade"
+  definition: "2.7 Measures of the Spread of the Data — Introductory Statistics 2e."
+  requires: [est2.2-6-skewness-and-the-mean-median-and-mode.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 2.7 Measures of the Spread of the Data", weight: 0.90 }
+}
+
+KNOWLEDGE est2.2-8-descriptive-statistics.v1 ADVANCED {
+  title: "2.8 Descriptive Statistics"
+  domain: "estatistica_faculdade"
+  definition: "2.8 Descriptive Statistics — Introductory Statistics 2e."
+  requires: [est2.2-7-measures-of-the-spread-of-the-data.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 2.8 Descriptive Statistics", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Probability Topics
+# ------------------------------------------------------------
+KNOWLEDGE est2.3-1-terminology.v1 ADVANCED {
+  title: "3.1 Terminology"
+  domain: "estatistica_faculdade"
+  definition: "3.1 Terminology — Introductory Statistics 2e."
+  requires: [est2.2-8-descriptive-statistics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 3.1 Terminology", weight: 0.90 }
+}
+
+KNOWLEDGE est2.3-2-independent-and-mutually-exclusive-events.v1 ADVANCED {
+  title: "3.2 Independent and Mutually Exclusive Events"
+  domain: "estatistica_faculdade"
+  definition: "3.2 Independent and Mutually Exclusive Events — Introductory Statistics 2e."
+  requires: [est2.3-1-terminology.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 3.2 Independent and Mutually Exclusive Events", weight: 0.90 }
+}
+
+KNOWLEDGE est2.3-3-two-basic-rules-of-probability.v1 ADVANCED {
+  title: "3.3 Two Basic Rules of Probability"
+  domain: "estatistica_faculdade"
+  definition: "3.3 Two Basic Rules of Probability — Introductory Statistics 2e."
+  requires: [est2.3-2-independent-and-mutually-exclusive-events.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 3.3 Two Basic Rules of Probability", weight: 0.90 }
+}
+
+KNOWLEDGE est2.3-4-contingency-tables.v1 ADVANCED {
+  title: "3.4 Contingency Tables"
+  domain: "estatistica_faculdade"
+  definition: "3.4 Contingency Tables — Introductory Statistics 2e."
+  requires: [est2.3-3-two-basic-rules-of-probability.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 3.4 Contingency Tables", weight: 0.90 }
+}
+
+KNOWLEDGE est2.3-5-tree-and-venn-diagrams.v1 ADVANCED {
+  title: "3.5 Tree and Venn Diagrams"
+  domain: "estatistica_faculdade"
+  definition: "3.5 Tree and Venn Diagrams — Introductory Statistics 2e."
+  requires: [est2.3-4-contingency-tables.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 3.5 Tree and Venn Diagrams", weight: 0.90 }
+}
+
+KNOWLEDGE est2.3-6-probability-topics.v1 ADVANCED {
+  title: "3.6 Probability Topics"
+  domain: "estatistica_faculdade"
+  definition: "3.6 Probability Topics — Introductory Statistics 2e."
+  requires: [est2.3-5-tree-and-venn-diagrams.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 3.6 Probability Topics", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Discrete Random Variables
+# ------------------------------------------------------------
+KNOWLEDGE est2.4-1-probability-distribution-function-pdf-for-a-discrete-random-variable.v1 ADVANCED {
+  title: "4.1 Probability Distribution Function (PDF) for a Discrete Random Variable"
+  domain: "estatistica_faculdade"
+  definition: "4.1 Probability Distribution Function (PDF) for a Discrete Random Variable — Introductory Statistics 2e."
+  requires: [est2.3-6-probability-topics.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 4.1 Probability Distribution Function (PDF) for a Discrete Random Variable", weight: 0.90 }
+}
+
+KNOWLEDGE est2.4-2-mean-or-expected-value-and-standard-deviation.v1 ADVANCED {
+  title: "4.2 Mean or Expected Value and Standard Deviation"
+  domain: "estatistica_faculdade"
+  definition: "4.2 Mean or Expected Value and Standard Deviation — Introductory Statistics 2e."
+  requires: [est2.4-1-probability-distribution-function-pdf-for-a-discrete-random-variable.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 4.2 Mean or Expected Value and Standard Deviation", weight: 0.90 }
+}
+
+KNOWLEDGE est2.4-3-binomial-distribution.v1 ADVANCED {
+  title: "4.3 Binomial Distribution"
+  domain: "estatistica_faculdade"
+  definition: "4.3 Binomial Distribution — Introductory Statistics 2e."
+  requires: [est2.4-2-mean-or-expected-value-and-standard-deviation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 4.3 Binomial Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.4-4-geometric-distribution.v1 ADVANCED {
+  title: "4.4 Geometric Distribution"
+  domain: "estatistica_faculdade"
+  definition: "4.4 Geometric Distribution — Introductory Statistics 2e."
+  requires: [est2.4-3-binomial-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 4.4 Geometric Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.4-5-hypergeometric-distribution.v1 ADVANCED {
+  title: "4.5 Hypergeometric Distribution"
+  domain: "estatistica_faculdade"
+  definition: "4.5 Hypergeometric Distribution — Introductory Statistics 2e."
+  requires: [est2.4-4-geometric-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 4.5 Hypergeometric Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.4-6-poisson-distribution.v1 ADVANCED {
+  title: "4.6 Poisson Distribution"
+  domain: "estatistica_faculdade"
+  definition: "4.6 Poisson Distribution — Introductory Statistics 2e."
+  requires: [est2.4-5-hypergeometric-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 4.6 Poisson Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.4-7-discrete-distribution-playing-card-experiment.v1 ADVANCED {
+  title: "4.7 Discrete Distribution (Playing Card Experiment)"
+  domain: "estatistica_faculdade"
+  definition: "4.7 Discrete Distribution (Playing Card Experiment) — Introductory Statistics 2e."
+  requires: [est2.4-6-poisson-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 4.7 Discrete Distribution (Playing Card Experiment)", weight: 0.90 }
+}
+
+KNOWLEDGE est2.4-8-discrete-distribution-dice-experiment-using-three-regular-dice.v1 ADVANCED {
+  title: "4.8 Discrete Distribution (Dice Experiment Using Three Regular Dice)"
+  domain: "estatistica_faculdade"
+  definition: "4.8 Discrete Distribution (Dice Experiment Using Three Regular Dice) — Introductory Statistics 2e."
+  requires: [est2.4-7-discrete-distribution-playing-card-experiment.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 4.8 Discrete Distribution (Dice Experiment Using Three Regular Dice)", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Continuous Random Variables
+# ------------------------------------------------------------
+KNOWLEDGE est2.5-1-continuous-probability-functions.v1 ADVANCED {
+  title: "5.1 Continuous Probability Functions"
+  domain: "estatistica_faculdade"
+  definition: "5.1 Continuous Probability Functions — Introductory Statistics 2e."
+  requires: [est2.4-8-discrete-distribution-dice-experiment-using-three-regular-dice.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 5.1 Continuous Probability Functions", weight: 0.90 }
+}
+
+KNOWLEDGE est2.5-2-the-uniform-distribution.v1 ADVANCED {
+  title: "5.2 The Uniform Distribution"
+  domain: "estatistica_faculdade"
+  definition: "5.2 The Uniform Distribution — Introductory Statistics 2e."
+  requires: [est2.5-1-continuous-probability-functions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 5.2 The Uniform Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.5-3-the-exponential-distribution.v1 ADVANCED {
+  title: "5.3 The Exponential Distribution"
+  domain: "estatistica_faculdade"
+  definition: "5.3 The Exponential Distribution — Introductory Statistics 2e."
+  requires: [est2.5-2-the-uniform-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 5.3 The Exponential Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.5-4-continuous-distribution.v1 ADVANCED {
+  title: "5.4 Continuous Distribution"
+  domain: "estatistica_faculdade"
+  definition: "5.4 Continuous Distribution — Introductory Statistics 2e."
+  requires: [est2.5-3-the-exponential-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 5.4 Continuous Distribution", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 The Normal Distribution
+# ------------------------------------------------------------
+KNOWLEDGE est2.6-1-the-standard-normal-distribution.v1 ADVANCED {
+  title: "6.1 The Standard Normal Distribution"
+  domain: "estatistica_faculdade"
+  definition: "6.1 The Standard Normal Distribution — Introductory Statistics 2e."
+  requires: [est2.5-4-continuous-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 6.1 The Standard Normal Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.6-2-using-the-normal-distribution.v1 ADVANCED {
+  title: "6.2 Using the Normal Distribution"
+  domain: "estatistica_faculdade"
+  definition: "6.2 Using the Normal Distribution — Introductory Statistics 2e."
+  requires: [est2.6-1-the-standard-normal-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 6.2 Using the Normal Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.6-3-normal-distribution-lap-times.v1 ADVANCED {
+  title: "6.3 Normal Distribution (Lap Times)"
+  domain: "estatistica_faculdade"
+  definition: "6.3 Normal Distribution (Lap Times) — Introductory Statistics 2e."
+  requires: [est2.6-2-using-the-normal-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 6.3 Normal Distribution (Lap Times)", weight: 0.90 }
+}
+
+KNOWLEDGE est2.6-4-normal-distribution-pinkie-length.v1 ADVANCED {
+  title: "6.4 Normal Distribution (Pinkie Length)"
+  domain: "estatistica_faculdade"
+  definition: "6.4 Normal Distribution (Pinkie Length) — Introductory Statistics 2e."
+  requires: [est2.6-3-normal-distribution-lap-times.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 6.4 Normal Distribution (Pinkie Length)", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 The Central Limit Theorem
+# ------------------------------------------------------------
+KNOWLEDGE est2.7-1-the-central-limit-theorem-for-sample-means-averages.v1 ADVANCED {
+  title: "7.1 The Central Limit Theorem for Sample Means (Averages)"
+  domain: "estatistica_faculdade"
+  definition: "7.1 The Central Limit Theorem for Sample Means (Averages) — Introductory Statistics 2e."
+  requires: [est2.6-4-normal-distribution-pinkie-length.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 7.1 The Central Limit Theorem for Sample Means (Averages)", weight: 0.90 }
+}
+
+KNOWLEDGE est2.7-2-the-central-limit-theorem-for-sums.v1 ADVANCED {
+  title: "7.2 The Central Limit Theorem for Sums"
+  domain: "estatistica_faculdade"
+  definition: "7.2 The Central Limit Theorem for Sums — Introductory Statistics 2e."
+  requires: [est2.7-1-the-central-limit-theorem-for-sample-means-averages.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 7.2 The Central Limit Theorem for Sums", weight: 0.90 }
+}
+
+KNOWLEDGE est2.7-3-using-the-central-limit-theorem.v1 ADVANCED {
+  title: "7.3 Using the Central Limit Theorem"
+  domain: "estatistica_faculdade"
+  definition: "7.3 Using the Central Limit Theorem — Introductory Statistics 2e."
+  requires: [est2.7-2-the-central-limit-theorem-for-sums.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 7.3 Using the Central Limit Theorem", weight: 0.90 }
+}
+
+KNOWLEDGE est2.7-4-central-limit-theorem-pocket-change.v1 ADVANCED {
+  title: "7.4 Central Limit Theorem (Pocket Change)"
+  domain: "estatistica_faculdade"
+  definition: "7.4 Central Limit Theorem (Pocket Change) — Introductory Statistics 2e."
+  requires: [est2.7-3-using-the-central-limit-theorem.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 7.4 Central Limit Theorem (Pocket Change)", weight: 0.90 }
+}
+
+KNOWLEDGE est2.7-5-central-limit-theorem-cookie-recipes.v1 ADVANCED {
+  title: "7.5 Central Limit Theorem (Cookie Recipes)"
+  domain: "estatistica_faculdade"
+  definition: "7.5 Central Limit Theorem (Cookie Recipes) — Introductory Statistics 2e."
+  requires: [est2.7-4-central-limit-theorem-pocket-change.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 7.5 Central Limit Theorem (Cookie Recipes)", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Confidence Intervals
+# ------------------------------------------------------------
+KNOWLEDGE est2.8-1-a-single-population-mean-using-the-normal-distribution.v1 ADVANCED {
+  title: "8.1 A Single Population Mean using the Normal Distribution"
+  domain: "estatistica_faculdade"
+  definition: "8.1 A Single Population Mean using the Normal Distribution — Introductory Statistics 2e."
+  requires: [est2.7-5-central-limit-theorem-cookie-recipes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 8.1 A Single Population Mean using the Normal Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.8-2-a-single-population-mean-using-the-student-t-distribution.v1 ADVANCED {
+  title: "8.2 A Single Population Mean using the Student t Distribution"
+  domain: "estatistica_faculdade"
+  definition: "8.2 A Single Population Mean using the Student t Distribution — Introductory Statistics 2e."
+  requires: [est2.8-1-a-single-population-mean-using-the-normal-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 8.2 A Single Population Mean using the Student t Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.8-3-a-population-proportion.v1 ADVANCED {
+  title: "8.3 A Population Proportion"
+  domain: "estatistica_faculdade"
+  definition: "8.3 A Population Proportion — Introductory Statistics 2e."
+  requires: [est2.8-2-a-single-population-mean-using-the-student-t-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 8.3 A Population Proportion", weight: 0.90 }
+}
+
+KNOWLEDGE est2.8-4-confidence-interval-home-costs.v1 ADVANCED {
+  title: "8.4 Confidence Interval (Home Costs)"
+  domain: "estatistica_faculdade"
+  definition: "8.4 Confidence Interval (Home Costs) — Introductory Statistics 2e."
+  requires: [est2.8-3-a-population-proportion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 8.4 Confidence Interval (Home Costs)", weight: 0.90 }
+}
+
+KNOWLEDGE est2.8-5-confidence-interval-place-of-birth.v1 ADVANCED {
+  title: "8.5 Confidence Interval (Place of Birth)"
+  domain: "estatistica_faculdade"
+  definition: "8.5 Confidence Interval (Place of Birth) — Introductory Statistics 2e."
+  requires: [est2.8-4-confidence-interval-home-costs.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 8.5 Confidence Interval (Place of Birth)", weight: 0.90 }
+}
+
+KNOWLEDGE est2.8-6-confidence-interval-womens-heights.v1 ADVANCED {
+  title: "8.6 Confidence Interval (Women's Heights)"
+  domain: "estatistica_faculdade"
+  definition: "8.6 Confidence Interval (Women's Heights) — Introductory Statistics 2e."
+  requires: [est2.8-5-confidence-interval-place-of-birth.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 8.6 Confidence Interval (Women's Heights)", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Hypothesis Testing with One Sample
+# ------------------------------------------------------------
+KNOWLEDGE est2.9-1-null-and-alternative-hypotheses.v1 ADVANCED {
+  title: "9.1 Null and Alternative Hypotheses"
+  domain: "estatistica_faculdade"
+  definition: "9.1 Null and Alternative Hypotheses — Introductory Statistics 2e."
+  requires: [est2.8-6-confidence-interval-womens-heights.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 9.1 Null and Alternative Hypotheses", weight: 0.90 }
+}
+
+KNOWLEDGE est2.9-2-outcomes-and-the-type-i-and-type-ii-errors.v1 ADVANCED {
+  title: "9.2 Outcomes and the Type I and Type II Errors"
+  domain: "estatistica_faculdade"
+  definition: "9.2 Outcomes and the Type I and Type II Errors — Introductory Statistics 2e."
+  requires: [est2.9-1-null-and-alternative-hypotheses.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 9.2 Outcomes and the Type I and Type II Errors", weight: 0.90 }
+}
+
+KNOWLEDGE est2.9-3-probability-distribution-needed-for-hypothesis-testing.v1 ADVANCED {
+  title: "9.3 Probability Distribution Needed for Hypothesis Testing"
+  domain: "estatistica_faculdade"
+  definition: "9.3 Probability Distribution Needed for Hypothesis Testing — Introductory Statistics 2e."
+  requires: [est2.9-2-outcomes-and-the-type-i-and-type-ii-errors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 9.3 Probability Distribution Needed for Hypothesis Testing", weight: 0.90 }
+}
+
+KNOWLEDGE est2.9-4-rare-events-the-sample-decision-and-conclusion.v1 ADVANCED {
+  title: "9.4 Rare Events, the Sample, Decision and Conclusion"
+  domain: "estatistica_faculdade"
+  definition: "9.4 Rare Events, the Sample, Decision and Conclusion — Introductory Statistics 2e."
+  requires: [est2.9-3-probability-distribution-needed-for-hypothesis-testing.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 9.4 Rare Events, the Sample, Decision and Conclusion", weight: 0.90 }
+}
+
+KNOWLEDGE est2.9-5-additional-information-and-full-hypothesis-test-examples.v1 ADVANCED {
+  title: "9.5 Additional Information and Full Hypothesis Test Examples"
+  domain: "estatistica_faculdade"
+  definition: "9.5 Additional Information and Full Hypothesis Test Examples — Introductory Statistics 2e."
+  requires: [est2.9-4-rare-events-the-sample-decision-and-conclusion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 9.5 Additional Information and Full Hypothesis Test Examples", weight: 0.90 }
+}
+
+KNOWLEDGE est2.9-6-hypothesis-testing-of-a-single-mean-and-single-proportion.v1 ADVANCED {
+  title: "9.6 Hypothesis Testing of a Single Mean and Single Proportion"
+  domain: "estatistica_faculdade"
+  definition: "9.6 Hypothesis Testing of a Single Mean and Single Proportion — Introductory Statistics 2e."
+  requires: [est2.9-5-additional-information-and-full-hypothesis-test-examples.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 9.6 Hypothesis Testing of a Single Mean and Single Proportion", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Hypothesis Testing with Two Samples
+# ------------------------------------------------------------
+KNOWLEDGE est2.10-1-two-population-means-with-unknown-standard-deviations.v1 ADVANCED {
+  title: "10.1 Two Population Means with Unknown Standard Deviations"
+  domain: "estatistica_faculdade"
+  definition: "10.1 Two Population Means with Unknown Standard Deviations — Introductory Statistics 2e."
+  requires: [est2.9-6-hypothesis-testing-of-a-single-mean-and-single-proportion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 10.1 Two Population Means with Unknown Standard Deviations", weight: 0.90 }
+}
+
+KNOWLEDGE est2.10-2-two-population-means-with-known-standard-deviations.v1 ADVANCED {
+  title: "10.2 Two Population Means with Known Standard Deviations"
+  domain: "estatistica_faculdade"
+  definition: "10.2 Two Population Means with Known Standard Deviations — Introductory Statistics 2e."
+  requires: [est2.10-1-two-population-means-with-unknown-standard-deviations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 10.2 Two Population Means with Known Standard Deviations", weight: 0.90 }
+}
+
+KNOWLEDGE est2.10-3-comparing-two-independent-population-proportions.v1 ADVANCED {
+  title: "10.3 Comparing Two Independent Population Proportions"
+  domain: "estatistica_faculdade"
+  definition: "10.3 Comparing Two Independent Population Proportions — Introductory Statistics 2e."
+  requires: [est2.10-2-two-population-means-with-known-standard-deviations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 10.3 Comparing Two Independent Population Proportions", weight: 0.90 }
+}
+
+KNOWLEDGE est2.10-4-matched-or-paired-samples.v1 ADVANCED {
+  title: "10.4 Matched or Paired Samples"
+  domain: "estatistica_faculdade"
+  definition: "10.4 Matched or Paired Samples — Introductory Statistics 2e."
+  requires: [est2.10-3-comparing-two-independent-population-proportions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 10.4 Matched or Paired Samples", weight: 0.90 }
+}
+
+KNOWLEDGE est2.10-5-hypothesis-testing-for-two-means-and-two-proportions.v1 ADVANCED {
+  title: "10.5 Hypothesis Testing for Two Means and Two Proportions"
+  domain: "estatistica_faculdade"
+  definition: "10.5 Hypothesis Testing for Two Means and Two Proportions — Introductory Statistics 2e."
+  requires: [est2.10-4-matched-or-paired-samples.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 10.5 Hypothesis Testing for Two Means and Two Proportions", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 The Chi-Square Distribution
+# ------------------------------------------------------------
+KNOWLEDGE est2.11-1-facts-about-the-chi-square-distribution.v1 ADVANCED {
+  title: "11.1 Facts About the Chi-Square Distribution"
+  domain: "estatistica_faculdade"
+  definition: "11.1 Facts About the Chi-Square Distribution — Introductory Statistics 2e."
+  requires: [est2.10-5-hypothesis-testing-for-two-means-and-two-proportions.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 11.1 Facts About the Chi-Square Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.11-2-goodness-of-fit-test.v1 ADVANCED {
+  title: "11.2 Goodness-of-Fit Test"
+  domain: "estatistica_faculdade"
+  definition: "11.2 Goodness-of-Fit Test — Introductory Statistics 2e."
+  requires: [est2.11-1-facts-about-the-chi-square-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 11.2 Goodness-of-Fit Test", weight: 0.90 }
+}
+
+KNOWLEDGE est2.11-3-test-of-independence.v1 ADVANCED {
+  title: "11.3 Test of Independence"
+  domain: "estatistica_faculdade"
+  definition: "11.3 Test of Independence — Introductory Statistics 2e."
+  requires: [est2.11-2-goodness-of-fit-test.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 11.3 Test of Independence", weight: 0.90 }
+}
+
+KNOWLEDGE est2.11-4-test-for-homogeneity.v1 ADVANCED {
+  title: "11.4 Test for Homogeneity"
+  domain: "estatistica_faculdade"
+  definition: "11.4 Test for Homogeneity — Introductory Statistics 2e."
+  requires: [est2.11-3-test-of-independence.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 11.4 Test for Homogeneity", weight: 0.90 }
+}
+
+KNOWLEDGE est2.11-5-comparison-of-the-chi-square-tests.v1 ADVANCED {
+  title: "11.5 Comparison of the Chi-Square Tests"
+  domain: "estatistica_faculdade"
+  definition: "11.5 Comparison of the Chi-Square Tests — Introductory Statistics 2e."
+  requires: [est2.11-4-test-for-homogeneity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 11.5 Comparison of the Chi-Square Tests", weight: 0.90 }
+}
+
+KNOWLEDGE est2.11-6-test-of-a-single-variance.v1 ADVANCED {
+  title: "11.6 Test of a Single Variance"
+  domain: "estatistica_faculdade"
+  definition: "11.6 Test of a Single Variance — Introductory Statistics 2e."
+  requires: [est2.11-5-comparison-of-the-chi-square-tests.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 11.6 Test of a Single Variance", weight: 0.90 }
+}
+
+KNOWLEDGE est2.11-7-lab-1-chi-square-goodness-of-fit.v1 ADVANCED {
+  title: "11.7 Lab 1: Chi-Square Goodness-of-Fit"
+  domain: "estatistica_faculdade"
+  definition: "11.7 Lab 1: Chi-Square Goodness-of-Fit — Introductory Statistics 2e."
+  requires: [est2.11-6-test-of-a-single-variance.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 11.7 Lab 1: Chi-Square Goodness-of-Fit", weight: 0.90 }
+}
+
+KNOWLEDGE est2.11-8-lab-2-chi-square-test-of-independence.v1 ADVANCED {
+  title: "11.8 Lab 2: Chi-Square Test of Independence"
+  domain: "estatistica_faculdade"
+  definition: "11.8 Lab 2: Chi-Square Test of Independence — Introductory Statistics 2e."
+  requires: [est2.11-7-lab-1-chi-square-goodness-of-fit.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 11.8 Lab 2: Chi-Square Test of Independence", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Linear Regression and Correlation
+# ------------------------------------------------------------
+KNOWLEDGE est2.12-1-linear-equations.v1 ADVANCED {
+  title: "12.1 Linear Equations"
+  domain: "estatistica_faculdade"
+  definition: "12.1 Linear Equations — Introductory Statistics 2e."
+  requires: [est2.11-8-lab-2-chi-square-test-of-independence.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.1 Linear Equations", weight: 0.90 }
+}
+
+KNOWLEDGE est2.12-2-scatter-plots.v1 ADVANCED {
+  title: "12.2 Scatter Plots"
+  domain: "estatistica_faculdade"
+  definition: "12.2 Scatter Plots — Introductory Statistics 2e."
+  requires: [est2.12-1-linear-equations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.2 Scatter Plots", weight: 0.90 }
+}
+
+KNOWLEDGE est2.12-3-the-regression-equation.v1 ADVANCED {
+  title: "12.3 The Regression Equation"
+  domain: "estatistica_faculdade"
+  definition: "12.3 The Regression Equation — Introductory Statistics 2e."
+  requires: [est2.12-2-scatter-plots.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.3 The Regression Equation", weight: 0.90 }
+}
+
+KNOWLEDGE est2.12-4-testing-the-significance-of-the-correlation-coefficient.v1 ADVANCED {
+  title: "12.4 Testing the Significance of the Correlation Coefficient"
+  domain: "estatistica_faculdade"
+  definition: "12.4 Testing the Significance of the Correlation Coefficient — Introductory Statistics 2e."
+  requires: [est2.12-3-the-regression-equation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.4 Testing the Significance of the Correlation Coefficient", weight: 0.90 }
+}
+
+KNOWLEDGE est2.12-5-prediction.v1 ADVANCED {
+  title: "12.5 Prediction"
+  domain: "estatistica_faculdade"
+  definition: "12.5 Prediction — Introductory Statistics 2e."
+  requires: [est2.12-4-testing-the-significance-of-the-correlation-coefficient.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.5 Prediction", weight: 0.90 }
+}
+
+KNOWLEDGE est2.12-6-outliers.v1 ADVANCED {
+  title: "12.6 Outliers"
+  domain: "estatistica_faculdade"
+  definition: "12.6 Outliers — Introductory Statistics 2e."
+  requires: [est2.12-5-prediction.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.6 Outliers", weight: 0.90 }
+}
+
+KNOWLEDGE est2.12-7-regression-distance-from-school.v1 ADVANCED {
+  title: "12.7 Regression (Distance from School)"
+  domain: "estatistica_faculdade"
+  definition: "12.7 Regression (Distance from School) — Introductory Statistics 2e."
+  requires: [est2.12-6-outliers.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.7 Regression (Distance from School)", weight: 0.90 }
+}
+
+KNOWLEDGE est2.12-8-regression-textbook-cost.v1 ADVANCED {
+  title: "12.8 Regression (Textbook Cost)"
+  domain: "estatistica_faculdade"
+  definition: "12.8 Regression (Textbook Cost) — Introductory Statistics 2e."
+  requires: [est2.12-7-regression-distance-from-school.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.8 Regression (Textbook Cost)", weight: 0.90 }
+}
+
+KNOWLEDGE est2.12-9-regression-fuel-efficiency.v1 ADVANCED {
+  title: "12.9 Regression (Fuel Efficiency)"
+  domain: "estatistica_faculdade"
+  definition: "12.9 Regression (Fuel Efficiency) — Introductory Statistics 2e."
+  requires: [est2.12-8-regression-textbook-cost.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 12.9 Regression (Fuel Efficiency)", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 13: 13 F Distribution and One-Way ANOVA
+# ------------------------------------------------------------
+KNOWLEDGE est2.13-1-one-way-anova.v1 ADVANCED {
+  title: "13.1 One-Way ANOVA"
+  domain: "estatistica_faculdade"
+  definition: "13.1 One-Way ANOVA — Introductory Statistics 2e."
+  requires: [est2.12-9-regression-fuel-efficiency.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 13.1 One-Way ANOVA", weight: 0.90 }
+}
+
+KNOWLEDGE est2.13-2-the-f-distribution-and-the-f-ratio.v1 ADVANCED {
+  title: "13.2 The F Distribution and the F-Ratio"
+  domain: "estatistica_faculdade"
+  definition: "13.2 The F Distribution and the F-Ratio — Introductory Statistics 2e."
+  requires: [est2.13-1-one-way-anova.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 13.2 The F Distribution and the F-Ratio", weight: 0.90 }
+}
+
+KNOWLEDGE est2.13-3-facts-about-the-f-distribution.v1 ADVANCED {
+  title: "13.3 Facts About the F Distribution"
+  domain: "estatistica_faculdade"
+  definition: "13.3 Facts About the F Distribution — Introductory Statistics 2e."
+  requires: [est2.13-2-the-f-distribution-and-the-f-ratio.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 13.3 Facts About the F Distribution", weight: 0.90 }
+}
+
+KNOWLEDGE est2.13-4-test-of-two-variances.v1 ADVANCED {
+  title: "13.4 Test of Two Variances"
+  domain: "estatistica_faculdade"
+  definition: "13.4 Test of Two Variances — Introductory Statistics 2e."
+  requires: [est2.13-3-facts-about-the-f-distribution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 13.4 Test of Two Variances", weight: 0.90 }
+}
+
+KNOWLEDGE est2.13-5-lab-one-way-anova.v1 ADVANCED {
+  title: "13.5 Lab: One-Way ANOVA"
+  domain: "estatistica_faculdade"
+  definition: "13.5 Lab: One-Way ANOVA — Introductory Statistics 2e."
+  requires: [est2.13-4-test-of-two-variances.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Introductory Statistics 2e - 13.5 Lab: One-Way ANOVA", weight: 0.90 }
+}
+
+MISSION mission.est2.v1 {
+  label: "Faculdade: Estatística Introdutória"
+  requires: [
+    est2.1-1-definitions-of-statistics-probability-and-key-terms.v1,
+    est2.1-2-data-sampling-and-variation-in-data-and-sampling.v1,
+    est2.1-3-frequency-frequency-tables-and-levels-of-measurement.v1,
+    est2.1-4-experimental-design-and-ethics.v1,
+    est2.1-5-data-collection-experiment.v1,
+    est2.1-6-sampling-experiment.v1,
+    est2.2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs.v1,
+    est2.2-2-histograms-frequency-polygons-and-time-series-graphs.v1,
+    est2.2-3-measures-of-the-location-of-the-data.v1,
+    est2.2-4-box-plots.v1,
+    est2.2-5-measures-of-the-center-of-the-data.v1,
+    est2.2-6-skewness-and-the-mean-median-and-mode.v1,
+    est2.2-7-measures-of-the-spread-of-the-data.v1,
+    est2.2-8-descriptive-statistics.v1,
+    est2.3-1-terminology.v1,
+    est2.3-2-independent-and-mutually-exclusive-events.v1,
+    est2.3-3-two-basic-rules-of-probability.v1,
+    est2.3-4-contingency-tables.v1,
+    est2.3-5-tree-and-venn-diagrams.v1,
+    est2.3-6-probability-topics.v1,
+    est2.4-1-probability-distribution-function-pdf-for-a-discrete-random-variable.v1,
+    est2.4-2-mean-or-expected-value-and-standard-deviation.v1,
+    est2.4-3-binomial-distribution.v1,
+    est2.4-4-geometric-distribution.v1,
+    est2.4-5-hypergeometric-distribution.v1,
+    est2.4-6-poisson-distribution.v1,
+    est2.4-7-discrete-distribution-playing-card-experiment.v1,
+    est2.4-8-discrete-distribution-dice-experiment-using-three-regular-dice.v1,
+    est2.5-1-continuous-probability-functions.v1,
+    est2.5-2-the-uniform-distribution.v1,
+    est2.5-3-the-exponential-distribution.v1,
+    est2.5-4-continuous-distribution.v1,
+    est2.6-1-the-standard-normal-distribution.v1,
+    est2.6-2-using-the-normal-distribution.v1,
+    est2.6-3-normal-distribution-lap-times.v1,
+    est2.6-4-normal-distribution-pinkie-length.v1,
+    est2.7-1-the-central-limit-theorem-for-sample-means-averages.v1,
+    est2.7-2-the-central-limit-theorem-for-sums.v1,
+    est2.7-3-using-the-central-limit-theorem.v1,
+    est2.7-4-central-limit-theorem-pocket-change.v1,
+    est2.7-5-central-limit-theorem-cookie-recipes.v1,
+    est2.8-1-a-single-population-mean-using-the-normal-distribution.v1,
+    est2.8-2-a-single-population-mean-using-the-student-t-distribution.v1,
+    est2.8-3-a-population-proportion.v1,
+    est2.8-4-confidence-interval-home-costs.v1,
+    est2.8-5-confidence-interval-place-of-birth.v1,
+    est2.8-6-confidence-interval-womens-heights.v1,
+    est2.9-1-null-and-alternative-hypotheses.v1,
+    est2.9-2-outcomes-and-the-type-i-and-type-ii-errors.v1,
+    est2.9-3-probability-distribution-needed-for-hypothesis-testing.v1,
+    est2.9-4-rare-events-the-sample-decision-and-conclusion.v1,
+    est2.9-5-additional-information-and-full-hypothesis-test-examples.v1,
+    est2.9-6-hypothesis-testing-of-a-single-mean-and-single-proportion.v1,
+    est2.10-1-two-population-means-with-unknown-standard-deviations.v1,
+    est2.10-2-two-population-means-with-known-standard-deviations.v1,
+    est2.10-3-comparing-two-independent-population-proportions.v1,
+    est2.10-4-matched-or-paired-samples.v1,
+    est2.10-5-hypothesis-testing-for-two-means-and-two-proportions.v1,
+    est2.11-1-facts-about-the-chi-square-distribution.v1,
+    est2.11-2-goodness-of-fit-test.v1,
+    est2.11-3-test-of-independence.v1,
+    est2.11-4-test-for-homogeneity.v1,
+    est2.11-5-comparison-of-the-chi-square-tests.v1,
+    est2.11-6-test-of-a-single-variance.v1,
+    est2.11-7-lab-1-chi-square-goodness-of-fit.v1,
+    est2.11-8-lab-2-chi-square-test-of-independence.v1,
+    est2.12-1-linear-equations.v1,
+    est2.12-2-scatter-plots.v1,
+    est2.12-3-the-regression-equation.v1,
+    est2.12-4-testing-the-significance-of-the-correlation-coefficient.v1,
+    est2.12-5-prediction.v1,
+    est2.12-6-outliers.v1,
+    est2.12-7-regression-distance-from-school.v1,
+    est2.12-8-regression-textbook-cost.v1,
+    est2.12-9-regression-fuel-efficiency.v1,
+    est2.13-1-one-way-anova.v1,
+    est2.13-2-the-f-distribution-and-the-f-ratio.v1,
+    est2.13-3-facts-about-the-f-distribution.v1,
+    est2.13-4-test-of-two-variances.v1,
+    est2.13-5-lab-one-way-anova.v1,
+  ]
+  threshold: 0.85
+}

@@ -1,0 +1,1809 @@
+@version 1.0.0
+@domain "astronomia_faculdade"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Astronomy 2e
+# Fonte: https://openstax.org/books/astronomy-2e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Science and the Universe: A Brief Tour
+# ------------------------------------------------------------
+KNOWLEDGE astro.1-1-the-nature-of-astronomy.v1 ADVANCED {
+  title: "1.1 The Nature of Astronomy"
+  domain: "astronomia_faculdade"
+  definition: "1.1 The Nature of Astronomy — Astronomy 2e."
+  requires: [fmed.34-7-some-questions-we-know-to-ask.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.1 The Nature of Astronomy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.1-2-the-nature-of-science.v1 ADVANCED {
+  title: "1.2 The Nature of Science"
+  domain: "astronomia_faculdade"
+  definition: "1.2 The Nature of Science — Astronomy 2e."
+  requires: [astro.1-1-the-nature-of-astronomy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.2 The Nature of Science", weight: 0.90 }
+}
+
+KNOWLEDGE astro.1-3-the-laws-of-nature.v1 ADVANCED {
+  title: "1.3 The Laws of Nature"
+  domain: "astronomia_faculdade"
+  definition: "1.3 The Laws of Nature — Astronomy 2e."
+  requires: [astro.1-2-the-nature-of-science.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.3 The Laws of Nature", weight: 0.90 }
+}
+
+KNOWLEDGE astro.1-4-numbers-in-astronomy.v1 ADVANCED {
+  title: "1.4 Numbers in Astronomy"
+  domain: "astronomia_faculdade"
+  definition: "1.4 Numbers in Astronomy — Astronomy 2e."
+  requires: [astro.1-3-the-laws-of-nature.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.4 Numbers in Astronomy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.1-5-consequences-of-light-travel-time.v1 ADVANCED {
+  title: "1.5 Consequences of Light Travel Time"
+  domain: "astronomia_faculdade"
+  definition: "1.5 Consequences of Light Travel Time — Astronomy 2e."
+  requires: [astro.1-4-numbers-in-astronomy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.5 Consequences of Light Travel Time", weight: 0.90 }
+}
+
+KNOWLEDGE astro.1-6-a-tour-of-the-universe.v1 ADVANCED {
+  title: "1.6 A Tour of the Universe"
+  domain: "astronomia_faculdade"
+  definition: "1.6 A Tour of the Universe — Astronomy 2e."
+  requires: [astro.1-5-consequences-of-light-travel-time.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.6 A Tour of the Universe", weight: 0.90 }
+}
+
+KNOWLEDGE astro.1-7-the-universe-on-the-large-scale.v1 ADVANCED {
+  title: "1.7 The Universe on the Large Scale"
+  domain: "astronomia_faculdade"
+  definition: "1.7 The Universe on the Large Scale — Astronomy 2e."
+  requires: [astro.1-6-a-tour-of-the-universe.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.7 The Universe on the Large Scale", weight: 0.90 }
+}
+
+KNOWLEDGE astro.1-8-the-universe-of-the-very-small.v1 ADVANCED {
+  title: "1.8 The Universe of the Very Small"
+  domain: "astronomia_faculdade"
+  definition: "1.8 The Universe of the Very Small — Astronomy 2e."
+  requires: [astro.1-7-the-universe-on-the-large-scale.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.8 The Universe of the Very Small", weight: 0.90 }
+}
+
+KNOWLEDGE astro.1-9-a-conclusion-and-a-beginning.v1 ADVANCED {
+  title: "1.9 A Conclusion and a Beginning"
+  domain: "astronomia_faculdade"
+  definition: "1.9 A Conclusion and a Beginning — Astronomy 2e."
+  requires: [astro.1-8-the-universe-of-the-very-small.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 1.9 A Conclusion and a Beginning", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Observing the Sky: The Birth of Astronomy
+# ------------------------------------------------------------
+KNOWLEDGE astro.2-1-the-sky-above.v1 ADVANCED {
+  title: "2.1 The Sky Above"
+  domain: "astronomia_faculdade"
+  definition: "2.1 The Sky Above — Astronomy 2e."
+  requires: [astro.1-9-a-conclusion-and-a-beginning.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 2.1 The Sky Above", weight: 0.90 }
+}
+
+KNOWLEDGE astro.2-2-ancient-astronomy.v1 ADVANCED {
+  title: "2.2 Ancient Astronomy"
+  domain: "astronomia_faculdade"
+  definition: "2.2 Ancient Astronomy — Astronomy 2e."
+  requires: [astro.2-1-the-sky-above.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 2.2 Ancient Astronomy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.2-3-astrology-and-astronomy.v1 ADVANCED {
+  title: "2.3 Astrology and Astronomy"
+  domain: "astronomia_faculdade"
+  definition: "2.3 Astrology and Astronomy — Astronomy 2e."
+  requires: [astro.2-2-ancient-astronomy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 2.3 Astrology and Astronomy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.2-4-the-birth-of-modern-astronomy.v1 ADVANCED {
+  title: "2.4 The Birth of Modern Astronomy"
+  domain: "astronomia_faculdade"
+  definition: "2.4 The Birth of Modern Astronomy — Astronomy 2e."
+  requires: [astro.2-3-astrology-and-astronomy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 2.4 The Birth of Modern Astronomy", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Orbits and Gravity
+# ------------------------------------------------------------
+KNOWLEDGE astro.3-1-the-laws-of-planetary-motion.v1 ADVANCED {
+  title: "3.1 The Laws of Planetary Motion"
+  domain: "astronomia_faculdade"
+  definition: "3.1 The Laws of Planetary Motion — Astronomy 2e."
+  requires: [astro.2-4-the-birth-of-modern-astronomy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 3.1 The Laws of Planetary Motion", weight: 0.90 }
+}
+
+KNOWLEDGE astro.3-2-newtons-great-synthesis.v1 ADVANCED {
+  title: "3.2 Newton’s Great Synthesis"
+  domain: "astronomia_faculdade"
+  definition: "3.2 Newton’s Great Synthesis — Astronomy 2e."
+  requires: [astro.3-1-the-laws-of-planetary-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 3.2 Newton’s Great Synthesis", weight: 0.90 }
+}
+
+KNOWLEDGE astro.3-3-newtons-universal-law-of-gravitation.v1 ADVANCED {
+  title: "3.3 Newton’s Universal Law of Gravitation"
+  domain: "astronomia_faculdade"
+  definition: "3.3 Newton’s Universal Law of Gravitation — Astronomy 2e."
+  requires: [astro.3-2-newtons-great-synthesis.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 3.3 Newton’s Universal Law of Gravitation", weight: 0.90 }
+}
+
+KNOWLEDGE astro.3-4-orbits-in-the-solar-system.v1 ADVANCED {
+  title: "3.4 Orbits in the Solar System"
+  domain: "astronomia_faculdade"
+  definition: "3.4 Orbits in the Solar System — Astronomy 2e."
+  requires: [astro.3-3-newtons-universal-law-of-gravitation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 3.4 Orbits in the Solar System", weight: 0.90 }
+}
+
+KNOWLEDGE astro.3-5-motions-of-satellites-and-spacecraft.v1 ADVANCED {
+  title: "3.5 Motions of Satellites and Spacecraft"
+  domain: "astronomia_faculdade"
+  definition: "3.5 Motions of Satellites and Spacecraft — Astronomy 2e."
+  requires: [astro.3-4-orbits-in-the-solar-system.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 3.5 Motions of Satellites and Spacecraft", weight: 0.90 }
+}
+
+KNOWLEDGE astro.3-6-gravity-with-more-than-two-bodies.v1 ADVANCED {
+  title: "3.6 Gravity with More Than Two Bodies"
+  domain: "astronomia_faculdade"
+  definition: "3.6 Gravity with More Than Two Bodies — Astronomy 2e."
+  requires: [astro.3-5-motions-of-satellites-and-spacecraft.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 3.6 Gravity with More Than Two Bodies", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Earth, Moon, and Sky
+# ------------------------------------------------------------
+KNOWLEDGE astro.4-1-earth-and-sky.v1 ADVANCED {
+  title: "4.1 Earth and Sky"
+  domain: "astronomia_faculdade"
+  definition: "4.1 Earth and Sky — Astronomy 2e."
+  requires: [astro.3-6-gravity-with-more-than-two-bodies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 4.1 Earth and Sky", weight: 0.90 }
+}
+
+KNOWLEDGE astro.4-2-the-seasons.v1 ADVANCED {
+  title: "4.2 The Seasons"
+  domain: "astronomia_faculdade"
+  definition: "4.2 The Seasons — Astronomy 2e."
+  requires: [astro.4-1-earth-and-sky.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 4.2 The Seasons", weight: 0.90 }
+}
+
+KNOWLEDGE astro.4-3-keeping-time.v1 ADVANCED {
+  title: "4.3 Keeping Time"
+  domain: "astronomia_faculdade"
+  definition: "4.3 Keeping Time — Astronomy 2e."
+  requires: [astro.4-2-the-seasons.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 4.3 Keeping Time", weight: 0.90 }
+}
+
+KNOWLEDGE astro.4-4-the-calendar.v1 ADVANCED {
+  title: "4.4 The Calendar"
+  domain: "astronomia_faculdade"
+  definition: "4.4 The Calendar — Astronomy 2e."
+  requires: [astro.4-3-keeping-time.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 4.4 The Calendar", weight: 0.90 }
+}
+
+KNOWLEDGE astro.4-5-phases-and-motions-of-the-moon.v1 ADVANCED {
+  title: "4.5 Phases and Motions of the Moon"
+  domain: "astronomia_faculdade"
+  definition: "4.5 Phases and Motions of the Moon — Astronomy 2e."
+  requires: [astro.4-4-the-calendar.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 4.5 Phases and Motions of the Moon", weight: 0.90 }
+}
+
+KNOWLEDGE astro.4-6-ocean-tides-and-the-moon.v1 ADVANCED {
+  title: "4.6 Ocean Tides and the Moon"
+  domain: "astronomia_faculdade"
+  definition: "4.6 Ocean Tides and the Moon — Astronomy 2e."
+  requires: [astro.4-5-phases-and-motions-of-the-moon.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 4.6 Ocean Tides and the Moon", weight: 0.90 }
+}
+
+KNOWLEDGE astro.4-7-eclipses-of-the-sun-and-moon.v1 ADVANCED {
+  title: "4.7 Eclipses of the Sun and Moon"
+  domain: "astronomia_faculdade"
+  definition: "4.7 Eclipses of the Sun and Moon — Astronomy 2e."
+  requires: [astro.4-6-ocean-tides-and-the-moon.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 4.7 Eclipses of the Sun and Moon", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Radiation and Spectra
+# ------------------------------------------------------------
+KNOWLEDGE astro.5-1-the-behavior-of-light.v1 ADVANCED {
+  title: "5.1 The Behavior of Light"
+  domain: "astronomia_faculdade"
+  definition: "5.1 The Behavior of Light — Astronomy 2e."
+  requires: [astro.4-7-eclipses-of-the-sun-and-moon.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 5.1 The Behavior of Light", weight: 0.90 }
+}
+
+KNOWLEDGE astro.5-2-the-electromagnetic-spectrum.v1 ADVANCED {
+  title: "5.2 The Electromagnetic Spectrum"
+  domain: "astronomia_faculdade"
+  definition: "5.2 The Electromagnetic Spectrum — Astronomy 2e."
+  requires: [astro.5-1-the-behavior-of-light.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 5.2 The Electromagnetic Spectrum", weight: 0.90 }
+}
+
+KNOWLEDGE astro.5-3-spectroscopy-in-astronomy.v1 ADVANCED {
+  title: "5.3 Spectroscopy in Astronomy"
+  domain: "astronomia_faculdade"
+  definition: "5.3 Spectroscopy in Astronomy — Astronomy 2e."
+  requires: [astro.5-2-the-electromagnetic-spectrum.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 5.3 Spectroscopy in Astronomy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.5-4-the-structure-of-the-atom.v1 ADVANCED {
+  title: "5.4 The Structure of the Atom"
+  domain: "astronomia_faculdade"
+  definition: "5.4 The Structure of the Atom — Astronomy 2e."
+  requires: [astro.5-3-spectroscopy-in-astronomy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 5.4 The Structure of the Atom", weight: 0.90 }
+}
+
+KNOWLEDGE astro.5-5-formation-of-spectral-lines.v1 ADVANCED {
+  title: "5.5 Formation of Spectral Lines"
+  domain: "astronomia_faculdade"
+  definition: "5.5 Formation of Spectral Lines — Astronomy 2e."
+  requires: [astro.5-4-the-structure-of-the-atom.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 5.5 Formation of Spectral Lines", weight: 0.90 }
+}
+
+KNOWLEDGE astro.5-6-the-doppler-effect.v1 ADVANCED {
+  title: "5.6 The Doppler Effect"
+  domain: "astronomia_faculdade"
+  definition: "5.6 The Doppler Effect — Astronomy 2e."
+  requires: [astro.5-5-formation-of-spectral-lines.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 5.6 The Doppler Effect", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Astronomical Instruments
+# ------------------------------------------------------------
+KNOWLEDGE astro.6-1-telescopes.v1 ADVANCED {
+  title: "6.1 Telescopes"
+  domain: "astronomia_faculdade"
+  definition: "6.1 Telescopes — Astronomy 2e."
+  requires: [astro.5-6-the-doppler-effect.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 6.1 Telescopes", weight: 0.90 }
+}
+
+KNOWLEDGE astro.6-2-telescopes-today.v1 ADVANCED {
+  title: "6.2 Telescopes Today"
+  domain: "astronomia_faculdade"
+  definition: "6.2 Telescopes Today — Astronomy 2e."
+  requires: [astro.6-1-telescopes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 6.2 Telescopes Today", weight: 0.90 }
+}
+
+KNOWLEDGE astro.6-3-visible-light-detectors-and-instruments.v1 ADVANCED {
+  title: "6.3 Visible-Light Detectors and Instruments"
+  domain: "astronomia_faculdade"
+  definition: "6.3 Visible-Light Detectors and Instruments — Astronomy 2e."
+  requires: [astro.6-2-telescopes-today.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 6.3 Visible-Light Detectors and Instruments", weight: 0.90 }
+}
+
+KNOWLEDGE astro.6-4-radio-telescopes.v1 ADVANCED {
+  title: "6.4 Radio Telescopes"
+  domain: "astronomia_faculdade"
+  definition: "6.4 Radio Telescopes — Astronomy 2e."
+  requires: [astro.6-3-visible-light-detectors-and-instruments.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 6.4 Radio Telescopes", weight: 0.90 }
+}
+
+KNOWLEDGE astro.6-5-observations-outside-earths-atmosphere.v1 ADVANCED {
+  title: "6.5 Observations outside Earth’s Atmosphere"
+  domain: "astronomia_faculdade"
+  definition: "6.5 Observations outside Earth’s Atmosphere — Astronomy 2e."
+  requires: [astro.6-4-radio-telescopes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 6.5 Observations outside Earth’s Atmosphere", weight: 0.90 }
+}
+
+KNOWLEDGE astro.6-6-the-future-of-large-telescopes.v1 ADVANCED {
+  title: "6.6 The Future of Large Telescopes"
+  domain: "astronomia_faculdade"
+  definition: "6.6 The Future of Large Telescopes — Astronomy 2e."
+  requires: [astro.6-5-observations-outside-earths-atmosphere.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 6.6 The Future of Large Telescopes", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Other Worlds: An Introduction to the Solar System
+# ------------------------------------------------------------
+KNOWLEDGE astro.7-1-overview-of-our-planetary-system.v1 ADVANCED {
+  title: "7.1 Overview of Our Planetary System"
+  domain: "astronomia_faculdade"
+  definition: "7.1 Overview of Our Planetary System — Astronomy 2e."
+  requires: [astro.6-6-the-future-of-large-telescopes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 7.1 Overview of Our Planetary System", weight: 0.90 }
+}
+
+KNOWLEDGE astro.7-2-composition-and-structure-of-planets.v1 ADVANCED {
+  title: "7.2 Composition and Structure of Planets"
+  domain: "astronomia_faculdade"
+  definition: "7.2 Composition and Structure of Planets — Astronomy 2e."
+  requires: [astro.7-1-overview-of-our-planetary-system.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 7.2 Composition and Structure of Planets", weight: 0.90 }
+}
+
+KNOWLEDGE astro.7-3-dating-planetary-surfaces.v1 ADVANCED {
+  title: "7.3 Dating Planetary Surfaces"
+  domain: "astronomia_faculdade"
+  definition: "7.3 Dating Planetary Surfaces — Astronomy 2e."
+  requires: [astro.7-2-composition-and-structure-of-planets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 7.3 Dating Planetary Surfaces", weight: 0.90 }
+}
+
+KNOWLEDGE astro.7-4-origin-of-the-solar-system.v1 ADVANCED {
+  title: "7.4 Origin of the Solar System"
+  domain: "astronomia_faculdade"
+  definition: "7.4 Origin of the Solar System — Astronomy 2e."
+  requires: [astro.7-3-dating-planetary-surfaces.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 7.4 Origin of the Solar System", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Earth as a Planet
+# ------------------------------------------------------------
+KNOWLEDGE astro.8-1-the-global-perspective.v1 ADVANCED {
+  title: "8.1 The Global Perspective"
+  domain: "astronomia_faculdade"
+  definition: "8.1 The Global Perspective — Astronomy 2e."
+  requires: [astro.7-4-origin-of-the-solar-system.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 8.1 The Global Perspective", weight: 0.90 }
+}
+
+KNOWLEDGE astro.8-2-earths-crust.v1 ADVANCED {
+  title: "8.2 Earth’s Crust"
+  domain: "astronomia_faculdade"
+  definition: "8.2 Earth’s Crust — Astronomy 2e."
+  requires: [astro.8-1-the-global-perspective.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 8.2 Earth’s Crust", weight: 0.90 }
+}
+
+KNOWLEDGE astro.8-3-earths-atmosphere.v1 ADVANCED {
+  title: "8.3 Earth’s Atmosphere"
+  domain: "astronomia_faculdade"
+  definition: "8.3 Earth’s Atmosphere — Astronomy 2e."
+  requires: [astro.8-2-earths-crust.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 8.3 Earth’s Atmosphere", weight: 0.90 }
+}
+
+KNOWLEDGE astro.8-4-life-chemical-evolution-and-climate-change.v1 ADVANCED {
+  title: "8.4 Life, Chemical Evolution, and Climate Change"
+  domain: "astronomia_faculdade"
+  definition: "8.4 Life, Chemical Evolution, and Climate Change — Astronomy 2e."
+  requires: [astro.8-3-earths-atmosphere.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 8.4 Life, Chemical Evolution, and Climate Change", weight: 0.90 }
+}
+
+KNOWLEDGE astro.8-5-cosmic-influences-on-the-evolution-of-earth.v1 ADVANCED {
+  title: "8.5 Cosmic Influences on the Evolution of Earth"
+  domain: "astronomia_faculdade"
+  definition: "8.5 Cosmic Influences on the Evolution of Earth — Astronomy 2e."
+  requires: [astro.8-4-life-chemical-evolution-and-climate-change.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 8.5 Cosmic Influences on the Evolution of Earth", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Cratered Worlds
+# ------------------------------------------------------------
+KNOWLEDGE astro.9-1-general-properties-of-the-moon.v1 ADVANCED {
+  title: "9.1 General Properties of the Moon"
+  domain: "astronomia_faculdade"
+  definition: "9.1 General Properties of the Moon — Astronomy 2e."
+  requires: [astro.8-5-cosmic-influences-on-the-evolution-of-earth.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 9.1 General Properties of the Moon", weight: 0.90 }
+}
+
+KNOWLEDGE astro.9-2-the-lunar-surface.v1 ADVANCED {
+  title: "9.2 The Lunar Surface"
+  domain: "astronomia_faculdade"
+  definition: "9.2 The Lunar Surface — Astronomy 2e."
+  requires: [astro.9-1-general-properties-of-the-moon.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 9.2 The Lunar Surface", weight: 0.90 }
+}
+
+KNOWLEDGE astro.9-3-impact-craters.v1 ADVANCED {
+  title: "9.3 Impact Craters"
+  domain: "astronomia_faculdade"
+  definition: "9.3 Impact Craters — Astronomy 2e."
+  requires: [astro.9-2-the-lunar-surface.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 9.3 Impact Craters", weight: 0.90 }
+}
+
+KNOWLEDGE astro.9-4-the-origin-of-the-moon.v1 ADVANCED {
+  title: "9.4 The Origin of the Moon"
+  domain: "astronomia_faculdade"
+  definition: "9.4 The Origin of the Moon — Astronomy 2e."
+  requires: [astro.9-3-impact-craters.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 9.4 The Origin of the Moon", weight: 0.90 }
+}
+
+KNOWLEDGE astro.9-5-mercury.v1 ADVANCED {
+  title: "9.5 Mercury"
+  domain: "astronomia_faculdade"
+  definition: "9.5 Mercury — Astronomy 2e."
+  requires: [astro.9-4-the-origin-of-the-moon.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 9.5 Mercury", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Earthlike Planets: Venus and Mars
+# ------------------------------------------------------------
+KNOWLEDGE astro.10-1-the-nearest-planets-an-overview.v1 ADVANCED {
+  title: "10.1 The Nearest Planets: An Overview"
+  domain: "astronomia_faculdade"
+  definition: "10.1 The Nearest Planets: An Overview — Astronomy 2e."
+  requires: [astro.9-5-mercury.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 10.1 The Nearest Planets: An Overview", weight: 0.90 }
+}
+
+KNOWLEDGE astro.10-2-the-geology-of-venus.v1 ADVANCED {
+  title: "10.2 The Geology of Venus"
+  domain: "astronomia_faculdade"
+  definition: "10.2 The Geology of Venus — Astronomy 2e."
+  requires: [astro.10-1-the-nearest-planets-an-overview.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 10.2 The Geology of Venus", weight: 0.90 }
+}
+
+KNOWLEDGE astro.10-3-the-massive-atmosphere-of-venus.v1 ADVANCED {
+  title: "10.3 The Massive Atmosphere of Venus"
+  domain: "astronomia_faculdade"
+  definition: "10.3 The Massive Atmosphere of Venus — Astronomy 2e."
+  requires: [astro.10-2-the-geology-of-venus.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 10.3 The Massive Atmosphere of Venus", weight: 0.90 }
+}
+
+KNOWLEDGE astro.10-4-the-geology-of-mars.v1 ADVANCED {
+  title: "10.4 The Geology of Mars"
+  domain: "astronomia_faculdade"
+  definition: "10.4 The Geology of Mars — Astronomy 2e."
+  requires: [astro.10-3-the-massive-atmosphere-of-venus.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 10.4 The Geology of Mars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.10-5-water-and-life-on-mars.v1 ADVANCED {
+  title: "10.5 Water and Life on Mars"
+  domain: "astronomia_faculdade"
+  definition: "10.5 Water and Life on Mars — Astronomy 2e."
+  requires: [astro.10-4-the-geology-of-mars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 10.5 Water and Life on Mars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.10-6-divergent-planetary-evolution.v1 ADVANCED {
+  title: "10.6 Divergent Planetary Evolution"
+  domain: "astronomia_faculdade"
+  definition: "10.6 Divergent Planetary Evolution — Astronomy 2e."
+  requires: [astro.10-5-water-and-life-on-mars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 10.6 Divergent Planetary Evolution", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 The Giant Planets
+# ------------------------------------------------------------
+KNOWLEDGE astro.11-1-exploring-the-outer-planets.v1 ADVANCED {
+  title: "11.1 Exploring the Outer Planets"
+  domain: "astronomia_faculdade"
+  definition: "11.1 Exploring the Outer Planets — Astronomy 2e."
+  requires: [astro.10-6-divergent-planetary-evolution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 11.1 Exploring the Outer Planets", weight: 0.90 }
+}
+
+KNOWLEDGE astro.11-2-the-giant-planets.v1 ADVANCED {
+  title: "11.2 The Giant Planets"
+  domain: "astronomia_faculdade"
+  definition: "11.2 The Giant Planets — Astronomy 2e."
+  requires: [astro.11-1-exploring-the-outer-planets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 11.2 The Giant Planets", weight: 0.90 }
+}
+
+KNOWLEDGE astro.11-3-atmospheres-of-the-giant-planets.v1 ADVANCED {
+  title: "11.3 Atmospheres of the Giant Planets"
+  domain: "astronomia_faculdade"
+  definition: "11.3 Atmospheres of the Giant Planets — Astronomy 2e."
+  requires: [astro.11-2-the-giant-planets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 11.3 Atmospheres of the Giant Planets", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Rings, Moons, and Pluto
+# ------------------------------------------------------------
+KNOWLEDGE astro.12-1-ring-and-moon-systems-introduced.v1 ADVANCED {
+  title: "12.1 Ring and Moon Systems Introduced"
+  domain: "astronomia_faculdade"
+  definition: "12.1 Ring and Moon Systems Introduced — Astronomy 2e."
+  requires: [astro.11-3-atmospheres-of-the-giant-planets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 12.1 Ring and Moon Systems Introduced", weight: 0.90 }
+}
+
+KNOWLEDGE astro.12-2-the-galilean-moons-of-jupiter.v1 ADVANCED {
+  title: "12.2 The Galilean Moons of Jupiter"
+  domain: "astronomia_faculdade"
+  definition: "12.2 The Galilean Moons of Jupiter — Astronomy 2e."
+  requires: [astro.12-1-ring-and-moon-systems-introduced.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 12.2 The Galilean Moons of Jupiter", weight: 0.90 }
+}
+
+KNOWLEDGE astro.12-3-titan-and-triton.v1 ADVANCED {
+  title: "12.3 Titan and Triton"
+  domain: "astronomia_faculdade"
+  definition: "12.3 Titan and Triton — Astronomy 2e."
+  requires: [astro.12-2-the-galilean-moons-of-jupiter.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 12.3 Titan and Triton", weight: 0.90 }
+}
+
+KNOWLEDGE astro.12-4-pluto-and-charon.v1 ADVANCED {
+  title: "12.4 Pluto and Charon"
+  domain: "astronomia_faculdade"
+  definition: "12.4 Pluto and Charon — Astronomy 2e."
+  requires: [astro.12-3-titan-and-triton.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 12.4 Pluto and Charon", weight: 0.90 }
+}
+
+KNOWLEDGE astro.12-5-planetary-rings-and-enceladus.v1 ADVANCED {
+  title: "12.5 Planetary Rings (and Enceladus)"
+  domain: "astronomia_faculdade"
+  definition: "12.5 Planetary Rings (and Enceladus) — Astronomy 2e."
+  requires: [astro.12-4-pluto-and-charon.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 12.5 Planetary Rings (and Enceladus)", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 13: 13 Comets and Asteroids: Debris of the Solar System
+# ------------------------------------------------------------
+KNOWLEDGE astro.13-1-asteroids.v1 ADVANCED {
+  title: "13.1 Asteroids"
+  domain: "astronomia_faculdade"
+  definition: "13.1 Asteroids — Astronomy 2e."
+  requires: [astro.12-5-planetary-rings-and-enceladus.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 13.1 Asteroids", weight: 0.90 }
+}
+
+KNOWLEDGE astro.13-2-asteroids-and-planetary-defense.v1 ADVANCED {
+  title: "13.2 Asteroids and Planetary Defense"
+  domain: "astronomia_faculdade"
+  definition: "13.2 Asteroids and Planetary Defense — Astronomy 2e."
+  requires: [astro.13-1-asteroids.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 13.2 Asteroids and Planetary Defense", weight: 0.90 }
+}
+
+KNOWLEDGE astro.13-3-the-long-haired-comets.v1 ADVANCED {
+  title: "13.3 The “Long-Haired” Comets"
+  domain: "astronomia_faculdade"
+  definition: "13.3 The “Long-Haired” Comets — Astronomy 2e."
+  requires: [astro.13-2-asteroids-and-planetary-defense.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 13.3 The “Long-Haired” Comets", weight: 0.90 }
+}
+
+KNOWLEDGE astro.13-4-the-origin-and-fate-of-comets-and-related-objects.v1 ADVANCED {
+  title: "13.4 The Origin and Fate of Comets and Related Objects"
+  domain: "astronomia_faculdade"
+  definition: "13.4 The Origin and Fate of Comets and Related Objects — Astronomy 2e."
+  requires: [astro.13-3-the-long-haired-comets.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 13.4 The Origin and Fate of Comets and Related Objects", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 14: 14 Cosmic Samples and the Origin of the Solar System
+# ------------------------------------------------------------
+KNOWLEDGE astro.14-1-meteors.v1 ADVANCED {
+  title: "14.1 Meteors"
+  domain: "astronomia_faculdade"
+  definition: "14.1 Meteors — Astronomy 2e."
+  requires: [astro.13-4-the-origin-and-fate-of-comets-and-related-objects.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 14.1 Meteors", weight: 0.90 }
+}
+
+KNOWLEDGE astro.14-2-meteorites-stones-from-heaven.v1 ADVANCED {
+  title: "14.2 Meteorites: Stones from Heaven"
+  domain: "astronomia_faculdade"
+  definition: "14.2 Meteorites: Stones from Heaven — Astronomy 2e."
+  requires: [astro.14-1-meteors.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 14.2 Meteorites: Stones from Heaven", weight: 0.90 }
+}
+
+KNOWLEDGE astro.14-3-formation-of-the-solar-system.v1 ADVANCED {
+  title: "14.3 Formation of the Solar System"
+  domain: "astronomia_faculdade"
+  definition: "14.3 Formation of the Solar System — Astronomy 2e."
+  requires: [astro.14-2-meteorites-stones-from-heaven.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 14.3 Formation of the Solar System", weight: 0.90 }
+}
+
+KNOWLEDGE astro.14-4-comparison-with-other-planetary-systems.v1 ADVANCED {
+  title: "14.4 Comparison with Other Planetary Systems"
+  domain: "astronomia_faculdade"
+  definition: "14.4 Comparison with Other Planetary Systems — Astronomy 2e."
+  requires: [astro.14-3-formation-of-the-solar-system.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 14.4 Comparison with Other Planetary Systems", weight: 0.90 }
+}
+
+KNOWLEDGE astro.14-5-planetary-evolution.v1 ADVANCED {
+  title: "14.5 Planetary Evolution"
+  domain: "astronomia_faculdade"
+  definition: "14.5 Planetary Evolution — Astronomy 2e."
+  requires: [astro.14-4-comparison-with-other-planetary-systems.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 14.5 Planetary Evolution", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 15: 15 The Sun: A Garden-Variety Star
+# ------------------------------------------------------------
+KNOWLEDGE astro.15-1-the-structure-and-composition-of-the-sun.v1 ADVANCED {
+  title: "15.1 The Structure and Composition of the Sun"
+  domain: "astronomia_faculdade"
+  definition: "15.1 The Structure and Composition of the Sun — Astronomy 2e."
+  requires: [astro.14-5-planetary-evolution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 15.1 The Structure and Composition of the Sun", weight: 0.90 }
+}
+
+KNOWLEDGE astro.15-2-the-solar-cycle.v1 ADVANCED {
+  title: "15.2 The Solar Cycle"
+  domain: "astronomia_faculdade"
+  definition: "15.2 The Solar Cycle — Astronomy 2e."
+  requires: [astro.15-1-the-structure-and-composition-of-the-sun.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 15.2 The Solar Cycle", weight: 0.90 }
+}
+
+KNOWLEDGE astro.15-3-solar-activity-above-the-photosphere.v1 ADVANCED {
+  title: "15.3 Solar Activity above the Photosphere"
+  domain: "astronomia_faculdade"
+  definition: "15.3 Solar Activity above the Photosphere — Astronomy 2e."
+  requires: [astro.15-2-the-solar-cycle.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 15.3 Solar Activity above the Photosphere", weight: 0.90 }
+}
+
+KNOWLEDGE astro.15-4-space-weather.v1 ADVANCED {
+  title: "15.4 Space Weather"
+  domain: "astronomia_faculdade"
+  definition: "15.4 Space Weather — Astronomy 2e."
+  requires: [astro.15-3-solar-activity-above-the-photosphere.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 15.4 Space Weather", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 16: 16 The Sun: A Nuclear Powerhouse
+# ------------------------------------------------------------
+KNOWLEDGE astro.16-1-sources-of-sunshine-thermal-and-gravitational-energy.v1 ADVANCED {
+  title: "16.1 Sources of Sunshine: Thermal and Gravitational Energy"
+  domain: "astronomia_faculdade"
+  definition: "16.1 Sources of Sunshine: Thermal and Gravitational Energy — Astronomy 2e."
+  requires: [astro.15-4-space-weather.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 16.1 Sources of Sunshine: Thermal and Gravitational Energy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.16-2-mass-energy-and-the-theory-of-relativity.v1 ADVANCED {
+  title: "16.2 Mass, Energy, and the Theory of Relativity"
+  domain: "astronomia_faculdade"
+  definition: "16.2 Mass, Energy, and the Theory of Relativity — Astronomy 2e."
+  requires: [astro.16-1-sources-of-sunshine-thermal-and-gravitational-energy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 16.2 Mass, Energy, and the Theory of Relativity", weight: 0.90 }
+}
+
+KNOWLEDGE astro.16-3-the-solar-interior-theory.v1 ADVANCED {
+  title: "16.3 The Solar Interior: Theory"
+  domain: "astronomia_faculdade"
+  definition: "16.3 The Solar Interior: Theory — Astronomy 2e."
+  requires: [astro.16-2-mass-energy-and-the-theory-of-relativity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 16.3 The Solar Interior: Theory", weight: 0.90 }
+}
+
+KNOWLEDGE astro.16-4-the-solar-interior-observations.v1 ADVANCED {
+  title: "16.4 The Solar Interior: Observations"
+  domain: "astronomia_faculdade"
+  definition: "16.4 The Solar Interior: Observations — Astronomy 2e."
+  requires: [astro.16-3-the-solar-interior-theory.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 16.4 The Solar Interior: Observations", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 17: 17 Analyzing Starlight
+# ------------------------------------------------------------
+KNOWLEDGE astro.17-1-the-brightness-of-stars.v1 ADVANCED {
+  title: "17.1 The Brightness of Stars"
+  domain: "astronomia_faculdade"
+  definition: "17.1 The Brightness of Stars — Astronomy 2e."
+  requires: [astro.16-4-the-solar-interior-observations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 17.1 The Brightness of Stars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.17-2-colors-of-stars.v1 ADVANCED {
+  title: "17.2 Colors of Stars"
+  domain: "astronomia_faculdade"
+  definition: "17.2 Colors of Stars — Astronomy 2e."
+  requires: [astro.17-1-the-brightness-of-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 17.2 Colors of Stars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.17-3-the-spectra-of-stars-and-brown-dwarfs.v1 ADVANCED {
+  title: "17.3 The Spectra of Stars (and Brown Dwarfs)"
+  domain: "astronomia_faculdade"
+  definition: "17.3 The Spectra of Stars (and Brown Dwarfs) — Astronomy 2e."
+  requires: [astro.17-2-colors-of-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 17.3 The Spectra of Stars (and Brown Dwarfs)", weight: 0.90 }
+}
+
+KNOWLEDGE astro.17-4-using-spectra-to-measure-stellar-radius-composition-and-motion.v1 ADVANCED {
+  title: "17.4 Using Spectra to Measure Stellar Radius, Composition, and Motion"
+  domain: "astronomia_faculdade"
+  definition: "17.4 Using Spectra to Measure Stellar Radius, Composition, and Motion — Astronomy 2e."
+  requires: [astro.17-3-the-spectra-of-stars-and-brown-dwarfs.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 17.4 Using Spectra to Measure Stellar Radius, Composition, and Motion", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 18: 18 The Stars: A Celestial Census
+# ------------------------------------------------------------
+KNOWLEDGE astro.18-1-a-stellar-census.v1 ADVANCED {
+  title: "18.1 A Stellar Census"
+  domain: "astronomia_faculdade"
+  definition: "18.1 A Stellar Census — Astronomy 2e."
+  requires: [astro.17-4-using-spectra-to-measure-stellar-radius-composition-and-motion.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 18.1 A Stellar Census", weight: 0.90 }
+}
+
+KNOWLEDGE astro.18-2-measuring-stellar-masses.v1 ADVANCED {
+  title: "18.2 Measuring Stellar Masses"
+  domain: "astronomia_faculdade"
+  definition: "18.2 Measuring Stellar Masses — Astronomy 2e."
+  requires: [astro.18-1-a-stellar-census.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 18.2 Measuring Stellar Masses", weight: 0.90 }
+}
+
+KNOWLEDGE astro.18-3-diameters-of-stars.v1 ADVANCED {
+  title: "18.3 Diameters of Stars"
+  domain: "astronomia_faculdade"
+  definition: "18.3 Diameters of Stars — Astronomy 2e."
+  requires: [astro.18-2-measuring-stellar-masses.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 18.3 Diameters of Stars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.18-4-the-h-r-diagram.v1 ADVANCED {
+  title: "18.4 The H–R Diagram"
+  domain: "astronomia_faculdade"
+  definition: "18.4 The H–R Diagram — Astronomy 2e."
+  requires: [astro.18-3-diameters-of-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 18.4 The H–R Diagram", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 19: 19 Celestial Distances
+# ------------------------------------------------------------
+KNOWLEDGE astro.19-1-fundamental-units-of-distance.v1 ADVANCED {
+  title: "19.1 Fundamental Units of Distance"
+  domain: "astronomia_faculdade"
+  definition: "19.1 Fundamental Units of Distance — Astronomy 2e."
+  requires: [astro.18-4-the-h-r-diagram.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 19.1 Fundamental Units of Distance", weight: 0.90 }
+}
+
+KNOWLEDGE astro.19-2-surveying-the-stars.v1 ADVANCED {
+  title: "19.2 Surveying the Stars"
+  domain: "astronomia_faculdade"
+  definition: "19.2 Surveying the Stars — Astronomy 2e."
+  requires: [astro.19-1-fundamental-units-of-distance.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 19.2 Surveying the Stars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.19-3-variable-stars-one-key-to-cosmic-distances.v1 ADVANCED {
+  title: "19.3 Variable Stars: One Key to Cosmic Distances"
+  domain: "astronomia_faculdade"
+  definition: "19.3 Variable Stars: One Key to Cosmic Distances — Astronomy 2e."
+  requires: [astro.19-2-surveying-the-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 19.3 Variable Stars: One Key to Cosmic Distances", weight: 0.90 }
+}
+
+KNOWLEDGE astro.19-4-the-h-r-diagram-and-cosmic-distances.v1 ADVANCED {
+  title: "19.4 The H–R Diagram and Cosmic Distances"
+  domain: "astronomia_faculdade"
+  definition: "19.4 The H–R Diagram and Cosmic Distances — Astronomy 2e."
+  requires: [astro.19-3-variable-stars-one-key-to-cosmic-distances.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 19.4 The H–R Diagram and Cosmic Distances", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 20: 20 Between the Stars: Gas and Dust in Space
+# ------------------------------------------------------------
+KNOWLEDGE astro.20-1-the-interstellar-medium.v1 ADVANCED {
+  title: "20.1 The Interstellar Medium"
+  domain: "astronomia_faculdade"
+  definition: "20.1 The Interstellar Medium — Astronomy 2e."
+  requires: [astro.19-4-the-h-r-diagram-and-cosmic-distances.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 20.1 The Interstellar Medium", weight: 0.90 }
+}
+
+KNOWLEDGE astro.20-2-interstellar-gas.v1 ADVANCED {
+  title: "20.2 Interstellar Gas"
+  domain: "astronomia_faculdade"
+  definition: "20.2 Interstellar Gas — Astronomy 2e."
+  requires: [astro.20-1-the-interstellar-medium.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 20.2 Interstellar Gas", weight: 0.90 }
+}
+
+KNOWLEDGE astro.20-3-cosmic-dust.v1 ADVANCED {
+  title: "20.3 Cosmic Dust"
+  domain: "astronomia_faculdade"
+  definition: "20.3 Cosmic Dust — Astronomy 2e."
+  requires: [astro.20-2-interstellar-gas.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 20.3 Cosmic Dust", weight: 0.90 }
+}
+
+KNOWLEDGE astro.20-4-cosmic-rays.v1 ADVANCED {
+  title: "20.4 Cosmic Rays"
+  domain: "astronomia_faculdade"
+  definition: "20.4 Cosmic Rays — Astronomy 2e."
+  requires: [astro.20-3-cosmic-dust.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 20.4 Cosmic Rays", weight: 0.90 }
+}
+
+KNOWLEDGE astro.20-5-the-life-cycle-of-cosmic-material.v1 ADVANCED {
+  title: "20.5 The Life Cycle of Cosmic Material"
+  domain: "astronomia_faculdade"
+  definition: "20.5 The Life Cycle of Cosmic Material — Astronomy 2e."
+  requires: [astro.20-4-cosmic-rays.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 20.5 The Life Cycle of Cosmic Material", weight: 0.90 }
+}
+
+KNOWLEDGE astro.20-6-interstellar-matter-around-the-sun.v1 ADVANCED {
+  title: "20.6 Interstellar Matter around the Sun"
+  domain: "astronomia_faculdade"
+  definition: "20.6 Interstellar Matter around the Sun — Astronomy 2e."
+  requires: [astro.20-5-the-life-cycle-of-cosmic-material.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 20.6 Interstellar Matter around the Sun", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 21: 21 The Birth of Stars and the Discovery of Planets outside the Solar System
+# ------------------------------------------------------------
+KNOWLEDGE astro.21-1-star-formation.v1 ADVANCED {
+  title: "21.1 Star Formation"
+  domain: "astronomia_faculdade"
+  definition: "21.1 Star Formation — Astronomy 2e."
+  requires: [astro.20-6-interstellar-matter-around-the-sun.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 21.1 Star Formation", weight: 0.90 }
+}
+
+KNOWLEDGE astro.21-2-the-h-r-diagram-and-the-study-of-stellar-evolution.v1 ADVANCED {
+  title: "21.2 The H–R Diagram and the Study of Stellar Evolution"
+  domain: "astronomia_faculdade"
+  definition: "21.2 The H–R Diagram and the Study of Stellar Evolution — Astronomy 2e."
+  requires: [astro.21-1-star-formation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 21.2 The H–R Diagram and the Study of Stellar Evolution", weight: 0.90 }
+}
+
+KNOWLEDGE astro.21-3-evidence-that-planets-form-around-other-stars.v1 ADVANCED {
+  title: "21.3 Evidence That Planets Form around Other Stars"
+  domain: "astronomia_faculdade"
+  definition: "21.3 Evidence That Planets Form around Other Stars — Astronomy 2e."
+  requires: [astro.21-2-the-h-r-diagram-and-the-study-of-stellar-evolution.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 21.3 Evidence That Planets Form around Other Stars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.21-4-planets-beyond-the-solar-system-search-and-discovery.v1 ADVANCED {
+  title: "21.4 Planets beyond the Solar System: Search and Discovery"
+  domain: "astronomia_faculdade"
+  definition: "21.4 Planets beyond the Solar System: Search and Discovery — Astronomy 2e."
+  requires: [astro.21-3-evidence-that-planets-form-around-other-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 21.4 Planets beyond the Solar System: Search and Discovery", weight: 0.90 }
+}
+
+KNOWLEDGE astro.21-5-exoplanets-everywhere-what-we-are-learning.v1 ADVANCED {
+  title: "21.5 Exoplanets Everywhere: What We Are Learning"
+  domain: "astronomia_faculdade"
+  definition: "21.5 Exoplanets Everywhere: What We Are Learning — Astronomy 2e."
+  requires: [astro.21-4-planets-beyond-the-solar-system-search-and-discovery.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 21.5 Exoplanets Everywhere: What We Are Learning", weight: 0.90 }
+}
+
+KNOWLEDGE astro.21-6-new-perspectives-on-planet-formation.v1 ADVANCED {
+  title: "21.6 New Perspectives on Planet Formation"
+  domain: "astronomia_faculdade"
+  definition: "21.6 New Perspectives on Planet Formation — Astronomy 2e."
+  requires: [astro.21-5-exoplanets-everywhere-what-we-are-learning.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 21.6 New Perspectives on Planet Formation", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 22: 22 Stars from Adolescence to Old Age
+# ------------------------------------------------------------
+KNOWLEDGE astro.22-1-evolution-from-the-main-sequence-to-red-giants.v1 ADVANCED {
+  title: "22.1 Evolution from the Main Sequence to Red Giants"
+  domain: "astronomia_faculdade"
+  definition: "22.1 Evolution from the Main Sequence to Red Giants — Astronomy 2e."
+  requires: [astro.21-6-new-perspectives-on-planet-formation.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 22.1 Evolution from the Main Sequence to Red Giants", weight: 0.90 }
+}
+
+KNOWLEDGE astro.22-2-star-clusters.v1 ADVANCED {
+  title: "22.2 Star Clusters"
+  domain: "astronomia_faculdade"
+  definition: "22.2 Star Clusters — Astronomy 2e."
+  requires: [astro.22-1-evolution-from-the-main-sequence-to-red-giants.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 22.2 Star Clusters", weight: 0.90 }
+}
+
+KNOWLEDGE astro.22-3-checking-out-the-theory.v1 ADVANCED {
+  title: "22.3 Checking Out the Theory"
+  domain: "astronomia_faculdade"
+  definition: "22.3 Checking Out the Theory — Astronomy 2e."
+  requires: [astro.22-2-star-clusters.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 22.3 Checking Out the Theory", weight: 0.90 }
+}
+
+KNOWLEDGE astro.22-4-further-evolution-of-stars.v1 ADVANCED {
+  title: "22.4 Further Evolution of Stars"
+  domain: "astronomia_faculdade"
+  definition: "22.4 Further Evolution of Stars — Astronomy 2e."
+  requires: [astro.22-3-checking-out-the-theory.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 22.4 Further Evolution of Stars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.22-5-the-evolution-of-more-massive-stars.v1 ADVANCED {
+  title: "22.5 The Evolution of More Massive Stars"
+  domain: "astronomia_faculdade"
+  definition: "22.5 The Evolution of More Massive Stars — Astronomy 2e."
+  requires: [astro.22-4-further-evolution-of-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 22.5 The Evolution of More Massive Stars", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 23: 23 The Death of Stars
+# ------------------------------------------------------------
+KNOWLEDGE astro.23-1-the-death-of-low-mass-stars.v1 ADVANCED {
+  title: "23.1 The Death of Low-Mass Stars"
+  domain: "astronomia_faculdade"
+  definition: "23.1 The Death of Low-Mass Stars — Astronomy 2e."
+  requires: [astro.22-5-the-evolution-of-more-massive-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 23.1 The Death of Low-Mass Stars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.23-2-evolution-of-massive-stars-an-explosive-finish.v1 ADVANCED {
+  title: "23.2 Evolution of Massive Stars: An Explosive Finish"
+  domain: "astronomia_faculdade"
+  definition: "23.2 Evolution of Massive Stars: An Explosive Finish — Astronomy 2e."
+  requires: [astro.23-1-the-death-of-low-mass-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 23.2 Evolution of Massive Stars: An Explosive Finish", weight: 0.90 }
+}
+
+KNOWLEDGE astro.23-3-supernova-observations.v1 ADVANCED {
+  title: "23.3 Supernova Observations"
+  domain: "astronomia_faculdade"
+  definition: "23.3 Supernova Observations — Astronomy 2e."
+  requires: [astro.23-2-evolution-of-massive-stars-an-explosive-finish.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 23.3 Supernova Observations", weight: 0.90 }
+}
+
+KNOWLEDGE astro.23-4-pulsars-and-the-discovery-of-neutron-stars.v1 ADVANCED {
+  title: "23.4 Pulsars and the Discovery of Neutron Stars"
+  domain: "astronomia_faculdade"
+  definition: "23.4 Pulsars and the Discovery of Neutron Stars — Astronomy 2e."
+  requires: [astro.23-3-supernova-observations.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 23.4 Pulsars and the Discovery of Neutron Stars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.23-5-the-evolution-of-binary-star-systems.v1 ADVANCED {
+  title: "23.5 The Evolution of Binary Star Systems"
+  domain: "astronomia_faculdade"
+  definition: "23.5 The Evolution of Binary Star Systems — Astronomy 2e."
+  requires: [astro.23-4-pulsars-and-the-discovery-of-neutron-stars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 23.5 The Evolution of Binary Star Systems", weight: 0.90 }
+}
+
+KNOWLEDGE astro.23-6-the-mystery-of-the-gamma-ray-bursts.v1 ADVANCED {
+  title: "23.6 The Mystery of the Gamma-Ray Bursts"
+  domain: "astronomia_faculdade"
+  definition: "23.6 The Mystery of the Gamma-Ray Bursts — Astronomy 2e."
+  requires: [astro.23-5-the-evolution-of-binary-star-systems.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 23.6 The Mystery of the Gamma-Ray Bursts", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 24: 24 Black Holes and Curved Spacetime
+# ------------------------------------------------------------
+KNOWLEDGE astro.24-1-introducing-general-relativity.v1 ADVANCED {
+  title: "24.1 Introducing General Relativity"
+  domain: "astronomia_faculdade"
+  definition: "24.1 Introducing General Relativity — Astronomy 2e."
+  requires: [astro.23-6-the-mystery-of-the-gamma-ray-bursts.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 24.1 Introducing General Relativity", weight: 0.90 }
+}
+
+KNOWLEDGE astro.24-2-spacetime-and-gravity.v1 ADVANCED {
+  title: "24.2 Spacetime and Gravity"
+  domain: "astronomia_faculdade"
+  definition: "24.2 Spacetime and Gravity — Astronomy 2e."
+  requires: [astro.24-1-introducing-general-relativity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 24.2 Spacetime and Gravity", weight: 0.90 }
+}
+
+KNOWLEDGE astro.24-3-tests-of-general-relativity.v1 ADVANCED {
+  title: "24.3 Tests of General Relativity"
+  domain: "astronomia_faculdade"
+  definition: "24.3 Tests of General Relativity — Astronomy 2e."
+  requires: [astro.24-2-spacetime-and-gravity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 24.3 Tests of General Relativity", weight: 0.90 }
+}
+
+KNOWLEDGE astro.24-4-time-in-general-relativity.v1 ADVANCED {
+  title: "24.4 Time in General Relativity"
+  domain: "astronomia_faculdade"
+  definition: "24.4 Time in General Relativity — Astronomy 2e."
+  requires: [astro.24-3-tests-of-general-relativity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 24.4 Time in General Relativity", weight: 0.90 }
+}
+
+KNOWLEDGE astro.24-5-black-holes.v1 ADVANCED {
+  title: "24.5 Black Holes"
+  domain: "astronomia_faculdade"
+  definition: "24.5 Black Holes — Astronomy 2e."
+  requires: [astro.24-4-time-in-general-relativity.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 24.5 Black Holes", weight: 0.90 }
+}
+
+KNOWLEDGE astro.24-6-evidence-for-black-holes.v1 ADVANCED {
+  title: "24.6 Evidence for Black Holes"
+  domain: "astronomia_faculdade"
+  definition: "24.6 Evidence for Black Holes — Astronomy 2e."
+  requires: [astro.24-5-black-holes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 24.6 Evidence for Black Holes", weight: 0.90 }
+}
+
+KNOWLEDGE astro.24-7-gravitational-wave-astronomy.v1 ADVANCED {
+  title: "24.7 Gravitational Wave Astronomy"
+  domain: "astronomia_faculdade"
+  definition: "24.7 Gravitational Wave Astronomy — Astronomy 2e."
+  requires: [astro.24-6-evidence-for-black-holes.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 24.7 Gravitational Wave Astronomy", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 25: 25 The Milky Way Galaxy
+# ------------------------------------------------------------
+KNOWLEDGE astro.25-1-the-architecture-of-the-galaxy.v1 ADVANCED {
+  title: "25.1 The Architecture of the Galaxy"
+  domain: "astronomia_faculdade"
+  definition: "25.1 The Architecture of the Galaxy — Astronomy 2e."
+  requires: [astro.24-7-gravitational-wave-astronomy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 25.1 The Architecture of the Galaxy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.25-2-spiral-structure.v1 ADVANCED {
+  title: "25.2 Spiral Structure"
+  domain: "astronomia_faculdade"
+  definition: "25.2 Spiral Structure — Astronomy 2e."
+  requires: [astro.25-1-the-architecture-of-the-galaxy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 25.2 Spiral Structure", weight: 0.90 }
+}
+
+KNOWLEDGE astro.25-3-the-mass-of-the-galaxy.v1 ADVANCED {
+  title: "25.3 The Mass of the Galaxy"
+  domain: "astronomia_faculdade"
+  definition: "25.3 The Mass of the Galaxy — Astronomy 2e."
+  requires: [astro.25-2-spiral-structure.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 25.3 The Mass of the Galaxy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.25-4-the-center-of-the-galaxy.v1 ADVANCED {
+  title: "25.4 The Center of the Galaxy"
+  domain: "astronomia_faculdade"
+  definition: "25.4 The Center of the Galaxy — Astronomy 2e."
+  requires: [astro.25-3-the-mass-of-the-galaxy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 25.4 The Center of the Galaxy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.25-5-stellar-populations-in-the-galaxy.v1 ADVANCED {
+  title: "25.5 Stellar Populations in the Galaxy"
+  domain: "astronomia_faculdade"
+  definition: "25.5 Stellar Populations in the Galaxy — Astronomy 2e."
+  requires: [astro.25-4-the-center-of-the-galaxy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 25.5 Stellar Populations in the Galaxy", weight: 0.90 }
+}
+
+KNOWLEDGE astro.25-6-the-formation-of-the-galaxy.v1 ADVANCED {
+  title: "25.6 The Formation of the Galaxy"
+  domain: "astronomia_faculdade"
+  definition: "25.6 The Formation of the Galaxy — Astronomy 2e."
+  requires: [astro.25-5-stellar-populations-in-the-galaxy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 25.6 The Formation of the Galaxy", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 26: 26 Galaxies
+# ------------------------------------------------------------
+KNOWLEDGE astro.26-1-the-discovery-of-galaxies.v1 ADVANCED {
+  title: "26.1 The Discovery of Galaxies"
+  domain: "astronomia_faculdade"
+  definition: "26.1 The Discovery of Galaxies — Astronomy 2e."
+  requires: [astro.25-6-the-formation-of-the-galaxy.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 26.1 The Discovery of Galaxies", weight: 0.90 }
+}
+
+KNOWLEDGE astro.26-2-types-of-galaxies.v1 ADVANCED {
+  title: "26.2 Types of Galaxies"
+  domain: "astronomia_faculdade"
+  definition: "26.2 Types of Galaxies — Astronomy 2e."
+  requires: [astro.26-1-the-discovery-of-galaxies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 26.2 Types of Galaxies", weight: 0.90 }
+}
+
+KNOWLEDGE astro.26-3-properties-of-galaxies.v1 ADVANCED {
+  title: "26.3 Properties of Galaxies"
+  domain: "astronomia_faculdade"
+  definition: "26.3 Properties of Galaxies — Astronomy 2e."
+  requires: [astro.26-2-types-of-galaxies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 26.3 Properties of Galaxies", weight: 0.90 }
+}
+
+KNOWLEDGE astro.26-4-the-extragalactic-distance-scale.v1 ADVANCED {
+  title: "26.4 The Extragalactic Distance Scale"
+  domain: "astronomia_faculdade"
+  definition: "26.4 The Extragalactic Distance Scale — Astronomy 2e."
+  requires: [astro.26-3-properties-of-galaxies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 26.4 The Extragalactic Distance Scale", weight: 0.90 }
+}
+
+KNOWLEDGE astro.26-5-the-expanding-universe.v1 ADVANCED {
+  title: "26.5 The Expanding Universe"
+  domain: "astronomia_faculdade"
+  definition: "26.5 The Expanding Universe — Astronomy 2e."
+  requires: [astro.26-4-the-extragalactic-distance-scale.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 26.5 The Expanding Universe", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 27: 27 Active Galaxies, Quasars, and Supermassive Black Holes
+# ------------------------------------------------------------
+KNOWLEDGE astro.27-1-quasars.v1 ADVANCED {
+  title: "27.1 Quasars"
+  domain: "astronomia_faculdade"
+  definition: "27.1 Quasars — Astronomy 2e."
+  requires: [astro.26-5-the-expanding-universe.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 27.1 Quasars", weight: 0.90 }
+}
+
+KNOWLEDGE astro.27-2-supermassive-black-holes-what-quasars-really-are.v1 ADVANCED {
+  title: "27.2 Supermassive Black Holes: What Quasars Really Are"
+  domain: "astronomia_faculdade"
+  definition: "27.2 Supermassive Black Holes: What Quasars Really Are — Astronomy 2e."
+  requires: [astro.27-1-quasars.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 27.2 Supermassive Black Holes: What Quasars Really Are", weight: 0.90 }
+}
+
+KNOWLEDGE astro.27-3-quasars-as-probes-of-evolution-in-the-universe.v1 ADVANCED {
+  title: "27.3 Quasars as Probes of Evolution in the Universe"
+  domain: "astronomia_faculdade"
+  definition: "27.3 Quasars as Probes of Evolution in the Universe — Astronomy 2e."
+  requires: [astro.27-2-supermassive-black-holes-what-quasars-really-are.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 27.3 Quasars as Probes of Evolution in the Universe", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 28: 28 The Evolution and Distribution of Galaxies
+# ------------------------------------------------------------
+KNOWLEDGE astro.28-1-observations-of-distant-galaxies.v1 ADVANCED {
+  title: "28.1 Observations of Distant Galaxies"
+  domain: "astronomia_faculdade"
+  definition: "28.1 Observations of Distant Galaxies — Astronomy 2e."
+  requires: [astro.27-3-quasars-as-probes-of-evolution-in-the-universe.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 28.1 Observations of Distant Galaxies", weight: 0.90 }
+}
+
+KNOWLEDGE astro.28-2-galaxy-mergers-and-active-galactic-nuclei.v1 ADVANCED {
+  title: "28.2 Galaxy Mergers and Active Galactic Nuclei"
+  domain: "astronomia_faculdade"
+  definition: "28.2 Galaxy Mergers and Active Galactic Nuclei — Astronomy 2e."
+  requires: [astro.28-1-observations-of-distant-galaxies.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 28.2 Galaxy Mergers and Active Galactic Nuclei", weight: 0.90 }
+}
+
+KNOWLEDGE astro.28-3-the-distribution-of-galaxies-in-space.v1 ADVANCED {
+  title: "28.3 The Distribution of Galaxies in Space"
+  domain: "astronomia_faculdade"
+  definition: "28.3 The Distribution of Galaxies in Space — Astronomy 2e."
+  requires: [astro.28-2-galaxy-mergers-and-active-galactic-nuclei.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 28.3 The Distribution of Galaxies in Space", weight: 0.90 }
+}
+
+KNOWLEDGE astro.28-4-the-challenge-of-dark-matter.v1 ADVANCED {
+  title: "28.4 The Challenge of Dark Matter"
+  domain: "astronomia_faculdade"
+  definition: "28.4 The Challenge of Dark Matter — Astronomy 2e."
+  requires: [astro.28-3-the-distribution-of-galaxies-in-space.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 28.4 The Challenge of Dark Matter", weight: 0.90 }
+}
+
+KNOWLEDGE astro.28-5-the-formation-and-evolution-of-galaxies-and-structure-in-the-universe.v1 ADVANCED {
+  title: "28.5 The Formation and Evolution of Galaxies and Structure in the Universe"
+  domain: "astronomia_faculdade"
+  definition: "28.5 The Formation and Evolution of Galaxies and Structure in the Universe — Astronomy 2e."
+  requires: [astro.28-4-the-challenge-of-dark-matter.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 28.5 The Formation and Evolution of Galaxies and Structure in the Universe", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 29: 29 The Big Bang
+# ------------------------------------------------------------
+KNOWLEDGE astro.29-1-the-age-of-the-universe.v1 ADVANCED {
+  title: "29.1 The Age of the Universe"
+  domain: "astronomia_faculdade"
+  definition: "29.1 The Age of the Universe — Astronomy 2e."
+  requires: [astro.28-5-the-formation-and-evolution-of-galaxies-and-structure-in-the-universe.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 29.1 The Age of the Universe", weight: 0.90 }
+}
+
+KNOWLEDGE astro.29-2-a-model-of-the-universe.v1 ADVANCED {
+  title: "29.2 A Model of the Universe"
+  domain: "astronomia_faculdade"
+  definition: "29.2 A Model of the Universe — Astronomy 2e."
+  requires: [astro.29-1-the-age-of-the-universe.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 29.2 A Model of the Universe", weight: 0.90 }
+}
+
+KNOWLEDGE astro.29-3-the-beginning-of-the-universe.v1 ADVANCED {
+  title: "29.3 The Beginning of the Universe"
+  domain: "astronomia_faculdade"
+  definition: "29.3 The Beginning of the Universe — Astronomy 2e."
+  requires: [astro.29-2-a-model-of-the-universe.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 29.3 The Beginning of the Universe", weight: 0.90 }
+}
+
+KNOWLEDGE astro.29-4-the-cosmic-microwave-background.v1 ADVANCED {
+  title: "29.4 The Cosmic Microwave Background"
+  domain: "astronomia_faculdade"
+  definition: "29.4 The Cosmic Microwave Background — Astronomy 2e."
+  requires: [astro.29-3-the-beginning-of-the-universe.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 29.4 The Cosmic Microwave Background", weight: 0.90 }
+}
+
+KNOWLEDGE astro.29-5-what-is-the-universe-really-made-of.v1 ADVANCED {
+  title: "29.5 What Is the Universe Really Made Of?"
+  domain: "astronomia_faculdade"
+  definition: "29.5 What Is the Universe Really Made Of? — Astronomy 2e."
+  requires: [astro.29-4-the-cosmic-microwave-background.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 29.5 What Is the Universe Really Made Of?", weight: 0.90 }
+}
+
+KNOWLEDGE astro.29-6-the-inflationary-universe.v1 ADVANCED {
+  title: "29.6 The Inflationary Universe"
+  domain: "astronomia_faculdade"
+  definition: "29.6 The Inflationary Universe — Astronomy 2e."
+  requires: [astro.29-5-what-is-the-universe-really-made-of.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 29.6 The Inflationary Universe", weight: 0.90 }
+}
+
+KNOWLEDGE astro.29-7-the-anthropic-principle.v1 ADVANCED {
+  title: "29.7 The Anthropic Principle"
+  domain: "astronomia_faculdade"
+  definition: "29.7 The Anthropic Principle — Astronomy 2e."
+  requires: [astro.29-6-the-inflationary-universe.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 29.7 The Anthropic Principle", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 30: 30 Life in the Universe
+# ------------------------------------------------------------
+KNOWLEDGE astro.30-1-the-cosmic-context-for-life.v1 ADVANCED {
+  title: "30.1 The Cosmic Context for Life"
+  domain: "astronomia_faculdade"
+  definition: "30.1 The Cosmic Context for Life — Astronomy 2e."
+  requires: [astro.29-7-the-anthropic-principle.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 30.1 The Cosmic Context for Life", weight: 0.90 }
+}
+
+KNOWLEDGE astro.30-2-astrobiology.v1 ADVANCED {
+  title: "30.2 Astrobiology"
+  domain: "astronomia_faculdade"
+  definition: "30.2 Astrobiology — Astronomy 2e."
+  requires: [astro.30-1-the-cosmic-context-for-life.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 30.2 Astrobiology", weight: 0.90 }
+}
+
+KNOWLEDGE astro.30-3-searching-for-life-beyond-earth.v1 ADVANCED {
+  title: "30.3 Searching for Life beyond Earth"
+  domain: "astronomia_faculdade"
+  definition: "30.3 Searching for Life beyond Earth — Astronomy 2e."
+  requires: [astro.30-2-astrobiology.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 30.3 Searching for Life beyond Earth", weight: 0.90 }
+}
+
+KNOWLEDGE astro.30-4-the-search-for-extraterrestrial-intelligence.v1 ADVANCED {
+  title: "30.4 The Search for Extraterrestrial Intelligence"
+  domain: "astronomia_faculdade"
+  definition: "30.4 The Search for Extraterrestrial Intelligence — Astronomy 2e."
+  requires: [astro.30-3-searching-for-life-beyond-earth.v1]
+  interactivity: 5
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Astronomy 2e - 30.4 The Search for Extraterrestrial Intelligence", weight: 0.90 }
+}
+
+MISSION mission.astro.v1 {
+  label: "Faculdade: Astronomia"
+  requires: [
+    astro.1-1-the-nature-of-astronomy.v1,
+    astro.1-2-the-nature-of-science.v1,
+    astro.1-3-the-laws-of-nature.v1,
+    astro.1-4-numbers-in-astronomy.v1,
+    astro.1-5-consequences-of-light-travel-time.v1,
+    astro.1-6-a-tour-of-the-universe.v1,
+    astro.1-7-the-universe-on-the-large-scale.v1,
+    astro.1-8-the-universe-of-the-very-small.v1,
+    astro.1-9-a-conclusion-and-a-beginning.v1,
+    astro.2-1-the-sky-above.v1,
+    astro.2-2-ancient-astronomy.v1,
+    astro.2-3-astrology-and-astronomy.v1,
+    astro.2-4-the-birth-of-modern-astronomy.v1,
+    astro.3-1-the-laws-of-planetary-motion.v1,
+    astro.3-2-newtons-great-synthesis.v1,
+    astro.3-3-newtons-universal-law-of-gravitation.v1,
+    astro.3-4-orbits-in-the-solar-system.v1,
+    astro.3-5-motions-of-satellites-and-spacecraft.v1,
+    astro.3-6-gravity-with-more-than-two-bodies.v1,
+    astro.4-1-earth-and-sky.v1,
+    astro.4-2-the-seasons.v1,
+    astro.4-3-keeping-time.v1,
+    astro.4-4-the-calendar.v1,
+    astro.4-5-phases-and-motions-of-the-moon.v1,
+    astro.4-6-ocean-tides-and-the-moon.v1,
+    astro.4-7-eclipses-of-the-sun-and-moon.v1,
+    astro.5-1-the-behavior-of-light.v1,
+    astro.5-2-the-electromagnetic-spectrum.v1,
+    astro.5-3-spectroscopy-in-astronomy.v1,
+    astro.5-4-the-structure-of-the-atom.v1,
+    astro.5-5-formation-of-spectral-lines.v1,
+    astro.5-6-the-doppler-effect.v1,
+    astro.6-1-telescopes.v1,
+    astro.6-2-telescopes-today.v1,
+    astro.6-3-visible-light-detectors-and-instruments.v1,
+    astro.6-4-radio-telescopes.v1,
+    astro.6-5-observations-outside-earths-atmosphere.v1,
+    astro.6-6-the-future-of-large-telescopes.v1,
+    astro.7-1-overview-of-our-planetary-system.v1,
+    astro.7-2-composition-and-structure-of-planets.v1,
+    astro.7-3-dating-planetary-surfaces.v1,
+    astro.7-4-origin-of-the-solar-system.v1,
+    astro.8-1-the-global-perspective.v1,
+    astro.8-2-earths-crust.v1,
+    astro.8-3-earths-atmosphere.v1,
+    astro.8-4-life-chemical-evolution-and-climate-change.v1,
+    astro.8-5-cosmic-influences-on-the-evolution-of-earth.v1,
+    astro.9-1-general-properties-of-the-moon.v1,
+    astro.9-2-the-lunar-surface.v1,
+    astro.9-3-impact-craters.v1,
+    astro.9-4-the-origin-of-the-moon.v1,
+    astro.9-5-mercury.v1,
+    astro.10-1-the-nearest-planets-an-overview.v1,
+    astro.10-2-the-geology-of-venus.v1,
+    astro.10-3-the-massive-atmosphere-of-venus.v1,
+    astro.10-4-the-geology-of-mars.v1,
+    astro.10-5-water-and-life-on-mars.v1,
+    astro.10-6-divergent-planetary-evolution.v1,
+    astro.11-1-exploring-the-outer-planets.v1,
+    astro.11-2-the-giant-planets.v1,
+    astro.11-3-atmospheres-of-the-giant-planets.v1,
+    astro.12-1-ring-and-moon-systems-introduced.v1,
+    astro.12-2-the-galilean-moons-of-jupiter.v1,
+    astro.12-3-titan-and-triton.v1,
+    astro.12-4-pluto-and-charon.v1,
+    astro.12-5-planetary-rings-and-enceladus.v1,
+    astro.13-1-asteroids.v1,
+    astro.13-2-asteroids-and-planetary-defense.v1,
+    astro.13-3-the-long-haired-comets.v1,
+    astro.13-4-the-origin-and-fate-of-comets-and-related-objects.v1,
+    astro.14-1-meteors.v1,
+    astro.14-2-meteorites-stones-from-heaven.v1,
+    astro.14-3-formation-of-the-solar-system.v1,
+    astro.14-4-comparison-with-other-planetary-systems.v1,
+    astro.14-5-planetary-evolution.v1,
+    astro.15-1-the-structure-and-composition-of-the-sun.v1,
+    astro.15-2-the-solar-cycle.v1,
+    astro.15-3-solar-activity-above-the-photosphere.v1,
+    astro.15-4-space-weather.v1,
+    astro.16-1-sources-of-sunshine-thermal-and-gravitational-energy.v1,
+    astro.16-2-mass-energy-and-the-theory-of-relativity.v1,
+    astro.16-3-the-solar-interior-theory.v1,
+    astro.16-4-the-solar-interior-observations.v1,
+    astro.17-1-the-brightness-of-stars.v1,
+    astro.17-2-colors-of-stars.v1,
+    astro.17-3-the-spectra-of-stars-and-brown-dwarfs.v1,
+    astro.17-4-using-spectra-to-measure-stellar-radius-composition-and-motion.v1,
+    astro.18-1-a-stellar-census.v1,
+    astro.18-2-measuring-stellar-masses.v1,
+    astro.18-3-diameters-of-stars.v1,
+    astro.18-4-the-h-r-diagram.v1,
+    astro.19-1-fundamental-units-of-distance.v1,
+    astro.19-2-surveying-the-stars.v1,
+    astro.19-3-variable-stars-one-key-to-cosmic-distances.v1,
+    astro.19-4-the-h-r-diagram-and-cosmic-distances.v1,
+    astro.20-1-the-interstellar-medium.v1,
+    astro.20-2-interstellar-gas.v1,
+    astro.20-3-cosmic-dust.v1,
+    astro.20-4-cosmic-rays.v1,
+    astro.20-5-the-life-cycle-of-cosmic-material.v1,
+    astro.20-6-interstellar-matter-around-the-sun.v1,
+    astro.21-1-star-formation.v1,
+    astro.21-2-the-h-r-diagram-and-the-study-of-stellar-evolution.v1,
+    astro.21-3-evidence-that-planets-form-around-other-stars.v1,
+    astro.21-4-planets-beyond-the-solar-system-search-and-discovery.v1,
+    astro.21-5-exoplanets-everywhere-what-we-are-learning.v1,
+    astro.21-6-new-perspectives-on-planet-formation.v1,
+    astro.22-1-evolution-from-the-main-sequence-to-red-giants.v1,
+    astro.22-2-star-clusters.v1,
+    astro.22-3-checking-out-the-theory.v1,
+    astro.22-4-further-evolution-of-stars.v1,
+    astro.22-5-the-evolution-of-more-massive-stars.v1,
+    astro.23-1-the-death-of-low-mass-stars.v1,
+    astro.23-2-evolution-of-massive-stars-an-explosive-finish.v1,
+    astro.23-3-supernova-observations.v1,
+    astro.23-4-pulsars-and-the-discovery-of-neutron-stars.v1,
+    astro.23-5-the-evolution-of-binary-star-systems.v1,
+    astro.23-6-the-mystery-of-the-gamma-ray-bursts.v1,
+    astro.24-1-introducing-general-relativity.v1,
+    astro.24-2-spacetime-and-gravity.v1,
+    astro.24-3-tests-of-general-relativity.v1,
+    astro.24-4-time-in-general-relativity.v1,
+    astro.24-5-black-holes.v1,
+    astro.24-6-evidence-for-black-holes.v1,
+    astro.24-7-gravitational-wave-astronomy.v1,
+    astro.25-1-the-architecture-of-the-galaxy.v1,
+    astro.25-2-spiral-structure.v1,
+    astro.25-3-the-mass-of-the-galaxy.v1,
+    astro.25-4-the-center-of-the-galaxy.v1,
+    astro.25-5-stellar-populations-in-the-galaxy.v1,
+    astro.25-6-the-formation-of-the-galaxy.v1,
+    astro.26-1-the-discovery-of-galaxies.v1,
+    astro.26-2-types-of-galaxies.v1,
+    astro.26-3-properties-of-galaxies.v1,
+    astro.26-4-the-extragalactic-distance-scale.v1,
+    astro.26-5-the-expanding-universe.v1,
+    astro.27-1-quasars.v1,
+    astro.27-2-supermassive-black-holes-what-quasars-really-are.v1,
+    astro.27-3-quasars-as-probes-of-evolution-in-the-universe.v1,
+    astro.28-1-observations-of-distant-galaxies.v1,
+    astro.28-2-galaxy-mergers-and-active-galactic-nuclei.v1,
+    astro.28-3-the-distribution-of-galaxies-in-space.v1,
+    astro.28-4-the-challenge-of-dark-matter.v1,
+    astro.28-5-the-formation-and-evolution-of-galaxies-and-structure-in-the-universe.v1,
+    astro.29-1-the-age-of-the-universe.v1,
+    astro.29-2-a-model-of-the-universe.v1,
+    astro.29-3-the-beginning-of-the-universe.v1,
+    astro.29-4-the-cosmic-microwave-background.v1,
+    astro.29-5-what-is-the-universe-really-made-of.v1,
+    astro.29-6-the-inflationary-universe.v1,
+    astro.29-7-the-anthropic-principle.v1,
+    astro.30-1-the-cosmic-context-for-life.v1,
+    astro.30-2-astrobiology.v1,
+    astro.30-3-searching-for-life-beyond-earth.v1,
+    astro.30-4-the-search-for-extraterrestrial-intelligence.v1,
+  ]
+  threshold: 0.85
+}

@@ -353,17 +353,23 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
       ) : (
         /* ================= FALLBACK: evidência manual ================= */
         <form onSubmit={handleManualSubmit} className="flex flex-col gap-4">
-          <div className="rounded-2xl border border-slate-500/25 bg-slate-500/[0.05] p-4">
-            <p className="text-[10px] uppercase tracking-[0.14em] text-slate-400 font-bold mb-2 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5" /> Evidência aberta
+          <div className="rounded-2xl border border-amber-500/25 bg-amber-500/[0.05] p-4">
+            <p className="text-[10px] uppercase tracking-[0.14em] text-amber-400 font-bold mb-3 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5" /> Auditoria de Competência
             </p>
-            <p className="text-xs text-slate-400 mb-3">
-              Esta KU ainda não possui desafios com correção automática. Registre uma evidência
-              externa (explicação, artefato, decisão) — sujeita a revisão.
-            </p>
+            <div className="text-xs text-slate-300 mb-4 space-y-2 leading-relaxed">
+              <p>
+                Esta matéria não possui testes automáticos. Para provar sua competência em <strong>{selectedNode.title}</strong>, anexe uma evidência manual na caixa abaixo:
+              </p>
+              <ul className="list-disc pl-4 space-y-2 text-slate-400 mt-2">
+                <li><strong>Código/Projeto:</strong> Cole um trecho de código ou link do GitHub aplicando o conceito de <em>{selectedNode.title}</em>.</li>
+                <li><strong>Explicação Teórica:</strong> Explique como funciona <em>{selectedNode.title}</em> detalhadamente com as suas próprias palavras.</li>
+                <li><strong>Caso Real:</strong> Descreva um problema que você resolveu no trabalho que envolvia <em>{selectedNode.title}</em>.</li>
+              </ul>
+            </div>
             <textarea
-              className="input-eos w-full text-sm p-3 h-24 resize-none placeholder-slate-600"
-              placeholder="Descreva a evidência: explicação formal, link do artefato, decisão técnica…"
+              className="input-eos w-full text-sm p-3 h-32 resize-none placeholder-slate-500"
+              placeholder={`Ex: Para aplicar os conceitos de ${selectedNode.title}, eu fiz o seguinte...`}
               value={answer}
               onChange={(e) => setAnswer(e.target.value)}
               disabled={isSubmitting}

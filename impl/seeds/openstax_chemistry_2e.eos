@@ -1,0 +1,1331 @@
+@version 1.0.0
+@domain "quimica_faculdade"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Chemistry 2e
+# Fonte: https://openstax.org/books/chemistry-2e  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Essential Ideas
+# ------------------------------------------------------------
+KNOWLEDGE quim.1-1-chemistry-in-context.v1 ADVANCED {
+  title: "1.1 Chemistry in Context"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Outline the historical development of chemistry; Provide examples of the importance of chemistry in everyday life; Describe the scientific method; Differentiate among hypotheses, theories, and laws; Provide examples illustrating macroscopic, microscopic, and symbolic domains."
+  requires: [mmed.10-5-graphing-quadratic-equations-in-two-variables.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 1.1 Chemistry in Context", weight: 0.90 }
+}
+
+KNOWLEDGE quim.1-2-phases-and-classification-of-matter.v1 ADVANCED {
+  title: "1.2 Phases and Classification of Matter"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the basic properties of each physical state of matter: solid, liquid, and gas; Distinguish between mass and weight; Apply the law of conservation of matter; Classify matter as an element, compound, homogeneous mixture, or heterogeneous mixture with regard to its physical state and composition; Define and give examples of atoms and molecules."
+  requires: [quim.1-1-chemistry-in-context.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 1.2 Phases and Classification of Matter", weight: 0.90 }
+}
+
+KNOWLEDGE quim.1-3-physical-and-chemical-properties.v1 ADVANCED {
+  title: "1.3 Physical and Chemical Properties"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify properties of and changes in matter as physical or chemical; Identify properties of matter as extensive or intensive."
+  requires: [quim.1-2-phases-and-classification-of-matter.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 1.3 Physical and Chemical Properties", weight: 0.90 }
+}
+
+KNOWLEDGE quim.1-4-measurements.v1 ADVANCED {
+  title: "1.4 Measurements"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the process of measurement; Identify the three basic parts of a quantity; Describe the properties and units of length, mass, volume, density, temperature, and time; Perform basic unit calculations and conversions in the metric and other unit systems."
+  requires: [quim.1-3-physical-and-chemical-properties.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 1.4 Measurements", weight: 0.90 }
+}
+
+KNOWLEDGE quim.1-5-measurement-uncertainty-accuracy-and-precision.v1 ADVANCED {
+  title: "1.5 Measurement Uncertainty, Accuracy, and Precision"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define accuracy and precision; Distinguish exact and uncertain numbers; Correctly represent uncertainty in quantities using significant figures; Apply proper rounding rules to computed quantities."
+  requires: [quim.1-4-measurements.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 1.5 Measurement Uncertainty, Accuracy, and Precision", weight: 0.90 }
+}
+
+KNOWLEDGE quim.1-6-mathematical-treatment-of-measurement-results.v1 ADVANCED {
+  title: "1.6 Mathematical Treatment of Measurement Results"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the dimensional analysis (factor label) approach to mathematical calculations involving quantities; Use dimensional analysis to carry out unit conversions for a given property and computations involving two or more properties."
+  requires: [quim.1-5-measurement-uncertainty-accuracy-and-precision.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 1.6 Mathematical Treatment of Measurement Results", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Atoms, Molecules, and Ions
+# ------------------------------------------------------------
+KNOWLEDGE quim.2-1-early-ideas-in-atomic-theory.v1 ADVANCED {
+  title: "2.1 Early Ideas in Atomic Theory"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: State the postulates of Dalton’s atomic theory; Use postulates of Dalton’s atomic theory to explain the laws of definite and multiple proportions."
+  requires: [quim.1-6-mathematical-treatment-of-measurement-results.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 2.1 Early Ideas in Atomic Theory", weight: 0.90 }
+}
+
+KNOWLEDGE quim.2-2-evolution-of-atomic-theory.v1 ADVANCED {
+  title: "2.2 Evolution of Atomic Theory"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Outline milestones in the development of modern atomic theory; Summarize and interpret the results of the experiments of Thomson, Millikan, and Rutherford; Describe the three subatomic particles that compose atoms; Define isotopes and give examples for several elements."
+  requires: [quim.2-1-early-ideas-in-atomic-theory.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 2.2 Evolution of Atomic Theory", weight: 0.90 }
+}
+
+KNOWLEDGE quim.2-3-atomic-structure-and-symbolism.v1 ADVANCED {
+  title: "2.3 Atomic Structure and Symbolism"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Write and interpret symbols that depict the atomic number, mass number, and charge of an atom or ion; Define the atomic mass unit and average atomic mass; Calculate average atomic mass and isotopic abundance."
+  requires: [quim.2-2-evolution-of-atomic-theory.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 2.3 Atomic Structure and Symbolism", weight: 0.90 }
+}
+
+KNOWLEDGE quim.2-4-chemical-formulas.v1 ADVANCED {
+  title: "2.4 Chemical Formulas"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Symbolize the composition of molecules using molecular formulas and empirical formulas; Represent the bonding arrangement of atoms within molecules using structural formulas."
+  requires: [quim.2-3-atomic-structure-and-symbolism.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 2.4 Chemical Formulas", weight: 0.90 }
+}
+
+KNOWLEDGE quim.2-5-the-periodic-table.v1 ADVANCED {
+  title: "2.5 The Periodic Table"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: State the periodic law and explain the organization of elements in the periodic table; Predict the general properties of elements based on their location within the periodic table; Identify metals, nonmetals, and metalloids by their properties and/or location on the periodic table."
+  requires: [quim.2-4-chemical-formulas.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 2.5 The Periodic Table", weight: 0.90 }
+}
+
+KNOWLEDGE quim.2-6-ionic-and-molecular-compounds.v1 ADVANCED {
+  title: "2.6 Ionic and Molecular Compounds"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define ionic and molecular (covalent) compounds; Predict the type of compound formed from elements based on their location within the periodic table; Determine formulas for simple ionic compounds."
+  requires: [quim.2-5-the-periodic-table.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 2.6 Ionic and Molecular Compounds", weight: 0.90 }
+}
+
+KNOWLEDGE quim.2-7-chemical-nomenclature.v1 ADVANCED {
+  title: "2.7 Chemical Nomenclature"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Derive names for common types of inorganic compounds using a systematic approach."
+  requires: [quim.2-6-ionic-and-molecular-compounds.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 2.7 Chemical Nomenclature", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Composition of Substances and Solutions
+# ------------------------------------------------------------
+KNOWLEDGE quim.3-1-formula-mass-and-the-mole-concept.v1 ADVANCED {
+  title: "3.1 Formula Mass and the Mole Concept"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Calculate formula masses for covalent and ionic compounds; Define the amount unit mole and the related quantity Avogadro’s number; Explain the relation between mass, moles, and numbers of atoms or molecules, and perform calculations deriving these quantities from one another."
+  requires: [quim.2-7-chemical-nomenclature.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 3.1 Formula Mass and the Mole Concept", weight: 0.90 }
+}
+
+KNOWLEDGE quim.3-2-determining-empirical-and-molecular-formulas.v1 ADVANCED {
+  title: "3.2 Determining Empirical and Molecular Formulas"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compute the percent composition of a compound; Determine the empirical formula of a compound; Determine the molecular formula of a compound."
+  requires: [quim.3-1-formula-mass-and-the-mole-concept.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 3.2 Determining Empirical and Molecular Formulas", weight: 0.90 }
+}
+
+KNOWLEDGE quim.3-3-molarity.v1 ADVANCED {
+  title: "3.3 Molarity"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the fundamental properties of solutions; Calculate solution concentrations using molarity; Perform dilution calculations using the dilution equation."
+  requires: [quim.3-2-determining-empirical-and-molecular-formulas.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 3.3 Molarity", weight: 0.90 }
+}
+
+KNOWLEDGE quim.3-4-other-units-for-solution-concentrations.v1 ADVANCED {
+  title: "3.4 Other Units for Solution Concentrations"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define the concentration units of mass percentage, volume percentage, mass-volume percentage, parts-per-million (ppm), and parts-per-billion (ppb); Perform computations relating a solution’s concentration and its components’ volumes and/or masses using these units."
+  requires: [quim.3-3-molarity.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 3.4 Other Units for Solution Concentrations", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 Stoichiometry of Chemical Reactions
+# ------------------------------------------------------------
+KNOWLEDGE quim.4-1-writing-and-balancing-chemical-equations.v1 ADVANCED {
+  title: "4.1 Writing and Balancing Chemical Equations"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Derive chemical equations from narrative descriptions of chemical reactions.; Write and balance chemical equations in molecular, total ionic, and net ionic formats.."
+  requires: [quim.3-4-other-units-for-solution-concentrations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 4.1 Writing and Balancing Chemical Equations", weight: 0.90 }
+}
+
+KNOWLEDGE quim.4-2-classifying-chemical-reactions.v1 ADVANCED {
+  title: "4.2 Classifying Chemical Reactions"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define three common types of chemical reactions (precipitation, acid-base, and oxidation-reduction); Classify chemical reactions as one of these three types given appropriate descriptions or chemical equations; Identify common acids and bases; Predict the solubility of common inorganic compounds by using solubility rules; Compute the oxidation states for elements in compounds."
+  requires: [quim.4-1-writing-and-balancing-chemical-equations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 4.2 Classifying Chemical Reactions", weight: 0.90 }
+}
+
+KNOWLEDGE quim.4-3-reaction-stoichiometry.v1 ADVANCED {
+  title: "4.3 Reaction Stoichiometry"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the concept of stoichiometry as it pertains to chemical reactions; Use balanced chemical equations to derive stoichiometric factors relating amounts of reactants and products; Perform stoichiometric calculations involving mass, moles, and solution molarity."
+  requires: [quim.4-2-classifying-chemical-reactions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 4.3 Reaction Stoichiometry", weight: 0.90 }
+}
+
+KNOWLEDGE quim.4-4-reaction-yields.v1 ADVANCED {
+  title: "4.4 Reaction Yields"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the concepts of theoretical yield and limiting reactants/reagents.; Derive the theoretical yield for a reaction under specified conditions.; Calculate the percent yield for a reaction.."
+  requires: [quim.4-3-reaction-stoichiometry.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 4.4 Reaction Yields", weight: 0.90 }
+}
+
+KNOWLEDGE quim.4-5-quantitative-chemical-analysis.v1 ADVANCED {
+  title: "4.5 Quantitative Chemical Analysis"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the fundamental aspects of titrations and gravimetric analysis.; Perform stoichiometric calculations using typical titration and gravimetric data.."
+  requires: [quim.4-4-reaction-yields.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 4.5 Quantitative Chemical Analysis", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Thermochemistry
+# ------------------------------------------------------------
+KNOWLEDGE quim.5-1-energy-basics.v1 ADVANCED {
+  title: "5.1 Energy Basics"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define energy, distinguish types of energy, and describe the nature of energy changes that accompany chemical and physical changes; Distinguish the related properties of heat, thermal energy, and temperature; Define and distinguish specific heat and heat capacity, and describe the physical implications of both; Perform calculations involving heat, specific heat, and temperature change."
+  requires: [quim.4-5-quantitative-chemical-analysis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 5.1 Energy Basics", weight: 0.90 }
+}
+
+KNOWLEDGE quim.5-2-calorimetry.v1 ADVANCED {
+  title: "5.2 Calorimetry"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the technique of calorimetry; Calculate and interpret heat and related properties using typical calorimetry data."
+  requires: [quim.5-1-energy-basics.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 5.2 Calorimetry", weight: 0.90 }
+}
+
+KNOWLEDGE quim.5-3-enthalpy.v1 ADVANCED {
+  title: "5.3 Enthalpy"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: State the first law of thermodynamics; Define enthalpy and explain its classification as a state function; Write and balance thermochemical equations; Calculate enthalpy changes for various chemical reactions; Explain Hess’s law and use it to compute reaction enthalpies."
+  requires: [quim.5-2-calorimetry.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 5.3 Enthalpy", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Electronic Structure and Periodic Properties of Elements
+# ------------------------------------------------------------
+KNOWLEDGE quim.6-1-electromagnetic-energy.v1 ADVANCED {
+  title: "6.1 Electromagnetic Energy"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the basic behavior of waves, including travelling waves and standing waves; Describe the wave nature of light; Use appropriate equations to calculate related light-wave properties such as frequency, wavelength, and energy; Distinguish between line and continuous emission spectra; Describe the particle nature of light."
+  requires: [quim.5-3-enthalpy.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 6.1 Electromagnetic Energy", weight: 0.90 }
+}
+
+KNOWLEDGE quim.6-2-the-bohr-model.v1 ADVANCED {
+  title: "6.2 The Bohr Model"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the Bohr model of the hydrogen atom; Use the Rydberg equation to calculate energies of light emitted or absorbed by hydrogen atoms."
+  requires: [quim.6-1-electromagnetic-energy.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 6.2 The Bohr Model", weight: 0.90 }
+}
+
+KNOWLEDGE quim.6-3-development-of-quantum-theory.v1 ADVANCED {
+  title: "6.3 Development of Quantum Theory"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Extend the concept of wave–particle duality that was observed in electromagnetic radiation to matter as well; Understand the general idea of the quantum mechanical description of electrons in an atom, and that it uses the notion of three-dimensional wave functions, or orbitals, that define the distribution of probability to find an electron in a particular part of space; List and describe traits of the four quantum numbers that form the basis for completely specifying the state of an electron in an atom."
+  requires: [quim.6-2-the-bohr-model.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 6.3 Development of Quantum Theory", weight: 0.90 }
+}
+
+KNOWLEDGE quim.6-4-electronic-structure-of-atoms-electron-configurations.v1 ADVANCED {
+  title: "6.4 Electronic Structure of Atoms (Electron Configurations)"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Derive the predicted ground-state electron configurations of atoms; Identify and explain exceptions to predicted electron configurations for atoms and ions; Relate electron configurations to element classifications in the periodic table."
+  requires: [quim.6-3-development-of-quantum-theory.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 6.4 Electronic Structure of Atoms (Electron Configurations)", weight: 0.90 }
+}
+
+KNOWLEDGE quim.6-5-periodic-variations-in-element-properties.v1 ADVANCED {
+  title: "6.5 Periodic Variations in Element Properties"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe and explain the observed trends in atomic size, ionization energy, and electron affinity of the elements."
+  requires: [quim.6-4-electronic-structure-of-atoms-electron-configurations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 6.5 Periodic Variations in Element Properties", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 Chemical Bonding and Molecular Geometry
+# ------------------------------------------------------------
+KNOWLEDGE quim.7-1-ionic-bonding.v1 ADVANCED {
+  title: "7.1 Ionic Bonding"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the formation of cations, anions, and ionic compounds; Predict the charge of common metallic and nonmetallic elements, and write their electron configurations."
+  requires: [quim.6-5-periodic-variations-in-element-properties.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 7.1 Ionic Bonding", weight: 0.90 }
+}
+
+KNOWLEDGE quim.7-2-covalent-bonding.v1 ADVANCED {
+  title: "7.2 Covalent Bonding"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the formation of covalent bonds; Define electronegativity and assess the polarity of covalent bonds."
+  requires: [quim.7-1-ionic-bonding.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 7.2 Covalent Bonding", weight: 0.90 }
+}
+
+KNOWLEDGE quim.7-3-lewis-symbols-and-structures.v1 ADVANCED {
+  title: "7.3 Lewis Symbols and Structures"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Write Lewis symbols for neutral atoms and ions; Draw Lewis structures depicting the bonding in simple molecules."
+  requires: [quim.7-2-covalent-bonding.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 7.3 Lewis Symbols and Structures", weight: 0.90 }
+}
+
+KNOWLEDGE quim.7-4-formal-charges-and-resonance.v1 ADVANCED {
+  title: "7.4 Formal Charges and Resonance"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Compute formal charges for atoms in any Lewis structure; Use formal charges to identify the most reasonable Lewis structure for a given molecule; Explain the concept of resonance and draw Lewis structures representing resonance forms for a given molecule."
+  requires: [quim.7-3-lewis-symbols-and-structures.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 7.4 Formal Charges and Resonance", weight: 0.90 }
+}
+
+KNOWLEDGE quim.7-5-strengths-of-ionic-and-covalent-bonds.v1 ADVANCED {
+  title: "7.5 Strengths of Ionic and Covalent Bonds"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the energetics of covalent and ionic bond formation and breakage; Use the Born-Haber cycle to compute lattice energies for ionic compounds; Use average covalent bond energies to estimate enthalpies of reaction."
+  requires: [quim.7-4-formal-charges-and-resonance.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 7.5 Strengths of Ionic and Covalent Bonds", weight: 0.90 }
+}
+
+KNOWLEDGE quim.7-6-molecular-structure-and-polarity.v1 ADVANCED {
+  title: "7.6 Molecular Structure and Polarity"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Predict the structures of small molecules using valence shell electron pair repulsion (VSEPR) theory; Explain the concepts of polar covalent bonds and molecular polarity; Assess the polarity of a molecule based on its bonding and structure."
+  requires: [quim.7-5-strengths-of-ionic-and-covalent-bonds.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 7.6 Molecular Structure and Polarity", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Advanced Theories of Covalent Bonding
+# ------------------------------------------------------------
+KNOWLEDGE quim.8-1-valence-bond-theory.v1 ADVANCED {
+  title: "8.1 Valence Bond Theory"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the formation of covalent bonds in terms of atomic orbital overlap; Define and give examples of σ and π bonds."
+  requires: [quim.7-6-molecular-structure-and-polarity.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 8.1 Valence Bond Theory", weight: 0.90 }
+}
+
+KNOWLEDGE quim.8-2-hybrid-atomic-orbitals.v1 ADVANCED {
+  title: "8.2 Hybrid Atomic Orbitals"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the concept of atomic orbital hybridization; Determine the hybrid orbitals associated with various molecular geometries."
+  requires: [quim.8-1-valence-bond-theory.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 8.2 Hybrid Atomic Orbitals", weight: 0.90 }
+}
+
+KNOWLEDGE quim.8-3-multiple-bonds.v1 ADVANCED {
+  title: "8.3 Multiple Bonds"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe multiple covalent bonding in terms of atomic orbital overlap; Relate the concept of resonance to π-bonding and electron delocalization."
+  requires: [quim.8-2-hybrid-atomic-orbitals.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 8.3 Multiple Bonds", weight: 0.90 }
+}
+
+KNOWLEDGE quim.8-4-molecular-orbital-theory.v1 ADVANCED {
+  title: "8.4 Molecular Orbital Theory"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Outline the basic quantum-mechanical approach to deriving molecular orbitals from atomic orbitals; Describe traits of bonding and antibonding molecular orbitals; Calculate bond orders based on molecular electron configurations; Write molecular electron configurations for first- and second-row diatomic molecules; Relate these electron configurations to the molecules’ stabilities and magnetic properties."
+  requires: [quim.8-3-multiple-bonds.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 8.4 Molecular Orbital Theory", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Gases
+# ------------------------------------------------------------
+KNOWLEDGE quim.9-1-gas-pressure.v1 ADVANCED {
+  title: "9.1 Gas Pressure"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define the property of pressure; Define and convert among the units of pressure measurements; Describe the operation of common tools for measuring gas pressure; Calculate pressure from manometer data."
+  requires: [quim.8-4-molecular-orbital-theory.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 9.1 Gas Pressure", weight: 0.90 }
+}
+
+KNOWLEDGE quim.9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law.v1 ADVANCED {
+  title: "9.2 Relating Pressure, Volume, Amount, and Temperature: The Ideal Gas Law"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the mathematical relationships between the various properties of gases; Use the ideal gas law, and related gas laws, to compute the values of various gas properties under specified conditions."
+  requires: [quim.9-1-gas-pressure.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 9.2 Relating Pressure, Volume, Amount, and Temperature: The Ideal Gas Law", weight: 0.90 }
+}
+
+KNOWLEDGE quim.9-3-stoichiometry-of-gaseous-substances-mixtures-and-reactions.v1 ADVANCED {
+  title: "9.3 Stoichiometry of Gaseous Substances, Mixtures, and Reactions"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Use the ideal gas law to compute gas densities and molar masses; Perform stoichiometric calculations involving gaseous substances; State Dalton’s law of partial pressures and use it in calculations involving gaseous mixtures."
+  requires: [quim.9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 9.3 Stoichiometry of Gaseous Substances, Mixtures, and Reactions", weight: 0.90 }
+}
+
+KNOWLEDGE quim.9-4-effusion-and-diffusion-of-gases.v1 ADVANCED {
+  title: "9.4 Effusion and Diffusion of Gases"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define and explain effusion and diffusion; State Graham’s law and use it to compute relevant gas properties."
+  requires: [quim.9-3-stoichiometry-of-gaseous-substances-mixtures-and-reactions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 9.4 Effusion and Diffusion of Gases", weight: 0.90 }
+}
+
+KNOWLEDGE quim.9-5-the-kinetic-molecular-theory.v1 ADVANCED {
+  title: "9.5 The Kinetic-Molecular Theory"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: State the postulates of the kinetic-molecular theory; Use this theory’s postulates to explain the gas laws."
+  requires: [quim.9-4-effusion-and-diffusion-of-gases.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 9.5 The Kinetic-Molecular Theory", weight: 0.90 }
+}
+
+KNOWLEDGE quim.9-6-non-ideal-gas-behavior.v1 ADVANCED {
+  title: "9.6 Non-Ideal Gas Behavior"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the physical factors that lead to deviations from ideal gas behavior; Explain how these factors are represented in the van der Waals equation; Define compressibility (Z) and describe how its variation with pressure reflects non-ideal behavior; Quantify non-ideal behavior by comparing computations of gas properties using the ideal gas law and the van der Waals equation."
+  requires: [quim.9-5-the-kinetic-molecular-theory.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 9.6 Non-Ideal Gas Behavior", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Liquids and Solids
+# ------------------------------------------------------------
+KNOWLEDGE quim.10-1-intermolecular-forces.v1 ADVANCED {
+  title: "10.1 Intermolecular Forces"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the types of intermolecular forces possible between atoms or molecules in condensed phases (dispersion forces, dipole-dipole attractions, and hydrogen bonding); Identify the types of intermolecular forces experienced by specific molecules based on their structures; Explain the relation between the intermolecular forces present within a substance and the temperatures associated with changes in its physical state."
+  requires: [quim.9-6-non-ideal-gas-behavior.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 10.1 Intermolecular Forces", weight: 0.90 }
+}
+
+KNOWLEDGE quim.10-2-properties-of-liquids.v1 ADVANCED {
+  title: "10.2 Properties of Liquids"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Distinguish between adhesive and cohesive forces; Define viscosity, surface tension, and capillary rise; Describe the roles of intermolecular attractive forces in each of these properties/phenomena."
+  requires: [quim.10-1-intermolecular-forces.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 10.2 Properties of Liquids", weight: 0.90 }
+}
+
+KNOWLEDGE quim.10-3-phase-transitions.v1 ADVANCED {
+  title: "10.3 Phase Transitions"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define phase transitions and phase transition temperatures; Explain the relation between phase transition temperatures and intermolecular attractive forces; Describe the processes represented by typical heating and cooling curves, and compute heat flows and enthalpy changes accompanying these processes."
+  requires: [quim.10-2-properties-of-liquids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 10.3 Phase Transitions", weight: 0.90 }
+}
+
+KNOWLEDGE quim.10-4-phase-diagrams.v1 ADVANCED {
+  title: "10.4 Phase Diagrams"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the construction and use of a typical phase diagram; Use phase diagrams to identify stable phases at given temperatures and pressures, and to describe phase transitions resulting from changes in these properties; Describe the supercritical fluid phase of matter."
+  requires: [quim.10-3-phase-transitions.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 10.4 Phase Diagrams", weight: 0.90 }
+}
+
+KNOWLEDGE quim.10-5-the-solid-state-of-matter.v1 ADVANCED {
+  title: "10.5 The Solid State of Matter"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define and describe the bonding and properties of ionic, molecular, metallic, and covalent network crystalline solids; Describe the main types of crystalline solids: ionic solids, metallic solids, covalent network solids, and molecular solids; Explain the ways in which crystal defects can occur in a solid."
+  requires: [quim.10-4-phase-diagrams.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 10.5 The Solid State of Matter", weight: 0.90 }
+}
+
+KNOWLEDGE quim.10-6-lattice-structures-in-crystalline-solids.v1 ADVANCED {
+  title: "10.6 Lattice Structures in Crystalline Solids"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the arrangement of atoms and ions in crystalline structures; Compute ionic radii using unit cell dimensions; Explain the use of X-ray diffraction measurements in determining crystalline structures."
+  requires: [quim.10-5-the-solid-state-of-matter.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 10.6 Lattice Structures in Crystalline Solids", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Solutions and Colloids
+# ------------------------------------------------------------
+KNOWLEDGE quim.11-1-the-dissolution-process.v1 ADVANCED {
+  title: "11.1 The Dissolution Process"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the basic properties of solutions and how they form; Predict whether a given mixture will yield a solution based on molecular properties of its components; Explain why some solutions either produce or absorb heat when they form."
+  requires: [quim.10-6-lattice-structures-in-crystalline-solids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 11.1 The Dissolution Process", weight: 0.90 }
+}
+
+KNOWLEDGE quim.11-2-electrolytes.v1 ADVANCED {
+  title: "11.2 Electrolytes"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define and give examples of electrolytes; Distinguish between the physical and chemical changes that accompany dissolution of ionic and covalent electrolytes; Relate electrolyte strength to solute-solvent attractive forces."
+  requires: [quim.11-1-the-dissolution-process.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 11.2 Electrolytes", weight: 0.90 }
+}
+
+KNOWLEDGE quim.11-3-solubility.v1 ADVANCED {
+  title: "11.3 Solubility"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the effects of temperature and pressure on solubility; State Henry’s law and use it in calculations involving the solubility of a gas in a liquid; Explain the degrees of solubility possible for liquid-liquid solutions."
+  requires: [quim.11-2-electrolytes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 11.3 Solubility", weight: 0.90 }
+}
+
+KNOWLEDGE quim.11-4-colligative-properties.v1 ADVANCED {
+  title: "11.4 Colligative Properties"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Express concentrations of solution components using mole fraction and molality; Describe the effect of solute concentration on various solution properties (vapor pressure, boiling point, freezing point, and osmotic pressure); Perform calculations using the mathematical equations that describe these various colligative effects; Describe the process of distillation and its practical applications; Explain the process of osmosis and describe how it is applied industrially and in nature."
+  requires: [quim.11-3-solubility.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 11.4 Colligative Properties", weight: 0.90 }
+}
+
+KNOWLEDGE quim.11-5-colloids.v1 ADVANCED {
+  title: "11.5 Colloids"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the composition and properties of colloidal dispersions; List and explain several technological applications of colloids."
+  requires: [quim.11-4-colligative-properties.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 11.5 Colloids", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Kinetics
+# ------------------------------------------------------------
+KNOWLEDGE quim.12-1-chemical-reaction-rates.v1 ADVANCED {
+  title: "12.1 Chemical Reaction Rates"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define chemical reaction rate; Derive rate expressions from the balanced equation for a given chemical reaction; Calculate reaction rates from experimental data."
+  requires: [quim.11-5-colloids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 12.1 Chemical Reaction Rates", weight: 0.90 }
+}
+
+KNOWLEDGE quim.12-2-factors-affecting-reaction-rates.v1 ADVANCED {
+  title: "12.2 Factors Affecting Reaction Rates"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the effects of chemical nature, physical state, temperature, concentration, and catalysis on reaction rates."
+  requires: [quim.12-1-chemical-reaction-rates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 12.2 Factors Affecting Reaction Rates", weight: 0.90 }
+}
+
+KNOWLEDGE quim.12-3-rate-laws.v1 ADVANCED {
+  title: "12.3 Rate Laws"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the form and function of a rate law; Use rate laws to calculate reaction rates; Use rate and concentration data to identify reaction orders and derive rate laws."
+  requires: [quim.12-2-factors-affecting-reaction-rates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 12.3 Rate Laws", weight: 0.90 }
+}
+
+KNOWLEDGE quim.12-4-integrated-rate-laws.v1 ADVANCED {
+  title: "12.4 Integrated Rate Laws"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the form and function of an integrated rate law; Perform integrated rate law calculations for zero-, first-, and second-order reactions; Define half-life and carry out related calculations; Identify the order of a reaction from concentration/time data."
+  requires: [quim.12-3-rate-laws.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 12.4 Integrated Rate Laws", weight: 0.90 }
+}
+
+KNOWLEDGE quim.12-5-collision-theory.v1 ADVANCED {
+  title: "12.5 Collision Theory"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Use the postulates of collision theory to explain the effects of physical state, temperature, and concentration on reaction rates; Define the concepts of activation energy and transition state; Use the Arrhenius equation in calculations relating rate constants to temperature."
+  requires: [quim.12-4-integrated-rate-laws.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 12.5 Collision Theory", weight: 0.90 }
+}
+
+KNOWLEDGE quim.12-6-reaction-mechanisms.v1 ADVANCED {
+  title: "12.6 Reaction Mechanisms"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Distinguish net reactions from elementary reactions (steps); Identify the molecularity of elementary reactions; Write a balanced chemical equation for a process given its reaction mechanism; Derive the rate law consistent with a given reaction mechanism."
+  requires: [quim.12-5-collision-theory.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 12.6 Reaction Mechanisms", weight: 0.90 }
+}
+
+KNOWLEDGE quim.12-7-catalysis.v1 ADVANCED {
+  title: "12.7 Catalysis"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the function of a catalyst in terms of reaction mechanisms and potential energy diagrams; List examples of catalysis in natural and industrial processes."
+  requires: [quim.12-6-reaction-mechanisms.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 12.7 Catalysis", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 13: 13 Fundamental Equilibrium Concepts
+# ------------------------------------------------------------
+KNOWLEDGE quim.13-1-chemical-equilibria.v1 ADVANCED {
+  title: "13.1 Chemical Equilibria"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the nature of equilibrium systems; Explain the dynamic nature of a chemical equilibrium."
+  requires: [quim.12-7-catalysis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 13.1 Chemical Equilibria", weight: 0.90 }
+}
+
+KNOWLEDGE quim.13-2-equilibrium-constants.v1 ADVANCED {
+  title: "13.2 Equilibrium Constants"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Derive reaction quotients from chemical equations representing homogeneous and heterogeneous reactions; Calculate values of reaction quotients and equilibrium constants, using concentrations and pressures; Relate the magnitude of an equilibrium constant to properties of the chemical system."
+  requires: [quim.13-1-chemical-equilibria.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 13.2 Equilibrium Constants", weight: 0.90 }
+}
+
+KNOWLEDGE quim.13-3-shifting-equilibria-le-chateliers-principle.v1 ADVANCED {
+  title: "13.3 Shifting Equilibria: Le Châtelier’s Principle"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the ways in which an equilibrium system can be stressed; Predict the response of a stressed equilibrium using Le Châtelier’s principle."
+  requires: [quim.13-2-equilibrium-constants.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 13.3 Shifting Equilibria: Le Châtelier’s Principle", weight: 0.90 }
+}
+
+KNOWLEDGE quim.13-4-equilibrium-calculations.v1 ADVANCED {
+  title: "13.4 Equilibrium Calculations"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the changes in concentration or pressure that occur for chemical species in equilibrium systems; Calculate equilibrium concentrations or pressures and equilibrium constants, using various algebraic approaches."
+  requires: [quim.13-3-shifting-equilibria-le-chateliers-principle.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 13.4 Equilibrium Calculations", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 14: 14 Acid-Base Equilibria
+# ------------------------------------------------------------
+KNOWLEDGE quim.14-1-bronsted-lowry-acids-and-bases.v1 ADVANCED {
+  title: "14.1 Brønsted-Lowry Acids and Bases"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify acids, bases, and conjugate acid-base pairs according to the Brønsted-Lowry definition; Write equations for acid and base ionization reactions; Use the ion-product constant for water to calculate hydronium and hydroxide ion concentrations; Describe the acid-base behavior of amphiprotic substances."
+  requires: [quim.13-4-equilibrium-calculations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 14.1 Brønsted-Lowry Acids and Bases", weight: 0.90 }
+}
+
+KNOWLEDGE quim.14-2-ph-and-poh.v1 ADVANCED {
+  title: "14.2 pH and pOH"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the characterization of aqueous solutions as acidic, basic, or neutral; Express hydronium and hydroxide ion concentrations on the pH and pOH scales; Perform calculations relating pH and pOH."
+  requires: [quim.14-1-bronsted-lowry-acids-and-bases.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 14.2 pH and pOH", weight: 0.90 }
+}
+
+KNOWLEDGE quim.14-3-relative-strengths-of-acids-and-bases.v1 ADVANCED {
+  title: "14.3 Relative Strengths of Acids and Bases"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Assess the relative strengths of acids and bases according to their ionization constants; Rationalize trends in acid–base strength in relation to molecular structure; Carry out equilibrium calculations for weak acid–base systems."
+  requires: [quim.14-2-ph-and-poh.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 14.3 Relative Strengths of Acids and Bases", weight: 0.90 }
+}
+
+KNOWLEDGE quim.14-4-hydrolysis-of-salts.v1 ADVANCED {
+  title: "14.4 Hydrolysis of Salts"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Predict whether a salt solution will be acidic, basic, or neutral; Calculate the concentrations of the various species in a salt solution; Describe the acid ionization of hydrated metal ions."
+  requires: [quim.14-3-relative-strengths-of-acids-and-bases.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 14.4 Hydrolysis of Salts", weight: 0.90 }
+}
+
+KNOWLEDGE quim.14-5-polyprotic-acids.v1 ADVANCED {
+  title: "14.5 Polyprotic Acids"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Extend previously introduced equilibrium concepts to acids and bases that may donate or accept more than one proton."
+  requires: [quim.14-4-hydrolysis-of-salts.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 14.5 Polyprotic Acids", weight: 0.90 }
+}
+
+KNOWLEDGE quim.14-6-buffers.v1 ADVANCED {
+  title: "14.6 Buffers"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the composition and function of acid–base buffers; Calculate the pH of a buffer before and after the addition of added acid or base."
+  requires: [quim.14-5-polyprotic-acids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 14.6 Buffers", weight: 0.90 }
+}
+
+KNOWLEDGE quim.14-7-acid-base-titrations.v1 ADVANCED {
+  title: "14.7 Acid-Base Titrations"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Interpret titration curves for strong and weak acid-base systems; Compute sample pH at important stages of a titration; Explain the function of acid-base indicators."
+  requires: [quim.14-6-buffers.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 14.7 Acid-Base Titrations", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 15: 15 Equilibria of Other Reaction Classes
+# ------------------------------------------------------------
+KNOWLEDGE quim.15-1-precipitation-and-dissolution.v1 ADVANCED {
+  title: "15.1 Precipitation and Dissolution"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Write chemical equations and equilibrium expressions representing solubility equilibria; Carry out equilibrium computations involving solubility, equilibrium expressions, and solute concentrations."
+  requires: [quim.14-7-acid-base-titrations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 15.1 Precipitation and Dissolution", weight: 0.90 }
+}
+
+KNOWLEDGE quim.15-2-lewis-acids-and-bases.v1 ADVANCED {
+  title: "15.2 Lewis Acids and Bases"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the Lewis model of acid-base chemistry; Write equations for the formation of adducts and complex ions; Perform equilibrium calculations involving formation constants."
+  requires: [quim.15-1-precipitation-and-dissolution.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 15.2 Lewis Acids and Bases", weight: 0.90 }
+}
+
+KNOWLEDGE quim.15-3-coupled-equilibria.v1 ADVANCED {
+  title: "15.3 Coupled Equilibria"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe examples of systems involving two (or more) coupled chemical equilibria; Calculate reactant and product concentrations for coupled equilibrium systems."
+  requires: [quim.15-2-lewis-acids-and-bases.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 15.3 Coupled Equilibria", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 16: 16 Thermodynamics
+# ------------------------------------------------------------
+KNOWLEDGE quim.16-1-spontaneity.v1 ADVANCED {
+  title: "16.1 Spontaneity"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Distinguish between spontaneous and nonspontaneous processes; Describe the dispersal of matter and energy that accompanies certain spontaneous processes."
+  requires: [quim.15-3-coupled-equilibria.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 16.1 Spontaneity", weight: 0.90 }
+}
+
+KNOWLEDGE quim.16-2-entropy.v1 ADVANCED {
+  title: "16.2 Entropy"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define entropy; Explain the relationship between entropy and the number of microstates; Predict the sign of the entropy change for chemical and physical processes."
+  requires: [quim.16-1-spontaneity.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 16.2 Entropy", weight: 0.90 }
+}
+
+KNOWLEDGE quim.16-3-the-second-and-third-laws-of-thermodynamics.v1 ADVANCED {
+  title: "16.3 The Second and Third Laws of Thermodynamics"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: State and explain the second and third laws of thermodynamics; Calculate entropy changes for phase transitions and chemical reactions under standard conditions."
+  requires: [quim.16-2-entropy.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 16.3 The Second and Third Laws of Thermodynamics", weight: 0.90 }
+}
+
+KNOWLEDGE quim.16-4-free-energy.v1 ADVANCED {
+  title: "16.4 Free Energy"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define Gibbs free energy, and describe its relation to spontaneity; Calculate free energy change for a process using free energies of formation for its reactants and products; Calculate free energy change for a process using enthalpies of formation and the entropies for its reactants and products; Explain how temperature affects the spontaneity of some processes; Relate standard free energy changes to equilibrium constants."
+  requires: [quim.16-3-the-second-and-third-laws-of-thermodynamics.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 16.4 Free Energy", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 17: 17 Electrochemistry
+# ------------------------------------------------------------
+KNOWLEDGE quim.17-1-review-of-redox-chemistry.v1 ADVANCED {
+  title: "17.1 Review of Redox Chemistry"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe defining traits of redox chemistry; Identify the oxidant and reductant of a redox reaction; Balance chemical equations for redox reactions using the half-reaction method."
+  requires: [quim.16-4-free-energy.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 17.1 Review of Redox Chemistry", weight: 0.90 }
+}
+
+KNOWLEDGE quim.17-2-galvanic-cells.v1 ADVANCED {
+  title: "17.2 Galvanic Cells"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the function of a galvanic cell and its components; Use cell notation to symbolize the composition and construction of galvanic cells."
+  requires: [quim.17-1-review-of-redox-chemistry.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 17.2 Galvanic Cells", weight: 0.90 }
+}
+
+KNOWLEDGE quim.17-3-electrode-and-cell-potentials.v1 ADVANCED {
+  title: "17.3 Electrode and Cell Potentials"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe and relate the definitions of electrode and cell potentials; Interpret electrode potentials in terms of relative oxidant and reductant strengths; Calculate cell potentials and predict redox spontaneity using standard electrode potentials."
+  requires: [quim.17-2-galvanic-cells.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 17.3 Electrode and Cell Potentials", weight: 0.90 }
+}
+
+KNOWLEDGE quim.17-4-potential-free-energy-and-equilibrium.v1 ADVANCED {
+  title: "17.4 Potential, Free Energy, and Equilibrium"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the relations between potential, free energy change, and equilibrium constants; Perform calculations involving the relations between cell potentials, free energy changes, and equilibrium; Use the Nernst equation to determine cell potentials under nonstandard conditions."
+  requires: [quim.17-3-electrode-and-cell-potentials.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 17.4 Potential, Free Energy, and Equilibrium", weight: 0.90 }
+}
+
+KNOWLEDGE quim.17-5-batteries-and-fuel-cells.v1 ADVANCED {
+  title: "17.5 Batteries and Fuel Cells"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the electrochemistry associated with several common batteries; Distinguish the operation of a fuel cell from that of a battery."
+  requires: [quim.17-4-potential-free-energy-and-equilibrium.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 17.5 Batteries and Fuel Cells", weight: 0.90 }
+}
+
+KNOWLEDGE quim.17-6-corrosion.v1 ADVANCED {
+  title: "17.6 Corrosion"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Define corrosion; List some of the methods used to prevent or slow corrosion."
+  requires: [quim.17-5-batteries-and-fuel-cells.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 17.6 Corrosion", weight: 0.90 }
+}
+
+KNOWLEDGE quim.17-7-electrolysis.v1 ADVANCED {
+  title: "17.7 Electrolysis"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the process of electrolysis; Compare the operation of electrolytic cells with that of galvanic cells; Perform stoichiometric calculations for electrolytic processes."
+  requires: [quim.17-6-corrosion.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 17.7 Electrolysis", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 18: 18 Representative Metals, Metalloids, and Nonmetals
+# ------------------------------------------------------------
+KNOWLEDGE quim.18-1-periodicity.v1 ADVANCED {
+  title: "18.1 Periodicity"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Classify elements; Make predictions about the periodicity properties of the representative elements."
+  requires: [quim.17-7-electrolysis.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.1 Periodicity", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-2-occurrence-and-preparation-of-the-representative-metals.v1 ADVANCED {
+  title: "18.2 Occurrence and Preparation of the Representative Metals"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify natural sources of representative metals; Describe electrolytic and chemical reduction processes used to prepare these elements from natural sources."
+  requires: [quim.18-1-periodicity.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.2 Occurrence and Preparation of the Representative Metals", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-3-structure-and-general-properties-of-the-metalloids.v1 ADVANCED {
+  title: "18.3 Structure and General Properties of the Metalloids"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the general preparation, properties, and uses of the metalloids; Describe the preparation, properties, and compounds of boron and silicon."
+  requires: [quim.18-2-occurrence-and-preparation-of-the-representative-metals.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.3 Structure and General Properties of the Metalloids", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-4-structure-and-general-properties-of-the-nonmetals.v1 ADVANCED {
+  title: "18.4 Structure and General Properties of the Nonmetals"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe structure and properties of nonmetals."
+  requires: [quim.18-3-structure-and-general-properties-of-the-metalloids.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.4 Structure and General Properties of the Nonmetals", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-5-occurrence-preparation-and-compounds-of-hydrogen.v1 ADVANCED {
+  title: "18.5 Occurrence, Preparation, and Compounds of Hydrogen"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the properties, preparation, and compounds of hydrogen."
+  requires: [quim.18-4-structure-and-general-properties-of-the-nonmetals.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.5 Occurrence, Preparation, and Compounds of Hydrogen", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-6-occurrence-preparation-and-properties-of-carbonates.v1 ADVANCED {
+  title: "18.6 Occurrence, Preparation, and Properties of Carbonates"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the preparation, properties, and uses of some representative metal carbonates."
+  requires: [quim.18-5-occurrence-preparation-and-compounds-of-hydrogen.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.6 Occurrence, Preparation, and Properties of Carbonates", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-7-occurrence-preparation-and-properties-of-nitrogen.v1 ADVANCED {
+  title: "18.7 Occurrence, Preparation, and Properties of Nitrogen"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the properties, preparation, and uses of nitrogen."
+  requires: [quim.18-6-occurrence-preparation-and-properties-of-carbonates.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.7 Occurrence, Preparation, and Properties of Nitrogen", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-8-occurrence-preparation-and-properties-of-phosphorus.v1 ADVANCED {
+  title: "18.8 Occurrence, Preparation, and Properties of Phosphorus"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the properties, preparation, and uses of phosphorus."
+  requires: [quim.18-7-occurrence-preparation-and-properties-of-nitrogen.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.8 Occurrence, Preparation, and Properties of Phosphorus", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-9-occurrence-preparation-and-compounds-of-oxygen.v1 ADVANCED {
+  title: "18.9 Occurrence, Preparation, and Compounds of Oxygen"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the properties, preparation, and compounds of oxygen; Describe the preparation, properties, and uses of some representative metal oxides, peroxides, and hydroxides."
+  requires: [quim.18-8-occurrence-preparation-and-properties-of-phosphorus.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.9 Occurrence, Preparation, and Compounds of Oxygen", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-10-occurrence-preparation-and-properties-of-sulfur.v1 ADVANCED {
+  title: "18.10 Occurrence, Preparation, and Properties of Sulfur"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the properties, preparation, and uses of sulfur."
+  requires: [quim.18-9-occurrence-preparation-and-compounds-of-oxygen.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.10 Occurrence, Preparation, and Properties of Sulfur", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-11-occurrence-preparation-and-properties-of-halogens.v1 ADVANCED {
+  title: "18.11 Occurrence, Preparation, and Properties of Halogens"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the preparation, properties, and uses of halogens; Describe the properties, preparation, and uses of halogen compounds."
+  requires: [quim.18-10-occurrence-preparation-and-properties-of-sulfur.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.11 Occurrence, Preparation, and Properties of Halogens", weight: 0.90 }
+}
+
+KNOWLEDGE quim.18-12-occurrence-preparation-and-properties-of-the-noble-gases.v1 ADVANCED {
+  title: "18.12 Occurrence, Preparation, and Properties of the Noble Gases"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the properties, preparation, and uses of the noble gases."
+  requires: [quim.18-11-occurrence-preparation-and-properties-of-halogens.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 18.12 Occurrence, Preparation, and Properties of the Noble Gases", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 19: 19 Transition Metals and Coordination Chemistry
+# ------------------------------------------------------------
+KNOWLEDGE quim.19-1-occurrence-preparation-and-properties-of-transition-metals-and-their-compounds.v1 ADVANCED {
+  title: "19.1 Occurrence, Preparation, and Properties of Transition Metals and Their Compounds"
+  domain: "quimica_faculdade"
+  definition: "19.1 Occurrence, Preparation, and Properties of Transition Metals and Their Compounds — Chemistry 2e."
+  requires: [quim.18-12-occurrence-preparation-and-properties-of-the-noble-gases.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 19.1 Occurrence, Preparation, and Properties of Transition Metals and Their Compounds", weight: 0.90 }
+}
+
+KNOWLEDGE quim.19-2-coordination-chemistry-of-transition-metals.v1 ADVANCED {
+  title: "19.2 Coordination Chemistry of Transition Metals"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List the defining traits of coordination compounds; Describe the structures of complexes containing monodentate and polydentate ligands; Use standard nomenclature rules to name coordination compounds; Explain and provide examples of geometric and optical isomerism; Identify several natural and technological occurrences of coordination compounds."
+  requires: [quim.19-1-occurrence-preparation-and-properties-of-transition-metals-and-their-compounds.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 19.2 Coordination Chemistry of Transition Metals", weight: 0.90 }
+}
+
+KNOWLEDGE quim.19-3-spectroscopic-and-magnetic-properties-of-coordination-compounds.v1 ADVANCED {
+  title: "19.3 Spectroscopic and Magnetic Properties of Coordination Compounds"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Outline the basic premise of crystal field theory (CFT); Identify molecular geometries associated with various d-orbital splitting patterns; Predict electron configurations of split d orbitals for selected transition metal atoms or ions; Explain spectral and magnetic properties in terms of CFT concepts."
+  requires: [quim.19-2-coordination-chemistry-of-transition-metals.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 19.3 Spectroscopic and Magnetic Properties of Coordination Compounds", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 20: 20 Organic Chemistry
+# ------------------------------------------------------------
+KNOWLEDGE quim.20-1-hydrocarbons.v1 ADVANCED {
+  title: "20.1 Hydrocarbons"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the importance of hydrocarbons and the reason for their diversity; Name saturated and unsaturated hydrocarbons, and molecules derived from them; Describe the reactions characteristic of saturated and unsaturated hydrocarbons; Identify structural and geometric isomers of hydrocarbons."
+  requires: [quim.19-3-spectroscopic-and-magnetic-properties-of-coordination-compounds.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 20.1 Hydrocarbons", weight: 0.90 }
+}
+
+KNOWLEDGE quim.20-2-alcohols-and-ethers.v1 ADVANCED {
+  title: "20.2 Alcohols and Ethers"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure and properties of alcohols; Describe the structure and properties of ethers; Name and draw structures for alcohols and ethers."
+  requires: [quim.20-1-hydrocarbons.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 20.2 Alcohols and Ethers", weight: 0.90 }
+}
+
+KNOWLEDGE quim.20-3-aldehydes-ketones-carboxylic-acids-and-esters.v1 ADVANCED {
+  title: "20.3 Aldehydes, Ketones, Carboxylic Acids, and Esters"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure and properties of aldehydes, ketones, carboxylic acids and esters."
+  requires: [quim.20-2-alcohols-and-ethers.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 20.3 Aldehydes, Ketones, Carboxylic Acids, and Esters", weight: 0.90 }
+}
+
+KNOWLEDGE quim.20-4-amines-and-amides.v1 ADVANCED {
+  title: "20.4 Amines and Amides"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure and properties of an amine; Describe the structure and properties of an amide."
+  requires: [quim.20-3-aldehydes-ketones-carboxylic-acids-and-esters.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 20.4 Amines and Amides", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 21: 21 Nuclear Chemistry
+# ------------------------------------------------------------
+KNOWLEDGE quim.21-1-nuclear-structure-and-stability.v1 ADVANCED {
+  title: "21.1 Nuclear Structure and Stability"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe nuclear structure in terms of protons, neutrons, and electrons; Calculate mass defect and binding energy for nuclei; Explain trends in the relative stability of nuclei."
+  requires: [quim.20-4-amines-and-amides.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 21.1 Nuclear Structure and Stability", weight: 0.90 }
+}
+
+KNOWLEDGE quim.21-2-nuclear-equations.v1 ADVANCED {
+  title: "21.2 Nuclear Equations"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Identify common particles and energies involved in nuclear reactions; Write and balance nuclear equations."
+  requires: [quim.21-1-nuclear-structure-and-stability.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 21.2 Nuclear Equations", weight: 0.90 }
+}
+
+KNOWLEDGE quim.21-3-radioactive-decay.v1 ADVANCED {
+  title: "21.3 Radioactive Decay"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Recognize common modes of radioactive decay; Identify common particles and energies involved in nuclear decay reactions; Write and balance nuclear decay equations; Calculate kinetic parameters for decay processes, including half-life; Describe common radiometric dating techniques."
+  requires: [quim.21-2-nuclear-equations.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 21.3 Radioactive Decay", weight: 0.90 }
+}
+
+KNOWLEDGE quim.21-4-transmutation-and-nuclear-energy.v1 ADVANCED {
+  title: "21.4 Transmutation and Nuclear Energy"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the synthesis of transuranium nuclides; Explain nuclear fission and fusion processes; Relate the concepts of critical mass and nuclear chain reactions; Summarize basic requirements for nuclear fission and fusion reactors."
+  requires: [quim.21-3-radioactive-decay.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 21.4 Transmutation and Nuclear Energy", weight: 0.90 }
+}
+
+KNOWLEDGE quim.21-5-uses-of-radioisotopes.v1 ADVANCED {
+  title: "21.5 Uses of Radioisotopes"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: List common applications of radioactive isotopes."
+  requires: [quim.21-4-transmutation-and-nuclear-energy.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 21.5 Uses of Radioisotopes", weight: 0.90 }
+}
+
+KNOWLEDGE quim.21-6-biological-effects-of-radiation.v1 ADVANCED {
+  title: "21.6 Biological Effects of Radiation"
+  domain: "quimica_faculdade"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the biological impact of ionizing radiation; Define units for measuring radiation exposure; Explain the operation of common tools for detecting radioactivity; List common sources of radiation exposure in the US."
+  requires: [quim.21-5-uses-of-radioisotopes.v1]
+  interactivity: 6
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Chemistry 2e - 21.6 Biological Effects of Radiation", weight: 0.90 }
+}
+
+MISSION mission.quim.v1 {
+  label: "Faculdade: Química Geral"
+  requires: [
+    quim.1-1-chemistry-in-context.v1,
+    quim.1-2-phases-and-classification-of-matter.v1,
+    quim.1-3-physical-and-chemical-properties.v1,
+    quim.1-4-measurements.v1,
+    quim.1-5-measurement-uncertainty-accuracy-and-precision.v1,
+    quim.1-6-mathematical-treatment-of-measurement-results.v1,
+    quim.2-1-early-ideas-in-atomic-theory.v1,
+    quim.2-2-evolution-of-atomic-theory.v1,
+    quim.2-3-atomic-structure-and-symbolism.v1,
+    quim.2-4-chemical-formulas.v1,
+    quim.2-5-the-periodic-table.v1,
+    quim.2-6-ionic-and-molecular-compounds.v1,
+    quim.2-7-chemical-nomenclature.v1,
+    quim.3-1-formula-mass-and-the-mole-concept.v1,
+    quim.3-2-determining-empirical-and-molecular-formulas.v1,
+    quim.3-3-molarity.v1,
+    quim.3-4-other-units-for-solution-concentrations.v1,
+    quim.4-1-writing-and-balancing-chemical-equations.v1,
+    quim.4-2-classifying-chemical-reactions.v1,
+    quim.4-3-reaction-stoichiometry.v1,
+    quim.4-4-reaction-yields.v1,
+    quim.4-5-quantitative-chemical-analysis.v1,
+    quim.5-1-energy-basics.v1,
+    quim.5-2-calorimetry.v1,
+    quim.5-3-enthalpy.v1,
+    quim.6-1-electromagnetic-energy.v1,
+    quim.6-2-the-bohr-model.v1,
+    quim.6-3-development-of-quantum-theory.v1,
+    quim.6-4-electronic-structure-of-atoms-electron-configurations.v1,
+    quim.6-5-periodic-variations-in-element-properties.v1,
+    quim.7-1-ionic-bonding.v1,
+    quim.7-2-covalent-bonding.v1,
+    quim.7-3-lewis-symbols-and-structures.v1,
+    quim.7-4-formal-charges-and-resonance.v1,
+    quim.7-5-strengths-of-ionic-and-covalent-bonds.v1,
+    quim.7-6-molecular-structure-and-polarity.v1,
+    quim.8-1-valence-bond-theory.v1,
+    quim.8-2-hybrid-atomic-orbitals.v1,
+    quim.8-3-multiple-bonds.v1,
+    quim.8-4-molecular-orbital-theory.v1,
+    quim.9-1-gas-pressure.v1,
+    quim.9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law.v1,
+    quim.9-3-stoichiometry-of-gaseous-substances-mixtures-and-reactions.v1,
+    quim.9-4-effusion-and-diffusion-of-gases.v1,
+    quim.9-5-the-kinetic-molecular-theory.v1,
+    quim.9-6-non-ideal-gas-behavior.v1,
+    quim.10-1-intermolecular-forces.v1,
+    quim.10-2-properties-of-liquids.v1,
+    quim.10-3-phase-transitions.v1,
+    quim.10-4-phase-diagrams.v1,
+    quim.10-5-the-solid-state-of-matter.v1,
+    quim.10-6-lattice-structures-in-crystalline-solids.v1,
+    quim.11-1-the-dissolution-process.v1,
+    quim.11-2-electrolytes.v1,
+    quim.11-3-solubility.v1,
+    quim.11-4-colligative-properties.v1,
+    quim.11-5-colloids.v1,
+    quim.12-1-chemical-reaction-rates.v1,
+    quim.12-2-factors-affecting-reaction-rates.v1,
+    quim.12-3-rate-laws.v1,
+    quim.12-4-integrated-rate-laws.v1,
+    quim.12-5-collision-theory.v1,
+    quim.12-6-reaction-mechanisms.v1,
+    quim.12-7-catalysis.v1,
+    quim.13-1-chemical-equilibria.v1,
+    quim.13-2-equilibrium-constants.v1,
+    quim.13-3-shifting-equilibria-le-chateliers-principle.v1,
+    quim.13-4-equilibrium-calculations.v1,
+    quim.14-1-bronsted-lowry-acids-and-bases.v1,
+    quim.14-2-ph-and-poh.v1,
+    quim.14-3-relative-strengths-of-acids-and-bases.v1,
+    quim.14-4-hydrolysis-of-salts.v1,
+    quim.14-5-polyprotic-acids.v1,
+    quim.14-6-buffers.v1,
+    quim.14-7-acid-base-titrations.v1,
+    quim.15-1-precipitation-and-dissolution.v1,
+    quim.15-2-lewis-acids-and-bases.v1,
+    quim.15-3-coupled-equilibria.v1,
+    quim.16-1-spontaneity.v1,
+    quim.16-2-entropy.v1,
+    quim.16-3-the-second-and-third-laws-of-thermodynamics.v1,
+    quim.16-4-free-energy.v1,
+    quim.17-1-review-of-redox-chemistry.v1,
+    quim.17-2-galvanic-cells.v1,
+    quim.17-3-electrode-and-cell-potentials.v1,
+    quim.17-4-potential-free-energy-and-equilibrium.v1,
+    quim.17-5-batteries-and-fuel-cells.v1,
+    quim.17-6-corrosion.v1,
+    quim.17-7-electrolysis.v1,
+    quim.18-1-periodicity.v1,
+    quim.18-2-occurrence-and-preparation-of-the-representative-metals.v1,
+    quim.18-3-structure-and-general-properties-of-the-metalloids.v1,
+    quim.18-4-structure-and-general-properties-of-the-nonmetals.v1,
+    quim.18-5-occurrence-preparation-and-compounds-of-hydrogen.v1,
+    quim.18-6-occurrence-preparation-and-properties-of-carbonates.v1,
+    quim.18-7-occurrence-preparation-and-properties-of-nitrogen.v1,
+    quim.18-8-occurrence-preparation-and-properties-of-phosphorus.v1,
+    quim.18-9-occurrence-preparation-and-compounds-of-oxygen.v1,
+    quim.18-10-occurrence-preparation-and-properties-of-sulfur.v1,
+    quim.18-11-occurrence-preparation-and-properties-of-halogens.v1,
+    quim.18-12-occurrence-preparation-and-properties-of-the-noble-gases.v1,
+    quim.19-1-occurrence-preparation-and-properties-of-transition-metals-and-their-compounds.v1,
+    quim.19-2-coordination-chemistry-of-transition-metals.v1,
+    quim.19-3-spectroscopic-and-magnetic-properties-of-coordination-compounds.v1,
+    quim.20-1-hydrocarbons.v1,
+    quim.20-2-alcohols-and-ethers.v1,
+    quim.20-3-aldehydes-ketones-carboxylic-acids-and-esters.v1,
+    quim.20-4-amines-and-amides.v1,
+    quim.21-1-nuclear-structure-and-stability.v1,
+    quim.21-2-nuclear-equations.v1,
+    quim.21-3-radioactive-decay.v1,
+    quim.21-4-transmutation-and-nuclear-energy.v1,
+    quim.21-5-uses-of-radioisotopes.v1,
+    quim.21-6-biological-effects-of-radiation.v1,
+  ]
+  threshold: 0.85
+}

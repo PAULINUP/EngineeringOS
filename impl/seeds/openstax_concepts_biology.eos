@@ -1,0 +1,979 @@
+@version 1.0.0
+@domain "biologia_basica"
+@author "OpenStax (CC BY 4.0) - importado por openstax_importer"
+
+# Livro: Concepts of Biology
+# Fonte: https://openstax.org/books/concepts-biology  (licenca CC BY 4.0)
+# Gerado automaticamente - revise antes de alterar a mao.
+
+# ------------------------------------------------------------
+# CAPITULO 1: 1 Introduction to Biology
+# ------------------------------------------------------------
+KNOWLEDGE bio1.1-1-themes-and-concepts-of-biology.v1 FOUNDATIONAL {
+  title: "1.1 Themes and Concepts of Biology"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify and describe the properties of life; Describe the levels of organization among living things; List examples of different sub disciplines in biology."
+  requires: []
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 1.1 Themes and Concepts of Biology", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.1-2-the-process-of-science.v1 FOUNDATIONAL {
+  title: "1.2 The Process of Science"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the shared characteristics of the natural sciences; Understand the process of scientific inquiry; Compare inductive reasoning with deductive reasoning; Describe the goals of basic science and applied science."
+  requires: [bio1.1-1-themes-and-concepts-of-biology.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 1.2 The Process of Science", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 2: 2 Chemistry of Life
+# ------------------------------------------------------------
+KNOWLEDGE bio1.2-1-the-building-blocks-of-molecules.v1 FOUNDATIONAL {
+  title: "2.1 The Building Blocks of Molecules"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe matter and elements; Describe the interrelationship between protons, neutrons, and electrons, and the ways in which electrons can be donated or shared between atoms."
+  requires: [bio1.1-2-the-process-of-science.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 2.1 The Building Blocks of Molecules", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.2-2-water.v1 FOUNDATIONAL {
+  title: "2.2 Water"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the properties of water that are critical to maintaining life."
+  requires: [bio1.2-1-the-building-blocks-of-molecules.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 2.2 Water", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.2-3-biological-molecules.v1 FOUNDATIONAL {
+  title: "2.3 Biological Molecules"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the ways in which carbon is critical to life; Explain the impact of slight changes in amino acids on organisms; Describe the four major types of biological molecules; Understand the functions of the four major types of molecules."
+  requires: [bio1.2-2-water.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 2.3 Biological Molecules", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 3: 3 Cell Structure and Function
+# ------------------------------------------------------------
+KNOWLEDGE bio1.3-1-how-cells-are-studied.v1 FOUNDATIONAL {
+  title: "3.1 How Cells Are Studied"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the roles of cells in organisms; Compare and contrast light microscopy and electron microscopy; Summarize the cell theory."
+  requires: [bio1.2-3-biological-molecules.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 3.1 How Cells Are Studied", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.3-2-comparing-prokaryotic-and-eukaryotic-cells.v1 FOUNDATIONAL {
+  title: "3.2 Comparing Prokaryotic and Eukaryotic Cells"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Name examples of prokaryotic and eukaryotic organisms; Compare and contrast prokaryotic cells and eukaryotic cells; Describe the relative sizes of different kinds of cells."
+  requires: [bio1.3-1-how-cells-are-studied.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 3.2 Comparing Prokaryotic and Eukaryotic Cells", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.3-3-eukaryotic-cells.v1 FOUNDATIONAL {
+  title: "3.3 Eukaryotic Cells"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure of eukaryotic plant and animal cells; State the role of the plasma membrane; Summarize the functions of the major cell organelles; Describe the cytoskeleton and extracellular matrix."
+  requires: [bio1.3-2-comparing-prokaryotic-and-eukaryotic-cells.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 3.3 Eukaryotic Cells", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.3-4-the-cell-membrane.v1 FOUNDATIONAL {
+  title: "3.4 The Cell Membrane"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Understand the fluid mosaic model of membranes; Describe the functions of phospholipids, proteins, and carbohydrates in membranes."
+  requires: [bio1.3-3-eukaryotic-cells.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 3.4 The Cell Membrane", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.3-5-passive-transport.v1 FOUNDATIONAL {
+  title: "3.5 Passive Transport"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain why and how passive transport occurs; Understand the processes of osmosis and diffusion; Define tonicity and describe its relevance to passive transport."
+  requires: [bio1.3-4-the-cell-membrane.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 3.5 Passive Transport", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.3-6-active-transport.v1 FOUNDATIONAL {
+  title: "3.6 Active Transport"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Understand how electrochemical gradients affect ions; Describe endocytosis, including phagocytosis, pinocytosis, and receptor-mediated endocytosis; Understand the process of exocytosis."
+  requires: [bio1.3-5-passive-transport.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 3.6 Active Transport", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 4: 4 How Cells Obtain Energy
+# ------------------------------------------------------------
+KNOWLEDGE bio1.4-1-energy-and-metabolism.v1 FOUNDATIONAL {
+  title: "4.1 Energy and Metabolism"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain what metabolic pathways are; State the first and second laws of thermodynamics; Explain the difference between kinetic and potential energy; Describe endergonic and exergonic reactions; Discuss how enzymes function as molecular catalysts."
+  requires: [bio1.3-6-active-transport.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 4.1 Energy and Metabolism", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.4-2-glycolysis.v1 FOUNDATIONAL {
+  title: "4.2 Glycolysis"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how ATP is used by the cell as an energy source; Describe the overall result in terms of molecules produced of the breakdown of glucose by glycolysis."
+  requires: [bio1.4-1-energy-and-metabolism.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 4.2 Glycolysis", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.4-3-citric-acid-cycle-and-oxidative-phosphorylation.v1 FOUNDATIONAL {
+  title: "4.3 Citric Acid Cycle and Oxidative Phosphorylation"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the location of the citric acid cycle and oxidative phosphorylation in the cell; Describe the overall outcome of the citric acid cycle and oxidative phosphorylation in terms of the products of each; Describe the relationships of glycolysis, the citric acid cycle, and oxidative phosphorylation in terms of their inputs and outputs.."
+  requires: [bio1.4-2-glycolysis.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 4.3 Citric Acid Cycle and Oxidative Phosphorylation", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.4-4-fermentation.v1 FOUNDATIONAL {
+  title: "4.4 Fermentation"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the fundamental difference between anaerobic cellular respiration and fermentation; Describe the type of fermentation that readily occurs in animal cells and the conditions that initiate that fermentation."
+  requires: [bio1.4-3-citric-acid-cycle-and-oxidative-phosphorylation.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 4.4 Fermentation", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.4-5-connections-to-other-metabolic-pathways.v1 FOUNDATIONAL {
+  title: "4.5 Connections to Other Metabolic Pathways"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the way in which carbohydrate metabolic pathways, glycolysis, and the citric acid cycle interrelate with protein and lipid metabolic pathways; Explain why metabolic pathways are not considered closed systems."
+  requires: [bio1.4-4-fermentation.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 4.5 Connections to Other Metabolic Pathways", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 5: 5 Photosynthesis
+# ------------------------------------------------------------
+KNOWLEDGE bio1.5-1-overview-of-photosynthesis.v1 FOUNDATIONAL {
+  title: "5.1 Overview of Photosynthesis"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Summarize the process of photosynthesis; Explain the relevance of photosynthesis to other living things; Identify the reactants and products of photosynthesis; Describe the main structures involved in photosynthesis."
+  requires: [bio1.4-5-connections-to-other-metabolic-pathways.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 5.1 Overview of Photosynthesis", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.5-2-the-light-dependent-reactions-of-photosynthesis.v1 FOUNDATIONAL {
+  title: "5.2 The Light-Dependent Reactions of Photosynthesis"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how plants absorb energy from sunlight; Describe how the wavelength of light affects its energy and color; Describe how and where photosynthesis takes place within a plant."
+  requires: [bio1.5-1-overview-of-photosynthesis.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 5.2 The Light-Dependent Reactions of Photosynthesis", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.5-3-the-calvin-cycle.v1 FOUNDATIONAL {
+  title: "5.3 The Calvin Cycle"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the Calvin cycle; Define carbon fixation; Explain how photosynthesis works in the energy cycle of all living organisms."
+  requires: [bio1.5-2-the-light-dependent-reactions-of-photosynthesis.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 5.3 The Calvin Cycle", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 6: 6 Reproduction at the Cellular Level
+# ------------------------------------------------------------
+KNOWLEDGE bio1.6-1-the-genome.v1 FOUNDATIONAL {
+  title: "6.1 The Genome"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the prokaryotic and eukaryotic genome; Distinguish between chromosomes, genes, and traits."
+  requires: [bio1.5-3-the-calvin-cycle.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 6.1 The Genome", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.6-2-the-cell-cycle.v1 FOUNDATIONAL {
+  title: "6.2 The Cell Cycle"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the three stages of interphase; Discuss the behavior of chromosomes during mitosis and how the cytoplasmic content divides during cytokinesis; Define the quiescent G0 phase; Explain how the three internal control checkpoints occur at the end of G1, at the G2–M transition, and during metaphase."
+  requires: [bio1.6-1-the-genome.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 6.2 The Cell Cycle", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.6-3-cancer-and-the-cell-cycle.v1 FOUNDATIONAL {
+  title: "6.3 Cancer and the Cell Cycle"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how cancer is caused by uncontrolled cell division; Understand how proto-oncogenes are normal cell genes that, when mutated, become oncogenes; Describe how tumor suppressors function to stop the cell cycle until certain events are completed; Explain how mutant tumor suppressors cause cancer."
+  requires: [bio1.6-2-the-cell-cycle.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 6.3 Cancer and the Cell Cycle", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.6-4-prokaryotic-cell-division.v1 FOUNDATIONAL {
+  title: "6.4 Prokaryotic Cell Division"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the process of binary fission in prokaryotes; Explain how FtsZ and tubulin proteins are examples of homology."
+  requires: [bio1.6-3-cancer-and-the-cell-cycle.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 6.4 Prokaryotic Cell Division", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 7: 7 The Cellular Basis of Inheritance
+# ------------------------------------------------------------
+KNOWLEDGE bio1.7-1-sexual-reproduction.v1 FOUNDATIONAL {
+  title: "7.1 Sexual Reproduction"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain that variation among offspring is a potential evolutionary advantage resulting from sexual reproduction; Describe the three different life-cycle strategies among sexual multicellular organisms and their commonalities."
+  requires: [bio1.6-4-prokaryotic-cell-division.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 7.1 Sexual Reproduction", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.7-2-meiosis.v1 FOUNDATIONAL {
+  title: "7.2 Meiosis"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the behavior of chromosomes during meiosis; Describe cellular events during meiosis; Explain the differences between meiosis and mitosis; Explain the mechanisms within meiosis that generate genetic variation among the products of meiosis."
+  requires: [bio1.7-1-sexual-reproduction.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 7.2 Meiosis", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.7-3-variations-in-meiosis.v1 FOUNDATIONAL {
+  title: "7.3 Variations in Meiosis"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how nondisjunction leads to differences in chromosome number; Describe how errors in chromosome structure occur through inversions and translocations."
+  requires: [bio1.7-2-meiosis.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 7.3 Variations in Meiosis", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 8: 8 Patterns of Inheritance
+# ------------------------------------------------------------
+KNOWLEDGE bio1.8-1-mendels-experiments.v1 FOUNDATIONAL {
+  title: "8.1 Mendel’s Experiments"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the scientific reasons for the success of Mendel’s experimental work; Describe the expected outcomes of monohybrid crosses involving dominant and recessive alleles."
+  requires: [bio1.7-3-variations-in-meiosis.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 8.1 Mendel’s Experiments", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.8-2-laws-of-inheritance.v1 FOUNDATIONAL {
+  title: "8.2 Laws of Inheritance"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the relationship between genotypes and phenotypes in dominant and recessive gene systems; Use a Punnett square to calculate the expected proportions of genotypes and phenotypes in a monohybrid cross; Explain Mendel’s law of segregation and independent assortment in terms of genetics and the events of meiosis; Explain the purpose and methods of a test cross."
+  requires: [bio1.8-1-mendels-experiments.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 8.2 Laws of Inheritance", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.8-3-extensions-of-the-laws-of-inheritance.v1 FOUNDATIONAL {
+  title: "8.3 Extensions of the Laws of Inheritance"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify non-Mendelian inheritance patterns such as incomplete dominance, codominance, multiple alleles, and sex linkage from the results of crosses; Explain the effect of linkage and recombination on gamete genotypes; Explain the phenotypic outcomes of epistatic effects among genes."
+  requires: [bio1.8-2-laws-of-inheritance.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 8.3 Extensions of the Laws of Inheritance", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 9: 9 Molecular Biology
+# ------------------------------------------------------------
+KNOWLEDGE bio1.9-1-the-structure-of-dna.v1 FOUNDATIONAL {
+  title: "9.1 The Structure of DNA"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure of DNA; Describe how eukaryotic and prokaryotic DNA is arranged in the cell."
+  requires: [bio1.8-3-extensions-of-the-laws-of-inheritance.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 9.1 The Structure of DNA", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.9-2-dna-replication.v1 FOUNDATIONAL {
+  title: "9.2 DNA Replication"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the process of DNA replication; Explain the importance of telomerase to DNA replication; Describe mechanisms of DNA repair."
+  requires: [bio1.9-1-the-structure-of-dna.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 9.2 DNA Replication", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.9-3-transcription.v1 FOUNDATIONAL {
+  title: "9.3 Transcription"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the central dogma; Explain the main steps of transcription; Describe how eukaryotic mRNA is processed."
+  requires: [bio1.9-2-dna-replication.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 9.3 Transcription", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.9-4-translation.v1 FOUNDATIONAL {
+  title: "9.4 Translation"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the different steps in protein synthesis; Discuss the role of ribosomes in protein synthesis; Describe the genetic code and how the nucleotide sequence determines the amino acid and the protein sequence."
+  requires: [bio1.9-3-transcription.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 9.4 Translation", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.9-5-how-genes-are-regulated.v1 FOUNDATIONAL {
+  title: "9.5 How Genes Are Regulated"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss why every cell does not express all of its genes; Describe how prokaryotic gene expression occurs at the transcriptional level; Understand that eukaryotic gene expression occurs at the epigenetic, transcriptional, post-transcriptional, translational, and post-translational levels."
+  requires: [bio1.9-4-translation.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 9.5 How Genes Are Regulated", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 10: 10 Biotechnology
+# ------------------------------------------------------------
+KNOWLEDGE bio1.10-1-cloning-and-genetic-engineering.v1 FOUNDATIONAL {
+  title: "10.1 Cloning and Genetic Engineering"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the basic techniques used to manipulate genetic material; Explain molecular and reproductive cloning."
+  requires: [bio1.9-5-how-genes-are-regulated.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 10.1 Cloning and Genetic Engineering", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.10-2-biotechnology-in-medicine-and-agriculture.v1 FOUNDATIONAL {
+  title: "10.2 Biotechnology in Medicine and Agriculture"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe uses of biotechnology in medicine; Describe uses of biotechnology in agriculture."
+  requires: [bio1.10-1-cloning-and-genetic-engineering.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 10.2 Biotechnology in Medicine and Agriculture", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.10-3-genomics-and-proteomics.v1 FOUNDATIONAL {
+  title: "10.3 Genomics and Proteomics"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Define genomics and proteomics; Define whole genome sequencing; Explain different applications of genomics and proteomics."
+  requires: [bio1.10-2-biotechnology-in-medicine-and-agriculture.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 10.3 Genomics and Proteomics", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 11: 11 Evolution and Its Processes
+# ------------------------------------------------------------
+KNOWLEDGE bio1.11-1-discovering-how-populations-change.v1 FOUNDATIONAL {
+  title: "11.1 Discovering How Populations Change"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how Darwin’s theory of evolution differed from the current view at the time; Describe how the present-day theory of evolution was developed; Describe how population genetics is used to study the evolution of populations."
+  requires: [bio1.10-3-genomics-and-proteomics.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 11.1 Discovering How Populations Change", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.11-2-mechanisms-of-evolution.v1 FOUNDATIONAL {
+  title: "11.2 Mechanisms of Evolution"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the four basic causes of evolution: natural selection, mutation, genetic drift, and gene flow; Explain how each evolutionary force can influence the allele frequencies of a population."
+  requires: [bio1.11-1-discovering-how-populations-change.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 11.2 Mechanisms of Evolution", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.11-3-evidence-of-evolution.v1 FOUNDATIONAL {
+  title: "11.3 Evidence of Evolution"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain sources of evidence for evolution; Define homologous and vestigial structures."
+  requires: [bio1.11-2-mechanisms-of-evolution.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 11.3 Evidence of Evolution", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.11-4-speciation.v1 FOUNDATIONAL {
+  title: "11.4 Speciation"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the definition of species and how species are identified as different; Explain allopatric and sympatric speciation; Describe adaptive radiation."
+  requires: [bio1.11-3-evidence-of-evolution.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 11.4 Speciation", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.11-5-common-misconceptions-about-evolution.v1 FOUNDATIONAL {
+  title: "11.5 Common Misconceptions about Evolution"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify common misconceptions about evolution; Identify common criticisms of evolution."
+  requires: [bio1.11-4-speciation.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 11.5 Common Misconceptions about Evolution", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 12: 12 Diversity of Life
+# ------------------------------------------------------------
+KNOWLEDGE bio1.12-1-organizing-life-on-earth.v1 FOUNDATIONAL {
+  title: "12.1 Organizing Life on Earth"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the need for a comprehensive classification system; List the different levels of the taxonomic classification system; Describe how systematics and taxonomy relate to phylogeny."
+  requires: [bio1.11-5-common-misconceptions-about-evolution.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 12.1 Organizing Life on Earth", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.12-2-determining-evolutionary-relationships.v1 FOUNDATIONAL {
+  title: "12.2 Determining Evolutionary Relationships"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Compare homologous and analogous traits; Discuss the purpose of cladistics."
+  requires: [bio1.12-1-organizing-life-on-earth.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 12.2 Determining Evolutionary Relationships", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 13: 13 Diversity of Microbes, Fungi, and Protists
+# ------------------------------------------------------------
+KNOWLEDGE bio1.13-1-prokaryotic-diversity.v1 FOUNDATIONAL {
+  title: "13.1 Prokaryotic Diversity"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the evolutionary history of prokaryotes; Describe the basic structure of a typical prokaryote; Identify bacterial diseases that caused historically important plagues and epidemics; Describe the uses of prokaryotes in food processing and bioremediation."
+  requires: [bio1.12-2-determining-evolutionary-relationships.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 13.1 Prokaryotic Diversity", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.13-2-eukaryotic-origins.v1 FOUNDATIONAL {
+  title: "13.2 Eukaryotic Origins"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the endosymbiotic theory; Explain the origin of mitochondria and chloroplasts."
+  requires: [bio1.13-1-prokaryotic-diversity.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 13.2 Eukaryotic Origins", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.13-3-protists.v1 FOUNDATIONAL {
+  title: "13.3 Protists"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the main characteristics of protists; Describe important pathogenic species of protists; Describe the roles of protists as food sources and as decomposers."
+  requires: [bio1.13-2-eukaryotic-origins.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 13.3 Protists", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.13-4-fungi.v1 FOUNDATIONAL {
+  title: "13.4 Fungi"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: List the characteristics of fungi; Describe fungal parasites and pathogens of plants and infections in humans; Describe the importance of fungi to the environment; Summarize the beneficial role of fungi in food and beverage preparation and in the chemical and pharmaceutical industry."
+  requires: [bio1.13-3-protists.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 13.4 Fungi", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 14: 14 Diversity of Plants
+# ------------------------------------------------------------
+KNOWLEDGE bio1.14-1-the-plant-kingdom.v1 FOUNDATIONAL {
+  title: "14.1 The Plant Kingdom"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the major characteristics of the plant kingdom; Discuss the challenges to plant life on land; Describe the adaptations that allowed plants to colonize land."
+  requires: [bio1.13-4-fungi.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 14.1 The Plant Kingdom", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.14-2-seedless-plants.v1 FOUNDATIONAL {
+  title: "14.2 Seedless Plants"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the distinguishing traits of the three types of bryophytes; Identify the new traits that first appear in seedless vascular plants; Describe the major classes of seedless vascular plants."
+  requires: [bio1.14-1-the-plant-kingdom.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 14.2 Seedless Plants", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.14-3-seed-plants-gymnosperms.v1 FOUNDATIONAL {
+  title: "14.3 Seed Plants: Gymnosperms"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the type of seeds produced by gymnosperms, as well as other characteristics of gymnosperms; List the four groups of modern-day gymnosperms and provide examples of each."
+  requires: [bio1.14-2-seedless-plants.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 14.3 Seed Plants: Gymnosperms", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.14-4-seed-plants-angiosperms.v1 FOUNDATIONAL {
+  title: "14.4 Seed Plants: Angiosperms"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the main parts of a flower and their purpose; Detail the life cycle of an angiosperm; Discuss the two main groups into which flower plants are divided, as well as explain how basal angiosperms differ from others."
+  requires: [bio1.14-3-seed-plants-gymnosperms.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 14.4 Seed Plants: Angiosperms", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 15: 15 Diversity of Animals
+# ------------------------------------------------------------
+KNOWLEDGE bio1.15-1-features-of-the-animal-kingdom.v1 FOUNDATIONAL {
+  title: "15.1 Features of the Animal Kingdom"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: List the features that distinguish the animal kingdom from other kingdoms; Explain the processes of animal reproduction and embryonic development; Describe the hierarchy of basic animal classification; Compare and contrast the embryonic development of protostomes and deuterostomes."
+  requires: [bio1.14-4-seed-plants-angiosperms.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 15.1 Features of the Animal Kingdom", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.15-2-sponges-and-cnidarians.v1 FOUNDATIONAL {
+  title: "15.2 Sponges and Cnidarians"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the organizational features of the simplest animals; Describe the organizational features of cnidarians."
+  requires: [bio1.15-1-features-of-the-animal-kingdom.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 15.2 Sponges and Cnidarians", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.15-3-flatworms-nematodes-and-arthropods.v1 FOUNDATIONAL {
+  title: "15.3 Flatworms, Nematodes, and Arthropods"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the structure and systems of flatworms; Describe the structural organization of nematodes; Compare the internal systems and the appendage specialization of arthropods."
+  requires: [bio1.15-2-sponges-and-cnidarians.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 15.3 Flatworms, Nematodes, and Arthropods", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.15-4-mollusks-and-annelids.v1 FOUNDATIONAL {
+  title: "15.4 Mollusks and Annelids"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the unique anatomical features of mollusks; Describe the features of an animal classified in phylum Annelida."
+  requires: [bio1.15-3-flatworms-nematodes-and-arthropods.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 15.4 Mollusks and Annelids", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.15-5-echinoderms-and-chordates.v1 FOUNDATIONAL {
+  title: "15.5 Echinoderms and Chordates"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the distinguishing characteristics of echinoderms; Describe the distinguishing characteristics of chordates."
+  requires: [bio1.15-4-mollusks-and-annelids.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 15.5 Echinoderms and Chordates", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.15-6-vertebrates.v1 FOUNDATIONAL {
+  title: "15.6 Vertebrates"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the difference between jawless and jawed fishes; Explain the main characteristics of amphibians, reptiles, and birds; Describe the derived characteristics in birds that facilitate flight; Name and describe the distinguishing features of the three main groups of mammals; Describe the derived features that distinguish primates from other animals."
+  requires: [bio1.15-5-echinoderms-and-chordates.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 15.6 Vertebrates", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 16: 16 The Body’s Systems
+# ------------------------------------------------------------
+KNOWLEDGE bio1.16-1-homeostasis-and-osmoregulation.v1 FOUNDATIONAL {
+  title: "16.1 Homeostasis and Osmoregulation"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the concept of homeostasis; Describe thermoregulation of endothermic and ectothermic animals; Explain how the kidneys serve as the main osmoregulatory organs in the human body."
+  requires: [bio1.15-6-vertebrates.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 16.1 Homeostasis and Osmoregulation", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.16-2-digestive-system.v1 FOUNDATIONAL {
+  title: "16.2 Digestive System"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the processes of digestion and absorption; Explain the specialized functions of the organs involved in processing food in the body; Describe the ways in which organs work together to digest food and absorb nutrients; Describe the essential nutrients required for cellular function that cannot be synthesized by the animal body; Describe how excess carbohydrates and energy are stored in the body."
+  requires: [bio1.16-1-homeostasis-and-osmoregulation.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 16.2 Digestive System", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.16-3-circulatory-and-respiratory-systems.v1 FOUNDATIONAL {
+  title: "16.3 Circulatory and Respiratory Systems"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the passage of air from the outside environment to the lungs; Describe the function of the circulatory system; Describe the cardiac cycle; Explain how blood flows through the body."
+  requires: [bio1.16-2-digestive-system.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 16.3 Circulatory and Respiratory Systems", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.16-4-endocrine-system.v1 FOUNDATIONAL {
+  title: "16.4 Endocrine System"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: List the different types of hormones and explain their roles in maintaining homeostasis; Explain how hormones work; Explain how hormone production is regulated; Describe the role of different glands in the endocrine system; Explain how the different glands work together to maintain homeostasis."
+  requires: [bio1.16-3-circulatory-and-respiratory-systems.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 16.4 Endocrine System", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.16-5-musculoskeletal-system.v1 FOUNDATIONAL {
+  title: "16.5 Musculoskeletal System"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the axial and appendicular parts of the skeletal system; Explain the role of joints in skeletal movement; Explain the role of muscles in locomotion."
+  requires: [bio1.16-4-endocrine-system.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 16.5 Musculoskeletal System", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.16-6-nervous-system.v1 FOUNDATIONAL {
+  title: "16.6 Nervous System"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the form and function of a neuron; Describe the basic parts and functions of the central nervous system; Describe the basic parts and functions of the peripheral nervous system."
+  requires: [bio1.16-5-musculoskeletal-system.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 16.6 Nervous System", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 17: 17 The Immune System and Disease
+# ------------------------------------------------------------
+KNOWLEDGE bio1.17-1-viruses.v1 FOUNDATIONAL {
+  title: "17.1 Viruses"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how viruses were first discovered and how they are detected; Explain the detailed steps of viral replication; Describe how vaccines are used in prevention and treatment of viral diseases."
+  requires: [bio1.16-6-nervous-system.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 17.1 Viruses", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.17-2-innate-immunity.v1 FOUNDATIONAL {
+  title: "17.2 Innate Immunity"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the body’s innate physical and chemical defenses; Explain the inflammatory response; Describe the complement system."
+  requires: [bio1.17-1-viruses.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 17.2 Innate Immunity", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.17-3-adaptive-immunity.v1 FOUNDATIONAL {
+  title: "17.3 Adaptive Immunity"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain adaptive immunity; Describe cell-mediated immune response and humoral immune response; Describe immune tolerance."
+  requires: [bio1.17-2-innate-immunity.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 17.3 Adaptive Immunity", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.17-4-disruptions-in-the-immune-system.v1 FOUNDATIONAL {
+  title: "17.4 Disruptions in the Immune System"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe hypersensitivity; Define autoimmunity."
+  requires: [bio1.17-3-adaptive-immunity.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 17.4 Disruptions in the Immune System", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 18: 18 Animal Reproduction and Development
+# ------------------------------------------------------------
+KNOWLEDGE bio1.18-1-how-animals-reproduce.v1 FOUNDATIONAL {
+  title: "18.1 How Animals Reproduce"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe advantages and disadvantages of asexual and sexual reproduction; Discuss asexual reproduction methods; Discuss sexual reproduction methods; Discuss internal and external methods of fertilization."
+  requires: [bio1.17-4-disruptions-in-the-immune-system.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 18.1 How Animals Reproduce", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.18-2-development-and-organogenesis.v1 FOUNDATIONAL {
+  title: "18.2 Development and Organogenesis"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain how the embryo forms from the zygote; Discuss the role of cleavage and gastrulation in animal development; Describe organogenesis."
+  requires: [bio1.18-1-how-animals-reproduce.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 18.2 Development and Organogenesis", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.18-3-human-reproduction.v1 FOUNDATIONAL {
+  title: "18.3 Human Reproduction"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe human testicular and ovarian reproductive anatomies; Describe spermatogenesis and oogenesis and discuss their differences and similarities; Describe the role of hormones in human reproduction; Describe the roles of reproductive hormones."
+  requires: [bio1.18-2-development-and-organogenesis.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 18.3 Human Reproduction", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 19: 19 Population and Community Ecology
+# ------------------------------------------------------------
+KNOWLEDGE bio1.19-1-population-demographics-and-dynamics.v1 FOUNDATIONAL {
+  title: "19.1 Population Demographics and Dynamics"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe how ecologists measure population size and density; Describe three different patterns of population distribution; Use life tables to calculate mortality rates; Describe the three types of survivorship curves and relate them to specific populations."
+  requires: [bio1.18-3-human-reproduction.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 19.1 Population Demographics and Dynamics", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.19-2-population-growth-and-regulation.v1 FOUNDATIONAL {
+  title: "19.2 Population Growth and Regulation"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Explain the characteristics of and differences between exponential and logistic growth patterns; Give examples of exponential and logistic growth in natural populations; Give examples of how the carrying capacity of a habitat may change; Compare and contrast density-dependent growth regulation and density-independent growth regulation giving examples."
+  requires: [bio1.19-1-population-demographics-and-dynamics.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 19.2 Population Growth and Regulation", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.19-3-the-human-population.v1 FOUNDATIONAL {
+  title: "19.3 The Human Population"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss how human population growth can be exponential; Explain how humans have expanded the carrying capacity of their habitat; Relate population growth and age structure to the level of economic development in different countries; Discuss the long-term implications of unchecked human population growth."
+  requires: [bio1.19-2-population-growth-and-regulation.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 19.3 The Human Population", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.19-4-community-ecology.v1 FOUNDATIONAL {
+  title: "19.4 Community Ecology"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the predator-prey cycle; Give examples of defenses against predation and herbivory; Describe the competitive exclusion principle; Give examples of symbiotic relationships between species; Describe community structure and succession."
+  requires: [bio1.19-3-the-human-population.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 19.4 Community Ecology", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 20: 20 Ecosystems and the Biosphere
+# ------------------------------------------------------------
+KNOWLEDGE bio1.20-1-energy-flow-through-ecosystems.v1 FOUNDATIONAL {
+  title: "20.1 Energy Flow through Ecosystems"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the basic types of ecosystems on Earth; Differentiate between food chains and food webs and recognize the importance of each; Describe how organisms acquire energy in a food web and in associated food chains; Explain how the efficiency of energy transfers between trophic levels affects ecosystems."
+  requires: [bio1.19-4-community-ecology.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 20.1 Energy Flow through Ecosystems", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.20-2-biogeochemical-cycles.v1 FOUNDATIONAL {
+  title: "20.2 Biogeochemical Cycles"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Discuss the biogeochemical cycles of water, carbon, nitrogen, phosphorus, and sulfur; Explain how human activities have impacted these cycles and the resulting potential consequences for Earth."
+  requires: [bio1.20-1-energy-flow-through-ecosystems.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 20.2 Biogeochemical Cycles", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.20-3-terrestrial-biomes.v1 FOUNDATIONAL {
+  title: "20.3 Terrestrial Biomes"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify the two major abiotic factors that determine the type of terrestrial biome in an area; Recognize distinguishing characteristics of each of the eight major terrestrial biomes."
+  requires: [bio1.20-2-biogeochemical-cycles.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 20.3 Terrestrial Biomes", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.20-4-aquatic-and-marine-biomes.v1 FOUNDATIONAL {
+  title: "20.4 Aquatic and Marine Biomes"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe the effects of abiotic factors on the composition of plant and animal communities in aquatic biomes; Compare the characteristics of the ocean zones; Summarize the characteristics of standing water and flowing water in freshwater biomes."
+  requires: [bio1.20-3-terrestrial-biomes.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 20.4 Aquatic and Marine Biomes", weight: 0.90 }
+}
+
+# ------------------------------------------------------------
+# CAPITULO 21: 21 Conservation and Biodiversity
+# ------------------------------------------------------------
+KNOWLEDGE bio1.21-1-importance-of-biodiversity.v1 FOUNDATIONAL {
+  title: "21.1 Importance of Biodiversity"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe biodiversity as the equilibrium of naturally fluctuating rates of extinction and speciation; Identify benefits of biodiversity to humans."
+  requires: [bio1.20-4-aquatic-and-marine-biomes.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 21.1 Importance of Biodiversity", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.21-2-threats-to-biodiversity.v1 FOUNDATIONAL {
+  title: "21.2 Threats to Biodiversity"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Identify significant threats to biodiversity; Explain the effects of habitat loss, exotic species, and hunting on biodiversity; Identify the early and predicted effects of climate change on biodiversity."
+  requires: [bio1.21-1-importance-of-biodiversity.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 21.2 Threats to Biodiversity", weight: 0.90 }
+}
+
+KNOWLEDGE bio1.21-3-preserving-biodiversity.v1 FOUNDATIONAL {
+  title: "21.3 Preserving Biodiversity"
+  domain: "biologia_basica"
+  definition: "Ao final desta secao, voce sera capaz de: Describe biodiversity as the equilibrium of naturally fluctuating rates of extinction and speciation; Explain the legislative framework for conservation; Identify the factors important in conservation preserve design; Identify examples of the effects of habitat restoration; Identify the role of zoos in biodiversity conservation."
+  requires: [bio1.21-2-threats-to-biodiversity.v1]
+  interactivity: 4
+  decay_rate: 0.03
+  source: { type: "standard", ref: "OpenStax: Concepts of Biology - 21.3 Preserving Biodiversity", weight: 0.90 }
+}
+
+MISSION mission.bio1.v1 {
+  label: "Biologia Básica (Concepts of Biology)"
+  requires: [
+    bio1.1-1-themes-and-concepts-of-biology.v1,
+    bio1.1-2-the-process-of-science.v1,
+    bio1.2-1-the-building-blocks-of-molecules.v1,
+    bio1.2-2-water.v1,
+    bio1.2-3-biological-molecules.v1,
+    bio1.3-1-how-cells-are-studied.v1,
+    bio1.3-2-comparing-prokaryotic-and-eukaryotic-cells.v1,
+    bio1.3-3-eukaryotic-cells.v1,
+    bio1.3-4-the-cell-membrane.v1,
+    bio1.3-5-passive-transport.v1,
+    bio1.3-6-active-transport.v1,
+    bio1.4-1-energy-and-metabolism.v1,
+    bio1.4-2-glycolysis.v1,
+    bio1.4-3-citric-acid-cycle-and-oxidative-phosphorylation.v1,
+    bio1.4-4-fermentation.v1,
+    bio1.4-5-connections-to-other-metabolic-pathways.v1,
+    bio1.5-1-overview-of-photosynthesis.v1,
+    bio1.5-2-the-light-dependent-reactions-of-photosynthesis.v1,
+    bio1.5-3-the-calvin-cycle.v1,
+    bio1.6-1-the-genome.v1,
+    bio1.6-2-the-cell-cycle.v1,
+    bio1.6-3-cancer-and-the-cell-cycle.v1,
+    bio1.6-4-prokaryotic-cell-division.v1,
+    bio1.7-1-sexual-reproduction.v1,
+    bio1.7-2-meiosis.v1,
+    bio1.7-3-variations-in-meiosis.v1,
+    bio1.8-1-mendels-experiments.v1,
+    bio1.8-2-laws-of-inheritance.v1,
+    bio1.8-3-extensions-of-the-laws-of-inheritance.v1,
+    bio1.9-1-the-structure-of-dna.v1,
+    bio1.9-2-dna-replication.v1,
+    bio1.9-3-transcription.v1,
+    bio1.9-4-translation.v1,
+    bio1.9-5-how-genes-are-regulated.v1,
+    bio1.10-1-cloning-and-genetic-engineering.v1,
+    bio1.10-2-biotechnology-in-medicine-and-agriculture.v1,
+    bio1.10-3-genomics-and-proteomics.v1,
+    bio1.11-1-discovering-how-populations-change.v1,
+    bio1.11-2-mechanisms-of-evolution.v1,
+    bio1.11-3-evidence-of-evolution.v1,
+    bio1.11-4-speciation.v1,
+    bio1.11-5-common-misconceptions-about-evolution.v1,
+    bio1.12-1-organizing-life-on-earth.v1,
+    bio1.12-2-determining-evolutionary-relationships.v1,
+    bio1.13-1-prokaryotic-diversity.v1,
+    bio1.13-2-eukaryotic-origins.v1,
+    bio1.13-3-protists.v1,
+    bio1.13-4-fungi.v1,
+    bio1.14-1-the-plant-kingdom.v1,
+    bio1.14-2-seedless-plants.v1,
+    bio1.14-3-seed-plants-gymnosperms.v1,
+    bio1.14-4-seed-plants-angiosperms.v1,
+    bio1.15-1-features-of-the-animal-kingdom.v1,
+    bio1.15-2-sponges-and-cnidarians.v1,
+    bio1.15-3-flatworms-nematodes-and-arthropods.v1,
+    bio1.15-4-mollusks-and-annelids.v1,
+    bio1.15-5-echinoderms-and-chordates.v1,
+    bio1.15-6-vertebrates.v1,
+    bio1.16-1-homeostasis-and-osmoregulation.v1,
+    bio1.16-2-digestive-system.v1,
+    bio1.16-3-circulatory-and-respiratory-systems.v1,
+    bio1.16-4-endocrine-system.v1,
+    bio1.16-5-musculoskeletal-system.v1,
+    bio1.16-6-nervous-system.v1,
+    bio1.17-1-viruses.v1,
+    bio1.17-2-innate-immunity.v1,
+    bio1.17-3-adaptive-immunity.v1,
+    bio1.17-4-disruptions-in-the-immune-system.v1,
+    bio1.18-1-how-animals-reproduce.v1,
+    bio1.18-2-development-and-organogenesis.v1,
+    bio1.18-3-human-reproduction.v1,
+    bio1.19-1-population-demographics-and-dynamics.v1,
+    bio1.19-2-population-growth-and-regulation.v1,
+    bio1.19-3-the-human-population.v1,
+    bio1.19-4-community-ecology.v1,
+    bio1.20-1-energy-flow-through-ecosystems.v1,
+    bio1.20-2-biogeochemical-cycles.v1,
+    bio1.20-3-terrestrial-biomes.v1,
+    bio1.20-4-aquatic-and-marine-biomes.v1,
+    bio1.21-1-importance-of-biodiversity.v1,
+    bio1.21-2-threats-to-biodiversity.v1,
+    bio1.21-3-preserving-biodiversity.v1,
+  ]
+  threshold: 0.85
+}
