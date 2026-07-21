@@ -7,6 +7,12 @@ from typing import Any, Dict, List, Set, Tuple
 # Constante constitucional — ver ENGINEERINGOS_SPECIFICATION Parte V (Cognitive Model).
 WORKING_MEMORY_CAPACITY = 4
 
+# P9 — Validação Objetiva: sem ao menos uma evidência objetiva (peso >= 0.60,
+# gerada por processo verificável do sistema), a maestria por auto-estudo
+# trava neste teto. Auto-estudo pratica; só verificação objetiva valida.
+SELF_STUDY_MASTERY_CAP = 0.60
+OBJECTIVE_EVIDENCE_WEIGHT = 0.60
+
 def calculate_evidence_confidence(
     source_weight: float,
     reviewer_agreement: float,

@@ -1,9 +1,9 @@
 # ENGINEERINGOS_SPECIFICATION
 ## The Constitutional Document
 
-**Version:** 3.1.0
+**Version:** 3.3.0
 **Status:** Constitutional — All implementations derive from this document
-**Date:** 2026-07-19
+**Date:** 2026-07-20
 **Supersedes:** MASTER_SHARED_MEMORY v1.0, v1.1, v2.0; ENGINEERINGOS_SPECIFICATION v3.0.0 (truncated)
 
 ---
@@ -69,6 +69,7 @@ Três teses fundadoras:
 - **P6 — Proveniência total.** Toda KU e toda evidência carregam fonte, versão e trilha de auditoria.
 - **P7 — IA é colaboradora subordinada.** Saída de IA tem peso de fonte fixo e inferior a padrões e consenso de especialistas.
 - **P8 — Falsificabilidade.** Toda fórmula desta especificação é hipótese experimental sujeita à Parte X (Validação).
+- **P9 — Validação Objetiva.** Nenhum estado de competência cruza o teto de auto-estudo (0.60) sem ao menos uma evidência **objetiva**: peso ≥ 0.60, gerada por processo verificável do sistema (correção automática do CCE) ou por revisor humano registrado. Evidência submetida por cliente é sempre clampada a peso 0.40 pelo servidor — o aluno nunca escolhe o próprio peso. Auto-estudo pratica; só verificação valida.
 
 ---
 
@@ -533,6 +534,7 @@ IA não pode: validar evidência sozinha (peso máx. 0.40), aprovar RFC, alterar
 
 # Apêndice B — Changelog
 
+- **3.3.0 (2026-07-20)** — Emenda P9 (Validação Objetiva): servidor clampa evidência de cliente a peso 0.40 (auto-estudo); maestria trava em `SELF_STUDY_MASTERY_CAP = 0.60` sem ao menos uma evidência objetiva (≥ 0.60, hoje exclusivamente o auto-grader do CCE; futuramente revisores humanos registrados). Elimina a autovalidação — a plataforma opera de forma autônoma e honesta sem professores.
 - **3.2.0 (2026-07-19)** — CCE ganha correção automática server-side: entidade `Challenge`, gabarito nunca exposto pela API, tentativas auditadas como `Assessment`, e acertos convertidos em `EvidenceRecord` com peso fixo de benchmark reprodutível (0.60) via pipeline das Definições 2–3. Evidência autodeclarada permanece disponível apenas como fallback marcado para revisão (P2 reforçado).
 - **3.1.0 (2026-07-19)** — Documento completo restaurado ao repositório (a v3.0.0 continha apenas o sumário). `WORKING_MEMORY_CAPACITY` promovida a constante constitucional nomeada e parametrizada na ULA/CCE. Correção do módulo assíncrono do motor cognitivo.
 - **3.0.0 (2026-07-03)** — Upgrade constitucional; Celery assíncrono; parser LL(1) EBNF.

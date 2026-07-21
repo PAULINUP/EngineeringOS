@@ -1,5 +1,14 @@
 # Changelog - EngineeringOS
 
+## [v3.5.0] - 2026-07-20
+### Added
+- **P9 — Validação Objetiva (emenda constitucional)**: a plataforma agora é autônoma e honesta sem professores. O servidor clampa toda evidência de cliente a peso 0.40 (auto-estudo) — o aluno não escolhe mais o próprio peso; a maestria por auto-estudo trava em `SELF_STUDY_MASTERY_CAP = 0.60`; só evidência objetiva (≥ 0.60, hoje exclusivamente o auto-grader do CCE; futuramente revisores humanos registrados) destrava a validação (85%). Evidência 0.40–0.60 passa a `pending` (contested fica reservado a disputas de revisores) e move a maestria sob o teto.
+- **Tradutor EN→PT (`tools/translate_content.py`)**: traduz títulos/definições das KUs OpenStax e enunciados/gabaritos dos desafios extraídos, com cache persistente e retomada; preserva expressões matemáticas e não toca em conteúdo já em português nem em citações bibliográficas.
+- UI: formulário de evidência aberta virou "auto-estudo" — sem seletores de peso, com o teto de 60% e o caminho de validação explícitos; revisor fictício removido.
+
+### Fixed
+- Testado de ponta a ponta: peso forjado (0.90) clampado a 0.40; 14 auto-estudos em KU raiz travam exatamente em 60%; KUs com pré-requisito não avançam sem a base (prereq_factor).
+
 ## [v3.4.0] - 2026-07-20
 ### Added
 - **Extrator de exercícios OpenStax (`tools/openstax_exercises.py`)** — correlaciona os exercícios numerados de cada seção com o gabarito oficial do Answer Key do livro e os converte em desafios do CCE (correção automática server-side). Trata os dois estilos de numeração da OpenStax (contínua por capítulo e reiniciada por seção, via cabeçalhos "Section Exercises"), exclui "Review Exercises"/"Practice Test" (numeração colidente), prefixa a instrução do grupo ao enunciado, e só aceita gabaritos estritamente numéricos que acrescentam informação ao enunciado (nada de notação de intervalo, prosa ou respostas degeneradas). Resultado: **998 desafios auto-corrigíveis em 261 KUs**, concentrados na escada de matemática completa, com validação aritmética automática da correlação.

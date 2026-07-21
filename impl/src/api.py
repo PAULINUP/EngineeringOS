@@ -267,7 +267,16 @@ async def submit_evidence(
     """
     Registra uma nova evidência no banco após checar validações do Motor Cognitivo.
     ROTA PROTEGIDA: Apenas agentes/usuários autenticados podem submeter evidência.
+
+    AUTONOMIA (P9 — Validação Objetiva): evidência submetida por cliente é
+    sempre auto-estudo — o servidor trava source_weight em 0.40, independente
+    do que o cliente declarar. Pesos maiores só nascem de processos internos
+    verificáveis (CCE auto-grader = 0.60) ou de revisores humanos registrados
+    (funcionalidade futura).
     """
+    if not token.get("internal"):
+        data.source_weight = min(data.source_weight, 0.40)
+
     learner = await db.get(models.Learner, data.learner_id)
     if not learner:
         raise HTTPException(status_code=404, detail="Learner não encontrado")
@@ -283,13 +292,13 @@ async def submit_evidence(
     
     # Decide o status do registro com base nos thresholds da especificação (Definition 10.4)
     # Se houver reviewers, podemos computar o status
+    # pending = auto-estudo aguardando verificação objetiva (P9);
+    # contested fica reservado para disputas de revisores.
     status = "pending"
     if conf >= 0.85:
         status = "validated"
     elif conf < 0.40:
         status = "rejected"
-    elif 0.40 <= conf < 0.60:
-        status = "contested"
         
     # Salva o registro de evidência no banco
     record = models.EvidenceRecord(
@@ -307,8 +316,9 @@ async def submit_evidence(
     await db.flush()
     
     curr_state = None
-    # Se a evidência for válida, atualiza a maestria do Learner usando a função de aprendizado
-    if status == "validated" or conf >= 0.60:
+    # Atualiza a maestria para evidência aceita (>= 0.40): auto-estudo avança
+    # sob o teto P9; evidência objetiva (>= 0.60) destrava a validação.
+    if status == "validated" or conf >= 0.40:
         # Busca todas as evidências deste learner para esta KU para fazer a agregação (Definition 10.3)
         ev_result = await db.execute(
             select(models.EvidenceRecord).where(
@@ -396,6 +406,14 @@ async def submit_evidence(
         # Calcula novo nível de maestria
         delta = cognitive_engine.calculate_learning_delta(current_mastery, conf_agg, prereq_factor, eta_eff)
         new_mastery = min(1.0, max(0.0, current_mastery + delta))
+
+        # P9 — Validação Objetiva: auto-estudo sozinho não cruza o teto.
+        # Só destrava com >= 1 evidência objetiva (CCE auto-grader ou revisor).
+        has_objective = any(
+            e.source_weight >= cognitive_engine.OBJECTIVE_EVIDENCE_WEIGHT for e in all_evs
+        )
+        if not has_objective:
+            new_mastery = min(new_mastery, cognitive_engine.SELF_STUDY_MASTERY_CAP)
         
         # Novo cálculo de competência v3.0.0
         decay = 0.05
@@ -820,7 +838,8 @@ async def attempt_challenge(
                 }],
             ),
             db=db,
-            token=token,
+            # Chamada interna do CCE: peso de benchmark (0.60) não sofre o clamp de cliente
+            token={**token, "internal": True},
         )
         evidence_status = record.status
 

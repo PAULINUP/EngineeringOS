@@ -264,7 +264,7 @@ function App() {
           learner_id: selectedLearnerId,
           ...evidence,
           reviewers: [
-            { reviewer_id: "human_reviewer_01", reviewer_type: "human", verdict: "accept" },
+            { reviewer_id: "self_learner", reviewer_type: "self", verdict: "accept" },
           ],
         }),
       });

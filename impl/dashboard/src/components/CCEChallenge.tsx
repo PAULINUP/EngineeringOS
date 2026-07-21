@@ -76,9 +76,8 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
   const [answer, setAnswer] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // --- fallback manual (evidência livre) ---
+  // --- fallback: auto-estudo (peso fixado pelo servidor em 0.40) ---
   const [evidenceType, setEvidenceType] = useState("explanation");
-  const [sourceType, setSourceType] = useState("expert");
 
   const fetchChallenges = useCallback(async () => {
     if (!selectedNode) return;
@@ -145,22 +144,18 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
     setAnswer("");
   };
 
-  // ---------- Modo 2 (fallback): evidência manual ----------
+  // ---------- Modo 2 (fallback): auto-estudo ----------
+  // O peso é decidido pelo SERVIDOR (0.40, auto-estudo). Nada de peso
+  // autodeclarado — P9: só verificação objetiva valida uma competência.
   const handleManualSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!answer.trim()) return;
     setIsSubmitting(true);
-
-    let sourceWeight = 0.4;
-    if (sourceType === "standard") sourceWeight = 0.9;
-    else if (sourceType === "expert") sourceWeight = 0.8;
-    else if (sourceType === "benchmark") sourceWeight = 0.6;
-
     try {
       await onSubmitEvidence({
         ku_id: selectedNode.id,
         type: evidenceType,
-        source_weight: sourceWeight,
+        source_weight: 0.4,
         reviewer_agreement: 1.0,
         recency_factor: 1.0,
       });
@@ -376,41 +371,21 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-3 text-xs">
-            <div>
-              <label className="block text-[10px] uppercase tracking-wider text-slate-500 font-bold mb-1.5">
-                Tipo de evidência
-              </label>
-              <select
-                className="input-eos w-full px-2.5 py-2 text-xs font-semibold cursor-pointer"
-                value={evidenceType}
-                onChange={(e) => setEvidenceType(e.target.value)}
-                disabled={isSubmitting}
-              >
-                <option value="explanation">Explicação teórica</option>
-                <option value="solution">Solução algébrica</option>
-                <option value="artifact">Artefato de software</option>
-                <option value="decision">Decisão de projeto</option>
-                <option value="benchmark">Resultados de benchmark</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-[10px] uppercase tracking-wider text-slate-500 font-bold mb-1.5">
-                Peso da fonte
-              </label>
-              <select
-                className="input-eos w-full px-2.5 py-2 text-xs font-semibold cursor-pointer"
-                value={sourceType}
-                onChange={(e) => setSourceType(e.target.value)}
-                disabled={isSubmitting}
-              >
-                <option value="standard">Padrão internacional · 0.90</option>
-                <option value="expert">Consenso de especialistas · 0.80</option>
-                <option value="benchmark">Benchmark reprodutível · 0.60</option>
-                <option value="ai">Agente de IA · 0.40</option>
-              </select>
-            </div>
+          <div>
+            <label className="block text-[10px] uppercase tracking-wider text-slate-500 font-bold mb-1.5">
+              Tipo de evidência
+            </label>
+            <select
+              className="input-eos w-full px-2.5 py-2 text-xs font-semibold cursor-pointer"
+              value={evidenceType}
+              onChange={(e) => setEvidenceType(e.target.value)}
+              disabled={isSubmitting}
+            >
+              <option value="explanation">Explicação teórica</option>
+              <option value="solution">Solução de exercício</option>
+              <option value="artifact">Artefato de software</option>
+              <option value="decision">Decisão de projeto</option>
+            </select>
           </div>
 
           <button
@@ -425,10 +400,18 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
               </>
             ) : (
               <>
-                <CheckCircle2 className="w-4 h-4" /> Submeter evidência
+                <CheckCircle2 className="w-4 h-4" /> Registrar auto-estudo
               </>
             )}
           </button>
+
+          <p className="flex items-start gap-1.5 text-[10px] text-slate-500 leading-relaxed">
+            <ShieldCheck className="w-3.5 h-3.5 shrink-0 mt-px text-amber-400/70" />
+            Auto-estudo tem peso fixo 0.40 (definido pelo servidor) e leva a maestria até no
+            máximo <strong className="text-slate-300">60%</strong>. A validação (85%) exige
+            verificação objetiva — desafios corrigidos automaticamente ou, no futuro, revisão
+            por professores (P9 — Validação Objetiva).
+          </p>
         </form>
       )}
     </div>
