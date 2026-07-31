@@ -1,8 +1,8 @@
 # Brainstorm — o que os dados do Impontuality dizem sobre o futuro
 
 **Data:** 2026-07-31
-**Base empírica:** 5 gerações do agente Impontuality · 1.643 KUs estudadas · 1.692 tentativas de desafio · 1.076 achados de QA · telemetria de ~4.000 requisições
-2.200+ tentativas de desafio · 804 achados de QA · telemetria de 2.800 requisições
+**Base empírica:** 5 gerações do agente Impontuality · 1.643 KUs estudadas ·
+1.692 tentativas de desafio · 1.076 achados de QA · telemetria de ~4.000 requisições
 
 Este documento não é opinião. Cada afirmação abaixo vem de um número que o
 agente produziu ao usar a plataforma como um aluno usaria.
