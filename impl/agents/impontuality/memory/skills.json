@@ -1,0 +1,26 @@
+{
+  "memoria": {
+    "tries": 58,
+    "hits": 58
+  },
+  "aritmetica": {
+    "tries": 146,
+    "hits": 23
+  },
+  "extenso": {
+    "tries": 42,
+    "hits": 0
+  },
+  "arredondamento": {
+    "tries": 46,
+    "hits": 3
+  },
+  "ultimo_numero": {
+    "tries": 277,
+    "hits": 5
+  },
+  "soma_numeros": {
+    "tries": 587,
+    "hits": 19
+  }
+}

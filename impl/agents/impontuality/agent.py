@@ -304,7 +304,7 @@ class Platform:
         self.latencies: List[Tuple[str, float]] = []
 
     def call(self, method: str, path: str, payload: dict | None = None,
-             auth: bool = False, timeout: float = 120.0) -> Any:
+             auth: bool = False, timeout: float = 120.0, _retry: bool = False) -> Any:
         url = f"{API}{path}"
         data = json.dumps(payload).encode() if payload is not None else None
         headers = {"Content-Type": "application/json"} if data else {}
@@ -324,6 +324,12 @@ class Platform:
         except urllib.error.HTTPError as e:
             dt = time.time() - t0
             body = e.read().decode("utf-8", errors="replace")[:300]
+            if e.code == 401 and auth and not _retry:
+                # Sessão expirou no meio do estudo: re-autentica e repete uma vez
+                self.hd.finding("medium", "sessao_expirada",
+                                f"401 em {path}; re-autenticando", {"path": path})
+                self.login()
+                return self.call(method, path, payload, auth, timeout, _retry=True)
             self.hd.finding("high", "http_error",
                             f"{method} {path} -> {e.code}: {body}", {"path": path})
             raise

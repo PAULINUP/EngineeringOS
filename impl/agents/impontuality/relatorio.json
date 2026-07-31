@@ -1,0 +1,347 @@
+{
+  "learner": {
+    "generation": 4,
+    "xp": 2092,
+    "lifetime": {
+      "studied": 1097,
+      "attempts": 1138,
+      "correct": 106,
+      "validated_kus": 0
+    },
+    "accuracy": 9.31
+  },
+  "generations": [
+    {
+      "gen": 1,
+      "studied": 3,
+      "attempts": 18,
+      "correct": 6,
+      "accuracy": 33.3,
+      "validated": 0
+    },
+    {
+      "gen": 2,
+      "studied": 2,
+      "attempts": 12,
+      "correct": 6,
+      "accuracy": 50.0,
+      "validated": 0
+    },
+    {
+      "gen": 3,
+      "studied": 546,
+      "attempts": 554,
+      "correct": 44,
+      "accuracy": 7.9,
+      "validated": 0
+    },
+    {
+      "gen": 4,
+      "studied": 546,
+      "attempts": 554,
+      "correct": 50,
+      "accuracy": 9.0,
+      "validated": 0
+    }
+  ],
+  "strategies": {
+    "memoria": {
+      "tries": 56,
+      "hits": 56
+    },
+    "aritmetica": {
+      "tries": 146,
+      "hits": 23
+    },
+    "extenso": {
+      "tries": 42,
+      "hits": 0
+    },
+    "arredondamento": {
+      "tries": 46,
+      "hits": 3
+    },
+    "ultimo_numero": {
+      "tries": 269,
+      "hits": 5
+    },
+    "soma_numeros": {
+      "tries": 579,
+      "hits": 19
+    }
+  },
+  "by_domain": {
+    "matematica_faculdade": {
+      "kus": 64,
+      "attempts": 376,
+      "accuracy": 6.1,
+      "self_study_only": 52
+    },
+    "matematica_basica": {
+      "kus": 30,
+      "attempts": 358,
+      "accuracy": 17.6,
+      "self_study_only": 0
+    },
+    "matematica_media": {
+      "kus": 23,
+      "attempts": 236,
+      "accuracy": 5.1,
+      "self_study_only": 14
+    },
+    "matematica_avancada": {
+      "kus": 20,
+      "attempts": 120,
+      "accuracy": 3.3,
+      "self_study_only": 20
+    },
+    "linear_algebra": {
+      "kus": 4,
+      "attempts": 24,
+      "accuracy": 8.3,
+      "self_study_only": 0
+    },
+    "estatistica_media": {
+      "kus": 4,
+      "attempts": 8,
+      "accuracy": 0.0,
+      "self_study_only": 52
+    },
+    "calculus": {
+      "kus": 1,
+      "attempts": 6,
+      "accuracy": 33.3,
+      "self_study_only": 0
+    },
+    "ml": {
+      "kus": 1,
+      "attempts": 6,
+      "accuracy": 0.0,
+      "self_study_only": 0
+    },
+    "estatistica_faculdade": {
+      "kus": 2,
+      "attempts": 4,
+      "accuracy": 0.0,
+      "self_study_only": 56
+    },
+    "fisica_media": {
+      "kus": 0,
+      "attempts": 0,
+      "accuracy": 0,
+      "self_study_only": 60
+    },
+    "fisica_faculdade": {
+      "kus": 0,
+      "attempts": 0,
+      "accuracy": 0,
+      "self_study_only": 180
+    },
+    "quimica_faculdade": {
+      "kus": 0,
+      "attempts": 0,
+      "accuracy": 0,
+      "self_study_only": 60
+    },
+    "biologia_basica": {
+      "kus": 0,
+      "attempts": 0,
+      "accuracy": 0,
+      "self_study_only": 60
+    },
+    "biologia_faculdade": {
+      "kus": 0,
+      "attempts": 0,
+      "accuracy": 0,
+      "self_study_only": 60
+    },
+    "astronomia_faculdade": {
+      "kus": 0,
+      "attempts": 0,
+      "accuracy": 0,
+      "self_study_only": 60
+    },
+    "programacao": {
+      "kus": 0,
+      "attempts": 0,
+      "accuracy": 0,
+      "self_study_only": 60
+    },
+    "economia_faculdade": {
+      "kus": 0,
+      "attempts": 0,
+      "accuracy": 0,
+      "self_study_only": 60
+    }
+  },
+  "findings": {
+    "total": 804,
+    "by_kind": {
+      "sem_material": 10,
+      "sem_desafio": 794
+    },
+    "by_severity": {
+      "low": 10,
+      "medium": 794
+    }
+  },
+  "coverage": {
+    "total_kus": 1814,
+    "kus_with_challenges": 261,
+    "total_challenges": 998,
+    "by_domain": {
+      "fisica_faculdade": {
+        "kus": 270,
+        "with_challenges": 0,
+        "coverage_pct": 0.0
+      },
+      "fisica_media": {
+        "kus": 244,
+        "with_challenges": 0,
+        "coverage_pct": 0.0
+      },
+      "biologia_faculdade": {
+        "kus": 208,
+        "with_challenges": 0,
+        "coverage_pct": 0.0
+      },
+      "astronomia_faculdade": {
+        "kus": 155,
+        "with_challenges": 0,
+        "coverage_pct": 0.0
+      },
+      "economia_faculdade": {
+        "kus": 142,
+        "with_challenges": 0,
+        "coverage_pct": 0.0
+      },
+      "matematica_faculdade": {
+        "kus": 131,
+        "with_challenges": 82,
+        "coverage_pct": 62.6
+      },
+      "quimica_faculdade": {
+        "kus": 114,
+        "with_challenges": 0,
+        "coverage_pct": 0.0
+      },
+      "programacao": {
+        "kus": 99,
+        "with_challenges": 0,
+        "coverage_pct": 0.0
+      },
+      "biologia_basica": {
+        "kus": 82,
+        "with_challenges": 0,
+        "coverage_pct": 0.0
+      },
+      "estatistica_faculdade": {
+        "kus": 80,
+        "with_challenges": 2,
+        "coverage_pct": 2.5
+      },
+      "estatistica_media": {
+        "kus": 79,
+        "with_challenges": 6,
+        "coverage_pct": 7.6
+      },
+      "matematica_avancada": {
+        "kus": 73,
+        "with_challenges": 54,
+        "coverage_pct": 74.0
+      },
+      "matematica_media": {
+        "kus": 71,
+        "with_challenges": 57,
+        "coverage_pct": 80.3
+      },
+      "matematica_basica": {
+        "kus": 60,
+        "with_challenges": 54,
+        "coverage_pct": 90.0
+      },
+      "linear_algebra": {
+        "kus": 4,
+        "with_challenges": 4,
+        "coverage_pct": 100.0
+      },
+      "ml": {
+        "kus": 1,
+        "with_challenges": 1,
+        "coverage_pct": 100.0
+      },
+      "calculus": {
+        "kus": 1,
+        "with_challenges": 1,
+        "coverage_pct": 100.0
+      }
+    }
+  },
+  "competences": {
+    "total": 431,
+    "validated": 0,
+    "capped_at_p9": 2
+  },
+  "telemetry": {
+    "slowest_routes": {
+      "/api/evidence": {
+        "requests": 855,
+        "avg": 0.597,
+        "p95": 1.186
+      },
+      "/api/seed": {
+        "requests": 3,
+        "avg": 0.57,
+        "p95": 0.6
+      },
+      "/api/challenges/{id}/attempt": {
+        "requests": 1154,
+        "avg": 0.508,
+        "p95": 1.792
+      },
+      "/api/learners/{id}/missions/{ku}/path": {
+        "requests": 96,
+        "avg": 0.428,
+        "p95": 1.316
+      },
+      "/api/kus": {
+        "requests": 13,
+        "avg": 0.304,
+        "p95": 0.381
+      },
+      "/api/graph": {
+        "requests": 166,
+        "avg": 0.303,
+        "p95": 1.035
+      },
+      "/api/learners": {
+        "requests": 249,
+        "avg": 0.153,
+        "p95": 0.549
+      },
+      "/api/missions": {
+        "requests": 103,
+        "avg": 0.078,
+        "p95": 0.263
+      },
+      "/api/token": {
+        "requests": 159,
+        "avg": 0.035,
+        "p95": 0.046
+      },
+      "/": {
+        "requests": 12,
+        "avg": 0.013,
+        "p95": 0.032
+      }
+    },
+    "http_errors": {
+      "401 /api/learners": 38,
+      "401 /api/seed-curriculum": 1,
+      "404 /api/kus/{ku}/challenges": 2,
+      "405 /api/kus/{ku}/materials": 1,
+      "401 /api/evidence": 1,
+      "401 /api/challenges/{id}/attempt": 1
+    }
+  }
+}

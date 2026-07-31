@@ -1,9 +1,9 @@
 # ENGINEERINGOS_SPECIFICATION
 ## The Constitutional Document
 
-**Version:** 3.3.0
+**Version:** 3.4.0
 **Status:** Constitutional — All implementations derive from this document
-**Date:** 2026-07-20
+**Date:** 2026-07-31
 **Supersedes:** MASTER_SHARED_MEMORY v1.0, v1.1, v2.0; ENGINEERINGOS_SPECIFICATION v3.0.0 (truncated)
 
 ---
@@ -212,8 +212,11 @@ Propriedades: monotônica, comutativa, limitada em [0,1); nenhuma evidência iso
 **Definição 3 (Delta de aprendizado).**
 ```
 Δm = η_eff · (conf_agg − m_atual) · prereq_factor
+prereq_factor = PISO + (1 − PISO) · média(m(prereq_i)),  PISO = 0.25
 ```
-onde `η_eff` é a taxa de aprendizado efetiva e `prereq_factor ∈ [0,1]` penaliza aprendizado sobre base frágil (média das maestrias dos pré-requisitos diretos).
+onde `η_eff` é a taxa de aprendizado efetiva e `prereq_factor ∈ [PISO, 1]` **desacelera** o aprendizado sobre base frágil.
+
+> **Emenda 3.4.0 — o piso é obrigatório.** A formulação original usava o *produto* das maestrias dos pré-requisitos. Numa cadeia curricular real isso zera o fator sempre que qualquer pré-requisito está em 0, tornando `Δm = 0` — o aprendiz acumula evidência objetiva indefinidamente sem sair do lugar. O agente Impontuality registrou 23 evidências objetivas validadas em `mbas.1-2-add-whole-numbers` com maestria final **0.000**. Base frágil deve custar tempo, nunca anular o aprendizado (deadlock estrutural).
 
 **Definição 4 (Fronteira de Conhecimento).**
 ```
@@ -534,6 +537,7 @@ IA não pode: validar evidência sozinha (peso máx. 0.40), aprovar RFC, alterar
 
 # Apêndice B — Changelog
 
+- **3.4.0 (2026-07-31)** — Emenda à Definição 3: `prereq_factor` passa de produto das maestrias para amortecedor com piso (`PREREQ_FLOOR = 0.25`). Corrige deadlock estrutural em que evidência objetiva acumulada não produzia aprendizado algum quando um pré-requisito estava zerado. Descoberto empiricamente pelo agente Impontuality (Parte X — a primeira hipótese testada com um aprendiz de verdade, ainda que sintético).
 - **3.3.0 (2026-07-20)** — Emenda P9 (Validação Objetiva): servidor clampa evidência de cliente a peso 0.40 (auto-estudo); maestria trava em `SELF_STUDY_MASTERY_CAP = 0.60` sem ao menos uma evidência objetiva (≥ 0.60, hoje exclusivamente o auto-grader do CCE; futuramente revisores humanos registrados). Elimina a autovalidação — a plataforma opera de forma autônoma e honesta sem professores.
 - **3.2.0 (2026-07-19)** — CCE ganha correção automática server-side: entidade `Challenge`, gabarito nunca exposto pela API, tentativas auditadas como `Assessment`, e acertos convertidos em `EvidenceRecord` com peso fixo de benchmark reprodutível (0.60) via pipeline das Definições 2–3. Evidência autodeclarada permanece disponível apenas como fallback marcado para revisão (P2 reforçado).
 - **3.1.0 (2026-07-19)** — Documento completo restaurado ao repositório (a v3.0.0 continha apenas o sumário). `WORKING_MEMORY_CAPACITY` promovida a constante constitucional nomeada e parametrizada na ULA/CCE. Correção do módulo assíncrono do motor cognitivo.

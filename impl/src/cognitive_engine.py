@@ -13,6 +13,25 @@ WORKING_MEMORY_CAPACITY = 4
 SELF_STUDY_MASTERY_CAP = 0.60
 OBJECTIVE_EVIDENCE_WEIGHT = 0.60
 
+# Piso do fator de pré-requisito. Base frágil DESACELERA o aprendizado, nunca o
+# anula: com o produto puro das maestrias, uma KU cujo pré-requisito está em 0
+# tinha delta exatamente 0 — o aluno acertava dezenas de desafios e a maestria
+# permanecia zerada (deadlock estrutural observado pelo agente Impontuality em
+# mbas.1-2-add-whole-numbers: 23 evidências objetivas, maestria 0.000).
+PREREQ_FLOOR = 0.25
+
+
+def calculate_prereq_factor(prereq_masteries: List[float]) -> float:
+    """
+    Fator de pré-requisito (Definition 3): amortecedor, não aniquilador.
+        fator = PISO + (1 - PISO) * média(maestrias dos pré-requisitos)
+    Sem pré-requisitos ⇒ 1.0. Todos dominados ⇒ 1.0. Base zerada ⇒ PISO.
+    """
+    if not prereq_masteries:
+        return 1.0
+    avg = sum(prereq_masteries) / len(prereq_masteries)
+    return PREREQ_FLOOR + (1.0 - PREREQ_FLOOR) * max(0.0, min(1.0, avg))
+
 def calculate_evidence_confidence(
     source_weight: float,
     reviewer_agreement: float,

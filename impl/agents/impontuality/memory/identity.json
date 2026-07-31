@@ -1,0 +1,691 @@
+{
+  "name": "Impontuality",
+  "born_at": "2026-07-31T02:16:03.864036+00:00",
+  "generation": 4,
+  "xp": 2128,
+  "sessions": [
+    {
+      "generation": 1,
+      "started_at": "2026-07-31T02:16:03.864420+00:00",
+      "studied": 3,
+      "attempts": 18,
+      "correct": 6,
+      "kus_validated": 0,
+      "missions": [
+        {
+          "mission": "Matemática Básica (Prealgebra)",
+          "id": "mission.mbas.v1",
+          "planned": 3,
+          "attempts": 18,
+          "correct": 6,
+          "validated": 0,
+          "seconds": 64.3
+        }
+      ],
+      "by_domain": {
+        "matematica_basica": {
+          "studied": 3,
+          "attempts": 18,
+          "correct": 6,
+          "validated": 0
+        }
+      },
+      "strategy_usage": {
+        "ultimo_numero": 4,
+        "extenso": 4,
+        "aritmetica": 6,
+        "soma_numeros": 4
+      },
+      "ended_at": "2026-07-31T02:17:20.907929+00:00",
+      "telemetry": {
+        "requests": 29,
+        "avg_latency": 2.648,
+        "max_latency": 4.387
+      }
+    },
+    {
+      "generation": 2,
+      "started_at": "2026-07-31T02:21:16.772507+00:00",
+      "studied": 2,
+      "attempts": 12,
+      "correct": 6,
+      "kus_validated": 0,
+      "missions": [
+        {
+          "mission": "Matemática Básica (Prealgebra)",
+          "id": "mission.mbas.v1",
+          "planned": 2,
+          "attempts": 12,
+          "correct": 6,
+          "validated": 0,
+          "seconds": 11.7
+        }
+      ],
+      "by_domain": {
+        "matematica_basica": {
+          "studied": 2,
+          "attempts": 12,
+          "correct": 6,
+          "validated": 0
+        }
+      },
+      "strategy_usage": {
+        "ultimo_numero": 2,
+        "extenso": 4,
+        "memoria": 5,
+        "aritmetica": 1
+      },
+      "ended_at": "2026-07-31T02:21:29.100077+00:00",
+      "telemetry": {
+        "requests": 20,
+        "avg_latency": 0.615,
+        "max_latency": 2.136
+      }
+    },
+    {
+      "generation": 3,
+      "started_at": "2026-07-31T02:21:45.278730+00:00",
+      "studied": 546,
+      "attempts": 554,
+      "correct": 44,
+      "kus_validated": 0,
+      "missions": [
+        {
+          "mission": "Machine Learning Foundations",
+          "id": "ml_foundations.v1",
+          "planned": 6,
+          "attempts": 18,
+          "correct": 2,
+          "validated": 0,
+          "seconds": 9.0
+        },
+        {
+          "mission": "Matemática Básica (Prealgebra)",
+          "id": "mission.mbas.v1",
+          "planned": 30,
+          "attempts": 164,
+          "correct": 23,
+          "validated": 0,
+          "seconds": 93.0
+        },
+        {
+          "mission": "Matemática Média (Álgebra Elementar)",
+          "id": "mission.mmed.v1",
+          "planned": 30,
+          "attempts": 118,
+          "correct": 6,
+          "validated": 0,
+          "seconds": 54.9
+        },
+        {
+          "mission": "Matemática Avançada (Pré-Cálculo)",
+          "id": "mission.mava.v1",
+          "planned": 30,
+          "attempts": 60,
+          "correct": 2,
+          "validated": 0,
+          "seconds": 32.2
+        },
+        {
+          "mission": "Faculdade: Cálculo Volume 1",
+          "id": "mission.calc1.v1",
+          "planned": 30,
+          "attempts": 58,
+          "correct": 8,
+          "validated": 0,
+          "seconds": 49.2
+        },
+        {
+          "mission": "Faculdade: Cálculo Volume 2",
+          "id": "mission.calc2.v1",
+          "planned": 30,
+          "attempts": 58,
+          "correct": 2,
+          "validated": 0,
+          "seconds": 46.2
+        },
+        {
+          "mission": "Faculdade: Cálculo Volume 3",
+          "id": "mission.calc3.v1",
+          "planned": 30,
+          "attempts": 72,
+          "correct": 1,
+          "validated": 0,
+          "seconds": 51.6
+        },
+        {
+          "mission": "Física Média (College Physics)",
+          "id": "mission.fmed.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 29.1
+        },
+        {
+          "mission": "Faculdade: Física Universitária Volume 1",
+          "id": "mission.ufis1.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 22.4
+        },
+        {
+          "mission": "Faculdade: Física Universitária Volume 2",
+          "id": "mission.ufis2.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 20.8
+        },
+        {
+          "mission": "Faculdade: Física Universitária Volume 3",
+          "id": "mission.ufis3.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 37.1
+        },
+        {
+          "mission": "Faculdade: Química Geral",
+          "id": "mission.quim.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 49.5
+        },
+        {
+          "mission": "Biologia Básica (Concepts of Biology)",
+          "id": "mission.bio1.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 19.1
+        },
+        {
+          "mission": "Faculdade: Biologia",
+          "id": "mission.bio2.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 23.3
+        },
+        {
+          "mission": "Estatística Média (High School)",
+          "id": "mission.est1.v1",
+          "planned": 30,
+          "attempts": 4,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 16.0
+        },
+        {
+          "mission": "Faculdade: Estatística Introdutória",
+          "id": "mission.est2.v1",
+          "planned": 30,
+          "attempts": 2,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 19.0
+        },
+        {
+          "mission": "Faculdade: Astronomia",
+          "id": "mission.astro.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 19.9
+        },
+        {
+          "mission": "Programação: Introdução a Python",
+          "id": "mission.py.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 16.0
+        },
+        {
+          "mission": "Faculdade: Princípios de Economia",
+          "id": "mission.eco.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 15.0
+        }
+      ],
+      "by_domain": {
+        "linear_algebra": {
+          "studied": 4,
+          "attempts": 12,
+          "correct": 1,
+          "validated": 0
+        },
+        "calculus": {
+          "studied": 1,
+          "attempts": 3,
+          "correct": 1,
+          "validated": 0
+        },
+        "ml": {
+          "studied": 1,
+          "attempts": 3,
+          "correct": 0,
+          "validated": 0
+        },
+        "matematica_basica": {
+          "studied": 30,
+          "attempts": 164,
+          "correct": 23,
+          "validated": 0
+        },
+        "matematica_media": {
+          "studied": 30,
+          "attempts": 118,
+          "correct": 6,
+          "validated": 0
+        },
+        "matematica_avancada": {
+          "studied": 30,
+          "attempts": 60,
+          "correct": 2,
+          "validated": 0
+        },
+        "matematica_faculdade": {
+          "studied": 90,
+          "attempts": 188,
+          "correct": 11,
+          "validated": 0
+        },
+        "fisica_media": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "fisica_faculdade": {
+          "studied": 90,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "quimica_faculdade": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "biologia_basica": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "biologia_faculdade": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "estatistica_media": {
+          "studied": 30,
+          "attempts": 4,
+          "correct": 0,
+          "validated": 0
+        },
+        "estatistica_faculdade": {
+          "studied": 30,
+          "attempts": 2,
+          "correct": 0,
+          "validated": 0
+        },
+        "astronomia_faculdade": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "programacao": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "economia_faculdade": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        }
+      },
+      "strategy_usage": {
+        "ultimo_numero": 142,
+        "soma_numeros": 288,
+        "extenso": 19,
+        "memoria": 7,
+        "aritmetica": 74,
+        "arredondamento": 24
+      },
+      "ended_at": "2026-07-31T02:32:08.999371+00:00",
+      "telemetry": {
+        "requests": 2047,
+        "avg_latency": 0.301,
+        "max_latency": 8.759
+      }
+    },
+    {
+      "generation": 4,
+      "started_at": "2026-07-31T02:33:03.749714+00:00",
+      "studied": 546,
+      "attempts": 554,
+      "correct": 50,
+      "kus_validated": 0,
+      "missions": [
+        {
+          "mission": "Machine Learning Foundations",
+          "id": "ml_foundations.v1",
+          "planned": 6,
+          "attempts": 18,
+          "correct": 2,
+          "validated": 0,
+          "seconds": 9.3
+        },
+        {
+          "mission": "Matemática Básica (Prealgebra)",
+          "id": "mission.mbas.v1",
+          "planned": 30,
+          "attempts": 164,
+          "correct": 28,
+          "validated": 0,
+          "seconds": 101.9
+        },
+        {
+          "mission": "Matemática Média (Álgebra Elementar)",
+          "id": "mission.mmed.v1",
+          "planned": 30,
+          "attempts": 118,
+          "correct": 6,
+          "validated": 0,
+          "seconds": 53.6
+        },
+        {
+          "mission": "Matemática Avançada (Pré-Cálculo)",
+          "id": "mission.mava.v1",
+          "planned": 30,
+          "attempts": 60,
+          "correct": 2,
+          "validated": 0,
+          "seconds": 25.7
+        },
+        {
+          "mission": "Faculdade: Cálculo Volume 1",
+          "id": "mission.calc1.v1",
+          "planned": 30,
+          "attempts": 58,
+          "correct": 8,
+          "validated": 0,
+          "seconds": 33.5
+        },
+        {
+          "mission": "Faculdade: Cálculo Volume 2",
+          "id": "mission.calc2.v1",
+          "planned": 30,
+          "attempts": 58,
+          "correct": 3,
+          "validated": 0,
+          "seconds": 29.5
+        },
+        {
+          "mission": "Faculdade: Cálculo Volume 3",
+          "id": "mission.calc3.v1",
+          "planned": 30,
+          "attempts": 72,
+          "correct": 1,
+          "validated": 0,
+          "seconds": 30.6
+        },
+        {
+          "mission": "Física Média (College Physics)",
+          "id": "mission.fmed.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 13.9
+        },
+        {
+          "mission": "Faculdade: Física Universitária Volume 1",
+          "id": "mission.ufis1.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 15.7
+        },
+        {
+          "mission": "Faculdade: Física Universitária Volume 2",
+          "id": "mission.ufis2.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 15.2
+        },
+        {
+          "mission": "Faculdade: Física Universitária Volume 3",
+          "id": "mission.ufis3.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 14.7
+        },
+        {
+          "mission": "Faculdade: Química Geral",
+          "id": "mission.quim.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 13.7
+        },
+        {
+          "mission": "Biologia Básica (Concepts of Biology)",
+          "id": "mission.bio1.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 14.7
+        },
+        {
+          "mission": "Faculdade: Biologia",
+          "id": "mission.bio2.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 14.6
+        },
+        {
+          "mission": "Estatística Média (High School)",
+          "id": "mission.est1.v1",
+          "planned": 30,
+          "attempts": 4,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 13.5
+        },
+        {
+          "mission": "Faculdade: Estatística Introdutória",
+          "id": "mission.est2.v1",
+          "planned": 30,
+          "attempts": 2,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 15.2
+        },
+        {
+          "mission": "Faculdade: Astronomia",
+          "id": "mission.astro.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 20.9
+        },
+        {
+          "mission": "Programação: Introdução a Python",
+          "id": "mission.py.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 18.3
+        },
+        {
+          "mission": "Faculdade: Princípios de Economia",
+          "id": "mission.eco.v1",
+          "planned": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0,
+          "seconds": 15.1
+        }
+      ],
+      "by_domain": {
+        "linear_algebra": {
+          "studied": 4,
+          "attempts": 12,
+          "correct": 1,
+          "validated": 0
+        },
+        "calculus": {
+          "studied": 1,
+          "attempts": 3,
+          "correct": 1,
+          "validated": 0
+        },
+        "ml": {
+          "studied": 1,
+          "attempts": 3,
+          "correct": 0,
+          "validated": 0
+        },
+        "matematica_basica": {
+          "studied": 30,
+          "attempts": 164,
+          "correct": 28,
+          "validated": 0
+        },
+        "matematica_media": {
+          "studied": 30,
+          "attempts": 118,
+          "correct": 6,
+          "validated": 0
+        },
+        "matematica_avancada": {
+          "studied": 30,
+          "attempts": 60,
+          "correct": 2,
+          "validated": 0
+        },
+        "matematica_faculdade": {
+          "studied": 90,
+          "attempts": 188,
+          "correct": 12,
+          "validated": 0
+        },
+        "fisica_media": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "fisica_faculdade": {
+          "studied": 90,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "quimica_faculdade": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "biologia_basica": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "biologia_faculdade": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "estatistica_media": {
+          "studied": 30,
+          "attempts": 4,
+          "correct": 0,
+          "validated": 0
+        },
+        "estatistica_faculdade": {
+          "studied": 30,
+          "attempts": 2,
+          "correct": 0,
+          "validated": 0
+        },
+        "astronomia_faculdade": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "programacao": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        },
+        "economia_faculdade": {
+          "studied": 30,
+          "attempts": 0,
+          "correct": 0,
+          "validated": 0
+        }
+      },
+      "strategy_usage": {
+        "ultimo_numero": 121,
+        "soma_numeros": 287,
+        "memoria": 44,
+        "extenso": 15,
+        "aritmetica": 65,
+        "arredondamento": 22
+      },
+      "ended_at": "2026-07-31T02:40:54.040988+00:00",
+      "telemetry": {
+        "requests": 2047,
+        "avg_latency": 0.229,
+        "max_latency": 2.622
+      }
+    }
+  ],
+  "lifetime": {
+    "studied": 1097,
+    "attempts": 1138,
+    "correct": 106,
+    "validated_kus": 0
+  },
+  "accuracy_lifetime": 0.0931
+}

@@ -351,12 +351,8 @@ async def submit_evidence(
             states = {st.ku_id: st.mastery_score for st in st_result.scalars().all()}
             for pid in prereq_ids:
                 prereq_masteries.append(states.get(pid, 0.0))
-        else:
-            prereq_masteries = [1.0] # se não há pré-requisitos, delta factor é 1.0
-            
-        prereq_factor = 1.0
-        for m in prereq_masteries:
-            prereq_factor *= m # produto de maestrias
+        # Amortecedor de base frágil (nunca zera o aprendizado — ver PREREQ_FLOOR)
+        prereq_factor = cognitive_engine.calculate_prereq_factor(prereq_masteries)
             
         # Carrega estado atual
         curr_state_res = await db.execute(

@@ -1,5 +1,10 @@
 # Changelog - EngineeringOS
 
+## [v3.7.0] - 2026-07-31
+### Fixed
+- **Deadlock estrutural do aprendizado** (crítico, descoberto pelo agente Impontuality): `prereq_factor` era o *produto* das maestrias dos pré-requisitos — bastava um pré-requisito em 0 para `Δm = 0`, e o aprendiz acumulava evidência objetiva sem sair do lugar. Caso concreto: `mbas.1-2-add-whole-numbers` com **23 evidências objetivas validadas e maestria 0.000**. Agora `prereq_factor = 0.25 + 0.75 · média(maestrias)` (`PREREQ_FLOOR`): base frágil desacelera, nunca anula. Verificado: a mesma KU saiu de 0.000 → 0.522. Emenda registrada na constituição (Definição 3, spec v3.4.0).
+- **Sessão de estudo expirando em 15 minutos**: `create_access_token` ignorava `ACCESS_TOKEN_EXPIRE_MINUTES` e usava um default de 15 min — quem estudasse mais que isso começava a receber 401 silenciosos (38 ocorrências na sessão do agente). Agora respeita a constante (default 12h, configurável por env), e o agente re-autentica sozinho em caso de 401.
+
 ## [v3.6.0] - 2026-07-30
 ### Fixed
 - **Tela preta no mapa de conhecimento** (reportado pelo usuário ao responder um desafio): com o filtro em "Todos", o SVG era gerado com **63.580 px de altura** (1.814 nós em serpentina), muito acima do limite de rasterização dos navegadores (~16k px) — o resultado era uma área preta e ~6s de render. O layout agora respeita `MAX_SVG_PX = 11.000` (colunas crescem para caber) e renderiza no máximo `MAX_RENDERED_NODES = 320` nós, priorizando trilha ativa → selecionado → em progresso → restante, com aviso explícito de amostragem na interface.
