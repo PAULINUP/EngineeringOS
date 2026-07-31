@@ -1,5 +1,15 @@
 # Changelog - EngineeringOS
 
+## [v3.8.0] - 2026-07-31
+### Fixed
+- **Tela preta ao trocar de aluno** (relatado pelo usuário): o teto de tamanho do SVG resolvia só metade. O próprio painel do mapa crescia junto com o conteúdo (2.370px num domínio, ~9.000px em "Todos") e carrega `backdrop-filter: blur(20px)` — desfocar o fundo de um elemento de milhares de pixels é uma falha conhecida do compositor no Windows, que pinta a área de preto. Aparecia com mais força ao trocar de aluno porque o mapa é redesenhado do zero. Agora o mapa rola dentro de uma janela fixa de 560px, a matriz de competências idem, e `.panel` usa fundo sólido + blur menor + `contain: paint`. Verificado: maior painel 2.370px → 857px, documento 4.722px → 1.998px, nenhum elemento com `backdrop-filter` acima de 1.200px.
+- `POST /learners` passa a ser idempotente por nome — o banco tinha acumulado 20 cadastros do mesmo aluno, cada um com um pedaço do progresso.
+
+### Added
+- **Exercícios de fim de capítulo das ciências** (`tools/openstax_chapter_exercises.py`): física, química, astronomia e estatística mantêm os exercícios em páginas próprias de fim de capítulo, invisíveis para o extrator anterior — daí os 1.061 achados `sem_desafio` do agente. O novo extrator segmenta essas páginas por cabeçalho de seção, casa com o Answer Key do capítulo e normaliza os gabaritos mutilados pelo MathML (decimais partidos, notação científica, sinal de menos unicode — este último produzia silenciosamente gabaritos com o sinal trocado). Só aceita respostas de valor único; auditado 7/7 com ida e volta pelo corretor real.
+  **Cobertura de avaliação: 261 → 579 KUs** (física média 0% → 55%, física faculdade 0% → 54%, química 0% → 33%).
+- Seletor de aluno virou campo de busca (o `<select>` chegou a 291 nomes) e avisa quando o nome ativo tem cadastros duplicados.
+
 ## [v3.7.0] - 2026-07-31
 ### Fixed
 - **Deadlock estrutural do aprendizado** (crítico, descoberto pelo agente Impontuality): `prereq_factor` era o *produto* das maestrias dos pré-requisitos — bastava um pré-requisito em 0 para `Δm = 0`, e o aprendiz acumulava evidência objetiva sem sair do lugar. Caso concreto: `mbas.1-2-add-whole-numbers` com **23 evidências objetivas validadas e maestria 0.000**. Agora `prereq_factor = 0.25 + 0.75 · média(maestrias)` (`PREREQ_FLOOR`): base frágil desacelera, nunca anula. Verificado: a mesma KU saiu de 0.000 → 0.522. Emenda registrada na constituição (Definição 3, spec v3.4.0).
