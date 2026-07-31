@@ -1,5 +1,14 @@
 # Changelog - EngineeringOS
 
+## [v3.9.0] - 2026-07-31
+### Fixed
+- **Tela preta, causa raiz definitiva**: `backdrop-filter` removido de toda a interface. As duas correções anteriores (teto de tamanho do SVG, janela de rolagem) reduziram o problema mas não o eliminaram — e a tentativa de mitigar com `contain: paint` **piorou**, porque o containment deixa o backdrop vazio e o compositor pinta preto. Painéis, sidebar e painel de estudo agora usam fundo opaco: mesmo visual, zero custo de compositing, nenhuma superfície desfocada. Verificado em `#competencias` (a URL da captura do usuário): **0 elementos com backdrop-filter** na página inteira.
+- **Seletor de aluno voltou a ser navegável**: o campo de busca introduzido na v3.8.0 prendia o usuário nos nomes que casavam com o texto já preenchido, impedindo trocar de aluno. Voltou a ser um `<select>` — agora utilizável, porque a lista foi saneada.
+
+### Changed
+- **Base de alunos consolidada** (`tools/consolidate_learners.py`): 294 → 2 cadastros. O script faz backup, elege o cadastro com mais evidências como canônico, funde os clones (competência duplicada fica com a maior maestria), **absorve no cadastro principal qualquer aluno fora da lista que tenha progresso real** — nada de estudo é descartado — e só então remove os cadastros vazios. Resultado: 45 evidências preservadas no cadastro do usuário, 1.728 no do agente.
+- **Anti-fragmentação**: `learners.name` agora é `unique` no modelo e no índice do banco, somado à idempotência do `POST /learners`. Recriar o mesmo aluno devolve o cadastro existente — verificado.
+
 ## [v3.8.0] - 2026-07-31
 ### Fixed
 - **Tela preta ao trocar de aluno** (relatado pelo usuário): o teto de tamanho do SVG resolvia só metade. O próprio painel do mapa crescia junto com o conteúdo (2.370px num domínio, ~9.000px em "Todos") e carrega `backdrop-filter: blur(20px)` — desfocar o fundo de um elemento de milhares de pixels é uma falha conhecida do compositor no Windows, que pinta a área de preto. Aparecia com mais força ao trocar de aluno porque o mapa é redesenhado do zero. Agora o mapa rola dentro de uma janela fixa de 560px, a matriz de competências idem, e `.panel` usa fundo sólido + blur menor + `contain: paint`. Verificado: maior painel 2.370px → 857px, documento 4.722px → 1.998px, nenhum elemento com `backdrop-filter` acima de 1.200px.

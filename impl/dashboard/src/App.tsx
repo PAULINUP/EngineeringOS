@@ -107,7 +107,6 @@ function App() {
   const [selectedNode, setSelectedNode] = useState<KNode | null>(null);
 
   const [selectedDomain, setSelectedDomain] = useState<string>("all");
-  const [learnerQuery, setLearnerQuery] = useState<string>("");
   const [showAddLearner, setShowAddLearner] = useState(false);
   const [newLearnerName, setNewLearnerName] = useState("");
   const [notification, setNotification] = useState<{ type: string; msg: string } | null>(null);
@@ -309,13 +308,6 @@ function App() {
   const activePathIds = activePath.map((p) => p.id);
   const currentLearner = learners.find((l) => l.id === selectedLearnerId);
 
-  // mantém o campo de busca em sincronia com a seleção (inclusive a automática)
-  useEffect(() => {
-    if (currentLearner && currentLearner.name !== learnerQuery) {
-      setLearnerQuery(currentLearner.name);
-    }
-  }, [currentLearner?.id]);
-
   // ------- Domínios e filtragem -------
   const domains = useMemo(() => {
     const set = new Set(nodes.map((n) => n.domain));
@@ -376,7 +368,7 @@ function App() {
       <div className="grid-overlay" />
 
       {/* ============ SIDEBAR ============ */}
-      <aside className="hidden lg:flex flex-col w-[264px] shrink-0 h-screen sticky top-0 border-r border-slate-400/10 bg-[#090d1a]/70 backdrop-blur-2xl px-5 py-6 gap-6">
+      <aside className="hidden lg:flex flex-col w-[264px] shrink-0 h-screen sticky top-0 border-r border-slate-400/10 bg-[#090d1a] px-5 py-6 gap-6">
         {/* Brand */}
         <div className="flex items-center gap-3">
           <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 flex items-center justify-center shadow-lg shadow-violet-900/50">
@@ -443,39 +435,21 @@ function App() {
             <label className="block text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-2">
               Estudante
             </label>
-            {/* Busca em vez de <select>: a lista chegou a 291 alunos e ficou
-                impossível de navegar por rolagem. */}
             <div className="relative">
-              <input
-                list="eos-learners"
-                className="input-eos w-full text-[13px] font-semibold px-3 py-2.5 pr-8"
-                placeholder="Buscar aluno…"
-                value={learnerQuery}
-                onChange={(e) => {
-                  const q = e.target.value;
-                  setLearnerQuery(q);
-                  const hit = learners.find((l) => l.name === q);
-                  if (hit) setSelectedLearnerId(hit.id);
-                }}
-              />
-              <datalist id="eos-learners">
+              <select
+                className="input-eos w-full text-[13px] font-semibold appearance-none px-3 py-2.5 pr-8 cursor-pointer"
+                value={selectedLearnerId}
+                onChange={(e) => setSelectedLearnerId(e.target.value)}
+              >
+                <option value="">Selecionar…</option>
                 {learners.map((l) => (
-                  <option key={l.id} value={l.name} />
+                  <option key={l.id} value={l.id}>
+                    {l.name}
+                  </option>
                 ))}
-              </datalist>
+              </select>
               <ChevronDown className="w-4 h-4 text-slate-500 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
-            {currentLearner && (
-              <p className="text-[10px] text-slate-500 mt-1 truncate">
-                Ativo: <span className="text-slate-300 font-semibold">{currentLearner.name}</span>
-                {learners.filter((l) => l.name === currentLearner.name).length > 1 && (
-                  <span className="text-amber-400/80">
-                    {" "}· {learners.filter((l) => l.name === currentLearner.name).length} cadastros
-                    com este nome
-                  </span>
-                )}
-              </p>
-            )}
           </div>
 
           <button
@@ -671,8 +645,8 @@ function App() {
             className="absolute inset-0 bg-black/55 backdrop-blur-[2px]"
             onClick={() => setSelectedNode(null)}
           />
-          <div className="relative w-full max-w-[480px] h-full bg-[#0a0f1e]/95 backdrop-blur-2xl border-l border-slate-400/10 shadow-2xl animate-slide-in-right overflow-y-auto">
-            <div className="sticky top-0 z-10 bg-[#0a0f1e]/95 backdrop-blur-xl border-b border-slate-400/10 px-6 py-4 flex items-center justify-between">
+          <div className="relative w-full max-w-[480px] h-full bg-[#0a0f1e] border-l border-slate-400/10 shadow-2xl animate-slide-in-right overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-[#0a0f1e] border-b border-slate-400/10 px-6 py-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-fuchsia-400" />
                 <span className="text-[11px] uppercase tracking-[0.16em] text-slate-400 font-bold">

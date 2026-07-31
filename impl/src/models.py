@@ -36,7 +36,9 @@ class Learner(Base):
     __tablename__ = "learners"
 
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
-    name: Mapped[str] = mapped_column(String(255), nullable=False)
+    # unique: o cadastro fragmentou em 20 cópias do mesmo aluno, cada uma com
+    # um pedaço do progresso. O banco garante a unicidade; a API é idempotente.
+    name: Mapped[str] = mapped_column(String(255), nullable=False, unique=True, index=True)
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime, default=datetime.datetime.utcnow, nullable=False
     )

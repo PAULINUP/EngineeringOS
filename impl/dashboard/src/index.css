@@ -95,13 +95,11 @@ body {
 
 /* Panels */
 .panel {
-  /* Fundo sólido o bastante para dispensar backdrop-filter forte: em painéis
-     altos o desfoque de fundo estoura o compositor no Windows e a área é
-     pintada de preto. contain: paint isola a pintura de cada painel. */
-  background: rgba(13, 18, 33, 0.88);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  contain: paint;
+  /* SEM backdrop-filter. Desfocar o fundo de painéis altos estourava o
+     compositor no Windows e pintava a área de preto — e combinar isso com
+     `contain: paint` piorava (o containment deixa o backdrop vazio).
+     Fundo opaco entrega o mesmo visual sem nenhum custo de compositing. */
+  background: #0f1425;
   border: 1px solid var(--stroke);
   border-radius: 20px;
   box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
