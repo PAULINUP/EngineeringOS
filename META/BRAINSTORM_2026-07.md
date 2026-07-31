@@ -1,7 +1,7 @@
 # Brainstorm — o que os dados do Impontuality dizem sobre o futuro
 
 **Data:** 2026-07-31
-**Base empírica:** 5 gerações do agente Impontuality · 1.100+ KUs estudadas ·
+**Base empírica:** 5 gerações do agente Impontuality · 1.643 KUs estudadas · 1.692 tentativas de desafio · 1.076 achados de QA · telemetria de ~4.000 requisições
 2.200+ tentativas de desafio · 804 achados de QA · telemetria de 2.800 requisições
 
 Este documento não é opinião. Cada afirmação abaixo vem de um número que o
@@ -54,17 +54,25 @@ Os três estavam invisíveis para os testes automatizados — todos passavam.
 
 ### 1.4 O agente evolui, e isso mede a plataforma
 
-| Geração | Acurácia | O que mudou |
-|---|---|---|
-| 1 | 33% | primeira exposição (3 KUs) |
-| 3 | 7,9% | escala real: 546 KUs, muitos domínios sem preparo |
-| 4 | 9,0% | memória começa a pagar |
-| 5 | ~13% | memória + deadlock corrigido |
+| Geração | KUs | Acurácia | O que mudou |
+|---|---|---|---|
+| 1 | 3 | 33,3% | primeira exposição |
+| 3 | 546 | 7,9% | escala real: todos os domínios |
+| 4 | 546 | 9,0% | memória começa a pagar |
+| 5 | 546 | 9,0% | deadlock corrigido; maestria passa a se mover |
 
-A estratégia `memoria` acerta **100%** (56/56). As heurísticas cegas
-(`ultimo_numero`, `soma_numeros`) ficam em 2–3%. Tradução: **a plataforma não é
-"chutável"** — quem não sabe, não passa. Isso é uma validação forte do desenho
-de avaliação, e um contraste com quizzes de múltipla escolha.
+Duas leituras honestas destes números:
+
+**A memória funciona perfeitamente** — a estratégia `memoria` acerta **106/106
+(100%)**. Tudo que ele aprendeu uma vez, nunca mais errou.
+
+**A acurácia global estagnou em ~9%** e isso diz respeito ao *agente*, não à
+plataforma: as heurísticas simbólicas dele resolvem aritmética explícita
+(11%) mas não cálculo, estatística ou álgebra simbólica. As estratégias de chute
+(`ultimo_numero` 1,3%, `soma_numeros` 2,2%) confirmam algo importante sobre o
+sistema: **a plataforma não é "chutável"** — chutar dá ~2% de acerto. Quem não
+sabe, não passa. É uma validação forte do desenho de avaliação por resposta
+construída, em contraste com múltipla escolha (onde o chute vale 20–25%).
 
 ### 1.5 O custo de estudar fora de ordem agora é mensurável
 
@@ -128,6 +136,13 @@ plausível? *Isso transforma a Parte X de promessa em resultado.*
 **2.3 Personas de aprendiz.** Clonar o agente com perfis diferentes (rápido e
 desatento; lento e consistente; especialista em um domínio) e ver como a ULA
 responde. É o teste do modelo cognitivo que a Parte V descreve mas nunca exercitou.
+
+**2.4 Dar um cérebro melhor ao agente.** Hoje ele resolve com heurísticas
+simbólicas e trava em ~9% fora da aritmética. Plugar um LLM como *solver*
+(mantendo a memória e o reforço) elevaria a acurácia o bastante para ele validar
+KUs de verdade e exercitar o sistema até o topo da escada — e mediria, de quebra,
+a dificuldade real de cada trilha. Cuidado de projeto: o LLM entra como
+raciocínio do *aluno*, jamais como autoridade de correção (P7).
 
 ### Prioridade 3 — A camada humana, quando existir
 
