@@ -90,6 +90,16 @@ async def create_learner(
     db: AsyncSession = Depends(get_session),
     token: dict = Depends(verify_token)
 ):
+    # Idempotente por nome: reabrir o cadastro do mesmo aluno devolve o registro
+    # existente em vez de criar um clone (o banco acumulou 20 cópias do mesmo
+    # nome, cada uma com um pedaço do progresso — e o seletor virou inutilizável).
+    existing = await db.execute(
+        select(models.Learner).where(models.Learner.name == data.name)
+    )
+    found = existing.scalars().first()
+    if found:
+        return found
+
     learner = models.Learner(name=data.name)
     db.add(learner)
     await db.commit()

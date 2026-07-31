@@ -107,6 +107,7 @@ function App() {
   const [selectedNode, setSelectedNode] = useState<KNode | null>(null);
 
   const [selectedDomain, setSelectedDomain] = useState<string>("all");
+  const [learnerQuery, setLearnerQuery] = useState<string>("");
   const [showAddLearner, setShowAddLearner] = useState(false);
   const [newLearnerName, setNewLearnerName] = useState("");
   const [notification, setNotification] = useState<{ type: string; msg: string } | null>(null);
@@ -308,6 +309,13 @@ function App() {
   const activePathIds = activePath.map((p) => p.id);
   const currentLearner = learners.find((l) => l.id === selectedLearnerId);
 
+  // mantém o campo de busca em sincronia com a seleção (inclusive a automática)
+  useEffect(() => {
+    if (currentLearner && currentLearner.name !== learnerQuery) {
+      setLearnerQuery(currentLearner.name);
+    }
+  }, [currentLearner?.id]);
+
   // ------- Domínios e filtragem -------
   const domains = useMemo(() => {
     const set = new Set(nodes.map((n) => n.domain));
@@ -435,21 +443,39 @@ function App() {
             <label className="block text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-2">
               Estudante
             </label>
+            {/* Busca em vez de <select>: a lista chegou a 291 alunos e ficou
+                impossível de navegar por rolagem. */}
             <div className="relative">
-              <select
-                className="input-eos w-full text-[13px] font-semibold appearance-none px-3 py-2.5 pr-8 cursor-pointer"
-                value={selectedLearnerId}
-                onChange={(e) => setSelectedLearnerId(e.target.value)}
-              >
-                <option value="">Selecionar…</option>
+              <input
+                list="eos-learners"
+                className="input-eos w-full text-[13px] font-semibold px-3 py-2.5 pr-8"
+                placeholder="Buscar aluno…"
+                value={learnerQuery}
+                onChange={(e) => {
+                  const q = e.target.value;
+                  setLearnerQuery(q);
+                  const hit = learners.find((l) => l.name === q);
+                  if (hit) setSelectedLearnerId(hit.id);
+                }}
+              />
+              <datalist id="eos-learners">
                 {learners.map((l) => (
-                  <option key={l.id} value={l.id}>
-                    {l.name}
-                  </option>
+                  <option key={l.id} value={l.name} />
                 ))}
-              </select>
+              </datalist>
               <ChevronDown className="w-4 h-4 text-slate-500 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
+            {currentLearner && (
+              <p className="text-[10px] text-slate-500 mt-1 truncate">
+                Ativo: <span className="text-slate-300 font-semibold">{currentLearner.name}</span>
+                {learners.filter((l) => l.name === currentLearner.name).length > 1 && (
+                  <span className="text-amber-400/80">
+                    {" "}· {learners.filter((l) => l.name === currentLearner.name).length} cadastros
+                    com este nome
+                  </span>
+                )}
+              </p>
+            )}
           </div>
 
           <button
