@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BookOpen, ExternalLink, FileText, Link2, Loader2, Play, Star } from "lucide-react";
 
-const API_BASE = "http://localhost:8000/api";
+import { API_BASE } from "../api";
 
 interface StudyMaterial {
   id: string;

@@ -23,7 +23,8 @@ import { CCEChallenge } from "./components/CCEChallenge";
 import { CompetenceMatrix } from "./components/CompetenceMatrix";
 import { MaterialViewer } from "./components/MaterialViewer";
 
-const API_BASE = "http://localhost:8000/api";
+import { API_BASE } from "./api";
+
 const MASTERY_THRESHOLD = 0.85;
 
 export interface KNode {

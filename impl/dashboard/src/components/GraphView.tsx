@@ -47,9 +47,14 @@ const NODE_R = 30;
 const RING_R = 26;
 const RING_C = 2 * Math.PI * RING_R;
 
+// Limites de rasterização: navegadores falham (área preta) em superfícies
+// acima de ~16k px, e o custo de render cresce linearmente com os nós.
+const MAX_SVG_PX = 11000;
+const MAX_RENDERED_NODES = 320;
+
 export const GraphView: React.FC<GraphViewProps> = ({
-  nodes,
-  edges,
+  nodes: allNodes,
+  edges: allEdges,
   activePathIds,
   selectedNodeId,
   onSelectNode,
@@ -57,6 +62,33 @@ export const GraphView: React.FC<GraphViewProps> = ({
   selectedDomain = "all",
   onSelectDomain,
 }) => {
+  // Amostra focada quando o conjunto é grande demais para rasterizar:
+  // prioriza trilha ativa > selecionado > em progresso/dominadas > vizinhança.
+  const { nodes, edges, omitted } = useMemo(() => {
+    if (allNodes.length <= MAX_RENDERED_NODES) {
+      return { nodes: allNodes, edges: allEdges, omitted: 0 };
+    }
+    const priority = (n: Node) => {
+      if (activePathIds.includes(n.id)) return 0;
+      if (n.id === selectedNodeId) return 1;
+      const m = n.effective_mastery || n.mastery;
+      if (m > 0) return 2;
+      return 3;
+    };
+    const kept = [...allNodes]
+      .map((n, i) => ({ n, i, p: priority(n) }))
+      .sort((a, b) => (a.p - b.p) || (a.i - b.i))
+      .slice(0, MAX_RENDERED_NODES)
+      .sort((a, b) => a.i - b.i)
+      .map((x) => x.n);
+    const keptIds = new Set(kept.map((n) => n.id));
+    return {
+      nodes: kept,
+      edges: allEdges.filter((e) => keptIds.has(e.source) && keptIds.has(e.target)),
+      omitted: allNodes.length - kept.length,
+    };
+  }, [allNodes, allEdges, activePathIds, selectedNodeId]);
+
   // Layout: camadas topológicas para grafos ramificados, serpentina para
   // trilhas ~lineares (currículos de livro, onde profundidade = nº de seções)
   const { layout, width, height } = useMemo(() => {
@@ -107,11 +139,14 @@ export const GraphView: React.FC<GraphViewProps> = ({
     const isLinear = maxDepth > 14 && prereqEdges <= nodes.length * 1.25;
 
     if (isLinear) {
-      const COLS = 4;
       const X_SPACING = 160;
       const Y_SPACING = 140;
       const PAD_X = 100;
       const PAD_Y = 80;
+
+      // Colunas crescem para manter a altura sob o limite de rasterização
+      const maxRows = Math.max(1, Math.floor((MAX_SVG_PX - PAD_Y * 2) / Y_SPACING) + 1);
+      const COLS = Math.max(4, Math.ceil(nodes.length / maxRows));
 
       // Ordena por profundidade (empate: id, estável)
       const ordered = [...nodes].sort((a, b) => {
@@ -130,7 +165,7 @@ export const GraphView: React.FC<GraphViewProps> = ({
       return {
         layout: coords,
         width: (COLS - 1) * X_SPACING + PAD_X * 2,
-        height: Math.max(520, (rows - 1) * Y_SPACING + PAD_Y * 2),
+        height: Math.min(MAX_SVG_PX, Math.max(520, (rows - 1) * Y_SPACING + PAD_Y * 2)),
       };
     }
 
@@ -146,8 +181,8 @@ export const GraphView: React.FC<GraphViewProps> = ({
     const PAD_X = 100;
     const maxCol = Math.max(...Array.from(groups.values()).map((g) => g.length));
 
-    const w = Math.max(900, maxDepth * X_SPACING + PAD_X * 2);
-    const h = Math.max(520, maxCol * Y_SPACING + 120);
+    const w = Math.min(MAX_SVG_PX, Math.max(900, maxDepth * X_SPACING + PAD_X * 2));
+    const h = Math.min(MAX_SVG_PX, Math.max(520, maxCol * Y_SPACING + 120));
 
     groups.forEach((ids, depth) => {
       const x = depth * X_SPACING + PAD_X;
@@ -202,6 +237,14 @@ export const GraphView: React.FC<GraphViewProps> = ({
           </span>
         </div>
       </div>
+
+      {/* Aviso de amostragem — o mapa nunca renderiza o acervo inteiro */}
+      {omitted > 0 && (
+        <div className="px-6 py-2.5 border-b border-slate-400/10 bg-amber-500/[0.06] text-[11px] text-amber-200/90 font-medium">
+          Mostrando {nodes.length} de {allNodes.length} unidades (trilha ativa, selecionada e em
+          progresso primeiro). Filtre por domínio para ver um mapa completo.
+        </div>
+      )}
 
       {/* Filtro por domínio */}
       {domains.length > 1 && onSelectDomain && (

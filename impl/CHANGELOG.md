@@ -1,5 +1,13 @@
 # Changelog - EngineeringOS
 
+## [v3.6.0] - 2026-07-30
+### Fixed
+- **Tela preta no mapa de conhecimento** (reportado pelo usuário ao responder um desafio): com o filtro em "Todos", o SVG era gerado com **63.580 px de altura** (1.814 nós em serpentina), muito acima do limite de rasterização dos navegadores (~16k px) — o resultado era uma área preta e ~6s de render. O layout agora respeita `MAX_SVG_PX = 11.000` (colunas crescem para caber) e renderiza no máximo `MAX_RENDERED_NODES = 320` nós, priorizando trilha ativa → selecionado → em progresso → restante, com aviso explícito de amostragem na interface.
+- **Overhead de ~2s em TODA requisição** (afetava a plataforma inteira): os clientes usavam `localhost`, que no Windows resolve primeiro para o IPv6 `::1`; como o servidor escuta em IPv4, cada chamada esperava o timeout antes do fallback. Medido: `localhost` 2,020s × `127.0.0.1` 0,002s — **1000× mais lento**. Endereço da API centralizado em `dashboard/src/api.ts` (com override por `VITE_API_BASE`) e fixado em `127.0.0.1`.
+
+### Added
+- **Agente Impontuality** (`agents/impontuality/`): aprendiz sintético que estuda todas as trilhas e funciona como QA autônomo, com "HD" de memória persistente (`memory/`) que evolui entre sessões — identidade/XP, respostas aprendidas, histórico completo de episódios, desempenho por estratégia (bandit ε-greedy) e achados de plataforma. Acompanha `analyze.py`, que cruza a experiência do aprendiz com o acervo real (SQLite) e a telemetria do servidor.
+
 ## [v3.5.0] - 2026-07-20
 ### Added
 - **P9 — Validação Objetiva (emenda constitucional)**: a plataforma agora é autônoma e honesta sem professores. O servidor clampa toda evidência de cliente a peso 0.40 (auto-estudo) — o aluno não escolhe mais o próprio peso; a maestria por auto-estudo trava em `SELF_STUDY_MASTERY_CAP = 0.60`; só evidência objetiva (≥ 0.60, hoje exclusivamente o auto-grader do CCE; futuramente revisores humanos registrados) destrava a validação (85%). Evidência 0.40–0.60 passa a `pending` (contested fica reservado a disputas de revisores) e move a maestria sob o teto.
