@@ -46,8 +46,18 @@ python agents/impontuality/agent.py --report         # lê o HD e mostra a evolu
 
 ## O que ele já descobriu
 
+- **Deadlock estrutural do aprendizado**: `mbas.1-2-add-whole-numbers` com 23
+  evidências objetivas validadas e maestria **0.000**. O `prereq_factor` era o
+  produto das maestrias dos pré-requisitos, então um único pré-requisito zerado
+  anulava todo aprendizado — para sempre. Nenhum teste unitário pegaria: cada
+  função estava correta isoladamente. Corrigido com piso (spec v3.4.0).
 - **Overhead de ~2s em toda requisição** (resolução IPv6 de `localhost` no Windows
   contra servidor IPv4) — degradava a plataforma inteira; corrigido usando `127.0.0.1`.
-- **KUs sem desafio objetivo** ficam presas no teto de 60% do P9 — o agente mede
-  exatamente quantas e em quais domínios.
+- **Sessão de estudo expirando em 15 min** sem aviso (38 respostas 401 numa sessão).
+- **1.061 KUs sem desafio objetivo**, presas no teto de 60% do P9 — o mapa exato
+  dessa lacuna virou a prioridade nº 1 do roadmap e levou ao extrator de
+  exercícios de fim de capítulo (`tools/openstax_chapter_exercises.py`).
 - **KUs sem material de estudo** — lacunas de conteúdo por domínio.
+
+Os achados ficam em `memory/findings.jsonl` com severidade, tipo e contexto —
+é o log de QA que sustenta o [brainstorm](../../../META/BRAINSTORM_2026-07.md).
