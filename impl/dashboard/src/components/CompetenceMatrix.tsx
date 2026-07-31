@@ -103,8 +103,9 @@ export const CompetenceMatrix: React.FC<CompetenceMatrixProps> = ({
         </div>
       </div>
 
-      {/* Grid de cards */}
-      <div className="p-5">
+      {/* Grid de cards — janela com rolagem interna: sem limite de altura o
+          painel cresce milhares de px e o backdrop-filter falha (área preta). */}
+      <div className="p-5 overflow-y-auto" style={{ maxHeight: 620 }}>
         {filtered.length === 0 ? (
           <div className="text-slate-500 text-xs text-center py-10">
             Nenhuma unidade neste filtro.

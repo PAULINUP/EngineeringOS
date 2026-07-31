@@ -95,9 +95,13 @@ body {
 
 /* Panels */
 .panel {
-  background: var(--bg-panel);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /* Fundo sólido o bastante para dispensar backdrop-filter forte: em painéis
+     altos o desfoque de fundo estoura o compositor no Windows e a área é
+     pintada de preto. contain: paint isola a pintura de cada painel. */
+  background: rgba(13, 18, 33, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  contain: paint;
   border: 1px solid var(--stroke);
   border-radius: 20px;
   box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);

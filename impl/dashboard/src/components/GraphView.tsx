@@ -48,9 +48,13 @@ const RING_R = 26;
 const RING_C = 2 * Math.PI * RING_R;
 
 // Limites de rasterização: navegadores falham (área preta) em superfícies
-// acima de ~16k px, e o custo de render cresce linearmente com os nós.
-const MAX_SVG_PX = 11000;
-const MAX_RENDERED_NODES = 320;
+// grandes, e o custo de render cresce linearmente com os nós. O mapa rola
+// dentro de uma janela de altura fixa (MAP_VIEWPORT_PX), então um SVG mais
+// baixo não perde informação — só evita que o painel (que usa backdrop-filter)
+// cresça a ponto de estourar o compositor e ficar preto.
+const MAX_SVG_PX = 6000;
+const MAX_RENDERED_NODES = 240;
+const MAP_VIEWPORT_PX = 560;
 
 export const GraphView: React.FC<GraphViewProps> = ({
   nodes: allNodes,
@@ -212,7 +216,7 @@ export const GraphView: React.FC<GraphViewProps> = ({
   };
 
   return (
-    <div className="panel overflow-hidden flex flex-col h-full min-h-[560px]">
+    <div className="panel overflow-hidden flex flex-col">
       {/* Header do card */}
       <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-slate-400/10">
         <div className="flex items-center gap-2.5">
@@ -275,7 +279,9 @@ export const GraphView: React.FC<GraphViewProps> = ({
         </div>
       )}
 
-      <div className="flex-1 overflow-auto relative">
+      {/* Janela de altura fixa: o mapa rola por dentro. Sem isso o painel cresce
+          milhares de px e o backdrop-filter falha, pintando a área de preto. */}
+      <div className="overflow-auto relative" style={{ height: MAP_VIEWPORT_PX }}>
         {nodes.length === 0 ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
             <div className="w-10 h-10 border-[3px] border-violet-500/70 border-t-transparent rounded-full animate-spin" />
