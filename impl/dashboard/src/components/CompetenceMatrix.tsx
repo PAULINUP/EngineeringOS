@@ -134,7 +134,7 @@ export const CompetenceMatrix: React.FC<CompetenceMatrixProps> = ({
                 >
                   {/* brilho de fundo para validadas */}
                   {isValidated && (
-                    <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-emerald-500/10 blur-2xl pointer-events-none" />
+                    <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(60% 60% at 100% 0%, rgba(16,185,129,0.10), transparent 70%)" }} />
                   )}
 
                   <div className="flex items-start justify-between gap-2 mb-1.5">

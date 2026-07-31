@@ -36,52 +36,35 @@ body {
   overflow-x: hidden;
 }
 
-/* Aurora ambient background */
+/* Aurora ambient background.
+   Gradientes radiais puros — SEM filter: blur, SEM animação de transform e SEM
+   will-change. Elementos grandes desfocados e animados forçam camadas de GPU
+   enormes; quando o compositor falha em recompô-las (Windows + drivers de vídeo
+   variados, especialmente ao re-renderizar a árvore inteira, como na troca de
+   aluno) a janela inteira é pintada de preto. Um gradiente radial já entrega o
+   mesmo esfumaçado, de graça. */
 .aurora {
   position: fixed;
   inset: 0;
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
-}
-.aurora::before,
-.aurora::after {
-  content: "";
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(80px);
-  opacity: 0.35;
-  will-change: transform;
-  transform: translateZ(0);
-}
-.aurora::before {
-  width: 640px; height: 640px;
-  left: -160px; top: -220px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.55), transparent 65%);
-  animation: drift 26s ease-in-out infinite alternate;
-}
-.aurora::after {
-  width: 560px; height: 560px;
-  right: -140px; bottom: -200px;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.35), transparent 65%);
-  animation: drift 32s ease-in-out infinite alternate-reverse;
-}
-@keyframes drift {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to   { transform: translate3d(80px, 60px, 0) scale(1.15); }
+  background:
+    radial-gradient(60% 55% at 8% 0%, rgba(139, 92, 246, 0.20), transparent 70%),
+    radial-gradient(55% 50% at 96% 100%, rgba(34, 211, 238, 0.13), transparent 70%);
 }
 
-/* Subtle grid overlay */
+/* Subtle grid overlay — sem mask-image (também força camada de composição) */
 .grid-overlay {
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
   background-size: 44px 44px;
-  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%);
+  opacity: 0.5;
 }
 
 /* Typography */
@@ -228,9 +211,12 @@ body {
 }
 .animate-toast-in { animation: toast-in 0.3s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
+/* Pulso das unidades dominadas: opacidade + raio, sem filter.
+   `filter: drop-shadow` animado em loop cria uma camada de GPU por nó — com
+   dezenas de nós validados isso vira uma tempestade de recomposição. */
 @keyframes pulse-glow {
-  0%, 100% { filter: drop-shadow(0 0 3px rgba(52, 211, 153, 0.35)); }
-  50%      { filter: drop-shadow(0 0 14px rgba(52, 211, 153, 0.8)); }
+  0%, 100% { opacity: 0.30; }
+  50%      { opacity: 0.85; }
 }
 .pulse-emerald { animation: pulse-glow 3s ease-in-out infinite; }
 

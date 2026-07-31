@@ -314,10 +314,8 @@ export const GraphView: React.FC<GraphViewProps> = ({
                 <stop offset="0%" stopColor="rgba(51,65,85,0.55)" />
                 <stop offset="100%" stopColor="rgba(8,12,24,0.95)" />
               </radialGradient>
-              <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-                <feGaussianBlur stdDeviation="6" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-              </filter>
+              {/* sem filtros SVG: feGaussianBlur por nó é caro e força camadas
+                  de composição — o brilho vem do anel duplo desenhado abaixo */}
             </defs>
 
             {/* Arestas */}
@@ -429,7 +427,6 @@ export const GraphView: React.FC<GraphViewProps> = ({
                     fill={fill}
                     stroke={outline}
                     strokeWidth={isSelected ? 2.5 : 1.5}
-                    style={isDone ? { filter: "url(#softGlow)" } : undefined}
                     className="transition-all duration-300"
                   />
 

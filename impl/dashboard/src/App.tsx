@@ -475,8 +475,14 @@ function App() {
         <section id="overview" className="animate-fade-up">
           <div className="panel relative overflow-hidden px-6 md:px-9 py-7">
             {/* glow decorativo */}
-            <div className="absolute -top-24 -right-16 w-80 h-80 rounded-full bg-violet-600/15 blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-28 left-1/3 w-72 h-72 rounded-full bg-fuchsia-600/10 blur-3xl pointer-events-none" />
+            {/* brilho por gradiente (sem filter: blur, que força camada de GPU) */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(40% 60% at 88% 0%, rgba(124,58,237,0.18), transparent 70%), radial-gradient(35% 55% at 35% 100%, rgba(217,70,239,0.12), transparent 70%)",
+              }}
+            />
 
             <div className="relative flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
               {/* Progress ring */}
@@ -642,7 +648,7 @@ function App() {
       {selectedNode && (
         <div className="fixed inset-0 z-[90] flex justify-end">
           <div
-            className="absolute inset-0 bg-black/55 backdrop-blur-[2px]"
+            className="absolute inset-0 bg-black/60"
             onClick={() => setSelectedNode(null)}
           />
           <div className="relative w-full max-w-[480px] h-full bg-[#0a0f1e] border-l border-slate-400/10 shadow-2xl animate-slide-in-right overflow-y-auto">
@@ -701,7 +707,7 @@ function App() {
 
       {/* ============ MODAL NOVO ESTUDANTE ============ */}
       {showAddLearner && (
-        <div className="fixed inset-0 z-[110] bg-black/60 backdrop-blur-sm flex justify-center items-center p-4">
+        <div className="fixed inset-0 z-[110] bg-black/70 flex justify-center items-center p-4">
           <div className="panel p-7 max-w-sm w-full animate-toast-in">
             <h3 className="font-display text-lg font-bold text-white mb-1 flex items-center gap-2">
               <Users className="w-5 h-5 text-violet-400" /> Novo estudante
