@@ -1,16 +1,22 @@
-version: '3.8'
-
+# Ambiente local completo. Nenhum segredo fica neste arquivo: os valores vêm
+# do .env (veja .env.example) — o compose anterior trazia
+# "JWT_SECRET_KEY=sua-chave-super-secreta-em-producao-mudar" versionado.
 services:
   db:
-    image: postgres:15-alpine
+    image: postgres:16-alpine
     environment:
-      POSTGRES_USER: eos_user
-      POSTGRES_PASSWORD: eos_password
-      POSTGRES_DB: engineeringos
+      POSTGRES_USER: ${POSTGRES_USER:-eos_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no .env}
+      POSTGRES_DB: ${POSTGRES_DB:-engineeringos}
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-eos_user} -d ${POSTGRES_DB:-engineeringos}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
 
   redis:
     image: redis:7-alpine
@@ -18,21 +24,31 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
 
   api:
     build: .
-    command: uvicorn src.api:app --host 0.0.0.0 --port 8000 --reload
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
     volumes:
       - .:/app
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=postgresql+asyncpg://eos_user:eos_password@db:5432/engineeringos
-      - REDIS_URL=redis://redis:6379/0
-      - JWT_SECRET_KEY=sua-chave-super-secreta-em-producao-mudar
+      EOS_ENV: ${EOS_ENV:-development}
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-eos_user}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-engineeringos}
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:?defina JWT_SECRET_KEY no .env}
+      EOS_CORS_ORIGINS: ${EOS_CORS_ORIGINS:-http://localhost:5173}
+      SENTRY_DSN: ${SENTRY_DSN:-}
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy      # espera o banco ACEITAR conexão
+      redis:
+        condition: service_healthy
 
   celery_worker:
     build: .
@@ -40,11 +56,15 @@ services:
     volumes:
       - .:/app
     environment:
-      - DATABASE_URL=postgresql+asyncpg://eos_user:eos_password@db:5432/engineeringos
-      - REDIS_URL=redis://redis:6379/0
+      EOS_ENV: ${EOS_ENV:-development}
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-eos_user}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-engineeringos}
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:?defina JWT_SECRET_KEY no .env}
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
 
 volumes:
   postgres_data:

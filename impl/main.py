@@ -10,9 +10,36 @@ from src.integration import integration_router
 from fastapi.staticfiles import StaticFiles
 import os
 
+def _setup_sentry() -> bool:
+    """
+    Observabilidade opcional: sem SENTRY_DSN a aplicação sobe normalmente.
+    Existe porque hoje um erro de render vira tela preta silenciosa e um erro
+    de servidor só aparece se alguém for ler o log.
+    """
+    dsn = os.getenv("SENTRY_DSN", "").strip()
+    if not dsn:
+        return False
+    try:
+        import sentry_sdk
+        from sentry_sdk.integrations.fastapi import FastApiIntegration
+        sentry_sdk.init(
+            dsn=dsn,
+            environment=os.getenv("EOS_ENV", "development"),
+            traces_sample_rate=float(os.getenv("SENTRY_TRACES_SAMPLE_RATE", "0.1")),
+            integrations=[FastApiIntegration()],
+            send_default_pii=False,        # nada de dado pessoal nos eventos
+        )
+        return True
+    except ImportError:
+        print("SENTRY_DSN definido mas sentry-sdk não está instalado — seguindo sem.")
+        return False
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     setup_telemetry()
+    if _setup_sentry():
+        print("Sentry ativo.")
     # Inicializa o banco de dados e cria tabelas no startup
     print("Inicializando banco de dados EngineeringOS...")
     await init_db()
@@ -85,9 +112,40 @@ app.add_middleware(TelemetryMiddleware)
 async def root():
     return {
         "status": "online",
-        "specification": "EngineeringOS v2.0.0",
+        "specification": "EngineeringOS v3.4.0",
         "message": "Welcome to the constitutional learning core."
     }
+
+
+@app.get("/health/live", tags=["health"])
+async def health_live():
+    """Liveness: o processo responde. Não toca o banco de propósito —
+    se o banco cair, reiniciar o container não resolve nada."""
+    return {"status": "alive"}
+
+
+@app.get("/health/ready", tags=["health"])
+async def health_ready():
+    """
+    Readiness: a aplicação consegue MESMO atender — verifica o banco.
+    É o que o orquestrador deve consultar antes de mandar tráfego.
+    """
+    from sqlalchemy import text
+    from src.database import AsyncSessionLocal
+
+    detalhes = {"database": "unknown"}
+    try:
+        async with AsyncSessionLocal() as session:
+            await session.execute(text("SELECT 1"))
+            kus = await session.execute(text("SELECT COUNT(*) FROM knowledge_units"))
+            detalhes["database"] = "ok"
+            detalhes["knowledge_units"] = kus.scalar_one()
+    except Exception as e:  # noqa: BLE001
+        detalhes["database"] = "erro"
+        detalhes["detail"] = str(e)[:200]
+        return JSONResponse(status_code=503, content={"status": "not_ready", **detalhes})
+
+    return {"status": "ready", "environment": os.getenv("EOS_ENV", "development"), **detalhes}
 
 # Serve React Dashboard from FastAPI (for Railway)
 frontend_path = os.path.join(os.path.dirname(__file__), "dashboard", "dist")

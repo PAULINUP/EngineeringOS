@@ -19,3 +19,5 @@ test_integration.db-journal
 .pytest_cache/
 backups/
 *.db.antes-de-restaurar-*
+.env
+ensaio_migracao.db
