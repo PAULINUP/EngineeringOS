@@ -135,6 +135,11 @@ class EvidenceRecord(Base):
     )
     type: Mapped[str] = mapped_column(String(50), nullable=False)  # artifact, explanation, solution, decision, benchmark
     artifact_hash: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    # Origem da evidência (ex.: "challenge:<uuid>"). A agregação usa isto para
+    # NÃO contar duas vezes o mesmo exercício: repetir a mesma questão não é
+    # prova nova de competência — o agente chegou a 100% com 60 evidências
+    # vindas de apenas alguns desafios repetidos.
+    source_ref: Mapped[Optional[str]] = mapped_column(String(120), nullable=True, index=True)
     reviewers: Mapped[Any] = mapped_column(JSON, nullable=False, default=list)
     source_weight: Mapped[float] = mapped_column(Float, nullable=False, default=0.4)
     reviewer_agreement: Mapped[float] = mapped_column(Float, nullable=False, default=1.0)

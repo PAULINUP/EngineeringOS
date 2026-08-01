@@ -53,6 +53,7 @@ class EvidenceSubmit(BaseModel):
     reviewer_agreement: float = Field(1.0, ge=0.0, le=1.0)
     recency_factor: float = Field(1.0, ge=0.0, le=1.0)
     reviewers: List[Dict[str, Any]] = Field(default=[], max_length=10)
+    source_ref: Optional[str] = Field(None, max_length=120)
 
     @field_validator('source_weight', 'reviewer_agreement', 'recency_factor')
     @classmethod
@@ -320,6 +321,7 @@ async def submit_evidence(
         recency_factor=data.recency_factor,
         confidence=conf,
         reviewers=data.reviewers,
+        source_ref=data.source_ref,
         status=status
     )
     db.add(record)
@@ -337,10 +339,28 @@ async def submit_evidence(
             )
         )
         all_evs = ev_result.scalars().all()
-        ev_list = [
-            {"source_weight": e.source_weight, "reviewer_agreement": e.reviewer_agreement, "recency_factor": e.recency_factor}
-            for e in all_evs
-        ]
+        # P10 — Diversidade de evidência: repetir o MESMO exercício não é prova
+        # nova. Fica só a melhor evidência por origem distinta; evidências sem
+        # origem declarada (auto-estudo) contam individualmente.
+        melhor_por_origem: Dict[str, Any] = {}
+        ev_list = []
+        for e in all_evs:
+            if e.source_ref:
+                atual = melhor_por_origem.get(e.source_ref)
+                if atual is None or e.confidence > atual.confidence:
+                    melhor_por_origem[e.source_ref] = e
+            else:
+                ev_list.append({
+                    "source_weight": e.source_weight,
+                    "reviewer_agreement": e.reviewer_agreement,
+                    "recency_factor": e.recency_factor,
+                })
+        for e in melhor_por_origem.values():
+            ev_list.append({
+                "source_weight": e.source_weight,
+                "reviewer_agreement": e.reviewer_agreement,
+                "recency_factor": e.recency_factor,
+            })
         conf_agg = cognitive_engine.aggregate_evidence_confidence(ev_list)
         
         # Carrega pré-requisitos para computar delta e delta factor
@@ -842,6 +862,7 @@ async def attempt_challenge(
                     "reviewer_type": "machine",
                     "verdict": "accept",
                 }],
+                source_ref=f"challenge:{challenge.id}",
             ),
             db=db,
             # Chamada interna do CCE: peso de benchmark (0.60) não sofre o clamp de cliente

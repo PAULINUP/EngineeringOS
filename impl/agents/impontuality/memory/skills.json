@@ -1,26 +1,38 @@
 {
   "memoria": {
-    "tries": 156,
-    "hits": 156
+    "tries": 495,
+    "hits": 495
   },
   "aritmetica": {
-    "tries": 280,
-    "hits": 23
+    "tries": 462,
+    "hits": 28
   },
   "extenso": {
-    "tries": 81,
-    "hits": 1
+    "tries": 334,
+    "hits": 6
   },
   "arredondamento": {
-    "tries": 89,
-    "hits": 3
+    "tries": 119,
+    "hits": 4
   },
   "ultimo_numero": {
-    "tries": 549,
+    "tries": 1694,
     "hits": 5
   },
   "soma_numeros": {
-    "tries": 1241,
-    "hits": 19
+    "tries": 2264,
+    "hits": 36
+  },
+  "potencia": {
+    "tries": 451,
+    "hits": 47
+  },
+  "algebra": {
+    "tries": 190,
+    "hits": 4
+  },
+  "divisao_par": {
+    "tries": 9,
+    "hits": 8
   }
 }

@@ -1,8 +1,8 @@
 {
   "name": "Impontuality",
   "born_at": "2026-07-31T02:16:03.864036+00:00",
-  "generation": 6,
-  "xp": 4259,
+  "generation": 10,
+  "xp": 11715,
   "sessions": [
     {
       "generation": 1,
@@ -1277,13 +1277,185 @@
         "avg_latency": 0.232,
         "max_latency": 4.651
       }
+    },
+    {
+      "generation": 7,
+      "started_at": "2026-08-01T02:39:21.736897+00:00",
+      "studied": 60,
+      "attempts": 765,
+      "correct": 87,
+      "kus_validated": 8,
+      "missions": [
+        {
+          "mission": "Matemática Básica (Prealgebra)",
+          "id": "mission.mbas.v1",
+          "planned": 60,
+          "attempts": 765,
+          "correct": 87,
+          "validated": 8,
+          "seconds": 392.0
+        }
+      ],
+      "by_domain": {
+        "matematica_basica": {
+          "studied": 60,
+          "attempts": 765,
+          "correct": 87,
+          "validated": 8
+        }
+      },
+      "strategy_usage": {
+        "potencia": 134,
+        "soma_numeros": 228,
+        "ultimo_numero": 241,
+        "extenso": 58,
+        "algebra": 46,
+        "arredondamento": 6,
+        "aritmetica": 43,
+        "divisao_par": 9
+      },
+      "ended_at": "2026-08-01T02:45:54.497673+00:00",
+      "telemetry": {
+        "requests": 895,
+        "avg_latency": 0.437,
+        "max_latency": 3.837
+      }
+    },
+    {
+      "generation": 8,
+      "started_at": "2026-08-01T02:54:39.207232+00:00",
+      "studied": 60,
+      "attempts": 743,
+      "correct": 87,
+      "kus_validated": 12,
+      "missions": [
+        {
+          "mission": "Matemática Básica (Prealgebra)",
+          "id": "mission.mbas.v1",
+          "planned": 60,
+          "attempts": 743,
+          "correct": 87,
+          "validated": 12,
+          "seconds": 348.5
+        }
+      ],
+      "by_domain": {
+        "matematica_basica": {
+          "studied": 60,
+          "attempts": 743,
+          "correct": 87,
+          "validated": 12
+        }
+      },
+      "strategy_usage": {
+        "potencia": 84,
+        "ultimo_numero": 237,
+        "soma_numeros": 208,
+        "memoria": 87,
+        "algebra": 38,
+        "extenso": 50,
+        "aritmetica": 33,
+        "arredondamento": 6
+      },
+      "ended_at": "2026-08-01T03:00:28.314561+00:00",
+      "telemetry": {
+        "requests": 873,
+        "avg_latency": 0.399,
+        "max_latency": 2.034
+      }
+    },
+    {
+      "generation": 9,
+      "started_at": "2026-08-01T03:00:28.883221+00:00",
+      "studied": 60,
+      "attempts": 743,
+      "correct": 87,
+      "kus_validated": 14,
+      "missions": [
+        {
+          "mission": "Matemática Básica (Prealgebra)",
+          "id": "mission.mbas.v1",
+          "planned": 60,
+          "attempts": 743,
+          "correct": 87,
+          "validated": 14,
+          "seconds": 353.8
+        }
+      ],
+      "by_domain": {
+        "matematica_basica": {
+          "studied": 60,
+          "attempts": 743,
+          "correct": 87,
+          "validated": 14
+        }
+      },
+      "strategy_usage": {
+        "potencia": 85,
+        "soma_numeros": 208,
+        "ultimo_numero": 237,
+        "memoria": 87,
+        "algebra": 38,
+        "extenso": 49,
+        "aritmetica": 33,
+        "arredondamento": 6
+      },
+      "ended_at": "2026-08-01T03:06:23.110711+00:00",
+      "telemetry": {
+        "requests": 873,
+        "avg_latency": 0.404,
+        "max_latency": 2.177
+      }
+    },
+    {
+      "generation": 10,
+      "started_at": "2026-08-01T03:14:28.060643+00:00",
+      "studied": 60,
+      "attempts": 743,
+      "correct": 87,
+      "kus_validated": 6,
+      "missions": [
+        {
+          "mission": "Matemática Básica (Prealgebra)",
+          "id": "mission.mbas.v1",
+          "planned": 60,
+          "attempts": 743,
+          "correct": 87,
+          "validated": 6,
+          "seconds": 361.7
+        }
+      ],
+      "by_domain": {
+        "matematica_basica": {
+          "studied": 60,
+          "attempts": 743,
+          "correct": 87,
+          "validated": 6
+        }
+      },
+      "strategy_usage": {
+        "potencia": 80,
+        "soma_numeros": 207,
+        "ultimo_numero": 239,
+        "memoria": 87,
+        "algebra": 38,
+        "extenso": 49,
+        "aritmetica": 37,
+        "arredondamento": 6
+      },
+      "ended_at": "2026-08-01T03:20:30.357180+00:00",
+      "telemetry": {
+        "requests": 873,
+        "avg_latency": 0.414,
+        "max_latency": 3.067
+      }
     }
   ],
   "lifetime": {
-    "studied": 2189,
-    "attempts": 2396,
-    "correct": 207,
-    "validated_kus": 1
+    "studied": 2429,
+    "attempts": 5390,
+    "correct": 555,
+    "validated_kus": 41
   },
-  "accuracy_lifetime": 0.0864
+  "accuracy_lifetime": 0.103
 }

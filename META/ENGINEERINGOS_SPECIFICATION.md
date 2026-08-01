@@ -69,6 +69,7 @@ Três teses fundadoras:
 - **P6 — Proveniência total.** Toda KU e toda evidência carregam fonte, versão e trilha de auditoria.
 - **P7 — IA é colaboradora subordinada.** Saída de IA tem peso de fonte fixo e inferior a padrões e consenso de especialistas.
 - **P8 — Falsificabilidade.** Toda fórmula desta especificação é hipótese experimental sujeita à Parte X (Validação).
+- **P10 — Diversidade de Evidência.** Repetir o mesmo exercício não é prova nova. A agregação (Definição 2) considera **uma evidência por origem distinta** (`source_ref`), mantendo a de maior confiança. Consequência prática: acertar o mesmo desafio infinitas vezes satura a maestria em 0.60 e nunca valida; validar exige **≥ 3 exercícios distintos** (1 − 0.4³ = 0.936 > θ). Descoberto pelo agente Impontuality, que atingiu 100% de maestria com 60 evidências vindas de poucos desafios repetidos.
 - **P9 — Validação Objetiva.** Nenhum estado de competência cruza o teto de auto-estudo (0.60) sem ao menos uma evidência **objetiva**: peso ≥ 0.60, gerada por processo verificável do sistema (correção automática do CCE) ou por revisor humano registrado. Evidência submetida por cliente é sempre clampada a peso 0.40 pelo servidor — o aluno nunca escolhe o próprio peso. Auto-estudo pratica; só verificação valida.
 
 ---
