@@ -1,11 +1,31 @@
+# Ambientes locais — a imagem instala as dependências a partir do requirements
 __pycache__/
 *.pyc
+*.pyo
 venv/
 .venv/
+node_modules/
+dashboard/node_modules/
+dashboard/.vite/
+alembic/versions/__pycache__/
+
+# Bancos e backups locais: em produção o banco é o PostgreSQL gerenciado.
+# Enviar o .db local sobrescreveria dados e levaria conteúdo de desenvolvimento.
 *.db
+*.db-journal
+*.db.bak-*
+*.db.antes-de-restaurar-*
+backups/
+memory_dumps/
+
+# Segredos e logs
+.env
+*.log
+
+# Desenvolvimento
 .git/
 .gitignore
-node_modules/
-memory_dumps/
+.pytest_cache/
+tests/
 *.bat
-alembic/versions/__pycache__/
+agents/impontuality/memory/
