@@ -9,11 +9,10 @@ import {
   GraduationCap,
   Hexagon,
   Layers,
-  Plus,
+  LogOut,
   Route,
   Sparkles,
   Target,
-  Users,
   X,
 } from "lucide-react";
 
@@ -22,6 +21,7 @@ import { TrilhaPanel } from "./components/ULAOptimizer";
 import { CCEChallenge } from "./components/CCEChallenge";
 import { CompetenceMatrix } from "./components/CompetenceMatrix";
 import { MaterialViewer } from "./components/MaterialViewer";
+import { Login, type Sessao } from "./components/Login";
 
 import { API_BASE } from "./api";
 
@@ -95,6 +95,15 @@ function rankFor(progress: number): string {
 }
 
 function App() {
+  // Sessão real: o aluno é quem está autenticado, não uma escolha de lista.
+  const [sessao, setSessao] = useState<Sessao | null>(() => {
+    try {
+      const bruto = localStorage.getItem("eos_sessao");
+      return bruto ? (JSON.parse(bruto) as Sessao) : null;
+    } catch {
+      return null;
+    }
+  });
   const [learners, setLearners] = useState<Learner[]>([]);
   const [selectedLearnerId, setSelectedLearnerId] = useState<string>("");
   const [missions, setMissions] = useState<Mission[]>([]);
@@ -107,14 +116,12 @@ function App() {
   const [selectedNode, setSelectedNode] = useState<KNode | null>(null);
 
   const [selectedDomain, setSelectedDomain] = useState<string>("all");
-  const [showAddLearner, setShowAddLearner] = useState(false);
-  const [newLearnerName, setNewLearnerName] = useState("");
   const [notification, setNotification] = useState<{ type: string; msg: string } | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   useEffect(() => {
-    fetchInitialData();
-  }, []);
+    if (sessao) fetchInitialData();
+  }, [sessao?.learner_id]);
 
   useEffect(() => {
     if (selectedLearnerId) {
@@ -129,31 +136,15 @@ function App() {
 
   const fetchInitialData = async () => {
     try {
-      const tokenRes = await fetch(`${API_BASE}/token`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username: "dev", password: "dev" }),
-      });
-      const tokenData = await tokenRes.json();
-      localStorage.setItem("eos_token", tokenData.access_token);
-      const authHeaders = { Authorization: `Bearer ${tokenData.access_token}` };
+      if (!sessao) return;
+      localStorage.setItem("eos_token", sessao.access_token);
+      const authHeaders = { Authorization: `Bearer ${sessao.access_token}` };
 
       const lRes = await fetch(`${API_BASE}/learners`, { headers: authHeaders });
       const lData = await lRes.json();
       setLearners(lData);
 
-      if (lData.length > 0) {
-        setSelectedLearnerId(lData[0].id);
-      } else {
-        const createRes = await fetch(`${API_BASE}/learners`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", ...authHeaders },
-          body: JSON.stringify({ name: "Constitutional Learner" }),
-        });
-        const newL = await createRes.json();
-        setLearners([newL]);
-        setSelectedLearnerId(newL.id);
-      }
+      setSelectedLearnerId(sessao.learner_id);
 
       const mRes = await fetch(`${API_BASE}/missions`);
       const mData = await mRes.json();
@@ -220,30 +211,6 @@ function App() {
     } catch (e) {
       console.error("Erro no polling:", e);
       setIsOptimizing(false);
-    }
-  };
-
-  const handleCreateLearner = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newLearnerName.trim()) return;
-
-    try {
-      const res = await fetch(`${API_BASE}/learners`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("eos_token")}`,
-        },
-        body: JSON.stringify({ name: newLearnerName }),
-      });
-      const data = await res.json();
-      setLearners((prev) => [...prev, data]);
-      setSelectedLearnerId(data.id);
-      setNewLearnerName("");
-      setShowAddLearner(false);
-      showToast("success", `Estudante "${data.name}" criado!`);
-    } catch (err) {
-      showToast("error", "Erro ao criar estudante");
     }
   };
 
@@ -362,6 +329,21 @@ function App() {
   const progressPct = Math.round(stats.avgMastery * 100);
   const ring = 2 * Math.PI * 30;
 
+  // Sem sessão, a única tela possível é a de entrada
+  if (!sessao) {
+    return <Login onEntrar={setSessao} />;
+  }
+
+  const sair = () => {
+    localStorage.removeItem("eos_sessao");
+    localStorage.removeItem("eos_token");
+    setSessao(null);
+    setSelectedLearnerId("");
+    setNodes([]);
+    setEdges([]);
+    setActivePath([]);
+  };
+
   return (
     <div className="min-h-screen flex text-slate-200">
       <div className="aurora" />
@@ -430,41 +412,50 @@ function App() {
         </nav>
 
         <div className="mt-auto flex flex-col gap-3">
-          {/* Estudante */}
-          <div>
-            <label className="block text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-2">
-              Estudante
-            </label>
-            <div className="relative">
-              <select
-                className="input-eos w-full text-[13px] font-semibold appearance-none px-3 py-2.5 pr-8 cursor-pointer"
-                value={selectedLearnerId}
-                onChange={(e) => setSelectedLearnerId(e.target.value)}
-              >
-                <option value="">Selecionar…</option>
-                {learners.map((l) => (
-                  <option key={l.id} value={l.id}>
-                    {l.name}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="w-4 h-4 text-slate-500 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
-            </div>
+          {/* Conta ativa: o aluno é quem está autenticado — não há mais troca
+              de aluno pela interface, porque o progresso pertence ao token. */}
+          <div className="card p-3 hover:transform-none">
+            <p className="text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-1.5">
+              Conta
+            </p>
+            <p className="text-[13px] font-bold text-white truncate" title={sessao.name}>
+              {sessao.name}
+            </p>
+            <p className="text-[10px] text-slate-500 capitalize">{sessao.role}</p>
           </div>
 
-          <button
-            onClick={() => setShowAddLearner(true)}
-            className="btn-ghost flex items-center justify-center gap-1.5 text-xs font-bold px-3 py-2.5"
-          >
-            <Plus className="w-3.5 h-3.5" /> Novo estudante
-          </button>
+          {sessao.role === "admin" && (
+            <>
+              <div className="relative">
+                <select
+                  className="input-eos w-full text-[13px] font-semibold appearance-none px-3 py-2.5 pr-8 cursor-pointer"
+                  value={selectedLearnerId}
+                  onChange={(e) => setSelectedLearnerId(e.target.value)}
+                  title="Visão de administrador"
+                >
+                  {learners.map((l) => (
+                    <option key={l.id} value={l.id}>
+                      {l.name}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-4 h-4 text-slate-500 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
+              <button
+                onClick={handleTriggerCurriculumSeed}
+                className="flex items-center justify-center gap-1.5 text-[11px] font-semibold text-slate-500 hover:text-slate-300 transition py-1.5"
+                title="Recompila os seeds .eos e repovoa o banco"
+              >
+                <Database className="w-3.5 h-3.5" /> Reset / Seed do currículo
+              </button>
+            </>
+          )}
 
           <button
-            onClick={handleTriggerCurriculumSeed}
-            className="flex items-center justify-center gap-1.5 text-[11px] font-semibold text-slate-500 hover:text-slate-300 transition py-1.5"
-            title="Recompila os seeds .eos e repovoa o banco"
+            onClick={sair}
+            className="btn-ghost flex items-center justify-center gap-1.5 text-xs font-bold px-3 py-2.5"
           >
-            <Database className="w-3.5 h-3.5" /> Reset / Seed do currículo
+            <LogOut className="w-3.5 h-3.5" /> Sair
           </button>
         </div>
       </aside>
@@ -705,46 +696,6 @@ function App() {
         </div>
       )}
 
-      {/* ============ MODAL NOVO ESTUDANTE ============ */}
-      {showAddLearner && (
-        <div className="fixed inset-0 z-[110] bg-black/70 flex justify-center items-center p-4">
-          <div className="panel p-7 max-w-sm w-full animate-toast-in">
-            <h3 className="font-display text-lg font-bold text-white mb-1 flex items-center gap-2">
-              <Users className="w-5 h-5 text-violet-400" /> Novo estudante
-            </h3>
-            <p className="text-xs text-slate-400 mb-5">
-              O motor cognitivo cria um estado de competência zerado para cada unidade do grafo.
-            </p>
-            <form onSubmit={handleCreateLearner} className="space-y-4">
-              <div>
-                <label className="block text-[10px] uppercase tracking-wider text-slate-500 font-bold mb-1.5">
-                  Nome completo
-                </label>
-                <input
-                  type="text"
-                  className="input-eos w-full px-3.5 py-2.5 text-sm"
-                  placeholder="Ex: Alan Turing"
-                  value={newLearnerName}
-                  onChange={(e) => setNewLearnerName(e.target.value)}
-                  autoFocus
-                />
-              </div>
-              <div className="flex justify-end gap-2 pt-1">
-                <button
-                  type="button"
-                  onClick={() => setShowAddLearner(false)}
-                  className="text-xs text-slate-400 hover:text-white font-semibold px-4 py-2.5 rounded-lg hover:bg-white/5 transition"
-                >
-                  Cancelar
-                </button>
-                <button type="submit" className="btn-primary text-xs px-5 py-2.5">
-                  Criar estudante
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

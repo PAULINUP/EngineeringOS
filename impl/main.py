@@ -108,12 +108,17 @@ app.include_router(router, prefix="/api")
 app.include_router(integration_router, prefix="/api/integration")
 app.add_middleware(TelemetryMiddleware)
 
-@app.get("/")
-async def root():
+@app.get("/api/status", tags=["health"])
+async def status():
+    """
+    Identificação da API. Vive sob /api porque a raiz precisa entregar o
+    dashboard: com `@app.get("/")` registrado, a rota vencia o StaticFiles e
+    quem abrisse o site recebia este JSON em vez da interface.
+    """
     return {
         "status": "online",
         "specification": "EngineeringOS v3.4.0",
-        "message": "Welcome to the constitutional learning core."
+        "message": "Welcome to the constitutional learning core.",
     }
 
 
@@ -147,10 +152,20 @@ async def health_ready():
 
     return {"status": "ready", "environment": os.getenv("EOS_ENV", "development"), **detalhes}
 
-# Serve React Dashboard from FastAPI (for Railway)
+# O dashboard é servido pelo próprio backend (mesma origem ⇒ o frontend usa
+# "/api" relativo e não precisa de CORS). Montado por ÚLTIMO para não capturar
+# /api/* nem /health/*, que já estão registrados acima.
 frontend_path = os.path.join(os.path.dirname(__file__), "dashboard", "dist")
 if os.path.isdir(frontend_path):
     app.mount("/", StaticFiles(directory=frontend_path, html=True), name="static")
+else:
+    @app.get("/")
+    async def sem_dashboard():
+        return {
+            "status": "online",
+            "message": "API no ar. Dashboard não compilado — rode "
+                       "'npm run build' em dashboard/ para servi-lo aqui.",
+        }
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
