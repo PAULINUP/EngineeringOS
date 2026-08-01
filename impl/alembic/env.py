@@ -26,7 +26,8 @@ target_metadata = Base.metadata
 
 # A URL vem do ambiente (mesma do app), não do alembic.ini — assim a migração
 # nunca aponta para um banco diferente do que a aplicação usa.
-_db_url = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./engineeringos.db")
+from src.database import normalize_db_url
+_db_url = normalize_db_url(os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./engineeringos.db"))
 config.set_main_option("sqlalchemy.url", _db_url)
 
 # SQLite não suporta ALTER de coluna; batch mode reescreve a tabela.
