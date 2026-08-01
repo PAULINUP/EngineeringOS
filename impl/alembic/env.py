@@ -82,11 +82,12 @@ async def run_async_migrations() -> None:
     """
 
     configuration = config.get_section(config.config_ini_section, {})
-    
-    # Overwrite the URL from the environment variable if present
-    db_url = os.getenv("DATABASE_URL")
-    if db_url:
-        configuration["sqlalchemy.url"] = db_url
+
+    # A URL já foi normalizada no topo deste arquivo (postgresql:// →
+    # postgresql+asyncpg://). Reescrever aqui com o valor CRU do ambiente
+    # desfazia a normalização e o alembic carregava psycopg2, que é síncrono:
+    # foi o que derrubou o primeiro deploy no Railway.
+    configuration["sqlalchemy.url"] = _db_url
 
     connectable = async_engine_from_config(
         configuration,
