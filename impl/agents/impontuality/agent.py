@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import random
 import re
 import time
@@ -51,6 +52,10 @@ FINDINGS_PATH = HD / "findings.jsonl"
 # custa ~2s de timeout por requisição (medido pelo próprio agente).
 API = "http://127.0.0.1:8000/api"
 AGENT_NAME = "Impontuality"
+# Credenciais próprias: a plataforma agora exige identidade real e o agente
+# só escreve no próprio progresso, como qualquer aluno.
+AGENT_EMAIL = os.getenv("IMPONTUALITY_EMAIL", "impontuality@engineeringos.app")
+AGENT_PASSWORD = os.getenv("IMPONTUALITY_PASSWORD", "agente-impontuality-2026")
 
 # Estratégias de resolução disponíveis (evoluem por reforço)
 STRATEGIES = [
@@ -503,6 +508,7 @@ class Platform:
     def __init__(self, hd: MemoryHD):
         self.hd = hd
         self.token: Optional[str] = None
+        self.learner_id: Optional[str] = None
         self.latencies: List[Tuple[str, float]] = []
 
     def call(self, method: str, path: str, payload: dict | None = None,
@@ -540,16 +546,23 @@ class Platform:
                             f"{method} {path} falhou: {e}", {"path": path})
             raise
 
-    def login(self):
-        self.token = self.call("POST", "/token",
-                               {"username": "impontuality", "password": "agent"})["access_token"]
-
-    def ensure_learner(self) -> str:
-        learners = self.call("GET", "/learners", auth=True)
-        for l in learners:
-            if l["name"] == AGENT_NAME:
-                return l["id"]
-        return self.call("POST", "/learners", {"name": AGENT_NAME}, auth=True)["id"]
+    def login(self) -> str:
+        """
+        Autentica com credenciais próprias e devolve o learner_id DO TOKEN.
+        A identidade dos dados vem do token: o agente só escreve no próprio
+        progresso, como qualquer aluno (regra de autorização por recurso).
+        """
+        credenciais = {"email": AGENT_EMAIL, "password": AGENT_PASSWORD}
+        try:
+            conta = self.call("POST", "/auth/login", credenciais)
+        except Exception:
+            # primeira execução: cria a conta do agente
+            conta = self.call("POST", "/auth/register", {
+                "name": AGENT_NAME, "email": AGENT_EMAIL, "password": AGENT_PASSWORD,
+            })
+        self.token = conta["access_token"]
+        self.learner_id = conta["learner_id"]
+        return self.learner_id
 
 
 # ---------------------------------------------------------------------------
@@ -685,8 +698,7 @@ class Impontuality:
 
     def run(self):
         print(f"=== IMPONTUALITY — geração {self.session['generation']} ===")
-        self.api.login()
-        learner_id = self.api.ensure_learner()
+        learner_id = self.api.login()
         print(f"Learner: {learner_id}")
 
         missions = self.api.call("GET", "/missions")

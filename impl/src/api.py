@@ -120,7 +120,19 @@ async def register(data: RegisterRequest, db: AsyncSession = Depends(get_session
             or_(models.Learner.email == data.email.lower(), models.Learner.name == data.name)
         )
     )
-    if existing.scalars().first():
+    encontrado = existing.scalars().first()
+    if encontrado:
+        # Conta legada (criada antes da autenticação existir): tem nome e
+        # progresso, mas nenhuma credencial. Adotar preserva o histórico —
+        # recusar obrigaria o aluno a recomeçar do zero com outro nome.
+        if encontrado.password_hash is None and encontrado.name == data.name:
+            encontrado.email = data.email.lower()
+            encontrado.password_hash = get_password_hash(data.password)
+            await db.commit()
+            await db.refresh(encontrado)
+            logger.info("Credenciais vinculadas a conta legada",
+                        extra={"learner_id": str(encontrado.id)})
+            return _issue_token(encontrado)
         raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail ou nome.")
 
     learner = models.Learner(
