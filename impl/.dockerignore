@@ -26,6 +26,6 @@ memory_dumps/
 .git/
 .gitignore
 .pytest_cache/
-tests/
+# tests/ (mantidos: leves e úteis para diagnosticar em produção)
 *.bat
 agents/impontuality/memory/

@@ -35,11 +35,33 @@ def _setup_sentry() -> bool:
         return False
 
 
+def _run_migrations() -> None:
+    """
+    Aplica as migrações no boot da própria aplicação.
+    Fica aqui, e não no comando de start da plataforma, porque encadear
+    `alembic upgrade && uvicorn` num startCommand deixa o processo morrer em
+    silêncio se a primeira parte falhar — foi o que aconteceu no Railway: o
+    log terminava na migração e o servidor nunca subia.
+    """
+    try:
+        from alembic import command
+        from alembic.config import Config
+        cfg = Config(os.path.join(os.path.dirname(__file__), "alembic.ini"))
+        command.upgrade(cfg, "head")
+        print("Migrações aplicadas.")
+    except Exception as e:  # noqa: BLE001
+        # Não derruba o processo: sem servidor no ar não há como diagnosticar,
+        # e /health/ready denuncia o estado real do banco de qualquer forma.
+        print(f"AVISO: falha ao aplicar migrações: {e}")
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     setup_telemetry()
     if _setup_sentry():
         print("Sentry ativo.")
+    if os.getenv("EOS_RUN_MIGRATIONS", "1") not in ("0", "false"):
+        _run_migrations()
     # Inicializa o banco de dados e cria tabelas no startup
     print("Inicializando banco de dados EngineeringOS...")
     await init_db()

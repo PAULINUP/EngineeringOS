@@ -30,4 +30,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
 # O app vive em main.py. O CMD anterior apontava para "src.api:app", que não
 # existe (src/api.py define apenas o router) — o container nunca subia.
 # $PORT é injetada por Railway/Heroku; 8000 é o padrão local.
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000} --workers ${WEB_CONCURRENCY:-2} --proxy-headers --forwarded-allow-ips='*'"]
+CMD ["sh", "-c", "exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers --forwarded-allow-ips=*"]
