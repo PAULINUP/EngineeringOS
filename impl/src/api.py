@@ -2,7 +2,7 @@ import datetime
 import logging
 import uuid
 from typing import Any, Dict, List, Optional
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from sqlalchemy import select, delete, and_, or_, func
 from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import BaseModel, Field, field_validator
@@ -20,6 +20,7 @@ from src.security import (
     authorize_learner, token_learner_id, require_admin, IS_PRODUCTION,
 )
 from pydantic import EmailStr
+from src.ratelimit import limite_login, limite_registro, limite_tentativa, limite_escrita
 import httpx
 import asyncio
 
@@ -110,7 +111,8 @@ def _issue_token(learner: models.Learner) -> AuthResponse:
                         name=learner.name, role=learner.role)
 
 
-@router.post("/auth/register", response_model=AuthResponse, status_code=201)
+@router.post("/auth/register", response_model=AuthResponse, status_code=201,
+             dependencies=[Depends(limite_registro)])
 async def register(data: RegisterRequest, db: AsyncSession = Depends(get_session)):
     """Cria a conta do aluno. O e-mail é a identidade; a senha vira hash bcrypt."""
     existing = await db.execute(
@@ -134,7 +136,8 @@ async def register(data: RegisterRequest, db: AsyncSession = Depends(get_session
     return _issue_token(learner)
 
 
-@router.post("/auth/login", response_model=AuthResponse)
+@router.post("/auth/login", response_model=AuthResponse,
+             dependencies=[Depends(limite_login)])
 async def login(data: LoginRequest, db: AsyncSession = Depends(get_session)):
     result = await db.execute(
         select(models.Learner).where(models.Learner.email == data.email.lower())
@@ -207,10 +210,38 @@ async def get_learner_competences(learner_id: uuid.UUID, db: AsyncSession = Depe
     )
     return result.scalars().all()
 
+class Page(BaseModel):
+    """Envelope de listagem paginada."""
+    items: List[Any]
+    total: int
+    limit: int
+    offset: int
+
+
 @router.get("/kus")
-async def list_kus(db: AsyncSession = Depends(get_session)):
-    result = await db.execute(select(models.KnowledgeUnit))
-    return result.scalars().all()
+async def list_kus(
+    db: AsyncSession = Depends(get_session),
+    limit: int = Query(200, ge=1, le=1000, description="itens por página"),
+    offset: int = Query(0, ge=0),
+    domain: Optional[str] = Query(None, max_length=100),
+    search: Optional[str] = Query(None, max_length=120),
+):
+    """
+    Listagem paginada. Sem limite, esta rota devolvia as 1.814 unidades de uma
+    vez — lenta e um vetor fácil de negação de serviço.
+    """
+    base = select(models.KnowledgeUnit)
+    if domain:
+        base = base.where(models.KnowledgeUnit.domain == domain)
+    if search:
+        termo = f"%{search}%"
+        base = base.where(or_(models.KnowledgeUnit.title.ilike(termo),
+                              models.KnowledgeUnit.id.ilike(termo)))
+
+    total = await db.scalar(select(func.count()).select_from(base.subquery()))
+    result = await db.execute(base.order_by(models.KnowledgeUnit.id).limit(limit).offset(offset))
+    return {"items": result.scalars().all(), "total": total or 0,
+            "limit": limit, "offset": offset}
 
 @router.get("/missions")
 async def list_missions(db: AsyncSession = Depends(get_session)):
@@ -352,7 +383,8 @@ async def get_task_result(task_id: str):
     else:
         return {"status": "processing", "task_id": task_id}
 
-@router.post("/evidence", response_model=EvidenceResponse)
+@router.post("/evidence", response_model=EvidenceResponse,
+             dependencies=[Depends(limite_escrita)])
 async def submit_evidence(
     data: EvidenceSubmit, 
     db: AsyncSession = Depends(get_session),
@@ -898,7 +930,8 @@ async def get_ku_challenges(ku_id: str, db: AsyncSession = Depends(get_session))
     )
     return res.scalars().all()
 
-@router.post("/challenges/{challenge_id}/attempt")
+@router.post("/challenges/{challenge_id}/attempt",
+             dependencies=[Depends(limite_tentativa)])
 async def attempt_challenge(
     challenge_id: uuid.UUID,
     data: AttemptRequest,

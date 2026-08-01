@@ -695,7 +695,17 @@ class Impontuality:
             missions = [m for m in missions if m["id"] in wanted]
         print(f"Trilhas a estudar: {len(missions)}")
 
-        all_kus = {k["id"]: k for k in self.api.call("GET", "/kus")}
+        # /kus é paginado: percorre até esgotar (antes devolvia tudo de uma vez)
+        all_kus: Dict[str, dict] = {}
+        offset, limite = 0, 500
+        while True:
+            pagina = self.api.call("GET", f"/kus?limit={limite}&offset={offset}")
+            itens = pagina["items"] if isinstance(pagina, dict) else pagina
+            for k in itens:
+                all_kus[k["id"]] = k
+            if not isinstance(pagina, dict) or offset + limite >= pagina.get("total", 0):
+                break
+            offset += limite
 
         for mi, mission in enumerate(missions, 1):
             required = mission.get("required_kus") or []
