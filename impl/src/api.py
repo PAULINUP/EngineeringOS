@@ -15,7 +15,11 @@ from src.memory_framework import MemoryManager
 from src.integration import mock_webhooks_db
 from src.curriculum_seed import seed_user_curriculum, seed_challenge_bank
 from src.cce import grade_answer, AUTO_GRADED_SOURCE_WEIGHT
-from src.security import verify_token, create_access_token
+from src.security import (
+    verify_token, create_access_token, get_password_hash, verify_password,
+    authorize_learner, token_learner_id, require_admin, IS_PRODUCTION,
+)
+from pydantic import EmailStr
 import httpx
 import asyncio
 
@@ -79,11 +83,90 @@ class TokenRequest(BaseModel):
     username: str
     password: str
 
-@router.post("/token")
-async def login_for_access_token(data: TokenRequest):
-    # Rota de desenvolvimento: aceita qualquer username/password e gera um token JWT
-    token = create_access_token(data={"sub": data.username, "role": "admin"})
-    return {"access_token": token, "token_type": "bearer"}
+class RegisterRequest(BaseModel):
+    name: str = Field(..., min_length=2, max_length=255)
+    email: EmailStr
+    password: str = Field(..., min_length=8, max_length=72)
+
+class LoginRequest(BaseModel):
+    email: EmailStr
+    password: str = Field(..., max_length=72)
+
+class AuthResponse(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    learner_id: uuid.UUID
+    name: str
+    role: str
+
+
+def _issue_token(learner: models.Learner) -> AuthResponse:
+    token = create_access_token(data={
+        "sub": str(learner.id),
+        "learner_id": str(learner.id),
+        "role": learner.role,
+    })
+    return AuthResponse(access_token=token, learner_id=learner.id,
+                        name=learner.name, role=learner.role)
+
+
+@router.post("/auth/register", response_model=AuthResponse, status_code=201)
+async def register(data: RegisterRequest, db: AsyncSession = Depends(get_session)):
+    """Cria a conta do aluno. O e-mail é a identidade; a senha vira hash bcrypt."""
+    existing = await db.execute(
+        select(models.Learner).where(
+            or_(models.Learner.email == data.email.lower(), models.Learner.name == data.name)
+        )
+    )
+    if existing.scalars().first():
+        raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail ou nome.")
+
+    learner = models.Learner(
+        name=data.name,
+        email=data.email.lower(),
+        password_hash=get_password_hash(data.password),
+        role="learner",
+    )
+    db.add(learner)
+    await db.commit()
+    await db.refresh(learner)
+    logger.info("Conta criada", extra={"learner_id": str(learner.id)})
+    return _issue_token(learner)
+
+
+@router.post("/auth/login", response_model=AuthResponse)
+async def login(data: LoginRequest, db: AsyncSession = Depends(get_session)):
+    result = await db.execute(
+        select(models.Learner).where(models.Learner.email == data.email.lower())
+    )
+    learner = result.scalars().first()
+    # Mensagem única para e-mail inexistente e senha errada: não revela quais
+    # e-mails estão cadastrados.
+    if not learner or not verify_password(data.password, learner.password_hash or ""):
+        raise HTTPException(status_code=401, detail="E-mail ou senha inválidos.")
+    if not learner.is_active:
+        raise HTTPException(status_code=403, detail="Conta desativada.")
+    return _issue_token(learner)
+
+
+@router.post("/token", deprecated=True)
+async def login_for_access_token(data: TokenRequest, db: AsyncSession = Depends(get_session)):
+    """
+    Atalho de desenvolvimento. Emite token para um aluno EXISTENTE pelo nome,
+    sem senha — e só fora de produção. Em produção responde 404: use /auth/login.
+    """
+    if IS_PRODUCTION:
+        raise HTTPException(status_code=404, detail="Rota indisponível. Use /auth/login.")
+    result = await db.execute(
+        select(models.Learner).where(models.Learner.name == data.username)
+    )
+    learner = result.scalars().first()
+    if not learner:
+        result = await db.execute(select(models.Learner).order_by(models.Learner.created_at))
+        learner = result.scalars().first()
+    if not learner:
+        raise HTTPException(status_code=404, detail="Nenhum aluno cadastrado.")
+    return _issue_token(learner).model_dump()
 
 @router.post("/learners", response_model=LearnerResponse)
 async def create_learner(
@@ -285,6 +368,11 @@ async def submit_evidence(
     verificáveis (CCE auto-grader = 0.60) ou de revisores humanos registrados
     (funcionalidade futura).
     """
+    # Autorização por recurso: o dono do progresso é quem está no TOKEN.
+    # Antes, `learner_id` vinha do corpo e qualquer autenticado escrevia
+    # competência em nome de qualquer aluno.
+    authorize_learner(token, data.learner_id)
+
     if not token.get("internal"):
         data.source_weight = min(data.source_weight, 0.40)
 
@@ -494,7 +582,7 @@ async def submit_evidence(
 @router.post("/seed")
 async def seed_database(
     db: AsyncSession = Depends(get_session),
-    token: dict = Depends(verify_token)
+    token: dict = Depends(require_admin)
 ):
     """Limpa e popula o banco de dados com a estrutura de exemplo do EngineeringOS (Linear Algebra & ML)."""
     # 1. Limpa tabelas
@@ -734,7 +822,7 @@ async def seed_database(
 @router.post("/seed-curriculum")
 async def seed_curriculum_endpoint(
     db: AsyncSession = Depends(get_session),
-    token: dict = Depends(verify_token)
+    token: dict = Depends(require_admin)
 ):
     """Limpa e popula o banco de dados com a grade curricular de Engenharia de Computação do aluno e os Materiais Base."""
     await db.execute(delete(models.StudyMaterial))
@@ -822,6 +910,8 @@ async def attempt_challenge(
     com peso de benchmark reprodutível (0.60) — o aluno não declara o próprio
     peso. Pela agregação noisy-OR, ~3 desafios distintos corretos cruzam θ=0.85.
     """
+    authorize_learner(token, data.learner_id)
+
     challenge = await db.get(models.Challenge, challenge_id)
     if not challenge:
         raise HTTPException(status_code=404, detail="Desafio não encontrado")
@@ -890,7 +980,7 @@ async def attempt_challenge(
 @router.post("/seed-challenges")
 async def seed_challenges_endpoint(
     db: AsyncSession = Depends(get_session),
-    token: dict = Depends(verify_token),
+    token: dict = Depends(require_admin),
 ):
     """Insere o banco de desafios padrão para as KUs existentes (idempotente)."""
     inserted = await seed_challenge_bank(db)

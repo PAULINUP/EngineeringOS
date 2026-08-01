@@ -39,6 +39,15 @@ class Learner(Base):
     # unique: o cadastro fragmentou em 20 cópias do mesmo aluno, cada uma com
     # um pedaço do progresso. O banco garante a unicidade; a API é idempotente.
     name: Mapped[str] = mapped_column(String(255), nullable=False, unique=True, index=True)
+
+    # Credenciais. Sem isto o learner_id vinha do corpo da requisição e qualquer
+    # pessoa autenticada escrevia progresso em nome de qualquer aluno — o que
+    # tornava todo o modelo de evidência (P2/P9/P10) decorativo.
+    email: Mapped[Optional[str]] = mapped_column(String(255), unique=True, index=True, nullable=True)
+    password_hash: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
+    role: Mapped[str] = mapped_column(String(20), nullable=False, default="learner")  # learner | admin
+    is_active: Mapped[int] = mapped_column(Integer, nullable=False, default=1)
+
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime, default=datetime.datetime.utcnow, nullable=False
     )

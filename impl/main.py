@@ -58,12 +58,22 @@ async def validation_exception_handler(request, exc):
 
 
 # Adiciona middleware de CORS para permitir acesso do React (Vite)
+# CORS restrito por origem. `allow_origins=["*"]` junto com
+# `allow_credentials=True` é proibido pela especificação e faz o navegador
+# aceitar chamadas credenciadas de qualquer site.
+_origins = os.getenv(
+    "EOS_CORS_ORIGINS",
+    "http://localhost:5173,http://127.0.0.1:5173,http://localhost:4173",
+)
+ALLOWED_ORIGINS = [o.strip() for o in _origins.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type", "X-Trace-ID"],
+    max_age=600,
 )
 
 # Registra as rotas da API
