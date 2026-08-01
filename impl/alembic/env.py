@@ -24,6 +24,14 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.models import Base
 target_metadata = Base.metadata
 
+# A URL vem do ambiente (mesma do app), não do alembic.ini — assim a migração
+# nunca aponta para um banco diferente do que a aplicação usa.
+_db_url = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./engineeringos.db")
+config.set_main_option("sqlalchemy.url", _db_url)
+
+# SQLite não suporta ALTER de coluna; batch mode reescreve a tabela.
+_is_sqlite = _db_url.startswith("sqlite")
+
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
@@ -55,7 +63,12 @@ def run_migrations_offline() -> None:
 
 
 def do_run_migrations(connection: Connection) -> None:
-    context.configure(connection=connection, target_metadata=target_metadata)
+    context.configure(
+        connection=connection,
+        target_metadata=target_metadata,
+        render_as_batch=_is_sqlite,   # SQLite não faz ALTER COLUMN
+        compare_type=True,
+    )
 
     with context.begin_transaction():
         context.run_migrations()
