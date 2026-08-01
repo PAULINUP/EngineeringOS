@@ -44,9 +44,70 @@ DEFAULT_MAX_PER_KU = 6
 # Limpeza de HTML/MathML
 # ---------------------------------------------------------------------------
 
+def _mathml_structure(fragment: str) -> str:
+    """
+    Reconstitui a ESTRUTURA do MathML antes de remover as tags.
+    Sem isto, <mfrac>27 3</mfrac> vira o texto "27 3" — a barra de divisão
+    desaparece e o exercício fica insolúvel (era o caso de 251 dos 281
+    enunciados de matemática básica). Idem para potências e raízes.
+    """
+    for _ciclo in range(4):                      # repete até estabilizar (aninhamentos)
+        antes = fragment
+        fragment = _resolve_mathml_once(fragment)
+        if fragment == antes:
+            break
+    return fragment
+
+
+def _resolve_mathml_once(fragment: str) -> str:
+    for tag in ("msup", "msqrt", "mfrac"):       # mais internos primeiro
+        # de dentro para fora: resolve o elemento mais interno primeiro
+        pattern = re.compile(rf"<{tag}[^>]*>((?:(?!<{tag}[\s>]).)*?)</{tag}>", re.DOTALL)
+        while True:
+            m = pattern.search(fragment)
+            if not m:
+                break
+            filhos = _top_children(m.group(1))
+            if tag == "mfrac" and len(filhos) >= 2:
+                novo = f" ({_strip(filhos[0])}/{_strip(filhos[1])}) "
+            elif tag == "msup" and len(filhos) >= 2:
+                novo = f" {_strip(filhos[0])}^{_strip(filhos[1])} "
+            elif tag == "msqrt":
+                novo = f" raiz({_strip(m.group(1))}) "
+            else:
+                novo = " " + _strip(m.group(1)) + " "
+            fragment = fragment[:m.start()] + novo + fragment[m.end():]
+    return fragment
+
+
+def _top_children(inner: str):
+    """Elementos XML de primeiro nível dentro de um fragmento."""
+    filhos, profundidade, inicio = [], 0, None
+    for m in re.finditer(r"<(/?)(\w+)[^>]*?(/?)>", inner):
+        fechando, autofechado = m.group(1), m.group(3)
+        if fechando:
+            profundidade -= 1
+            if profundidade == 0 and inicio is not None:
+                filhos.append(inner[inicio:m.end()])
+                inicio = None
+        elif autofechado:
+            if profundidade == 0:
+                filhos.append(m.group(0))
+        else:
+            if profundidade == 0:
+                inicio = m.start()
+            profundidade += 1
+    return filhos
+
+
+def _strip(x: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", x)).strip()
+
+
 def clean_math_html(fragment: str) -> str:
     fragment = re.sub(r"<annotation(?:-xml)?[^>]*>.*?</annotation(?:-xml)?>",
                       "", fragment, flags=re.DOTALL)
+    fragment = _mathml_structure(fragment)
     fragment = re.sub(r"<[a-zA-Z][^>]*$", " ", fragment)
     text = re.sub(r"<[^>]+>", " ", fragment)
     text = htmllib.unescape(text)

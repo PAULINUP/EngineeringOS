@@ -12,3 +12,5 @@ simulation_errors.json
 node_modules/
 dist/
 .next/
+*.db-journal
+*.db.bak-*

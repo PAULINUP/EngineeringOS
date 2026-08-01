@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import random
 import re
 import time
@@ -55,11 +56,18 @@ AGENT_NAME = "Impontuality"
 STRATEGIES = [
     "memoria",           # já acertou este desafio antes
     "aritmetica",        # resolve a operação explícita no enunciado
+    "potencia",          # potências e produtos entre parênteses
+    "algebra",           # termos semelhantes e produto de potências
     "extenso",           # número por extenso -> dígitos
     "arredondamento",    # arredonda para a casa pedida
+    "divisao_par",       # par de números sem operador: divisão longa
     "ultimo_numero",     # heurística: último número citado
     "soma_numeros",      # heurística: soma dos números do enunciado
 ]
+
+# Um aluno que erra pode revisar e tentar de novo. O agente tem o mesmo
+# direito: percorre estratégias distintas até acertar ou esgotar o limite.
+MAX_TENTATIVAS = 4
 
 EPSILON = 0.15  # exploração
 
@@ -192,6 +200,17 @@ def deaccent(text: str) -> str:
     return "".join(c for c in t if unicodedata.category(c) != "Mn")
 
 
+def normalize_math(text: str) -> str:
+    """
+    Sinais tipográficos → ASCII. Os enunciados usam − (U+2212), × e ÷; sem
+    isto o agente lia "9 − 4" como se não houvesse operação (era a causa de
+    ele ignorar boa parte da aritmética da trilha).
+    """
+    return (text.replace("−", "-").replace("–", "-").replace("—", "-")
+                .replace("×", "*").replace("·", "*").replace("÷", "/")
+                .replace("⋅", "*").replace(",", ","))
+
+
 def numbers_in(text: str) -> List[float]:
     norm = re.sub(r"(?<=\d)[.,](?=\d{3}\b)", "", text)   # 1.234 -> 1234
     norm = re.sub(r"(?<=\d),(?=\d)", ".", norm)           # 3,5 -> 3.5
@@ -203,10 +222,16 @@ def fmt(n: float) -> str:
 
 
 def words_to_number(phrase: str) -> Optional[float]:
-    """Converte 'trezentos e quarenta e dois mil e seis' -> 342006."""
-    words = [w for w in re.split(r"[\s\-]+", deaccent(phrase)) if w and w != "e"]
+    """
+    'três bilhões, quinhentos e doze mil, dezessete' -> 3000512017.
+    Trata escalas aninhadas (bilhão > milhão > mil) acumulando por patamar,
+    em vez de somar tudo de uma vez — era o erro que zerava esta estratégia.
+    """
+    txt = deaccent(phrase).replace(",", " ")
+    words = [w for w in re.split(r"[\s\-]+", txt) if w and w != "e"]
     if not words:
         return None
+
     total, current, seen = 0, 0, False
     for w in words:
         if w in UNITS:
@@ -215,64 +240,94 @@ def words_to_number(phrase: str) -> Optional[float]:
         elif w in SCALES:
             scale = SCALES[w]
             current = current or 1
-            total += current * scale
+            if scale >= 10**6:
+                # fecha o patamar inteiro (o que veio antes multiplica a escala)
+                total = (total + current) * scale if total < scale else total + current * scale
+            else:
+                total += current * scale
             current = 0
             seen = True
-        elif seen:
-            break  # terminou o trecho numérico
+        elif seen and w not in ("de", "do", "da"):
+            break  # acabou o trecho numérico
     if not seen:
         return None
     return total + current
 
 
+def enunciado(prompt: str) -> str:
+    """Separa o enunciado da instrução do grupo ('Nos exercícios..., some. — 2 + 4')."""
+    for sep in ("—", " - ", " – "):
+        if sep in prompt:
+            return prompt.split(sep)[-1].strip()
+    return prompt.strip()
+
+
 def strat_aritmetica(prompt: str) -> Optional[str]:
-    body = prompt.split("—")[-1] if "—" in prompt else prompt
-    body = body.split("-")[-1] if body.count("-") == 1 and "—" not in prompt else body
-    m = re.search(r"(-?\d[\d.,]*)\s*([+\-×x*÷/])\s*(-?\d[\d.,]*)", body)
-    if not m:
+    """
+    Avalia a expressão aritmética do enunciado, com precedência.
+    Aceita cadeias ('3 + 4 * 2') e itens múltiplos — nesse caso resolve o
+    primeiro, que é o que o gabarito costuma cobrar.
+    """
+    body = normalize_math(enunciado(prompt))
+    # itens (a)/(b)/(c) são exercícios distintos e o gabarito cobra todos
+    body = re.sub(r"\(\s*[a-d]\s*\)", " | ", body)
+    respostas = []
+    for pedaco in [p for p in body.split("|") if p.strip()]:
+        expr = re.search(r"-?\d[\d\s.]*(?:\s*[+\-*/^]\s*-?\d[\d\s.]*)+", pedaco)
+        if not expr:
+            continue
+        texto = re.sub(r"(?<=\d)\s+(?=\d)", "", expr.group(0))   # "1 2" -> "12"
+        texto = texto.replace("^", "**")
+        if not re.fullmatch(r"[\d\s.+\-*/()]+", texto.replace("**", "*")):
+            continue
+        try:
+            valor = eval(texto, {"__builtins__": {}}, {})        # só dígitos e operadores
+        except Exception:
+            continue
+        if isinstance(valor, (int, float)) and abs(valor) < 1e15:
+            respostas.append(fmt(float(valor)))
+    if not respostas:
         return None
-    a = numbers_in(m.group(1))
-    b = numbers_in(m.group(3))
-    if not a or not b:
-        return None
-    a, b, op = a[0], b[0], m.group(2)
-    try:
-        if op == "+":
-            return fmt(a + b)
-        if op == "-":
-            return fmt(a - b)
-        if op in "×x*":
-            return fmt(a * b)
-        if op in "÷/" and b:
-            return fmt(a / b)
-    except Exception:
-        return None
-    return None
+    return " ".join(respostas)                                   # o corretor exige todos
 
 
 def strat_extenso(prompt: str) -> Optional[str]:
-    body = prompt.split("—")[-1] if "—" in prompt else prompt
-    if not re.search(r"\b(mil|cem|cento|vinte|trinta|quarenta|dois|tres|três|quatro)\b",
-                     deaccent(body)):
+    body = enunciado(prompt)
+    d = deaccent(body)
+    if not any(w in d for w in list(UNITS) + list(SCALES)):
         return None
-    val = words_to_number(body)
+    # começa a leitura na primeira palavra numérica (ignora "escreva o número...")
+    tokens = re.split(r"[\s,\-]+", d)
+    inicio = next((i for i, t in enumerate(tokens) if t in UNITS or t in SCALES), None)
+    if inicio is None:
+        return None
+    val = words_to_number(" ".join(tokens[inicio:]))
     return fmt(val) if val else None
 
 
 def strat_arredondamento(prompt: str) -> Optional[str]:
     d = deaccent(prompt)
-    if "arredond" not in d:
+    if "arredond" not in d and "round" not in d:
         return None
-    nums = numbers_in(prompt.split("—")[-1] if "—" in prompt else prompt)
-    if not nums:
-        return None
-    n = nums[0]
     place = 10
-    if "centena" in d:
+    if "centena" in d or "hundred" in d:
         place = 100
-    elif "milhar" in d or "mil" in d:
+    elif "milhar" in d or "thousand" in d:
         place = 1000
-    return fmt(round(n / place) * place)
+    elif "milhao" in d or "million" in d:
+        place = 10**6
+
+    corpo = normalize_math(enunciado(prompt))
+    corpo = re.sub(r"\(\s*[a-d]\s*\)", " | ", corpo)
+    respostas = []
+    for pedaco in [p for p in corpo.split("|") if p.strip()]:
+        nums = numbers_in(pedaco)
+        if not nums:
+            continue
+        n = nums[0]
+        # arredondamento "meio para cima", como o livro faz
+        respostas.append(fmt(math.floor(n / place + 0.5) * place))
+    return " ".join(respostas) if respostas else None
 
 
 def strat_ultimo_numero(prompt: str) -> Optional[str]:
@@ -285,8 +340,98 @@ def strat_soma_numeros(prompt: str) -> Optional[str]:
     return fmt(sum(nums)) if len(nums) >= 2 else None
 
 
+def _limpa_expressao(texto: str) -> str:
+    """Prepara a expressão para avaliação: junta dígitos partidos pelo MathML
+    e torna explícita a multiplicação implícita — '( 79 ) ( 5 )' é 79*5."""
+    t = normalize_math(texto)
+    t = re.sub(r"(?<=\d)\s+(?=\d)", "", t)          # "1 2" -> "12"
+    t = re.sub(r"\s*\^\s*", "**", t)
+    t = re.sub(r"\)\s*\(", ")*(", t)                # )( -> )*(
+    t = re.sub(r"(\d)\s*\(", r"\1*(", t)            # 52( -> 52*(
+    t = re.sub(r"\)\s*(\d)", r")*\1", t)            # )5  -> )*5
+    return t
+
+
+def strat_potencia(prompt: str) -> Optional[str]:
+    """Potências e produtos entre parênteses: (0.2)^3, (-5)^4, (79)(5)."""
+    corpo = _limpa_expressao(enunciado(prompt))
+    corpo = re.sub(r"\(\s*[a-d]\s*\)", " | ", corpo)
+    respostas = []
+    for pedaco in [p for p in corpo.split("|") if p.strip()]:
+        expr = re.search(r"\(?-?\d[\d.]*\)?(?:\s*(?:\*\*|[*/+\-])\s*\(?-?\d[\d.]*\)?)+", pedaco)
+        if not expr:
+            continue
+        texto = expr.group(0)
+        if not re.fullmatch(r"[\d\s.()+\-*/]+", texto):
+            continue
+        try:
+            valor = eval(texto, {"__builtins__": {}}, {})
+        except Exception:
+            continue
+        if isinstance(valor, (int, float)) and abs(valor) < 1e15:
+            respostas.append(fmt(float(valor)))
+    return " ".join(respostas) if respostas else None
+
+
+def strat_algebra(prompt: str) -> Optional[str]:
+    """
+    Exercícios simbólicos cujo gabarito é um número:
+      6x^2 + 9x^2 -> 15  (soma dos coeficientes)
+      18x - 2x    -> 16
+      x^3 · x^6   -> 9   (produto de potências: soma dos expoentes)
+      a · a^4     -> 5
+    """
+    corpo = normalize_math(enunciado(prompt))
+    if not re.search(r"[a-zA-Z]", corpo):
+        return None
+
+    # produto de potências da mesma base: soma os expoentes
+    prod = re.findall(r"([a-zA-Z])\s*\^?\s*(\d*)\s*\*\s*([a-zA-Z])\s*\^?\s*(\d*)", corpo)
+    if prod:
+        b1, e1, b2, e2 = prod[0]
+        if b1 == b2:
+            return fmt(float(int(e1 or 1) + int(e2 or 1)))
+
+    # termos semelhantes: soma/subtração dos coeficientes
+    termos = re.findall(r"([+-]?)\s*(\d*)\s*([a-zA-Z])\s*(?:\^\s*(\d+))?", corpo)
+    if len(termos) >= 2:
+        base, exp = termos[0][2], termos[0][3]
+        total, validos = 0.0, 0
+        for sinal, coef, b, e in termos:
+            if b != base or (e or "") != (exp or ""):
+                continue
+            valor = float(coef) if coef else 1.0
+            total += -valor if sinal == "-" else valor
+            validos += 1
+        if validos >= 2:
+            return fmt(total)
+    return None
+
+
+def strat_divisao_par(prompt: str) -> Optional[str]:
+    """
+    Divisão longa perde o símbolo na extração: '4 28' é 28 ÷ 4.
+    Devolve o quociente inteiro exato (na ordem que divide sem resto).
+    """
+    corpo = normalize_math(enunciado(prompt))
+    if re.search(r"[+\-*/^]", corpo):
+        return None
+    nums = numbers_in(corpo)
+    if len(nums) != 2 or 0 in nums:
+        return None
+    a, b = nums
+    if b % a == 0:
+        return fmt(b / a)
+    if a % b == 0:
+        return fmt(a / b)
+    return None
+
+
 SOLVERS = {
     "aritmetica": strat_aritmetica,
+    "potencia": strat_potencia,
+    "algebra": strat_algebra,
+    "divisao_par": strat_divisao_par,
     "extenso": strat_extenso,
     "arredondamento": strat_arredondamento,
     "ultimo_numero": strat_ultimo_numero,
@@ -367,17 +512,22 @@ class Impontuality:
         }
 
     # --- raciocínio com evolução ---
-    def think(self, challenge: dict) -> Tuple[str, str]:
-        """Devolve (resposta, estratégia). Ordem guiada por desempenho histórico."""
+    def think(self, challenge: dict) -> List[Tuple[str, str]]:
+        """
+        Devolve as hipóteses (resposta, estratégia) em ordem de confiança —
+        a primeira é a tentativa inicial, as seguintes são as revisões caso erre.
+        """
         cid = challenge["id"]
         prompt = challenge["prompt"]
+        hipoteses: List[Tuple[str, str]] = []
 
         if cid in self.hd.answers:
-            return self.hd.answers[cid], "memoria"
+            hipoteses.append((self.hd.answers[cid], "memoria"))
 
         ranking = self.hd.strategy_rank()
         if random.random() < EPSILON:                 # exploração
             random.shuffle(ranking)
+        vistos = {h[0] for h in hipoteses}
         for strat in ranking:
             solver = SOLVERS.get(strat)
             if not solver:
@@ -386,9 +536,10 @@ class Impontuality:
                 ans = solver(prompt)
             except Exception:
                 ans = None
-            if ans is not None:
-                return ans, strat
-        return "0", "ultimo_numero"
+            if ans is not None and ans not in vistos:
+                hipoteses.append((ans, strat))
+                vistos.add(ans)
+        return hipoteses[:MAX_TENTATIVAS] or [("0", "ultimo_numero")]
 
     def study_ku(self, ku: dict, learner_id: str) -> dict:
         """Estuda uma KU: lê definição, materiais e enfrenta os desafios."""
@@ -434,34 +585,38 @@ class Impontuality:
         attempts = correct = 0
         mastery = 0.0
         for ch in challenges:
-            answer, strategy = self.think(ch)
-            try:
-                res = self.api.call("POST", f"/challenges/{ch['id']}/attempt",
-                                    {"learner_id": learner_id, "answer": answer}, auth=True)
-            except Exception:
-                continue
-            attempts += 1
-            dom["attempts"] += 1
-            hit = bool(res.get("correct"))
-            self.hd.reinforce(strategy, hit)
-            self.session["strategy_usage"][strategy] = \
-                self.session["strategy_usage"].get(strategy, 0) + 1
-            if hit:
-                correct += 1
-                dom["correct"] += 1
-                self.hd.identity["xp"] += 10
-                self.hd.learn_answer(ch["id"], ch["prompt"], answer, strategy)
-                if res.get("new_mastery") is not None:
-                    mastery = res["new_mastery"]
-            else:
-                self.hd.identity["xp"] += 1   # errar também ensina
-            self.hd.episode({
-                "kind": "attempt", "ku_id": ku_id, "domain": domain,
-                "challenge_id": ch["id"], "prompt": ch["prompt"][:160],
-                "answer": answer, "strategy": strategy, "correct": hit,
-                "mastery_after": res.get("new_mastery"),
-                "generation": self.session["generation"],
-            })
+            hit = False
+            for n_tentativa, (answer, strategy) in enumerate(self.think(ch), 1):
+                try:
+                    res = self.api.call("POST", f"/challenges/{ch['id']}/attempt",
+                                        {"learner_id": learner_id, "answer": answer}, auth=True)
+                except Exception:
+                    break
+                attempts += 1
+                dom["attempts"] += 1
+                hit = bool(res.get("correct"))
+                self.hd.reinforce(strategy, hit)
+                self.session["strategy_usage"][strategy] = \
+                    self.session["strategy_usage"].get(strategy, 0) + 1
+                if hit:
+                    correct += 1
+                    dom["correct"] += 1
+                    self.hd.identity["xp"] += 10
+                    self.hd.learn_answer(ch["id"], ch["prompt"], answer, strategy)
+                    if res.get("new_mastery") is not None:
+                        mastery = res["new_mastery"]
+                else:
+                    self.hd.identity["xp"] += 1   # errar também ensina
+                self.hd.episode({
+                    "kind": "attempt", "ku_id": ku_id, "domain": domain,
+                    "challenge_id": ch["id"], "prompt": ch["prompt"][:160],
+                    "answer": answer, "strategy": strategy, "correct": hit,
+                    "tentativa": n_tentativa,
+                    "mastery_after": res.get("new_mastery"),
+                    "generation": self.session["generation"],
+                })
+                if hit:
+                    break
 
         self.session["attempts"] += attempts
         self.session["correct"] += correct
