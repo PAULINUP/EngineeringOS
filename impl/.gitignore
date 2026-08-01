@@ -14,3 +14,6 @@ dist/
 .next/
 *.db-journal
 *.db.bak-*
+test_integration.db
+test_integration.db-journal
+.pytest_cache/
