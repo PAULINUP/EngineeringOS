@@ -12,6 +12,8 @@ alembic/versions/__pycache__/
 # Bancos e backups locais: em produção o banco é o PostgreSQL gerenciado.
 # Enviar o .db local sobrescreveria dados e levaria conteúdo de desenvolvimento.
 *.db
+# data_export.json.gz VAI para a imagem: e como o acervo chega ao banco de
+# produção (sem proxy TCP, a importação roda de dentro do contêiner)
 *.db-journal
 *.db.bak-*
 *.db.antes-de-restaurar-*

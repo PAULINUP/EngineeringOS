@@ -9,6 +9,7 @@ from src.telemetry import setup_telemetry, TelemetryMiddleware
 from src.integration import integration_router
 from fastapi.staticfiles import StaticFiles
 import os
+import threading
 
 def _setup_sentry() -> bool:
     """
@@ -47,7 +48,24 @@ def _run_migrations() -> None:
         from alembic import command
         from alembic.config import Config
         cfg = Config(os.path.join(os.path.dirname(__file__), "alembic.ini"))
-        command.upgrade(cfg, "head")
+        # O env.py chama asyncio.run(), o que estoura dentro do loop do
+        # lifespan ("cannot be called from a running event loop"). Rodar numa
+        # thread dá ao alembic um loop só dele.
+        erro: list = []
+
+        def _executar():
+            try:
+                command.upgrade(cfg, "head")
+            except Exception as exc:  # noqa: BLE001
+                erro.append(exc)
+
+        t = threading.Thread(target=_executar, daemon=True)
+        t.start()
+        t.join(timeout=120)
+        if erro:
+            raise erro[0]
+        if t.is_alive():
+            raise TimeoutError("migração excedeu 120s")
         print("Migrações aplicadas.")
     except Exception as e:  # noqa: BLE001
         # Não derruba o processo: sem servidor no ar não há como diagnosticar,
