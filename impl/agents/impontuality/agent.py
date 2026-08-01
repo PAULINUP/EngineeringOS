@@ -61,13 +61,17 @@ STRATEGIES = [
     "extenso",           # número por extenso -> dígitos
     "arredondamento",    # arredonda para a casa pedida
     "divisao_par",       # par de números sem operador: divisão longa
+    "fracao_simplificar",# (15/20) -> 3 4
+    "fracao_mista",      # (5/3) -> 1 2
+    "fracao_impropria",  # 2 (5/6) -> 17
+    "fracao_produto",    # (1/3)(5/6) -> 5 18
     "ultimo_numero",     # heurística: último número citado
     "soma_numeros",      # heurística: soma dos números do enunciado
 ]
 
 # Um aluno que erra pode revisar e tentar de novo. O agente tem o mesmo
 # direito: percorre estratégias distintas até acertar ou esgotar o limite.
-MAX_TENTATIVAS = 4
+MAX_TENTATIVAS = 6
 
 EPSILON = 0.15  # exploração
 
@@ -408,6 +412,55 @@ def strat_algebra(prompt: str) -> Optional[str]:
     return None
 
 
+def _fracoes_em(texto: str) -> List[Tuple[int, int]]:
+    return [(int(a), int(b)) for a, b in re.findall(r"\(\s*(\d+)\s*/\s*0*(\d+)\s*\)", texto)
+            if int(b) != 0]
+
+
+def strat_fracao_simplificar(prompt: str) -> Optional[str]:
+    """(15/20) -> 3 4  ·  (120/252) -> 10 21"""
+    fr = _fracoes_em(enunciado(prompt))
+    if not fr:
+        return None
+    a, b = fr[0]
+    d = math.gcd(a, b)
+    if d <= 1:
+        return None
+    return f"{a//d} {b//d}"
+
+
+def strat_fracao_mista(prompt: str) -> Optional[str]:
+    """Imprópria -> mista: (5/3) -> 1 2 (inteiro e resto)."""
+    fr = _fracoes_em(enunciado(prompt))
+    if not fr:
+        return None
+    a, b = fr[0]
+    if a <= b:
+        return None
+    return f"{a//b} {a%b}"
+
+
+def strat_fracao_impropria(prompt: str) -> Optional[str]:
+    """Mista -> imprópria: 2 (5/6) -> 17 (numerador)."""
+    corpo = enunciado(prompt)
+    m = re.search(r"(\d+)\s*\(\s*(\d+)\s*/\s*0*(\d+)\s*\)", corpo)
+    if not m:
+        return None
+    inteiro, num, den = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    return fmt(float(inteiro * den + num))
+
+
+def strat_fracao_produto(prompt: str) -> Optional[str]:
+    """(1/3) · (5/6) -> 5 18 (produto simplificado)."""
+    fr = _fracoes_em(enunciado(prompt))
+    if len(fr) < 2:
+        return None
+    (a, b), (c, d) = fr[0], fr[1]
+    num, den = a * c, b * d
+    g = math.gcd(num, den) or 1
+    return f"{num//g} {den//g}"
+
+
 def strat_divisao_par(prompt: str) -> Optional[str]:
     """
     Divisão longa perde o símbolo na extração: '4 28' é 28 ÷ 4.
@@ -432,6 +485,10 @@ SOLVERS = {
     "potencia": strat_potencia,
     "algebra": strat_algebra,
     "divisao_par": strat_divisao_par,
+    "fracao_simplificar": strat_fracao_simplificar,
+    "fracao_mista": strat_fracao_mista,
+    "fracao_impropria": strat_fracao_impropria,
+    "fracao_produto": strat_fracao_produto,
     "extenso": strat_extenso,
     "arredondamento": strat_arredondamento,
     "ultimo_numero": strat_ultimo_numero,
