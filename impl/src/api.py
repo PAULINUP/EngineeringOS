@@ -369,8 +369,10 @@ async def get_mission_path(
     )
     mastery_dict = {state.ku_id: state.mastery_score for state in states_res.scalars().all()}
     
-    # Despacha para o Celery (agora em modo Eager - sincrono)
-    from src.celery_worker import compute_learning_trajectory
+    # Despacha para o worker. Com Redis configurado a tarefa sai do processo
+    # da API e o cliente acompanha por /tasks/{id}; sem Redis, o Celery roda
+    # em modo eager e o resultado já vem pronto.
+    from src.celery_worker import compute_learning_trajectory, EAGER
     task = compute_learning_trajectory.delay(
         relations=relations,
         all_kus_dict=all_kus_dict,
@@ -381,8 +383,10 @@ async def get_mission_path(
         mission_label=mission.label,
         terminal_threshold=mission.terminal_threshold,
     )
-    
-    return task.result
+
+    if EAGER:
+        return task.result
+    return {"status": "processing", "task_id": task.id}
 @router.get("/tasks/{task_id}")
 async def get_task_result(task_id: str):
     """Consulta o resultado de uma tarefa assíncrona despachada pelo Celery."""

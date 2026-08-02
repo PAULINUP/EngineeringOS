@@ -3,12 +3,19 @@ import json
 from celery import Celery
 import asyncio
 
-REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+REDIS_URL = os.getenv("REDIS_URL", "").strip()
+
+# Modo eager = a tarefa roda dentro do request, na mesma thread. A "fila"
+# existia só no papel: o cálculo pesado bloqueava a resposta da API.
+# Com REDIS_URL definido, o trabalho vai de fato para um worker separado.
+# Sem Redis (desenvolvimento local, testes), cai para eager — que é honesto
+# e continua funcionando, só que sem desacoplamento.
+EAGER = not REDIS_URL or os.getenv("CELERY_ALWAYS_EAGER", "0") in ("1", "true")
 
 celery_app = Celery(
     "engineeringos_worker",
-    broker=REDIS_URL,
-    backend=REDIS_URL
+    broker=REDIS_URL or None,
+    backend=REDIS_URL or None,
 )
 
 celery_app.conf.update(
@@ -17,7 +24,14 @@ celery_app.conf.update(
     result_serializer="json",
     timezone="UTC",
     enable_utc=True,
-    task_always_eager=True,
+    task_always_eager=EAGER,
+    task_eager_propagates=True,
+    # A trajetória é cara; sem teto, uma tarefa travada segura o worker
+    task_time_limit=300,
+    task_soft_time_limit=240,
+    result_expires=3600,
+    worker_max_tasks_per_child=200,      # recicla o processo: evita vazamento
+    broker_connection_retry_on_startup=True,
 )
 
 

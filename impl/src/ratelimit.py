@@ -21,6 +21,18 @@ from fastapi import HTTPException, Request, status
 
 ENABLED = os.getenv("EOS_RATE_LIMIT", "1") not in ("0", "false", "False")
 
+# Backend Redis quando disponível: com o estado em memória, cada réplica tinha
+# o próprio contador — 3 instâncias significavam 3× o limite anunciado, e um
+# reinício zerava tudo. Com Redis a contagem é compartilhada e persistente.
+REDIS_URL = os.getenv("REDIS_URL", "").strip()
+_redis = None
+if ENABLED and REDIS_URL:
+    try:
+        import redis.asyncio as aioredis
+        _redis = aioredis.from_url(REDIS_URL, encoding="utf-8", decode_responses=True)
+    except ImportError:
+        print("REDIS_URL definido mas 'redis' não instalado — rate limit em memória.")
+
 _hits: Dict[str, Deque[float]] = defaultdict(deque)
 _LAST_SWEEP = time.monotonic()
 _SWEEP_EVERY = 300.0          # limpeza periódica para o dicionário não crescer sem fim
@@ -57,9 +69,40 @@ class RateLimit:
     async def __call__(self, request: Request) -> None:
         if not ENABLED:
             return
+        chave = _client_key(request, self.bucket)
+        if _redis is not None:
+            await self._checar_redis(chave)
+        else:
+            self._checar_memoria(chave)
+
+    async def _checar_redis(self, chave: str) -> None:
+        """
+        Janela deslizante em sorted set: remove o que saiu da janela, conta o
+        que sobrou, registra a chamada — tudo num pipeline, então réplicas
+        concorrentes veem a mesma contagem.
+        """
+        agora = time.time()
+        try:
+            pipe = _redis.pipeline()
+            pipe.zremrangebyscore(chave, 0, agora - self.janela)
+            pipe.zcard(chave)
+            pipe.zadd(chave, {f"{agora}:{os.urandom(4).hex()}": agora})
+            pipe.expire(chave, int(self.janela) + 1)
+            _, usados, _, _ = await pipe.execute()
+        except Exception:
+            # Redis fora do ar não pode derrubar a API: cai para memória
+            self._checar_memoria(chave)
+            return
+        if usados >= self.limite:
+            raise HTTPException(
+                status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                detail=f"Muitas requisições. Aguarde {int(self.janela)}s.",
+                headers={"Retry-After": str(int(self.janela))},
+            )
+
+    def _checar_memoria(self, chave: str) -> None:
         agora = time.monotonic()
         _sweep(agora)
-        chave = _client_key(request, self.bucket)
         dq = _hits[chave]
         while dq and agora - dq[0] > self.janela:
             dq.popleft()

@@ -37,7 +37,9 @@ COPY . .
 COPY --from=dashboard /dashboard/dist ./dashboard/dist
 
 # Processo sem privilégio: um comprometimento da aplicação não vira root
-RUN useradd --create-home --uid 10001 eos && chown -R eos:eos /app
+RUN chmod +x entrypoint.sh \
+    && useradd --create-home --uid 10001 eos \
+    && chown -R eos:eos /app
 USER eos
 
 EXPOSE 8000
@@ -47,7 +49,6 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
   CMD curl -fsS "http://127.0.0.1:${PORT:-8000}/health/ready" || exit 1
 
-# O app vive em main.py. O CMD anterior apontava para "src.api:app", que não
-# existe (src/api.py define apenas o router) — o container nunca subia.
-# $PORT é injetada por Railway/Heroku; 8000 é o padrão local.
-CMD ["sh", "-c", "exec uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers --forwarded-allow-ips=*"]
+# Um entrypoint decide o papel (api | worker | beat) por EOS_ROLE, então a
+# mesma imagem serve os dois serviços sem comando customizado na plataforma.
+CMD ["./entrypoint.sh"]
