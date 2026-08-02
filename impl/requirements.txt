@@ -1,4 +1,7 @@
-fastapi>=0.100.0
+# Teto de versão porque o comportamento de autenticação já mudou entre minors
+# (o código devolvido a requisição sem credencial), e sem teto isso chega em
+# produção pelo próximo build, não por uma decisão.
+fastapi>=0.115.0,<1.0.0
 uvicorn>=0.22.0
 sqlalchemy>=2.0.0
 aiosqlite>=0.19.0

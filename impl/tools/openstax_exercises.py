@@ -115,13 +115,32 @@ def clean_math_html(fragment: str) -> str:
     text = re.sub(r"If you missed this problem,\s*review\s*Example\s*[\d.]+\s*\.?", "", text)
     text = re.sub(r"\b(Try It|Be Prepared|Checkpoint|Check Your Understanding)\s*[\d.]*\s*", "", text)
     text = re.sub(r'^["\'>\s]+', "", text)
-    # separador de milhar mutilado pelo MathML: "2 , 162" -> "2162"
-    text = re.sub(r"(\d)\s*,\s*(\d{3})(?!\d)", r"\1\2", text)
+    # Separador de milhar mutilado pelo MathML: "2 , 162" -> "2162".
+    # O espaço ANTES da vírgula é a assinatura da mutilação — vem de tokens
+    # <mn> distintos colados com espaço. Vírgula de lista em prosa inglesa é o
+    # oposto: espaço só depois ("5, 125"). Confundir os dois transformava a
+    # resposta "(a) 5, 125" no número inexistente 5125.
+    text = re.sub(r"(\d)\s+,\s*(\d{3})(?!\d)", r"\1\2", text)
+    text = re.sub(r"(\d),(\d{3})(?!\d)", r"\1\2", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
+# Fração escrita como a/b — "2/3" é UM valor, não os números 2 e 3.
+FRACAO_RE = re.compile(r"(-?\d+(?:\.\d+)?)\s*/\s*(-?\d+(?:\.\d+)?)")
+
+
 def extract_numbers(text: str):
+    """
+    Números presentes no texto, com frações resolvidas em um único valor.
+    Sem isso, "2/3" entrava como dois números e envenenava o gabarito.
+    """
     normalized = re.sub(r"(?<=\d),(?=\d)", ".", text)
+
+    def resolver(m: "re.Match[str]") -> str:
+        num, den = float(m.group(1)), float(m.group(2))
+        return f" {num / den!r} " if den else " "
+
+    normalized = FRACAO_RE.sub(resolver, normalized)
     return [float(m) for m in re.findall(r"-?\d+(?:\.\d+)?", normalized)]
 
 
@@ -299,12 +318,20 @@ def extract_inline_pairs(page_html: str):
 GRADABLE_ANSWER_RE = re.compile(r"[0-9\s.,;:=+\-/×·°%()abcdxyABCDXY]*\Z")
 
 
+ITEM_LABEL_RE = re.compile(r"\(\s*[a-dA-D]\s*\)")
+
+
 def profile_challenge(problem: str, answer: str):
     if not (MIN_PROBLEM_CHARS <= len(problem) <= MAX_PROBLEM_CHARS):
         return None
     if len(answer) > MAX_ANSWER_CHARS:
         return None
     if not GRADABLE_ANSWER_RE.fullmatch(answer):
+        return None
+    # Resposta em partes — "(a) 5, 125 (b) 0, 5, 125" — não cabe num único
+    # gabarito numérico: juntar as partes cria um conjunto que nenhuma das
+    # duas perguntas tem como resposta. Fica de fora.
+    if len(ITEM_LABEL_RE.findall(answer)) > 1:
         return None
     numbers = extract_numbers(answer)
     if not numbers or len(numbers) > 6:

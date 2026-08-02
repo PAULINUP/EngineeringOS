@@ -8,6 +8,7 @@ import {
   Sparkles,
   XCircle,
   Zap,
+  Flag,
 } from "lucide-react";
 
 import { API_BASE } from "../api";
@@ -142,6 +143,44 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
   const retryChallenge = () => {
     setAttemptResult(null);
     setAnswer("");
+  };
+
+  // Denunciar não apaga: o desafio sai da SUA sessão na hora, e só sai do ar
+  // para todos quando alunos independentes concordam (quórum no servidor).
+  const handleReportChallenge = async () => {
+    if (!currentChallenge) return;
+    if (
+      !confirm(
+        "Marcar este desafio como defeituoso?\n\n" +
+          "Ele sai da sua trilha imediatamente. Sai do catálogo para todos " +
+          "quando outros alunos apontarem o mesmo problema.",
+      )
+    )
+      return;
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch(`${API_BASE}/challenges/${currentChallenge.id}/report`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("eos_token")}`,
+        },
+        body: JSON.stringify({ learner_id: learnerId, reason: "" }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const restantes = challenges.filter((c) => c.id !== currentChallenge.id);
+      setChallenges(restantes);
+      setChallengeIdx((i) => (restantes.length ? i % restantes.length : 0));
+      setAttemptResult(null);
+      setAnswer("");
+    } catch (err) {
+      console.error("Erro ao denunciar desafio:", err);
+      alert("Não consegui registrar a denúncia agora. Tente de novo mais tarde.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // ---------- Modo 2 (fallback): auto-estudo ----------
@@ -320,22 +359,33 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
               </button>
             </div>
           ) : (
-            <button
-              type="submit"
-              disabled={isSubmitting || !answer.trim()}
-              className="btn-primary font-display w-full flex justify-center items-center gap-2 py-3 text-sm"
-            >
-              {isSubmitting ? (
-                <>
-                  <div className="w-4 h-4 border-2 border-white/80 border-t-transparent rounded-full animate-spin" />
-                  Corrigindo…
-                </>
-              ) : (
-                <>
-                  <CheckCircle2 className="w-4 h-4" /> Verificar resposta
-                </>
-              )}
-            </button>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={handleReportChallenge}
+                disabled={isSubmitting}
+                className="btn-ghost flex-none flex justify-center items-center px-4 py-3 text-sm text-amber-500 hover:text-amber-400 hover:bg-amber-500/10 border border-amber-500/20 rounded-xl transition-colors"
+                title="Enunciado ou gabarito defeituoso? Marque aqui."
+              >
+                <Flag className="w-4 h-4" />
+              </button>
+              <button
+                type="submit"
+                disabled={isSubmitting || !answer.trim()}
+                className="btn-primary font-display flex-1 flex justify-center items-center gap-2 py-3 text-sm"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white/80 border-t-transparent rounded-full animate-spin" />
+                    Corrigindo…
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle2 className="w-4 h-4" /> Verificar resposta
+                  </>
+                )}
+              </button>
+            </div>
           )}
 
           <p className="flex items-start gap-1.5 text-[10px] text-slate-500 leading-relaxed">

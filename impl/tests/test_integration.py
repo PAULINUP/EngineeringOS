@@ -118,6 +118,32 @@ async def test_rotas_destrutivas_exigem_admin(client):
     assert r.status_code == 403
 
 
+def test_nenhuma_rota_pede_request_como_query():
+    """
+    O FastAPI lê `call.__globals__` para resolver anotações de dependência.
+    Instância de classe não tem `__globals__`; com anotações adiadas o
+    `request: Request` do rate limiter virava parâmetro de QUERY e TODA rota
+    limitada respondia 422 — login, registro e correção de desafio inclusive.
+    Depende de versão de Python, então passa despercebido até não passar.
+    """
+    from main import app
+
+    quebradas = []
+    for rota in app.routes:
+        dependant = getattr(rota, "dependant", None)
+        if dependant is None:
+            continue
+        pendentes = [dependant]
+        while pendentes:
+            d = pendentes.pop()
+            for p in d.query_params:
+                if p.name == "request":
+                    quebradas.append(f"{getattr(rota, 'path', '?')} ({d.call})")
+            pendentes.extend(d.dependencies)
+
+    assert not quebradas, "dependências com Request não resolvido: " + "; ".join(quebradas)
+
+
 @pytest.mark.asyncio
 async def test_token_invalido_e_ausente(client):
     ku = await _criar_ku(client)
@@ -273,6 +299,139 @@ async def test_nao_responde_desafio_em_nome_de_outro(client):
     r = await client.post(f"/challenges/{cid}/attempt",
                           json={"learner_id": bob["learner_id"], "answer": "2"},
                           headers={"Authorization": f"Bearer {ana['access_token']}"})
+    assert r.status_code == 403
+
+
+# ===========================================================================
+# QUALIDADE DO CATÁLOGO
+# ===========================================================================
+def test_fracao_e_um_valor_so():
+    """
+    "2/3" é um número. Lido como dois, o gabarito de 45 desafios importados
+    virou o conjunto "2;3" e nenhuma resposta certa passava.
+    """
+    from src.cce import grade_answer
+
+    assert grade_answer("numeric", "0.666667", 0.01, "2/3")[0]
+    assert grade_answer("numeric", "0.666667", 0.01, "0,67")[0]        # vírgula decimal
+    assert grade_answer("numeric", "7.59375", 0.01, "243 / 32")[0]
+    assert not grade_answer("numeric", "0.666667", 0.01, "3")[0]
+
+
+def test_separador_de_milhar_nao_engole_lista():
+    """
+    "(a) 5, 125" virou o número 5125 — resposta que não existe em lugar
+    nenhum. O espaço antes da vírgula é o que distingue número mutilado
+    ("2 , 162") de vírgula de lista ("5, 125").
+    """
+    from tools.openstax_exercises import clean_math_html
+
+    assert clean_math_html("2 , 162") == "2162"
+    assert clean_math_html("2,162") == "2162"
+    assert clean_math_html("(a) 5, 125") == "(a) 5, 125"
+
+
+def test_resposta_em_partes_nao_vira_desafio():
+    """Duas perguntas fundidas num gabarito só não têm resposta certa."""
+    from tools.openstax_exercises import profile_challenge
+
+    enunciado = "Determine quais dos seguintes números são inteiros: 0, 5, 125."
+    assert profile_challenge(enunciado, "(a) 7, 9 (b) 11") is None
+    assert profile_challenge(enunciado, "42") is not None
+
+
+@pytest.mark.asyncio
+async def test_denuncia_com_quorum_tira_o_desafio_do_ar(client):
+    """
+    Sem professores, quem julga o conteúdo é o conjunto dos alunos — mas um
+    clique isolado não apaga material de todo mundo.
+    """
+    from src.api import QUORUM_DENUNCIA
+    from src.database import AsyncSessionLocal
+    from src import models
+
+    ku = await _criar_ku(client)
+    async with AsyncSessionLocal() as db:
+        c = models.Challenge(ku_id=ku, prompt="enunciado corrompido", answer_type="numeric",
+                             expected_answer="5125", tolerance=0.01, feedback="", difficulty=0.5)
+        db.add(c)
+        await db.commit()
+        await db.refresh(c)
+        cid = str(c.id)
+
+    alunos = [await _registrar(client, f"Aluno{i}", f"aluno{i}@teste.com")
+              for i in range(QUORUM_DENUNCIA)]
+
+    for i, aluno in enumerate(alunos, start=1):
+        h = {"Authorization": f"Bearer {aluno['access_token']}"}
+        r = await client.post(f"/challenges/{cid}/report",
+                              json={"learner_id": aluno["learner_id"], "reason": "gabarito impossível"},
+                              headers=h)
+        assert r.status_code == 200
+        assert r.json()["reports"] == i
+        # só o último cruza o quórum
+        assert r.json()["quarantined"] is (i >= QUORUM_DENUNCIA)
+
+    # em quarentena: some da listagem e não gera mais evidência
+    r = await client.get(f"/kus/{ku}/challenges")
+    assert cid not in [c["id"] for c in r.json()]
+
+    h = {"Authorization": f"Bearer {alunos[0]['access_token']}"}
+    r = await client.post(f"/challenges/{cid}/attempt",
+                          json={"learner_id": alunos[0]["learner_id"], "answer": "5125"},
+                          headers=h)
+    assert r.status_code == 410
+
+
+@pytest.mark.asyncio
+async def test_denuncia_repetida_nao_conta_duas_vezes(client):
+    """Um aluno, um voto — senão o quórum é decorativo."""
+    from src.database import AsyncSessionLocal
+    from src import models
+
+    ku = await _criar_ku(client)
+    async with AsyncSessionLocal() as db:
+        c = models.Challenge(ku_id=ku, prompt="x", answer_type="numeric",
+                             expected_answer="1", tolerance=0.01, feedback="", difficulty=0.5)
+        db.add(c)
+        await db.commit()
+        await db.refresh(c)
+        cid = str(c.id)
+
+    ana = await _registrar(client, "Ana", "ana@teste.com")
+    h = {"Authorization": f"Bearer {ana['access_token']}"}
+    for _ in range(5):
+        r = await client.post(f"/challenges/{cid}/report",
+                              json={"learner_id": ana["learner_id"], "reason": ""},
+                              headers=h)
+        assert r.status_code == 200
+        assert r.json()["reports"] == 1
+        assert r.json()["quarantined"] is False
+
+
+@pytest.mark.asyncio
+async def test_apagar_desafio_exige_admin(client):
+    """
+    O catálogo é compartilhado: apagar aqui apaga para todos. Antes desta
+    checagem a rota não pedia sequer autenticação.
+    """
+    from src.database import AsyncSessionLocal
+    from src import models
+
+    ku = await _criar_ku(client)
+    async with AsyncSessionLocal() as db:
+        c = models.Challenge(ku_id=ku, prompt="x", answer_type="numeric",
+                             expected_answer="1", tolerance=0.01, feedback="", difficulty=0.5)
+        db.add(c)
+        await db.commit()
+        await db.refresh(c)
+        cid = str(c.id)
+
+    assert (await client.delete(f"/challenges/{cid}")).status_code == 401
+
+    ana = await _registrar(client, "Ana", "ana@teste.com")
+    r = await client.delete(f"/challenges/{cid}",
+                            headers={"Authorization": f"Bearer {ana['access_token']}"})
     assert r.status_code == 403
 
 

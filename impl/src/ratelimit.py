@@ -10,8 +10,14 @@ Escopo honesto: guarda o estado no processo. Serve para uma instância; com
 múltiplas réplicas, trocar por Redis (`slowapi` + backend Redis) sem mudar as
 chamadas — a interface aqui é a mesma.
 """
-from __future__ import annotations
-
+# SEM `from __future__ import annotations` aqui, de propósito.
+#
+# O FastAPI resolve as anotações de uma dependência lendo `call.__globals__`.
+# Uma instância de classe não tem `__globals__`, então com anotações adiadas a
+# string 'Request' não resolve e `request` vira parâmetro de QUERY: toda rota
+# com rate limit passa a exigir `?request=` e devolve 422. Só se manifesta em
+# certas combinações de versão — no Python 3.14 local quebra, no 3.12 do
+# contêiner não. Anotação avaliada na hora é imune.
 import os
 import time
 from collections import defaultdict, deque

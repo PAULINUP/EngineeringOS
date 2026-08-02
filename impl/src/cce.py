@@ -21,9 +21,22 @@ def _normalize_text(text: str) -> str:
     text = "".join(c for c in text if unicodedata.category(c) != "Mn")
     return re.sub(r"\s+", " ", text).strip()
 
+# Fração escrita como a/b. "2/3" é UM valor — sem isto, a resposta certa
+# virava os números 2 e 3 e era reprovada.
+_FRACAO_RE = re.compile(r"(-?\d+(?:[.,]\d+)?)\s*/\s*(-?\d+(?:[.,]\d+)?)")
+
 def _extract_numbers(text: str) -> List[float]:
-    """Extrai todos os números da resposta (aceita vírgula decimal brasileira)."""
-    normalized = re.sub(r"(?<=\d),(?=\d)", ".", text)
+    """
+    Números da resposta, com frações resolvidas. Aceita vírgula decimal
+    brasileira ("0,5") e fração ("2/3", "1 / 2").
+    """
+    def resolver(m: "re.Match[str]") -> str:
+        num = float(m.group(1).replace(",", "."))
+        den = float(m.group(2).replace(",", "."))
+        return f" {num / den!r} " if den else " "
+
+    normalized = _FRACAO_RE.sub(resolver, text)
+    normalized = re.sub(r"(?<=\d),(?=\d)", ".", normalized)
     return [float(m) for m in re.findall(r"-?\d+(?:\.\d+)?", normalized)]
 
 def grade_answer(

@@ -938,13 +938,101 @@ class AttemptRequest(BaseModel):
     learner_id: uuid.UUID
     answer: str = Field(..., max_length=5000)
 
+# Quantos alunos distintos precisam denunciar antes de o desafio sair do ar.
+# Três é o mesmo número que a agregação noisy-OR exige para validar uma
+# competência: se três evidências independentes bastam para afirmar que alguém
+# sabe, três denúncias independentes bastam para afirmar que o item está ruim.
+QUORUM_DENUNCIA = 3
+
+class ChallengeReportRequest(BaseModel):
+    learner_id: uuid.UUID
+    reason: str = Field("", max_length=500)
+
 @router.get("/kus/{ku_id}/challenges", response_model=List[ChallengeResponse])
 async def get_ku_challenges(ku_id: str, db: AsyncSession = Depends(get_session)):
-    """Lista os desafios de uma KU (sem os gabaritos)."""
+    """Lista os desafios ativos de uma KU (sem os gabaritos)."""
     res = await db.execute(
-        select(models.Challenge).where(models.Challenge.ku_id == ku_id).order_by(models.Challenge.difficulty)
+        select(models.Challenge)
+        .where(models.Challenge.ku_id == ku_id, models.Challenge.active.is_(True))
+        .order_by(models.Challenge.difficulty)
     )
     return res.scalars().all()
+
+@router.post("/challenges/{challenge_id}/report",
+             dependencies=[Depends(limite_escrita)])
+async def report_challenge(
+    challenge_id: uuid.UUID,
+    data: ChallengeReportRequest,
+    db: AsyncSession = Depends(get_session),
+    token: dict = Depends(verify_token),
+):
+    """
+    Denuncia um desafio quebrado (enunciado corrompido, gabarito impossível).
+
+    O desafio some imediatamente para quem denunciou — ninguém fica travado num
+    item defeituoso. Para todos os outros ele só sai do ar quando
+    QUORUM_DENUNCIA alunos distintos concordarem, ou quando um administrador
+    denunciar. É o mesmo princípio do P9: o julgamento vem de sinal agregado,
+    não de uma opinião isolada.
+    """
+    authorize_learner(token, data.learner_id)
+
+    challenge = await db.get(models.Challenge, challenge_id)
+    if not challenge:
+        raise HTTPException(status_code=404, detail="Desafio não encontrado")
+
+    ja = await db.execute(
+        select(models.ChallengeReport).where(
+            models.ChallengeReport.challenge_id == challenge_id,
+            models.ChallengeReport.learner_id == data.learner_id,
+        )
+    )
+    if ja.scalar_one_or_none() is None:
+        db.add(models.ChallengeReport(
+            challenge_id=challenge_id,
+            learner_id=data.learner_id,
+            reason=data.reason,
+        ))
+        await db.flush()
+
+    total = await db.scalar(
+        select(func.count()).select_from(models.ChallengeReport)
+        .where(models.ChallengeReport.challenge_id == challenge_id)
+    ) or 0
+
+    admin = bool(token.get("internal") or token.get("role") == "admin")
+    if challenge.active and (admin or total >= QUORUM_DENUNCIA):
+        challenge.active = False
+        logger.warning(
+            "Desafio %s em quarentena (%d denúncia(s), admin=%s) — KU %s",
+            challenge_id, total, admin, challenge.ku_id,
+        )
+
+    await db.commit()
+    return {
+        "reports": total,
+        "quorum": QUORUM_DENUNCIA,
+        "quarantined": not challenge.active,
+    }
+
+@router.delete("/challenges/{challenge_id}")
+async def delete_challenge(
+    challenge_id: uuid.UUID,
+    db: AsyncSession = Depends(get_session),
+    _: dict = Depends(require_admin),
+):
+    """
+    Remove um desafio em definitivo. Restrito a administradores: o catálogo é
+    compartilhado, e apagar aqui apaga para todo mundo. O caminho normal de um
+    aluno é POST /challenges/{id}/report.
+    """
+    challenge = await db.get(models.Challenge, challenge_id)
+    if not challenge:
+        raise HTTPException(status_code=404, detail="Desafio não encontrado")
+
+    await db.delete(challenge)
+    await db.commit()
+    return {"message": "Desafio removido"}
 
 @router.post("/challenges/{challenge_id}/attempt",
              dependencies=[Depends(limite_tentativa)])
@@ -964,6 +1052,13 @@ async def attempt_challenge(
     challenge = await db.get(models.Challenge, challenge_id)
     if not challenge:
         raise HTTPException(status_code=404, detail="Desafio não encontrado")
+    if not challenge.active:
+        # Desafio em quarentena não gera evidência: seu gabarito está sob
+        # suspeita, e evidência derivada de item defeituoso contamina a mestria.
+        raise HTTPException(
+            status_code=410,
+            detail="Este desafio foi retirado do catálogo por estar defeituoso.",
+        )
 
     learner = await db.get(models.Learner, data.learner_id)
     if not learner:

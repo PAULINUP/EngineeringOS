@@ -1,38 +1,54 @@
 {
   "memoria": {
-    "tries": 495,
-    "hits": 495
+    "tries": 725,
+    "hits": 725
   },
   "aritmetica": {
-    "tries": 462,
+    "tries": 532,
     "hits": 28
   },
   "extenso": {
-    "tries": 334,
+    "tries": 437,
     "hits": 6
   },
   "arredondamento": {
-    "tries": 119,
+    "tries": 131,
     "hits": 4
   },
   "ultimo_numero": {
-    "tries": 1694,
+    "tries": 2165,
     "hits": 5
   },
   "soma_numeros": {
-    "tries": 2264,
+    "tries": 2679,
     "hits": 36
   },
   "potencia": {
-    "tries": 451,
+    "tries": 598,
     "hits": 47
   },
   "algebra": {
-    "tries": 190,
+    "tries": 273,
     "hits": 4
   },
   "divisao_par": {
     "tries": 9,
     "hits": 8
+  },
+  "fracao_simplificar": {
+    "tries": 2,
+    "hits": 1
+  },
+  "fracao_mista": {
+    "tries": 5,
+    "hits": 0
+  },
+  "fracao_impropria": {
+    "tries": 15,
+    "hits": 0
+  },
+  "fracao_produto": {
+    "tries": 38,
+    "hits": 0
   }
 }

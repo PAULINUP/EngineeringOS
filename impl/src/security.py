@@ -49,7 +49,11 @@ def _load_secret() -> str:
 
 SECRET_KEY = _load_secret()
 
-security = HTTPBearer(auto_error=True)
+# auto_error=False de propósito: com auto_error=True o FastAPI responde 403 a
+# requisição SEM credencial nenhuma, e 403 quer dizer "identificado, mas sem
+# permissão". Quem não se identificou merece 401 com WWW-Authenticate — é o que
+# diz a RFC 7235 e é o que um cliente precisa para saber que deve autenticar.
+security = HTTPBearer(auto_error=False)
 
 # bcrypt direto, sem passlib: o passlib 1.7.4 é incompatível com bcrypt >= 4 e
 # levanta "password cannot be longer than 72 bytes" mesmo para senhas curtas.
@@ -101,8 +105,12 @@ CREDENTIALS_EXCEPTION = HTTPException(
 )
 
 
-async def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)) -> dict:
+async def verify_token(
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(security),
+) -> dict:
     """Valida o token e devolve o payload (sub, learner_id, role)."""
+    if credentials is None:
+        raise CREDENTIALS_EXCEPTION
     try:
         payload = jwt.decode(credentials.credentials, SECRET_KEY, algorithms=[ALGORITHM])
     except JWTError:

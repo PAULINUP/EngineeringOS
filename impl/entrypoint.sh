@@ -7,6 +7,10 @@ set -e
 case "${EOS_ROLE:-api}" in
   worker)
     echo "Papel: worker (Celery)"
+    # A plataforma julga a saúde por HTTP e o Celery não fala HTTP: sem esta
+    # sonda o deploy do worker era descartado por healthcheck, mesmo com o
+    # processo perfeitamente vivo.
+    python worker_health.py &
     exec celery -A src.celery_worker.celery_app worker \
       --loglevel="${CELERY_LOGLEVEL:-info}" \
       --concurrency="${CELERY_CONCURRENCY:-2}" \

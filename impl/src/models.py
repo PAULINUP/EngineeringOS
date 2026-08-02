@@ -2,6 +2,7 @@ import datetime
 import uuid
 from typing import Any, List, Optional
 from sqlalchemy import (
+    Boolean,
     Column,
     ForeignKey,
     Integer,
@@ -10,6 +11,7 @@ from sqlalchemy import (
     DateTime,
     JSON,
     Table,
+    UniqueConstraint,
 )
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
@@ -244,11 +246,41 @@ class Challenge(Base):
     tolerance: Mapped[float] = mapped_column(Float, nullable=False, default=0.001)  # apenas numeric
     feedback: Mapped[str] = mapped_column(String(2000), nullable=False, default="")  # explicação exibida após a correção
     difficulty: Mapped[float] = mapped_column(Float, nullable=False, default=0.5)  # 0..1
+    # Desafio em quarentena não é servido a ninguém, mas continua existindo:
+    # as evidências já registradas apontam para ele por source_ref, e uma
+    # denúncia equivocada precisa ser reversível.
+    active: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime, default=datetime.datetime.utcnow, nullable=False
     )
 
     ku: Mapped["KnowledgeUnit"] = relationship("KnowledgeUnit")
+
+class ChallengeReport(Base):
+    """
+    Denúncia de desafio quebrado.
+
+    Numa plataforma sem professores, quem julga o conteúdo é o conjunto dos
+    alunos — mas um clique isolado não pode apagar material de todo mundo.
+    A restrição única garante um voto por aluno; a quarentena só cai quando
+    alunos independentes convergem (ver QUORUM_DENUNCIA em api.py).
+    """
+    __tablename__ = "challenge_reports"
+    __table_args__ = (
+        UniqueConstraint("challenge_id", "learner_id", name="uq_report_challenge_learner"),
+    )
+
+    id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
+    challenge_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("challenges.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    learner_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("learners.id", ondelete="CASCADE"), nullable=False, index=True
+    )
+    reason: Mapped[str] = mapped_column(String(500), nullable=False, default="")
+    created_at: Mapped[datetime.datetime] = mapped_column(
+        DateTime, default=datetime.datetime.utcnow, nullable=False
+    )
 
 class StudyMaterial(Base):
     __tablename__ = "study_materials"
