@@ -62,7 +62,10 @@ class KnowledgeUnit(Base):
     id: Mapped[str] = mapped_column(String(255), primary_key=True)  # URI like 'ku:linear_algebra:matrix_multiplication:v1'
     title: Mapped[str] = mapped_column(String(255), nullable=False)
     domain: Mapped[str] = mapped_column(String(100), nullable=False)
-    concept: Mapped[str] = mapped_column(String(100), nullable=False)
+    # 255, não 100: os slugs de seção da OpenStax chegam a 106 caracteres
+    # ("13-3-the-most-general-applications-of-bernoullis-equation" e afins).
+    # O SQLite aceitava calado; o PostgreSQL recusou a importação inteira.
+    concept: Mapped[str] = mapped_column(String(255), nullable=False)
     level: Mapped[str] = mapped_column(String(50), nullable=False)  # foundational, intermediate, advanced, expert
     definition: Mapped[str] = mapped_column(String(1000), nullable=False)
     element_interactivity: Mapped[int] = mapped_column(Integer, nullable=False, default=4)
