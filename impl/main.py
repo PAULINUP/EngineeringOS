@@ -9,6 +9,7 @@ from src.telemetry import setup_telemetry, TelemetryMiddleware
 from src.integration import integration_router
 from fastapi.staticfiles import StaticFiles
 import os
+import sys
 import threading
 
 def _setup_sentry() -> bool:
@@ -73,6 +74,30 @@ def _run_migrations() -> None:
         print(f"AVISO: falha ao aplicar migrações: {e}")
 
 
+async def _auto_import_if_empty() -> None:
+    """Popula um banco vazio a partir de data_export.json.gz, se ele existir."""
+    from sqlalchemy import func, select
+    from src.database import AsyncSessionLocal
+    from src import models
+
+    export = os.path.join(os.path.dirname(__file__), "data_export.json.gz")
+    if not os.path.exists(export):
+        return
+    try:
+        async with AsyncSessionLocal() as db:
+            existentes = await db.scalar(
+                select(func.count()).select_from(models.KnowledgeUnit)
+            )
+        if existentes:
+            return
+        print("Banco vazio — importando acervo de data_export.json.gz…")
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), "tools"))
+        from data_transfer import importar
+        await importar(recriar=False)
+    except Exception as e:  # noqa: BLE001
+        print(f"AVISO: importação automática falhou: {e}")
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     setup_telemetry()
@@ -86,6 +111,13 @@ async def lifespan(app: FastAPI):
     # Garante que o banco de desafios do CCE existe para as KUs presentes
     from src.database import AsyncSessionLocal
     from src.curriculum_seed import seed_challenge_bank
+    # Banco vazio + acervo exportado disponível ⇒ carrega automaticamente.
+    # É assim que um ambiente novo (Railway, uma réplica, um clone) nasce com
+    # o conteúdo, sem depender de acesso externo ao banco. Só age quando não
+    # há nada: nunca sobrescreve dados existentes.
+    if os.getenv("EOS_AUTO_IMPORT", "1") not in ("0", "false"):
+        await _auto_import_if_empty()
+
     async with AsyncSessionLocal() as session:
         inserted = await seed_challenge_bank(session)
         if inserted:
