@@ -2,6 +2,7 @@ import os
 import json
 from celery import Celery
 from celery.schedules import crontab
+from celery.signals import worker_ready
 import asyncio
 
 REDIS_URL = os.getenv("REDIS_URL", "").strip()
@@ -43,6 +44,40 @@ celery_app.conf.beat_schedule = {
         "schedule": crontab(hour=5, minute=30),   # 05:30 UTC = 02:30 em Brasília
     },
 }
+
+
+@worker_ready.connect
+def _repor_backup_perdido(**_):
+    """
+    Na subida, se o backup mais recente tiver mais de BACKUP_MAX_HORAS, dispara
+    um agora.
+
+    Motivo: o estado do beat vive em /tmp e some a cada reinício, e o contêiner
+    reinicia por deploy, por falha e por manutenção da plataforma. Um worker que
+    reinicia às 05:29 pularia o dia inteiro sem que nada acusasse. Aqui a
+    ausência de cópia recente é detectada em vez de presumida.
+    """
+    import datetime
+
+    limite = float(os.getenv("BACKUP_MAX_HORAS", "20"))
+    try:
+        from src import backup
+        copias = backup.listar()
+    except Exception as e:  # noqa: BLE001
+        print(f"Não consegui consultar backups na subida: {e}", flush=True)
+        return
+
+    if copias:
+        recente = datetime.datetime.fromisoformat(copias[0]["em"])
+        idade = (datetime.datetime.now(datetime.timezone.utc) - recente).total_seconds() / 3600
+        if idade < limite:
+            print(f"Backup mais recente tem {idade:.1f}h — dentro da janela.", flush=True)
+            return
+        print(f"Backup mais recente tem {idade:.1f}h — repondo.", flush=True)
+    else:
+        print("Nenhum backup encontrado — criando o primeiro.", flush=True)
+
+    backup_do_banco.delay()
 
 
 @celery_app.task(bind=True, name="backup_do_banco")
