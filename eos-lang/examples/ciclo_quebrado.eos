@@ -1,0 +1,27 @@
+-- Currículo que NÃO compila — de propósito.
+--
+--   eos validate examples/ciclo_quebrado.eos
+--   → dependência circular: derivada → limite → funcao → derivada
+--
+-- Cada uma dessas três exige as outras duas antes de si. Nenhuma pode ser a
+-- primeira, então nenhuma pode ser estudada. Num formulário de cadastro isso
+-- passa despercebido e o aluno é quem descobre, travado. Aqui é erro de
+-- compilação, com o caminho do ciclo impresso.
+
+@version 1.0.0
+@domain "matematica"
+
+knowledge funcao FOUNDATIONAL {
+  title: "Funções"
+  requires: [derivada]
+}
+
+knowledge limite INTERMEDIATE {
+  title: "Limites"
+  requires: [funcao]
+}
+
+knowledge derivada ADVANCED {
+  title: "Derivadas"
+  requires: [limite]
+}

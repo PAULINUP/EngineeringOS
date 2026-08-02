@@ -59,6 +59,48 @@ jobs:
           sys.exit(1 if falhas else 0)
           PY
 
+  eos_lang:
+    name: eos-lang — biblioteca independente
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: eos-lang
+    strategy:
+      matrix:
+        # Suporte declarado no pyproject; testar só o meio da faixa deixaria
+        # 3.9 e 3.13 quebrarem em silêncio.
+        python-version: ["3.9", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Instalar a biblioteca
+        run: pip install -e ".[graph,dev]"
+
+      - name: Testes
+        run: pytest -q
+
+      - name: A biblioteca não pode ganhar dependência de runtime
+        # Sem dependências é o contrato do pacote: instalar sem os extras e
+        # importar tem de funcionar.
+        run: |
+          pip install --force-reinstall --no-deps -e .
+          python -c "import eoslang; print('import limpo OK')"
+
+      - name: Exemplos compilam (e o quebrado continua quebrando)
+        run: |
+          eos validate examples/algebra.eos
+          if eos validate examples/ciclo_quebrado.eos; then
+            echo "FALHOU: o exemplo de ciclo deveria ser rejeitado"
+            exit 1
+          fi
+          echo "OK — ciclo rejeitado como esperado"
+
+      - name: O currículo real do EngineeringOS compila
+        run: eos validate ../impl/seeds/*.eos
+
   security:
     name: Segurança — dependências e código
     runs-on: ubuntu-latest

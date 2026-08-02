@@ -1,0 +1,69 @@
+-- Trilha mínima de álgebra: mostra a linguagem inteira num arquivo curto.
+--   eos validate examples/algebra.eos
+--   eos path examples/algebra.eos sistemas_lineares
+--   eos graph examples/algebra.eos --format mermaid
+
+@version 1.0.0
+@domain "matematica"
+@author "Paulo Geovane da Silva Souza"
+
+topic fundamentos {
+  label: "Fundamentos algébricos"
+}
+
+knowledge numeros_inteiros FOUNDATIONAL {
+  title: "Números inteiros"
+  definition: "Operar com inteiros positivos e negativos, incluindo a reta numérica."
+  domain: "matematica"
+  interactivity: 2
+  decay_rate: 0.02
+  source: { type: "standard", ref: "OpenStax Prealgebra, cap. 3", weight: 0.9 }
+  tags: [aritmetica, base]
+}
+
+knowledge expressoes FOUNDATIONAL {
+  title: "Expressões algébricas"
+  definition: "Ler, montar e simplificar expressões com variáveis."
+  requires: [numeros_inteiros]
+  interactivity: 3
+  source: { type: "standard", ref: "OpenStax Elementary Algebra, cap. 1", weight: 0.9 }
+}
+
+knowledge equacoes_1grau INTERMEDIATE {
+  title: "Equações do primeiro grau"
+  definition: "Isolar a incógnita preservando a igualdade."
+  requires: [expressoes]
+  interactivity: 4
+  source: { type: "standard", ref: "OpenStax Elementary Algebra, cap. 2", weight: 0.9 }
+}
+
+knowledge plano_cartesiano INTERMEDIATE {
+  title: "Plano cartesiano"
+  definition: "Localizar pontos e traçar retas a partir de pares ordenados."
+  requires: [numeros_inteiros]
+  interactivity: 3
+  source: { type: "standard", ref: "OpenStax Elementary Algebra, cap. 4", weight: 0.9 }
+}
+
+knowledge sistemas_lineares ADVANCED {
+  title: "Sistemas de equações lineares"
+  definition: "Resolver por substituição, adição e leitura gráfica."
+  -- Duas frentes convergem aqui: a manipulação simbólica e a leitura gráfica.
+  requires: [equacoes_1grau, plano_cartesiano]
+  interactivity: 6
+  decay_rate: 0.08
+  source: { type: "standard", ref: "OpenStax Intermediate Algebra, cap. 4", weight: 0.9 }
+}
+
+skill modelagem {
+  label: "Traduzir problema em equação"
+  developed_by: [equacoes_1grau, sistemas_lineares]
+}
+
+mission algebra_basica {
+  label: "Álgebra básica"
+  description: "Sair daqui resolvendo sistemas lineares com segurança."
+  requires: [numeros_inteiros, expressoes, equacoes_1grau, plano_cartesiano, sistemas_lineares]
+  critical: [equacoes_1grau, sistemas_lineares]
+  threshold: 0.85
+}

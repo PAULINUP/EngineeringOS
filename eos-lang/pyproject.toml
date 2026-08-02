@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eos-lang"
+version = "1.0.0"
+description = "Linguagem declarativa para currículos: escreva conhecimento como código, com pré-requisitos verificados em tempo de compilação."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Paulo Geovane da Silva Souza" }]
+keywords = [
+    "dsl", "curriculum", "education", "knowledge-graph",
+    "prerequisites", "compiler", "parser", "learning",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+    "Topic :: Software Development :: Compilers",
+    "Typing :: Typed",
+]
+# Sem dependências de runtime: a biblioteca é pura, e isso é uma decisão de
+# projeto — quanto menor a superfície, mais fácil embutir em qualquer lugar.
+dependencies = []
+
+[project.optional-dependencies]
+graph = ["networkx>=3.0"]          # exportação para grafo
+dev = ["pytest>=7.0", "pytest-cov>=4.0", "mypy>=1.0", "ruff>=0.1"]
+
+[project.urls]
+Homepage = "https://github.com/PAULINUP/EngineeringOS"
+Repository = "https://github.com/PAULINUP/EngineeringOS"
+Issues = "https://github.com/PAULINUP/EngineeringOS/issues"
+
+[project.scripts]
+eos = "eoslang.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/eoslang"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

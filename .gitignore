@@ -44,3 +44,6 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Configuração local do Claude Code (não é do projeto)
+.claude/
