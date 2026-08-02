@@ -102,8 +102,14 @@ async def importar(recriar: bool):
             if not linhas:
                 continue
             for i in range(0, len(linhas), 500):
-                for linha in linhas[i:i + 500]:
-                    await db.merge(modelo(**{k: _desserializar(v) for k, v in linha.items()}))
+                # no_autoflush: o merge faz SELECT por chave primária, e no
+                # PostgreSQL isso dispara flush dos objetos ainda pendentes do
+                # mesmo lote — que podem referenciar linhas não gravadas.
+                with db.no_autoflush:
+                    for linha in linhas[i:i + 500]:
+                        await db.merge(
+                            modelo(**{k: _desserializar(v) for k, v in linha.items()})
+                        )
                 await db.commit()
             print(f"  {modelo.__tablename__}: {len(linhas)}")
             total += len(linhas)
