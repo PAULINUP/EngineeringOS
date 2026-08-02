@@ -1,3 +1,19 @@
+# ---------- Estágio 1: compila o dashboard ----------
+# O dist/ está no .gitignore (correto: artefato não se versiona), e o Railway
+# respeita esse arquivo ao enviar o contexto — então a interface simplesmente
+# não chegava na imagem. Compilar aqui resolve na origem: a imagem passa a ser
+# reproduzível a partir do código-fonte, sem depender de um build local.
+FROM node:22-slim AS dashboard
+
+WORKDIR /dashboard
+COPY dashboard/package*.json ./
+RUN npm ci
+
+COPY dashboard/ ./
+RUN npm run build
+
+
+# ---------- Estágio 2: aplicação ----------
 FROM python:3.12-slim
 
 # Não gera .pyc e não bufferiza o log (senão o log só aparece ao encerrar)
@@ -15,6 +31,10 @@ COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 COPY . .
+
+# Interface compilada no estágio anterior — servida pelo próprio backend,
+# na mesma origem que a API.
+COPY --from=dashboard /dashboard/dist ./dashboard/dist
 
 # Processo sem privilégio: um comprometimento da aplicação não vira root
 RUN useradd --create-home --uid 10001 eos && chown -R eos:eos /app
