@@ -11,7 +11,11 @@ case "${EOS_ROLE:-api}" in
     # sonda o deploy do worker era descartado por healthcheck, mesmo com o
     # processo perfeitamente vivo.
     python worker_health.py &
+    # --beat embutido: uma réplica só, então não há risco de dois agendadores
+    # disparando a mesma tarefa, e economiza um contêiner dedicado.
     exec celery -A src.celery_worker.celery_app worker \
+      --beat \
+      --schedule=/tmp/celerybeat-schedule \
       --loglevel="${CELERY_LOGLEVEL:-info}" \
       --concurrency="${CELERY_CONCURRENCY:-2}" \
       --max-tasks-per-child=200

@@ -1,6 +1,7 @@
 import os
 import json
 from celery import Celery
+from celery.schedules import crontab
 import asyncio
 
 REDIS_URL = os.getenv("REDIS_URL", "").strip()
@@ -33,6 +34,39 @@ celery_app.conf.update(
     worker_max_tasks_per_child=200,      # recicla o processo: evita vazamento
     broker_connection_retry_on_startup=True,
 )
+
+# Agenda periódica. Roda no beat embutido no worker (`celery worker --beat`):
+# com uma réplica só, um contêiner a menos para pagar e manter.
+celery_app.conf.beat_schedule = {
+    "backup-diario": {
+        "task": "backup_do_banco",
+        "schedule": crontab(hour=5, minute=30),   # 05:30 UTC = 02:30 em Brasília
+    },
+}
+
+
+@celery_app.task(bind=True, name="backup_do_banco")
+def backup_do_banco(self):
+    """
+    Cópia diária do banco para o bucket, verificada relendo o que foi enviado.
+
+    O plano da conta no Railway permite zero backups de volume, então esta é a
+    única cópia que existe. Falha aqui é ruído no log e nada mais — por isso o
+    resultado carrega o status explícito, para aparecer em qualquer inspeção.
+    """
+    from src import backup
+
+    try:
+        resultado = asyncio.run(backup.criar())
+    except Exception as exc:  # noqa: BLE001
+        raise self.retry(exc=exc, countdown=300, max_retries=2)
+
+    if resultado.get("status") != "ok":
+        print(f"BACKUP FALHOU: {resultado}", flush=True)
+    else:
+        print(f"Backup ok: {resultado['chave']} "
+              f"({resultado['linhas']} linhas, {resultado['bytes']} bytes)", flush=True)
+    return resultado
 
 
 @celery_app.task(bind=True, name="process_cognitive_frontier")

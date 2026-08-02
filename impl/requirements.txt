@@ -21,3 +21,6 @@ bcrypt>=4.0.0
 deep-translator==1.11.4
 email-validator>=2.0.0
 sentry-sdk[fastapi]>=2.0.0
+# Backup para o bucket do Railway (S3-compatível). O plano permite zero
+# backups de volume, então esta é a única cópia do progresso dos alunos.
+boto3>=1.34.0
