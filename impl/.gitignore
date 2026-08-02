@@ -21,4 +21,3 @@ backups/
 *.db.antes-de-restaurar-*
 .env
 ensaio_migracao.db
-data_export.json.gz
