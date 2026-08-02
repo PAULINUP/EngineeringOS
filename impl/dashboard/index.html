@@ -1,13 +1,25 @@
 <!doctype html>
-<html lang="en">
+<!--
+  lang="pt-BR": a interface é escrita em português. Declarada como "en", o
+  Chrome detectava a divergência e traduzia a página automaticamente — e o
+  tradutor troca os nós de texto por elementos <font>, desmontando a árvore
+  que o React controla. O resultado era a aplicação caindo com
+  "Failed to execute 'insertBefore' on 'Node'".
+
+  translate="no" e notranslate reforçam: mesmo que a tradução seja pedida
+  manualmente, o navegador não reescreve o DOM por baixo do React.
+-->
+<html lang="pt-BR" translate="no">
   <head>
     <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dashboard</title>
+    <meta name="description" content="EngineeringOS — sistema operacional para engenharia do conhecimento" />
+    <title>EngineeringOS</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root" class="notranslate"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
