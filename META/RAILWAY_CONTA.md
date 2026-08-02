@@ -42,6 +42,22 @@ só os dados.
 Cópia de segurança do volume do Agent guardada em
 `eos-backups/migracao-2026-08/agent/`.
 
+## A ligação entre `singularity-finance` e `chimera`
+
+O API1.0 usa o Chimera para simulação de Monte Carlo e previsão de ESG:
+`app/services/quantum_client.py` chama `CHIMERA_GATEWAY_URL` com o cabeçalho
+`X-Chimera-API-Key`.
+
+Separar os dois em projetos diferentes tem um custo que precisa ficar claro:
+**não existe rede privada entre projetos no Railway**. A chamada sai pela
+internet, e por isso o `api-gateway` do Chimera precisa continuar com domínio
+público — protegido apenas por essa chave no cabeçalho.
+
+A migração quebrou essa ligação: o `CHIMERA_GATEWAY_URL` estava chumbado no
+código apontando para o domínio antigo, que deixou de existir. Corrigido em
+duas frentes — a variável foi definida no serviço, e o campo virou obrigatório
+no `config.py` para que a ausência falhe no deploy em vez de falhar no cliente.
+
 ## Defeitos encontrados no caminho
 
 **Comunicação interna saindo pela internet.** O `api-gateway` chamava
