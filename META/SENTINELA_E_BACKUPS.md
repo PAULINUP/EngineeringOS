@@ -91,3 +91,39 @@ por mim — são credenciais financeiras e de conta:
 
 Depois de girar, atualize as variáveis no serviço `Agent` no Railway. O
 `.env.example` lista todos os nomes esperados.
+
+## Sondas de integração
+
+A sentinela vigia se cada serviço responde. Isso não é a mesma coisa que as
+**ligações entre eles** funcionarem, e a diferença custou caro duas vezes num
+único dia — com os dois lados verdes o tempo todo:
+
+1. O Chimera mudou de projeto e o `CHIMERA_GATEWAY_URL` do API1.0 ficou
+   apontando para o domínio antigo. Monte Carlo e ESG pararam.
+2. A QUBO passou de 6 para 16 qubits e o `/optimize` foi de 15 s para 200 s,
+   acima do timeout de 180 s do cliente. De novo: `/health` verde nos dois.
+
+Nenhuma checagem de saúde pegaria isso, porque nada estava fora do ar.
+
+Três sondas executam trabalho de verdade, de hora em hora:
+
+| Sonda | O que faz | Limite do consumidor |
+|---|---|---|
+| Chimera calcula certo | manda um Max-Cut de ótimo conhecido e **confere o valor** | 180 s |
+| API1.0 → Chimera | lê o `/readyz` do API1.0, que tenta a chamada com a chave que ele tem | 5 s |
+| omnigrowth → API1.0 | chama o endpoint que ele consome, com a chave dele | 30 s |
+
+Duas decisões que vieram de medição:
+
+**Margem.** Cada sonda conhece o timeout *real* do consumidor e acusa aos 60%
+dele. Uma integração a 170 s contra limite de 180 s ainda "funciona" e quebra
+no próximo aumento de carga — é assim que o caso 2 teria sido pego antes.
+
+**Confirmação.** Na primeira execução a sonda acusou o Chimera como
+inalcançável; era transitório — o serviço tinha acabado de reiniciar e o
+`/health`, que consulta três serviços internos, passou de 4 s naquele instante.
+Meia dúzia de medições depois: 0,6 s. Falha transitória que vira alerta é pior
+que nenhum alerta, porque ensina a ignorar o canal. Agora a falha precisa se
+repetir; recuperação vale na primeira.
+
+Inspeção sob demanda em `GET /integracoes`.
