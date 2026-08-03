@@ -36,7 +36,7 @@ from sqlalchemy import func, select
 from src.database import AsyncSessionLocal
 from src.models import Base
 
-PREFIXO = "postgres/"
+PREFIXO = "engineeringos/postgres/"
 RETENCAO_DIARIA = int(os.getenv("BACKUP_RETENCAO", "14"))
 
 
