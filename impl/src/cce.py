@@ -25,19 +25,94 @@ def _normalize_text(text: str) -> str:
 # virava os números 2 e 3 e era reprovada.
 _FRACAO_RE = re.compile(r"(-?\d+(?:[.,]\d+)?)\s*/\s*(-?\d+(?:[.,]\d+)?)")
 
+# Número com separadores, nas duas convenções.
+_NUMERO_RE = re.compile(r"-?\d[\d.,]*\d|-?\d")
+
+
+def _um_numero(texto: str) -> Optional[float]:
+    """
+    Lê UM número aceitando as duas convenções: `7,173,000,000` (livro em
+    inglês) e `7.173.000.000` (como se escreve em português). Ambas valem,
+    porque o acervo é traduzido e o aluno não tem como adivinhar qual o
+    corretor espera.
+
+    Regra que não depende de idioma: **o último separador é decimal, a menos
+    que o que venha depois dele seja um grupo de exatamente três dígitos** —
+    grupo de três só aparece em agrupamento de milhar.
+
+    O caso genuinamente ambíguo (`1.234`, que é mil duzentos e trinta e quatro
+    em português e um vírgula dois em inglês) é lido como MILHAR, porque nesse
+    formato é assim que o aluno escreve número grande. Quem quer o decimal
+    escreve `1,234` — que aqui também é aceito como milhar, então na dúvida o
+    aluno deve digitar sem separador nenhum.
+    """
+    t = texto.strip().replace(" ", "")
+    negativo = t.startswith("-")
+    t = t.lstrip("+-")
+    if not t or not t[0].isdigit():
+        return None
+    sinal = -1 if negativo else 1
+
+    separadores = [c for c in t if c in ".,"]
+    if not separadores:
+        try:
+            return sinal * float(t)
+        except ValueError:
+            return None
+
+    pos = max(t.rfind("."), t.rfind(","))
+    depois = t[pos + 1:]
+    especies = set(separadores)
+
+    if len(especies) == 2 or (len(separadores) == 1 and len(depois) != 3):
+        # Duas espécies: a última é decimal. Uma só, com != 3 dígitos: decimal.
+        inteiro = t[:pos].replace(".", "").replace(",", "")
+        cauda = depois
+    else:
+        # Repetido, ou único com 3 dígitos: agrupamento de milhar.
+        inteiro, cauda = t.replace(".", "").replace(",", ""), ""
+
+    if not inteiro.isdigit() or (cauda and not cauda.isdigit()):
+        return None
+    try:
+        return sinal * float(f"{inteiro}.{cauda}" if cauda else inteiro)
+    except ValueError:
+        return None
+
+
+def _legivel(v: float) -> str:
+    """
+    Valor como a pessoa escreve, não como o Python imprime.
+
+    `%g` transformava 7173000000 em "7.173e+09" — que um leitor de português lê
+    como sete mil cento e setenta e três, exatamente o mal-entendido que este
+    módulo existe para evitar. Aqui sai "7.173.000.000".
+    """
+    if v == int(v) and abs(v) < 1e15:
+        return f"{int(v):,}".replace(",", ".")
+    texto = f"{v:.6f}".rstrip("0").rstrip(".")
+    inteiro, _, decimal = texto.partition(".")
+    inteiro = f"{int(inteiro):,}".replace(",", ".")
+    return f"{inteiro},{decimal}" if decimal else inteiro
+
+
 def _extract_numbers(text: str) -> List[float]:
     """
-    Números da resposta, com frações resolvidas. Aceita vírgula decimal
-    brasileira ("0,5") e fração ("2/3", "1 / 2").
+    Números da resposta, com frações resolvidas e separadores interpretados
+    nas duas convenções.
     """
     def resolver(m: "re.Match[str]") -> str:
-        num = float(m.group(1).replace(",", "."))
-        den = float(m.group(2).replace(",", "."))
-        return f" {num / den!r} " if den else " "
+        num = _um_numero(m.group(1))
+        den = _um_numero(m.group(2))
+        return f" {num / den!r} " if num is not None and den else " "
 
-    normalized = _FRACAO_RE.sub(resolver, text)
-    normalized = re.sub(r"(?<=\d),(?=\d)", ".", normalized)
-    return [float(m) for m in re.findall(r"-?\d+(?:\.\d+)?", normalized)]
+    normalizado = _FRACAO_RE.sub(resolver, text)
+    valores = []
+    for m in _NUMERO_RE.finditer(normalizado):
+        v = _um_numero(m.group(0))
+        if v is not None:
+            valores.append(v)
+    return valores
 
 def grade_answer(
     answer_type: str,
@@ -65,7 +140,7 @@ def grade_answer(
             # Usa o último número citado (padrão: aluno conclui com o resultado)
             candidate = found[-1]
             ok = abs(candidate - expected_values[0]) <= tolerance
-            return ok, f"Valor interpretado: {candidate:g}"
+            return ok, f"Valor interpretado: {_legivel(candidate)}"
         # Conjunto de valores: todos devem estar presentes
         missing = [
             e for e in expected_values

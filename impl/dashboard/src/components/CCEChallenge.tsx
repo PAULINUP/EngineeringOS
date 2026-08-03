@@ -346,19 +346,34 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
                 )}
               </div>
             ) : (
-              <input
-                type="text"
-                className="input-eos w-full text-sm p-3 placeholder-slate-600"
-                placeholder={
-                  currentChallenge.answer_type === "numeric"
-                    ? "Digite o valor numérico da resposta…"
-                    : "Digite sua resposta…"
-                }
-                value={answer}
-                onChange={(e) => setAnswer(e.target.value)}
-                disabled={isSubmitting}
-                autoFocus
-              />
+              <>
+                <input
+                  type="text"
+                  className="input-eos w-full text-sm p-3 placeholder-slate-600"
+                  placeholder={
+                    currentChallenge.answer_type === "numeric"
+                      ? "Digite o valor numérico da resposta…"
+                      : "Digite sua resposta…"
+                  }
+                  value={answer}
+                  onChange={(e) => setAnswer(e.target.value)}
+                  disabled={isSubmitting}
+                  autoFocus
+                />
+                {/* O acervo é traduzido de livros em inglês, onde a vírgula
+                    agrupa milhar. Sem dizer o que vale, o aluno adivinha — e
+                    adivinhar errado parecia erro de conteúdo, não de formato. */}
+                {currentChallenge.answer_type === "numeric" && (
+                  <p className="text-[10px] text-slate-500 mt-1.5 leading-relaxed">
+                    Aceita <span className="text-slate-400">7173000000</span>,{" "}
+                    <span className="text-slate-400">7.173.000.000</span> ou{" "}
+                    <span className="text-slate-400">7,173,000,000</span> — as três valem.
+                    Decimal com vírgula ou ponto (<span className="text-slate-400">0,5</span>{" "}
+                    = <span className="text-slate-400">0.5</span>). Fração pode:{" "}
+                    <span className="text-slate-400">2/3</span>.
+                  </p>
+                )}
+              </>
             )}
           </div>
 

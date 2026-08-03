@@ -318,6 +318,55 @@ def test_fracao_e_um_valor_so():
     assert not grade_answer("numeric", "0.666667", 0.01, "3")[0]
 
 
+def test_numero_grande_com_agrupamento_completo():
+    """
+    "7,173,000,000" tem de virar sete bilhões, não sete mil.
+
+    A correção par a par juntava só o primeiro grupo e deixava "7173,000000";
+    a vírgula restante era lida como decimal e o gabarito virava 7173 — menor
+    que o correto por um fator de um milhão, e plausível o bastante para
+    ninguém desconfiar. Quem respondia certo era reprovado.
+    """
+    from tools.openstax_exercises import clean_math_html
+
+    assert clean_math_html("7,173,000,000") == "7173000000"
+    assert clean_math_html("3,226,512,017") == "3226512017"
+    assert clean_math_html("39,000,000,000,000") == "39000000000000"
+    assert clean_math_html("11,044,167") == "11044167"
+
+
+def test_aluno_pode_escrever_numero_nas_duas_convencoes():
+    """
+    O acervo vem de livros em inglês (vírgula agrupa milhar) e é usado por quem
+    escreve em português (ponto agrupa). Exigir uma convenção reprova metade
+    das respostas certas, e o aluno não tem como adivinhar qual.
+    """
+    from src.cce import grade_answer
+
+    for escrita in ("7173000000", "7.173.000.000", "7,173,000,000"):
+        correto, _ = grade_answer("numeric", "7173000000", 0.5, escrita)
+        assert correto, f"deveria aceitar {escrita}"
+
+    # E continua reprovando o valor errado.
+    assert not grade_answer("numeric", "7173000000", 0.5, "7173")[0]
+
+    # Decimal nas duas convenções.
+    assert grade_answer("numeric", "0.5", 0.01, "0,5")[0]
+    assert grade_answer("numeric", "0.5", 0.01, "0.5")[0]
+
+
+def test_valor_interpretado_e_legivel():
+    """
+    "%g" imprimia 7173000000 como "7.173e+09" — que em português se lê como
+    sete mil cento e setenta e três, exatamente o mal-entendido a evitar.
+    """
+    from src.cce import grade_answer
+
+    _, detalhe = grade_answer("numeric", "1", 0.01, "7173000000")
+    assert "7.173.000.000" in detalhe
+    assert "e+09" not in detalhe
+
+
 def test_separador_de_milhar_nao_engole_lista():
     """
     "(a) 5, 125" virou o número 5125 — resposta que não existe em lugar

@@ -120,8 +120,18 @@ def clean_math_html(fragment: str) -> str:
     # <mn> distintos colados com espaço. Vírgula de lista em prosa inglesa é o
     # oposto: espaço só depois ("5, 125"). Confundir os dois transformava a
     # resposta "(a) 5, 125" no número inexistente 5125.
-    text = re.sub(r"(\d)\s+,\s*(\d{3})(?!\d)", r"\1\2", text)
-    text = re.sub(r"(\d),(\d{3})(?!\d)", r"\1\2", text)
+    # Casa o número AGRUPADO INTEIRO, e não par a par. Par a par, "7,173,000,000"
+    # sobrava como "7173,000000": o `(?!\d)` que impede colar lista deixa de casar
+    # assim que os dígitos se juntam, e a vírgula restante virava decimal — sete
+    # bilhões lidos como sete mil. O aluno digitava certo e era reprovado.
+    #
+    # Duas formas, e a diferença entre elas importa:
+    #   "2 , 162"  espaço ANTES da vírgula  -> número partido em tokens <mn>
+    #   "2,162"    sem espaço algum         -> agrupamento normal do livro
+    #   "5, 125"   espaço só DEPOIS         -> vírgula de LISTA, não se junta
+    juntar = lambda m: re.sub(r"[\s,]", "", m.group(0))  # noqa: E731
+    text = re.sub(r"\d{1,3}(?:\s+,\s*\d{3})+(?!\d)", juntar, text)
+    text = re.sub(r"\d{1,3}(?:,\d{3})+(?!\d)", juntar, text)
     return re.sub(r"\s+", " ", text).strip()
 
 
