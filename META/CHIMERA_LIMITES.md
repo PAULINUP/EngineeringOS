@@ -1,5 +1,24 @@
 # Chimera: até onde vai, e por quê
 
+> **Correção do defeito central (agosto/2026).** O QUBO não representava o
+> problema: a normalização por `max_score` achatava escores de 0,70 a 0,77 em
+> contribuições todas ≈ 1, deixando a diagonal uniformemente negativa e os
+> acoplamentos ≈ 0. O mínimo era sempre "todos os bits ligados", qualquer que
+> fosse o dado — medido em 100% das execuções, inclusive quando o ótimo real
+> era o canto oposto.
+>
+> A correção é uma **formulação one-hot**, na qual o objetivo
+> −Σ s(i,j)·xᵢ·yⱼ é literalmente quadrático e nada é aproximado. Custa 16
+> qubits em vez de 6. Provado por enumeração dos 2¹⁶ estados: o mínimo do QUBO
+> coincide com a melhor célula da grade em **9 de 9** casos, incluindo ótimos
+> em cada canto e escores separados por 0,001.
+>
+> Em produção, com 1.000 linhas do Adult, o QAOA passou a devolver
+> `00000100 00010000` — one-hot válido — e escore **0,7632, exatamente o ótimo
+> da varredura exaustiva**. Antes devolvia `111111` (C=10) e escore 0,7027.
+
+
+
 Tudo aqui foi medido contra **verdade calculada de forma independente** — o
 ótimo exato por força bruta, ou a fórmula fechada do Max-Cut em anel (n se par,
 n−1 se ímpar). Nenhum número veio de "pareceu funcionar".
