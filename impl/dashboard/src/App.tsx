@@ -23,7 +23,14 @@ import { CompetenceMatrix } from "./components/CompetenceMatrix";
 import { MaterialViewer } from "./components/MaterialViewer";
 import { Login, type Sessao } from "./components/Login";
 
-import { API_BASE } from "./api";
+import {
+  API_BASE,
+  ErroDaApi,
+  SessaoExpirada,
+  aoPerderSessao,
+  apiFetch,
+  limparSessao,
+} from "./api";
 
 const MASTERY_THRESHOLD = 0.85;
 
@@ -222,12 +229,8 @@ function App() {
     recency_factor: number;
   }) => {
     try {
-      const res = await fetch(`${API_BASE}/evidence`, {
+      const data = await apiFetch<{ status: string; ku_id: string }>("/evidence", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("eos_token")}`,
-        },
         body: JSON.stringify({
           learner_id: selectedLearnerId,
           ...evidence,
@@ -236,7 +239,6 @@ function App() {
           ],
         }),
       });
-      const data = await res.json();
 
       if (data.status === "validated") {
         showToast("success", `Evidência validada! Maestria de ${data.ku_id} atualizada.`);
@@ -246,7 +248,14 @@ function App() {
 
       await fetchGraphAndPath();
     } catch (err) {
-      showToast("error", "Erro ao registrar evidência");
+      // Sessão expirada já devolve para o login pelo aoPerderSessao; aqui só
+      // o que sobrou. Mostrar o motivo real evita "erro ao registrar" genérico.
+      if (!(err instanceof SessaoExpirada)) {
+        showToast(
+          "error",
+          err instanceof ErroDaApi ? err.message : "Erro ao registrar evidência",
+        );
+      }
     }
   };
 
@@ -266,6 +275,22 @@ function App() {
     setNotification({ type, msg });
     setTimeout(() => setNotification(null), 4000);
   };
+
+  // Sessão perdida (token expirado ou segredo do servidor girado): devolve para
+  // a tela de entrada com o motivo dito em voz alta. Antes disso a aplicação
+  // seguia exibindo o painel com um token morto, e cada ação falhava com uma
+  // mensagem que parecia culpa do aluno.
+  useEffect(() => {
+    aoPerderSessao(() => {
+      setSessao(null);
+      setSelectedLearnerId("");
+      setNodes([]);
+      setEdges([]);
+      setActivePath([]);
+      showToast("error", "Sua sessão expirou. Entre novamente para continuar.");
+    });
+    return () => aoPerderSessao(null);
+  }, []);
 
   const handleSelectNodeById = (id: string) => {
     const node = nodes.find((n) => n.id === id);
@@ -335,8 +360,7 @@ function App() {
   }
 
   const sair = () => {
-    localStorage.removeItem("eos_sessao");
-    localStorage.removeItem("eos_token");
+    limparSessao();
     setSessao(null);
     setSelectedLearnerId("");
     setNodes([]);

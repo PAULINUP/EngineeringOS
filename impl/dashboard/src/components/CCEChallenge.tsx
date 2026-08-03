@@ -9,9 +9,10 @@ import {
   XCircle,
   Zap,
   Flag,
+  AlertTriangle,
 } from "lucide-react";
 
-import { API_BASE } from "../api";
+import { API_BASE, ErroDaApi, SessaoExpirada, apiFetch } from "../api";
 
 interface Node {
   id: string;
@@ -72,6 +73,9 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
   const [challengeIdx, setChallengeIdx] = useState(0);
   const [loadingChallenges, setLoadingChallenges] = useState(false);
   const [attemptResult, setAttemptResult] = useState<AttemptResult | null>(null);
+  // Separado de attemptResult de propósito: problema de sessão ou de rede não
+  // é veredito sobre a resposta do aluno e não pode ser pintado como tal.
+  const [erroDeSessao, setErroDeSessao] = useState<string | null>(null);
 
   // --- comum ---
   const [answer, setAnswer] = useState("");
@@ -113,21 +117,26 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
     e.preventDefault();
     if (!answer.trim() || !currentChallenge) return;
     setIsSubmitting(true);
+    setErroDeSessao(null);
     try {
-      const res = await fetch(`${API_BASE}/challenges/${currentChallenge.id}/attempt`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("eos_token")}`,
-        },
-        body: JSON.stringify({ learner_id: learnerId, answer }),
-      });
-      const data: AttemptResult = await res.json();
+      const data = await apiFetch<AttemptResult>(
+        `/challenges/${currentChallenge.id}/attempt`,
+        { method: "POST", body: JSON.stringify({ learner_id: learnerId, answer }) },
+      );
       setAttemptResult(data);
       if (data.correct) {
         await onAfterAttempt();
       }
     } catch (err) {
+      // Falha de sessão ou de rede NÃO pode ser exibida como resposta errada:
+      // o aluno reveria a matéria por um problema que não é dele.
+      if (err instanceof SessaoExpirada) {
+        setErroDeSessao(err.message);
+      } else if (err instanceof ErroDaApi) {
+        setErroDeSessao(err.message);
+      } else {
+        setErroDeSessao("Não consegui falar com o servidor. Verifique a conexão.");
+      }
       console.error("Erro ao submeter tentativa:", err);
     } finally {
       setIsSubmitting(false);
@@ -136,12 +145,14 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
 
   const goToNextChallenge = () => {
     setAttemptResult(null);
+    setErroDeSessao(null);
     setAnswer("");
     setChallengeIdx((i) => (i + 1) % challenges.length);
   };
 
   const retryChallenge = () => {
     setAttemptResult(null);
+    setErroDeSessao(null);
     setAnswer("");
   };
 
@@ -160,24 +171,24 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
 
     setIsSubmitting(true);
     try {
-      const res = await fetch(`${API_BASE}/challenges/${currentChallenge.id}/report`, {
+      await apiFetch(`/challenges/${currentChallenge.id}/report`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("eos_token")}`,
-        },
         body: JSON.stringify({ learner_id: learnerId, reason: "" }),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       const restantes = challenges.filter((c) => c.id !== currentChallenge.id);
       setChallenges(restantes);
       setChallengeIdx((i) => (restantes.length ? i % restantes.length : 0));
       setAttemptResult(null);
+      setErroDeSessao(null);
       setAnswer("");
     } catch (err) {
       console.error("Erro ao denunciar desafio:", err);
-      alert("Não consegui registrar a denúncia agora. Tente de novo mais tarde.");
+      setErroDeSessao(
+        err instanceof SessaoExpirada || err instanceof ErroDaApi
+          ? err.message
+          : "Não consegui registrar a denúncia agora. Tente de novo mais tarde.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -283,7 +294,19 @@ export const CCEChallenge: React.FC<CCEChallengeProps> = ({
               {currentChallenge.prompt}
             </p>
 
-            {attemptResult ? (
+            {erroDeSessao ? (
+              /* Falha de sessão ou de servidor — âmbar, nunca vermelho: não é
+                 veredito sobre a resposta, é a plataforma que não respondeu. */
+              <div className="rounded-xl border border-amber-500/40 bg-amber-500/10 p-3.5">
+                <p className="font-semibold text-sm flex items-center gap-1.5 text-amber-300">
+                  <AlertTriangle className="w-4 h-4" /> Não foi possível corrigir
+                </p>
+                <p className="text-xs text-slate-300 mt-1.5">{erroDeSessao}</p>
+                <p className="text-[11px] text-slate-400 mt-1.5">
+                  Sua resposta não foi avaliada — isto não conta como erro.
+                </p>
+              </div>
+            ) : attemptResult ? (
               /* Resultado da correção */
               <div
                 className={`rounded-xl border p-3.5 ${
