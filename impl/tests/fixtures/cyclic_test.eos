@@ -1,0 +1,15 @@
+@version 1.0.0
+@domain "teste"
+
+# Fixture intencional: ciclo de pr?-requisitos. Ambos os parsers devem rejeitar.
+knowledge ciclo_a {
+  title: "Conceito A"
+  definition: "Depende do B"
+  requires: [ciclo_b]
+}
+
+knowledge ciclo_b {
+  title: "Conceito B"
+  definition: "Depende do A"
+  requires: [ciclo_a]
+}

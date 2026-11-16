@@ -35,7 +35,7 @@ TOPIC topic.ml {
 }
 
 # Knowledge Units (KUs)
-KU linear_algebra.matrix_definition.v1 {
+KNOWLEDGE linear_algebra.matrix_definition.v1 {
     title: "Definição de Matrizes"
     domain: "linear_algebra"
     level: "foundational"
@@ -46,7 +46,7 @@ KU linear_algebra.matrix_definition.v1 {
     ]
 }
 
-KU linear_algebra.dot_product.v1 {
+KNOWLEDGE linear_algebra.dot_product.v1 {
     title: "Produto Escalar"
     domain: "linear_algebra"
     level: "foundational"
@@ -57,7 +57,7 @@ KU linear_algebra.dot_product.v1 {
     ]
 }
 
-KU linear_algebra.matrix_multiplication.v1 {
+KNOWLEDGE linear_algebra.matrix_multiplication.v1 {
     title: "Multiplicação de Matrizes"
     domain: "linear_algebra"
     level: "intermediate"
@@ -72,7 +72,7 @@ KU linear_algebra.matrix_multiplication.v1 {
     ]
 }
 
-KU linear_algebra.eigenvalues.v1 {
+KNOWLEDGE linear_algebra.eigenvalues.v1 {
     title: "Autovalores e Autovetores"
     domain: "linear_algebra"
     level: "advanced"
@@ -86,7 +86,7 @@ KU linear_algebra.eigenvalues.v1 {
     ]
 }
 
-KU calculus.partial_derivatives.v1 {
+KNOWLEDGE calculus.partial_derivatives.v1 {
     title: "Derivadas Parciais"
     domain: "calculus"
     level: "intermediate"
@@ -97,7 +97,7 @@ KU calculus.partial_derivatives.v1 {
     ]
 }
 
-KU ml.gradient_descent.v1 {
+KNOWLEDGE ml.gradient_descent.v1 {
     title: "Gradiente Descendente"
     domain: "ml"
     level: "advanced"

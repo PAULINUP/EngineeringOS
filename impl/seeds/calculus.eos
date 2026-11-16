@@ -1,30 +1,54 @@
-module Cálculo para Engenharia I
-description "A base matemática fundamental para a modelagem de sistemas dinâmicos na Engenharia."
+@version 1.0.0
+@domain "calculus"
 
-ku Álgebra Elementar
-@content "Operações fundamentais, frações, potenciação e radiciação."
+# Cálculo para Engenharia I — A base matemática fundamental para a modelagem de sistemas dinâmicos na Engenharia.
 
-ku Funções
-@prerequisite Álgebra Elementar
-@content "Definição de funções matemáticas, domínio, imagem e gráficos."
+KNOWLEDGE calculus.AlgebraElementar {
+  title: "Álgebra Elementar"
+  domain: "calculus"
+  definition: "Operações fundamentais, frações, potenciação e radiciação."
+  requires: []
+}
 
-ku Limites
-@prerequisite Funções
-@content "Conceito de limite, propriedades, limites laterais e no infinito."
+KNOWLEDGE calculus.Funcoes {
+  title: "Funções"
+  domain: "calculus"
+  definition: "Definição de funções matemáticas, domínio, imagem e gráficos."
+  requires: [calculus.AlgebraElementar]
+}
 
-ku Continuidade
-@prerequisite Limites
-@content "Definição de continuidade e Teorema do Valor Intermediário."
+KNOWLEDGE calculus.Limites {
+  title: "Limites"
+  domain: "calculus"
+  definition: "Conceito de limite, propriedades, limites laterais e no infinito."
+  requires: [calculus.Funcoes]
+}
 
-ku Derivadas
-@prerequisite Limites
-@prerequisite Continuidade
-@content "Taxa de variação, regras de derivação (produto, quociente, cadeia)."
+KNOWLEDGE calculus.Continuidade {
+  title: "Continuidade"
+  domain: "calculus"
+  definition: "Definição de continuidade e Teorema do Valor Intermediário."
+  requires: [calculus.Limites]
+}
 
-ku Aplicações de Derivadas
-@prerequisite Derivadas
-@content "Otimização, máximos e mínimos, concavidade e Teorema de L'Hôpital."
+KNOWLEDGE calculus.Derivadas {
+  title: "Derivadas"
+  domain: "calculus"
+  definition: "Taxa de variação, regras de derivação (produto, quociente, cadeia)."
+  requires: [calculus.Limites, calculus.Continuidade]
+}
 
-ku Integrais Indefinidas
-@prerequisite Derivadas
-@content "Antiderivadas e propriedades básicas de integração."
+KNOWLEDGE calculus.AplicacoesdeDerivadas {
+  title: "Aplicações de Derivadas"
+  domain: "calculus"
+  definition: "Otimização, máximos e mínimos, concavidade e Teorema de L'Hôpital."
+  requires: [calculus.Derivadas]
+}
+
+KNOWLEDGE calculus.IntegraisIndefinidas {
+  title: "Integrais Indefinidas"
+  domain: "calculus"
+  definition: "Antiderivadas e propriedades básicas de integração."
+  requires: [calculus.Derivadas]
+}
+
