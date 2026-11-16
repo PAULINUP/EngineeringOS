@@ -9,10 +9,35 @@
 // absoluto. E 127.0.0.1 em vez de "localhost" porque no Windows o resolvedor
 // tenta o IPv6 ::1 primeiro e custa ~2s de timeout por requisição.
 const DEV_API = "http://127.0.0.1:8000/api";
+const API_STORAGE_KEY = "eos_api_base";
 
-export const API_BASE =
-  (import.meta.env.VITE_API_BASE as string | undefined) ??
-  (import.meta.env.DEV ? DEV_API : "/api");
+// A URL da API é configurável em runtime (tela de servidor): o app nativo não
+// tem "mesma origem" do backend, então "/api" relativo só serve quando o
+// dashboard é servido pelo próprio FastAPI. No APK o usuário define o
+// endereço (local/LAN durante o desenvolvimento, produção depois).
+export function resolveApiBase(): string {
+  const saved = localStorage.getItem(API_STORAGE_KEY);
+  if (saved) return saved;
+  const env = import.meta.env.VITE_API_BASE as string | undefined;
+  if (env) return env;
+  return import.meta.env.DEV ? DEV_API : "/api";
+}
+
+export function setApiBase(url: string): void {
+  localStorage.setItem(API_STORAGE_KEY, url.trim().replace(/\/+$/, ""));
+}
+
+export function hasSavedApiBase(): boolean {
+  return Boolean(localStorage.getItem(API_STORAGE_KEY));
+}
+
+export function isNativePlatform(): boolean {
+  const cap = (window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } })
+    .Capacitor;
+  return typeof cap?.isNativePlatform === "function" && cap.isNativePlatform();
+}
+
+export const API_BASE = resolveApiBase();
 
 // ---------------------------------------------------------------------------
 // Chamada autenticada

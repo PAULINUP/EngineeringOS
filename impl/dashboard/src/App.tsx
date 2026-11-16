@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Award,
   BrainCircuit,
@@ -10,6 +10,7 @@ import {
   Hexagon,
   Layers,
   LogOut,
+  Menu,
   Route,
   Sparkles,
   Target,
@@ -29,8 +30,13 @@ import {
   SessaoExpirada,
   aoPerderSessao,
   apiFetch,
+  hasSavedApiBase,
+  isNativePlatform,
   limparSessao,
 } from "./api";
+import { ServerSettings } from "./components/ServerSettings";
+import { MobileNav, type MobileSection } from "./components/MobileNav";
+import { App as CapacitorApp } from "@capacitor/app";
 
 const MASTERY_THRESHOLD = 0.85;
 
@@ -125,6 +131,63 @@ function App() {
   const [selectedDomain, setSelectedDomain] = useState<string>("all");
   const [notification, setNotification] = useState<{ type: string; msg: string } | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [serverSettingsOpen, setServerSettingsOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState<MobileSection>("overview");
+  const precisaConfigurarServidor = isNativePlatform() && !hasSavedApiBase();
+
+  // Refs para o botão voltar do Android (o listener fica registrado uma única vez).
+  const selectedNodeRef = useRef<KNode | null>(null);
+  const menuOpenRef = useRef(false);
+  const serverSettingsOpenRef = useRef(false);
+
+  useEffect(() => {
+    selectedNodeRef.current = selectedNode;
+  }, [selectedNode]);
+
+  useEffect(() => {
+    menuOpenRef.current = menuOpen;
+  }, [menuOpen]);
+
+  useEffect(() => {
+    serverSettingsOpenRef.current = serverSettingsOpen;
+  }, [serverSettingsOpen]);
+
+  // Botão voltar do Android: fecha primeiro painéis/sheets abertos;
+  // sem nada aberto, volta no histórico do WebView ou minimiza o app.
+  useEffect(() => {
+    if (!isNativePlatform()) return;
+    let handle: { remove: () => Promise<void> } | null = null;
+    CapacitorApp.addListener("backButton", ({ canGoBack }) => {
+      if (selectedNodeRef.current) {
+        setSelectedNode(null);
+        return;
+      }
+      if (serverSettingsOpenRef.current) {
+        setServerSettingsOpen(false);
+        return;
+      }
+      if (menuOpenRef.current) {
+        setMenuOpen(false);
+        return;
+      }
+      if (canGoBack) {
+        window.history.back();
+      } else {
+        CapacitorApp.minimizeApp().catch(() => {});
+      }
+    }).then((h) => {
+      handle = h;
+    });
+    return () => {
+      handle?.remove();
+    };
+  }, []);
+
+  const rolarPara = (section: MobileSection) => {
+    setMobileSection(section);
+    document.getElementById(section)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   useEffect(() => {
     if (sessao) fetchInitialData();
@@ -354,6 +417,11 @@ function App() {
   const progressPct = Math.round(stats.avgMastery * 100);
   const ring = 2 * Math.PI * 30;
 
+  // No APK, sem servidor configurado não há o que carregar: configura primeiro.
+  if (precisaConfigurarServidor) {
+    return <ServerSettings />;
+  }
+
   // Sem sessão, a única tela possível é a de entrada
   if (!sessao) {
     return <Login onEntrar={setSessao} />;
@@ -369,9 +437,31 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex text-slate-200">
+    <div className="min-h-screen flex flex-col text-slate-200">
       <div className="aurora" />
       <div className="grid-overlay" />
+
+      {/* ============ HEADER MOBILE ============ */}
+      <header className="lg:hidden sticky top-0 z-40 flex items-center justify-between px-4 pt-safe pb-3 bg-[#060913]/90 border-b border-slate-400/10">
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 flex items-center justify-center shadow-lg shadow-violet-900/40">
+            <Hexagon className="w-4 h-4 text-white" strokeWidth={2.4} />
+          </div>
+          <span className="font-display font-bold text-sm text-white">
+            Engineering<span className="text-gradient">OS</span>
+          </span>
+        </div>
+        <button
+          onClick={() => setMenuOpen(true)}
+          className="btn-ghost p-2 rounded-lg"
+          aria-label="Abrir menu"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
+      </header>
+
+      {/* ============ LINHA DE CONTEÚDO (sidebar + main) ============ */}
+      <div className="flex flex-1 min-w-0">
 
       {/* ============ SIDEBAR ============ */}
       <aside className="hidden lg:flex flex-col w-[264px] shrink-0 h-screen sticky top-0 border-r border-slate-400/10 bg-[#090d1a] px-5 py-6 gap-6">
@@ -485,7 +575,7 @@ function App() {
       </aside>
 
       {/* ============ MAIN ============ */}
-      <main className="flex-1 min-w-0 px-5 md:px-9 py-7 max-w-[1400px] mx-auto w-full">
+      <main className="flex-1 min-w-0 px-5 md:px-9 py-7 pb-28 lg:pb-7 max-w-[1400px] mx-auto w-full">
         {/* -------- HERO -------- */}
         <section id="overview" className="animate-fade-up">
           <div className="panel relative overflow-hidden px-6 md:px-9 py-7">
@@ -620,7 +710,7 @@ function App() {
 
         {/* -------- MAPA + TRILHA -------- */}
         <section className="grid grid-cols-1 xl:grid-cols-3 gap-5 mt-5">
-          <div id="mapa" className="xl:col-span-2 animate-fade-up delay-2">
+          <div id="mapa" className="xl:col-span-2 animate-fade-up delay-2 min-w-0">
             <GraphView
               nodes={visibleNodes}
               edges={visibleEdges}
@@ -633,7 +723,7 @@ function App() {
             />
           </div>
 
-          <div id="trilha" className="animate-fade-up delay-3">
+          <div id="trilha" className="animate-fade-up delay-3 min-w-0">
             <TrilhaPanel
               path={activePath}
               satisfied={satisfied}
@@ -645,7 +735,7 @@ function App() {
         </section>
 
         {/* -------- COMPETÊNCIAS -------- */}
-        <section id="competencias" className="mt-5 animate-fade-up delay-4">
+        <section id="competencias" className="mt-5 animate-fade-up delay-4 min-w-0">
           <CompetenceMatrix
             nodes={visibleNodes}
             onSelectNode={setSelectedNode}
@@ -658,6 +748,8 @@ function App() {
           <span className="font-mono-eos">ULA · UKG · CCE · DCST</span>
         </footer>
       </main>
+
+      </div>
 
       {/* ============ PAINEL DE ESTUDO (slide-over) ============ */}
       {selectedNode && (
@@ -694,6 +786,105 @@ function App() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* ============ MENU MOBILE (conta + missão) ============ */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-[100] lg:hidden">
+          <div className="absolute inset-0 bg-black/60" onClick={() => setMenuOpen(false)} />
+          <div className="absolute bottom-0 inset-x-0 pb-safe bg-[#0a0f1e] border-t border-slate-400/10 rounded-t-2xl shadow-2xl animate-slide-up max-h-[88vh] overflow-y-auto">
+            <div className="px-5 py-5 flex flex-col gap-5">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold">Conta</p>
+                  <p className="text-[15px] font-bold text-white">{sessao.name}</p>
+                  <p className="text-[11px] text-slate-500 capitalize">{sessao.role}</p>
+                </div>
+                <button onClick={() => setMenuOpen(false)} className="btn-ghost p-2 rounded-lg" aria-label="Fechar">
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div>
+                <label className="block text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-2">
+                  Missão ativa
+                </label>
+                <div className="relative">
+                  <select
+                    className="input-eos w-full text-[14px] font-semibold appearance-none px-3 py-3 pr-8 cursor-pointer"
+                    value={selectedMissionId}
+                    onChange={(e) => setSelectedMissionId(e.target.value)}
+                    disabled={!selectedLearnerId}
+                  >
+                    <option value="">Selecionar missão…</option>
+                    {missions.map((m) => (
+                      <option key={m.id} value={m.id}>
+                        {m.label}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="w-4 h-4 text-slate-500 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                </div>
+              </div>
+
+              {sessao.role === "admin" && (
+                <div>
+                  <label className="block text-[10px] uppercase tracking-[0.14em] text-slate-500 font-bold mb-2">
+                    Visão de administrador
+                  </label>
+                  <div className="relative">
+                    <select
+                      className="input-eos w-full text-[14px] font-semibold appearance-none px-3 py-3 pr-8 cursor-pointer"
+                      value={selectedLearnerId}
+                      onChange={(e) => setSelectedLearnerId(e.target.value)}
+                    >
+                      {learners.map((l) => (
+                        <option key={l.id} value={l.id}>
+                          {l.name}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="w-4 h-4 text-slate-500 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                  </div>
+                  <button
+                    onClick={handleTriggerCurriculumSeed}
+                    className="mt-3 flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-slate-200 transition"
+                  >
+                    <Database className="w-4 h-4" /> Reset / Seed do currículo
+                  </button>
+                </div>
+              )}
+
+              <button
+                onClick={() => {
+                  setMenuOpen(false);
+                  setServerSettingsOpen(true);
+                }}
+                className="btn-ghost flex items-center justify-center gap-2 text-sm font-bold px-3 py-3"
+              >
+                <Database className="w-4 h-4" /> Servidor da API
+              </button>
+
+              <button
+                onClick={() => {
+                  setMenuOpen(false);
+                  sair();
+                }}
+                className="btn-ghost flex items-center justify-center gap-2 text-sm font-bold px-3 py-3 text-rose-300"
+              >
+                <LogOut className="w-4 h-4" /> Sair
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ============ NAVEGAÇÃO INFERIOR MOBILE ============ */}
+      <MobileNav active={mobileSection} onSelect={rolarPara} />
+
+      {/* ============ CONFIGURAÇÃO DE SERVIDOR ============ */}
+      {serverSettingsOpen && (
+        <ServerSettings onClose={() => setServerSettingsOpen(false)} />
       )}
 
       {/* ============ TOAST ============ */}

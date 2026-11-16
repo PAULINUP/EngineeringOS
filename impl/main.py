@@ -166,14 +166,28 @@ _origins = os.getenv(
 )
 ALLOWED_ORIGINS = [o.strip() for o in _origins.split(",") if o.strip()]
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allow_headers=["Authorization", "Content-Type", "X-Trace-ID"],
-    max_age=600,
-)
+# "*" (dev/túnel) não pode conviver com allow_credentials=True: o navegador
+# rejeita credenciais com origem-curinga e o middleware não envia o header.
+# A API usa Bearer token no header (não cookies), então "*" sem credenciais
+# é seguro para desenvolvimento; produção usa a lista explícita de origens.
+if "*" in ALLOWED_ORIGINS:
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=False,
+        allow_methods=["*"],
+        allow_headers=["*"],
+        max_age=600,
+    )
+else:
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=ALLOWED_ORIGINS,
+        allow_credentials=True,
+        allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allow_headers=["Authorization", "Content-Type", "X-Trace-ID"],
+        max_age=600,
+    )
 
 # Registra as rotas da API
 app.include_router(router, prefix="/api")

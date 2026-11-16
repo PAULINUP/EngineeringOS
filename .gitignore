@@ -47,3 +47,10 @@ lerna-debug.log*
 
 # Configuração local do Claude Code (não é do projeto)
 .claude/
+
+# APK / binários locais
+*.apk
+tools/cloudflared.exe
+
+# Build do frontend (gerado pelo vite)
+impl/dashboard/dist/
